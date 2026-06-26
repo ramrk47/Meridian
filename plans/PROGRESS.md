@@ -95,7 +95,11 @@
 - 2026-06-27 **5 forks resolved** (predictor-first · hybrid ratings · local-first→backend-after-wedge ·
   delay-B2B · public neutrality). Sequenced roadmap written to `VISION_and_ROADMAP.md`. Reconciled
   code drift (7-tab app is live v2; footer "1–6" + static subhead noted to fix in mobile rebuild).
-  Phase 1a now **shipped + reconciled** (totals: 56,091 = 42,889 preserved + 13,202 DocTutorials). **Phase 1b (mobile-first rebuild) is next** — prompt in `plans/PHASE1B_PROMPT.md`.
+  Phase 1a now **shipped + reconciled** (totals: 56,091 = 42,889 preserved + 13,202 DocTutorials).
+- 2026-06-27 **Phase 1b shipped but REJECTED on design** — mobile reads like "a website cosplaying as
+  an app": desktop cards stacked one-per-row, one datum per giant card, oversized serif numerals,
+  stacked full-width controls. Wrote **`plans/MOBILE_DESIGN_STANDARD.md`** (standing rule: density is
+  the product) + memory. **Next build: Phase 1b.2 density redesign** — prompt in `plans/PHASE1B2_PROMPT.md` (Opus, high).
 - 2026-06-27 Deep market-intel sweep done → `MARKET_INTEL.md`. Strategy frame locked (two-sided
   freemium + B2B, neutrality moat). 5 forks open. Reverted a half-built tab experiment; tree clean.
 - 2026-06-26 Moved repo Downloads → `~/Meridian`. Sentiment research → `RESEARCH_FINDINGS.md`.
