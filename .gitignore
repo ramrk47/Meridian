@@ -7,3 +7,8 @@ server/data/*.json
 .DS_Store
 *.log
 node_modules/
+
+# bulky raw page saves / re-dropped archives (keep CSVs + manifests, not these)
+_raw/NewPlatforms/*.html
+_raw/NewPlatforms/*_files/
+_raw/NewPlatforms/*.zip

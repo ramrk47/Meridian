@@ -1,0 +1,58 @@
+section,subject,chapters,total_mcqs
+Main,Anatomy,47,714
+Main,Physiology,32,595
+Main,Biochemistry,30,555
+Main,Pathology,38,1003
+Main,Microbiology,35,720
+Main,Pharmacology,29,672
+Main,Forensic Medicine,19,430
+Main,ENT,32,405
+Main,Ophthalmology,31,743
+Main,PSM,48,880
+Main,Medicine,68,1464
+Main,Surgery,42,978
+Main,OB & G,41,844
+Main,Pediatrics,25,560
+Main,Anaesthesia,23,607
+Main,Dermatology,25,432
+Main,Orthopaedics,34,770
+Main,Psychiatry,24,504
+Main,Radiology,21,323
+QRP,Anatomy,13,299
+QRP,Physiology,14,250
+QRP,Biochemistry,9,225
+QRP,Pathology,28,358
+QRP,Microbiology,18,310
+QRP,Pharmacology,14,299
+QRP,Forensic Medicine,16,243
+QRP,ENT,10,200
+QRP,Ophthalmology,10,191
+QRP,PSM,20,365
+QRP,Medicine,41,764
+QRP,Surgery,28,544
+QRP,OB & G,20,435
+QRP,Pediatrics,18,298
+QRP,Anaesthesia,8,150
+QRP,Dermatology,7,141
+QRP,Orthopaedics,7,150
+QRP,Psychiatry,7,150
+QRP,Radiology,8,168
+PYQ,Anatomy,18,225
+PYQ,Physiology,18,185
+PYQ,Biochemistry,19,257
+PYQ,Pathology,20,386
+PYQ,Microbiology,20,337
+PYQ,Pharmacology,20,357
+PYQ,Forensic Medicine,21,175
+PYQ,ENT,18,120
+PYQ,Ophthalmology,20,161
+PYQ,PSM,18,247
+PYQ,Medicine,18,398
+PYQ,Surgery,18,389
+PYQ,OB & G,19,380
+PYQ,Pediatrics,20,205
+PYQ,Anaesthesia,19,81
+PYQ,Dermatology,19,128
+PYQ,Orthopaedics,18,132
+PYQ,Psychiatry,18,107
+PYQ,Radiology,19,115

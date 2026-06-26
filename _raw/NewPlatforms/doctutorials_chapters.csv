@@ -1,0 +1,1312 @@
+section,subject,chapter,mcq_count
+Main,Anatomy,Cranial Foramen Fossa,9
+Main,Anatomy,Tongue,10
+Main,Anatomy,Temporomandibular Joint & Muscles of Mastication,9
+Main,Anatomy,Dural Venous Sinus & Cavernous Sinus,5
+Main,Anatomy,Cranial Nerves,28
+Main,Anatomy,Auditory Pathway,3
+Main,Anatomy,"Pharynx, Larynx & Carotid Sheath",18
+Main,Anatomy,"Blood Vessels of Head & Neck, Subclavian Artery, Scalenus Anterior Muscle, Veins of Face & Transverse Section of the Neck",10
+Main,Anatomy,Triangles of Neck,11
+Main,Anatomy,Introduction and Spinal Cord,18
+Main,Anatomy,"White Matter - Association & Commisural Fibres, White Matter - Projection Fibers Descending Tracts, White Matter - Projection Fibers Ascending Tracts",26
+Main,Anatomy,"Brodmann Area, Ventral, Dorsal Aspect of Brainstem",8
+Main,Anatomy,"Blood Supply of Brain, Basal Ganglia Internal Capsule",8
+Main,Anatomy,"Brainstem (Midbrain, Pons and Medulla)",11
+Main,Anatomy,"Cranial Nerve Nuclei, Lateral Ventricles & Third Ventricle",2
+Main,Anatomy,Cerebellum,18
+Main,Anatomy,Thoracic Wall & Intercostal Space,20
+Main,Anatomy,"Intercostal Artery, Intercostal Vein and Intercostal Nerve",15
+Main,Anatomy,Coronary Circulation & Venous Drainage of Heart,8
+Main,Anatomy,"Pleura, Recess, Sibsons Fascia",6
+Main,Anatomy,Tracheobronchial Tree & Root of Lung,6
+Main,Anatomy,"Mediastinal Surface of Lungs & Thoracic Duct, Mediastinum, Bronchopulmonary Segments",24
+Main,Anatomy,"Anterior Abdominal Wall, Inguinal Canal",10
+Main,Anatomy,"Rectus Sheath, Posterior Abdominal Wall, Thoracolumbar Fascia",15
+Main,Anatomy,"Stomach, Diaphragm, Abdominal Aorta & Celiac Trunk",15
+Main,Anatomy,"Superior Mesenteric Artery, Inferior Mesenteric Artery, Peritoneum",5
+Main,Anatomy,"Ivc, Portal Vein, Portocaval Anastomosis",6
+Main,Anatomy,"Liver, Kidney",40
+Main,Anatomy,Brachial Plexus & Its Clinical Co-relation,16
+Main,Anatomy,"Muscles of Arm & Forearm, Anatomical Snuff Box, Exterior Retinaculum & Muscles of Hand",30
+Main,Anatomy,Major Nerves of Upper Limb & Pectoral Region,20
+Main,Anatomy,"Axillary Artery, Scapular Anastomosis & Brachial Artery",5
+Main,Anatomy,"Palmar Arches, Carpal Tunnel & Cubital Fossa",14
+Main,Anatomy,"Lumbosacral Plexes, Common Peroneal Nerve & Major Nerves",12
+Main,Anatomy,Tibial Nerve & Sole of Foot,13
+Main,Anatomy,"Femoral Nerve, Obturator Nerve, Femoral Triangle, Femoral Sheath, Femoral Canal, Femoral Ring & Adductor Canal",30
+Main,Anatomy,"Gluteal Region, Greater & Lesser Sciatic Foramen, Iliotibial Tract (Fascia of Thigh Fascia Lata)",20
+Main,Anatomy,Arches of Foot,3
+Main,Anatomy,Pelvis & Perineum,30
+Main,Anatomy,General Embryology,15
+Main,Anatomy,Second and Third week of Development,15
+Main,Anatomy,Development of Heart,30
+Main,Anatomy,Gut Embryology,19
+Main,Anatomy,"Embryology of Face, Pharynx, Tongue, Palate, Thyroid Gland, Diaphragm & Respiratory System",20
+Main,Anatomy,CNS Embryology,15
+Main,Anatomy,General Anatomy,28
+Main,Anatomy,Epithelium,17
+QRP,Anatomy,Upper Limb,23
+QRP,Anatomy,Lower Limb,25
+QRP,Anatomy,Thorax,25
+QRP,Anatomy,Abdomen,25
+QRP,Anatomy,Pelvis,20
+QRP,Anatomy,Head & Neck - 1,25
+QRP,Anatomy,Head & Neck - 2,24
+QRP,Anatomy,Spinal Cord and Brainstem,25
+QRP,Anatomy,Other Parts of Brain,26
+QRP,Anatomy,Embryology - 1,20
+QRP,Anatomy,Embryology - 2,20
+QRP,Anatomy,Histology,25
+QRP,Anatomy,General Anatomy & Genetics,15
+PYQ,Anatomy,NEET PG 2025,14
+PYQ,Anatomy,NEET PG 2024,16
+PYQ,Anatomy,NEET PG 2023,8
+PYQ,Anatomy,NEET PG 2022,5
+PYQ,Anatomy,NEET PG 2021,7
+PYQ,Anatomy,NEET PG 2020,18
+PYQ,Anatomy,INI CET Nov 2025,12
+PYQ,Anatomy,INI CET MAY 2025,12
+PYQ,Anatomy,INI CET Nov 2024,15
+PYQ,Anatomy,INI CET May 2024,11
+PYQ,Anatomy,INI CET Nov 2023,14
+PYQ,Anatomy,INI CET May 2023,12
+PYQ,Anatomy,INI CET Nov 2022,19
+PYQ,Anatomy,INI CET May 2022,13
+PYQ,Anatomy,INI CET Nov 2021,9
+PYQ,Anatomy,INI CET May 2021,14
+PYQ,Anatomy,INI CET Nov 2020,14
+PYQ,Anatomy,INI CET May 2020,11
+Main,Physiology,Homeostasis and Body Fluids,34
+Main,Physiology,Cellular Physiology,10
+Main,Physiology,Nerve Fibers,13
+Main,Physiology,Neuromuscular Junction,27
+Main,Physiology,"Motor Tract, Cortex and Lesion",18
+Main,Physiology,Sleep and Memory,24
+Main,Physiology,Spinal Cord and Sensory Tract,29
+Main,Physiology,Cerebellum,23
+Main,Physiology,Conductive System of Heart,31
+Main,Physiology,Cardiac Cycle and Cardiac Output,18
+Main,Physiology,Regional Circulation and Disturbances,34
+Main,Physiology,"Anatomy and Functions, Mechanism of Ventilation",8
+Main,Physiology,"Lung Volume, Capacities and Compliance",9
+Main,Physiology,"Diffusion, Dead Space and Hypoxia",25
+Main,Physiology,Integrated Physiology,25
+Main,Physiology,RBC and Hemoglobin,14
+Main,Physiology,WBC and Immunity,19
+Main,Physiology,Hemostatic and Antihemostatic Mechanism,21
+Main,Physiology,General Considerations,16
+Main,Physiology,Hypothalamus,20
+Main,Physiology,Thyroid,13
+Main,Physiology,Calcium Regulating Hormones,11
+Main,Physiology,Pancreatic Hormones,7
+Main,Physiology,Adrenal Gland,15
+Main,Physiology,Sexual Growth and Development and Puberty,14
+Main,Physiology,Female and Male Reproduction,23
+Main,Physiology,GIT,18
+Main,Physiology,Digestion and Absorption,21
+Main,Physiology,Nephron and Glomerular Filtration,15
+Main,Physiology,Tubular Function and Micturition,16
+Main,Physiology,Vision,15
+Main,Physiology,"Hearing and Equilibrium, Smell and Taste",9
+QRP,Physiology,Somatic Sensation,13
+QRP,Physiology,Motor System,24
+QRP,Physiology,Nerve & Muscle Physiology,23
+QRP,Physiology,"Hypothalamus, Neurotransmitters and Higher Functions",17
+QRP,Physiology,Special Sense,19
+QRP,Physiology,Hemodynamic of Circulation,18
+QRP,Physiology,ECG and Cardiac Output,20
+QRP,Physiology,Gastrointestinal System,27
+QRP,Physiology,General Physiology,17
+QRP,Physiology,Respiratory Physiology,21
+QRP,Physiology,Endocrine System- 1,15
+QRP,Physiology,Endocrine System- 2,16
+QRP,Physiology,Renal Physiology,10
+QRP,Physiology,Reproductive System,10
+PYQ,Physiology,NEET PG 2025,6
+PYQ,Physiology,NEET PG 2024,11
+PYQ,Physiology,NEET PG 2023,9
+PYQ,Physiology,NEET PG 2022,6
+PYQ,Physiology,NEET PG 2021,5
+PYQ,Physiology,NEET PG 2020,17
+PYQ,Physiology,INI CET May 2026,15
+PYQ,Physiology,INI CET Nov 2025,9
+PYQ,Physiology,INI CET MAY 2025,10
+PYQ,Physiology,INICET Nov 2024,13
+PYQ,Physiology,INI CET May 2024,10
+PYQ,Physiology,INI CET Nov 2023,8
+PYQ,Physiology,INI CET May 2023,8
+PYQ,Physiology,INI CET Nov 2022,15
+PYQ,Physiology,INI CET May 2022,9
+PYQ,Physiology,INI CET Nov 2021,9
+PYQ,Physiology,INI CET May 2021,13
+PYQ,Physiology,INI CET Nov 2020,13
+PYQ,Physiology,INI CET May 2020,9
+Main,Pathology,Cellular Pathology And Cell Injury (Part 1),27
+Main,Pathology,Immunity and Hypersensitivity (Part 1),27
+Main,Pathology,Cellular Pathology And Cell Injury (Part 2),26
+Main,Pathology,Immunity and Hypersensitivity (Part 2),26
+Main,Pathology,Neoplasia (Part 1),30
+Main,Pathology,Neoplasia (Part 2),30
+Main,Pathology,Inflammation (Part 1),33
+Main,Pathology,Inflammation (Part 2),33
+Main,Pathology,Inflammation (Part 3),32
+Main,Pathology,Cell as a Unit of Health and Disease,16
+Main,Pathology,Genetic Disorders,35
+Main,Pathology,Hemodynamics,31
+Main,Pathology,Red Blood Cell Disorders (Part 1),22
+Main,Pathology,Red Blood Cell Disorders (Part 2),21
+Main,Pathology,White Blood Cell Disorders (Part 1),32
+Main,Pathology,White Blood Cell Disorders (Part 2),32
+Main,Pathology,Platelet Disorders,27
+Main,Pathology,Blood Banking & Transfusion Medicine,18
+Main,Pathology,CVS (Part 1),23
+Main,Pathology,CVS (Part 2),23
+Main,Pathology,Lung (Part 1),30
+Main,Pathology,Lung (Part 2),29
+Main,Pathology,GIT,28
+Main,Pathology,HBP (Part 1),30
+Main,Pathology,HBP (Part 2),30
+Main,Pathology,Kidney (Part 1),36
+Main,Pathology,Kidney (Part 2),35
+Main,Pathology,Female Genital Tract,24
+Main,Pathology,Male Genital Tract,28
+Main,Pathology,Breast,14
+Main,Pathology,Endocrine System,26
+Main,Pathology,CNS (Part 1),24
+Main,Pathology,CNS (Part 2),24
+Main,Pathology,Skin,32
+Main,Pathology,Head & Neck and Rheumatological Disorders,25
+Main,Pathology,Miscellaneous,15
+Main,Pathology,Bone,14
+Main,Pathology,Soft Tissue,15
+QRP,Pathology,Cell as a Unit of Health and Disease,5
+QRP,Pathology,Cell Injury,11
+QRP,Pathology,Inflammation and Repair,14
+QRP,Pathology,Hemodynamics,13
+QRP,Pathology,Genetics,20
+QRP,Pathology,Immune System,15
+QRP,Pathology,Neoplasia,15
+QRP,Pathology,Infectious Diseases,10
+QRP,Pathology,Environmental and Nutritional Diseases,17
+QRP,Pathology,Diseases of Infancy and Childhood,15
+QRP,Pathology,The Pancreas,5
+QRP,Pathology,Heart & Blood Vessels,16
+QRP,Pathology,Hematology,25
+QRP,Pathology,Lung,15
+QRP,Pathology,Gastrointestinal System,15
+QRP,Pathology,Head & Neck,9
+QRP,Pathology,Hepatobiliary System,10
+QRP,Pathology,Kidney,15
+QRP,Pathology,The Lower Urinary Tract,10
+QRP,Pathology,Male Genital Tract,13
+QRP,Pathology,Female Genital Tract,12
+QRP,Pathology,Breast,10
+QRP,Pathology,Endocrine System,15
+QRP,Pathology,Skin,8
+QRP,Pathology,Bone and Joints,10
+QRP,Pathology,Soft Tissue,10
+QRP,Pathology,Peripheral Nerves,10
+QRP,Pathology,Central Nervous System,15
+PYQ,Pathology,NEET PG 2025,19
+PYQ,Pathology,NEET PG 2024,31
+PYQ,Pathology,NEET PG 2023,12
+PYQ,Pathology,NEET PG 2022,10
+PYQ,Pathology,NEET PG 2021,15
+PYQ,Pathology,NEET PG 2020,27
+PYQ,Pathology,NEET PG 2019,17
+PYQ,Pathology,NEET PG 2018,18
+PYQ,Pathology,INI CET Nov 2025,14
+PYQ,Pathology,INI CET MAY 2025,10
+PYQ,Pathology,INI-CET  Nov 2024,23
+PYQ,Pathology,INI CET MAY 2024,21
+PYQ,Pathology,INI CET Nov 2023,19
+PYQ,Pathology,INI CET May 2023,18
+PYQ,Pathology,INI CET Nov 2022,38
+PYQ,Pathology,INI CET May 2022,21
+PYQ,Pathology,INI CET Nov 2021,14
+PYQ,Pathology,INI CET May 2021,21
+PYQ,Pathology,INI CET Nov 2020,19
+PYQ,Pathology,INI CET May 2020,19
+Main,Pharmacology,Basic Principles of Pharmacology (Part 1),23
+Main,Pharmacology,Basic Principles of Pharmacology (Part 2),22
+Main,Pharmacology,"Cholinergic Drugs, Anticholinergic Drugs",37
+Main,Pharmacology,"Adrenergic Drugs, Alpha1 Blockers, Beta-Blockers",31
+Main,Pharmacology,Antihypertensives and Hypolipidemic Drugs (Part 1),22
+Main,Pharmacology,Antihypertensives and Hypolipidemic Drugs (Part 2),21
+Main,Pharmacology,Heart Failure Management   & Anti-Arrhythmic Drugs,37
+Main,Pharmacology,Diuretics,25
+Main,Pharmacology,Autacoids (Part 1),19
+Main,Pharmacology,Autacoids (Part 2),19
+Main,Pharmacology,Drugs That Act In Respiratory System,19
+Main,Pharmacology,GI Pharmacology,33
+Main,Pharmacology,"Benzodiazepines, Barbiturates & Anti-Epileptics",33
+Main,Pharmacology,Anaesthetic Pharmacology,29
+Main,Pharmacology,"Parkinsonism & Other Movement Disorders Management, Alzheimer Drugs",15
+Main,Pharmacology,Psychiatric Pharmacology,13
+Main,Pharmacology,"Opioids And Drugs Of Abuse, Alcohol",18
+Main,Pharmacology,Hematology,30
+Main,Pharmacology,Steroids and Calcium metabolism,13
+Main,Pharmacology,Thyroid and Antithyroid drugs,22
+Main,Pharmacology,Drugs for Diabetes,40
+Main,Pharmacology,Hypothalamus and Pituitary drugs,16
+Main,Pharmacology,Anti - Fungal Drugs,14
+Main,Pharmacology,"Antiviral Agents (Herpes, HIV, Influenza, HBV And HCV)",17
+Main,Pharmacology,Anti - Parasitic Drugs,19
+Main,Pharmacology,"Anti-Cancer Drugs, Immunosuppressants and Immunomodulators",13
+Main,Pharmacology,"Cell wall synthesis, Folate and DNS gyrase inhibitors",28
+Main,Pharmacology,Protein Synthesis Inhibitors,16
+Main,Pharmacology,Antimycobacterial & Anti-Leprosy Drugs,28
+QRP,Pharmacology,Basic Pharmacology,25
+QRP,Pharmacology,Autonomic Nervous System,25
+QRP,Pharmacology,"Anti-hypertensives, Vasodilators, Drugs for Dyslipidemia & Antianginal Drugs",15
+QRP,Pharmacology,"Heart Failure management, Antiarryhtmics, Drugs for MI & PAH, Diuretics",25
+QRP,Pharmacology,Autocoids,25
+QRP,Pharmacology,Drugs Act in Respiratory System,20
+QRP,Pharmacology,Drugs Acting in GI System,25
+QRP,Pharmacology,"Benzodiazepines & Barbiturates & Antiepileptics, LA & SMR",17
+QRP,Pharmacology,"Parkinsonism and Movement Disorder, Alzheimers, Antipsychotics, Opioids",22
+QRP,Pharmacology,"Heparin, LMWH, Direct Thrombin Inhibitors, Thromolytics, Warfarin & Antiplatelets",20
+QRP,Pharmacology,"Anterior Pitutary Hormones, Male & Female Hormones, Serms, Antiandrogens, Aromatase Inhibitors, Iodides, Bisphosphonate & PTH",25
+QRP,Pharmacology,"Insulin, Biguanides, OHA, GLP-1, DPP4, Glucocorticoids, Mineralocorticoids",15
+QRP,Pharmacology,"Antibacterial, Antimycobacterial & Antifungal Drugs",20
+QRP,Pharmacology,"Antiviral, Antimalarial & Antineoplastic Agents",20
+PYQ,Pharmacology,NEET PG 2025,14
+PYQ,Pharmacology,NEET PG 2024,24
+PYQ,Pharmacology,NEET PG 2023,15
+PYQ,Pharmacology,NEET PG 2022,20
+PYQ,Pharmacology,NEET PG 2021,16
+PYQ,Pharmacology,NEET PG 2020,23
+PYQ,Pharmacology,NEET PG 2019,26
+PYQ,Pharmacology,NEET PG 2018,17
+PYQ,Pharmacology,INI CET Nov 2025,7
+PYQ,Pharmacology,INI CET MAY 2025,13
+PYQ,Pharmacology,INI CET Nov 2024,11
+PYQ,Pharmacology,INI CET May 2024,16
+PYQ,Pharmacology,INI CET Nov 2023,20
+PYQ,Pharmacology,INI CET May 2023,20
+PYQ,Pharmacology,INI CET Nov 2022,21
+PYQ,Pharmacology,INI CET May 2022,27
+PYQ,Pharmacology,INI CET Nov 2021,17
+PYQ,Pharmacology,INI CET May 2021,18
+PYQ,Pharmacology,INI CET Nov 2020,19
+PYQ,Pharmacology,INI CET May 2020,13
+Main,Forensic Medicine,Introduction & Legal Procedure,20
+Main,Forensic Medicine,"BNS, BNSS, BSA, Constitution of India and Bare Acts",28
+Main,Forensic Medicine,Identification (Part 1),19
+Main,Forensic Medicine,Identification (Part 2),19
+Main,Forensic Medicine,Thanatology,30
+Main,Forensic Medicine,Autopsy,9
+Main,Forensic Medicine,Mechanical Asphyxia,36
+Main,Forensic Medicine,Mechanical injuries & RTA,23
+Main,Forensic Medicine,Thermal Injuries,26
+Main,Forensic Medicine,Firearm & Blast Injuries,27
+Main,Forensic Medicine,Regional Injuries,16
+Main,Forensic Medicine,Sexual Jurisprudence,28
+Main,Forensic Medicine,Infanticide & Child Abuse,21
+Main,Forensic Medicine,Starvation and Torture,15
+Main,Forensic Medicine,Medical Law & Ethics,27
+Main,Forensic Medicine,Forensic Science,11
+Main,Forensic Medicine,Forensic Psychiatry,10
+Main,Forensic Medicine,Toxicology (Part 1),30
+Main,Forensic Medicine,Toxicology (Part 2),36
+QRP,Forensic Medicine,Legal procedure,12
+QRP,Forensic Medicine,Medical Law & Ethics,20
+QRP,Forensic Medicine,Identification,19
+QRP,Forensic Medicine,Autopsy,5
+QRP,Forensic Medicine,Thanatology,18
+QRP,Forensic Medicine,Mechanical Injuries & RTA,11
+QRP,Forensic Medicine,Firearm & Blast Injuries,17
+QRP,Forensic Medicine,Regional Injuries,6
+QRP,Forensic Medicine,Thermal Injuries,11
+QRP,Forensic Medicine,Mechanical Asphyxia,25
+QRP,Forensic Medicine,Sexual Jurisprudence,26
+QRP,Forensic Medicine,Forensic Science,5
+QRP,Forensic Medicine,Forensic Psychiatry,8
+QRP,Forensic Medicine,Toxicology (Part 1),26
+QRP,Forensic Medicine,Toxicology (Part 2),19
+QRP,Forensic Medicine,Miscellaneous,15
+PYQ,Forensic Medicine,NEET PG 2025,5
+PYQ,Forensic Medicine,NEET PG 2024,8
+PYQ,Forensic Medicine,NEET PG 2023,7
+PYQ,Forensic Medicine,NEET PG 2022,8
+PYQ,Forensic Medicine,NEET PG 2021,10
+PYQ,Forensic Medicine,NEET PG 2020,9
+PYQ,Forensic Medicine,NEET PG 2019,9
+PYQ,Forensic Medicine,INI CET Nov 2025,12
+PYQ,Forensic Medicine,INI CET MAY 2025,11
+PYQ,Forensic Medicine,INI CET Nov 2024,5
+PYQ,Forensic Medicine,INI CET May 2024,6
+PYQ,Forensic Medicine,INI CET Nov 2023,8
+PYQ,Forensic Medicine,INI CET May 2023,7
+PYQ,Forensic Medicine,INI CET Nov 2022,11
+PYQ,Forensic Medicine,INI CET May 2022,8
+PYQ,Forensic Medicine,INI CET Nov 2021,9
+PYQ,Forensic Medicine,INI CET May 2021,8
+PYQ,Forensic Medicine,INI CET Nov 2020,8
+PYQ,Forensic Medicine,INI CET May 2020,8
+PYQ,Forensic Medicine,INI CET Nov 2019,8
+PYQ,Forensic Medicine,INI CET May 2019,10
+Main,ENT,Vocal cord Paralysis and Voice Disorders,20
+Main,ENT,Miscellaneous Diseases of Larynx,8
+Main,ENT,Cancer Larynx,18
+Main,ENT,Basics and Congenital disorders of  Larynx,15
+Main,ENT,Tracheostomy and Methods of Larynx Examination,17
+Main,ENT,"Glottis, Subglottis and Pediatric Laryngeal Infection",13
+Main,ENT,Tonsils and Adenoids,11
+Main,ENT,Nasopharyngeal Cancer and Angiofibroma,11
+Main,ENT,Abscess of Pharynx,7
+Main,ENT,Oropharynx,11
+Main,ENT,Anatomy of Pharynx,5
+Main,ENT,Nasal Septum and Disorders,9
+Main,ENT,"Facial Trauma, CSF, Rhinorrhea",12
+Main,ENT,Blood Supply of the Nose and Miscellaneous,12
+Main,ENT,Benign and Neoplastic conditions of Nose,30
+Main,ENT,Anatomy of Sinuses and Sinusitis,11
+Main,ENT,Anatomy of Nose,9
+Main,ENT,Acoustic Neuroma,5
+Main,ENT,Hearing Devices and Implants,9
+Main,ENT,Miscellaneous Disorders of the Ear,7
+Main,ENT,Surgical Landmarks and Injuries,7
+Main,ENT,Anatomy of inner ear and Vestibular System,21
+Main,ENT,Basics and Tuning Fork Tests,9
+Main,ENT,Bells palsy and Facial nerve disorders,13
+Main,ENT,Diseases of Inner Ear,13
+Main,ENT,Embryology of the Ear and External auditory canal,12
+Main,ENT,Eustachian tube and Middle ear,23
+Main,ENT,Glomus Jugulare and Otosclerosis,9
+Main,ENT,Menieres Disease,11
+Main,ENT,"Middle Ear Cleft, Asom - safe Csom & Acute Mastoiditis",9
+Main,ENT,Pure Tone and audiometry and other tests for hearing,21
+Main,ENT,Unsafe Csom,17
+QRP,ENT,"Audiology and Examination of Ear, Anatomy and Congenital Deformity, Vestibular Disorders",17
+QRP,ENT,"Serous Otitis Media and Eustachian Tube Disorder, CSOM, External and Middle Ear Disorders",15
+QRP,ENT,"External Ear Disorders, Otosclerosis and Cochlear Disorders, Hearing Rehabilitation, Facial Nerve and Ear Trauma, Benign and Malignant Tumors of Ear",15
+QRP,ENT,"Anatomy, Nasal Polyps, Granulomatous Conditions of Nose, Congenital Conditions of Nose",20
+QRP,ENT,"Complications of Sinusitis, Benign and Malignant Tumors of Nose, Facial Skeleton Trauma",22
+QRP,ENT,Pharynx and Oral Cavity,21
+QRP,ENT,"Pharynx and Oral Cavity, Thyroid Disorders",21
+QRP,ENT,"Disorders of Salivary Glands, Neck Anatomy, Neck Dissection, Oropharyngeal and Oral Cavity Cancers, Reconstructive Surgery",23
+QRP,ENT,"Anatomy, Infection and Inflammatory Conditions of Larynx, Congenital Conditions of Larynx, Vocal Cord Paralysis, Speech Disorders",25
+QRP,ENT,"Speech Disorders, Benign and Malignant Tumors of Larynx, Foreign Body and Tracheostomy, Radiotherapy and Chemotherapy, Neck Metastasis With Unknown Primary",21
+PYQ,ENT,NEET PG 2025,6
+PYQ,ENT,NEET PG 2024,8
+PYQ,ENT,NEET PG 2023,6
+PYQ,ENT,NEET PG 2022,9
+PYQ,ENT,NEET PG 2021,6
+PYQ,ENT,NEET PG 2020,9
+PYQ,ENT,INI CET Nov 2025,8
+PYQ,ENT,INI CET MAY 2025,6
+PYQ,ENT,INI CET Nov 2024,10
+PYQ,ENT,INI CET MAY 2024,5
+PYQ,ENT,INI CET Nov 2023,6
+PYQ,ENT,INI CET May 2023,5
+PYQ,ENT,INI CET Nov 2022,9
+PYQ,ENT,INI CET May 2022,4
+PYQ,ENT,INI CET Nov 2021,2
+PYQ,ENT,INI CET May 2021,8
+PYQ,ENT,INI CET Nov 2020,7
+PYQ,ENT,INI CET May 2020,5
+Main,Ophthalmology,Conjunctiva (Part 1),26
+Main,Ophthalmology,Conjunctiva (Part 2),26
+Main,Ophthalmology,Basics,30
+Main,Ophthalmology,Infectious Disorders,33
+Main,Ophthalmology,Non-Infectious Disorders (Part 1),26
+Main,Ophthalmology,Non-Infectious Disorders (Part 2),25
+Main,Ophthalmology,Basics And Evaluation,30
+Main,Ophthalmology,Glaucoma- POAG And PACG (Part 1),21
+Main,Ophthalmology,Secondary Glaucoma And Congenital Glaucoma,26
+Main,Ophthalmology,Glaucoma- POAG And PACG (Part 2),20
+Main,Ophthalmology,Lens (Part 1),19
+Main,Ophthalmology,Lens (Part 2),18
+Main,Ophthalmology,Ocular Trauma (Part 1),16
+Main,Ophthalmology,Ocular Trauma (Part 2),16
+Main,Ophthalmology,"Optics, Physiology of Vision & Refractive Errors (Part 1)",18
+Main,Ophthalmology,"Optics, Physiology of Vision & Refractive Errors (Part 2)",18
+Main,Ophthalmology,"Optics, Physiology of Vision & Refractive Errors (Part 3)",17
+Main,Ophthalmology,Retina,29
+Main,Ophthalmology,Retinal Detachment,16
+Main,Ophthalmology,Vascular Diseases of Retina (Part 1),26
+Main,Ophthalmology,Vascular Diseases of Retina (Part 2),25
+Main,Ophthalmology,Types And Treatment,27
+Main,Ophthalmology,"Introduction, Symptomatology And Evaluation",45
+Main,Ophthalmology,Anterior And Intermediate,30
+Main,Ophthalmology,Posterior And Panuveitis,27
+Main,Ophthalmology,Anatomy And Embryology Of Eye,36
+Main,Ophthalmology,Neuro-Ophthalmology (Part 1),28
+Main,Ophthalmology,Neuro-Ophthalmology (Part 2),28
+Main,Ophthalmology,Tumors Of The Eye,20
+Main,Ophthalmology,Sclera,10
+Main,Ophthalmology,Systemic Ophthalmology,11
+QRP,Ophthalmology,Anatomy and Embryology,15
+QRP,Ophthalmology,"Cornea, Conjunctiva and Sclera",25
+QRP,Ophthalmology,Glaucoma,21
+QRP,Ophthalmology,Lens,15
+QRP,Ophthalmology,Optics,15
+QRP,Ophthalmology,Retina and Uvea,25
+QRP,Ophthalmology,Neuro Ophthalmology,11
+QRP,Ophthalmology,Oculoplasty and Trauma,24
+QRP,Ophthalmology,Squint and Pediatric,20
+QRP,Ophthalmology,Systemic Ophthalmology and Tumors,20
+PYQ,Ophthalmology,NEET PG 2025,6
+PYQ,Ophthalmology,NEET PG 2024,8
+PYQ,Ophthalmology,NEET PG 2023,8
+PYQ,Ophthalmology,NEET PG 2022,6
+PYQ,Ophthalmology,NEET PG 2021,8
+PYQ,Ophthalmology,NEET PG 2020,13
+PYQ,Ophthalmology,NEET PG 2019,13
+PYQ,Ophthalmology,INI CET May 2026,4
+PYQ,Ophthalmology,INI CET Nov 2025,8
+PYQ,Ophthalmology,INI CET MAY 2025,8
+PYQ,Ophthalmology,INICET Nov 2024,12
+PYQ,Ophthalmology,INICET May 2024,11
+PYQ,Ophthalmology,INI CET Nov 2023,7
+PYQ,Ophthalmology,INICET May 2023,6
+PYQ,Ophthalmology,INICET Nov 2022,12
+PYQ,Ophthalmology,INICET May 2022,6
+PYQ,Ophthalmology,INICET Dec 2021,9
+PYQ,Ophthalmology,INI CET Nov 2021,7
+PYQ,Ophthalmology,INI CET May 2021,6
+PYQ,Ophthalmology,INICET Nov 2020,4
+PYQ,Ophthalmology,INI CET May 2020,3
+Main,PSM,"Introduction, Tools or sources of population data",17
+Main,PSM,"Fertility Rate, Sex Ratio, Age, and Population Pyramid",21
+Main,PSM,"Dependency Ratio , Literacy Rate and Demographic Cycle",13
+Main,PSM,Contraceptive Methods,25
+Main,PSM,Family Planning Clinic and Field Delivery Practice,11
+Main,PSM,Health System in India,15
+Main,PSM,Health Communities and International Summit,13
+Main,PSM,Natal Period,14
+Main,PSM,MCH Indicator,18
+Main,PSM,Malnutrition,11
+Main,PSM,Growth Charts,12
+Main,PSM,Newer Technologies in MCH and Integrated Child Development Services,14
+Main,PSM,Introduction to Nutrition and Indian Reference Standard,10
+Main,PSM,"RDA and PAR, Assessment of Protein",15
+Main,PSM,"Essential Fatty Acids, Dietary Fibers and Glycaemic Index",9
+Main,PSM,Nutritional Value of Food Item and Vitamins,15
+Main,PSM,"Minerals, Essential and Limiting Amino Acid",14
+Main,PSM,Water Pollution,22
+Main,PSM,Air Pollution,13
+Main,PSM,Mosquitos and Entomology,24
+Main,PSM,TB and NTEP,28
+Main,PSM,HIV and NACP,21
+Main,PSM,Communicable Disease(Respiratory disease),31
+Main,PSM,"Communicable Disease, Vector-Borne Disease (Part1)",22
+Main,PSM,"Communicable Disease, Vector-Borne Disease (Part2)",22
+Main,PSM,Polio and Acute Diarrheal Disease,26
+Main,PSM,Communicable Disease Zoonotic Disease,26
+Main,PSM,Communicable Disease Surface Infection,14
+Main,PSM,UIP (Universal Immunisation Programme),28
+Main,PSM,Non Communicable Disease,28
+Main,PSM,Reproductive and Child Health,26
+Main,PSM,Frequency Measurement,22
+Main,PSM,Descriptive Epidemiology,11
+Main,PSM,Analytical Study,20
+Main,PSM,Measure of Dispersion and  Normal Distribution Curve,19
+Main,PSM,Z score and Skewing,12
+Main,PSM,"Quarties, Percentiles, Box & Whisker Plot and Sample Size Calculation",13
+Main,PSM,Concept Of Health & Disease,24
+Main,PSM,Screening Part 1,25
+Main,PSM,Screening Part 2,25
+Main,PSM,Screening Part 3,24
+Main,PSM,Nutrition & Health,15
+Main,PSM,Medicine & Social Sciences,15
+Main,PSM,Disaster Management,12
+Main,PSM,Hospital Waste Management,18
+Main,PSM,Mental Health & Communication for Health Education,20
+Main,PSM,Health Planning & Management,15
+Main,PSM,International Health & Essential Medicines & Counterfied Medicines,12
+QRP,PSM,Concept of Health & Disease,11
+QRP,PSM,Epidemiology Part- 1,18
+QRP,PSM,Epidemiology of Communicable Diseases,50
+QRP,PSM,Epidemiology of Non Communicable Diseases & Conditions,16
+QRP,PSM,Health Programs in India,32
+QRP,PSM,Screening,14
+QRP,PSM,Demography and Health Care of the Community,22
+QRP,PSM,"Preventive Medicine in Obstetrics, Paediatrics & Geriatrics",28
+QRP,PSM,Nutrition and Health,22
+QRP,PSM,Social Medicine,13
+QRP,PSM,Environment and Health,33
+QRP,PSM,Medical Entomology,18
+QRP,PSM,Occupational Health,17
+QRP,PSM,Disaster Management,6
+QRP,PSM,Hospital Waste Management,5
+QRP,PSM,Mental Health and Communication for Health Education,13
+QRP,PSM,Biostatistics Part- 1,12
+QRP,PSM,Biostatistics Part- 2,9
+QRP,PSM,Health Planning and Management,22
+QRP,PSM,International Health,4
+PYQ,PSM,NEET PG 2025,18
+PYQ,PSM,NEET PG 2024,36
+PYQ,PSM,NEET PG 2023,14
+PYQ,PSM,NEET PG 2022,12
+PYQ,PSM,NEET PG 2021,17
+PYQ,PSM,NEET PG 2020,24
+PYQ,PSM,INI CET May 2026,12
+PYQ,PSM,INI CET Nov 2025,5
+PYQ,PSM,INI CET MAY 2025,17
+PYQ,PSM,INI CET Nov 2024,20
+PYQ,PSM,INI CET May 2024,3
+PYQ,PSM,INI CET Nov 2023,6
+PYQ,PSM,INI CET May 2023,7
+PYQ,PSM,INI CET Nov 2022,15
+PYQ,PSM,INI CET May 2022,12
+PYQ,PSM,INI CET Nov 2021,12
+PYQ,PSM,INI CET May 2021,15
+PYQ,PSM,INI CET Nov 2020,6
+PYQ,PSM,INI CET May 2020,8
+Main,Medicine,Infectious Disorders,28
+Main,Medicine,Respiratory Critical Care,29
+Main,Medicine,Obstructive & Restrictive Lung Disease,37
+Main,Medicine,Miscellaneous,28
+Main,Medicine,Cerebrovascular Disease,35
+Main,Medicine,Headache and Dementia,24
+Main,Medicine,Movement Disorders,19
+Main,Medicine,"Motor Neuron disease, MS & other Demyelinating disorders",16
+Main,Medicine,Neuropathies,17
+Main,Medicine,Cranial Nerves & Spinal Cord,36
+Main,Medicine,Miscellaneous,31
+Main,Medicine,ECG & Arrhythmias (Part 1),18
+Main,Medicine,ECG & Arrythmias (Part 2),17
+Main,Medicine,Ischemic Heart Diseases (Part 1),18
+Main,Medicine,Ischemic Heart Diseases (Part 2),17
+Main,Medicine,Valvular Heart Disease (Part 1),19
+Main,Medicine,Valvular Heart Disease (Part 2),18
+Main,Medicine,Heart Failure (Part 1),16
+Main,Medicine,Heart Failure (Part 2),16
+Main,Medicine,Cardiomyopathies,18
+Main,Medicine,Congenital Heart Disease,13
+Main,Medicine,Miscellaneous,29
+Main,Medicine,Diabetes (Part 1),24
+Main,Medicine,Diabetes (Part 2),25
+Main,Medicine,Hypothalamus & Pituitary,29
+Main,Medicine,Thyroid (Part 1),20
+Main,Medicine,Thyroid (Part 2),20
+Main,Medicine,Adrenal (Part 1),20
+Main,Medicine,Adrenal (Part 2),19
+Main,Medicine,Reproductive,24
+Main,Medicine,"Parathyroid, Bone & Mineral Disorders",21
+Main,Medicine,Disorders Of Intermediary Metabolism,10
+Main,Medicine,Miscellaneous,17
+Main,Medicine,Acute Kidney Injury,22
+Main,Medicine,CKD,31
+Main,Medicine,Glomerular Disease (Part 1),20
+Main,Medicine,Glomerular Disease (Part 2),20
+Main,Medicine,Miscellaneous (Part 1),31
+Main,Medicine,Miscellaneous (Part 2),30
+Main,Medicine,SLE,19
+Main,Medicine,Rheumatoid Arthritis,31
+Main,Medicine,"APLA, SS, SJOGRENS",19
+Main,Medicine,Spondyloarthritis,14
+Main,Medicine,Vasculitis Syndromes,24
+Main,Medicine,Behcet's & Myopathies,12
+Main,Medicine,"Gout, Sarcoid",15
+Main,Medicine,Miscellaneous,16
+Main,Medicine,Articular & Musculoskeletal Disorders,23
+Main,Medicine,Disorders Of Oesophagus,12
+Main,Medicine,Pud & Related Disorders,11
+Main,Medicine,Disorders of Absorption and Nutritional disorders,11
+Main,Medicine,IBD & IBS,18
+Main,Medicine,Hepatobiliary Disorders (Part 1),23
+Main,Medicine,Hepatobiliary Disorders (Part 2),23
+Main,Medicine,Pancreas,15
+Main,Medicine,Lower GI,11
+Main,Medicine,GI Infections,17
+Main,Medicine,Miscellaneous,19
+Main,Medicine,Critical care and Medical Oncology,28
+Main,Medicine,Hematology (Part 1),24
+Main,Medicine,Hematology (Part 2),23
+Main,Medicine,"Fluid , Electrolyte & Nutrition",29
+Main,Medicine,Bacterial (Part 1),23
+Main,Medicine,Bacterial (Part 2),22
+Main,Medicine,Viral,33
+Main,Medicine,Fungal,10
+Main,Medicine,Parasitic,25
+Main,Medicine,Community Acquired Infections,32
+QRP,Medicine,Approach to Neurology and Headache,15
+QRP,Medicine,Seizures and Autonomic,15
+QRP,Medicine,Stroke and Dementia,15
+QRP,Medicine,Demyelinating Disorders of Nervous System,20
+QRP,Medicine,Demyelinating and CNS_PNS,16
+QRP,Medicine,Movement Disorders and Muscular dystrophies,24
+QRP,Medicine,General Gastrology and Malabsorption,21
+QRP,Medicine,Approach to GI and Esophagus,17
+QRP,Medicine,Peptic Ulcer Disease and IBD,19
+QRP,Medicine,Liver Disease Part 1,20
+QRP,Medicine,Liver Disease Part 2,20
+QRP,Medicine,Clinical Approach to Cardiology,15
+QRP,Medicine,ECG Essentials,19
+QRP,Medicine,Management and Approach to Arrhythmias,24
+QRP,Medicine,Coronary and Peripheral Vessel Disease & Valvular Heart Disease,22
+QRP,Medicine,Atrial Fibrillation and Ventricular Tachycardia,15
+QRP,Medicine,Transfusion Medicine,10
+QRP,Medicine,Lymphomas,19
+QRP,Medicine,Leukemia,25
+QRP,Medicine,"RBC, Platelets and Other Blood Products",22
+QRP,Medicine,Pituitary Syndromes and Approach to Endocrinology,20
+QRP,Medicine,Adrenal Lesions,25
+QRP,Medicine,Thyroid Disease,19
+QRP,Medicine,Diabetes and Obesity,20
+QRP,Medicine,"Bone, Mineral and Metabolic Disorders",16
+QRP,Medicine,Approach to Infections and IBQ,21
+QRP,Medicine,Pneumonia and Bacterial Infections,17
+QRP,Medicine,Infective Musculoskeletal and Infective Endocarditis,22
+QRP,Medicine,Bacterial Illness,16
+QRP,Medicine,Viral Infections (DNA Virus and RNA Virus) and Protozoan Disease,17
+QRP,Medicine,Acute Kidney Injury,15
+QRP,Medicine,Chronic Kidney Disease,15
+QRP,Medicine,Glomerulonephritis,15
+QRP,Medicine,Asthma and Hypersensitivity Pneumonitis,23
+QRP,Medicine,COPD,15
+QRP,Medicine,Occupational Lung Disease and Interstitial Lung Disease,14
+QRP,Medicine,Disorders of Pleura JOSA J Ventilation & Bronchiectasis and Cystic Fibrosis,24
+QRP,Medicine,Basic Immunology and Primary Immune Deficiency Disease,25
+QRP,Medicine,"Rheumatoid Arthritis, Sjogren, Scleroderma & Inflammatory Myopathy",22
+QRP,Medicine,SLE and Antiphospholipid Syndrome,11
+QRP,Medicine,"Spondyloarthritis, Crystral Arthritis, Vasculitis and Replapsing Polychondritis, Miscellaneous",19
+PYQ,Medicine,NEET PG 2025,20
+PYQ,Medicine,NEET PG 2024,43
+PYQ,Medicine,NEET PG 2023,18
+PYQ,Medicine,NEET PG 2022,23
+PYQ,Medicine,NEET PG 2021,20
+PYQ,Medicine,NEET PG 2020,26
+PYQ,Medicine,INI CET May 2026,15
+PYQ,Medicine,INI CET Nov 2025,21
+PYQ,Medicine,INI CET MAY 2025,18
+PYQ,Medicine,INI CET Nov 2024,24
+PYQ,Medicine,INI CET May 2024,25
+PYQ,Medicine,INI CET Nov 2023,26
+PYQ,Medicine,INI CET May 2023,22
+PYQ,Medicine,INI CET Nov 2022,26
+PYQ,Medicine,INI CET May 2022,20
+PYQ,Medicine,INI CET Nov 2021,12
+PYQ,Medicine,INI CET May 2021,18
+PYQ,Medicine,INI CET Nov 2020,19
+PYQ,Medicine,INI CET May 2020,17
+Main,Surgery,"Fluid, Electrolyte And Nutrition(Nutrition And Blood Transfusion)",17
+Main,Surgery,Shock,26
+Main,Surgery,Basic Surgical Principles & Post Operative,25
+Main,Surgery,"Inside The Operation Theatre (Instruments, Sutures,OT Protocols)",54
+Main,Surgery,"Basics Of Trauma (Introduction, ATLS Protocols, Scoring Systems)",28
+Main,Surgery,"Head, Face And Neck Injury",17
+Main,Surgery,"Thoracic, Abdominal injury and Burns",33
+Main,Surgery,Head And Neck,18
+Main,Surgery,Basics,20
+Main,Surgery,Benign Disorders,16
+Main,Surgery,Malignant Disorders,23
+Main,Surgery,Basics,17
+Main,Surgery,Benign Disorders,17
+Main,Surgery,Ca Breast,26
+Main,Surgery,Hernia (Part 1),19
+Main,Surgery,Oesophagus,33
+Main,Surgery,Stomach And Bariatric Surgery,32
+Main,Surgery,Small Intestine,17
+Main,Surgery,Intestinal Obstruction,25
+Main,Surgery,Large Intestine,31
+Main,Surgery,Inflammatory Bowel Disease,33
+Main,Surgery,Appendix,17
+Main,Surgery,Rectum And Anal Canal,23
+Main,Surgery,Hernia (Part 2),18
+Main,Surgery,Gallbladder And Biliary System,29
+Main,Surgery,Pancreas-Benign Disorders,40
+Main,Surgery,Pancreatic Tumors,21
+Main,Surgery,Liver,19
+Main,Surgery,Portal Hypertension,23
+Main,Surgery,Spleen,11
+Main,Surgery,Kidney And Ureter,18
+Main,Surgery,Bladder,13
+Main,Surgery,Prostate And Seminal Vesicles,14
+Main,Surgery,Urethra And Penis,22
+Main,Surgery,CVTS (Part 1),18
+Main,Surgery,CVTS (Part 2),17
+Main,Surgery,Plastic Surgery,24
+Main,Surgery,Pediatric Surgery,22
+Main,Surgery,Surgical Oncology,17
+Main,Surgery,Endocrine Surgery,27
+Main,Surgery,Neurosurgery,35
+Main,Surgery,Transplant,23
+QRP,Surgery,Basic Principles of Surgery,25
+QRP,Surgery,Surgical Infection and Swelling,11
+QRP,Surgery,Trauma,24
+QRP,Surgery,Benign Lesions,15
+QRP,Surgery,Malignant Lesions,17
+QRP,Surgery,Thyroid & Parathyroid,26
+QRP,Surgery,Adrenal and Endocrine Pancreas,8
+QRP,Surgery,Esophagus,14
+QRP,Surgery,"Stomach, Duodenum, Barristrics",21
+QRP,Surgery,"Small Bowel, Inflammatory Bowel Disease, Appendix",26
+QRP,Surgery,Large Intestine & Anal Canal,24
+QRP,Surgery,Abdominal Wall and Hernia,23
+QRP,Surgery,Liver,18
+QRP,Surgery,Gall Bladder & Bile Duct,26
+QRP,Surgery,Pancreas & Spleen,29
+QRP,Surgery,Urinary Bladder Symptoms & Investigations,25
+QRP,Surgery,Kidney & Ureter,23
+QRP,Surgery,Prostate & Seminal Vesicles,16
+QRP,Surgery,Urethra & Penis,23
+QRP,Surgery,Testis & Scrotum,15
+QRP,Surgery,Burns & Plastic,21
+QRP,Surgery,Skin,16
+QRP,Surgery,Pediatric Surgery,20
+QRP,Surgery,Cardiothoracic Surgery,11
+QRP,Surgery,Vascular Surgery,21
+QRP,Surgery,Transplant Surgery,15
+QRP,Surgery,Head and Neck,16
+QRP,Surgery,Neurosurgery,15
+PYQ,Surgery,NEET PG 2025,12
+PYQ,Surgery,NEET PG 2024,42
+PYQ,Surgery,NEET PG 2023,27
+PYQ,Surgery,NEET PG 2022,25
+PYQ,Surgery,NEET PG 2021,17
+PYQ,Surgery,NEET PG 2020,26
+PYQ,Surgery,INI CET May 2026,15
+PYQ,Surgery,INI CET Nov 2025,11
+PYQ,Surgery,INI CET MAY 2025,19
+PYQ,Surgery,INI CET Nov 2024,22
+PYQ,Surgery,INI CET May 2024,18
+PYQ,Surgery,INI CET Nov 2023,21
+PYQ,Surgery,INI CET May 2023,21
+PYQ,Surgery,INI CET Nov 2022,30
+PYQ,Surgery,INI CET May 2022,24
+PYQ,Surgery,INI CET Nov 2021,15
+PYQ,Surgery,INI CET May 2021,14
+PYQ,Surgery,INI CET Nov 2020,27
+PYQ,Surgery,INI CET May 2020,18
+Main,Pediatrics,Pediatric Infections (Part 1),19
+Main,Pediatrics,Pediatric Infections (Part 2),19
+Main,Pediatrics,General Pediatrics & Development,33
+Main,Pediatrics,Diseases of the New Born (Part 1),19
+Main,Pediatrics,Diseases of the Newborn (Part 2),19
+Main,Pediatrics,Neonatology (Part 1),22
+Main,Pediatrics,Neonatology (Part 2),23
+Main,Pediatrics,Genetics & Syndromes,31
+Main,Pediatrics,Pediatric Pulmonology (Part 1),21
+Main,Pediatrics,Pediatric Pulmonology (Part 2),21
+Main,Pediatrics,Immunology & Vaccines,26
+Main,Pediatrics,Pediatric Rheumatology & Vasculitis,27
+Main,Pediatrics,Tubular Disorders,20
+Main,Pediatrics,Glomerular Diseases,17
+Main,Pediatrics,AKI vs. CKD,11
+Main,Pediatrics,Pediatric Neurology (Part 1),22
+Main,Pediatrics,Pediatric Neurology (Part 2),21
+Main,Pediatrics,Congenital Neurological Malformations and Neurocutaneous Disorders,28
+Main,Pediatrics,Metabolic Disorders & Endocrinology,34
+Main,Pediatrics,Pediatric GIT & Hepatology,19
+Main,Pediatrics,Disorders of RBC and Platelets,29
+Main,Pediatrics,Pediatric Oncology,24
+Main,Pediatrics,Pediatric Critical Care,16
+Main,Pediatrics,Pediatric Cardiology,25
+Main,Pediatrics,CDH And TEF,14
+QRP,Pediatrics,General Pediatrics,20
+QRP,Pediatrics,Nutrition Part 1,15
+QRP,Pediatrics,Nutrition Part 2,12
+QRP,Pediatrics,Neonatology Part 1,15
+QRP,Pediatrics,Neonatology Part 2,14
+QRP,Pediatrics,Pediatric Infections,21
+QRP,Pediatrics,Syndromes,14
+QRP,Pediatrics,Pediatric Pulmonology,24
+QRP,Pediatrics,Immunization and Immunodeficiency,15
+QRP,Pediatrics,Rheumatology,9
+QRP,Pediatrics,Pediatric Nephrology,17
+QRP,Pediatrics,Pediatric Neurology,23
+QRP,Pediatrics,Pediatric Endocrinology,9
+QRP,Pediatrics,Metabolic Disorders,5
+QRP,Pediatrics,Pediatric GIT,25
+QRP,Pediatrics,Hemat-oncology,25
+QRP,Pediatrics,Critical Care,10
+QRP,Pediatrics,Pediatric Cardiology,25
+PYQ,Pediatrics,NEET PG 2025,7
+PYQ,Pediatrics,NEET PG 2024,16
+PYQ,Pediatrics,NEET PG 2023,10
+PYQ,Pediatrics,NEET PG 2022,14
+PYQ,Pediatrics,NEET PG 2021,9
+PYQ,Pediatrics,NEET PG 2020,11
+PYQ,Pediatrics,NEET PG 2019,7
+PYQ,Pediatrics,NEET PG 2018,18
+PYQ,Pediatrics,INI CET May 2026,13
+PYQ,Pediatrics,INI CET Nov 2025,11
+PYQ,Pediatrics,INI CET MAY 2025,11
+PYQ,Pediatrics,INI CET Nov 2024,14
+PYQ,Pediatrics,INICET May 2024,14
+PYQ,Pediatrics,INI CET Nov 2023,8
+PYQ,Pediatrics,INI CET May 2023,9
+PYQ,Pediatrics,INI CET Nov 2022,19
+PYQ,Pediatrics,INI CET May 2022,5
+PYQ,Pediatrics,INI CET Nov 2021,6
+PYQ,Pediatrics,INI CET May 2021,5
+PYQ,Pediatrics,INI CET Nov 2020,5
+PYQ,Pediatrics,INI CET May 2020,8
+Main,Dermatology,Fungal Infections,25
+Main,Dermatology,Bacterial Infection,21
+Main,Dermatology,Basics of Dermatology,22
+Main,Dermatology,Morphology and Investigation of Skin Lesions,10
+Main,Dermatology,Appendegeal & Disorders (Part 1),18
+Main,Dermatology,Appendegeal and Disorders (Part 2),22
+Main,Dermatology,Mycobacterial Skin Infections,9
+Main,Dermatology,Leprosy,20
+Main,Dermatology,Parasitic Infections,13
+Main,Dermatology,Sexually Transmitted Diseases (Part 1),14
+Main,Dermatology,Sexually Transmitted Diseases (Part 2),9
+Main,Dermatology,Vesiculobullous Disorders (Part 1),21
+Main,Dermatology,Vesiculobullous Disorders (Part 2),18
+Main,Dermatology,Papulosquamous Disorders (Part 1),25
+Main,Dermatology,Papulosquamous Disorders (Part 2),16
+Main,Dermatology,Pigmentation Disorders,28
+Main,Dermatology,Eczema,25
+Main,Dermatology,Histamine Mediated Disorders,18
+Main,Dermatology,Cutaneous Drug Eruptions,15
+Main,Dermatology,Skin Tumours,16
+Main,Dermatology,Skin and Connective tissue disorders,12
+Main,Dermatology,Genodermatoses,8
+Main,Dermatology,Miscellaneous skin disorders,16
+Main,Dermatology,Viral Infections,17
+Main,Dermatology,Skin & Systemic Diseases,14
+QRP,Dermatology,"Basics of Dermatology, Mycobacterial Skin Infection, Leprosy",17
+QRP,Dermatology,"Fungal Infection, Viral Infection, Bacterial Infection, Parasitic Infection",23
+QRP,Dermatology,Appendageal Disorder,16
+QRP,Dermatology,Sexually Transmitted Diseases,21
+QRP,Dermatology,"Papulosquamous Disorder, Vesiculo Bullous Disorder",14
+QRP,Dermatology,"Pigmentation Disorder, Eczema",23
+QRP,Dermatology,"Cutaneous Drug Eruptions, Skin Tumors, Skin and CTDs, Genodermatoses, Skin and Systemic Disease, Short Topics",27
+PYQ,Dermatology,NEET PG 2025,3
+PYQ,Dermatology,NEET PG 2024,6
+PYQ,Dermatology,NEET PG 2023,5
+PYQ,Dermatology,NEET PG 2022,7
+PYQ,Dermatology,NEET PG 2021,6
+PYQ,Dermatology,NEET PG 2020,5
+PYQ,Dermatology,NEET PG 2019,9
+PYQ,Dermatology,INI CET Nov 2025,8
+PYQ,Dermatology,INI CET MAY 2025,5
+PYQ,Dermatology,INI CET Nov 2024,6
+PYQ,Dermatology,INI CET May 2024,5
+PYQ,Dermatology,INI CET Nov 2023,8
+PYQ,Dermatology,INI CET May 2023,6
+PYQ,Dermatology,INI CET Nov 2022,13
+PYQ,Dermatology,INI CET May 2022,8
+PYQ,Dermatology,INI CET Nov 2021,7
+PYQ,Dermatology,INI CET May 2021,7
+PYQ,Dermatology,INI CET Nov 2020,7
+PYQ,Dermatology,INI CET May 2020,7
+Main,Radiology,Introduction,9
+Main,Radiology,X - Rays & Radiation Units,14
+Main,Radiology,Ultra Sound Sonography,15
+Main,Radiology,Computed Tomography,12
+Main,Radiology,Magnetic Resonance Imaging,10
+Main,Radiology,Radiotherapy,21
+Main,Radiology,Radionucleotide Imaging,8
+Main,Radiology,Gastrointestinal Tract,22
+Main,Radiology,Respiratory Radiology,38
+Main,Radiology,Cardiovascular Radiology,16
+Main,Radiology,Angiography,7
+Main,Radiology,Breast and OBG Imaging,16
+Main,Radiology,Musculoskeletal,25
+Main,Radiology,Urology,28
+Main,Radiology,Neuroradiology,24
+Main,Radiology,Hepatobiliary,16
+Main,Radiology,Pancreas,5
+Main,Radiology,Contrast Agents,6
+Main,Radiology,Trauma,15
+Main,Radiology,COVID-19 & Mucormycosis,1
+Main,Radiology,Miscellaneous,15
+QRP,Radiology,General Radiology,17
+QRP,Radiology,Neuro Radiology,22
+QRP,Radiology,Respiratory and CVS Radiology,34
+QRP,Radiology,MSK Radiology,30
+QRP,Radiology,GI and HPB Radiology,27
+QRP,Radiology,Uro Radiology,13
+QRP,Radiology,Womens Imaging,15
+QRP,Radiology,Radiotherapy and Nuclear Medicine,10
+PYQ,Radiology,NEET PG 2025,7
+PYQ,Radiology,NEET PG 2024,16
+PYQ,Radiology,NEET PG 2023,4
+PYQ,Radiology,NEET PG 2022,2
+PYQ,Radiology,NEET PG 2021,5
+PYQ,Radiology,NEET PG 2020,8
+PYQ,Radiology,NEET PG 2019,18
+PYQ,Radiology,INI CET May 2026,1
+PYQ,Radiology,INI CET Nov 2025,6
+PYQ,Radiology,INI CET MAY 2025,7
+PYQ,Radiology,INI CET Nov 2024,4
+PYQ,Radiology,INI CET May 2024,3
+PYQ,Radiology,INI CET Nov 2023,3
+PYQ,Radiology,INI CET May 2023,2
+PYQ,Radiology,INI CET Nov 2022,6
+PYQ,Radiology,INI CET May 2022,7
+PYQ,Radiology,INI CET Nov 2021,7
+PYQ,Radiology,INI CET May 2021,4
+PYQ,Radiology,INI CET Nov 2020,3
+PYQ,Radiology,INI CET May 2020,3
+Main,Biochemistry,Classification And General Properties Of Sugars,19
+Main,Biochemistry,"Glucose, Glycolysis, Gluconeogenesis",29
+Main,Biochemistry,"Galactose Metabolism, Fructose Metabolism, HMP Shunt",10
+Main,Biochemistry,Glycogen Metabolism And Storage Disorders,13
+Main,Biochemistry,Miscellaneous,42
+Main,Biochemistry,Classification And Properties,29
+Main,Biochemistry,Fatty Acid Synthesis And Metabolism,16
+Main,Biochemistry,Ketone Bodies And Cholesterol,23
+Main,Biochemistry,Lipoproteins And Lipid Storage Disorders,35
+Main,Biochemistry,"Phospholipids, Shingolipids,Glycolipids, Lipid Storage Disorders",14
+Main,Biochemistry,Nucleotide Synthesis And Catabolism And Related Diseases,18
+Main,Biochemistry,"Nucleic Acid Structure (DNA & RNA), Function",13
+Main,Biochemistry,"DNA Organization, Replication, Damage And Repair",22
+Main,Biochemistry,"RNA Synthesis (Transcription), Processing And Modification",12
+Main,Biochemistry,"Genetic Code & Protein Synthesis (Translation), Regulation Of Gene Expression",10
+Main,Biochemistry,Molecular Techniques,7
+Main,Biochemistry,Fat Soluble Vitamins,17
+Main,Biochemistry,Water Soluble Vitamins And Minerals,28
+Main,Biochemistry,Bioenergetics,4
+Main,Biochemistry,Amino acid catabolism,16
+Main,Biochemistry,Heme Synthesis and Porphyria,18
+Main,Biochemistry,"Amino acid classification and properties, protein structure and protein separation",16
+Main,Biochemistry,"Biosynthesis of amino acids, collagen",21
+Main,Biochemistry,Aromatic amino acids and their metabolic products,11
+Main,Biochemistry,Enzymes and its properties,23
+Main,Biochemistry,"Enzyme inhibition, Regulation, Isoenzymes and Applications",12
+Main,Biochemistry,Clinical application of Enzymes,13
+Main,Biochemistry,"Ph, Buffers and Acid Base disorder",13
+Main,Biochemistry,"Biological Membrane, Cytoskeleton & ECM",25
+Main,Biochemistry,"Hormones and their actions, cell cycle and Tumours",26
+QRP,Biochemistry,Basic Biochemistry,25
+QRP,Biochemistry,Carbohydrates,25
+QRP,Biochemistry,Proteins,25
+QRP,Biochemistry,Enzymes,25
+QRP,Biochemistry,Lipids,26
+QRP,Biochemistry,Nutrition,25
+QRP,Biochemistry,Organ Function Test,24
+QRP,Biochemistry,Genetics,25
+QRP,Biochemistry,Clinical Biochemistry,25
+PYQ,Biochemistry,NEET PG 2025,16
+PYQ,Biochemistry,NEET PG 2024,16
+PYQ,Biochemistry,NEET PG 2023,14
+PYQ,Biochemistry,NEET PG 2022,10
+PYQ,Biochemistry,NEET PG 2021,12
+PYQ,Biochemistry,NEET PG 2020,17
+PYQ,Biochemistry,NEET PG 2019,20
+PYQ,Biochemistry,INI CET May 2026,11
+PYQ,Biochemistry,INI CET Nov 2025,20
+PYQ,Biochemistry,INI CET MAY 2025,11
+PYQ,Biochemistry,INI CET Nov 2024,16
+PYQ,Biochemistry,INI CET May 2024,15
+PYQ,Biochemistry,INI CET Nov 2023,8
+PYQ,Biochemistry,INI CET May 2023,9
+PYQ,Biochemistry,INI CET Nov 2022,19
+PYQ,Biochemistry,INI CET May 2022,10
+PYQ,Biochemistry,INI CET Nov 2021,10
+PYQ,Biochemistry,INI CET May 2021,14
+PYQ,Biochemistry,INI CET Nov 2020,11
+PYQ,Biochemistry,INI CET May 2020,8
+Main,Microbiology,Introduction & Classification,25
+Main,Microbiology,Sterilization & Disinfection,19
+Main,Microbiology,Bacterial Genetics,12
+Main,Microbiology,Culture Media & Methods,14
+Main,Microbiology,General Immunology & Components Of Immune System,28
+Main,Microbiology,Antibodies & Antigen-Antibody Reaction,37
+Main,Microbiology,Hypersensitivity,28
+Main,Microbiology,Major Histocompatibility Complex & Immunodeficiency Disorders,35
+Main,Microbiology,Super Antigen,2
+Main,Microbiology,"Staphylococci, Streptococci, Pneumococci & Enterococci",20
+Main,Microbiology,"Cornybacterium, Listeria, Actinomycetes & Erysepilothrix",20
+Main,Microbiology,Mycobacteria,25
+Main,Microbiology,Enterobacteriaceae,16
+Main,Microbiology,"Vibrio, Campylobacter, Helicobacter, Legionella & Bartonella",15
+Main,Microbiology,"Pseudomonas, Haemophilus, Bordetella, Brucella & Francisella",28
+Main,Microbiology,"Rickettsia, Chlamydia & Mycoplasma",24
+Main,Microbiology,Gram Negative Cocci,12
+Main,Microbiology,Properties of Virus,20
+Main,Microbiology,DNA Virus,27
+Main,Microbiology,Hepatitis,22
+Main,Microbiology,HIV,23
+Main,Microbiology,Myxovirus & Rhabdovirus,13
+Main,Microbiology,Arbovirus & Picorna Virus,6
+Main,Microbiology,"Miscellaneous ( Rubella,Corona, Prions, Rotavirus, Filovirus, Zikavirus, Nipah)",10
+Main,Microbiology,Superficial & Systemic Mycoses,19
+Main,Microbiology,Opportunistic Mycoses,19
+Main,Microbiology,General Parasitology,25
+Main,Microbiology,"Protozoology- Amoebae, Ciliates & Flagellates",17
+Main,Microbiology,Protozoology- Sporozoa,18
+Main,Microbiology,Helminthology- Nematodes,28
+Main,Microbiology,Applied Microbiology (Part 1),27
+Main,Microbiology,Applied Microbiology (Part 2),26
+Main,Microbiology,Miscellaneous,25
+Main,Microbiology,Systemic Microbiology,22
+Main,Microbiology,Hospital Associated Infections,13
+QRP,Microbiology,Culture Media and Methods,21
+QRP,Microbiology,Genitics,10
+QRP,Microbiology,Sterilization and Disinfectant,20
+QRP,Microbiology,"Immunity, Autoimmuty, and MHC",21
+QRP,Microbiology,"Antigen, Antibody and Hypersensitivity",20
+QRP,Microbiology,Complement,12
+QRP,Microbiology,General Virology,25
+QRP,Microbiology,General Hepatitis and Hepatitis B,25
+QRP,Microbiology,General Diagnostic Methods,23
+QRP,Microbiology,Superficial Fungal Infection,11
+QRP,Microbiology,Miscellaneous,20
+QRP,Microbiology,Gram-Negative Pathogens,16
+QRP,Microbiology,Introduction to Acid-Fast Bacilli,16
+QRP,Microbiology,Clostridium,20
+QRP,Microbiology,Protozoa,18
+QRP,Microbiology,Helminths,12
+QRP,Microbiology,Infection Control Measures,8
+QRP,Microbiology,Specific Pathogens and Infection Control,12
+PYQ,Microbiology,NEET PG 2025,12
+PYQ,Microbiology,NEET PG 2024,16
+PYQ,Microbiology,NEET PG 2023,12
+PYQ,Microbiology,NEET PG 2022,10
+PYQ,Microbiology,NEET PG 2021,11
+PYQ,Microbiology,NEET PG 2020,20
+PYQ,Microbiology,NEET PG 2019,24
+PYQ,Microbiology,INI CET May 2026,15
+PYQ,Microbiology,INI CET Nov 2025,22
+PYQ,Microbiology,INI CET MAY 2025,15
+PYQ,Microbiology,INI CET Nov 2024,21
+PYQ,Microbiology,INI CET May 2024,21
+PYQ,Microbiology,INI CET Nov 2023,13
+PYQ,Microbiology,INI CET May 2023,14
+PYQ,Microbiology,INI CET Nov 2022,25
+PYQ,Microbiology,INI CET May 2022,13
+PYQ,Microbiology,INI CET Dec 2021,19
+PYQ,Microbiology,INI CET Nov 2021,15
+PYQ,Microbiology,INI CET May 2021,13
+PYQ,Microbiology,INI CET Nov 2020,21
+PYQ,Microbiology,INI CET May 2020,19
+Main,OB & G,Anatomy Of Female Genital Tract,20
+Main,OB & G,"Menstrual Physiology, Premenstrual Syndromes, Dysmenorrhea, Menopause & HRT",18
+Main,OB & G,"Sexual Development, Puberty, Adolescence & Disorders Of Puberty",25
+Main,OB & G,Fibroid,19
+Main,OB & G,"AUB, Endometriosis & Adenomyosis",25
+Main,OB & G,"Benign Disease Of Ovary, Vulva & Vagina",24
+Main,OB & G,Genital Infections (Part 1),19
+Main,OB & G,Genital Infections (Part 2),19
+Main,OB & G,Amenorrhea,15
+Main,OB & G,Inferility and ART,35
+Main,OB & G,"Prolactin Disorders, Hirsutism, PCOS & Anovulation",21
+Main,OB & G,Pre Malignant Lesions,16
+Main,OB & G,"Ca Endometrium, Cervix, Vulva, Vagina & Miscellaneous",35
+Main,OB & G,Ovarian Tumors (Part 1),18
+Main,OB & G,Ovarian Tumors (Part 2),17
+Main,OB & G,Contraception,32
+Main,OB & G,Urogynecology,13
+Main,OB & G,"Drugs, Specimen & Instrumentation In ObGyn",21
+Main,OB & G,Anatomy Of Female Reproductive Tract,41
+Main,OB & G,Fundamentals of Female Reproduction and Physiological Changes of Pregnancy,32
+Main,OB & G,Endocrinology & Diagnosis  Of Pregnancy,28
+Main,OB & G,Aneuploidy Screening & Antepartum Investigations,22
+Main,OB & G,"Definition, Mechanism of Labour, Stages of Labour",22
+Main,OB & G,"Malpresentation, Malposition and Cord Complications",19
+Main,OB & G,Peurperium,11
+Main,OB & G,Preterm Labour And PROM,27
+Main,OB & G,Postdated Pregnancy & Intrauterine Fetal Death,10
+Main,OB & G,Shoulder Dyscocia and Obstructed Labour,11
+Main,OB & G,Operative Obstetrics,19
+Main,OB & G,Postpartum Hemorrhage,22
+Main,OB & G,Inversion Of Uterus &  Injury To The Birth Canal And Surrounding Structures,14
+Main,OB & G,"Placenta Accreta, Retained Placenta, Amniotic Fluid Embolism & Uterine Inversion",8
+Main,OB & G,Abortion,12
+Main,OB & G,"Ectopic Pregnancy, Gestational Trophoblastic Diseases",23
+Main,OB & G,APH - Antepartum Haemorrhage,29
+Main,OB & G,Anemia In Pregnancy & Heart Disease In Pregnancy,30
+Main,OB & G,Hypertensive Disorders In Pregnancy,24
+Main,OB & G,"Pregnancy With Prior Caesarean Delivery, Infections In Pregnancy",24
+Main,OB & G,Rh Isoimmunisation,6
+Main,OB & G,"Gynaecological Disorders In Pregnancy, Drugs In Obstetrics, Instruments In Obstetrics, Specimens",16
+Main,OB & G,Liver Disease in Pregnancy,2
+QRP,OB & G,Anatomy of Female Genital Tract Physiology of Pregnancy,25
+QRP,OB & G,Early Pregnancy Complication,30
+QRP,OB & G,Antepartum Hemorrhage,20
+QRP,OB & G,"Preterm Labor, Prom and IOL",25
+QRP,OB & G,Post Maturity IUD and Operative OBST,20
+QRP,OB & G,PPH,21
+QRP,OB & G,"Amniotic Fluid, Placenta, Umbilical Cord and Associated Disorder and Abnormal Perpeurium",20
+QRP,OB & G,"Multifetal Gestation, Obstetric Imaging and Prenatal Diagnosis",26
+QRP,OB & G,"Fetal Monitoring, IUGR, normal and Abnormal Labor, Malpositions and Malpresentation",27
+QRP,OB & G,GDM and Anemia in Pregnancy,23
+QRP,OB & G,Hypertensive Disorder in Pregnancy and Rh Isoimmunisation,23
+QRP,OB & G,Medical Disorder in Pregnancy Part 1,20
+QRP,OB & G,Medical Disorder in Pregnancy Part 2,20
+QRP,OB & G,"Development and Disorders of Female Reproductive Organ, Physiology of Ovulation and Menopause",20
+QRP,OB & G,"Fibroid Uterus, STI and PID",17
+QRP,OB & G,"AUB, Endometriosis and Adenomyosis",18
+QRP,OB & G,Primary and Secondary Amennorhea and Infertility,19
+QRP,OB & G,Gynaecological Malignancy and GTD,24
+QRP,OB & G,"Imaging Modalities Surgeries, Endoscopy, Radiotherapy and Chemotherapy in Gyane",19
+QRP,OB & G,"Pelvic Organ Prolapse, Fistula and Contraception",18
+PYQ,OB & G,NEET PG 2025,21
+PYQ,OB & G,NEET PG 2024,37
+PYQ,OB & G,NEET PG 2023,18
+PYQ,OB & G,NEET PG 2022,25
+PYQ,OB & G,NEET PG 2021,19
+PYQ,OB & G,NEET PG 2020,32
+PYQ,OB & G,NEET PG 2019,29
+PYQ,OB & G,INI CET Nov 2025,11
+PYQ,OB & G,INI CET MAY 2025,8
+PYQ,OB & G,INI CET Nov 2024,18
+PYQ,OB & G,INI CET May 2024,14
+PYQ,OB & G,INI CET Nov 2023,18
+PYQ,OB & G,INI CET May 2023,14
+PYQ,OB & G,INI CET Nov 2022,29
+PYQ,OB & G,INI CET May 2022,22
+PYQ,OB & G,INI CET Nov 2021,17
+PYQ,OB & G,INI CET May 2021,26
+PYQ,OB & G,INI CET Nov 2020,8
+PYQ,OB & G,INI CET May 2020,15
+Main,Anaesthesia,History of Anaesthesia,7
+Main,Anaesthesia,Anatomy and Physiology,17
+Main,Anaesthesia,Intravenous Regional Anaesthesia and Nerve Blocks,17
+Main,Anaesthesia,Central Neuraxial Blocks,12
+Main,Anaesthesia,Inhalational Agents,61
+Main,Anaesthesia,Intravenous Agents,87
+Main,Anaesthesia,Neuromuscular Blockage & Reversal Agents,49
+Main,Anaesthesia,Local Anesthetic,29
+Main,Anaesthesia,Opioids,16
+Main,Anaesthesia,Oxygen Therapy,11
+Main,Anaesthesia,Anaesthesia Machine & Circuit,26
+Main,Anaesthesia,Cylinders,8
+Main,Anaesthesia,"Stages, Pre Operative Evaluation, MP, ASA",6
+Main,Anaesthesia,"Procedure, Cannula. Mask, Laryngoscope, Difficult airway Assessment",17
+Main,Anaesthesia,Airway Gadgets & Difficult Airway Management,24
+Main,Anaesthesia,Basic Monitoring,12
+Main,Anaesthesia,Advanced Monitoring,14
+Main,Anaesthesia,Complications In OT & CPT,31
+Main,Anaesthesia,Pain & Palliative Care,40
+Main,Anaesthesia,Neuro Anaesthesia,18
+Main,Anaesthesia,Mechanical Ventilation,28
+Main,Anaesthesia,Special Population (Part 1),39
+Main,Anaesthesia,Special Population (Part 2),38
+QRP,Anaesthesia,History,15
+QRP,Anaesthesia,Regional Anesthesia,20
+QRP,Anaesthesia,Drugs,25
+QRP,Anaesthesia,General Anesthesia,25
+QRP,Anaesthesia,Oxygen Therapy Devices,15
+QRP,Anaesthesia,Machine,20
+QRP,Anaesthesia,Trauma,15
+QRP,Anaesthesia,Monitoring and Complications,15
+PYQ,Anaesthesia,NEET PG 2025,2
+PYQ,Anaesthesia,NEET PG 2024,8
+PYQ,Anaesthesia,NEET PG 2023,3
+PYQ,Anaesthesia,NEET PG 2022,2
+PYQ,Anaesthesia,NEET PG 2021,5
+PYQ,Anaesthesia,NEET PG 2020,4
+PYQ,Anaesthesia,INI CET May 2026,3
+PYQ,Anaesthesia,INI CET Nov 2025,6
+PYQ,Anaesthesia,INI CET MAY 2025,3
+PYQ,Anaesthesia,INI CET Nov 2024,6
+PYQ,Anaesthesia,INI CET May 2024,4
+PYQ,Anaesthesia,INI CET Nov 2023,4
+PYQ,Anaesthesia,INI CET May 2023,3
+PYQ,Anaesthesia,INI CET Nov 2022,3
+PYQ,Anaesthesia,INI CET May 2022,2
+PYQ,Anaesthesia,INI CET Nov 2021,6
+PYQ,Anaesthesia,INI CET June 2021,5
+PYQ,Anaesthesia,INI CET May 2021,7
+PYQ,Anaesthesia,INI CET Nov 2020,4
+PYQ,Anaesthesia,INI CET May 2020,4
+Main,Orthopaedics,Fracture:Classification And Management,26
+Main,Orthopaedics,Fracture-Complications,28
+Main,Orthopaedics,Basics of Orthopaedics,10
+Main,Orthopaedics,General Trauma,32
+Main,Orthopaedics,Upper Limb Trauma (Part 1),27
+Main,Orthopaedics,Upper Limb Trauma (Part 2),26
+Main,Orthopaedics,Lower Limb Trauma (Part 1),25
+Main,Orthopaedics,Lower Limb Trauma (Part 2),25
+Main,Orthopaedics,Spine And Pelvic Trauma (Part 1),16
+Main,Orthopaedics,Spine And Pelvic Trauma (Part 2),16
+Main,Orthopaedics,Seronegative Arthritis,11
+Main,Orthopaedics,Ankylosing Spondylitis Rheumatoid Arthritis Fluorosis,10
+Main,Orthopaedics,Metabolic Bone Disease (Part 1),26
+Main,Orthopaedics,Metabolic Bone Disease (Part 2),26
+Main,Orthopaedics,Metabolic Bone (Part 3),26
+Main,Orthopaedics,Shoulder,21
+Main,Orthopaedics,Elbow And Wrist,27
+Main,Orthopaedics,Knee,28
+Main,Orthopaedics,"Hip, Ankle And Foot",21
+Main,Orthopaedics,Joint Reconstruction,15
+Main,Orthopaedics,Spine Disorders,37
+Main,Orthopaedics,Tumour (Part 1),23
+Main,Orthopaedics,Tumour (Part 2),23
+Main,Orthopaedics,Tumour (Part 3),22
+Main,Orthopaedics,Pediatric Orthopaedics (part 1),17
+Main,Orthopaedics,Pediatric Orthopaedics (part 2),16
+Main,Orthopaedics,Bone Infection (Part 1),21
+Main,Orthopaedics,Bone Infection (Part 2),21
+Main,Orthopaedics,Bone Infection (Part 3),21
+Main,Orthopaedics,Peripheral Nerve Injury and Disorders (Part 1),35
+Main,Orthopaedics,Peripheral Nerve Injury and Disorders (Part 2),34
+Main,Orthopaedics,Joint Disorders (Part 1),24
+Main,Orthopaedics,Joint Disorders (Part 2),21
+Main,Orthopaedics,Avascular Necrosis & Osteochondrosis,13
+QRP,Orthopaedics,General Orthopaedics & Basic Science,26
+QRP,Orthopaedics,"General Trauma, Polytrauma & Pelvis injuries & Sports Injuries",26
+QRP,Orthopaedics,Upper Limb Injuries & Lower Limb Injuries,24
+QRP,Orthopaedics,"Spine Injuries, Nerve Injuries & Neuropathy",22
+QRP,Orthopaedics,Paediatric Orthopaedics,15
+QRP,Orthopaedics,Musculoskeletal Infection & Metabolic Bone Disease,19
+QRP,Orthopaedics,Bone Tumour & Joint Disorder and Reconstruction,18
+PYQ,Orthopaedics,NEET PG 2025,5
+PYQ,Orthopaedics,NEET PG 2024,15
+PYQ,Orthopaedics,NEET PG 2023,6
+PYQ,Orthopaedics,NEET PG 2022,8
+PYQ,Orthopaedics,NEET PG 2021,6
+PYQ,Orthopaedics,NEET PG 2020,6
+PYQ,Orthopaedics,INI CET Nov 2025,5
+PYQ,Orthopaedics,INI CET MAY 2025,9
+PYQ,Orthopaedics,INI CET Nov 2024,6
+PYQ,Orthopaedics,INI CET May 2024,10
+PYQ,Orthopaedics,INI CET Nov 2023,6
+PYQ,Orthopaedics,INI CET May 2023,5
+PYQ,Orthopaedics,INI CET Nov 2022,12
+PYQ,Orthopaedics,INI CET May 2022,4
+PYQ,Orthopaedics,INI CET Nov 2021,8
+PYQ,Orthopaedics,INI CET May 2021,6
+PYQ,Orthopaedics,INI CET Nov 2020,8
+PYQ,Orthopaedics,INI CET May 2020,7
+Main,Psychiatry,History Of Psychiatry & Basics Of Psychology,8
+Main,Psychiatry,Psychopharmacology,34
+Main,Psychiatry,Assesment In Psychiatry & Mental Status Examination,55
+Main,Psychiatry,Psychotherapy & Treatment Modalities,11
+Main,Psychiatry,Schizophrenia & Other Psychotic Disorders,38
+Main,Psychiatry,Neurocognitive Disorders,37
+Main,Psychiatry,Mood Disorders,29
+Main,Psychiatry,Substance Related Disorders (Part 1),25
+Main,Psychiatry,Substance Related Disorders (Part 2),24
+Main,Psychiatry,Anxiety Disorders,31
+Main,Psychiatry,Obsessive & Compulsive Related Disorders,15
+Main,Psychiatry,Trauma & Stress Related Disorders,11
+Main,Psychiatry,Personality Disorders,15
+Main,Psychiatry,Somatoform Disorders,14
+Main,Psychiatry,Dissociative Disorders,9
+Main,Psychiatry,Sleep Disorders,9
+Main,Psychiatry,Eating Disorders,8
+Main,Psychiatry,Impulse Control Disorders,8
+Main,Psychiatry,Psychiatric Emergencies,16
+Main,Psychiatry,Forensic Psychiatry,15
+Main,Psychiatry,Child Psychiatry,36
+Main,Psychiatry,Psychoanalysis,18
+Main,Psychiatry,Sexual Disorders,6
+Main,Psychiatry,Miscellaneous,32
+QRP,Psychiatry,"Scientists, Psychology, Psychopathology",23
+QRP,Psychiatry,Mood & Psychotic Disorders,27
+QRP,Psychiatry,Substance use Disorders,17
+QRP,Psychiatry,"Child, Organic & Emergency Psychiatry",19
+QRP,Psychiatry,"Forensic Psychiatry, Consultation liason",17
+QRP,Psychiatry,Other Psychiatry Disorders,22
+QRP,Psychiatry,Psychopharmacology & Other Modalities,25
+PYQ,Psychiatry,NEET PG 2025,7
+PYQ,Psychiatry,NEET PG 2024,8
+PYQ,Psychiatry,NEET PG 2023,4
+PYQ,Psychiatry,NEET PG 2022,2
+PYQ,Psychiatry,NEET PG 2021,5
+PYQ,Psychiatry,NEET PG 2020,8
+PYQ,Psychiatry,INI CET May 2026,5
+PYQ,Psychiatry,INI CET Nov 2025,7
+PYQ,Psychiatry,INI CET MAY 2025,8
+PYQ,Psychiatry,INI CET Nov 2024,5
+PYQ,Psychiatry,INI CET May 2024,6
+PYQ,Psychiatry,INI CET Nov 2023,9
+PYQ,Psychiatry,INI CET May 2023,5
+PYQ,Psychiatry,INI CET Nov 2022,8
+PYQ,Psychiatry,INI CET May 2022,5
+PYQ,Psychiatry,INI CET Nov 2021,4
+PYQ,Psychiatry,INI CET May 2021,3
+PYQ,Psychiatry,INI CET Nov 2020,7
+PYQ,Psychiatry,INI CET May 2020,6

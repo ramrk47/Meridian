@@ -1,0 +1,362 @@
+subject,topic_or_year,question_count
+Anatomy,2025 NEET PG,11
+Anatomy,2025 INI CET,20
+Anatomy,2025 FMGE,21
+Anatomy,2024 NEET PG,21
+Anatomy,2024 INI CET,22
+Anatomy,2024 FMGE,22
+Anatomy,2023 NEET PG,7
+Anatomy,2023 INI CET,27
+Anatomy,2023 FMGE,23
+Anatomy,2022 NEET PG,4
+Anatomy,2022 INI CET,19
+Anatomy,2022 FMGE,16
+Anatomy,2021 NEET PG,7
+Anatomy,2021 INI CET,20
+Anatomy,2021 FMGE,31
+Anatomy,2020 NEET PG,16
+Anatomy,2020 INI CET,11
+Anatomy,2020 FMGE,19
+Anatomy,2020 AIIMS,12
+Biochemistry,2025 NEET PG,8
+Biochemistry,2025 INI CET,22
+Biochemistry,2025 FMGE,18
+Biochemistry,2024 NEET PG,6
+Biochemistry,2024 INI CET,14
+Biochemistry,2024 FMGE,15
+Biochemistry,2023 NEET PG,7
+Biochemistry,2023 INI CET,13
+Biochemistry,2023 FMGE,22
+Biochemistry,2022 NEET PG,3
+Biochemistry,2022 INI CET,13
+Biochemistry,2022 FMGE,13
+Biochemistry,2021 NEET PG,4
+Biochemistry,2021 INI CET,16
+Biochemistry,2021 FMGE,16
+Biochemistry,2020 NEET PG,11
+Biochemistry,2020 INI CET,10
+Biochemistry,2020 FMGE,20
+Biochemistry,2020 AIIMS,12
+Physiology,2025 NEET PG,15
+Physiology,2025 INI CET,31
+Physiology,2025 FMGE,22
+Physiology,2024 NEET PG,16
+Physiology,2024 INI CET,18
+Physiology,2024 FMGE,16
+Physiology,2023 NEET PG,13
+Physiology,2023 INI CET,4
+Physiology,2023 FMGE,22
+Physiology,2022 NEET PG,8
+Physiology,2022 INI CET,12
+Physiology,2022 FMGE,11
+Physiology,2021 NEET PG,10
+Physiology,2021 INI CET,20
+Physiology,2021 FMGE,21
+Physiology,2020 NEET PG,12
+Physiology,2020 INI CET,8
+Physiology,2020 FMGE,11
+Physiology,2020 AIIMS,7
+Microbiology,2025 NEET PG,13
+Microbiology,2025 INI CET,21
+Microbiology,2025 FMGE,36
+Microbiology,2024 NEET PG,33
+Microbiology,2024 INI CET,25
+Microbiology,2024 FMGE,42
+Microbiology,2023 NEET PG,11
+Microbiology,2023 INI CET,30
+Microbiology,2023 FMGE,36
+Microbiology,2022 NEET PG,10
+Microbiology,2022 INI CET,43
+Microbiology,2022 FMGE,13
+Microbiology,2021 NEET PG,15
+Microbiology,2021 INI CET,28
+Microbiology,2021 FMGE,35
+Microbiology,2020 NEET PG,27
+Microbiology,2020 INI CET,18
+Microbiology,2020 FMGE,26
+Microbiology,2020 AIIMS,16
+Pathology,2025 NEET PG,12
+Pathology,2025 INI CET,21
+Pathology,2025 FMGE,35
+Pathology,2024 NEET PG,23
+Pathology,2024 INI CET,25
+Pathology,2024 FMGE,36
+Pathology,2023 NEET PG,17
+Pathology,2023 INI CET,40
+Pathology,2023 FMGE,41
+Pathology,2022 NEET PG,22
+Pathology,2022 INI CET,41
+Pathology,2022 FMGE,14
+Pathology,2021 NEET PG,16
+Pathology,2021 INI CET,34
+Pathology,2021 FMGE,38
+Pathology,2020 NEET PG,21
+Pathology,2020 INI CET,16
+Pathology,2020 FMGE,34
+Pathology,2020 AIIMS,16
+Pharmacology,2025 NEET PG,11
+Pharmacology,2025 INI CET,33
+Pharmacology,2025 FMGE,38
+Pharmacology,2024 NEET PG,16
+Pharmacology,2024 INI CET,37
+Pharmacology,2024 FMGE,22
+Pharmacology,2023 NEET PG,13
+Pharmacology,2023 INI CET,27
+Pharmacology,2023 FMGE,24
+Pharmacology,2022 NEET PG,10
+Pharmacology,2022 INI CET,19
+Pharmacology,2022 FMGE,14
+Pharmacology,2021 NEET PG,11
+Pharmacology,2021 INI CET,24
+Pharmacology,2021 FMGE,35
+Pharmacology,2020 NEET PG,20
+Pharmacology,2020 INI CET,17
+Pharmacology,2020 FMGE,30
+Pharmacology,2020 AIIMS,18
+Ophthalmology,2025 NEET PG,7
+Ophthalmology,2025 INI CET,19
+Ophthalmology,2025 FMGE,13
+Ophthalmology,2024 NEET PG,12
+Ophthalmology,2024 INI CET,12
+Ophthalmology,2024 FMGE,24
+Ophthalmology,2023 NEET PG,7
+Ophthalmology,2023 INI CET,14
+Ophthalmology,2023 FMGE,19
+Ophthalmology,2022 NEET PG,5
+Ophthalmology,2022 INI CET,13
+Ophthalmology,2022 FMGE,10
+Ophthalmology,2021 NEET PG,9
+Ophthalmology,2021 INI CET,12
+Ophthalmology,2021 FMGE,16
+Ophthalmology,2020 NEET PG,7
+Ophthalmology,2020 INI CET,8
+Ophthalmology,2020 FMGE,11
+Ophthalmology,2020 AIIMS,7
+ENT,2025 NEET PG,16
+ENT,2025 INI CET,26
+ENT,2025 FMGE,52
+ENT,2024 NEET PG,33
+ENT,2024 INI CET,19
+ENT,2024 FMGE,55
+ENT,2023 NEET PG,14
+ENT,2023 INI CET,14
+ENT,2023 FMGE,67
+ENT,2022 NEET PG,12
+ENT,2022 INI CET,23
+ENT,2022 FMGE,27
+ENT,2021 NEET PG,17
+ENT,2021 INI CET,26
+ENT,2021 FMGE,65
+ENT,2020 NEET PG,24
+ENT,2020 INI CET,11
+ENT,2020 FMGE,70
+ENT,2020 AIIMS,10
+Forensic Medicine,2025 NEET PG,9
+Forensic Medicine,2025 INI CET,11
+Forensic Medicine,2025 FMGE,26
+Forensic Medicine,2024 NEET PG,15
+Forensic Medicine,2024 INI CET,14
+Forensic Medicine,2024 FMGE,30
+Forensic Medicine,2023 NEET PG,6
+Forensic Medicine,2023 INI CET,11
+Forensic Medicine,2023 FMGE,24
+Forensic Medicine,2022 NEET PG,8
+Forensic Medicine,2022 INI CET,11
+Forensic Medicine,2022 FMGE,13
+Forensic Medicine,2021 NEET PG,6
+Forensic Medicine,2021 INI CET,10
+Forensic Medicine,2021 FMGE,23
+Forensic Medicine,2020 NEET PG,9
+Forensic Medicine,2020 INI CET,6
+Forensic Medicine,2020 FMGE,29
+Forensic Medicine,2020 AIIMS,6
+PSM,2025 NEET PG,7
+PSM,2025 INI CET,12
+PSM,2025 FMGE,27
+PSM,2024 NEET PG,15
+PSM,2024 INI CET,31
+PSM,2024 FMGE,32
+PSM,2023 NEET PG,8
+PSM,2023 INI CET,12
+PSM,2023 FMGE,29
+PSM,2022 NEET PG,5
+PSM,2022 INI CET,14
+PSM,2022 FMGE,14
+PSM,2021 NEET PG,8
+PSM,2021 INI CET,12
+PSM,2021 FMGE,38
+PSM,2020 NEET PG,13
+PSM,2020 INI CET,4
+PSM,2020 FMGE,37
+PSM,2020 AIIMS,3
+Gynaecology & Obstetrics,2025 NEET PG,23
+Gynaecology & Obstetrics,2025 INI CET,23
+Gynaecology & Obstetrics,2025 FMGE,63
+Gynaecology & Obstetrics,2024 NEET PG,37
+Gynaecology & Obstetrics,2024 INI CET,25
+Gynaecology & Obstetrics,2024 FMGE,56
+Gynaecology & Obstetrics,2023 NEET PG,18
+Gynaecology & Obstetrics,2023 INI CET,28
+Gynaecology & Obstetrics,2023 FMGE,54
+Gynaecology & Obstetrics,2022 NEET PG,24
+Gynaecology & Obstetrics,2022 INI CET,43
+Gynaecology & Obstetrics,2022 FMGE,40
+Gynaecology & Obstetrics,2021 NEET PG,17
+Gynaecology & Obstetrics,2021 INI CET,39
+Gynaecology & Obstetrics,2021 FMGE,43
+Gynaecology & Obstetrics,2020 NEET PG,30
+Gynaecology & Obstetrics,2020 INI CET,9
+Gynaecology & Obstetrics,2020 FMGE,49
+Gynaecology & Obstetrics,2020 AIIMS,11
+Surgery,2025 NEET PG,10
+Surgery,2025 INI CET,24
+Surgery,2025 FMGE,30
+Surgery,2024 NEET PG,15
+Surgery,2024 INI CET,25
+Surgery,2024 FMGE,16
+Surgery,2023 NEET PG,10
+Surgery,2023 INI CET,18
+Surgery,2023 FMGE,16
+Surgery,2022 NEET PG,14
+Surgery,2022 INI CET,16
+Surgery,2022 FMGE,9
+Surgery,2021 NEET PG,10
+Surgery,2021 INI CET,10
+Surgery,2021 FMGE,27
+Surgery,2020 NEET PG,11
+Surgery,2020 INI CET,7
+Surgery,2020 FMGE,32
+Surgery,2020 AIIMS,6
+Pediatrics,2025 NEET PG,14
+Pediatrics,2025 INI CET,46
+Pediatrics,2025 FMGE,51
+Pediatrics,2024 NEET PG,27
+Pediatrics,2024 INI CET,34
+Pediatrics,2024 FMGE,76
+Pediatrics,2023 NEET PG,25
+Pediatrics,2023 INI CET,40
+Pediatrics,2023 FMGE,80
+Pediatrics,2022 NEET PG,23
+Pediatrics,2022 INI CET,42
+Pediatrics,2022 FMGE,46
+Pediatrics,2021 NEET PG,17
+Pediatrics,2021 INI CET,28
+Pediatrics,2021 FMGE,68
+Pediatrics,2020 NEET PG,26
+Pediatrics,2020 INI CET,20
+Pediatrics,2020 FMGE,64
+Pediatrics,2020 AIIMS,20
+Medicine,2025 NEET PG,22
+Medicine,2025 INI CET,36
+Medicine,2025 FMGE,60
+Medicine,2024 NEET PG,33
+Medicine,2024 INI CET,36
+Medicine,2024 FMGE,40
+Medicine,2023 NEET PG,16
+Medicine,2023 INI CET,45
+Medicine,2023 FMGE,51
+Medicine,2022 NEET PG,22
+Medicine,2022 INI CET,31
+Medicine,2022 FMGE,34
+Medicine,2021 NEET PG,20
+Medicine,2021 INI CET,30
+Medicine,2021 FMGE,54
+Medicine,2020 NEET PG,27
+Medicine,2020 INI CET,18
+Medicine,2020 FMGE,52
+Medicine,2020 AIIMS,18
+Orthopaedics,2025 NEET PG,6
+Orthopaedics,2025 INI CET,11
+Orthopaedics,2025 FMGE,18
+Orthopaedics,2024 NEET PG,15
+Orthopaedics,2024 INI CET,14
+Orthopaedics,2024 FMGE,18
+Orthopaedics,2023 NEET PG,6
+Orthopaedics,2023 INI CET,11
+Orthopaedics,2023 FMGE,12
+Orthopaedics,2022 NEET PG,7
+Orthopaedics,2022 INI CET,6
+Orthopaedics,2022 FMGE,5
+Orthopaedics,2021 NEET PG,6
+Orthopaedics,2021 INI CET,14
+Orthopaedics,2021 FMGE,18
+Orthopaedics,2020 NEET PG,5
+Orthopaedics,2020 INI CET,7
+Orthopaedics,2020 FMGE,22
+Orthopaedics,2020 AIIMS,8
+Radiology,2025 NEET PG,2
+Radiology,2025 INI CET,16
+Radiology,2025 FMGE,13
+Radiology,2024 NEET PG,15
+Radiology,2024 INI CET,8
+Radiology,2024 FMGE,16
+Radiology,2023 NEET PG,4
+Radiology,2023 INI CET,5
+Radiology,2023 FMGE,13
+Radiology,2022 NEET PG,2
+Radiology,2022 INI CET,6
+Radiology,2022 FMGE,5
+Radiology,2021 NEET PG,4
+Radiology,2021 INI CET,8
+Radiology,2021 FMGE,13
+Radiology,2020 NEET PG,8
+Radiology,2020 INI CET,3
+Radiology,2020 FMGE,18
+Radiology,2020 AIIMS,3
+Dermatology,2025 NEET PG,6
+Dermatology,2025 INI CET,10
+Dermatology,2025 FMGE,13
+Dermatology,2024 NEET PG,9
+Dermatology,2024 INI CET,5
+Dermatology,2024 FMGE,11
+Dermatology,2023 NEET PG,2
+Dermatology,2023 INI CET,13
+Dermatology,2023 FMGE,13
+Dermatology,2022 NEET PG,5
+Dermatology,2022 INI CET,6
+Dermatology,2022 FMGE,6
+Dermatology,2021 NEET PG,6
+Dermatology,2021 INI CET,8
+Dermatology,2021 FMGE,7
+Dermatology,2020 NEET PG,4
+Dermatology,2020 INI CET,3
+Dermatology,2020 FMGE,6
+Dermatology,2020 AIIMS,7
+Anaesthesia,2025 NEET PG,3
+Anaesthesia,2025 INI CET,6
+Anaesthesia,2025 FMGE,7
+Anaesthesia,2024 NEET PG,6
+Anaesthesia,2024 INI CET,9
+Anaesthesia,2024 FMGE,9
+Anaesthesia,2023 NEET PG,3
+Anaesthesia,2023 INI CET,3
+Anaesthesia,2023 FMGE,8
+Anaesthesia,2022 NEET PG,2
+Anaesthesia,2022 INI CET,4
+Anaesthesia,2022 FMGE,5
+Anaesthesia,2021 NEET PG,4
+Anaesthesia,2021 INI CET,8
+Anaesthesia,2021 FMGE,10
+Anaesthesia,2020 NEET PG,3
+Anaesthesia,2020 INI CET,4
+Anaesthesia,2020 FMGE,11
+Anaesthesia,2020 AIIMS,4
+Psychiatry,2025 NEET PG,5
+Psychiatry,2025 INI CET,12
+Psychiatry,2025 FMGE,14
+Psychiatry,2024 NEET PG,11
+Psychiatry,2024 INI CET,8
+Psychiatry,2024 FMGE,12
+Psychiatry,2023 NEET PG,5
+Psychiatry,2023 INI CET,14
+Psychiatry,2023 FMGE,16
+Psychiatry,2022 NEET PG,2
+Psychiatry,2022 INI CET,10
+Psychiatry,2022 FMGE,5
+Psychiatry,2021 NEET PG,5
+Psychiatry,2021 INI CET,16
+Psychiatry,2021 FMGE,11
+Psychiatry,2020 NEET PG,8
+Psychiatry,2020 INI CET,7
+Psychiatry,2020 FMGE,15
+Psychiatry,2020 AIIMS,6

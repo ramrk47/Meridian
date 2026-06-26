@@ -1,0 +1,1810 @@
+section,subject,topic,question_count
+PYQ,Radiology,Radiology - NEET PG 2023,9
+PYQ,Radiology,Radiology - INI CET NOVEMBER 2022 (PART - A),5
+PYQ,Radiology,Radiology - INI CET NOVEMBER 2022 (PART - B),3
+PYQ,Radiology,Radiology - AIIMS JUNE 2020,4
+PYQ,Radiology,Radiology - AIIMS MAY 2018,3
+PYQ,Radiology,Radiology - AIIMS MAY 2019,5
+PYQ,Radiology,Radiology - AIIMS NOV 2018,5
+PYQ,Radiology,Radiology - AIIMS NOV 2019,3
+PYQ,Radiology,Radiology - INI CET JULY 2021,5
+PYQ,Radiology,Radiology - INI CET MAY 2022,1
+PYQ,Radiology,Radiology - INI CET NOV 2020,14
+PYQ,Radiology,Radiology - INI CET NOV 2021,5
+PYQ,Radiology,Radiology - NEET PG 2019,15
+PYQ,Radiology,Radiology - NEET PG 2018,10
+PYQ,Radiology,Radiology - NEET PG 2020,14
+PYQ,Radiology,Radiology - NEET PG 2021,9
+PYQ,Radiology,Radiology - NEET PG 2022,4
+PYQ,Radiology,Radiology - INI CET MAY 2023,4
+PYQ,Radiology,Radiology - INI CET NOV 2023,3
+PYQ,Radiology,Radiology - INICET MAY 2024,7
+PYQ,Radiology,Radiology - NEET PG 2024,15
+PYQ,Radiology,RADIOLOGY-(INICET NOV 2024),3
+PYQ,Microbiology,Microbiology - AIIMS JUNE 2020,21
+PYQ,Microbiology,Microbiology - AIIMS MAY 2019,14
+PYQ,Microbiology,Microbiology - AIIMS MAY 2018,15
+PYQ,Microbiology,Microbiology - AIIMS NOV 2018,9
+PYQ,Microbiology,Microbiology - AIIMS NOV 2019,12
+PYQ,Microbiology,Microbiology - INI CET JULY 2021,14
+PYQ,Microbiology,Microbiology - INI CET MAY 2022,9
+PYQ,Microbiology,Microbiology - INI CET NOV 2020,12
+PYQ,Microbiology,Microbiology - NEET PG 2018,11
+PYQ,Microbiology,Microbiology - NEET PG 2019,25
+PYQ,Microbiology,Microbiology - NEET PG 2020,19
+PYQ,Microbiology,Microbiology - NEET PG 2021,14
+PYQ,Microbiology,Microbiology - NEET PG 2022,17
+PYQ,Microbiology,Microbiology - INI CET NOV 2021,11
+PYQ,Microbiology,Microbiology - INI CET NOV 2022 (PART A),12
+PYQ,Microbiology,Microbiology - INI CET NOV 2022 (PART B),11
+PYQ,Microbiology,Microbiology - NEET PG 2023,4
+PYQ,Microbiology,Microbiology - INI CET MAY 2023,8
+PYQ,Microbiology,Microbiology - INI CET NOV 2023,18
+PYQ,Microbiology,Microbiology - INICET MAY 2024,13
+PYQ,Microbiology,Microbiology - NEET PG 2024,25
+PYQ,Microbiology,MICROBIOLOGY-(INICET NOV 2024),15
+PYQ,Biochemistry,Biochemistry - INI CET 2020,14
+PYQ,Biochemistry,Biochemistry - INI CET NOV 2022,20
+PYQ,Biochemistry,Biochemistry - NEET PG 2023,15
+PYQ,Biochemistry,Biochemistry - AIIMS JUNE 2O20,11
+PYQ,Biochemistry,Biochemistry - AIIMS MAY 2O19,14
+PYQ,Biochemistry,Biochemistry - AIIMS NOV 2019,11
+PYQ,Biochemistry,Biochemistry - INI CET 2020,14
+PYQ,Biochemistry,Biochemistry - INI CET JULY 2021,16
+PYQ,Biochemistry,Biochemistry - INI CET MAY 2022,12
+PYQ,Biochemistry,Biochemistry - INI CET MAY 2023,10
+PYQ,Biochemistry,Biochemistry - INI CET NOV 2021,11
+PYQ,Biochemistry,Biochemistry - INI CET NOV 2022,20
+PYQ,Biochemistry,Biochemistry - NEET PG 2019,24
+PYQ,Biochemistry,Biochemistry - NEET PG 2020,17
+PYQ,Biochemistry,Biochemistry - NEET PG 2021,14
+PYQ,Biochemistry,Biochemistry - NEET PG 2022,19
+PYQ,Biochemistry,Biochemistry- INI CET NOV 2023,8
+PYQ,Biochemistry,Biochemistry - NEET PG 2018,12
+PYQ,Biochemistry,Biochemistry - AIIMS NOV 2018,7
+PYQ,Biochemistry,Biochemistry - INICET MAY 2024,12
+PYQ,Biochemistry,Biochemistry - NEET PG 2024,20
+PYQ,Biochemistry,BIOCHEMISTRY-(INICET NOV 2024),6
+PYQ,Ophthalmology,Ophthalmology - INI CET NOVEMBER 2022 (PART - A),6
+PYQ,Ophthalmology,Ophthalmology - INI CET NOVEMBER 2022 (PART - B),6
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2023,10
+PYQ,Ophthalmology,Ophthalmology - AIIMS JUNE 2020,6
+PYQ,Ophthalmology,Ophthalmology - AIIMS MAY 2018,12
+PYQ,Ophthalmology,Ophthalmology - AIIMS MAY 2019,7
+PYQ,Ophthalmology,Ophthalmology - AIIMS NOV 2018,7
+PYQ,Ophthalmology,Ophthalmology - AIIMS NOV 2019,8
+PYQ,Ophthalmology,Ophthalmology - INI CET JULY 2021,7
+PYQ,Ophthalmology,Ophthalmology - INI CET MAY 2022,5
+PYQ,Ophthalmology,Ophthalmology - INI CET NOV 2020,4
+PYQ,Ophthalmology,Ophthalmology - INI CET NOV 2021,8
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2018,12
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2019,12
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2020,13
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2021,10
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2022,5
+PYQ,Ophthalmology,Ophthalmology - INI CET MAY 2023,4
+PYQ,Ophthalmology,Ophthalmology - INI CET NOV 2023,6
+PYQ,Ophthalmology,Ophthalmology - INICET MAY 2024,11
+PYQ,Ophthalmology,Ophthalmology - NEET PG 2024,14
+PYQ,Ophthalmology,OPHTHALMOLOGY-(INICET NOV 2024),11
+PYQ,Anatomy,Anatomy - INI CET NOVEMBER 2022 (PART - A),7
+PYQ,Anatomy,Anatomy - INI CET NOVEMBER 2022 (PART - B),15
+PYQ,Anatomy,Anatomy - NEET PG 2023,10
+PYQ,Anatomy,Anatomy - AIIMS JUNE 2020,15
+PYQ,Anatomy,Anatomy - AIIMS MAY 2018,13
+PYQ,Anatomy,Anatomy - AIIMS MAY 2019,11
+PYQ,Anatomy,Anatomy - AIIMS NOV 2018,30
+PYQ,Anatomy,Anatomy - AIIMS NOV 2019,13
+PYQ,Anatomy,Anatomy - INI CET 2020,11
+PYQ,Anatomy,Anatomy - INI CET JULY 2021,6
+PYQ,Anatomy,Anatomy - INI CET NOV 2021,14
+PYQ,Anatomy,Anatomy - INI CET MAY 2022,8
+PYQ,Anatomy,Anatomy - NEET PG 2018,12
+PYQ,Anatomy,Anatomy - NEET PG 2019,20
+PYQ,Anatomy,Anatomy - NEET PG 2020,17
+PYQ,Anatomy,Anatomy - NEET PG 2021,7
+PYQ,Anatomy,Anatomy - NEET PG 2022,3
+PYQ,Anatomy,Anatomy - INI CET MAY 2023,5
+PYQ,Anatomy,Anatomy - INI CET NOV 2023,17
+PYQ,Anatomy,Anatomy - INICET MAY 2024,11
+PYQ,Anatomy,Anatomy - NEET PG 2024,10
+PYQ,Anatomy,ANATOMY-(INICET NOV 2024),11
+PYQ,Pharmacology,Pharmacology - NEET PG 2023,6
+PYQ,Pharmacology,Pharmacology - INI CET NOVEMBER 2022 (PART - A),15
+PYQ,Pharmacology,Pharmacology - INI CET NOVEMBER 2022 (PART - B),22
+PYQ,Pharmacology,Pharmacology - AIIMS JUNE 2020,22
+PYQ,Pharmacology,Pharmacology - AIIMS MAY 2018,27
+PYQ,Pharmacology,Pharmacology - AIIMS MAY 2019,11
+PYQ,Pharmacology,Pharmacology - AIIMS NOV 2018,24
+PYQ,Pharmacology,Pharmacology - AIIMS NOV 2019,17
+PYQ,Pharmacology,Pharmacology - INI CET MAY 2022,15
+PYQ,Pharmacology,Pharmacology - INI CET NOV 2020,15
+PYQ,Pharmacology,Pharmacology - INI CET NOV 2021,22
+PYQ,Pharmacology,Pharmacology - NEET PG 2018,22
+PYQ,Pharmacology,Pharmacology - NEET PG 2019,29
+PYQ,Pharmacology,Pharmacology - NEET PG 2020,19
+PYQ,Pharmacology,Pharmacology - NEET PG 2021,21
+PYQ,Pharmacology,Pharmacology - NEET PG 2022,18
+PYQ,Pharmacology,Pharmacology - INI CET MAY 2023,13
+PYQ,Pharmacology,Pharmacology - INI CET JULY 2021,22
+PYQ,Pharmacology,Pharmacology - INI CET NOV 2023,19
+PYQ,Pharmacology,Pharmacology - INICET MAY 2024,13
+PYQ,Pharmacology,Pharmacology - NEET PG 2024,24
+PYQ,Pharmacology,PHARMACOLOGY-(INICET NOV 2024),10
+PYQ,Forensic Medicine,Forensic Medicine - INI CET NOVEMBER 2022 (PART - A),8
+PYQ,Forensic Medicine,Forensic Medicine - INI CET NOVEMBER 2022 (PART - B),13
+PYQ,Forensic Medicine,Forensic Medicine - NEET PG 2023,4
+PYQ,Forensic Medicine,FM - AIIMS JUNE 2020,9
+PYQ,Forensic Medicine,FM - AIIMS MAY 2018,9
+PYQ,Forensic Medicine,FM - AIIMS MAY 2019,7
+PYQ,Forensic Medicine,FM - AIIMS NOV 2018,10
+PYQ,Forensic Medicine,FM - AIIMS NOV 2019,6
+PYQ,Forensic Medicine,FM - INI CET JULY 2021,10
+PYQ,Forensic Medicine,FM - INI CET MAY 2022,9
+PYQ,Forensic Medicine,FM - INI CET NOV 2020,8
+PYQ,Forensic Medicine,FM - INI CET NOV 2021,9
+PYQ,Forensic Medicine,FM - NEET PG 2021,8
+PYQ,Forensic Medicine,FM - NEET PG 2022,5
+PYQ,Forensic Medicine,FM - NEET PG 2018,9
+PYQ,Forensic Medicine,FM - NEET PG 2019,9
+PYQ,Forensic Medicine,FM - NEET PG 2020,11
+PYQ,Forensic Medicine,Forensic Medicine - INI CET MAY 2023,9
+PYQ,Forensic Medicine,Forensic Medicine - INI CET NOV 2023,10
+PYQ,Forensic Medicine,Forensic Medicine - INICET MAY 2024,6
+PYQ,Forensic Medicine,Forensic Medicine - NEET PG 2024,17
+PYQ,Forensic Medicine,FORENSIC MEDICINE-(INICET NOV 2024),5
+PYQ,PSM,PSM - INI CET NOVEMBER 2022 (PART - A),8
+PYQ,PSM,PSM - INI CET NOVEMBER 2022 (PART - B),14
+PYQ,PSM,PSM - NEET PG 2023,8
+PYQ,PSM,PSM - AIIMS JUNE 2020,16
+PYQ,PSM,PSM - AIIMS MAY 2018,9
+PYQ,PSM,PSM - AIIMS MAY 2019,14
+PYQ,PSM,PSM - AIIMS NOV 2018,16
+PYQ,PSM,PSM - AIIMS NOV 2019,24
+PYQ,PSM,PSM - INI CET JULY 2021,11
+PYQ,PSM,PSM - INI CET MAY 2022,17
+PYQ,PSM,PSM - INI CET NOV 2020,8
+PYQ,PSM,PSM - INI CET NOV 2021,12
+PYQ,PSM,PSM - NEET PG 2019,25
+PYQ,PSM,PSM - NEET PG 2020,18
+PYQ,PSM,PSM - NEET PG 2021,15
+PYQ,PSM,PSM - NEET PG 2018,20
+PYQ,PSM,PSM - NEET PG 2022,12
+PYQ,PSM,PSM - INI CET MAY 2023,8
+PYQ,PSM,PSM - INI CET NOV 2023,7
+PYQ,PSM,PSM - INICET MAY 2024,7
+PYQ,PSM,PSM - NEET PG 2024,33
+PYQ,PSM,PSM-(INICET NOV 2024),17
+PYQ,Surgery,Surgery - AIIMS JUNE 2020,14
+PYQ,Surgery,Surgery - AIIMS MAY 2018,16
+PYQ,Surgery,Surgery - AIIMS MAY 2019,20
+PYQ,Surgery,Surgery - AIIMS NOV 2018,13
+PYQ,Surgery,Surgery - AIIMS NOV 2019,11
+PYQ,Surgery,Surgery - INI CET JULY 2021,15
+PYQ,Surgery,Surgery - INI CET MAY 2022,25
+PYQ,Surgery,Surgery - INI CET NOV 2020,17
+PYQ,Surgery,Surgery - INI CET NOV 2021,12
+PYQ,Surgery,Surgery - NEET PG 2018,17
+PYQ,Surgery,Surgery - NEET PG 2019,23
+PYQ,Surgery,Surgery - NEET PG 2020,26
+PYQ,Surgery,Surgery - NEET PG 2022,24
+PYQ,Surgery,Surgery - INI CET NOV 2022 (Part -A),23
+PYQ,Surgery,Surgery - INI CET NOV 2022 (Part -B),16
+PYQ,Surgery,Surgery - NEET PG -2023,22
+PYQ,Surgery,Surgery - INI CET MAY 2023,17
+PYQ,Surgery,Surgery - INI CET NOV 2023,11
+PYQ,Surgery,Surgery - NEET PG 2021,19
+PYQ,Surgery,Surgery - INICET MAY 2024,16
+PYQ,Surgery,Surgery - NEET PG 2024,37
+PYQ,Surgery,SURGERY-(INICET NOV 2024),21
+PYQ,Pathology,Pathology - AIIMS JUNE 2020,12
+PYQ,Pathology,Pathology - AIIMS MAY 2018,16
+PYQ,Pathology,Pathology - AIIMS MAY 2019,14
+PYQ,Pathology,Pathology - AIIMS NOV 2018,19
+PYQ,Pathology,Pathology - AIIMS NOV 2019,19
+PYQ,Pathology,Pathology - INI CET NOV 2022 (PART B),17
+PYQ,Pathology,Pathology - INI CET NOV 2022 (PART A),17
+PYQ,Pathology,Pathology - INI CET JUL 2021,20
+PYQ,Pathology,Pathology - INI CET MAY 2022,19
+PYQ,Pathology,Pathology - INI CET NOV 2020,17
+PYQ,Pathology,Pathology - INI CET NOV 2021,17
+PYQ,Pathology,Pathology - NEET PG 2018,24
+PYQ,Pathology,Pathology - NEET PG 2019,13
+PYQ,Pathology,Pathology - NEET PG 2020,26
+PYQ,Pathology,Pathology - NEET PG 2021,10
+PYQ,Pathology,Pathology - NEET PG 2022,9
+PYQ,Pathology,Pathology - NEET PG 2023,5
+PYQ,Pathology,Pathology - INI CET MAY 2023,4
+PYQ,Pathology,Pathology - INI CET NOV 2023,24
+PYQ,Pathology,Pathology - INICET MAY 2024,17
+PYQ,Pathology,Pathology - NEET PG 2024,33
+PYQ,Pathology,PATHOLOGY-(INICET NOV 2024),18
+PYQ,Orthopaedics,Orthopaedics - INI CET NOV 2022 (PART A),5
+PYQ,Orthopaedics,Orthopaedics - INI CET NOV 2022 (PART B),3
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2023,5
+PYQ,Orthopaedics,Orthopaedics - INI CET JULY 2021,8
+PYQ,Orthopaedics,Orthopaedics - AIIMS JUNE 2020,10
+PYQ,Orthopaedics,Orthopaedics - AIIMS MAY 2018,8
+PYQ,Orthopaedics,Orthopaedics - AIIMS NOV 2018,8
+PYQ,Orthopaedics,Orthopaedics - AIIMS MAY 2019,5
+PYQ,Orthopaedics,Orthopaedics - AIIMS NOV 2019,8
+PYQ,Orthopaedics,Orthopaedics - INI CET MAY 2022,2
+PYQ,Orthopaedics,Orthopaedics - INI CET NOV 2020,5
+PYQ,Orthopaedics,Orthopaedics - INI CET NOV 2021,8
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2018,13
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2019,12
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2020,2
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2021,4
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2022,3
+PYQ,Orthopaedics,Orthopaedics - INI CET MAY 2023,5
+PYQ,Orthopaedics,Orthopaedics - INI CET NOV 2023,7
+PYQ,Orthopaedics,Orthopaedics - INICET MAY 2024,6
+PYQ,Orthopaedics,Orthopaedics - NEET PG 2024,16
+PYQ,Orthopaedics,ORTHOPEDICS-(INICET NOV 2024),5
+PYQ,Physiology,Physiology - NEET PG 2023,11
+PYQ,Physiology,Physiology - INI CET NOVEMBER 2022 (PART - A),14
+PYQ,Physiology,Physiology - INI CET NOVEMBER 2022 (PART - B),4
+PYQ,Physiology,Physiology - AIIMS JUNE 2020,11
+PYQ,Physiology,Physiology - AIIMS MAY 2018,8
+PYQ,Physiology,Physiology - AIIMS MAY 2019,14
+PYQ,Physiology,Physiology - AIIMS NOV 2018,10
+PYQ,Physiology,Physiology - AIIMS NOV 2019,5
+PYQ,Physiology,Physiology - INI CET 2020,11
+PYQ,Physiology,Physiology - INI CET JULY 2021,13
+PYQ,Physiology,Physiology - INI CET MAY 2022,10
+PYQ,Physiology,Physiology - INI CET NOV 2021,11
+PYQ,Physiology,Physiology - NEET PG 2018,16
+PYQ,Physiology,Physiology - NEET PG 2019,20
+PYQ,Physiology,Physiology - NEET PG 2020,25
+PYQ,Physiology,Physiology - NEET PG 2021,9
+PYQ,Physiology,Physiology - NEET PG 2022,10
+PYQ,Physiology,Physiology - INI CET NOV 2023,12
+PYQ,Physiology,Physiology - INICET MAY 2024,11
+PYQ,Physiology,Physiology - NEET PG 2024,16
+PYQ,Physiology,PHYSIOLOGY-(INICET NOV 2024),10
+PYQ,Pediatrics,Pediatrics - INI CET NOVEMBER 2022 (PART - A),9
+PYQ,Pediatrics,Pediatrics - INI CET NOVEMBER 2022 (PART - B),9
+PYQ,Pediatrics,Pediatrics - NEET PG 2023,14
+PYQ,Pediatrics,Pediatrics - AIIMS JUNE 2020,8
+PYQ,Pediatrics,Pediatrics - AIIMS MAY 2018,15
+PYQ,Pediatrics,Pediatrics - AIIMS MAY 2019,7
+PYQ,Pediatrics,Pediatrics - AIIMS NOV 2019,3
+PYQ,Pediatrics,Pediatrics - AIIMS NOV 2018,7
+PYQ,Pediatrics,Pediatrics - INI CET JULY 2021,9
+PYQ,Pediatrics,Pediatrics - INI CET MAY 2022,7
+PYQ,Pediatrics,Pediatrics - INI CET NOV 2020,5
+PYQ,Pediatrics,Pediatrics - INI CET NOV 2021,7
+PYQ,Pediatrics,Pediatrics - NEET PG 2018,6
+PYQ,Pediatrics,Pediatrics - NEET PG 2019,8
+PYQ,Pediatrics,Pediatrics - NEET PG 2021,7
+PYQ,Pediatrics,Pediatrics - NEET PG 2020,10
+PYQ,Pediatrics,Pediatrics - NEET PG 2022,5
+PYQ,Pediatrics,Pediatrics - INI CET MAY 2023,8
+PYQ,Pediatrics,Pediatrics - INI CET NOV 2023,11
+PYQ,Pediatrics,Pediatrics - INICET MAY 2024,10
+PYQ,Pediatrics,Pediatrics - NEET PG 2024,6
+PYQ,Pediatrics,PEDIATRICS-(INICET NOV 2024),11
+PYQ,Dermatology,Dermatology - AIIMS JUNE 2020,4
+PYQ,Dermatology,Dermatology - AIIMS MAY 2019,9
+PYQ,Dermatology,Dermatology - AIIMS NOV 2019,5
+PYQ,Dermatology,Dermatology - INI CET JULY 2021,7
+PYQ,Dermatology,Dermatology - INI CET MAY 2022,2
+PYQ,Dermatology,Dermatology - INI CET NOV 2020,9
+PYQ,Dermatology,Dermatology - INI CET NOV 2021,7
+PYQ,Dermatology,Dermatology - INI CET NOV 2022 (PART A),2
+PYQ,Dermatology,Dermatology - INI CET NOV 2022 (PART B),5
+PYQ,Dermatology,Dermatology - NEET PG 2019,9
+PYQ,Dermatology,Dermatology - NEET PG 2020,6
+PYQ,Dermatology,Dermatology - NEET PG 2021,7
+PYQ,Dermatology,Dermatology - NEET PG 2022,4
+PYQ,Dermatology,Dermatology - NEET PG 2023,11
+PYQ,Dermatology,Dermatology - AIIMS MAY 2018,1
+PYQ,Dermatology,Dermatology - INI CET MAY 2023,4
+PYQ,Dermatology,Dermatology - NEET PG 2018,11
+PYQ,Dermatology,Dermatology - AIIMS NOV 2018,8
+PYQ,Dermatology,Dermatology - INI CET NOV 2023,5
+PYQ,Dermatology,Dermatology - INICET MAY 2024,4
+PYQ,Dermatology,Dermatology - NEET PG 2024,12
+PYQ,Dermatology,DERMATOLOGY-(INICET NOV 2024),5
+PYQ,Medicine,Medicine - INI CET NOVEMBER 2022 (PART - A),18
+PYQ,Medicine,Medicine - INI CET NOVEMBER 2022 (PART - B),19
+PYQ,Medicine,Medicine - NEET PG 2023,21
+PYQ,Medicine,Medicine - AIIMS JUNE 2020,11
+PYQ,Medicine,Medicine - AIIMS MAY 2019,10
+PYQ,Medicine,Medicine - AIIMS NOV 2018,17
+PYQ,Medicine,Medicine - AIIMS NOV 2019,21
+PYQ,Medicine,Medicine - INI CET JULY 2021,10
+PYQ,Medicine,Medicine - INI CET MAY 2022,11
+PYQ,Medicine,Medicine - INI CET NOV 2020,36
+PYQ,Medicine,Medicine - INI CET NOV 2021,18
+PYQ,Medicine,Medicine - NEET PG 2019,17
+PYQ,Medicine,Medicine - NEET PG 2018,46
+PYQ,Medicine,Medicine - NEET PG 2020,17
+PYQ,Medicine,Medicine - NEET PG 2021,22
+PYQ,Medicine,Medicine - NEET PG 2022,21
+PYQ,Medicine,Medicine - INI CET MAY 2023,11
+PYQ,Medicine,Medicine - AIIMS MAY 2018,23
+PYQ,Medicine,Medicine - INI CET NOV 2023,20
+PYQ,Medicine,Medicine - INICET MAY 2024,24
+PYQ,Medicine,Medicine - NEET PG 2024,41
+PYQ,Medicine,MEDICINE-(INICET NOV 2024),21
+PYQ,Anesthesia,Anesthesia - NEET PG 2023,3
+PYQ,Anesthesia,Anesthesia - NEET PG 2022,3
+PYQ,Anesthesia,Anesthesia - NEET PG 2021,5
+PYQ,Anesthesia,Anesthesia - NEET PG 2020,5
+PYQ,Anesthesia,Anesthesia - NEET PG 2019,7
+PYQ,Anesthesia,Anesthesia - NEET PG 2018,8
+PYQ,Anesthesia,Anesthesia - INI CET NOV 2022 (PART A),2
+PYQ,Anesthesia,Anesthesia - INI CET MAY 2023,3
+PYQ,Anesthesia,Anesthesia - INI CET NOV 2022 (PART B),3
+PYQ,Anesthesia,Anesthesia - INI CET MAY 2022,2
+PYQ,Anesthesia,Anesthesia - INI CET NOV 2021,4
+PYQ,Anesthesia,Anesthesia - INI CET JULY 2021,8
+PYQ,Anesthesia,Anesthesia - INI CET NOV 2020,6
+PYQ,Anesthesia,Anesthesia - AIIMS JUNE 2020,1
+PYQ,Anesthesia,Anesthesia - AIIMS NOV 2019,12
+PYQ,Anesthesia,Anesthesia - AIIMS MAY 2019,2
+PYQ,Anesthesia,Anesthesia - AIIMS NOV 2018,2
+PYQ,Anesthesia,Anesthesia - AIIMS MAY 2018,7
+PYQ,Anesthesia,Anesthesia - INI CET NOV 2023,2
+PYQ,Anesthesia,Anesthesia - INICET MAY 2024,6
+PYQ,Anesthesia,Anesthesia - NEET PG 2024,14
+PYQ,Anesthesia,ANAESTHESIA-(INICET NOV 2024),6
+PYQ,OBG,OBG - INI CET MAY 2023,8
+PYQ,OBG,OBG - AIIMS JUNE 2020,15
+PYQ,OBG,OBG - AIIMS MAY 2018,26
+PYQ,OBG,OBG - AIIMS MAY 2019,15
+PYQ,OBG,OBG - AIIMS NOV 2018,11
+PYQ,OBG,OBG - AIIMS NOV 2019,16
+PYQ,OBG,OBG - INI CET JULY 2021,21
+PYQ,OBG,OBG - INI CET MAY 2022,12
+PYQ,OBG,OBG - INI CET NOV 2020,9
+PYQ,OBG,OBG - INI CET NOV 2021,12
+PYQ,OBG,OBG - NEET PG 2018,22
+PYQ,OBG,OBG - NEET PG 2019,25
+PYQ,OBG,OBG - NEET PG 2020,20
+PYQ,OBG,OBG - NEET PG 2021,17
+PYQ,OBG,OBG - NEET PG 2022,25
+PYQ,OBG,OBG - INI CET NOV 2023,10
+PYQ,OBG,OBG - NEET PG 2023,17
+PYQ,OBG,OBG - AIIMS NOV 2019,9
+PYQ,OBG,OBG - AIIMS JUNE 2020,20
+PYQ,OBG,OBG - INI CET NOV 2020,7
+PYQ,OBG,OBG - AIIMS NOV 2016,11
+PYQ,OBG,OBG - INICET MAY 2024,14
+PYQ,OBG,OBG - NEET PG 2024,45
+PYQ,OBG,OBG-(INICET NOV 2024),16
+PYQ,Psychiatry,Psychiatry - INI CET NOVEMBER 2022 (PART - A),7
+PYQ,Psychiatry,Psychiatry - INI CET NOVEMBER 2022 (PART - B),3
+PYQ,Psychiatry,Psychiatry - NEET PG 2023,4
+PYQ,Psychiatry,Psychiatry - INI CET 2020,8
+PYQ,Psychiatry,Psychiatry - AIIMS JUNE 2020,2
+PYQ,Psychiatry,Psychiatry - AIIMS MAY 2018,5
+PYQ,Psychiatry,Psychiatry - AIIMS MAY 2019,6
+PYQ,Psychiatry,Psychiatry - AIIMS NOV 2018,7
+PYQ,Psychiatry,Psychiatry - AIIMS NOV 2019,4
+PYQ,Psychiatry,Psychiatry - INI CET JULY 2021,4
+PYQ,Psychiatry,Psychiatry - INI CET MAY 2022,3
+PYQ,Psychiatry,Psychiatry - INI CET NOV 2021,2
+PYQ,Psychiatry,Psychiatry - NEET PG 2018,12
+PYQ,Psychiatry,Psychiatry - NEET PG 2019,9
+PYQ,Psychiatry,Psychiatry - NEET PG 2020,4
+PYQ,Psychiatry,Psychiatry - NEET PG 2021,5
+PYQ,Psychiatry,Psychiatry - NEET PG 2022,2
+PYQ,Psychiatry,Psychiatry - INI CET MAY 2023,3
+PYQ,Psychiatry,Psychiatry - INI CET NOV 2023,3
+PYQ,Psychiatry,Psychiatry - INICET MAY 2024,6
+PYQ,Psychiatry,Psychiatry - NEET PG 2024,10
+PYQ,Psychiatry,PSYCHIATRY-(INICET NOV 2024),1
+PYQ,ENT,ENT - INI CET NOVEMBER 2022 (PART A),11
+PYQ,ENT,ENT - INI CET NOVEMBER 2022 (PART B),3
+PYQ,ENT,ENT - NEET PG 2023,9
+PYQ,ENT,ENT - AIIMS JUNE 2020,3
+PYQ,ENT,ENT - AIIMS MAY 2018,5
+PYQ,ENT,ENT - AIIMS MAY 2019,3
+PYQ,ENT,ENT - AIIMS NOV 2018,2
+PYQ,ENT,ENT - AIIMS NOV 2019,4
+PYQ,ENT,ENT - INI CET JULY 2021,3
+PYQ,ENT,ENT - INI CET MAY 2022,4
+PYQ,ENT,ENT - INI CET NOV 2020,7
+PYQ,ENT,ENT - INI CET NOV 2021,5
+PYQ,ENT,ENT - NEET PG 2018,6
+PYQ,ENT,ENT - NEET PG 2019,7
+PYQ,ENT,ENT - NEET PG 2020,10
+PYQ,ENT,ENT - NEET PG 2021,6
+PYQ,ENT,ENT - NEET PG 2022,9
+PYQ,ENT,ENT- INI CET MAY 2023,5
+PYQ,ENT,ENT - INI CET NOV 2023,7
+PYQ,ENT,ENT - INICET MAY 2024,6
+PYQ,ENT,ENT - NEET PG 2024,13
+PYQ,ENT,ENT-(INICET NOV 2024),8
+Express Question Bank,ENT,Fractures Of Facial Bone & CSF Rhinorrhea,6
+Express Question Bank,ENT,Otosclerosis,10
+Express Question Bank,ENT,Treatment Of Otosclerosis & Stapedectomy,4
+Express Question Bank,ENT,ASOM,15
+Express Question Bank,ENT,Cholesteatoma & Tuberculosis Of Ear,6
+Express Question Bank,ENT,CSOM,11
+Express Question Bank,ENT,Extracranial Complications & Mastoiditis,10
+Express Question Bank,ENT,Intracranial Complications,3
+Express Question Bank,ENT,Serous Otitis Media (SOM),7
+Express Question Bank,ENT,Laryngeal Carcinoma,10
+Express Question Bank,ENT,Nasopharynx - Anatomy & Diseases,4
+Express Question Bank,ENT,Granulomatous Diseases Of Nose,6
+Express Question Bank,ENT,Vocal Cord Paralysis,2
+Express Question Bank,ENT,Voice Disorders,10
+Express Question Bank,ENT,Congenital Diseases Of Larynx - Laryngomalacia,7
+Express Question Bank,ENT,Anatomy of Throat & Neck Spaces,4
+Express Question Bank,ENT,Anatomy of Throat & Tonsils,5
+Express Question Bank,ENT,Esophagoscopy & Foreign Body,8
+Express Question Bank,ENT,Glomus Tumour,7
+Express Question Bank,ENT,Instruments For Ear,11
+Express Question Bank,ENT,Instruments For Nose & Throat,3
+Express Question Bank,ENT,Laser In Ent & Photodynamic Therapy,3
+Express Question Bank,ENT,Obstructive Sleep Apnea Syndrome,5
+Express Question Bank,ENT,Recent Advances in ENT Surgeries & Therapies,5
+Express Question Bank,ENT,Laryngectomy,6
+Express Question Bank,ENT,Neck Dissections,4
+Express Question Bank,ENT,Tracheostomy Tubes,6
+Express Question Bank,ENT,Epistaxis & Deviated Nasal Septum,1
+Express Question Bank,ENT,Anatomy Of Larynx (Part 1),6
+Express Question Bank,ENT,Anatomy Of Larynx (Part 2),6
+Express Question Bank,ENT,Audiometry,11
+Express Question Bank,ENT,BERA & OAE,6
+Express Question Bank,ENT,Electrocochleography & Cochlear Vs Retro-Cochlear,9
+Express Question Bank,ENT,Tuning Fork Tests,17
+Express Question Bank,ENT,Tympanometry,12
+Express Question Bank,ENT,"Vestibular Function, Caloric Test & Fistula Tests",7
+Express Question Bank,ENT,Chronic Laryngitis,4
+Express Question Bank,ENT,Epiglottitis & Croup,7
+Express Question Bank,ENT,Introduction & Examination of ENT,3
+Express Question Bank,ENT,Assistive Devices For Hearing,6
+Express Question Bank,ENT,Anatomy of Nose (Part 1),12
+Express Question Bank,ENT,Anatomy of Nose (Part 2),5
+Express Question Bank,ENT,Anatomy of Sinuses,10
+Express Question Bank,ENT,Embryology of Nose & Sinuses,7
+Express Question Bank,ENT,Physiology of Nose & Sinuses,5
+Express Question Bank,ENT,Oral Cavity & Oropharynx,7
+Express Question Bank,ENT,Surgeries Of Otitis Media,6
+Express Question Bank,ENT,Juvenile Nasopharyngeal Angiofibroma,5
+Express Question Bank,ENT,Nasopharyngeal Carcinoma,5
+Express Question Bank,ENT,Pharyngeal Tumours,9
+Express Question Bank,ENT,Salivary Gland Tumours & Parotidectomy,7
+Express Question Bank,ENT,Tumours Of Nose & Sinuses,10
+Express Question Bank,ENT,Acoustic Neuroma & Vestibular Neuronitis,2
+Express Question Bank,ENT,Diseases Of External Nose,22
+Express Question Bank,ENT,Anatomy Of External Ear & Tympanic Membrane,26
+Express Question Bank,ENT,Anatomy Of Middle Ear - (Medial & Posterior Walls),9
+Express Question Bank,ENT,Anatomy Of Middle Ear (Anterior Wall),10
+Express Question Bank,ENT,Embryology of Ear,7
+Express Question Bank,ENT,Facial Nerve & Vestibulocochlear Nerve Anatomy,16
+Express Question Bank,ENT,Inner Ear Anatomy & Physiology Of Hearing (Part 1),18
+Express Question Bank,ENT,Inner Ear Anatomy & Physiology Of Hearing (Part 2),13
+Express Question Bank,ENT,Mastoid Anatomy,5
+Express Question Bank,ENT,Acute & Chronic Tonsillitis,4
+Express Question Bank,ENT,Acute & Chronic Pharyngitis,4
+Express Question Bank,ENT,Adenotonsillectomy,8
+Express Question Bank,ENT,"Deaf Child, Tinnitus & Hyperbaric Oxygen Therapy",9
+Express Question Bank,ENT,Hearing Loss Review & Tympanic Membrane Images,12
+Express Question Bank,ENT,Neck Mass & Thyroid Swellings,9
+Express Question Bank,ENT,Nasal Polyps,4
+Express Question Bank,ENT,Facial Nerve Paralysis,6
+Express Question Bank,ENT,Laryngeal Papilloma,3
+Express Question Bank,ENT,"Vocal Nodules, Polyps & Laryngocele",5
+Express Question Bank,ENT,"Allergic, Vasomotor & Atrophic Rhinitis",11
+Express Question Bank,ENT,Complications Of Sinusitis,10
+Express Question Bank,ENT,Infective Rhinosinusitis (Part 1) - Fungal Sinusitis,3
+Express Question Bank,ENT,Surgeries For Rhinosinusitis,6
+Express Question Bank,ENT,Disease Of External Ear,28
+Express Question Bank,Biochemistry,General Biochemistry,10
+Express Question Bank,Biochemistry,Electron Transport Chain,11
+Express Question Bank,Biochemistry,Heme Protein & ODC,3
+Express Question Bank,Biochemistry,Link Reaction & Tca Cycle,21
+Express Question Bank,Biochemistry,Liver Function Test,5
+Express Question Bank,Biochemistry,Bile Acid & Bile Salts,11
+Express Question Bank,Biochemistry,Cholesterol Metabolism,21
+Express Question Bank,Biochemistry,Classification & Sphingolipids,27
+Express Question Bank,Biochemistry,Fatty Acid Classification & Lipases,12
+Express Question Bank,Biochemistry,"Fatty Acid Oxidation (Alpha, Beta & Omega)",11
+Express Question Bank,Biochemistry,Fatty Acid Synthesis,13
+Express Question Bank,Biochemistry,Lipoproteins,20
+Express Question Bank,Biochemistry,Sphingolipids & Sphingolipidoses,7
+Express Question Bank,Biochemistry,Enzyme Classification,17
+Express Question Bank,Biochemistry,Enzyme Kinetics,10
+Express Question Bank,Biochemistry,Enzyme Regulation,16
+Express Question Bank,Biochemistry,Isoenzymes,5
+Express Question Bank,Biochemistry,Carb-Tests,7
+Express Question Bank,Biochemistry,Di & Mono-Saccharide Metabolism,13
+Express Question Bank,Biochemistry,Gluconeogenesis,14
+Express Question Bank,Biochemistry,Glucose Transporters,8
+Express Question Bank,Biochemistry,Glycogen Metabolism,21
+Express Question Bank,Biochemistry,Glycolysis,18
+Express Question Bank,Biochemistry,HMP & Uronic Acid Pathway,14
+Express Question Bank,Biochemistry,Miscellaneous,15
+Express Question Bank,Biochemistry,Structure & Classification,20
+Express Question Bank,Biochemistry,Cellular Organelles,10
+Express Question Bank,Biochemistry,Peroxisomes & Related Disorder,5
+Express Question Bank,Biochemistry,Heme Degradation & Jaundice,4
+Express Question Bank,Biochemistry,Heme Synthesis & Porphyrias,9
+Express Question Bank,Biochemistry,Aliphatic Amino Acids & Properties,29
+Express Question Bank,Biochemistry,Amino Acid Metabolism & Urea Cycle,11
+Express Question Bank,Biochemistry,Aromatic Amino Acid & Properties,28
+Express Question Bank,Biochemistry,"Extra Cellular Matrix Proteins - Collagen, Fibrillin & Keratin",11
+Express Question Bank,Biochemistry,General Concepts,12
+Express Question Bank,Biochemistry,Other Amino Acids & Related Disorders,12
+Express Question Bank,Biochemistry,Post Translational Modification & Protein Structure,10
+Express Question Bank,Biochemistry,Fat Soluble Vitamins,37
+Express Question Bank,Biochemistry,General Concept & Water Soluble Vitamins,53
+Express Question Bank,Biochemistry,Dna Damage & Its Repair,8
+Express Question Bank,Biochemistry,"DNA Organisation, Nucleic Acid & DNA Structure",7
+Express Question Bank,Biochemistry,Gene Regulation & Lacoperon,7
+Express Question Bank,Biochemistry,Gene Regulation & Technique Of Genetic Analysis,19
+Express Question Bank,Biochemistry,Genetic Code & Translation,7
+Express Question Bank,Biochemistry,Purine & Pyrimidine Metabolism,12
+Express Question Bank,Biochemistry,Replication,7
+Express Question Bank,Biochemistry,RNA & It's Type,9
+Express Question Bank,Ophthalmology,Cataract,15
+Express Question Bank,Ophthalmology,Complications,4
+Express Question Bank,Ophthalmology,Cortex Maturation,3
+Express Question Bank,Ophthalmology,Lens Abnormalities,4
+Express Question Bank,Ophthalmology,Other Cataract,3
+Express Question Bank,Ophthalmology,Treatment,12
+Express Question Bank,Ophthalmology,Sclera,6
+Express Question Bank,Ophthalmology,Anisocoria,4
+Express Question Bank,Ophthalmology,Neuro Ophthalmology - Introduction,4
+Express Question Bank,Ophthalmology,One & Half Syndrome,3
+Express Question Bank,Ophthalmology,Optic Neuritis,7
+Express Question Bank,Ophthalmology,Pupillary Reflexes,7
+Express Question Bank,Ophthalmology,Visual Pathway & Junctional Scotoma,10
+Express Question Bank,Ophthalmology,Neuro Ophthalmology - Miscellaneous,3
+Express Question Bank,Ophthalmology,Anatomy - Anatomy & Physiology,8
+Express Question Bank,Ophthalmology,Visual Acuity,6
+Express Question Bank,Ophthalmology,Astigmatism & Accommodation,7
+Express Question Bank,Ophthalmology,Calculation of Refractive Error,4
+Express Question Bank,Ophthalmology,Retinoscopy,9
+Express Question Bank,Ophthalmology,Spherical Errors,6
+Express Question Bank,Ophthalmology,Sturm’s Conoid,4
+Express Question Bank,Ophthalmology,Refractive Surgery,8
+Express Question Bank,Ophthalmology,Angle Kappa & High Myopia,4
+Express Question Bank,Ophthalmology,Lacrimal Apparatus,22
+Express Question Bank,Ophthalmology,Allergic Conjunctivitis,11
+Express Question Bank,Ophthalmology,Conjunctival Degenerations,13
+Express Question Bank,Ophthalmology,Conjunctivitis,20
+Express Question Bank,Ophthalmology,Conjunctiva - Introduction,3
+Express Question Bank,Ophthalmology,Ectropion & Entropion,9
+Express Question Bank,Ophthalmology,Infections,16
+Express Question Bank,Ophthalmology,Ptosis,9
+Express Question Bank,Ophthalmology,Binocular Single Vision,9
+Express Question Bank,Ophthalmology,Evaluation Of Comitant Squint,5
+Express Question Bank,Ophthalmology,Isolated Nerve Palsy & Gaze Palsy,8
+Express Question Bank,Ophthalmology,Latent Squint,5
+Express Question Bank,Ophthalmology,Nystagmus,4
+Express Question Bank,Ophthalmology,Orientation of Extra Ocular Muscles,4
+Express Question Bank,Ophthalmology,Park Test,4
+Express Question Bank,Ophthalmology,Physiology of Squints,7
+Express Question Bank,Ophthalmology,Squint - Miscellaneous,3
+Express Question Bank,Ophthalmology,Corneal Dystrophies,4
+Express Question Bank,Ophthalmology,Cornea - Introduction,9
+Express Question Bank,Ophthalmology,Non Infective Keratitis,3
+Express Question Bank,Ophthalmology,"Bacterial, Fungal & Viral Corneal Ulcer",11
+Express Question Bank,Ophthalmology,Anterior Uveitis,9
+Express Question Bank,Ophthalmology,Uveitis in Systemic Diseases,5
+Express Question Bank,Ophthalmology,Uveal Tract - Miscellaneous,6
+Express Question Bank,Ophthalmology,Miscellaneous,15
+Express Question Bank,Ophthalmology,ARMD,3
+Express Question Bank,Ophthalmology,CRAO & CRVO,4
+Express Question Bank,Ophthalmology,CSR & CME,3
+Express Question Bank,Ophthalmology,Diabetic Retinopathy,3
+Express Question Bank,Ophthalmology,Retina - Introduction,3
+Express Question Bank,Ophthalmology,Macular Pathologies,3
+Express Question Bank,Ophthalmology,Retinal Detachment,3
+Express Question Bank,Ophthalmology,Retina - Miscellaneous,8
+Express Question Bank,Ophthalmology,Blowout Fracture,3
+Express Question Bank,Ophthalmology,Diseases Of Orbit,4
+Express Question Bank,Ophthalmology,Orbital Cellulitis,6
+Express Question Bank,Ophthalmology,Proptosis,6
+Express Question Bank,Ophthalmology,Tumours,14
+Express Question Bank,Ophthalmology,Acute Congestive Glaucoma,3
+Express Question Bank,Ophthalmology,Anti Glaucoma Drugs,6
+Express Question Bank,Ophthalmology,Congenital Glaucoma,2
+Express Question Bank,Ophthalmology,PACG,4
+Express Question Bank,Ophthalmology,POAG,6
+Express Question Bank,Ophthalmology,Secondary Developmental Glaucoma,4
+Express Question Bank,Ophthalmology,Secondary Glaucoma,8
+Express Question Bank,Ophthalmology,Tonometry,7
+Express Question Bank,Ophthalmology,Treatment of POAG,4
+Express Question Bank,Ophthalmology,Visual Field Defects,3
+Express Question Bank,Ophthalmology,Glaucoma - Miscellaneous,5
+Express Question Bank,Ophthalmology,Community Ophthalmology,6
+Express Question Bank,Ophthalmology,NPCB,4
+Express Question Bank,Ophthalmology,Vision 2020,5
+Express Question Bank,Ophthalmology,Intraocular Tumors,5
+Express Question Bank,Ophthalmology,Blunt Trauma,5
+Express Question Bank,Orthopaedics,Instruments & Implants In Ortho,3
+Express Question Bank,Orthopaedics,Splints & Tractions In Ortho,10
+Express Question Bank,Orthopaedics,Basics Of Bone Tumors,10
+Express Question Bank,Orthopaedics,Benign Aggressive Tumors,10
+Express Question Bank,Orthopaedics,Benign Lesions Of Bone,6
+Express Question Bank,Orthopaedics,Malignant Tumors,20
+Express Question Bank,Orthopaedics,Skeletal Dysplasia,4
+Express Question Bank,Orthopaedics,Basics Of Metabolic Disorders,9
+Express Question Bank,Orthopaedics,Osteoporosis,7
+Express Question Bank,Orthopaedics,Paget & Osteopetrosis,6
+Express Question Bank,Orthopaedics,Rickets & Osteomalacia,3
+Express Question Bank,Orthopaedics,Scurvy & Osteogenesis Imperfecta,2
+Express Question Bank,Orthopaedics,Amputations,2
+Express Question Bank,Orthopaedics,Anatomy & Physiology Of Bone,35
+Express Question Bank,Orthopaedics,Complication In Orthopaedics,22
+Express Question Bank,Orthopaedics,Infective Arthritis & Other Infections,5
+Express Question Bank,Orthopaedics,Osteomyelitis,13
+Express Question Bank,Orthopaedics,TB Osteomyelitis,14
+Express Question Bank,Orthopaedics,Joint Disorders,13
+Express Question Bank,Orthopaedics,Basics Of Trauma General Considerations,13
+Express Question Bank,Orthopaedics,Eponym’s of Fractures,5
+Express Question Bank,Orthopaedics,Lower Limb (Dislocation Of Hip & Fracture Nof),24
+Express Question Bank,Orthopaedics,Lower Limb (Other Fracture Till Toes),10
+Express Question Bank,Orthopaedics,Lower Limb (Trendelenburg & Pelvic Fracture),4
+Express Question Bank,Orthopaedics,Spine & Regional Conditions,14
+Express Question Bank,Orthopaedics,Sports Injury,8
+Express Question Bank,Orthopaedics,Upper Limb (Clavicle & Shoulder Dislocation),8
+Express Question Bank,Orthopaedics,Upper Limb (Fracture SC Humerus Till Fingers),11
+Express Question Bank,Orthopaedics,Soft Tissue Conditions,7
+Express Question Bank,Orthopaedics,Basic Terminology & Coxa Vara,3
+Express Question Bank,Orthopaedics,CDH & Blounts Disease,3
+Express Question Bank,Orthopaedics,CTEV & Achondroplasia,2
+Express Question Bank,Orthopaedics,Perthe’S Disease & SCFE,6
+Express Question Bank,Orthopaedics,Basic Peripheral Nerve Injuries,11
+Express Question Bank,Orthopaedics,Entrapment Neuropathies,5
+Express Question Bank,Orthopaedics,Specific Nerve Injuries,10
+Express Question Bank,Radiology,Neuro Radiology,16
+Express Question Bank,Radiology,Genitourinary Radiology,17
+Express Question Bank,Radiology,Mammography,10
+Express Question Bank,Radiology,Nuclear Scans,7
+Express Question Bank,Radiology,Musculoskeletal Radiology,9
+Express Question Bank,Radiology,Obstetric Imaging,5
+Express Question Bank,Radiology,Radiation Hazards & Protection,6
+Express Question Bank,Radiology,Thoracic & Cardiovascular Radiology,38
+Express Question Bank,Radiology,CT VS MRI & MRI Sequences,13
+Express Question Bank,Radiology,Basics Of Investigations,12
+Express Question Bank,Radiology,Abdominal Radiology,8
+Express Question Bank,Radiology,MRI,9
+Express Question Bank,Radiology,Iodinated Contrast Agents,9
+Express Question Bank,Radiology,MRI & USG Contrast Agents,4
+Express Question Bank,Radiology,Radio Therapy,5
+Express Question Bank,Radiology,Basics Of Radiography,11
+Express Question Bank,Radiology,Face & PNS Imaging,5
+Express Question Bank,Radiology,Spine Imaging,3
+Express Question Bank,Radiology,Ultrasonography (Part 1),16
+Express Question Bank,Radiology,Ultrasonography (Part 2),9
+Express Question Bank,Radiology,Understanding Anatomy on Radiological Images,2
+Express Question Bank,Radiology,CT Scan (Part 1),14
+Express Question Bank,Radiology,CT Scan (Part 2),3
+Express Question Bank,Forensic Medicine,Consent & Euthanasia,6
+Express Question Bank,Forensic Medicine,Defenses Against Negligence,6
+Express Question Bank,Forensic Medicine,Important Concepts Related To Medical Negligence,5
+Express Question Bank,Forensic Medicine,Infamous Conduct,5
+Express Question Bank,Forensic Medicine,Forensic Psychiatry,19
+Express Question Bank,Forensic Medicine,Definitions,16
+Express Question Bank,Forensic Medicine,Live Birth,6
+Express Question Bank,Forensic Medicine,"Syndromes - Battered Baby, Munchausen & Sids",8
+Express Question Bank,Forensic Medicine,Agriculture Poisons,15
+Express Question Bank,Forensic Medicine,Alcohol,9
+Express Question Bank,Forensic Medicine,Asphyxiants,5
+Express Question Bank,Forensic Medicine,Barbiturates & Chloral Hydrate,3
+Express Question Bank,Forensic Medicine,Cardiac Poisons & Aconite,3
+Express Question Bank,Forensic Medicine,Corrosives,10
+Express Question Bank,Forensic Medicine,Deliriant Poisons,7
+Express Question Bank,Forensic Medicine,Drug Dependence & Abuse,3
+Express Question Bank,Forensic Medicine,Food Poisoning,5
+Express Question Bank,Forensic Medicine,General Principles Of Toxicology,9
+Express Question Bank,Forensic Medicine,Heavy Metal Poisons,27
+Express Question Bank,Forensic Medicine,Phosphorous,4
+Express Question Bank,Forensic Medicine,Snakes,5
+Express Question Bank,Forensic Medicine,Spinal Poisons,3
+Express Question Bank,Forensic Medicine,Vegetable Poisons,6
+Express Question Bank,Forensic Medicine,Abrasions,11
+Express Question Bank,Forensic Medicine,Contusions,9
+Express Question Bank,Forensic Medicine,Lacerations & Incised Wounds,9
+Express Question Bank,Forensic Medicine,Stab Wounds,6
+Express Question Bank,Forensic Medicine,Blood & Seminal Stains,16
+Express Question Bank,Forensic Medicine,Impotence & Sterility,3
+Express Question Bank,Forensic Medicine,Age,14
+Express Question Bank,Forensic Medicine,Finger Printing,7
+Express Question Bank,Forensic Medicine,Hair & Other Methods Of Identification,5
+Express Question Bank,Forensic Medicine,Medico-Legal Importance Of Age Groups,6
+Express Question Bank,Forensic Medicine,Race,4
+Express Question Bank,Forensic Medicine,Sex,5
+Express Question Bank,Forensic Medicine,Stature,3
+Express Question Bank,Forensic Medicine,Courts Of Law,3
+Express Question Bank,Forensic Medicine,Definitions & Inquest,13
+Express Question Bank,Forensic Medicine,Evidence,4
+Express Question Bank,Forensic Medicine,Witness,2
+Express Question Bank,Forensic Medicine,Classification Of Sexual Offences & Rape,10
+Express Question Bank,Forensic Medicine,Unnatural Sexual Offences & Perversions,11
+Express Question Bank,Forensic Medicine,Explosion Injuries,3
+Express Question Bank,Forensic Medicine,Burns,4
+Express Question Bank,Forensic Medicine,Electrical Injuries,6
+Express Question Bank,Forensic Medicine,Injuries Due To Cold & Heat,18
+Express Question Bank,Forensic Medicine,Lightning Injuries & Scalds,2
+Express Question Bank,Forensic Medicine,"Adipocere, Mummification & Embalming",21
+Express Question Bank,Forensic Medicine,Algor Mortis,8
+Express Question Bank,Forensic Medicine,Classification Of Postmortem Changes,16
+Express Question Bank,Forensic Medicine,Death & It's Types,13
+Express Question Bank,Forensic Medicine,Decomposition,16
+Express Question Bank,Forensic Medicine,Eye Changes After Death,9
+Express Question Bank,Forensic Medicine,Muscular Charges,7
+Express Question Bank,Forensic Medicine,Post Mortem Hypostasis,10
+Express Question Bank,Forensic Medicine,Time Since Death & Legal Aspects,8
+Express Question Bank,Forensic Medicine,Age Estimation By X-Ray Examination,11
+Express Question Bank,Forensic Medicine,Lie Detectors,3
+Express Question Bank,Forensic Medicine,Medico - Legal Autopsy,6
+Express Question Bank,Forensic Medicine,Virginity & Pregnancy,7
+Express Question Bank,Forensic Medicine,Introduction To Ballistics & Firearms,11
+Express Question Bank,Forensic Medicine,Investigations Of Firearms,3
+Express Question Bank,Forensic Medicine,Rifled Gun & It's Injuries,8
+Express Question Bank,Forensic Medicine,Shotgun & It's Injuries,6
+Express Question Bank,Forensic Medicine,Counter Coup Lesions & Concussion,3
+Express Question Bank,Forensic Medicine,Intracranical Haemorrhages,8
+Express Question Bank,Forensic Medicine,Skull Fractures,12
+Express Question Bank,Forensic Medicine,Traffic Accident Injuries,5
+Express Question Bank,Forensic Medicine,"Vertebral column, Heart & Abdomen",4
+Express Question Bank,Forensic Medicine,Drowning,10
+Express Question Bank,Forensic Medicine,Hanging,7
+Express Question Bank,Forensic Medicine,Ligature Strangulation & Throttling,7
+Express Question Bank,Forensic Medicine,Other Forms Of Asphyxia,6
+Express Question Bank,Forensic Medicine,Medico-Legal Aspects Of Injuries,5
+Express Question Bank,Anesthesia,Preoperative Assessment,8
+Express Question Bank,Anesthesia,Complications Of GA,30
+Express Question Bank,Anesthesia,Central Neuraxial Blocks - Contraindications,16
+Express Question Bank,Anesthesia,Local Anesthetics,8
+Express Question Bank,Anesthesia,Peripheral Nerve Blocks,7
+Express Question Bank,Anesthesia,Central Neuraxial Blocks - Spinal Anesthesia & Epidural Anesthesia,4
+Express Question Bank,Anesthesia,Anesthesia For Co-Existing Diseases,8
+Express Question Bank,Anesthesia,General Principles & Individual Agents,16
+Express Question Bank,Anesthesia,Reversal of Block,8
+Express Question Bank,Anesthesia,CNS & CVS Monitoring,7
+Express Question Bank,Anesthesia,"Respiratory, Temperature & Neuromuscular Monitoring",4
+Express Question Bank,Anesthesia,General Principles,8
+Express Question Bank,Anesthesia,Individual Agents,8
+Express Question Bank,Anesthesia,Barbiturates,8
+Express Question Bank,Anesthesia,Non- Barbiturates,8
+Express Question Bank,Anesthesia,"MCQ's On Pac, Monitoring & Fluids",3
+Express Question Bank,Anesthesia,Anesthesia Machine,3
+Express Question Bank,Anesthesia,Closed Circuit,4
+Express Question Bank,Anesthesia,Cylinders,6
+Express Question Bank,Anesthesia,Semi Closed Circuits,4
+Express Question Bank,Anesthesia,Advance Cardiac Life Support,11
+Express Question Bank,Anesthesia,Basic Life Support,10
+Express Question Bank,Anesthesia,Infraglottic Devices,15
+Express Question Bank,Anesthesia,Other Devices,3
+Express Question Bank,Anesthesia,Supraglottic Devices,6
+Express Question Bank,Anesthesia,Intraoperative Fluids,4
+Express Question Bank,Anesthesia,"Laparoscopy, Day Care & Pain Management",5
+Express Question Bank,Anesthesia,"Neurosurgery, Obstetrics & Pediatric Anesthesia",9
+Express Question Bank,Anesthesia,"Ocular, Ent, Ortho & High - Altitude Anesthesia",6
+Express Question Bank,Anesthesia,Mechanical Ventilation,12
+Express Question Bank,Anesthesia,"NIV, ARDS, Shock & Nutritional Support",5
+Express Question Bank,Psychiatry,Adhd & Disruptive Behaviour Disorders,10
+Express Question Bank,Psychiatry,Autism Spectrum Disorder,6
+Express Question Bank,Psychiatry,Intellectual Disability & Other Childhood Disorders,6
+Express Question Bank,Psychiatry,Eating Disorders,13
+Express Question Bank,Psychiatry,Defense Mechanisms,18
+Express Question Bank,Psychiatry,Psychoanalysis,8
+Express Question Bank,Psychiatry,Neuropsychological Tests & Theory of learning,4
+Express Question Bank,Psychiatry,Sexual Disorders,12
+Express Question Bank,Psychiatry,Higher Mental Functions,4
+Express Question Bank,Psychiatry,Perception,12
+Express Question Bank,Psychiatry,Thought,17
+Express Question Bank,Psychiatry,History & MSE - Affect,4
+Express Question Bank,Psychiatry,Personality Disorders,18
+Express Question Bank,Psychiatry,Other Psychotic Disorders,7
+Express Question Bank,Psychiatry,Symptoms Of Schizophrenia,8
+Express Question Bank,Psychiatry,Clozapine (Story Mnemonic) & Treatment Of Schizophrenia,13
+Express Question Bank,Psychiatry,"Diagnosis, Type, History Prognosis & Etiology",8
+Express Question Bank,Psychiatry,Substance & Related Disorders,36
+Express Question Bank,Psychiatry,Somatic Therapies,4
+Express Question Bank,Psychiatry,Sleep & Related Disorders,12
+Express Question Bank,Psychiatry,Organic Mental Disorders,32
+Express Question Bank,Psychiatry,Depression & Treatment of Depression,8
+Express Question Bank,Psychiatry,Bipolar Affective Disorder & Lithium Memory Map,3
+Express Question Bank,Psychiatry,Neurotic Stress Related & Somatoform Disorders,7
+Express Question Bank,Dermatology,Hyperpigmentary Disorders,8
+Express Question Bank,Dermatology,Hypopigmenatry Disorders,6
+Express Question Bank,Dermatology,Genodermatoses,11
+Express Question Bank,Dermatology,Urticaria & Angioedema,8
+Express Question Bank,Dermatology,Sexually Transmitted Diseases,10
+Express Question Bank,Dermatology,Parasitic Infestations,3
+Express Question Bank,Dermatology,Vesiculobullous Disorders,19
+Express Question Bank,Dermatology,Adverse Cutaneous Drug Reactions,10
+Express Question Bank,Dermatology,Lichen Planus,12
+Express Question Bank,Dermatology,Bacterial Infections,22
+Express Question Bank,Dermatology,Bedside Tests,4
+Express Question Bank,Dermatology,Skin Lesions,10
+Express Question Bank,Dermatology,Skin Structure,20
+Express Question Bank,Dermatology,Nail Disorders,11
+Express Question Bank,Dermatology,Leprosy,17
+Express Question Bank,Dermatology,Skin Tumors,8
+Express Question Bank,Dermatology,Pediatric Dermatoses,7
+Express Question Bank,Dermatology,Cutaneous Fungal Infections,17
+Express Question Bank,Dermatology,Eczema,13
+Express Question Bank,Dermatology,Hair Disorders,23
+Express Question Bank,Dermatology,Psoriasis,42
+Express Question Bank,Dermatology,Systemic Diseases & Skin,26
+Express Question Bank,Dermatology,Disorders Of Glands,7
+Express Question Bank,Dermatology,Connective Tissue Disorders,5
+Express Question Bank,Dermatology,Cutaneous Tuberculosis,5
+Express Question Bank,PSM,Recent Program Images,14
+Express Question Bank,PSM,"Flea, Mite, Tick, Louse & Mosquitoes (Eggs & Larvae)",12
+Express Question Bank,PSM,Typhus Group of Fevers,3
+Express Question Bank,PSM,Air Pollution & Sound Pollution,10
+Express Question Bank,PSM,"Faecal Contamination Of Water, Hardness Of Water & Water Filters",12
+Express Question Bank,PSM,Fluoride & Chlorination of Water,4
+Express Question Bank,PSM,"Health Communication, Maternal & Child Health",15
+Express Question Bank,PSM,Disaster Management,8
+Express Question Bank,PSM,Health Planning & Management,9
+Express Question Bank,PSM,Demographic Cycle,9
+Express Question Bank,PSM,Demographic Dividend & Cycle,3
+Express Question Bank,PSM,Demographic Indicators,16
+Express Question Bank,PSM,Injectable Contraceptives & POP,7
+Express Question Bank,PSM,"IUCD (Generation 1st ,2nd & 3rd) & Sterilization Technique",9
+Express Question Bank,PSM,Methods Of Contraception & Emergency Contraception,8
+Express Question Bank,PSM,OCPS & It's Contraindications & Advantages,6
+Express Question Bank,PSM,Occupational Health,13
+Express Question Bank,PSM,"Numerical On Sensitivity, Specificity PPV & NPV",7
+Express Question Bank,PSM,R.O.C Curve & Sensitivity & Specificity Curves,11
+Express Question Bank,PSM,Screening Test Stats,4
+Express Question Bank,PSM,Test in Series & Test in Parallel,3
+Express Question Bank,PSM,Vaccination,12
+Express Question Bank,PSM,Anganwadi,5
+Express Question Bank,PSM,"Dengue, Chikungunya & Kala-Azar",5
+Express Question Bank,PSM,Eye Health Program,4
+Express Question Bank,PSM,Filariasis & JE,5
+Express Question Bank,PSM,JSSY & RMNCHA,7
+Express Question Bank,PSM,Malaria Control Strategy,5
+Express Question Bank,PSM,Malaria Indicator & Treatment,6
+Express Question Bank,PSM,NACO,5
+Express Question Bank,PSM,Post Exposure Prophylaxis for HIV & PPTCT,5
+Express Question Bank,PSM,School Health Program & Leprosy Program,3
+Express Question Bank,PSM,National TB Elimination Program,9
+Express Question Bank,PSM,"Biases In RCT, Internal & External Validity",5
+Express Question Bank,PSM,"Biases (Part 2) (Selection Biases, Attrition & Hawthorn Biases)",7
+Express Question Bank,PSM,Case Control Study,6
+Express Question Bank,PSM,Cohort Study,6
+Express Question Bank,PSM,Different Types of Bias & Selection Bias,3
+Express Question Bank,PSM,"Ecological Study, Confounder & Effect Modifier",5
+Express Question Bank,PSM,Errors & Advantages in Cohort Studies,4
+Express Question Bank,PSM,Evidence Based Medicine & Epidemiological Studies,9
+Express Question Bank,PSM,Meta - Analysis & Systematic Review,5
+Express Question Bank,PSM,"Questions on RR,AR & PAR & Case control study",11
+Express Question Bank,PSM,Retrospective Cohort & Mixed Cohort,10
+Express Question Bank,PSM,Health Committees Of India,13
+Express Question Bank,PSM,Adulteration of Food,6
+Express Question Bank,PSM,"Protein, Fat & Vitamin",21
+Express Question Bank,PSM,Recent Changes In Indian Dietary Guidelines & Vital Stats,5
+Express Question Bank,PSM,"Communicable Diseases (Mumps, Diphtheria & Pertussis)",22
+Express Question Bank,PSM,Indicators Of Obesity & Malnutrition,6
+Express Question Bank,PSM,Measles & Rubella,9
+Express Question Bank,PSM,Method To Remember Incubation Period & Period Of Communicability Of All Diseases,18
+Express Question Bank,PSM,NCD Programs,9
+Express Question Bank,PSM,"Secondary Attack Rate, Influenza & Chickenpox",10
+Express Question Bank,PSM,ASHA,15
+Express Question Bank,PSM,Sub-centre & Primary Health Centre,9
+Express Question Bank,PSM,Bio Medical Waste Management,20
+Express Question Bank,PSM,Confidence & Power Of Study,4
+Express Question Bank,PSM,Continuous Data Representation Method,10
+Express Question Bank,PSM,"Easy Concepts Of Null Hypothesis, P Value, Alpha & Beta Error",9
+Express Question Bank,PSM,Measures of Central Tendency,9
+Express Question Bank,PSM,Quantitative & Qualitative Variable & Parametric & Nonparametric Test,12
+Express Question Bank,PSM,Random & Non Random Sampling Techniques,10
+Express Question Bank,PSM,Skewness Of Curve,5
+Express Question Bank,PSM,"Standard Normal Curve, Coefficient Of Variance & Z Score",10
+Express Question Bank,PSM,"Variance, SD & SE",11
+Express Question Bank,PSM,Direct & Indirect Standardization,3
+Express Question Bank,PSM,HDI & PQLI,6
+Express Question Bank,PSM,"Length Time Bias, Lead Time Bias & Kaplan - Meier Plot",4
+Express Question Bank,PSM,Morbidity Indicators,8
+Express Question Bank,PSM,Mortality Indicators,7
+Express Question Bank,PSM,"Point Source, Continuous & Propagated Epidemic",3
+Express Question Bank,PSM,"Secular, Cyclical & Seasonal Trial, Endemic, Epidemic & Pandemic",6
+Express Question Bank,PSM,"Serial Interval, Generation Time & Median Incubation Period",4
+Express Question Bank,PSM,Tracking Phenomenon & Epidemiological Triad & Triangle,4
+Express Question Bank,PSM,Types of Epidemics & Their Investigation,2
+Express Question Bank,PSM,International Health,13
+Express Question Bank,Pediatrics,Leukemia,4
+Express Question Bank,Pediatrics,"Neuroblastoma, LCH & Retinoblastoma",2
+Express Question Bank,Pediatrics,"Transient Myeloproliferative Disorder & Lymphoma(Hl, NHL)",2
+Express Question Bank,Pediatrics,Growth & Puberty,8
+Express Question Bank,Pediatrics,Growth Assessment,12
+Express Question Bank,Pediatrics,"Milestones, Breast Milk & Behavioral Disorders",7
+Express Question Bank,Pediatrics,Short Stature,4
+Express Question Bank,Pediatrics,Esophageal Disorders & Foreign Body Ingestion,5
+Express Question Bank,Pediatrics,Hypertrophic Pyloric Stenosis & Hirschsprung Disease,3
+Express Question Bank,Pediatrics,"IBD, Diarrhea & Dehydration Management",6
+Express Question Bank,Pediatrics,"Malabsorption, Celiac Disease & Liver Disorders",6
+Express Question Bank,Pediatrics,Acyanotic CHD,4
+Express Question Bank,Pediatrics,Classification Of Congenital Heart Diseases,16
+Express Question Bank,Pediatrics,Cyanotic CHD,9
+Express Question Bank,Pediatrics,Fetal Circulation,5
+Express Question Bank,Pediatrics,"Rheumatic Fever, RHD & Heart Failure",4
+Express Question Bank,Pediatrics,Disorders Of Carbohydrate Metabolism,4
+Express Question Bank,Pediatrics,Disorders Of Protein Metabolism,9
+Express Question Bank,Pediatrics,"Lysosomal Storage Disorders, Peroxisomal Disorders & Leukodystrophy",10
+Express Question Bank,Pediatrics,Bacterial Infections,13
+Express Question Bank,Pediatrics,Congenital Infections & Covid19,9
+Express Question Bank,Pediatrics,Viral Infections,28
+Express Question Bank,Pediatrics,Apgar & Primitive Reflexes,8
+Express Question Bank,Pediatrics,General Neonatology,5
+Express Question Bank,Pediatrics,Hyaline Membrane Disease & TTNB,9
+Express Question Bank,Pediatrics,"Infants Of Diabetic Mothers, Neonatal Sepsis & Benign Lesions",12
+Express Question Bank,Pediatrics,Metabolic Disorders,9
+Express Question Bank,Pediatrics,Neonatal Jaundice,8
+Express Question Bank,Pediatrics,Neonatal Resuscitation,4
+Express Question Bank,Pediatrics,Other Breathing Disorders In Newborns,7
+Express Question Bank,Pediatrics,Perinatal Asphyxia & NEC,9
+Express Question Bank,Pediatrics,Preterm (IUGR),3
+Express Question Bank,Pediatrics,Ataxia Neurodegenerative Disorders,9
+Express Question Bank,Pediatrics,"Cerebral Palsy, Brain Tumor & Neurocutaneous Disorders",26
+Express Question Bank,Pediatrics,"Intellectual Disability, NTD & Craniosynostosis",9
+Express Question Bank,Pediatrics,Neuromuscular Disorders,6
+Express Question Bank,Pediatrics,"Seizures, Epilepsy & Meningitis",3
+Express Question Bank,Pediatrics,Antenatal Hydronephrosis & Hemolytic Uremic Syndrome,4
+Express Question Bank,Pediatrics,Congenital Nephrotic Syndrome & AKI (ARF),9
+Express Question Bank,Pediatrics,Glomerulonephritis & Nephrotic Syndrome,13
+Express Question Bank,Pediatrics,"UTI, VUR, PUV & Uretrocele",16
+Express Question Bank,Pediatrics,Wilm's Tumor & Congenital Renal Cysts,12
+Express Question Bank,Pediatrics,Croup & Choanal Atresia,14
+Express Question Bank,Pediatrics,"Cystic Fibrosis, Pneumonia & ARDS",18
+Express Question Bank,Pediatrics,Laryngomalacia & Bronchiolar Disorders,6
+Express Question Bank,Pediatrics,"Immunization Basics, Type & Immunization Schedules",9
+Express Question Bank,Pediatrics,"Specific Vaccines, Vaccines In Special Situations & Cold Storage Of Vaccines",7
+Express Question Bank,Pediatrics,Adrenal Disorders,8
+Express Question Bank,Pediatrics,Disorders Of Sex Development & CAH,10
+Express Question Bank,Pediatrics,Pubertal Disorders & GH Deficiency,10
+Express Question Bank,Pediatrics,Thyroid Disorders,9
+Express Question Bank,Pediatrics,Juvenile Idiopatic Arthritis,6
+Express Question Bank,Pediatrics,"SLE, Juvenile Dermatomyositis & Scleroderma",11
+Express Question Bank,Pediatrics,Vasculitis In Childhood,12
+Express Question Bank,Pediatrics,Management of Severe Acute Malnutrition,8
+Express Question Bank,Pediatrics,Vitamin Deficiencies,20
+Express Question Bank,Microbiology,Bacterial Meningitis,23
+Express Question Bank,Microbiology,Miscellaneous - Slow Viral Diseases,6
+Express Question Bank,Microbiology,Miscellaneous- Neurotoxin Related Diseases,12
+Express Question Bank,Microbiology,Parasitic Encephalitis,14
+Express Question Bank,Microbiology,Viral Encephalitis & Meningitis,23
+Express Question Bank,Microbiology,Antigen - Antibody Reactions,25
+Express Question Bank,Microbiology,Antigen & Antibody,35
+Express Question Bank,Microbiology,Autoimmunity,4
+Express Question Bank,Microbiology,Hypersensitivity,6
+Express Question Bank,Microbiology,Immunity,13
+Express Question Bank,Microbiology,Immunodeficiency Disorders,16
+Express Question Bank,Microbiology,Transplant Immunology,5
+Express Question Bank,Microbiology,Hepatic Fascioliasis,5
+Express Question Bank,Microbiology,Hepatic Hydatid Disease,10
+Express Question Bank,Microbiology,Hepatitis,21
+Express Question Bank,Microbiology,RNA Corona Virus,18
+Express Question Bank,Microbiology,Blood & Tissue Protozoal Infections,53
+Express Question Bank,Microbiology,Blood Stream Infection,9
+Express Question Bank,Microbiology,Brucellosis,5
+Express Question Bank,Microbiology,HIV Infection,11
+Express Question Bank,Microbiology,Infective Endocarditis,6
+Express Question Bank,Microbiology,Rheumatic Fever,6
+Express Question Bank,Microbiology,Rickettsia & Related Diseases,27
+Express Question Bank,Microbiology,Typhoid Fever,9
+Express Question Bank,Microbiology,Viral Hemorrhagic Fever,8
+Express Question Bank,Microbiology,Antimicrobial Susceptibility Testing & Genetics,33
+Express Question Bank,Microbiology,Culture & Identification,41
+Express Question Bank,Microbiology,General Bacteriology (GB),20
+Express Question Bank,Microbiology,General Mycology,31
+Express Question Bank,Microbiology,Introduction,11
+Express Question Bank,Microbiology,Microscopy & Staining,22
+Express Question Bank,Microbiology,Morphology & Growth Of Bacteria,25
+Express Question Bank,Microbiology,Scientists,5
+Express Question Bank,Microbiology,General Parasitology,20
+Express Question Bank,Microbiology,General Virology,30
+Express Question Bank,Microbiology,Bacterial Food Poisoning,9
+Express Question Bank,Microbiology,Cholera,11
+Express Question Bank,Microbiology,E. Coli Diarrhoeal Disease,31
+Express Question Bank,Microbiology,Helminthic Gastroenteritis,15
+Express Question Bank,Microbiology,Miscellaneous – Fungal Food Poisoning,5
+Express Question Bank,Microbiology,Peptic Ulcer Disease,3
+Express Question Bank,Microbiology,Protozoal Gastroenteritis,22
+Express Question Bank,Microbiology,Pseudomembranous Colitis,11
+Express Question Bank,Microbiology,Viral Gastro Enteritis,9
+Express Question Bank,Microbiology,Sterilization & Disinfection (Chemical Method),17
+Express Question Bank,Microbiology,Sterilization & Disinfection (Physical Method),16
+Express Question Bank,Microbiology,Bacterial Atypical Pneumonia,13
+Express Question Bank,Microbiology,Bacterial Typical Pneumonia,8
+Express Question Bank,Microbiology,Parasitic Pneumonia,4
+Express Question Bank,Microbiology,Whooping Cough,3
+Express Question Bank,Microbiology,Fungal Pneumonia,13
+Express Question Bank,Microbiology,Plague & Tuberculosis,5
+Express Question Bank,Microbiology,Viral Pneumonia,19
+Express Question Bank,Microbiology,Anthrax,3
+Express Question Bank,Microbiology,Deep Fungal Skin Infections,36
+Express Question Bank,Microbiology,DNA Viruses Skin Infections,25
+Express Question Bank,Microbiology,Gas Gangrene,5
+Express Question Bank,Microbiology,Leprosy,5
+Express Question Bank,Microbiology,Nocardiosis,4
+Express Question Bank,Microbiology,Parasitic Skin Infections,13
+Express Question Bank,Microbiology,RNA Viruses Skin Infections,37
+Express Question Bank,Microbiology,Staphylococcal Skin Infections,19
+Express Question Bank,Microbiology,Streptococcal Skin Infections,24
+Express Question Bank,Microbiology,Superficial Fungal Skin Infections,24
+Express Question Bank,Microbiology,Bacteria causing UTI,14
+Express Question Bank,Microbiology,Genital Ulcerative Diseases,17
+Express Question Bank,Microbiology,Urethritis,8
+Express Question Bank,Microbiology,Vaginitis,6
+Express Question Bank,Pharmacology,Anti Helmintic Drug,7
+Express Question Bank,Pharmacology,Anti HIV Drugs,10
+Express Question Bank,Pharmacology,Anti Protozoal Drugs,17
+Express Question Bank,Pharmacology,Anti TB Drugs,12
+Express Question Bank,Pharmacology,Anti Viral Drugs,16
+Express Question Bank,Pharmacology,Antifungal Drugs,9
+Express Question Bank,Pharmacology,Antimalarial Drugs,6
+Express Question Bank,Pharmacology,NSAIDs,14
+Express Question Bank,Pharmacology,Pharmacotherapy Of Gout,7
+Express Question Bank,Pharmacology,Pharmacotherapy Of Rheumatoid Arthritis,6
+Express Question Bank,Pharmacology,Prostaglandin Preparations,8
+Express Question Bank,Pharmacology,Serotonin Pharmacology & Migraine,17
+Express Question Bank,Pharmacology,Anti Parkinson’s Drugs,15
+Express Question Bank,Pharmacology,Antidepressant Drugs,17
+Express Question Bank,Pharmacology,Antiepileptic Drugs,25
+Express Question Bank,Pharmacology,Antipsychotic Drugs,21
+Express Question Bank,Pharmacology,Drugs For Anxiety,10
+Express Question Bank,Pharmacology,Ethanol Pharmacology,13
+Express Question Bank,Pharmacology,Local Anesthesia,7
+Express Question Bank,Pharmacology,Opioids,14
+Express Question Bank,Pharmacology,Pharmacotherapy of Mania & BPD,5
+Express Question Bank,Pharmacology,Sedative Hypnotic Drugs,10
+Express Question Bank,Pharmacology,Skeletal Muscle Relaxants,8
+Express Question Bank,Pharmacology,Antiemetic Drugs,11
+Express Question Bank,Pharmacology,Drugs For Peptic Ulcer Disease,10
+Express Question Bank,Pharmacology,Drugs Used For Constipation,13
+Express Question Bank,Pharmacology,Drugs Used For Diarrhea,9
+Express Question Bank,Pharmacology,Anti Anginal Drugs,17
+Express Question Bank,Pharmacology,Antiarrythmics Drugs (Part 1),11
+Express Question Bank,Pharmacology,Antiarrythmics Drugs (Part 2),9
+Express Question Bank,Pharmacology,Drugs Affecting RAAS Pathway,10
+Express Question Bank,Pharmacology,Pharmacotherapy Of CHF,15
+Express Question Bank,Pharmacology,Pharmacotherapy Of Hypertension,23
+Express Question Bank,Pharmacology,Antidiabetic Drugs (Insulin Preparations),18
+Express Question Bank,Pharmacology,Antidiabetic Drugs (Remaining Drugs & Summary),9
+Express Question Bank,Pharmacology,Anti-Thyroid Drugs & Drugs Used In Hypothyroidism,16
+Express Question Bank,Pharmacology,Corticosteroids Clinical Concepts,21
+Express Question Bank,Pharmacology,Corticosteroids Therapeutic Uses,14
+Express Question Bank,Pharmacology,Estrogen & Progesterone Preparations,16
+Express Question Bank,Pharmacology,Hormonal Contraceptives,11
+Express Question Bank,Pharmacology,Hypothalamus & Pituitary Hormones Pharmacology,19
+Express Question Bank,Pharmacology,Pharmacotherapy Of Osteoporosis,15
+Express Question Bank,Pharmacology,Testosterone Pharmacology,11
+Express Question Bank,Pharmacology,Drugs For Cough,4
+Express Question Bank,Pharmacology,Drugs For Pulmonary Hypertension,13
+Express Question Bank,Pharmacology,Pharmacotherapy of Bronchial Asthma,20
+Express Question Bank,Pharmacology,Aminoglycosides & Oxazolidinones,5
+Express Question Bank,Pharmacology,"Cephalosporins, Carbapenems & Monobactams",15
+Express Question Bank,Pharmacology,Drugs For UTI,3
+Express Question Bank,Pharmacology,Fluroquinolones,7
+Express Question Bank,Pharmacology,"Glycopeptides, Lipopeptides & Polymyxins",4
+Express Question Bank,Pharmacology,"Macrolides ,Lincosamides & Streptogramins",11
+Express Question Bank,Pharmacology,Penicillins,11
+Express Question Bank,Pharmacology,Sulfonamides,6
+Express Question Bank,Pharmacology,Tetracycline & Chloramphenicol,11
+Express Question Bank,Pharmacology,Antidiuretic Drugs,9
+Express Question Bank,Pharmacology,Diuretics,30
+Express Question Bank,Pharmacology,Adrenergic Drugs,10
+Express Question Bank,Pharmacology,Alpha Blockers,5
+Express Question Bank,Pharmacology,Anticholinergic Drugs,4
+Express Question Bank,Pharmacology,Beta Blockers,8
+Express Question Bank,Pharmacology,Drugs Acting on Ganglia & Anti Smoking Drugs,3
+Express Question Bank,Pharmacology,Pharmacotherapy Of Glaucoma,6
+Express Question Bank,Pharmacology,Cholinergic Drugs,5
+Express Question Bank,Pharmacology,Hormonal Agents & Tyrosine Kinase Inhibitors,14
+Express Question Bank,Pharmacology,Introduction & DNA Alkylating Agents,20
+Express Question Bank,Pharmacology,Platinum Compounds & Antibiotics,8
+Express Question Bank,Pharmacology,S & M Phase Specific Drugs,8
+Express Question Bank,Pharmacology,Small Molecule Inhibitors,3
+Express Question Bank,Pharmacology,Targeted Therapy,9
+Express Question Bank,Pharmacology,Anticoagulant Drugs,19
+Express Question Bank,Pharmacology,Antiplatelet Drugs,11
+Express Question Bank,Pharmacology,Drugs For Dyslipidemia,16
+Express Question Bank,Pharmacology,Fibrinolytics & Antifibrinolytics,7
+Express Question Bank,Pharmacology,Hemantinics,15
+Express Question Bank,Pharmacology,Adverse Drug Reactions,9
+Express Question Bank,Pharmacology,Clinical Pharmacology,5
+Express Question Bank,Pharmacology,Clinical Trial,8
+Express Question Bank,Pharmacology,Pharmacodynamics,8
+Express Question Bank,Pharmacology,Pharmacogenetics,17
+Express Question Bank,Pharmacology,PK Absorption,10
+Express Question Bank,Pharmacology,Pk Drug Distribution,5
+Express Question Bank,Pharmacology,Pk Drug Excretion,10
+Express Question Bank,Pharmacology,Pk Drug Metabolism,8
+Express Question Bank,Pharmacology,Therapeutic Drug Monitoring,4
+Express Question Bank,Pharmacology,Immunomodulator Drugs,5
+Express Question Bank,Orthopaedics,Lower limb,24
+Express Question Bank,Orthopaedics,Joint disorders,14
+Express Question Bank,Orthopaedics,Soft tissue disorders,7
+Express Question Bank,Orthopaedics,Spine,11
+Express Question Bank,Orthopaedics,Trauma Basics & Upper limb,21
+Express Question Bank,Orthopaedics,Peripheral Nerve Injuries,14
+Express Question Bank,Orthopaedics,Implants in Orthopaedics,7
+Express Question Bank,Orthopaedics,Metabolic Disorders,18
+Express Question Bank,Orthopaedics,Tumors,13
+Express Question Bank,Orthopaedics,Pediatric Disorders,9
+Express Question Bank,Orthopaedics,Splint traction,10
+Express Question Bank,Orthopaedics,Infections in Orthopaedics,17
+Express Question Bank,Pathology,Amyloidosis,5
+Express Question Bank,Pathology,Antigen Presenting Cells & MHC,6
+Express Question Bank,Pathology,Hypersensitivity Reactions Type - 1,6
+Express Question Bank,Pathology,Introduction To Immune System Innate & Adaptive Immunity,8
+Express Question Bank,Pathology,Breast Normal Histology,8
+Express Question Bank,Pathology,Lesions Of Breast & Breast CA,7
+Express Question Bank,Pathology,Clinical Aspects Of Neoplasia & Neoplasia Basics,4
+Express Question Bank,Pathology,Hallmarks Of Cancer & Cell Cycle,7
+Express Question Bank,Pathology,Esophagus & Stomach,11
+Express Question Bank,Pathology,Inflammatory Bowel Diseases,10
+Express Question Bank,Pathology,Diagnosis Of Genetic Disorders,4
+Express Question Bank,Pathology,Genetics - MISC,5
+Express Question Bank,Pathology,Non Mendelian Inheritance,8
+Express Question Bank,Pathology,Complications Of Diabetes,3
+Express Question Bank,Pathology,"Diabetes Criteria, Classifications & Pathophysiology",6
+Express Question Bank,Pathology,Thyroiditis & Thyroid Cancers,23
+Express Question Bank,Pathology,Apoptosis,17
+Express Question Bank,Pathology,Atrophy,4
+Express Question Bank,Pathology,Cellular Ageing,4
+Express Question Bank,Pathology,Ferroptosis & Free Radicals,5
+Express Question Bank,Pathology,Hypertrophy & Hyperplasia,7
+Express Question Bank,Pathology,Intracellular Accumulation,7
+Express Question Bank,Pathology,Introduction To Cell Injury,3
+Express Question Bank,Pathology,Metaplasia,7
+Express Question Bank,Pathology,Necroptosis & Pyroptosis,5
+Express Question Bank,Pathology,Necrosis,12
+Express Question Bank,Pathology,Reversible Injury,3
+Express Question Bank,Pathology,Diseases Of Uterus,13
+Express Question Bank,Pathology,Lesion Of Cervix,5
+Express Question Bank,Pathology,Ovarian Tumors,18
+Express Question Bank,Pathology,CNS Tumors,12
+Express Question Bank,Pathology,Liver Disease,23
+Express Question Bank,Pathology,Inflammation - MISC,8
+Express Question Bank,Pathology,Mediators Of Inflammation,14
+Express Question Bank,Pathology,Pancreas,6
+Express Question Bank,Pathology,Heart - MISC,6
+Express Question Bank,Pathology,Hypertrophic Cardiomyopathy,7
+Express Question Bank,Pathology,Ischemic Heart Disease,7
+Express Question Bank,Pathology,RBCs & Anemia Basics,25
+Express Question Bank,Pathology,Leprosy,19
+Express Question Bank,Pathology,Tuberculosis,7
+Express Question Bank,Pathology,Renal System,31
+Express Question Bank,Pathology,Bleeding & Platelet Disorders,10
+Express Question Bank,Pathology,Coagulation Pathways & Disorders,12
+Express Question Bank,Pathology,Cholangiocarcinoma,2
+Express Question Bank,Pathology,Gall Bladder Stones,4
+Express Question Bank,Pathology,Acute Inflammatory Dermatosis,3
+Express Question Bank,Pathology,"Dermatology - Basic Anatomy, Physiology & Melanocytic Disorders",3
+Express Question Bank,Pathology,Papulosquamous Disorders & Blistering Disorders,7
+Express Question Bank,Pathology,Bone Disorders,10
+Express Question Bank,Pathology,Peripheral Nerves & Muscle Disorders,5
+Express Question Bank,Pathology,Neuroblastoma & Wilms Tumor,5
+Express Question Bank,Pathology,Lower Urinary Tract & Male Genital System,7
+Express Question Bank,Pathology,Testis Lesions & Tumors,10
+Express Question Bank,Pathology,Hemodynamic Disorders Thromboembolic Disease & Shock,4
+Express Question Bank,Pathology,Aneurysm,3
+Express Question Bank,Pathology,Atherosclerosis,2
+Express Question Bank,Pathology,Vascular Tumor,5
+Express Question Bank,Pathology,Vasculitis,18
+Express Question Bank,Pathology,Vessels - MISC,2
+Express Question Bank,Pathology,WBCs & It's Disorders,37
+Express Question Bank,Pathology,Asthma,6
+Express Question Bank,Pathology,Lung Tumors,6
+Express Question Bank,Pathology,Lungs - MISC,11
+Express Question Bank,Pathology,Pnemoconiosis,5
+Express Question Bank,Pathology,Pneumonia & ARDS,5
+Express Question Bank,Surgery,Metabolic Surgery,11
+Express Question Bank,Surgery,Burns,4
+Express Question Bank,Surgery,Plastic Surgery - Skin Grafting (Part 1),2
+Express Question Bank,Surgery,Plastic Surgery - Flaps & Reconstruction (Part 1),4
+Express Question Bank,Surgery,Anal Canal & It’s Common Conditions,10
+Express Question Bank,Surgery,Appendix,13
+Express Question Bank,Surgery,Esophagus ( Gerd & Functional Disorders ),6
+Express Question Bank,Surgery,Esophagus (Carcinoma Esophagus),11
+Express Question Bank,Surgery,Esophagus (Esophageal Injury & Other Common Conditions),13
+Express Question Bank,Surgery,Esophagus (Surgical Anatomy & Investigation),18
+Express Question Bank,Surgery,Gall Bladder (Choledocholithiasis & Bile Duct Injury),13
+Express Question Bank,Surgery,Gall Bladder (Gall Stone Disease),8
+Express Question Bank,Surgery,Gall Bladder (Gall Bladder & Bile Duct Cancer),8
+Express Question Bank,Surgery,Large Intestine (Colorectal Cancer),8
+Express Question Bank,Surgery,Large Intestine (Common Large Intestinal Conditions),15
+Express Question Bank,Surgery,Liver (Liver Failure & Portal Hypertension),7
+Express Question Bank,Surgery,Liver (Liver Infection & Neoplasm),19
+Express Question Bank,Surgery,Pancreas (Management Of Acute & Chronic Pancreatitis),19
+Express Question Bank,Surgery,Pancreas (Pancreatic Neoplasm),4
+Express Question Bank,Surgery,Pancreas (Anomalies & Inflammation),6
+Express Question Bank,Surgery,Small Intestine (Intestinal Obstruction),5
+Express Question Bank,Surgery,Small Intestine (Various Common Small Intestinal Conditions),15
+Express Question Bank,Surgery,Spleen,10
+Express Question Bank,Surgery,Stomach (Ulcer Diseases),11
+Express Question Bank,Surgery,Stomach (Surgical Anatomy & Stomach Surgeries ),2
+Express Question Bank,Surgery,Stomach (Carcinoma Stomach),3
+Express Question Bank,Surgery,Stomach (Gist & Other Common Conditions),7
+Express Question Bank,Surgery,Stomach (Upper GI Bleed ),8
+Express Question Bank,Surgery,"Surgical Incisions, Sutures & Needles (Part 1)",9
+Express Question Bank,Surgery,Types Of Closure / Knots & Energy Sources (Part 2),3
+Express Question Bank,Surgery,Minimal Access Surgery & Staplers (Part 3),6
+Express Question Bank,Surgery,Surgical Anatomy & Cardiopulmonary Bypass (Part 1),10
+Express Question Bank,Surgery,Ihd & Aortic Dissection (Part 2),14
+Express Question Bank,Surgery,Inguinal Hernia,10
+Express Question Bank,Surgery,Ventral & Other Types Of Hernias,7
+Express Question Bank,Surgery,Brain Tumors,9
+Express Question Bank,Surgery,Hydrocephalus,3
+Express Question Bank,Surgery,SAH,7
+Express Question Bank,Surgery,Adrenal Gland (Adrenal Cortex Neoplasm & Pheochromocytoma),8
+Express Question Bank,Surgery,Neuroendocrine (Endocrine Neoplasm Of Pancreas & Carcinoid Tumour),6
+Express Question Bank,Surgery,Parathyroid - Basic Physiology & Primary Hyperparathyroidism (Part 1),5
+Express Question Bank,Surgery,Parathyroid - Secondary & Tertiary Hyperparathyroidism (Part 2),2
+Express Question Bank,Surgery,Thyroid - Benign Thyroid Disorders (Part 2),5
+Express Question Bank,Surgery,Thyroid - Thyroid Neoplasm (Part 3),10
+Express Question Bank,Surgery,Skin & Subcutaneous Tissue (Skin Tumors & Common Skin Conditions),15
+Express Question Bank,Surgery,Transplant,18
+Express Question Bank,Surgery,Oral Cavity,20
+Express Question Bank,Surgery,Anatomy & Physiology Of Lymphatic System,3
+Express Question Bank,Surgery,Investigation & Management,11
+Express Question Bank,Surgery,Lymphedema(Clinical Presentation),7
+Express Question Bank,Surgery,Acute & Chronic Limb Ischemia (Part 1),11
+Express Question Bank,Surgery,Aneurysm / AV Malformation / Amputation (Part 2),15
+Express Question Bank,Surgery,Kidney - (Urinary Tract Calculi) (Part 1),11
+Express Question Bank,Surgery,Kidney - Renal Neoplasm (Part 2),8
+Express Question Bank,Surgery,Kidney - Congenital & Other Benign Disorders (Part 3),8
+Express Question Bank,Surgery,Prostate,14
+Express Question Bank,Surgery,Testis,15
+Express Question Bank,Surgery,Urethra & Penis,16
+Express Question Bank,Surgery,"Urinary Bladder - Urinary Diversion, Retention Of Urine & Incontinence (Part 1)",8
+Express Question Bank,Surgery,Urinary Bladder - Benign & Malignant Disorders (Part 2),5
+Express Question Bank,Surgery,Approach To Breast Lump,6
+Express Question Bank,Surgery,Benign Disorders Of Breast,8
+Express Question Bank,Surgery,Classification & Risk Factor,5
+Express Question Bank,Surgery,Staging Of Carcinoma Breast,3
+Express Question Bank,Surgery,Surgical Anatomy,8
+Express Question Bank,Surgery,Abdominal Trauma,13
+Express Question Bank,Surgery,Damage Control Resuscitation,5
+Express Question Bank,Surgery,Damage Control Surgery,4
+Express Question Bank,Surgery,Head & Neck Trauma,15
+Express Question Bank,Surgery,Primary Survey,8
+Express Question Bank,Surgery,Retroperitoneal Trauma,6
+Express Question Bank,Surgery,Varicose Vein,6
+Express Question Bank,Surgery,Venous Thrombosis,17
+Express Question Bank,Surgery,Pediatric Surgery,6
+Express Question Bank,Surgery,Thyroid - Surgical Anatomy & Investigations (Part 1),2
+Express Question Bank,Surgery,Pleural Diseases & Thoracic Outlet Syndrome,6
+Express Question Bank,Surgery,Carcinoma Lung & Mediastinal Conditions,6
+Express Question Bank,Surgery,Basic Pathophysiology Of Trauma / Stress,4
+Express Question Bank,Surgery,Nutrition,5
+Express Question Bank,Surgery,Wound Healing & Infection,5
+Express Question Bank,Surgery,Surgical Site Infection,9
+Express Question Bank,Surgery,Shock & Sepsis,4
+Express Question Bank,Anatomy,Basics Of Embryology,11
+Express Question Bank,Anatomy,"Somites, Lateral Plate Mesoderm & Neural Crest Cells",4
+Express Question Bank,Anatomy,Cranial nerve – VII,6
+Express Question Bank,Anatomy,"Cranial Nerve- III, IV & VI",9
+Express Question Bank,Anatomy,Cranial Nerve Nuclei & Columns,14
+Express Question Bank,Anatomy,"Cranial nerves - IX, X, XI & XII Nerves",9
+Express Question Bank,Anatomy,Deep Cervical Fascia,8
+Express Question Bank,Anatomy,Duramater & Sinus of Head,8
+Express Question Bank,Anatomy,Glands - Parotid Gland,3
+Express Question Bank,Anatomy,"Head, Neck & Face - Vascular Supply",8
+Express Question Bank,Anatomy,"Larynx, Pharynx & Thyroid Gland",14
+Express Question Bank,Anatomy,Osteology - Cranial Cavity,8
+Express Question Bank,Anatomy,Parasympathetic Ganglion & Cranial Nerve - V,13
+Express Question Bank,Anatomy,Temporomandibular Joint & Muscles Of Mastication,1
+Express Question Bank,Anatomy,Triangles of The Neck,10
+Express Question Bank,Anatomy,Histology & Lining Epithelium of The Body Parts,8
+Express Question Bank,Anatomy,Lower Limb -Tibia & Fibula,1
+Express Question Bank,Anatomy,Skull - Cranial Cavity & Norma Basalis,6
+Express Question Bank,Anatomy,Upper Limb - Radius & Ulna,2
+Express Question Bank,Anatomy,Blood Vessels - Axillary Artery & Anastomosis Around Scapula,7
+Express Question Bank,Anatomy,Blood Vessels - Brachial Artery - Anastomosis Around Elbow,3
+Express Question Bank,Anatomy,Brachial Plexus,5
+Express Question Bank,Anatomy,Clavipectoral Fascia & Intermuscular Scapular Spaces,4
+Express Question Bank,Anatomy,Cubital Fossa & Elbow Joint,7
+Express Question Bank,Anatomy,Flexor & Extensor Retinaculum,2
+Express Question Bank,Anatomy,Important Nerves of Upper Limb,9
+Express Question Bank,Anatomy,Muscles Of Hand,15
+Express Question Bank,Anatomy,Osteology,14
+Express Question Bank,Anatomy,Shoulder Joint,4
+Express Question Bank,Anatomy,Spaces In Hand,5
+Express Question Bank,Anatomy,Arterial Supply of Heart & Heart - External Features,4
+Express Question Bank,Anatomy,"Cardiac Plexus, Thoracic Duct, Esophagus & Posterior Mediastinum",10
+Express Question Bank,Anatomy,Inlet Of Thorax & Diaphragm,2
+Express Question Bank,Anatomy,Interior Of Right Atrium & Right Ventricle,5
+Express Question Bank,Anatomy,"Lungs - Mediastinal Surface, Bronchopulmonary Segments & Sinuses",4
+Express Question Bank,Anatomy,"Thoracic Wall - Muscles, Nerves & Vessels",5
+Express Question Bank,Anatomy,"Aorta, CT, SMA & IMA",11
+Express Question Bank,Anatomy,Ischiorectal Fossa & Urogenital Triangle,7
+Express Question Bank,Anatomy,Kidney & Ureter,8
+Express Question Bank,Anatomy,Liver & It's Segments & Portal Vein,5
+Express Question Bank,Anatomy,Peritoneum,5
+Express Question Bank,Anatomy,Rectus Sheath & Inguinal Canal,7
+Express Question Bank,Anatomy,Anterior Compartment Of Thigh & Femoral Nerve,5
+Express Question Bank,Anatomy,Arches Of Foot,1
+Express Question Bank,Anatomy,Fascia Lata & Popliteal Fossa,4
+Express Question Bank,Anatomy,"Flexor, Extensor & Peroneal Retinaculum",2
+Express Question Bank,Anatomy,Gluteal Region & Hamstring Compartment,6
+Express Question Bank,Anatomy,Leg Compartments & Sciatic Nerve,4
+Express Question Bank,Anatomy,Lumbar Plexus,12
+Express Question Bank,Anatomy,Osteology (Part 2),5
+Express Question Bank,Anatomy,Sole Of The Foot,2
+Express Question Bank,Anatomy,Ascending & Descending Tracts,12
+Express Question Bank,Anatomy,Auditory Pathway,3
+Express Question Bank,Anatomy,Basal Ganglia,4
+Express Question Bank,Anatomy,Blood Supply Of Brain,2
+Express Question Bank,Anatomy,Brainstem & Brainstem Syndrome,16
+Express Question Bank,Anatomy,Cerebellum,7
+Express Question Bank,Anatomy,Cerebral Cortex & Cerebrum,11
+Express Question Bank,Anatomy,Conus Medullaris & Cauda Equina Syndrome,3
+Express Question Bank,Anatomy,General Neuroanatomy,9
+Express Question Bank,Anatomy,Lateral & Third Ventricles,3
+Express Question Bank,Anatomy,Spinal Cord - External Features,8
+Express Question Bank,Anatomy,Sympathetic Chain - Ramus Communicans,1
+Express Question Bank,Anatomy,Thalamus & Connections,2
+Express Question Bank,Anatomy,White Matter of Cerebrum & Greymatter,13
+Express Question Bank,Anatomy,CVS Development -  Arterial & Venous System,11
+Express Question Bank,Anatomy,"CVS Development - Heart Tube, Derivates & Septum",5
+Express Question Bank,Anatomy,GIT Development & Urogenital System,18
+Express Question Bank,Anatomy,"HNF Development - Face, Palate & Pharyngeal Arches",9
+Express Question Bank,Anatomy,"HNF Development - Tongue, Thyroid & Eyeball",6
+Express Question Bank,Medicine,Approach to Arthritis & Rheumatoid Arthritis (Part1),9
+Express Question Bank,Medicine,Gout Pseudogout & Dish,9
+Express Question Bank,Medicine,Small Vessel Vasculitis Behcets & Kawasaki,12
+Express Question Bank,Medicine,Systemic Sclerosis (Part 2),3
+Express Question Bank,Medicine,Temporal & Takayasu Arteritis,7
+Express Question Bank,Medicine,Tests in Rheumatology & Autoantibodies,15
+Express Question Bank,Medicine,Rheumatoid Arthritis,26
+Express Question Bank,Medicine,Systemic Lupus Erythematosis,12
+Express Question Bank,Medicine,Ecg & Cardiac Arrythmias,4
+Express Question Bank,Medicine,ECG - Basics & Lead Placement (Part 1),9
+Express Question Bank,Medicine,ECG - PQRS & T Wave Abnormalities (Part 3),7
+Express Question Bank,Medicine,ECG & Cardiac Arrythmias - Atrial Fib & Flutter,4
+Express Question Bank,Medicine,ECG Brugada Wellens Fascicular Block,3
+Express Question Bank,Medicine,Ecg Electrolytes & Misc,3
+Express Question Bank,Medicine,"ECG VT, V fib & Heart Blocks",3
+Express Question Bank,Medicine,Heart Failure,3
+Express Question Bank,Medicine,Hypertension,7
+Express Question Bank,Medicine,JVP,13
+Express Question Bank,Medicine,Pericardial Diseases,9
+Express Question Bank,Medicine,Cardiology - MISC,12
+Express Question Bank,Medicine,Heart Murmurs,11
+Express Question Bank,Medicine,Ischemic Heart Disease,15
+Express Question Bank,Medicine,Valvular Heart Disease,30
+Express Question Bank,Medicine,Heart Sounds,11
+Express Question Bank,Medicine,Anemia & Iron Homoestasis,6
+Express Question Bank,Medicine,Approach to Anemia,13
+Express Question Bank,Medicine,Autoimmune Hemolytic Anemia,5
+Express Question Bank,Medicine,Chronic Lymphocytic Leukemia,10
+Express Question Bank,Medicine,Chronic Myeloid Leukemia,5
+Express Question Bank,Medicine,Hairy Cell Leukemia,3
+Express Question Bank,Medicine,Hemolytic Anemia,15
+Express Question Bank,Medicine,Macrocytic Anemia,11
+Express Question Bank,Medicine,Microcytic Anemia,9
+Express Question Bank,Medicine,Myeloproliferative Disorders,7
+Express Question Bank,Medicine,Plasma Cell Disorders,12
+Express Question Bank,Medicine,Thalassemia,6
+Express Question Bank,Medicine,Approach to Muscle Disorders,8
+Express Question Bank,Medicine,Atypical Parkinson’s,9
+Express Question Bank,Medicine,Dementia - Alzheimer's Disease (Part 1),12
+Express Question Bank,Medicine,Dementia - Lewy Body Dementia & Vascular Dementia (Part 2),6
+Express Question Bank,Medicine,"Dementia - FTD, Huntington, CJD, NPH (Part 3)",12
+Express Question Bank,Medicine,Guillian Barre Syndrome,11
+Express Question Bank,Medicine,Motor Neuron Disease,15
+Express Question Bank,Medicine,Multiple Sclerosis,12
+Express Question Bank,Medicine,Nerve Muscle Junction Disorders,12
+Express Question Bank,Medicine,Parkinsons Disease,30
+Express Question Bank,Medicine,Speech Disorders,5
+Express Question Bank,Medicine,Stroke - Hemorrhagic Stroke (Part 5),7
+Express Question Bank,Medicine,Upper Motor vs Lower Motor Neuron Lesions,2
+Express Question Bank,Medicine,Primary Headache,24
+Express Question Bank,Medicine,Movement Disorders,12
+Express Question Bank,Medicine,Neuro Ophthalmology,12
+Express Question Bank,Medicine,Stroke Syndromes,19
+Express Question Bank,Medicine,Brainstem Disorders,13
+Express Question Bank,Medicine,Vertigo,3
+Express Question Bank,Medicine,Seizures & Epilepsy,21
+Express Question Bank,Medicine,Acute Ischemic Stroke,20
+Express Question Bank,Medicine,Spinal Cord Disorder,26
+Express Question Bank,Medicine,Asthma,5
+Express Question Bank,Medicine,Bronchiectasis,5
+Express Question Bank,Medicine,COPD,19
+Express Question Bank,Medicine,Hypersensitivity Pneumonitis,3
+Express Question Bank,Medicine,Interstitial Lung Disease,14
+Express Question Bank,Medicine,Lung Physiology,14
+Express Question Bank,Medicine,Pulmonary Embolism,8
+Express Question Bank,Medicine,Pulmonary Function Tests,6
+Express Question Bank,Medicine,Pulmonary Hypertension,3
+Express Question Bank,Medicine,Sarcoidosis,5
+Express Question Bank,Medicine,ARDS,12
+Express Question Bank,Medicine,"Complications of Diabetes, DKA & HHS",3
+Express Question Bank,Medicine,Cushings Syndrome,7
+Express Question Bank,Medicine,Endocrine Tumors of Pancreas & MEN Syndromes,15
+Express Question Bank,Medicine,Pagets Syndrome,4
+Express Question Bank,Medicine,Pheochromocytoma,7
+Express Question Bank,Medicine,Primary Hyperaldosteronism,4
+Express Question Bank,Medicine,Endocrinology - MISC,6
+Express Question Bank,Medicine,Diabetes Mellitus,12
+Express Question Bank,Medicine,Calcium disorders,15
+Express Question Bank,Medicine,Pituitary Disorders - Acromegaly & Prolactinoma,12
+Express Question Bank,Medicine,Thyroid,38
+Express Question Bank,Medicine,Alcoholic Liver Disease,6
+Express Question Bank,Medicine,Approach to Liver Function Tests,8
+Express Question Bank,Medicine,Ascites,8
+Express Question Bank,Medicine,Esophageal Disorders & Dysphagia,13
+Express Question Bank,Medicine,Hemochromatosis,5
+Express Question Bank,Medicine,Hepatitis A & B,11
+Express Question Bank,Medicine,Hepatitis B (Part 2),12
+Express Question Bank,Medicine,Hepatitis C & E,10
+Express Question Bank,Medicine,Hepatorenal Syndrome,5
+Express Question Bank,Medicine,Inflammatory Bowel Disease,7
+Express Question Bank,Medicine,"Malabsorption, Celiac Disease & Whipples Disease",13
+Express Question Bank,Medicine,NAFLD & NASH,6
+Express Question Bank,Medicine,Peptic Ulcer Disease,6
+Express Question Bank,Medicine,Primary Billiary Cholangiopathy & PSC,28
+Express Question Bank,Medicine,Wilsons Disease,9
+Express Question Bank,Medicine,HIV,27
+Express Question Bank,Medicine,Infective Endocarditis,9
+Express Question Bank,Medicine,Pneumonia,15
+Express Question Bank,Medicine,Acid Base Disorder,14
+Express Question Bank,Medicine,Acute Kidney Injury,9
+Express Question Bank,Medicine,Approach to Glomerular Disease,7
+Express Question Bank,Medicine,Approach To Nephritic Syndromes,7
+Express Question Bank,Medicine,Bartters Gittlemans & Renal Tubular Acidosis,4
+Express Question Bank,Medicine,Chronic Kidney Disease,9
+Express Question Bank,Medicine,"Cystic Diseases of Kidney, ADPKD & ARPKD",2
+Express Question Bank,Medicine,Electrolyte Abnormalities,26
+Express Question Bank,Medicine,Nephrotic - MCD & Membranous Nephropathy ( Part 1),17
+Express Question Bank,Medicine,Urinalysis,4
+Express Question Bank,Physiology,ADH,4
+Express Question Bank,Physiology,Calcium Metabolism,3
+Express Question Bank,Physiology,Insulin,4
+Express Question Bank,Physiology,Male Reproductive Hormones,2
+Express Question Bank,Physiology,Female Reproductive Hormones,2
+Express Question Bank,Physiology,Thyroid Axis,4
+Express Question Bank,Physiology,Endocrine - MISC,7
+Express Question Bank,Physiology,Acid Base Balance,1
+Express Question Bank,Physiology,Body Fluids,8
+Express Question Bank,Physiology,Glomerulus,4
+Express Question Bank,Physiology,Nephron Structure,3
+Express Question Bank,Physiology,Tubular Functions,8
+Express Question Bank,Physiology,Basics,4
+Express Question Bank,Physiology,Gas Exchange,15
+Express Question Bank,Physiology,Gas Exchange - V/Q Ratio,3
+Express Question Bank,Physiology,Hypoxia,4
+Express Question Bank,Physiology,Pulmonary Vasculature,5
+Express Question Bank,Physiology,Pulmonary Ventilation - Lung Volume & Capacities,15
+Express Question Bank,Physiology,Pulmonary Ventilation - Minute Ventilation & Dead Spaces,4
+Express Question Bank,Physiology,Pulmonary Ventilation - Obstructive Vs Restrictive Lung Disease,9
+Express Question Bank,Physiology,Pulmonary Ventilation - Respiratory Muscles & Pressures,12
+Express Question Bank,Physiology,Regulation Of Respiration,6
+Express Question Bank,Physiology,Transport Of Gases,3
+Express Question Bank,Physiology,Pulmonary Ventilation - Compliance & Surface Tension,7
+Express Question Bank,Physiology,Basics of ECG Understanding,4
+Express Question Bank,Physiology,Cardiac Muscle,5
+Express Question Bank,Physiology,Coronary Blood Flow,4
+Express Question Bank,Physiology,Excitation Conduction Cardiac Vectors,15
+Express Question Bank,Physiology,Localisation Of Myocardial Damage With ECG,5
+Express Question Bank,Physiology,Normal ECG,10
+Express Question Bank,Physiology,"Structure, Channels, Myelination & Condution",12
+Express Question Bank,Physiology,Cell & General Physiology,11
+Express Question Bank,Physiology,Platelets & Homeostasis,3
+Express Question Bank,Physiology,RBC,6
+Express Question Bank,Physiology,Physiology Of Audition,3
+Express Question Bank,Physiology,Physiology Of Vision,5
+Express Question Bank,Physiology,Cardiovascular Regulation & Reflexes,8
+Express Question Bank,Physiology,"Pressure, Flow & Resistance",17
+Express Question Bank,Physiology,Vasculature,3
+Express Question Bank,Physiology,Cardiac Output (Integrated),6
+Express Question Bank,Physiology,Membrane Potentials,8
+Express Question Bank,Physiology,Transport Across Membrane,7
+Express Question Bank,Physiology,Neuro Muscular Junction & Muscle Contraction,5
+Express Question Bank,Physiology,Pathophysiology of Muscle Contraction,4
+Express Question Bank,Physiology,Structure of Skeletal Muscle Cell,4
+Express Question Bank,Physiology,Types of Muscle Fibers,2
+Express Question Bank,Physiology,Physiology of GIT,22
+Express Question Bank,Physiology,Swallowing & Esophagus,5
+Express Question Bank,Physiology,Basal Ganglia & Cerebellum,17
+Express Question Bank,Physiology,Motor Functions,4
+Express Question Bank,Physiology,Sensory Functions,8
+Express Question Bank,Physiology,Integrative Neurophysiology,23
+Express QB 23-24,ENT,Anatomy of ear,32
+Express QB 23-24,ENT,Diseases of throat,11
+Express QB 23-24,ENT,Inflammatory diseases of ear,16
+Express QB 23-24,ENT,Non inflammatory diseases of ear,15
+Express QB 23-24,ENT,Investigations of ear diseases,19
+Express QB 23-24,ENT,Nose & sinuses,11
+Express QB 23-24,ENT,Surgeries of ear,7
+Express QB 23-24,ENT,Throat Anatomy,25
+Express QB 23-24,ENT,Tumors of ear,14
+Express QB 23-24,ENT,Tumors of throat,3
+Express QB 23-24,Dermatology,Adnexal Diseases,5
+Express QB 23-24,Dermatology,Blistering Disorders,9
+Express QB 23-24,Dermatology,Drug Reaction,3
+Express QB 23-24,Dermatology,Eczema,6
+Express QB 23-24,Dermatology,"Facial Lesions, Alopecia ,Mast Cell Disorders,Woods Lamp",19
+Express QB 23-24,Dermatology,General Dermatology,5
+Express QB 23-24,Dermatology,Hair & Nail Disorders,7
+Express QB 23-24,Dermatology,Fungal Infection,9
+Express QB 23-24,Dermatology,Parasitic Infection,4
+Express QB 23-24,Dermatology,Viral Infection,4
+Express QB 23-24,Dermatology,Leprosy,11
+Express QB 23-24,Dermatology,Melanin Disease,8
+Express QB 23-24,Dermatology,Psoriasis & Lichen Planus,10
+Express QB 23-24,Dermatology,Std,12
+Express QB 23-24,Pharmacology,Anti Fungal,8
+Express QB 23-24,Pharmacology,Anti Protozoal,14
+Express QB 23-24,Pharmacology,ANTI TB DRUGS,16
+Express QB 23-24,Pharmacology,Antibiotics :Classification & Beta Lactam Antibiotics,30
+Express QB 23-24,Pharmacology,Antibiotics :other Antibiotics,38
+Express QB 23-24,Pharmacology,Antivirals,25
+Express QB 23-24,Pharmacology,Anticancer Drugs,51
+Express QB 23-24,Pharmacology,Autocoids,38
+Express QB 23-24,Pharmacology,Parasympathetic Drugs,22
+Express QB 23-24,Pharmacology,Sympathetic Drugs,37
+Express QB 23-24,Pharmacology,Antiepileptic drugs,16
+Express QB 23-24,Pharmacology,Opioids & Drug Deaddiction,27
+Express QB 23-24,Pharmacology,Psychiatry Drugs,33
+Express QB 23-24,Pharmacology,Anti HTN Drugs,33
+Express QB 23-24,Pharmacology,"Drugs for Angina,CHF, Arrythmia",38
+Express QB 23-24,Pharmacology,Endocrine,59
+Express QB 23-24,Pharmacology,Clinical Pharmacology,28
+Express QB 23-24,Pharmacology,Pharmacodynamics,16
+Express QB 23-24,Pharmacology,Pharmacokinetics,34
+Express QB 23-24,Pharmacology,Hematology,43
+Express QB 23-24,Pharmacology,Immunopharmacology,13
+Express QB 23-24,Pharmacology,Kidney(Diuretics),30
+Express QB 23-24,Pharmacology,Respiratory System,24
+Express QB 23-24,Pharmacology,GIT,36
+Express QB 23-24,OBS,Amniotic Fluid & its Disorders,9
+Express QB 23-24,OBS,Anemia,6
+Express QB 23-24,OBS,Aneuploidy Screening,7
+Express QB 23-24,OBS,Antepartum Fetal Surveillance,6
+Express QB 23-24,OBS,Antepartum Hemorrhage,7
+Express QB 23-24,OBS,"Basics Of Reproduction, Placenta & Fetal Membranes",13
+Express QB 23-24,OBS,Cardiac Disease in Pregnancy,6
+Express QB 23-24,OBS,Cervical Incompetence,3
+Express QB 23-24,OBS,Diabetes Mellitus in Pregnancy,9
+Express QB 23-24,OBS,Ectopic Pregnancy,7
+Express QB 23-24,OBS,Hypertensive Disorders in Pregnancy,12
+Express QB 23-24,OBS,Jaundice in Pregnancy,5
+Express QB 23-24,OBS,Malpresentation and Malposition,11
+Express QB 23-24,OBS,Miscarriage,11
+Express QB 23-24,OBS,Molar Pregnancy,5
+Express QB 23-24,OBS,Multiple Gestation,10
+Express QB 23-24,OBS,Normal Labour,10
+Express QB 23-24,OBS,Partogram,5
+Express QB 23-24,OBS,Physiological Changes in Pregnancy,10
+Express QB 23-24,OBS,Postpartum Hemorrhage,6
+Express QB 23-24,OBS,"Pregnancy, Antenatal Care",5
+Express QB 23-24,OBS,"Preterm Labour , Prom ,Postdatism",13
+Express QB 23-24,OBS,Rh Isoimmunization,6
+Express QB 23-24,OBS,Shoulder Dystocia,5
+Express QB 23-24,OBS,Stages of Labour,9
+Express QB 23-24,Psychiatry,Delusional Disorders,7
+Express QB 23-24,Psychiatry,Dementia,5
+Express QB 23-24,Psychiatry,Eating Disorders,5
+Express QB 23-24,Psychiatry,Introduction To Psychiatry,4
+Express QB 23-24,Psychiatry,Mental State Examination In Psychiatry,5
+Express QB 23-24,Psychiatry,Mood Disorders,9
+Express QB 23-24,Psychiatry,Neurosis- Ocd,8
+Express QB 23-24,Psychiatry,"Neurosis- Panic Attack, Phobia, Adjustment Disorder ,Ptsd & Gad",9
+Express QB 23-24,Psychiatry,Personality Disorders,6
+Express QB 23-24,Psychiatry,Psychology- Contribution Of Psychologist,3
+Express QB 23-24,Psychiatry,Psychology- Defence Mechanism,4
+Express QB 23-24,Psychiatry,Psychopharmacology- Anti Psychotics,7
+Express QB 23-24,Psychiatry,Psychopharmacology- Mood Stabilizers,4
+Express QB 23-24,Psychiatry,Psychopharmacology-= Anti Depressants,7
+Express QB 23-24,Psychiatry,Schizophrenia,9
+Express QB 23-24,Psychiatry,Sex Disorders,7
+Express QB 23-24,Psychiatry,Sleep Disorders,5
+Express QB 23-24,Psychiatry,Substance Use Disorders,11
+Express QB 23-24,Pediatrics,Cardiology,23
+Express QB 23-24,Pediatrics,"Growth, Development ,Malnutrition",18
+Express QB 23-24,Pediatrics,Latest Update on Childhood Asthama,32
+Express QB 23-24,Pediatrics,Neonatology,25
+Express QB 23-24,Pediatrics,Other Pediatrics Disorder & Childhood Infections,18
+Express QB 23-24,Pediatrics,Pediatrics Gi,9
+Express QB 23-24,Pediatrics,Pediatrics Nephrology & Respiratory Total,21
+Express QB 23-24,Pediatrics,Pediatrics Neurology,23
+Express QB 23-24,Pediatrics,Update -Milestones,1
+Express QB 23-24,Microbiology,General Microbiology,43
+Express QB 23-24,Microbiology,Bacteria- Gpc & Gnc,28
+Express QB 23-24,Microbiology,Bacteria - Gnb,31
+Express QB 23-24,Microbiology,Bacteria - Gpb,27
+Express QB 23-24,Microbiology,General Virology,12
+Express QB 23-24,Microbiology,Virology- Dna Viruses,10
+Express QB 23-24,Microbiology,Virology- Rna Viruses,19
+Express QB 23-24,Microbiology,Parasitology – Helminths,18
+Express QB 23-24,Microbiology,Parasitology – Protozoa,13
+Express QB 23-24,Microbiology,Mycology,13
+Express QB 23-24,Microbiology,Immunology,27
+Express QB 23-24,Medicine,Cardiology Part-1,12
+Express QB 23-24,Medicine,Cardiology Part-2,16
+Express QB 23-24,Medicine,Cardiology Part-3,14
+Express QB 23-24,Medicine,GIT Part-1,13
+Express QB 23-24,Medicine,GIT Part -2,4
+Express QB 23-24,Medicine,GIT Part -3,12
+Express QB 23-24,Medicine,GIT Part -4,3
+Express QB 23-24,Medicine,Endocrinology Part-1,10
+Express QB 23-24,Medicine,Endocrinology Part-2,15
+Express QB 23-24,Medicine,Endocrinology Part-3,10
+Express QB 23-24,Medicine,Endocrinology Part-4,9
+Express QB 23-24,Medicine,Nephrology Part-1,12
+Express QB 23-24,Medicine,Nephrology Part-2,13
+Express QB 23-24,Medicine,Nephrology Part-3,6
+Express QB 23-24,Medicine,Pulmonology Part-1,14
+Express QB 23-24,Medicine,Pulmonology Part-2,9
+Express QB 23-24,Medicine,Pulmonology Part-3,10
+Express QB 23-24,Medicine,Rheumatology Part-1,13
+Express QB 23-24,Medicine,Rheumatology Part-2,8
+Express QB 23-24,Medicine,Rheumatology Part-3,8
+Express QB 23-24,Medicine,Neurology Part-1,10
+Express QB 23-24,Medicine,Neurology Part-2,16
+Express QB 23-24,Medicine,Neurology Part-3,15
+Express QB 23-24,Medicine,Neurology Part-4,13
+Express QB 23-24,Gynaecology,Anatomy,8
+Express QB 23-24,Gynaecology,AUB,14
+Express QB 23-24,Gynaecology,CIN & CA cervix,15
+Express QB 23-24,Gynaecology,Contraception,19
+Express QB 23-24,Gynaecology,Embryology & uterine malformation,15
+Express QB 23-24,Gynaecology,Endometrial hyperplasia & Endometrial cancer,10
+Express QB 23-24,Gynaecology,Endometriosis,16
+Express QB 23-24,Gynaecology,Fibroid,19
+Express QB 23-24,Gynaecology,Gestational Trophoblastic (newly added),6
+Express QB 23-24,Gynaecology,Infertility,20
+Express QB 23-24,Gynaecology,Menopause & HRT,8
+Express QB 23-24,Gynaecology,Normal & Abnormal puberty (newly added),20
+Express QB 23-24,Gynaecology,Ovarian cancer,14
+Express QB 23-24,Gynaecology,PCOS & Hirsutism,11
+Express QB 23-24,Gynaecology,Primary Amenorrhea,20
+Express QB 23-24,Gynaecology,Reproductive Physiology,6
+Express QB 23-24,Gynaecology,Urogynaecology,17
+Express QB 23-24,Gynaecology,Vaginitis & Vulval ulcers,18
+Express QB 23-24,Gynaecology,Vulval Cancer (newly added),5
+Express QB 23-24,Anatomy,"Head, Neck & Face",37
+Express QB 23-24,Anatomy,Neuroanatomy,27
+Express QB 23-24,Anatomy,Embrylogy,21
+Express QB 23-24,Anatomy,Limbs,11
+Express QB 23-24,Anatomy,Viscera,44
+Express QB 23-24,Anatomy,Neuroanatomy-Cadaveric Images Discussion,33
+Express QB 23-24,Anatomy,Upper Limb-Cadaveric Images Discussion,31
+Express QB 23-24,Anatomy,Lower Limb -Cadaveric Images Discussion,28
+Express QB 23-24,Surgery,Breast,43
+Express QB 23-24,Surgery,Surgery - Trauma,62
+Express QB 23-24,Surgery,Esophagus & Stomach,58
+Express QB 23-24,Surgery,Gall Bladder,19
+Express QB 23-24,Surgery,Pancreas and Liver,25
+Express QB 23-24,Surgery,Small Intestine & Appendix,24
+Express QB 23-24,Surgery,Colon & Anal Canal,25
+Express QB 23-24,Surgery,Kidney & Urinary bladder,25
+Express QB 23-24,Surgery,Prostate,13
+Express QB 23-24,Surgery,"Urethra, Penis and Testis",25
+Express QB 23-24,Surgery,Arterial Disorders,20
+Express QB 23-24,Surgery,Venous Disorders,24
+Express QB 23-24,Surgery,Hernia,16
+Express QB 23-24,Surgery,General Surgery (Part -1),20
+Express QB 23-24,Surgery,General Surgery (Part -2),14
+Express QB 23-24,Surgery,General Surgery (Part -3),29
+Express QB 23-24,Surgery,Burns and Plastic Surgery,17
+Express QB 23-24,Surgery,Endocrine Surgery,36
+Express QB 23-24,Surgery,Oral Cavity,16
+Express QB 23-24,Surgery,Transplant & Metabolic Surgery,14
+Express QB 23-24,Surgery,Skin and Subcutaneous Tissue,18
+Express QB 23-24,Orthopaedics,Deformities,8
+Express QB 23-24,Orthopaedics,Implants in Orthopaedics,7
+Express QB 23-24,Orthopaedics,Infections in Orthopaedics,17
+Express QB 23-24,Orthopaedics,Joint disorders,14
+Express QB 23-24,Orthopaedics,Lower limb,24
+Express QB 23-24,Orthopaedics,Metabolic Disorders,18
+Express QB 23-24,Orthopaedics,Pediatric Disorders,8
+Express QB 23-24,Orthopaedics,Peripheral Nerve Injuries,14
+Express QB 23-24,Orthopaedics,Soft tissue disorders,7
+Express QB 23-24,Orthopaedics,Spine,11
+Express QB 23-24,Orthopaedics,Splint traction,10
+Express QB 23-24,Orthopaedics,Trauma Basics & Upper limb,21
+Express QB 23-24,Orthopaedics,Tumors,13
+Express QB 23-24,Biochemistry,Amino Acids & Proteins,15
+Express QB 23-24,Biochemistry,Carbohydrate Chemistry,10
+Express QB 23-24,Biochemistry,Carbohydrate Metabolism,16
+Express QB 23-24,Biochemistry,Concepts,13
+Express QB 23-24,Biochemistry,Energetics,11
+Express QB 23-24,Biochemistry,Enzymes,9
+Express QB 23-24,Biochemistry,Lipids,10
+Express QB 23-24,Biochemistry,Molecular Biology,0
+Express QB 23-24,Biochemistry,Rate Limiting Enzymes,14
+Express QB 23-24,Biochemistry,Diseases,12
+Express QB 23-24,Biochemistry,Miscellaneous,14
+Express QB 23-24,Pathology,Cell Injury,19
+Express QB 23-24,Pathology,Inflammation,16
+Express QB 23-24,Pathology,Repair & Regeneration,4
+Express QB 23-24,Pathology,Hemodynamics & Bleeding,8
+Express QB 23-24,Pathology,Genetics,7
+Express QB 23-24,Pathology,Immune System,18
+Express QB 23-24,Pathology,Neoplasia,7
+Express QB 23-24,Pathology,Acute Leukemia,10
+Express QB 23-24,Pathology,Cmpn & Lymphoma,22
+Express QB 23-24,Pathology,Rbcs & Anemia,20
+Express QB 23-24,Pathology,Vessels,14
+Express QB 23-24,Pathology,Heart,8
+Express QB 23-24,Pathology,Lungs,16
+Express QB 23-24,Pathology,GIT,15
+Express QB 23-24,Pathology,Liver,12
+Express QB 23-24,Pathology,Renal System,14
+Express QB 23-24,Pathology,Cns Tumors,7
+Express QB 23-24,Pathology,Ibd,6
+Express QB 23-24,PSM,Health indicators,8
+Express QB 23-24,PSM,Health programmes,17
+Express QB 23-24,PSM,Infections,6
+Express QB 23-24,PSM,Infectious disease epidemiology,12
+Express QB 23-24,PSM,Miscellaneous topics,16
+Express QB 23-24,PSM,Screening & stats,16
+Express QB 23-24,PSM,Vaccines & prevention,14
+Express QB 23-24,Ophthalmology,"Anatomy & Development, Visual Acuity",10
+Express QB 23-24,Ophthalmology,Lens (Part-1),17
+Express QB 23-24,Ophthalmology,Lens (Part-2),6
+Express QB 23-24,Ophthalmology,Eyelids,8
+Express QB 23-24,Ophthalmology,Glaucoma (Part-1),15
+Express QB 23-24,Ophthalmology,Glaucoma (Part-2),16
+Express QB 23-24,Ophthalmology,Orbit & Lacrimal Apparatus,6
+Express QB 23-24,Ophthalmology,Uveal Tract,12
+Express QB 23-24,Ophthalmology,Retina (Part-1),9
+Express QB 23-24,Ophthalmology,Retina (Part-2),10
+Express QB 23-24,Ophthalmology,Retina (Part-3),4
+Express QB 23-24,Ophthalmology,Conjunctiva,12
+Express QB 23-24,Ophthalmology,Sclera,5
+Express QB 23-24,Ophthalmology,Trauma,4
+Express QB 23-24,Ophthalmology,Astigmatism,4
+Express QB 23-24,Ophthalmology,Cornea,18
+Express QB 23-24,Ophthalmology,Neuro Ophthal,12
+Express QB 23-24,Ophthalmology,Squint,17
+Express QB 23-24,Ophthalmology,Important Tests,10
+Express QB 23-24,Forensic Medicine,"Identification, Trace Evidence",19
+Express QB 23-24,Forensic Medicine,Injuries & Medicolegal Aspects,35
+Express QB 23-24,Forensic Medicine,"Legal System & Procedures, Negligence, Sexual Offences",29
+Express QB 23-24,Forensic Medicine,"Thanatology, Fetal Death, Asphyxial Death",33
+Express QB 23-24,Forensic Medicine,"Toxicology, Miscellaneous",28
+Express QB 23-24,Radiology,Abdominal Radiology,9
+Express QB 23-24,Radiology,Basics of Investigations,4
+Express QB 23-24,Radiology,Basics of Radiography,8
+Express QB 23-24,Radiology,Contrast Agents in Radiology,6
+Express QB 23-24,Radiology,CT Scan,7
+Express QB 23-24,Radiology,CT VS MRI & MRI SEQUENCES,4
+Express QB 23-24,Radiology,Genitourinary Radiology,9
+Express QB 23-24,Radiology,Head & Neck Radiology,4
+Express QB 23-24,Radiology,Mammography,7
+Express QB 23-24,Radiology,MRI,8
+Express QB 23-24,Radiology,Musculoskeletal Radiology,8
+Express QB 23-24,Radiology,Neuroradiology,15
+Express QB 23-24,Radiology,Nuclear Scan & PET Scan,9
+Express QB 23-24,Radiology,Radiation Hazards & Protection,10
+Express QB 23-24,Radiology,Radio Therapy,9
+Express QB 23-24,Radiology,Ultrasonography,11
+Express QB 23-24,Radiology,Women’s Imaging,7
+Express QB 23-24,Anesthesia,Anesthesia Delivery Systems,16
+Express QB 23-24,Anesthesia,Critical Care & Cpcr,23
+Express QB 23-24,Anesthesia,Equipments,19
+Express QB 23-24,Anesthesia,Ga- Complications,15
+Express QB 23-24,Anesthesia,Ga- Inhalational Agents,47
+Express QB 23-24,Anesthesia,Ga- Muscle Relaxants,28
+Express QB 23-24,Anesthesia,Introduction to Ga & IV Agents,44
+Express QB 23-24,Anesthesia,Preoperative Assessment & Monitoring,19
+Express QB 23-24,Anesthesia,Regional Anesthesia - Peripheral & Central Nerve Blocks,43
+Express QB 23-24,Anesthesia,Speciality Management,38
+Express QB 23-24,Physiology,General Physiology,6
+Express QB 23-24,Physiology,CVS (PART -2),8
+Express QB 23-24,Physiology,Respiration (Part-1),12
+Express QB 23-24,Physiology,Endocrine System,16
+Express QB 23-24,Physiology,Kidney (Part-1),14
+Express QB 23-24,Physiology,Kidney (Part-2),8
+Express QB 23-24,Physiology,Kidney (Part-3),9
+Express QB 23-24,Physiology,CNS (PART-1),8
+Express QB 23-24,Physiology,CNS (PART-2),7
+Express QB 23-24,Physiology,CNS (PART-3),11
+Express QB 23-24,Physiology,CNS (PART-4),8
+Express QB 23-24,Physiology,Respiration (Part-2),10
+Express QB 23-24,Physiology,Respiration (Part-3),8
+Express QB 23-24,Physiology,Blood,10
+Express QB 23-24,Physiology,CVS (PART-1),16
+Express QB 23-24,Physiology,Physiology - GIT,14

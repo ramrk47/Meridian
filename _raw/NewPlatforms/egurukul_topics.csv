@@ -1,0 +1,1283 @@
+subject,topic,question_count
+ENT,Congenital Diseases of Larynx - Laryngomalacia,12
+ENT,Anatomy Of External Ear & Tympanic Membrane,22
+ENT,Anatomy of Middle Ear - (Medial & Posterior Walls),13
+ENT,Anatomy of Middle Ear (Anterior Wall),10
+ENT,Embryology of Ear,6
+ENT,Facial Nerve & Vestibulocochlear Nerve Anatomy,12
+ENT,Mastoid Anatomy,5
+ENT,Diseases of External Nose,40
+ENT,Chronic Laryngitis,7
+ENT,Epiglottitis & Croup,9
+ENT,Nasopharynx: Anatomy & Diseases,5
+ENT,Glomus Tumour,7
+ENT,Otosclerosis,17
+ENT,Treatment of Otosclerosis & Stapedectomy,5
+ENT,Audiometry,9
+ENT,BERA & OAE,6
+ENT,Electrocochleography & Cochlear Vs Retro-Cochlear,9
+ENT,Tuning Fork Tests,12
+ENT,Tympanometry,8
+ENT,"Vestibular Function, Caloric Test & Fistula Tests",5
+ENT,Assistive Devices For Hearing,8
+ENT,Anatomy of Sinunes,16
+ENT,Embryology of Nose & Sinuses,13
+ENT,Physiology of Nose & Sinuses,4
+ENT,Nasal Polyps,6
+ENT,Acoustic Neuroma & Vestibular Neuronitis,10
+ENT,"Deaf Child, Tinnitus & Hyperbaric Oxygen Therapy",11
+ENT,Hearing Loss Review & Tympanic Membrane Images,24
+ENT,Oral Cavity & Oropharynx,10
+ENT,Introduction & Examination of ENT,4
+ENT,BPPV,5
+ENT,Ménière’S Disease,17
+ENT,Juvenile Nasopharyngeal Angiofibroma,11
+ENT,Nasopharyngeal Carcinoma,9
+ENT,Pharyngeal Tumours,10
+ENT,Salivary Gland Tumours & Parotidectomy,6
+ENT,Anatomy Of Larynx (Part 1),10
+ENT,Anatomy Of Larynx (Part 2),12
+ENT,Laryngoscopy,5
+ENT,Facial Nerve Paralysis,9
+ENT,Surgeries Of Otitis Media,5
+ENT,Fractures of Facial Bone & Csf Rhinorrhea,3
+ENT,Vocal Cord Paralysis,17
+ENT,Acute & Chronic Pharyngitis,3
+ENT,Acute & Chronic Tonsillitis,6
+ENT,Adenotonsillectomy,8
+ENT,Laryngectomy,7
+ENT,Neck Dissections,6
+ENT,Speech Rehabilitation,4
+ENT,Tracheostomy,13
+ENT,Tracheostomy Tubes,9
+ENT,Voice Disorders,13
+ENT,Instruments for EAR,12
+ENT,Instruments for Nose & Throat,3
+ENT,Laser in Ent & Photodynamic Therapy,4
+ENT,Obstructive Sleep Apnea Syndrome,6
+ENT,Recent Advances in Ent Surgeries & Therapies,3
+ENT,Tumours of Nose & Sinuses,6
+ENT,Disease of External Ear,30
+ENT,ASOM,19
+ENT,Cholesteatoma & Tuberculosis of Ear,11
+ENT,Csom,13
+ENT,Extracranial Complications & Labyrinthitis,2
+ENT,Extracranial Complications & Mastoiditis,12
+ENT,Intracranial Complications,3
+ENT,Serous Otitis Media (Som),7
+ENT,Anatomy of Throat & Neck Spaces,7
+ENT,Anatomy of Throat & Tonsils,5
+ENT,Neck Mass & Thyroid Swellings,6
+ENT,Laryngeal Carcinoma,12
+ENT,Laryngeal Papilloma,2
+ENT,"Vocal Nodules, Polyps, Laryngocele",3
+ENT,"Allergic, Vasomotor, Atrophic Rhinitis",12
+ENT,Complications of Sinusitis,7
+ENT,Infective Rhinosinusitis - 1 - Fungal Sinusitis,3
+ENT,Infective Rhinosinusitis Part 2 - Bacterial Sinusitis,3
+ENT,Surgeries for Rhinosinusitis,6
+ENT,Epistaxis & Deviated Nasal Septum,29
+ENT,Granulomatous Diseases of Nose,9
+Orthopaedics,Instruments & Implants In Ortho,14
+Orthopaedics,Infective Arthritis & Other Infections,20
+Orthopaedics,Osteomyelitis,29
+Orthopaedics,TB Osteomyelitis,28
+Orthopaedics,Anatomy & Physiology Of Bone,37
+Orthopaedics,Joint Disorders,33
+Orthopaedics,Basic Terminology & Coxa Vara,8
+Orthopaedics,Cdh & Blounts Disease,9
+Orthopaedics,Ctev & Achondroplasia,8
+Orthopaedics,Perthe’S Disease & Scfe,9
+Orthopaedics,Splints & Tractions In Ortho,10
+Orthopaedics,Amputations,8
+Orthopaedics,Basics Of Trauma General Considerations (Part-1),12
+Orthopaedics,Basics Of Trauma General Considerations (Part-2),15
+Orthopaedics,Eponym’s of fractures,5
+Orthopaedics,Lower Limb (Dislocation Of Hip And Fracture Nof),33
+Orthopaedics,Lower Limb (Other Fracture Till Toes),11
+Orthopaedics,Lower Limb (Trendelenburg & Pelvic Fracture),11
+Orthopaedics,Spine And Regional Conditions,24
+Orthopaedics,Sports Injury (Part-1),7
+Orthopaedics,Sports Injury (Part-2),5
+Orthopaedics,Upper Limb (Clavicle & Shoulder Dislocation),16
+Orthopaedics,Upper Limb (Fracture Proximal & Shaft Humerus),3
+Orthopaedics,Upper Limb (Fracture Sc Humerus Till Fingers),9
+Orthopaedics,Basics Of Metabolic Disorders,3
+Orthopaedics,Osteoporosis,15
+Orthopaedics,Paget & Osteopetrosis,22
+Orthopaedics,Rickets & Osteomalacia,20
+Orthopaedics,Scurvy & Osteogenesis Imperfecta,12
+Orthopaedics,Skeletal Dysplasia,4
+Orthopaedics,Soft Tissue Conditions,7
+Orthopaedics,Basic Peripheral Nerve Injuries,19
+Orthopaedics,Entrapment Neuropathies,11
+Orthopaedics,Specific Nerve Injuries (Part-1),14
+Orthopaedics,Specific Nerve Injuries (Part-2),14
+Orthopaedics,Basics Of Bone Tumors,13
+Orthopaedics,Benign Aggressive Tumors,20
+Orthopaedics,Benign Lesions Of Bone,11
+Orthopaedics,Malignant Tumors,32
+Orthopaedics,Complication In Orthopaedics,28
+Microbiology,Cholera,12
+Microbiology,E. Coli Diarrhoeal Disease,34
+Microbiology,Helminthic Gastroenteritis,14
+Microbiology,Miscellaneous – Fungal Food Poisoning,6
+Microbiology,Peptic Ulcer Disease,3
+Microbiology,Protozoal Gastroenteritis,31
+Microbiology,Pseudomembranous Colitis,13
+Microbiology,Viral Gastro Enteritis,8
+Microbiology,Bacterial Atypical Pneumonia,19
+Microbiology,Bacterial Typical Pneumonia,6
+Microbiology,Diphtheria,3
+Microbiology,Fungal Pneumonia-Part 1,2
+Microbiology,Fungal Pneumonia-Part 2,7
+Microbiology,Parasitic Pneumonia,7
+Microbiology,Plague,3
+Microbiology,Tuberculosis,4
+Microbiology,Viral Pneumonia-Part 1,8
+Microbiology,Viral Pneumonia-Part 2,13
+Microbiology,Whooping Cough,8
+Microbiology,RNA Corona Virus,14
+Microbiology,Bacterial Meningitis,22
+Microbiology,Miscellaneous - Slow Viral Diseases,7
+Microbiology,Miscellaneous- Neurotoxin related diseases,11
+Microbiology,Parasitic Encephalitis,12
+Microbiology,Viral Encephalitis,19
+Microbiology,Viral Meningitis,10
+Microbiology,Bacteria causing UTI,18
+Microbiology,Genital Ulcerative Diseases,20
+Microbiology,Urethritis,14
+Microbiology,Vaginitis,7
+Microbiology,Rickettsia & Related Diseases,24
+Microbiology,Typhoid Fever,9
+Microbiology,Viral Hemorrhagic Fever,6
+Microbiology,Anthrax,4
+Microbiology,Deep Fungal Skin Infections,22
+Microbiology,DNA Viruses Skin Infections,22
+Microbiology,Gas Gangrene,7
+Microbiology,Leprosy,6
+Microbiology,Nocardiosis,4
+Microbiology,Parasitic Skin Infections,21
+Microbiology,RNA Viruses Skin Infections,22
+Microbiology,Staphylococcal Skin Infections,22
+Microbiology,Streptococcal Skin Infections,23
+Microbiology,Superficial Fungal Skin Infections,22
+Microbiology,Hepatic Fascioliasis,6
+Microbiology,HEPATITIS,22
+Microbiology,Antigen - Antibody Reactions,22
+Microbiology,Antigen & Antibody,22
+Microbiology,Autoimmunity,5
+Microbiology,Hypersensitivity,5
+Microbiology,Immunity,18
+Microbiology,Immunodeficiency Disorders,21
+Microbiology,Transplant Immunology,5
+Microbiology,Antimicrobial Susceptibility Testing & Genetics,22
+Microbiology,Culture & Identification,23
+Microbiology,General Bacteriology (GB),22
+Microbiology,General Mycology,22
+Microbiology,General Parasitology Part-1,16
+Microbiology,General Virology Part-1,22
+Microbiology,General Virology Part-2,12
+Microbiology,Introduction,12
+Microbiology,Microscopy & Staining,23
+Microbiology,Morphology & Growth of Bacteria,22
+Microbiology,Scientists,8
+Microbiology,Sterilization & Disinfection (Chemical method),20
+Microbiology,Sterilization & Disinfection (Physical method),16
+Ophthalmology,Binocular Single Vision,12
+Ophthalmology,Evaluation Of Comitant Squint,11
+Ophthalmology,Incomitant,7
+Ophthalmology,Isolated Nerve Palsy & Gaze Palsy,12
+Ophthalmology,Latent Squint,8
+Ophthalmology,Nystagmus,10
+Ophthalmology,Orientation of Extra Ocular Muscles,8
+Ophthalmology,Park Test,7
+Ophthalmology,Physiology of Squints,10
+Ophthalmology,Squint - Anatomy,11
+Ophthalmology,ARMD,6
+Ophthalmology,CMV Retinitis,4
+Ophthalmology,CRAO & CRVO,9
+Ophthalmology,CSR & CME,6
+Ophthalmology,Diabetic Retinopathy,7
+Ophthalmology,FFFA,10
+Ophthalmology,Hypertensive Retinopathy,4
+Ophthalmology,Macular Function Tests,4
+Ophthalmology,Macular Pathologies,8
+Ophthalmology,Retina - Introduction,14
+Ophthalmology,Retinal Detachment,5
+Ophthalmology,Vitreous,3
+Ophthalmology,Allergic Conjunctivitis,16
+Ophthalmology,Conjunctiva - Introduction,4
+Ophthalmology,Conjunctival Degenerations,19
+Ophthalmology,Conjunctivitis,33
+Ophthalmology,Blowout Fracture,3
+Ophthalmology,Diseases of Orbit,7
+Ophthalmology,Orbit - Anatomy,7
+Ophthalmology,Orbital Cellulitis,6
+Ophthalmology,Proptosis,12
+Ophthalmology,Tumours,17
+Ophthalmology,Acquired Cataract,4
+Ophthalmology,Cataract,16
+Ophthalmology,Other Cataract,8
+Ophthalmology,Complications,4
+Ophthalmology,Lens - Anatomy & Physiology,8
+Ophthalmology,Lens Abnormalities,6
+Ophthalmology,Treatment,9
+Ophthalmology,Blunt Trauma,6
+Ophthalmology,Acanthamoeba,5
+Ophthalmology,Bacterial Corneal Ulcer,7
+Ophthalmology,Cornea - Introduction,13
+Ophthalmology,Corneal Dystrophies,11
+Ophthalmology,Fungal Corneal Ulcer,6
+Ophthalmology,Non Infective Keratitis,7
+Ophthalmology,Viral Corneal Ulcer,8
+Ophthalmology,Anterior Uveitis,13
+Ophthalmology,Congenital Anomalies,5
+Ophthalmology,Evisceration & Enucleation,2
+Ophthalmology,Pars Planitis,3
+Ophthalmology,Posterior Uveitis,2
+Ophthalmology,Uveal Tract - Anatomy,5
+Ophthalmology,Uveitis in Systemic Diseases,6
+Ophthalmology,Development of Eye,3
+Ophthalmology,Visual Acuity,13
+Ophthalmology,Anatomy & Physiology,16
+Ophthalmology,Community Ophthalmology,12
+Ophthalmology,NPCB,14
+Ophthalmology,Vision 2020,8
+Ophthalmology,Ectropion & Entropion,16
+Ophthalmology,Infections,25
+Ophthalmology,Ptosis,14
+Ophthalmology,Intraocular Tumors,7
+Ophthalmology,Lacrimal Apparatus,38
+Ophthalmology,Sclera,20
+Ophthalmology,Acute Congestive Glaucoma,9
+Ophthalmology,Anti Glaucoma Drugs,16
+Ophthalmology,Congenital Glaucoma,9
+Ophthalmology,Glaucoma - Introduction,5
+Ophthalmology,IOP,12
+Ophthalmology,Optic Disc Changes,5
+Ophthalmology,PACG,6
+Ophthalmology,POAG,7
+Ophthalmology,Treatment of POAG,8
+Ophthalmology,Secondary Developmental Glaucoma,7
+Ophthalmology,Tonometry,9
+Ophthalmology,Visual Field Defects,10
+Ophthalmology,Angle Kappa,6
+Ophthalmology,Astigmatism & Accommodation,13
+Ophthalmology,Calculation of Refractive Error,6
+Ophthalmology,High Myopia,5
+Ophthalmology,Refractive Surgery (Part-1),11
+Ophthalmology,Refractive Surgery (Part 2),15
+Ophthalmology,Retinoscopy,15
+Ophthalmology,Spherical Errors,8
+Ophthalmology,Sturm’s Conoid,11
+Ophthalmology,Anisocoria,4
+Ophthalmology,Neuro Ophthalmology - Introduction,6
+Ophthalmology,Neuro Ophthalmology - Miscellaneous,6
+Ophthalmology,One & Half Syndrome,5
+Ophthalmology,Optic Neuritis,9
+Ophthalmology,Papilloedema & Optic Atrophy,2
+Ophthalmology,Pupillary Reflexes,9
+Ophthalmology,Visual Pathway & Junctional Scotoma,14
+Pathology,NAFLD,2
+Pathology,Liver Injury,2
+Pathology,Alcoholic Liver Disease,4
+Pathology,Autoimmune Cholangiopathies,5
+Pathology,Hepatocellular Tumors & Carcinoma,6
+Pathology,RBCs & Anemia  Basics,20
+Pathology,Hemolytic Anemia Classification & Examples,25
+Pathology,Types of Anemia,29
+Pathology,Lung Basics & Congenital Anomalies of Lungs,6
+Pathology,Pulmonary Edema,2
+Pathology,Chronic Pulmonary Disease Classification,3
+Pathology,Emphysema,6
+Pathology,Chronic Bronchitis,2
+Pathology,Bronchiectasis,3
+Pathology,Hypersensitivity Pneumonitis,1
+Pathology,Atelectasis,1
+Pathology,Asthma,7
+Pathology,Pneumonia & ARDS,6
+Pathology,Introduction to Cell Injury,5
+Pathology,Hypertrophy & Hyperplasia,12
+Pathology,Metaplasia,12
+Pathology,Atrophy,7
+Pathology,Reversible Injury,4
+Pathology,Necrosis,14
+Pathology,Apoptosis,29
+Pathology,Necroptosis & Pyroptosis,7
+Pathology,Ferroptosis,1
+Pathology,Intracellular Accumulation,15
+Pathology,Cellular Ageing,7
+Pathology,Free Radicals,9
+Pathology,Nephrotic Syndrome Basics,2
+Pathology,FSGS,5
+Pathology,Alports Syndrome,1
+Pathology,Glomerulonephritis Basics,3
+Pathology,PSGN,5
+Pathology,RPGN,5
+Pathology,MCD,2
+Pathology,MGN,4
+Pathology,MPGN,4
+Pathology,Lesions of Breast & Breast CA,17
+Pathology,Penis Lesions & Tumors,2
+Pathology,Prostate Adenocarcinoma,2
+Pathology,Testis Lesions & Tumors,14
+Pathology,Myelodysplastic syndrome,5
+Pathology,"Acute Leukemia, Clinical Features & Classification",16
+Pathology,Chronic Myeloproliferative Neoplasms Introduction,3
+Pathology,Chronic Myeloid Leukemia,7
+Pathology,Polycythemia Vera,2
+Pathology,Primary Meyelofibrosis,3
+Pathology,CLPN  Basics,7
+Pathology,Non-Hodgkins Lymphoma,11
+Pathology,Plasma Cell Neoplasms,18
+Pathology,Essential Thromobocythemia,1
+Pathology,Hodgkins Lymphoma,9
+Pathology,Repair & Regeneration,6
+Pathology,Myasthenia Gravis & Lems,1
+Pathology,Nerve Injury & Demyelinating Neuropathy,1
+Pathology,Muscular Dystrophy & Myopathies,9
+Pathology,Mutation Types & Pathogenesis,2
+Pathology,Non-Mendelian Inheritance - (Part -1),6
+Pathology,Non-Mendelian Inheritance - (Part-2),7
+Pathology,Diagnosis of Genetic Disorders,8
+Pathology,Mendelian Disorders,5
+Pathology,Bleeding & Platelet Disorders,25
+Pathology,Coagulation Pathways & Disorders,28
+Pathology,Esophagus & Stomach,18
+Pathology,Small & Large Intestine,16
+Pathology,Inflammatory Bowel Diseases,12
+Pathology,Tuberculosis,6
+Pathology,Leprosy,6
+Pathology,Vascular Events of Inflammation,1
+Pathology,Cellular Events of Inflammation,1
+Pathology,O2 Independent Killing,1
+Pathology,Mediators of Inflammation,33
+Pathology,Morphological Types of Acute Inflammation,2
+Pathology,Neutrophil Extracellular Traps,1
+Pathology,Fate of Acute Inflammation,2
+Pathology,Chronic Inflammation,3
+Pathology,Defects of Inflammation,3
+Pathology,Thrombosis,6
+Pathology,Morphology of Thrombosis,5
+Pathology,Shock,5
+Pathology,Neoplasia  Basics,2
+Pathology,Other Hallmarks of Cancer,1
+Pathology,Hallmarks of Cancer & Cell Cycle,12
+Pathology,Normal Anatomy & Physiology,3
+Pathology,Aneurysm,6
+Pathology,Vasculitis,21
+Pathology,Vascular Tumor,8
+Pathology,"Normal Vessel, Hypertensive Changes & Sclerosis",3
+Pathology,CNS Tumors,8
+Pathology,Lesion of Cervix,8
+Pathology,Ovarian Tumors,9
+Pathology,Diseases of Uterus,12
+Pathology,Gall Bladder Stones,2
+Pathology,Ischemic Heart Disease,11
+Pathology,Infective Endocarditis,4
+Pathology,Hypertrophic Cardiomyopathy,6
+Pathology,Tumors of Heart,4
+Pathology,Rheumatic Heart Disease,5
+Pathology,"Diabetes Criteria, Classifications & Pathophysiology",5
+Pathology,Thyroiditis & Thyroid Cancers,21
+Pathology,Chronic Pancreatitis,3
+Pathology,Pancreatic Carcinoma,4
+Pathology,Normal Pancreas Histology & Acute Pancreatitis,3
+Pathology,Neuroblastoma,6
+Pathology,Wilms Tumor,7
+Pathology,Antigen Presenting Cells & MHC,8
+Pathology,Hypersensitivity Reactions - (Type-1),8
+Pathology,Hypersensitivity Reactions - (Type-3 & 4),9
+Pathology,Graft Rejection & GVHD,4
+Pathology,Amyloidosis,6
+Pathology,Introduction to Immune System Innate & Adaptive Immunity,21
+PSM,Biomedical Waste Management,26
+PSM,Entomology,26
+PSM,Nutrition,64
+PSM,Vaccines,19
+PSM,Environment & Health,30
+PSM,Health Indicators,17
+PSM,Communicable Disease,114
+PSM,Health Programmes of Inida,96
+PSM,Pioneer’s In Public Health,7
+PSM,Screening Test,49
+PSM,Biostatistics,102
+PSM,Levels of Prevention,8
+PSM,Demography & Family Planning,68
+PSM,Health Planning & Management,14
+PSM,Health Committees of India,19
+PSM,Infectious Disease Epidemiology,44
+PSM,Concept of Health & Disease,15
+PSM,Maternal & Child Health,16
+PSM,Occupational Health,27
+PSM,Health Education & Communication,9
+PSM,Non Communicable Disease,23
+PSM,Health System of India,49
+PSM,Disaster Management,12
+Medicine,Acid Base Disorder (Part 1),14
+Medicine,Acid Base Disorder - Anion Gap (Part 2),10
+Medicine,Electrolyte Abnormalities - Hypernatremia (Part 1),16
+Medicine,Electrolyte Abnormalities - Hyponatremia (Part 1),23
+Medicine,Urinalysis,13
+Medicine,Acute Kidney Injury,9
+Medicine,Approach to Glomerular Disease,10
+Medicine,Approach To Nephritic Syndromes,15
+Medicine,Chronic Kidney Disease,21
+Medicine,Cystic Diseases of Kidney ADPKD & ARPKD,11
+Medicine,Electrolyte Abnormalities - Pottassium Disorders,17
+Medicine,Nephrotic - MCD & Membranous Nephropathy (Part 1),41
+Medicine,Nephrotic Syndrome FSGS,5
+Medicine,HIV (Part 1),20
+Medicine,Pneumonia (Part 2),34
+Medicine,HIV - Opportunistic Infections (Part 2),25
+Medicine,HIV - Treatment (Part 3),10
+Medicine,Infective Endocarditis,14
+Medicine,Pneumonia (Part 1),18
+Medicine,Asthma (Part 2),11
+Medicine,Asthma (Part 1),17
+Medicine,Bronchiectasis,10
+Medicine,COPD (Part 1),23
+Medicine,COPD (Part 2),13
+Medicine,Hypersensitivity Pneumonitis,8
+Medicine,Interstitial Lung Disease (Part 1),12
+Medicine,Interstitial Lung Disease (Part 2),15
+Medicine,Lung Physiology (Part 1),17
+Medicine,Pulmonary Function Tests (Part 1),5
+Medicine,Pulmonary Function Tests (Part 2),13
+Medicine,Pulmonary Hypertension,15
+Medicine,Sarcoidosis,10
+Medicine,Lung Physiology (Part 2),17
+Medicine,Pulmonary Embolism,23
+Medicine,Heart Murmurs (Part 1),8
+Medicine,Heart Murmurs (Part 2),10
+Medicine,Heart Sounds S1,7
+Medicine,Heart Sounds S2,6
+Medicine,"Heart Sounds S3, S4 Ejection Click & OS",7
+Medicine,Hypertension,13
+Medicine,Ischemic Heart Disease - Coronary Blood Flow,12
+Medicine,Ischemic Heart Disease - Risk Factors & Dyslipidemia,7
+Medicine,Ischemic Heart Disease - Chest Pain & Investigations,6
+Medicine,Ischemic Heart Disease - Stemi,8
+Medicine,JVP,6
+Medicine,Pericardial Diseases,7
+Medicine,Valvular Heart Disease - Aortic Regurgitation,13
+Medicine,Valvular Heart Disease - Mitral Regurgitation,19
+Medicine,Valvular Heart Disease - Aortic Stenosis,9
+Medicine,Valvular Heart Disease - Mitral Stenosis,14
+Medicine,Cardiomyopathies (Part 1),13
+Medicine,Coarctation of Aorta,7
+Medicine,Congenital Heart Disease - Atrial Septal Defect,7
+Medicine,Congenital Heart Disease - PDA,1
+Medicine,Congenital Heart Disease - VSD,9
+Medicine,Cyanotic Congenital Heart Disease (Part 2),7
+Medicine,Cyanotic Congenital Heart Disease & TOF,4
+Medicine,ECG - Basics & Lead Placement (Part 1),18
+Medicine,ECG - Basics & Formation of PQRS Waves (Part 2),10
+Medicine,ECG - PQRS & T Wave Abnormalities (Part 3),19
+Medicine,ECG - Ventricular Hypertrophies & Axis (Part 4),2
+Medicine,ECG & Cardiac Arrythmias,10
+Medicine,ECG & Ischemic Heart Disease,13
+Medicine,ECG & Cardiac Arrythmias - Atrial Fib & Flutter,13
+Medicine,ECG Brugada Wellens Fascicular Block,9
+Medicine,ECG Electrolytes & Misc,6
+Medicine,"ECG VT,V fib & Heart Blocks",12
+Medicine,Heart Failure,11
+Medicine,Approach to Shock (Part 1),5
+Medicine,ARDS,18
+Medicine,Shock - Sepsis (Part 2),11
+Medicine,Approach to Muscle Disorders,16
+Medicine,Atypical Parkinson’s,24
+Medicine,Brainstem Disorders (Part 2),7
+Medicine,Brainstem Disorders (Part 1),11
+Medicine,Dementia - Alzheimer's Disease (Part 1),27
+Medicine,Dementia - Lewy Body Dementia & Vascular Dementia (Part 2),7
+Medicine,"Dementia - FTD, Huntington, CJD & NPH (Part 3)",31
+Medicine,Motor Neuron Disease,12
+Medicine,Multiple Sclerosis,20
+Medicine,Nerve Muscle Junction Disorders,16
+Medicine,Primary Headache (Part 1),28
+Medicine,Primary Headache (Part 2),7
+Medicine,Seizures & Epilepsy (Part 3),5
+Medicine,Seizures & Epilepsy (Part 1),10
+Medicine,Seizures & Epilepsy (Part 2),17
+Medicine,Spinal Cord Disorder (Part 2),10
+Medicine,Spinal Cord Disorder (Part 1),8
+Medicine,Stroke - Stroke Syndromes (Part 2),6
+Medicine,Stroke - Acute Ischemic Stroke (Part 4),3
+Medicine,Stroke - Hemorrhagic Stroke (Part 5),10
+Medicine,Upper Motor Vs Lower Motor Neuron Lesions,1
+Medicine,Vertigo (Part 2),3
+Medicine,Guillian Barre Syndrome,9
+Medicine,Neuro Ophthalmology (Part 1),4
+Medicine,Neuro Ophthalmology (Part 2),5
+Medicine,Parkinsons Disease,25
+Medicine,Movement Disorders (Part 1),10
+Medicine,Speech Disorders,10
+Medicine,Stroke - Stroke Syndromes (Part 1),12
+Medicine,Stroke - Acute Ischemic Stroke (Part 3),17
+Medicine,Vertigo (Part 1),5
+Medicine,Pheochromocytoma,8
+Medicine,Approach to Polyuria (Polyuria),5
+Medicine,Calcium Disorders - Hypercalcemia (Part 1),16
+Medicine,Calcium Disorders - Hypercalcemia (Part 2),6
+Medicine,Calcium Disorders - Hypocalcemia (Part 3),5
+Medicine,Calcium Disorders - Hypocalcemia (Part 4),8
+Medicine,"Complications of Diabetes, DKA & HHS",11
+Medicine,Cushings Syndrome,8
+Medicine,Diabetes Mellitus (Part 1),8
+Medicine,Diabetes Mellitus (Part 2),22
+Medicine,Endocrine Tumors of Pancreas & MEN Syndromes,22
+Medicine,Introduction to Endocrinology & SIADH,6
+Medicine,Pagets Syndrome,5
+Medicine,Pituitary Disorders - Acromegaly (Part 2),10
+Medicine,Pituitary Disorders - Prolactinoma (Part 1),11
+Medicine,Primary Hyperaldosteronism,5
+Medicine,Thyroid (Part 1),14
+Medicine,Thyroid (Part 2),17
+Medicine,Thyroid (Part 3),22
+Medicine,Approach to Arthritis & Rheumatoid Arthritis (Part 1),13
+Medicine,Gout Pseudogout & Dish,14
+Medicine,Polyarteritis Nodosa & Anca Vasculitis,11
+Medicine,Reiter's Psoriatic Gout,25
+Medicine,Rheumatoid Arthritis & Ankylosing Spondylitis (Part 2),37
+Medicine,Rheumatoid Arthritis (Part 3),18
+Medicine,Rheumatoid Arthritis (Part 4),14
+Medicine,Scleroderma & Systemic Sclerosis (Part 1),6
+Medicine,Sjogrens Syndrome,7
+Medicine,Small Vessel Vasculitis Behcets & Kawasaki,52
+Medicine,Systemic Lupus Erythematosis (Part 1),16
+Medicine,Systemic Lupus Erythematosis (Part 2),14
+Medicine,Systemic Sclerosis (Part 2),5
+Medicine,Temporal & Takayasu Arteritis,20
+Medicine,Tests In Rheumatology & Autoantibodies,17
+Medicine,Alcoholic Liver Disease,15
+Medicine,Ascites,10
+Medicine,Esophageal Disorders & Dysphagia,22
+Medicine,Hemochromatosis,12
+Medicine,Hepatorenal Syndrome,4
+Medicine,Inflammatory Bowel Disease,14
+Medicine,"Malabsorption, Celiac Disease & Whipples Disease",15
+Medicine,NAFLD & NASH,13
+Medicine,Peptic Ulcer Disease,10
+Medicine,Diseases of Gall bladder & Bile Ducts,30
+Medicine,Wilsons Disease,8
+Medicine,Approach to Liver Function Tests,15
+Medicine,Hepatitis A & B,19
+Medicine,Hepatitis B (Part 2),17
+Medicine,Hepatitis C & E,14
+Medicine,Anemia & Iron Homoestasis,14
+Medicine,Approach to Anemia,16
+Medicine,Autoimmune Hemolytic Anemia,5
+Medicine,Chronic Lymphocytic Leukemia,5
+Medicine,Chronic Myeloid Leukemia,9
+Medicine,Hairy Cell Leukemia,5
+Medicine,Hemolytic Anemia - Hereditary Sperocytosis,16
+Medicine,Hemolytic Anemia - Sickle Cell Disease,5
+Medicine,Microcytic Anemia (Part 1),13
+Medicine,Plasma Cell Disorders (Part 1),8
+Medicine,Plasma Cell Disorders (Part 2),11
+Medicine,Macrocytic Anemia,17
+Medicine,Myeloproliferative Disorders,15
+Medicine,Thalassemia,7
+OBG,Eclampsia,23
+OBG,Hypertension During Pregnancy,18
+OBG,Multiple Pregnancy,22
+OBG,Post Term Pregnancy,8
+OBG,Preterm Labour,17
+OBG,Prom,9
+OBG,RH Isoimmunization,8
+OBG,Hellp syndrome,2
+OBG,Anemia in Pregnancy,12
+OBG,Diabetes in Pregnancy,20
+OBG,Heart Disease During Pregnancy,12
+OBG,Jaundice in Pregnancy,9
+OBG,Shoulder Dystocia,6
+OBG,Amniotic Fluid & It's Disorders,23
+OBG,Aneuploidy Screening,13
+OBG,Diagnosis of Pregnancy,9
+OBG,Fundamentals of Reproduction,18
+OBG,Pregnancy & Antenatal Care,13
+OBG,The Placenta & Fetal Membranes,14
+OBG,Antenatal Fetal Monitoring,10
+OBG,Physiological Changes During Pregnancy,35
+OBG,3rd Stage of Labour & It's Management,6
+OBG,Abnormal Pelvis,5
+OBG,Breech Presentation,7
+OBG,Cardinal Movements of Labour,2
+OBG,Cesarean Section,10
+OBG,Factors Influencing Labour: Power & Passenger,12
+OBG,Fetal Skull,5
+OBG,Induction & Augmentation,12
+OBG,Instrumental Delivery,6
+OBG,Malposition,12
+OBG,Malpresentation,6
+OBG,Obstructed Labour,10
+OBG,Partogram,5
+OBG,Physiology of Labour,15
+OBG,Pverperium Sepsis,12
+OBG,Stages of Labour,10
+OBG,Abruption,5
+OBG,Cervical Incompetence,4
+OBG,Ectopic Pregnancy,21
+OBG,Medical Termination of Pregnancy (MTP),2
+OBG,Miscarriage (Abortion),11
+OBG,Molar Pregnancy,8
+OBG,Placenta Previa,7
+OBG,Post Partum Hemorrhage (PPH),11
+OBG,Recent MTP ACT,3
+OBG,Anatomy Of External Genitalia,9
+OBG,Congenital Mullerian Malformations,16
+OBG,Embryology,6
+OBG,Internal Genitalia - (Uterus And Fallopian Tube),18
+OBG,Internal Genitalia (Vagina And Ovary),21
+OBG,Normal & Abnormal Puberty,22
+OBG,Reproductive Physiology,9
+OBG,Adnexal Management,15
+OBG,Cervical Cancer,29
+OBG,Endometrial Carcinoma,11
+OBG,Epithelial Ovarian Cancer,22
+OBG,Germ Cell And Sex Cord Storms Cancer,23
+OBG,Gestational Trophoblastic Neoplasia,6
+OBG,Mnemonics to Remember Cancer Staging,7
+OBG,Premalignant Lesion Of Endometrium,10
+OBG,Premalignant Lesions Of Cervix,15
+OBG,Vulval Cancer,6
+OBG,Abdnomal Uterine Bleeding,25
+OBG,Endometriosis,23
+OBG,Pelvic Inflammatory Disease,27
+OBG,Uterine Fibroids,32
+OBG,Vaginitis,19
+OBG,Emergency Contraception,2
+OBG,Hormonal Contraception,14
+OBG,Missed pill management,9
+OBG,Natural Family Planning Method And Barrier Method,14
+OBG,Permanent Sterilisation,7
+OBG,Artificial Reproductive Technology,8
+OBG,Female Infertility,22
+OBG,Hirusitsm,9
+OBG,Male Infertility,17
+OBG,Menopause And HRT,17
+OBG,PCOS,24
+OBG,Primary Amenorrhea,27
+OBG,Genital Fistula,8
+OBG,Genital Prolapse,23
+OBG,Urinary Incontinence,11
+Biochemistry,Classification of Carbohydrates & Mucopolysaccharidosis,32
+Biochemistry,Glucose Transport,11
+Biochemistry,Image Based Questions,10
+Biochemistry,Enzymes Basics & Classification,13
+Biochemistry,Enzyme Kinetics & Enzyme Inhibition,13
+Biochemistry,Enzyme Regulation & Uses of Enzymes,13
+Biochemistry,Four Formulas,16
+Biochemistry,"Metabolism in Fed, Fasting, Starvation & Diabetic States",11
+Biochemistry,Carbohydrates Basics & Cell Organelles,15
+Biochemistry,Lipid Chemistry & Sphingolipidoses,15
+Biochemistry,Metabolism of Fatty Acids & Ketone Bodies,26
+Biochemistry,Cholesterol & Bile Acids,11
+Biochemistry,Glycolysis,11
+Biochemistry,Link Reaction & TCA,19
+Biochemistry,NADH Shuttles & ETC,20
+Biochemistry,Gluconeogenesis,15
+Biochemistry,Glycogen Metabolism,19
+Biochemistry,"HMP, Metabolism of Galactose & Fructose",16
+Biochemistry,Protein Structure & Fibrous Proteins,18
+Biochemistry,Haem Metabolism,16
+Biochemistry,"Amino Acids - Basics, Classification & Metabolism",28
+Biochemistry,"Metabolism of Glycine, Phenylalanine & Tyrosine",21
+Biochemistry,"Metabolism of Tryptophan, Cysteine & Methionine",10
+Biochemistry,"Amino Acids Catabolism, Urea Cycle & Associated Disorders",25
+Biochemistry,Genetics Basics & Genetic Disorders,28
+Biochemistry,DNA Replication & Repair,23
+Biochemistry,"Transcription, Ribozymes & Splicing",20
+Biochemistry,"Translation, Codons & Mutations",30
+Biochemistry,Genetic Techniques,34
+Biochemistry,Vitamins & Minerals,62
+Biochemistry,Miscellaneous Topics,35
+Psychiatry,Bipolar Affective Disorder,11
+Psychiatry,Depression,18
+Psychiatry,Lithium Memory Map,14
+Psychiatry,Suicide,12
+Psychiatry,Treatment of Bipolar Affective Disorder,2
+Psychiatry,Treatment of Depression,16
+Psychiatry,Anxiety Disorders,24
+Psychiatry,Conversion / Dissociative Disorders,23
+Psychiatry,Impulse Control Disorders,8
+Psychiatry,Obsessive Compulsive & Related Disorders,27
+Psychiatry,Somatoform Disorders,12
+Psychiatry,"Stress, Trauma & Related Disorders",18
+Psychiatry,Organic Mental Disorders,26
+Psychiatry,ADHD & Disruptive Behaviour Disorders,14
+Psychiatry,Autism Spectrum Disorder,9
+Psychiatry,Intellectual Disability,3
+Psychiatry,Other Childhood Disorders,2
+Psychiatry,Personality Disorders,24
+Psychiatry,Defense Mechanisms,18
+Psychiatry,Neuropsychological Tests,2
+Psychiatry,Psychoanalysis,9
+Psychiatry,Theory of Learning,3
+Psychiatry,Sexual Disorders,16
+Psychiatry,Higher Mental Functions,6
+Psychiatry,History,3
+Psychiatry,MSE - Affect,4
+Psychiatry,Perception,14
+Psychiatry,Thought,15
+Psychiatry,Sleep & Related Disorders,14
+Psychiatry,Substance & Related Disorders,35
+Psychiatry,Eating Disorders,23
+Psychiatry,Clozapine (Story Mnemonic),2
+Psychiatry,Diagnosis & Type,3
+Psychiatry,History Prognosis & Etiology,11
+Psychiatry,Other Psychotic Disorders,13
+Psychiatry,Symptoms Of Schizophrenia,12
+Psychiatry,Treatment Of Schizophrenia,18
+Psychiatry,Somatic Therapies,5
+Psychiatry,Classification In Psychiatry,7
+Surgery,Anal Canal & It’s Common Conditions,18
+Surgery,Appendix,32
+Surgery,Esophagus ( Gerd & Functional Disorders ),22
+Surgery,Esophagus (Carcinoma Esophagus),26
+Surgery,Esophagus (Esophageal Injury & Other Common Conditions),18
+Surgery,Esophagus (Surgical Anatomy & Investigation),35
+Surgery,Gall Bladder (Choledocholithiasis & Bile Duct Injury),25
+Surgery,Gall Bladder (Gall Bladder & Bile Duct Cancer),17
+Surgery,Gall Bladder (Gall Stone Disease),18
+Surgery,Gall Bladder (Surgical Anatomy & Investigations),12
+Surgery,Large Intestine (Colorectal Cancer),23
+Surgery,Liver (Liver Failure & Portal Hypertension),12
+Surgery,Liver (Liver Infection & Neoplasm),45
+Surgery,Pancreas (Anomalies & Inflammation),16
+Surgery,Pancreas (Management of Acute & Chronic Pancreatitis),53
+Surgery,Pancreas (Pancreatic Neoplasm),19
+Surgery,Small Intestine (Intestinal Obstruction),11
+Surgery,Stomach (Gist & Other Common Conditions),15
+Surgery,Stomach (Surgical Anatomy & Stomach Surgeries),4
+Surgery,Stomach (Ulcer Diseases),28
+Surgery,Large Intestine (Common Large Intestinal Conditions),23
+Surgery,Small Intestine (Various Common Small Intestinal Conditions),41
+Surgery,Spleen,17
+Surgery,Stomach (Carcinoma Stomach),5
+Surgery,Stomach (Upper GI Bleed),14
+Surgery,Pediatric Surgery,4
+Surgery,Approach to Breast Lump,14
+Surgery,Benign Disorders of Breast,19
+Surgery,Classification & Risk Factor,13
+Surgery,Investigations,7
+Surgery,Management (Part 1),5
+Surgery,Management (Part 2),14
+Surgery,Management (Part 3),10
+Surgery,Management (Part 4),25
+Surgery,Prognosis,6
+Surgery,Surgical Anatomy,13
+Surgery,Staging of Carcinoma Breast,12
+Surgery,Transplant,16
+Surgery,Kidney - Urinary Tract Calculi (Part 1),14
+Surgery,Kidney - Renal Neoplasm (Part 2),15
+Surgery,Prostate,26
+Surgery,Testis,22
+Surgery,Urethra & Penis,17
+Surgery,"Urinary Bladder - Urinary Diversion, Retention of Urine & Incontinence (Part 1)",9
+Surgery,Urinary Bladder - Benign & Malignant Disorders (Part 2),15
+Surgery,Kidney - Congenital & Other Benign Disorders (Part 3),14
+Surgery,"Surgical Incisions, Sutures & Needles (Part 1)",16
+Surgery,Types Of Closure / Knots & Energy Sources (Part 2),31
+Surgery,Minimal Access Surgery & Staplers (Part 3),44
+Surgery,Acute & Chronic Limb Ischemia (Part 1),25
+Surgery,Aneurysm / Av Malformation / Amputation (Part 2),17
+Surgery,Anatomy & Physiology of Lymphatic System,2
+Surgery,Investigation & Management,10
+Surgery,Lymphedema (Clinical Presentation),11
+Surgery,Inguinal Hernia,12
+Surgery,Ventral & Other Types of Hernias,11
+Surgery,Brain Tumors,11
+Surgery,Hydrocephalus,8
+Surgery,SAH,6
+Surgery,Nutrition (Part 2),37
+Surgery,Wound Healing & Infection (Part 3),9
+Surgery,Surgical Site Infection (Part 4),26
+Surgery,Pre & Post Operative Care (Part 5),30
+Surgery,Shock & Sepsis (Part 6),34
+Surgery,Basic Pathophysiology of Trauma & Stress (Part 1),7
+Surgery,Surgical Anatomy & Cardiopulmonary Bypass (Part 1),22
+Surgery,IHD & Aortic Dissection (Part 2),31
+Surgery,Skin & Subcutaneous Tissue (Skin Tumors & Common Skin Conditions),19
+Surgery,Pleural Diseases & Thoracic Outlet Syndrome (Part 2),16
+Surgery,Surgical Anatomy & Investigations (Part 1),12
+Surgery,Carcinoma Lung & Mediastinal Conditions (Part 3),14
+Surgery,Neuroendocrine (Endocrine Neoplasm of Pancreas & Carcinoid Tumour),18
+Surgery,Parathyroid - Secondary & Tertiary Hyperparathyroidism (Part 2),7
+Surgery,Thyroid - Surgical Anatomy & Investigations (Part 1),14
+Surgery,Thyroid - Benign Thyroid Disorders (Part 2),16
+Surgery,Thyroid - Thyroid Neoplasm (Part 3),23
+Surgery,Adrenal Gland (Adrenal Cortex Neoplasm & Pheochromocytoma),14
+Surgery,Parathyroid - Basic Physiology & Primary Hyperparathyroidism (Part 1),17
+Surgery,Burns,10
+Surgery,Plastic Surgery - Skin Grafting (Part 1),7
+Surgery,Plastic Surgery - Flaps & Reconstruction (Part 2),9
+Surgery,Metabolic Surgery,16
+Surgery,Varicose Vein,10
+Surgery,Venous Thrombosis,42
+Surgery,Oral Cavity,26
+Surgery,Salivary Glands,1
+Surgery,Primary Survey,12
+Surgery,Retroperitoneal Trauma,14
+Surgery,Thoracic Trauma,5
+Surgery,Triage,1
+Surgery,Abdominal Trauma,19
+Surgery,Damage Control Resuscitation,5
+Surgery,Damage Control Surgery,12
+Surgery,Head & Neck Trauma,15
+Dermatology,Drug Reaction,8
+Dermatology,Eczema,20
+Dermatology,Blistering Disorders,22
+Dermatology,General Dermatology,23
+Dermatology,Melanin Disease,26
+Dermatology,Viral infection,23
+Dermatology,Parasitic Infection,9
+Dermatology,Bacterial Infections,22
+Dermatology,Fungal infection,28
+Dermatology,Skin Cancer,19
+Dermatology,"Important Short Topics (Shapes Of Skin Lesions, Woods Lamp Disorders, Neutrophilic Dermatosis & Reactive Arthritis)",26
+Dermatology,Hair Diseases -TB - Erythema Nodosum,6
+Dermatology,Mast Cell Disorders,9
+Dermatology,"Dermoepidermal Junction, DIF & Nail Diseases",11
+Dermatology,Alopecia,9
+Dermatology,STD (Sexually Transmitted Diseases),23
+Dermatology,Lichen Planus,11
+Dermatology,Psoriasis,25
+Dermatology,Leprosy,25
+Pediatrics,Acyanotic CHD,15
+Pediatrics,Cyanotic CHD,11
+Pediatrics,Fetal Circulation,13
+Pediatrics,Nada Criteria,7
+Pediatrics,"Rheumatic Fever, RHD & Heart Failure",15
+Pediatrics,Classification of Congenital Heart Diseases,31
+Pediatrics,Adrenal Disorders,11
+Pediatrics,Disorders of Sex Development & CAH,15
+Pediatrics,Pubertal Disorders & GH Deficiency,16
+Pediatrics,Thyroid Disorders,18
+Pediatrics,Bacterial Infections,13
+Pediatrics,Congenital Infections & Covid19,10
+Pediatrics,Viral Infections,38
+Pediatrics,Management of Severe Acute Malnutrition,21
+Pediatrics,Vitamin Deficiencies,25
+Pediatrics,Ataxia Neurodegenerative Disorders,11
+Pediatrics,"Cerebral Palsy, Brain Tumor & Neurocutaneous Disorders",37
+Pediatrics,Hydrocephalus,13
+Pediatrics,"Intellectual Disability, NTD & Craniosynostosis",13
+Pediatrics,Neuromuscular Disorders,9
+Pediatrics,"Seizures, Epilepsy & Meningitis",15
+Pediatrics,Asthma,16
+Pediatrics,Croup & Choanal Atresia,13
+Pediatrics,"Cystic Fibrosis, Pneumonia & ARDS",31
+Pediatrics,Laryngomalacia & Bronchiolar Disorders,13
+Pediatrics,Growth & Puberty,23
+Pediatrics,Growth Assessment,22
+Pediatrics,"Milestones, Breast Milk & Behavioral Disorders",12
+Pediatrics,Short Stature,11
+Pediatrics,Antenatal Hydronephrosis & Hemolytic Uremic Syndrome,10
+Pediatrics,Congenital Nephrotic Syndrome & AKI (ARF),21
+Pediatrics,"UTI, VUR, PUV & Uretrocele",23
+Pediatrics,Wilm's Tumor & Congenital Renal Cysts,15
+Pediatrics,Leukemia,6
+Pediatrics,"Transient Myeloproliferative Disorder & Lymphoma (Hl, NHL)",7
+Pediatrics,"Neuroblastoma, LCH & Retinoblastoma",5
+Pediatrics,Juvenile Idiopatic Arthritis,9
+Pediatrics,"SLE, Juvenile Dermatomyositis & Scleroderma",15
+Pediatrics,Vasculitis in Childhood,13
+Pediatrics,Esophageal Disorders & Foreign Body Ingestion,6
+Pediatrics,Hypertrophic Pyloric Stenosis & Hirschsprung Disease,4
+Pediatrics,"IBD, Diarrhea & Dehydration Management",15
+Pediatrics,"Malabsorption, Celiac Disease & Liver Disorders",10
+Pediatrics,APGAR & Primitive Reflexes,16
+Pediatrics,General Neonatology,21
+Pediatrics,Hyaline Membrane Disease & TTNB,23
+Pediatrics,"Infants of Diabetic Mothers, Neonatal Sepsis & Benign Lesions",17
+Pediatrics,Metabolic Disorders,17
+Pediatrics,Neonatal Jaundice,16
+Pediatrics,Neonatal Resuscitation,13
+Pediatrics,Other Breathing Disorders in Newborns,11
+Pediatrics,Perinatal Asphyxia & NEC,14
+Pediatrics,Preterm (IUGR),6
+Pediatrics,"Specific Vaccines, Vaccines in Special Situations & Cold Storage of Vaccines",14
+Pediatrics,"Immunization Basics, Types & Immunization Schedules",15
+Pediatrics,Disorders Of Carbohydrate Metabolism,8
+Pediatrics,Disorders Of Protein Metabolism,15
+Pediatrics,"Lysosomal Storage Disorders, Peroxisomal Disorders & Leukodystrophy",10
+Pharmacology,Histamine & Antihistamines,5
+Pharmacology,NSAIDs,11
+Pharmacology,Pharmacotherapy Of Gout,9
+Pharmacology,Pharmacotherapy Of Rheumatoid Arthritis,5
+Pharmacology,Prostaglandin Preparations,9
+Pharmacology,Serotonin Pharmacology & Migraine,13
+Pharmacology,pH & Ionization,2
+Pharmacology,Adverse Drug Reactions,10
+Pharmacology,Clinical Pharmacology,12
+Pharmacology,Clinical Trial,15
+Pharmacology,Pharmacodynamics,11
+Pharmacology,Pharmacogenetics,24
+Pharmacology,PK Absorption,8
+Pharmacology,Pk Drug Distribution,5
+Pharmacology,Pk Drug Excretion,9
+Pharmacology,Pk Drug Metabolism,6
+Pharmacology,"Rational Prescribing,Essential Medicine & Ebm",4
+Pharmacology,Therapeutic Drug Monitoring,8
+Pharmacology,Antidiuretic Drugs,7
+Pharmacology,Diuretics,24
+Pharmacology,Adrenergic Drugs,17
+Pharmacology,Alpha Blockers,16
+Pharmacology,Anticholinergic Drugs,10
+Pharmacology,Beta Blockers,18
+Pharmacology,Cholinergic Drugs Part -1,11
+Pharmacology,Cholinergic Drugs Part -2,4
+Pharmacology,Drugs Acting on Ganglia & Anti Smoking Drugs,7
+Pharmacology,Pharmacotherapy Of Glaucoma,11
+Pharmacology,Anticoagulant Drugs,22
+Pharmacology,Antiplatelet Drugs,12
+Pharmacology,Drugs For Dyslipidemia,8
+Pharmacology,Fibrinolytics And Antifibrinolytics,5
+Pharmacology,Hemantinics,8
+Pharmacology,Anti -Thyroid Drugs & Drugs Used in Hypothyroidism,14
+Pharmacology,Antidiabetic Drugs (Insulin Preparations),5
+Pharmacology,Antidiabetic Drugs(Remaining Drugs & Summary),21
+Pharmacology,Corticosteroids Clinical Concepts,12
+Pharmacology,Corticosteroids Therapeutic Uses,10
+Pharmacology,Estrogen & Progesterone Preparations,21
+Pharmacology,Hormonal Contraceptives,11
+Pharmacology,Hypothalamus And Pituitary Hormones Pharmacology,14
+Pharmacology,"Pharmacotherapy of BPH, ED & Androgen Receptor Antagonists",5
+Pharmacology,Pharmacotherapy Of Osteoporosis,9
+Pharmacology,Testosterone Pharmacology,6
+Pharmacology,Anti Anginal Drugs,22
+Pharmacology,Antiarrythmics Drugs Part 1,8
+Pharmacology,Antiarrythmics Drugs Part 2,5
+Pharmacology,Drugs Affecting RAAS Pathway,13
+Pharmacology,Pharmacotherapy Of CHF,16
+Pharmacology,Pharmacotherapy Of Hypertension,18
+Pharmacology,Antiemetic Drugs,17
+Pharmacology,Drugs For Peptic Ulcer Disease,13
+Pharmacology,Drugs Used For Constipation,12
+Pharmacology,Drugs Used For Diarrhea,12
+Pharmacology,Drugs For Pulmonary Hypertension,3
+Pharmacology,Pharmacotherapy of Bronchial Asthma,37
+Pharmacology,Drugs For Cough,5
+Pharmacology,Immunomodulator Drugs,13
+Pharmacology,Treatment Of Leprosy And Mac,2
+Pharmacology,Anti Helmintic Drug,4
+Pharmacology,Anti HIV Drugs,13
+Pharmacology,Anti Protozoal Drugs,22
+Pharmacology,Anti TB Drugs,13
+Pharmacology,Anti Viral Drugs,16
+Pharmacology,Antifungal Drugs,8
+Pharmacology,Antimalarial Drugs,9
+Pharmacology,Hormonal Agents & Tyrosine Kinase Inhibitors,14
+Pharmacology,Introduction & DNA Alkylating Agents,20
+Pharmacology,Platinum Compounds & Antibiotics,11
+Pharmacology,S & M Phase Specific Drugs,12
+Pharmacology,Small Molecule Inhibitors,5
+Pharmacology,Targeted Therapy,8
+Pharmacology,Skeletal Muscle Relaxants,1
+Pharmacology,Anti Parkinson’s Drugs,16
+Pharmacology,Antidepressant Drugs,20
+Pharmacology,Antiepileptic Drugs,14
+Pharmacology,Drugs For Anxiety,7
+Pharmacology,Ethanol Pharmacology,7
+Pharmacology,Local Anesthesia,11
+Pharmacology,Opioids,20
+Pharmacology,Pharmacotherapy of Mania & BPD,6
+Pharmacology,Sedative Hypnotic Drugs,10
+Pharmacology,Antipsychotic Drugs,20
+Pharmacology,Aminoglycosides & Oxazolidinones,7
+Pharmacology,"Cephalosporins, Carbapenems & Monobactams",22
+Pharmacology,Drugs For UTI,6
+Pharmacology,Fluroquinolones,6
+Pharmacology,"Glycopeptides, Lipopeptides & Polymyxins",6
+Pharmacology,"Macrolides ,Lincosamides & Streptogramins",12
+Pharmacology,Penicillins,10
+Pharmacology,Sulfonamides,7
+Pharmacology,"Tetracycline, And Chloramphenicol",13
+Radiology,Head & Neck Imaging,7
+Radiology,Women Imaging,11
+Radiology,Neuroradiology (Part 2),13
+Radiology,Mammography,16
+Radiology,Basics and Fundamentals of CT,24
+Radiology,Nuclear Medicine,16
+Radiology,Radiological Anatomy,9
+Radiology,Introduction to Radiology & Basics of Investigations,19
+Radiology,Contrast Agents in Radiology,11
+Radiology,Basics of Ultrasound,34
+Radiology,Radiation Hazards & Protection,6
+Radiology,Radiotherapy,8
+Radiology,GI Radiology,20
+Radiology,GU Radiology,26
+Anesthesia,General Anesthesia - Introduction,5
+Anesthesia,Preoperative Assessment,30
+Anesthesia,Critical Care,35
+Anesthesia,Central Neuraxial Block,49
+Anesthesia,Anesthesia & Co-Existing Diseases,60
+Anesthesia,General Anesthesia - IV Anesthetics,60
+Anesthesia,Local Anesthetics,40
+Anesthesia,Intraoperative Fluids,14
+Anesthesia,General Anesthesia - Muscle Relaxants,35
+Anesthesia,Peripheral Nerve Blocks,15
+Anesthesia,Cardio - Pulmonary Resuscitation (CPR),30
+Anesthesia,Anesthesia Delivery Systems,39
+Anesthesia,Specialty Management,60
+Anesthesia,Anesthesia Equipment,50
+Anesthesia,General Anesthesia - Inhalational Agents,50
+Anesthesia,General Anesthesia - Complications,34
+Anesthesia,History of Anesthesia,5
+Anesthesia,Monitoring In Anesthesia,51
+Physiology,Basics of ECG Understanding,7
+Physiology,Bradyarrhythmias,2
+Physiology,Cardiac Muscle,11
+Physiology,Coronary Blood Flow,6
+Physiology,Excitation Conduction Cardiac Vectors,20
+Physiology,Localization of Myocardial Damage with ECG,6
+Physiology,Normal ECG,13
+Physiology,Membrane Potentials,15
+Physiology,Transport Across Membrane (Part 1),7
+Physiology,Transport Across Membrane (Part 2),11
+Physiology,Nerve Fiber Classification,8
+Physiology,"Structure, Channels, Myelination & Conduction",26
+Physiology,Olfaction & Taste,5
+Physiology,Physiology of Audition,5
+Physiology,Physiology Of Vision,5
+Physiology,Neuro Muscular Junction & Muscle Contraction,9
+Physiology,Pathophysiology of Muscle Contraction,9
+Physiology,Structure of Skeletal Muscle Cell,6
+Physiology,Types of Muscle Fibers,6
+Physiology,Cell & General Physiology,17
+Physiology,Cardiac Output (Integrated) (Part 1),17
+Physiology,Cardiac Output (Integrated) (Part 2),21
+Physiology,Cardiovascular Regulation & Reflexes,14
+Physiology,"Pressure, Flow & Resistance",24
+Physiology,Vasculature,7
+Physiology,Basics,5
+Physiology,Gas Exchange,11
+Physiology,Gas Exchange - V/Q Ratio,3
+Physiology,Hypoxia,4
+Physiology,Pulmonary Vasculature,8
+Physiology,Pulmonary Ventilation - Compliance & Surface Tension,8
+Physiology,Pulmonary Ventilation - Lung Volume & Capacities,10
+Physiology,Pulmonary Ventilation - Minute Ventilation & Dead Spaces,3
+Physiology,Pulmonary Ventilation - Obstructive Vs Restrictive Lung Disease,4
+Physiology,"Pulmonary Ventilation - Respiratory Muscles, Pressures",5
+Physiology,Regulation Of Respiration,5
+Physiology,Transport of Gases,4
+Physiology,Acid Base Balance,16
+Physiology,Body Fluids,15
+Physiology,Glomerulus,30
+Physiology,Nephron Structure,16
+Physiology,Tubular Functions,27
+Physiology,Platelets & Homeostasis,9
+Physiology,RBC (Part 1),4
+Physiology,RBC (Part 2),5
+Physiology,WBC & Immunity,6
+Physiology,Basal Ganglia & Cerebellum,21
+Physiology,Integrative Neurophysiology - Cerebral Cortex,13
+Physiology,Integrative Neurophysiology - Learning & Memory,10
+Physiology,Integrative Neurophysiology – Sleep & EEG,12
+Physiology,Motor Functions,6
+Physiology,Sensory Functions,9
+Physiology,Integrative Neurophysiology - Thalamus & Hypothalamus,18
+Physiology,ADH,7
+Physiology,Calcium Metabolism,7
+Physiology,Female Reproductive Hormones,6
+Physiology,Glucocorticoid,4
+Physiology,Insulin,7
+Physiology,Introduction to Endocrinology,6
+Physiology,Male Reproductive Hormones,6
+Physiology,Mineralocorticoid,4
+Physiology,Physiology of Pregnancy,6
+Physiology,Prolactin,3
+Physiology,Thyroid Axis,10
+Physiology,Physiology of GIT,27
+Physiology,Swallowing & Esophagus,8
+Anatomy,Gametogenesis,19
+Anatomy,"Somites, Lateral Plate Mesoderm & Neural Crest Cells",12
+Anatomy,Bilaminar Germ Disk Formation & Gastrulation,10
+Anatomy,Fertilization & Implantation,6
+Anatomy,Arterial Supply of Heart,7
+Anatomy,"Cardiac Plexus, Thoracic Duct, Esophagus & Posterior Mediastinum",15
+Anatomy,Heart - External Features,7
+Anatomy,Inlet Of Thorax & Diaphragm,6
+Anatomy,Interior of Right Atrium & Right Ventricle,7
+Anatomy,Lungs - Mediastinal Surface & Bronchopulmonary Segments,7
+Anatomy,Pericardium & Pericardial Sinuses,7
+Anatomy,Pleura & Recesses,6
+Anatomy,"Thoracic Wall - Muscles, Nerves & Vessels",13
+Anatomy,Anterior Compartment of Thigh & Femoral Nerve,14
+Anatomy,Arches of Foot,6
+Anatomy,Fascia Lata & Modifications,7
+Anatomy,"Flexor, Extensor & Peroneal Retinaculum",7
+Anatomy,Gluteal Region,4
+Anatomy,Hamstring Compartment & Anastomosis,8
+Anatomy,Leg Compartments,3
+Anatomy,Lumbar Plexus,38
+Anatomy,Medial Compartment of Thigh & Obturator Nerve,8
+Anatomy,Osteology (Part 1),3
+Anatomy,Osteology (Part 2),13
+Anatomy,Popliteal Fossa,7
+Anatomy,Sciatic Nerve,7
+Anatomy,Sole of The Foot,7
+Anatomy,"Blood Vessels of Head, Neck & Face",9
+Anatomy,Cranial Nerve Nuclei & Columns,21
+Anatomy,"Cranial nerves - IX, X, XI & XII Nerves",13
+Anatomy,Deep Cervical Fascia,14
+Anatomy,Glands - Parotid Gland,7
+Anatomy,Glands - Thyroid Gland,5
+Anatomy,Larynx,16
+Anatomy,Osteology - Cranial Cavity,24
+Anatomy,Parasympathetic Ganglion & Cranial Nerve - V,15
+Anatomy,Pharynx,7
+Anatomy,Posterior Triangle of The Neck,12
+Anatomy,Subclavian Artery & Scalenous Anterior,7
+Anatomy,Temporomandibular Joint & Muscles of Mastication,5
+Anatomy,Anterior Triangles of The Neck,5
+Anatomy,Blood Supply of Face,6
+Anatomy,Cavernous Sinus,4
+Anatomy,Cranial Duramater & Dural Venous Sinus,12
+Anatomy,Cranial Nerve – VII,10
+Anatomy,"Cranial Nerve - III, IV & VI",20
+Anatomy,Blood Vessels - Axillary Artery & Anastomosis Around Scapula,22
+Anatomy,Blood Vessels - Brachial Artery - Anastomosis Around Elbow,4
+Anatomy,Brachial Plexus,16
+Anatomy,Clavipectoral Fascia & Intermuscular Scapular Spaces,5
+Anatomy,Cubital Fossa,6
+Anatomy,Elbow Joint,6
+Anatomy,Flexor & Extensor Retinaculum,6
+Anatomy,Muscles of Hand,26
+Anatomy,Osteology (Part 1),18
+Anatomy,Radial Nerve,6
+Anatomy,Shoulder Joint,13
+Anatomy,Spaces in Hand,7
+Anatomy,Ulnar Nerve,5
+Anatomy,Median Nerve,5
+Anatomy,Osteology (Part 2),12
+Anatomy,Ascending Tracts,15
+Anatomy,Auditory Pathway,7
+Anatomy,Basal Ganglia,8
+Anatomy,Blood Supply of Brain,8
+Anatomy,Brainstem (Ventral & Dorsal View) & IV Ventricles,17
+Anatomy,Brainstem Syndrome,15
+Anatomy,Cerebellum,13
+Anatomy,Cerebral Cortex,15
+Anatomy,"Cerebrum - Homunculus, Histology & Diencephalon",8
+Anatomy,Conus Medullaris & Cauda Equina Syndrome,9
+Anatomy,Descending Tracts,14
+Anatomy,General Neuroanatomy,17
+Anatomy,Greymatter - Nuclei & Rexed Laminae,14
+Anatomy,Lateral & Third Ventricles,10
+Anatomy,Spinal Cord - External Features,18
+Anatomy,Sympathetic Chain - Ramus Communicans,6
+Anatomy,Thalamus & Connections,6
+Anatomy,White Matter of Cerebrum (Part 1),14
+Anatomy,White Matter of Cerebrum (Part 2),6
+Anatomy,Ischiorectal Fossa,6
+Anatomy,Kidney,11
+Anatomy,Portal Vein & Portacaval Anastomosis,11
+Anatomy,"Aorta, CT, SMA & IMA",14
+Anatomy,Liver & Hepatic Segments,7
+Anatomy,Peritoneum,5
+Anatomy,Ureter,8
+Anatomy,Urogenital Triangle,5
+Anatomy,Abdominal Wall - 1 (Landmarks & Inguinal Canal),9
+Anatomy,Abdominal Wall - 2 (Rectus Sheath & Thoracolumbar Fascia),8
+Anatomy,"Collagen Fibers, Junctional Complexes, Cardiac & Skeletal Muscles & Types of Cartilages",11
+Anatomy,Git & Liver Histology,7
+Anatomy,Lining Epithelium,28
+Anatomy,Lower Limb - Hip Bone,5
+Anatomy,Lower Limb - Tibia & Fibula,7
+Anatomy,Skull - Cranial Cavity,7
+Anatomy,Skull - Norma Basalis,7
+Anatomy,Upper Limb - Radius & Ulna,7
+Anatomy,CVS Development - Arterial System,6
+Anatomy,CVS Development - Heart Tube & Derivates,12
+Anatomy,CVS Development - Interatrial & Interventricular Septum,10
+Anatomy,CVS Development - Venous System,16
+Anatomy,GIT Development - Foregut,6
+Anatomy,GIT Development - Midgut,20
+Anatomy,Hindgut & Urogenital System,15
+Anatomy,HNF Development - Face & Palate,13
+Anatomy,HNF Development - Pharyngeal Arches,19
+Anatomy,"HNF Development - Tongue, Thyroid & Eyeball",12
+Forensic Medicine,Counter Coup Lesions & Concussion,5
+Forensic Medicine,Intracranical Haemorrhages,8
+Forensic Medicine,Skull Fractures,10
+Forensic Medicine,Traffic Accident Injuries,3
+Forensic Medicine,"Vertebral Column, Heart & Abdomen",4
+Forensic Medicine,Forensic Psychiatry,15
+Forensic Medicine,Classification Of Sexual Offences & Rape,20
+Forensic Medicine,Unnatural Sexual Offences & Perversions,12
+Forensic Medicine,Introduction To Ballistics & Firearms,10
+Forensic Medicine,Investigations Of Firearms,4
+Forensic Medicine,Rifled Gun & It's Injuries,8
+Forensic Medicine,Shotgun & It's injuries,6
+Forensic Medicine,Age,15
+Forensic Medicine,Finger Printing,6
+Forensic Medicine,Hair & Other Methods of Identification,5
+Forensic Medicine,Medico-Legal Importance of Age Groups,5
+Forensic Medicine,Race,5
+Forensic Medicine,Sex,6
+Forensic Medicine,Stature,5
+Forensic Medicine,Lie Detectors,5
+Forensic Medicine,Agriculture Poisons,15
+Forensic Medicine,Alcohol,10
+Forensic Medicine,Asphyxiants,6
+Forensic Medicine,Barbiturates & Chloral Hydrate,4
+Forensic Medicine,Cardiac Poisons & Aconite,3
+Forensic Medicine,Corrosives,8
+Forensic Medicine,Deliriant Poisons,10
+Forensic Medicine,Drug Dependence & Abuse,4
+Forensic Medicine,Food Poisoning,2
+Forensic Medicine,General Principles of Toxicology,15
+Forensic Medicine,Heavy Metal Poisons,16
+Forensic Medicine,Opium,5
+Forensic Medicine,Phosphorous,9
+Forensic Medicine,Snakes,10
+Forensic Medicine,Spinal Poisons,2
+Forensic Medicine,Vegetable Poisons,7
+Forensic Medicine,Virginity & Pregnancy,8
+Forensic Medicine,Burns,6
+Forensic Medicine,Electrical Injuries,6
+Forensic Medicine,Injuries Due To Cold & Heat,20
+Forensic Medicine,Lightning Injuries & Scalds,5
+Forensic Medicine,Drowning,10
+Forensic Medicine,Hanging,12
+Forensic Medicine,Ligature Strangulation & Throttling,10
+Forensic Medicine,Other Forms Of Asphyxia,10
+Forensic Medicine,Explosion Injuries,3
+Forensic Medicine,"Adipocere, Mummification & Embalming",15
+Forensic Medicine,Algor Mortis,10
+Forensic Medicine,Classification of Postmortem Changes,15
+Forensic Medicine,Death & It's Types,10
+Forensic Medicine,Decomposition,8
+Forensic Medicine,Eye Changes After Death,10
+Forensic Medicine,Muscular Charges,6
+Forensic Medicine,Post Mortem Hypostasis,10
+Forensic Medicine,Time Since Death & Legal Aspects,6
+Forensic Medicine,Definitions,10
+Forensic Medicine,Live Birth,6
+Forensic Medicine,"Syndromes-Battered Baby, Munchausen & SID's",10
+Forensic Medicine,Blood & Seminal Stains,10
+Forensic Medicine,Medico - Legal Autopsy,10
+Forensic Medicine,Impotence & Sterility,6
+Forensic Medicine,Medico-Legal Aspects of Injuries,10
+Forensic Medicine,Abortion,4
+Forensic Medicine,Abrasions,10
+Forensic Medicine,Contusions,8
+Forensic Medicine,Lacerations & Incised Wounds,8
+Forensic Medicine,Stab Wounds,5
+Forensic Medicine,Age Estimation By X-Ray Examination,6
+Forensic Medicine,Consent & Euthanasia,6
+Forensic Medicine,Defenses Against Negligence,10
+Forensic Medicine,Important Concepts Related to Medical Negligence,10
+Forensic Medicine,Infamous Conduct,8
+Forensic Medicine,Professional Negligence,12
+Forensic Medicine,Professional Secrecy & Privileged Communication,6
+Forensic Medicine,Courts Of Law,8
+Forensic Medicine,Definitions & Inquest,12
+Forensic Medicine,Evidence,8
+Forensic Medicine,Summons,3
+Forensic Medicine,Witness,6

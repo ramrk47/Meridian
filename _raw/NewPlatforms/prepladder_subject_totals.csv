@@ -1,0 +1,20 @@
+prof,subject,total_modules
+Prof 1,Anatomy,71
+Prof 1,Physiology,57
+Prof 1,Biochemistry,43
+Prof 2,Pathology,95
+Prof 2,Pharmacology,76
+Prof 2,Microbiology,52
+Prof 2,Forensic Medicine,35
+Final Prof Part 1,PSM,81
+Final Prof Part 1,ENT,40
+Final Prof Part 1,Ophthalmology,46
+Final Prof Part 2 Major,"Gynaecology & Obstetrics",74
+Final Prof Part 2 Major,Pediatrics,60
+Final Prof Part 2 Major,Surgery,80
+Final Prof Part 2 Major,Medicine,116
+Final Prof Part 2 Minor,Radiology,31
+Final Prof Part 2 Minor,Anaesthesia,29
+Final Prof Part 2 Minor,Orthopaedics,41
+Final Prof Part 2 Minor,Psychiatry,41
+Final Prof Part 2 Minor,Dermatology,47
