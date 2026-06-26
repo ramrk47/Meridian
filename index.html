@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Meridian — Cross-platform exam almanac</title>
+<meta name="description" content="Neutral cross-platform tracker for NEET PG / INI-CET / FMGE — Marrow, Cerebellum, DocTutorials in one place.">
 <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181513" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Meridian">
+<meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
 <a class="skip" href="#app">Skip to content</a>
 <header class="topbar">
   <div class="brand">
-    <span class="logo">M</span>
+    <button class="logo" id="btnHome" aria-label="Overview (home)" title="Overview — home">M</button>
     <div class="brandtxt">
       <h1>Meridian</h1>
-      <p class="sub">Cross-platform exam almanac · NEET PG / INI-CET · Marrow · Cerebellum · CoreBTR · <span id="capDate"></span></p>
+      <p class="sub" id="subhead">Cross-platform exam almanac</p>
     </div>
+    <span class="mob-title" id="mobTitle" aria-hidden="true">Overview</span>
     <div class="toolbar">
       <button class="tbtn key" id="btnSearch" title="Universal search (⌘K / Ctrl-K)"><span>⌘K</span> Search</button>
       <button class="tbtn" id="btnTheme" title="Day / evening edition">☀ Day</button>
@@ -23,9 +33,19 @@
       <button class="tbtn danger" id="btnReset" title="Clear your tracking">⟲ Reset</button>
       <input type="file" id="importFile" accept="application/json" hidden>
     </div>
+    <!-- compact mobile actions (≤640px) -->
+    <button class="iconbtn mob-only" id="btnSearchM" aria-label="Search (⌘K)" title="Search">⌘K</button>
+    <div class="overflow mob-only">
+      <button class="iconbtn" id="btnOverflow" aria-label="More actions" aria-expanded="false" aria-haspopup="true" title="More">⋯</button>
+      <div class="overflow-menu" id="overflowMenu" role="menu" hidden>
+        <button role="menuitem" data-proxy="btnTheme" id="ovTheme">☀ Theme</button>
+        <button role="menuitem" data-proxy="btnExport">⤓ Export</button>
+        <button role="menuitem" data-proxy="btnImport">⤒ Import</button>
+        <button role="menuitem" data-proxy="btnReset" class="danger">⟲ Reset</button>
+      </div>
+    </div>
   </div>
   <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
-    <button class="tab active" role="tab" aria-selected="true" data-view="overview">Overview</button>
     <button class="tab" role="tab" aria-selected="false" data-view="qbank">QBank Tracker</button>
     <button class="tab" role="tab" aria-selected="false" data-view="progress">Progress</button>
     <button class="tab" role="tab" aria-selected="false" data-view="tests">Tests &amp; Scores</button>
@@ -46,10 +66,20 @@
 </main>
 
 <footer class="foot">
-  <span>Local-first · your ticks &amp; scores save on this device · <b>⌘K</b> to search · press <b>1–6</b> to switch tabs · export anytime · server-ready (see <code>server/</code>)</span>
+  <span>Local-first · your ticks &amp; scores save on this device · <b>⌘K</b> to search · press <b>1–7</b> to switch tabs · export anytime · server-ready (see <code>server/</code>)</span>
 </footer>
 
-<!-- detail drawer -->
+<!-- bottom tab nav (mobile, ≤640px) -->
+<nav class="botnav" id="botnav" aria-label="Sections">
+  <button data-view="qbank" aria-label="QBank Tracker"><span class="bn-i">▤</span><span class="bn-l">QBank</span></button>
+  <button data-view="progress" aria-label="Progress"><span class="bn-i">◔</span><span class="bn-l">Progress</span></button>
+  <button data-view="tests" aria-label="Tests &amp; Scores"><span class="bn-i">✓</span><span class="bn-l">Tests</span></button>
+  <button data-view="hy" aria-label="High-Yield"><span class="bn-i">★</span><span class="bn-l">Yield</span></button>
+  <button data-view="videos" aria-label="Videos"><span class="bn-i">▷</span><span class="bn-l">Videos</span></button>
+  <button data-view="planner" aria-label="Study Planner"><span class="bn-i">▦</span><span class="bn-l">Plan</span></button>
+</nav>
+
+<!-- detail drawer / bottom-sheet -->
 <div class="drawer-scrim" id="drawerScrim"></div>
 <aside class="drawer" id="drawer" aria-label="Topic detail" aria-hidden="true">
   <div class="drawer-head"><button class="xbtn" id="drawerClose" title="Close (Esc)" aria-label="Close">✕</button></div>
@@ -69,5 +99,10 @@
 <script src="data.js"></script>
 <script src="storage.js"></script>
 <script src="app.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  }
+</script>
 </body>
 </html>

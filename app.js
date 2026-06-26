@@ -579,7 +579,7 @@ function renderHY() {
     cp.innerHTML = `<div class="ph"><div><h3>Consensus high-yield — banks agree ★★★</h3>
       <span class="muted" style="font-size:12px">the strongest prioritisation signal: top-tier on two or more platforms for the same topic</span></div>
       <span class="count-pill">${consensus.length} topics</span></div>`;
-    const tbl = el("table");
+    const tbl = el("table", "resp");
     tbl.innerHTML = `<thead><tr><th>Subject</th>${QBANKS.map(p => `<th>${esc(p.name)}</th>`).join("")}<th class="num">Σ MCQs</th><th>Your coverage</th></tr></thead><tbody></tbody>`;
     const tb = $("tbody", tbl);
     consensus.slice(0, 24).forEach(x => {
@@ -636,6 +636,7 @@ function renderHY() {
     });
     wrap.appendChild(panel);
   });
+  labelizeResponsiveTables();
 }
 
 /* ============================================================
@@ -656,7 +657,7 @@ function renderProgress() {
   const ledger = el("div", "panel");
   ledger.innerHTML = `<div class="ph"><div><h3>Combined coverage — both banks per subject</h3>
     <span class="muted" style="font-size:12px">attempted across the union of Marrow + Cerebellum · ⚠ flags a lopsided subject covered from one source only</span></div></div>`;
-  const ltbl = el("table");
+  const ltbl = el("table", "resp");
   ltbl.innerHTML = `<thead><tr><th>Subject</th><th class="num">Items</th><th class="num">Combined</th>${QBANKS.map(p => `<th class="num">${esc(p.name)}</th>`).join("")}<th style="width:24%">Coverage</th></tr></thead><tbody></tbody>`;
   const ltb = $("tbody", ltbl);
   const maps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s.subject])));
@@ -688,7 +689,7 @@ function renderProgress() {
     panel.innerHTML = `<div class="ph"><div><h3><span class="platlabel ${p.cls}" style="color:${p.color}">${esc(p.name)}</span> · per-subject progress</h3>
       <span class="muted" style="font-size:12px">click a subject to open it in the tracker</span></div>
       <div class="legend"><span><i style="background:var(--marrow)"></i>attempted</span><span><i style="background:var(--core)"></i>reviewed</span></div></div>`;
-    const tbl = el("table");
+    const tbl = el("table", "resp");
     tbl.innerHTML = `<thead><tr><th>Subject</th><th class="num">Items</th><th class="num">Attempted</th><th class="num">Reviewed</th><th style="width:34%">Progress</th></tr></thead><tbody></tbody>`;
     const tb = $("tbody", tbl);
     p.subjects.forEach(s => {
@@ -702,6 +703,7 @@ function renderProgress() {
     panel.appendChild(tbl);
     v.appendChild(panel);
   });
+  labelizeResponsiveTables();
 }
 
 /* ============================================================
@@ -774,7 +776,7 @@ function renderTests() {
   else if (testPlat !== "all") rows = rows.filter(t => t.platform === testPlat);
 
   const panel = el("div", "panel");
-  panel.innerHTML = `<table class="tests"><thead><tr>
+  panel.innerHTML = `<table class="tests resp"><thead><tr>
     <th>Test</th><th>Type</th><th class="num">Q</th><th class="num">Right</th><th class="num">Wrong</th>
     <th class="num">Acc.</th><th>Difficulty</th><th></th></tr></thead><tbody></tbody></table>`;
   const tb = $("tbody", panel);
@@ -787,7 +789,7 @@ function renderTests() {
     const ap = el("div", "panel");
     ap.innerHTML = `<div class="ph"><div><h3>Your subjects, weakest first</h3>
       <span class="muted" style="font-size:12px">accuracy inferred from your scored <em>subject</em> tests (broad GTs excluded) · click to drill in</span></div></div>`;
-    const at = el("table");
+    const at = el("table", "resp");
     at.innerHTML = `<thead><tr><th>Subject</th><th class="num">Accuracy</th><th class="num">Attempted</th><th class="num">Tests</th><th style="width:30%"></th></tr></thead><tbody></tbody>`;
     const atb = $("tbody", at);
     sacc.forEach(x => {
@@ -810,6 +812,7 @@ function renderTests() {
     `<div class="tdate">${t.date}</div><div class="tname">${t.name}</div><div class="tmeta">${t.questions} Q · ${t.duration} min</div>`)));
   p2.appendChild(tl);
   v.appendChild(p2);
+  labelizeResponsiveTables();
 }
 function scoreRow(t) {
   const s = Store.score(t.id) || {};
@@ -1038,7 +1041,7 @@ function renderPlanner() {
 
   const p = el("div", "panel");
   p.innerHTML = `<div class="ph"><div><h3>Suggested weekly rhythm</h3></div></div>
-    <table><thead><tr><th>Day</th><th>Focus</th><th>Test layer</th></tr></thead><tbody>
+    <table class="resp"><thead><tr><th>Day</th><th>Focus</th><th>Test layer</th></tr></thead><tbody>
       <tr><td>Mon–Tue</td><td>Tier-1 subject — new modules in primary bank</td><td>Subject test (50 Q)</td></tr>
       <tr><td>Wed</td><td>Cross-check same subject in the other bank (gaps only)</td><td>Mini Test</td></tr>
       <tr><td>Thu–Fri</td><td>Tier-2 subject pass</td><td>Subject test + error log</td></tr>
@@ -1051,6 +1054,7 @@ function renderPlanner() {
       <div class="kpi">at <b>150/day</b> → <b>${Math.round(QBANK_MCQ / 150)}</b> days</div>
     </div>`;
   v.appendChild(p);
+  labelizeResponsiveTables();
 }
 
 /* ============================================================
@@ -1255,6 +1259,37 @@ function wireToolbar() {
   $("#btnSearch")?.addEventListener("click", openPalette);
   $("#btnTheme")?.addEventListener("click", toggleTheme);
 }
+/* mobile-only chrome: compact search button + overflow "⋯" menu (proxies the toolbar) */
+function wireMobileChrome() {
+  $("#btnSearchM")?.addEventListener("click", openPalette);
+  const ovBtn = $("#btnOverflow"), ovMenu = $("#overflowMenu");
+  if (!ovBtn || !ovMenu) return;
+  const close = () => { ovMenu.hidden = true; ovBtn.setAttribute("aria-expanded", "false"); };
+  ovBtn.addEventListener("click", e => {
+    e.stopPropagation();
+    const willOpen = ovMenu.hidden; ovMenu.hidden = !willOpen; ovBtn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+  });
+  ovMenu.addEventListener("click", e => { const b = e.target.closest("[data-proxy]"); if (b) { close(); $("#" + b.dataset.proxy)?.click(); } });
+  document.addEventListener("click", e => { if (!ovMenu.hidden && !e.target.closest(".overflow")) close(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !ovMenu.hidden) close(); });
+}
+/* bottom-sheet drawer: drag the handle down to dismiss (mobile only) */
+function wireDrawerDrag() {
+  const dr = $("#drawer"), head = $(".drawer-head", dr); if (!head) return;
+  let startY = 0, curY = 0, dragging = false;
+  const isSheet = () => matchMedia("(max-width:640px)").matches;
+  head.addEventListener("touchstart", e => {
+    if (!isSheet() || !dr.classList.contains("open")) return;
+    dragging = true; startY = e.touches[0].clientY; curY = 0; dr.style.transition = "none";
+  }, { passive: true });
+  head.addEventListener("touchmove", e => {
+    if (!dragging) return; curY = Math.max(0, e.touches[0].clientY - startY); dr.style.transform = `translateY(${curY}px)`;
+  }, { passive: true });
+  head.addEventListener("touchend", () => {
+    if (!dragging) return; dragging = false; dr.style.transition = ""; dr.style.transform = "";
+    if (curY > 90) closeDrawer();
+  });
+}
 function toast(msg, bad) {
   const t = el("div", "toast" + (bad ? " bad" : ""), msg); document.body.appendChild(t);
   setTimeout(() => t.classList.add("show"), 10);
@@ -1268,15 +1303,33 @@ function toggleTheme() {
 
 const RENDER = { overview: renderOverview, qbank: renderQbank, progress: renderProgress, tests: renderTests, hy: renderHY, videos: renderVideos, planner: renderPlanner };
 const TAB_ORDER = ["overview", "qbank", "progress", "tests", "hy", "videos", "planner"];
+const TAB_LABEL = { overview: "Overview", qbank: "QBank Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
 let currentView = "overview";
 function show(view) {
   currentView = view;
   $$(".tab").forEach(t => { const on = t.dataset.view === view; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
+  $$("#botnav button").forEach(b => { const on = b.dataset.view === view; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
+  const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
+  const mt = $("#mobTitle"); if (mt) mt.textContent = TAB_LABEL[view] || view;
   $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + view));
   RENDER[view]();
+  labelizeResponsiveTables();
   setHeaderHeight();
   try { location.hash = view; } catch {}
   window.scrollTo({ top: 0 });
+}
+/* card-list table mode (mobile): auto-stamp each cell with its column header,
+   and wrap wide tables in a horizontal-scroll fallback for the tablet range
+   (cards take over ≤640px, where .tbl-scroll goes overflow:visible). */
+function labelizeResponsiveTables() {
+  $$("#app .view.active table.resp").forEach(tbl => {
+    if (!tbl.parentElement.classList.contains("tbl-scroll")) {
+      const wrap = el("div", "tbl-scroll");
+      tbl.parentNode.insertBefore(wrap, tbl); wrap.appendChild(tbl);
+    }
+    const heads = $$("thead th", tbl).map(th => th.textContent.trim());
+    $$("tbody tr", tbl).forEach(tr => $$("td", tr).forEach((td, i) => { if (heads[i]) td.setAttribute("data-label", heads[i]); }));
+  });
 }
 function setHeaderHeight() {
   const h = $(".topbar")?.offsetHeight || 110;
@@ -1333,12 +1386,18 @@ document.addEventListener("keydown", e => {
 });
 
 function init() {
-  $("#capDate").textContent = "captured " + D.captured;
+  // dynamic subhead — derived from D.platforms (no hardcoded platform list)
+  const sub = $("#subhead");
+  if (sub) sub.textContent = `Cross-platform exam almanac · ${D.exam || ""} · ${PLATFORMS.map(p => p.name).join(" · ")} · captured ${D.captured}`;
   // theme
   try { if (localStorage.getItem("meridian_theme") === "evening") { document.body.classList.add("evening"); } } catch {}
   if ($("#btnTheme")) $("#btnTheme").textContent = document.body.classList.contains("evening") ? "☾ Evening" : "☀ Day";
   wireToolbar();
+  wireMobileChrome();
+  wireDrawerDrag();
   $("#tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) show(b.dataset.view); });
+  $("#botnav").addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.dataset.view); });
+  $("#btnHome")?.addEventListener("click", () => show("overview"));
   document.body.addEventListener("click", appClick); // body, not #app — drawer/palette live outside #app
   $("#app").addEventListener("input", testsInput);
   // keyboard activation for focusable non-button controls (Enter / Space)

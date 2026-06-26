@@ -21,6 +21,13 @@
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Sorts Mill Goudy",Georgia,"Times New Roman",serif;
   --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,system-ui,"Helvetica Neue",sans-serif;
   --r:13px; --hh:118px;
+  /* fluid layout tokens — grow with the viewport, cap for readability */
+  --container:1480px;
+  --pad:clamp(16px,4vw,38px);     /* side padding for top bar / main / footer */
+  --gap:clamp(14px,2.2vw,24px);   /* generic grid/flow gap */
+  --botnav-h:0px;                 /* reserved bottom-nav height (set on mobile) */
+  --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-t:env(safe-area-inset-top,0px);
 }
 /* evening edition — warm dusk, not a cold flip */
 body.evening{
@@ -46,12 +53,14 @@ body{
 
 /* ---------- top bar ---------- */
 .topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
-  backdrop-filter:blur(10px) saturate(1.05);border-bottom:1px solid var(--line);padding:20px 38px 0}
+  backdrop-filter:blur(10px) saturate(1.05);border-bottom:1px solid var(--line);padding:20px var(--pad) 0}
 .brand{display:flex;align-items:center;gap:15px;margin-bottom:16px}
 .brandtxt{flex:1}
 .logo{width:40px;height:40px;flex:none;border:1.5px solid var(--ink);border-radius:50%;
   display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;color:var(--ink);
-  background:transparent;letter-spacing:.5px}
+  background:transparent;letter-spacing:.5px;padding:0;cursor:pointer;transition:.18s}
+.logo:hover{background:var(--ink);color:var(--paper)}
+.logo.active{background:var(--accent);border-color:var(--accent);color:var(--paper)}
 .topbar h1{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:.2px;color:var(--ink);line-height:1.1}
 .sub{color:var(--ink-2);font-size:12.5px;margin-top:3px;letter-spacing:.01em}
 .toolbar{display:flex;gap:8px;align-self:flex-start;margin-top:2px}
@@ -66,14 +75,14 @@ body{
 .tab.active{color:var(--ink)}
 .tab.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);border-radius:2px}
 
-main{max-width:1140px;margin:0 auto;padding:34px 38px 60px}
+main{width:min(100% - 2rem,var(--container));margin:0 auto;padding:clamp(20px,3vw,34px) var(--pad) calc(60px + var(--botnav-h))}
 .view{display:none;animation:fade .4s ease}
 .view.active{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 
 /* section headers */
 h2.section{font-family:var(--serif);font-size:19px;font-weight:500;margin:6px 0 18px;color:var(--ink)}
-.foot{max-width:1140px;margin:0 auto;padding:24px 38px 40px;color:var(--ink-3);font-size:12px;border-top:1px solid var(--line)}
+.foot{width:min(100% - 2rem,var(--container));margin:0 auto;padding:24px var(--pad) calc(40px + var(--botnav-h) + var(--safe-b));color:var(--ink-3);font-size:12px;border-top:1px solid var(--line)}
 .foot code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--ink-2)}
 
 /* ---------- stat figures ---------- */
@@ -224,7 +233,7 @@ table.tests td{vertical-align:middle}
 .xbtn:hover{border-color:var(--bad);color:var(--bad)}
 
 /* ---------- high-yield ---------- */
-.hy-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.hy-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
 .hy-h{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:0 0 8px;border-bottom:1px solid var(--line-2);margin-bottom:8px}
 .hy-h.m{color:var(--marrow)} .hy-h.c{color:var(--cere)}
 .hy-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:13.5px}
@@ -442,3 +451,222 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
 .conf.estimated{background:var(--paper-3);color:var(--ink-3)}
 .vchips.big{display:flex;gap:7px;margin-bottom:10px}
 .vchips.big .chip{width:auto;height:auto;padding:7px 13px;border-radius:8px;font-size:12px}
+
+/* ============================================================
+   PHASE 1B — fluid-everywhere + first-class mobile + PWA shell
+   Container queries drive in-panel reflow; viewport media drives
+   the app chrome (compact header, bottom nav, sheets). Mobile-first
+   tap targets ≥44px; safe-area insets on every sticky/fixed edge.
+   ============================================================ */
+
+/* wide tables get a horizontal-scroll fallback (tablet/desktop); ≤640 they become cards */
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ---- container-query contexts (content reflow, not chrome) ---- */
+/* qbank/videos keep a sticky sidebar → stay viewport-driven (sticky-safe) */
+.view{container-type:inline-size}
+#view-qbank,#view-videos{container-type:normal}
+@container (max-width:820px){ .two-col{grid-template-columns:1fr} }
+@container (max-width:620px){ .hy-cols{grid-template-columns:1fr} }
+@container (max-width:540px){ .statgrid{grid-template-columns:1fr 1fr} }
+@container (max-width:370px){ .statgrid{grid-template-columns:1fr} }
+/* huge screens: cap card width so figures don't sprawl */
+@container (min-width:1280px){ .statgrid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))} }
+
+/* ---- chrome that only exists on mobile ---- */
+.iconbtn{width:44px;height:44px;flex:none;border-radius:10px;border:1px solid var(--line-2);
+  background:transparent;color:var(--ink-2);font:600 13px var(--sans);cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;transition:.15s}
+.iconbtn:hover{border-color:var(--ink);color:var(--ink)}
+.iconbtn:active{background:var(--paper-3)}
+.overflow{position:relative}
+.overflow-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:178px;z-index:65;
+  background:var(--paper-2);border:1px solid var(--line-2);border-radius:13px;padding:6px;
+  box-shadow:0 18px 46px rgba(20,17,14,.22);display:flex;flex-direction:column;gap:2px}
+.overflow-menu[hidden]{display:none}
+.overflow-menu button{display:flex;align-items:center;gap:10px;background:none;border:0;cursor:pointer;
+  text-align:left;padding:12px 14px;border-radius:9px;color:var(--ink);font:500 14.5px var(--sans);min-height:46px}
+.overflow-menu button:hover{background:var(--paper-3)}
+.overflow-menu button.danger{color:var(--bad)}
+
+/* ---- bottom tab nav (fixed, thumb-reach) ---- */
+.botnav{display:none}
+.botnav button{flex:1;min-width:0;background:none;border:0;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  padding:7px 1px 6px;color:var(--ink-3);font:600 9.5px var(--sans);letter-spacing:.01em;min-height:54px}
+.botnav .bn-i{font-size:18px;line-height:1}
+.botnav .bn-l{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.botnav button.active{color:var(--accent)}
+.botnav button.active .bn-i{transform:translateY(-1px)}
+.botnav button:active{background:var(--paper-3)}
+
+/* desktop default: hide all mobile-only chrome (after .iconbtn so the combo .iconbtn.mob-only stays hidden) */
+.mob-title,.mob-only{display:none}
+
+/* keep 16px+ inputs everywhere on touch to stop iOS auto-zoom (applied in mobile layer) */
+
+/* ============================================================
+   MOBILE LAYER  ≤640px
+   ============================================================ */
+@media (max-width:640px){
+  body{--botnav-h:60px}
+
+  /* --- compact sticky header --- */
+  .topbar{padding:calc(9px + var(--safe-t)) 14px 0}
+  .brand{margin-bottom:9px;gap:10px;align-items:center}
+  .brandtxt{display:none}
+  .mob-title{display:block;flex:1;min-width:0;font-family:var(--serif);font-size:18px;font-weight:500;
+    color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.1}
+  .toolbar{display:none}
+  .mob-only{display:inline-flex}
+  .logo{width:34px;height:34px;font-size:17px}
+  .tabs{display:none}              /* replaced by bottom nav */
+
+  /* --- bottom nav on --- */
+  .botnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;
+    background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px) saturate(1.05);
+    border-top:1px solid var(--line);padding-bottom:var(--safe-b)}
+
+  /* --- generic spacing trims --- */
+  main,.foot{width:100%}              /* drop the desktop auto-gutter; padding is the only inset on phones */
+  main{padding:18px 14px calc(40px + var(--botnav-h))}
+  .foot{padding-left:14px;padding-right:14px}
+  .mini-n,.hy-n,.sb-name,.cat-name{min-width:0}   /* let ellipsis cells shrink inside their grids */
+  /* segmented controls (platform / test filters) scroll instead of overflowing */
+  .controls .seg{max-width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .seg button{white-space:nowrap}
+  h2.section{font-size:18px}
+  .panel{padding:18px 16px;border-radius:13px;margin-bottom:16px}
+  .callout{padding:15px 16px}
+  .statgrid{gap:11px;margin-bottom:18px}
+  .stat{padding:18px 18px 16px}
+  .stat .big{font-size:34px}
+  .stat::before,.stat.m::before,.stat.c::before,.stat.k::before,.stat.g::before{left:18px}
+
+  /* inputs ≥16px → no iOS zoom; full-width controls */
+  input.search,select.sel,.sin,.pal-input{font-size:16px}
+  .controls{gap:9px}
+  .controls input.search,.controls select.sel{width:100%;min-width:0;flex:1 1 100%}
+  .controls .spacer{display:none}
+  .controls .count-pill{flex:1 1 100%;text-align:center}
+
+  /* --- comparison bars: tighter label gutter --- */
+  .barrow{grid-template-columns:88px 1fr;gap:10px}
+  .barrow .name{font-size:12px}
+
+  /* --- QBank: sidebar → horizontal subject chip-strip --- */
+  .qb-layout{grid-template-columns:minmax(0,1fr);gap:12px}
+  .qb-side{position:static;max-height:none;gap:8px;min-width:0}
+  .qb-side-top{flex-direction:row;gap:8px}
+  .qb-side-top .seg{flex:1;min-width:0;overflow-x:auto}
+  .qb-side-top .sel.mini{flex:1;min-width:0}
+  .sb-list{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;max-height:none;gap:8px;min-width:0;
+    padding:2px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .sb-item{flex:0 0 auto;width:auto;min-height:44px;border:1px solid var(--line-2);border-radius:22px;
+    padding:8px 15px;scroll-snap-align:start}
+  .sb-item .sb-row1{gap:7px}
+  .sb-item .sb-row2{margin-top:3px}
+  .sb-item .meter-bar{display:none}              /* keep chip compact: text count only */
+  .sb-item .meter{gap:0}
+  .sb-item.on{background:var(--ink);border-color:var(--ink)}
+  .sb-item.on .sb-name,.sb-item.on .meter-txt{color:var(--paper)}
+
+  /* qb controls: search on its own row, rest scrolls horizontally */
+  .qb-controls{gap:8px;padding:10px 0}
+  .qb-controls .search{order:-1;flex:1 1 100%;min-width:0}
+  .qb-controls .sel{flex:1 1 auto;min-width:0;font-size:14px;padding:9px 10px}
+  .qb-controls .spacer{display:none}
+  .qb-controls .chipbtn,.qb-controls .ghostbtn{min-height:42px}
+
+  .subj-hero{padding:4px 0 12px}
+  .sh-name{font-size:21px}
+  .sh-meters{gap:16px 20px;margin-top:10px}
+
+  /* category header: drop the inline meter, keep chev/name/mcq/bulk */
+  .cat-head{grid-template-columns:16px 1fr auto auto;gap:9px;padding:13px 13px}
+  .cat-head .cat-meter{display:none}
+  .cat-name{font-size:14px}
+  .bulkbtn{min-height:38px;padding:6px 10px}
+
+  /* leaf rows: name on top, big tappable A/R/Rt chips below */
+  .row.mrow{grid-template-columns:auto auto 1fr;
+    grid-template-areas:"name name name" "rate mcq chips";
+    gap:7px 12px;padding:13px 13px}
+  .row.mrow .rname{grid-area:name;display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+  .row.mrow .rrate{grid-area:rate;text-align:left}
+  .row.mrow .rmcq{grid-area:mcq;text-align:left;font-size:13px}
+  .row.mrow .chips{grid-area:chips;justify-content:flex-end;gap:7px}
+  .row.mrow .chip{width:44px;height:44px;border-radius:10px;font-size:13.5px}
+  .pinstar{font-size:16px;margin-right:4px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center}
+
+  /* --- Videos rows --- */
+  .vrow{grid-template-columns:26px 1fr auto;padding:13px 4px}
+  .vrow .chip{width:44px;height:38px}
+
+  /* --- tables → stacked cards (label:value) --- */
+  .tbl-scroll{overflow:visible}      /* cards don't scroll */
+  table.resp{display:block}
+  table.resp thead{display:none}   /* labelizer reads header text in JS, then data-label drives the cards */
+  table.resp tbody,table.resp tr,table.resp td{display:block;width:100%}
+  table.resp tr{border:1px solid var(--line);border-radius:12px;background:var(--paper-2);
+    margin-bottom:10px;padding:5px 4px}
+  table.resp tbody tr:hover{background:var(--paper-2)}
+  table.resp td{border:0;border-top:1px solid var(--line);padding:9px 13px;text-align:right;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 14px;min-width:0;min-height:42px}
+  table.resp td::before{content:attr(data-label);color:var(--ink-3);font-size:10.5px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;text-align:left;flex:none}
+  table.resp td:first-child{border-top:0;font-weight:600;font-size:15px;padding-top:11px;justify-content:flex-start}
+  table.resp td:first-child::before{display:none}
+  table.resp td.num{font-variant-numeric:tabular-nums}
+  /* progress bar cells fill the card width */
+  table.resp td .pbar.lg{max-width:none;width:100%}
+  table.resp td:has(.pbar){display:block}
+  table.resp td:has(.pbar)::before{display:block;margin-bottom:7px}
+  /* tests: larger score inputs in card mode */
+  table.tests.resp .sin{width:84px;height:40px;font-size:16px}
+  table.tests.resp .diff{display:flex;gap:4px}
+  table.tests.resp .ds{font-size:22px;padding:2px}
+
+  /* --- detail drawer → bottom sheet --- */
+  .drawer{top:auto;right:0;left:0;bottom:0;width:100%;max-width:100%;height:auto;max-height:88vh;
+    border-left:0;border-top:1px solid var(--line-2);border-radius:18px 18px 0 0;
+    transform:translateY(102%);box-shadow:0 -22px 60px rgba(20,17,14,.3)}
+  .drawer.open{transform:none}
+  .drawer-head{justify-content:center;padding:10px 16px 2px;position:relative;touch-action:none}
+  .drawer-head::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);
+    width:42px;height:5px;border-radius:3px;background:var(--line-2)}
+  .drawer-head .xbtn{position:absolute;right:14px;top:8px}
+  .drawer-body{padding:6px 20px calc(28px + var(--safe-b))}
+  .dr-title{font-size:21px}
+
+  /* --- command palette → full screen --- */
+  .pal-box{max-width:100%;width:100%;height:100%;margin:0;border:0;border-radius:0;
+    display:flex;flex-direction:column;padding-top:var(--safe-t)}
+  .pal-input{font-size:17px;padding:17px 18px}
+  .pal-list{max-height:none;flex:1}
+  .pal-item{grid-template-columns:74px 1fr;grid-template-areas:"type label" "type sub";gap:2px 10px;padding:11px 12px}
+  .pal-item .pal-type{grid-area:type;align-self:center}
+  .pal-item .pal-label{grid-area:label}
+  .pal-item .pal-sub{grid-area:sub;white-space:normal}
+  .pal-foot{padding-bottom:calc(10px + var(--safe-b))}
+
+  /* --- planner tiers --- */
+  .plan-grid{grid-template-columns:1fr;gap:12px}
+
+  /* toast clears the bottom nav */
+  .toast{bottom:calc(20px + var(--botnav-h) + var(--safe-b))}
+}
+
+/* very narrow phones (≤360px): shave a little more */
+@media (max-width:360px){
+  .botnav .bn-l{font-size:9px}
+  .sh-meters{gap:12px 16px}
+  .row.mrow .chip{width:42px;height:42px}
+  .dr-facts{gap:12px}
+}
+
+/* coarse-pointer (touch) anywhere: remove hover-only reveals, enlarge taps */
+@media (hover:none){
+  .leaf-link,.mini-n,.vtopic{ -webkit-tap-highlight-color:transparent }
+  .tbtn,.chipbtn,.ghostbtn,.btn,.linkbtn{min-height:40px}
+}
