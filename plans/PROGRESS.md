@@ -50,6 +50,11 @@
 ### Phase 0 — settle strategy
 - [x] Resolve the 5 forks; produce a re-ranked, sequenced roadmap into `VISION_and_ROADMAP.md`. *(2026-06-27)*
 ### Phase 1 — foundation (powers the free tracker; needed regardless of forks)
+- [x] **1b.2 · Mobile density redesign** (`MOBILE_DESIGN_STANDARD.md`). *Fixes the 1b rejection.* *(2026-06-27)*
+  KPIs→compact 2-col stat-tile grid (≥6 above fold; 3-col ≥414); QBank 5-control stack→**one toolbar row**
+  (slim search + sort/filter **icon buttons → bottom-sheet** + ★ pill); category rows 54px; compact subject
+  hero (tabular stats, no redundant legend); tighter panels/type. Desktop untouched (changes scoped ≤640).
+  Verified 320–1920 (no h-scroll, console clean); 375 shows 6 tiles + next section / toolbar + 6 cat rows.
 - [x] **1b · Responsive + mobile-first rebuild** (`RESPONSIVE_MOBILE_REWORK.md`). *Incumbents are mobile-first (H5).* *(2026-06-27)*
   Fluid container (→1480) + container queries; compact mobile header + **bottom tab nav**; QBank subject
   chip-strip; drawer→bottom-sheet; palette→full-screen; tables→card lists; **PWA** (manifest+SW+icon).
@@ -73,6 +78,17 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Phase 1b.2 density redesign shipped** — clears the 1b rejection against
+  `MOBILE_DESIGN_STANDARD.md`. Presentation-only (data layer frozen): `index.html` + `styles.css` +
+  render layer of `app.js`. **Overview** 4 giant cards → **6 compact KPI tiles** (2-col, tabular
+  sans numerals, 1-line note, accent bar; 3-col ≥414). Shared `.stat` mobile restyle ⇒ every view's
+  statgrid densifies at once. **QBank** 5 stacked full-width controls → **one toolbar row**: slim
+  search + sort/filter **icon buttons that open a reusable bottom-sheet** (`#sheet`, grab-handle, ✓ on
+  current, filter-active dot) + ★ hi-yield pill; native `<select>`s kept desktop-only (`.desk-ctrl`).
+  Subject hero compacted (tabular stats, dropped redundant meter legend); **category rows 54px**; leaf
+  rows/panels/type tightened. Desktop pristine — all density scoped to `@media(max-width:640px)`.
+  Verified in Preview at 320·360·375·414·480·600·768·834·1024·1280·1440·1920 (no h-scroll any of 7
+  views, console clean); 375 bar met: 6 KPI tiles + next section above fold; toolbar + 6 category rows.
 - 2026-06-27 **Phase 1b shipped** (commits `cac4da7` PWA shell, `8292ff9` rebuild). Presentation-only
   on the frozen N-platform schema (data layer untouched). Fluid container `min(100%-2rem,1480px)` +
   clamp tokens + container queries; mobile (≤640) gets a compact sticky header (monogram + tab title +
