@@ -14,7 +14,8 @@
 - **Working tree:** clean / live **7-tab** app on the **exam-agnostic `D.platforms[]`** model (Phase 1a done).
   Three QBanks now: **Marrow · Cerebellum · DocTutorials** (`window.D = {exam, platforms[], tests, videos}`;
   `QBANK_DATA` is a back-compat alias). N-way consensus + cross-platform layer live.
-- **Known micro-drift (fold into the mobile rebuild, not a standalone commit):** footer says "press 1–6" but there are 7 tabs/keys (`index.html:49`); subhead hardcodes "Marrow · Cerebellum · CoreBTR" (`index.html:16`).
+- **Micro-drifts RESOLVED in Phase 1b** (commit `8292ff9`): footer "1–6"→"1–7"; subhead now derived
+  from `D.platforms` (no hardcoded "Marrow · Cerebellum · CoreBTR").
 - **Blocking next:** decide the 5 strategic forks → sequence roadmap; then foundation (mobile + multi-platform data).
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
@@ -49,7 +50,10 @@
 ### Phase 0 — settle strategy
 - [x] Resolve the 5 forks; produce a re-ranked, sequenced roadmap into `VISION_and_ROADMAP.md`. *(2026-06-27)*
 ### Phase 1 — foundation (powers the free tracker; needed regardless of forks)
-- [ ] **1b · Responsive + mobile-first rebuild** (`RESPONSIVE_MOBILE_REWORK.md`). *Incumbents are mobile-first (H5).* **← next**
+- [x] **1b · Responsive + mobile-first rebuild** (`RESPONSIVE_MOBILE_REWORK.md`). *Incumbents are mobile-first (H5).* *(2026-06-27)*
+  Fluid container (→1480) + container queries; compact mobile header + **bottom tab nav**; QBank subject
+  chip-strip; drawer→bottom-sheet; palette→full-screen; tables→card lists; **PWA** (manifest+SW+icon).
+  Overview moved to the **top-left monogram (home)** to free a bottom-nav slot. Verified 12 widths.
 - [x] **1a · Multi-platform data model** — exam-agnostic `D.platforms[]` + DocTutorials ingest + N-way
   consensus (`DATA_INTEGRATION.md`). *H1.* *(2026-06-27)* DocTutorials Main integrated (13,202 MCQs);
   Marrow+Cerebellum preserved at 42,889. PrepLadder/eGurukul left as a clean ingest seam.
@@ -69,6 +73,17 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Phase 1b shipped** (commits `cac4da7` PWA shell, `8292ff9` rebuild). Presentation-only
+  on the frozen N-platform schema (data layer untouched). Fluid container `min(100%-2rem,1480px)` +
+  clamp tokens + container queries; mobile (≤640) gets a compact sticky header (monogram + tab title +
+  ⌘K + "⋯" overflow), a **fixed bottom tab nav**, QBank subject **chip-strip**, **44×44** A/R/Rt chips,
+  drawer→**drag-to-dismiss bottom sheet**, palette→**full screen**, tables→**label:value cards** (auto-
+  labeled from headers; overflow-x scroll fallback on tablet), 16px inputs, safe-area insets. **PWA**:
+  `manifest.webmanifest` (standalone, paper/ink, maskable SVG) + network-first `sw.js` + `icon.svg`.
+  **UX decision:** Overview is the home page reached via the **top-left monogram** (active-state logo),
+  not a nav item — frees a slot so the bottom nav carries 6 roomier sections. Micro-drifts resolved
+  (footer 1–7; dynamic subhead from `D.platforms`). Verified no horizontal scroll across
+  320·360·375·414·480·600·768·834·1024·1280·1440·1920 (all 7 views), console clean, SW active.
 - 2026-06-27 **Phase 1a shipped** (commits `7bae112..e5af3ca`). `build_data.py` → exam-agnostic
   `window.D = {exam, platforms[], tests, videos}` + `QBANK_DATA` alias shim. DocTutorials Main
   integrated (19 subj / 644 chapters / **13,202 MCQs**; subject-overview states 13,199 → +3 capture
