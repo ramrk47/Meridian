@@ -17,9 +17,11 @@
    proxy, not exam yield.** Relabel it wherever shown (e.g. "MCQ density / volume share") and tag it
    `proxy`. Do NOT compute or imply real exam yield unless PYQ-weighted data backs it; if you add a
    PYQ-weighted measure where PYQ captures exist, keep it **visibly distinct** from the proxy.
-2. **Best-platform/faculty per-subject matrix.** Structure the H3 findings into curated data:
-   per subject → reputed-strong platform(s), tagged **`directional`** ("community reputation"), with
-   source + capture date. Framed as aggregated public sentiment, **never as Meridian's verdict**.
+2. **Best-platform per-subject matrix.** Structure the H3 findings into curated data: per subject →
+   reputed-strong platform(s), tagged **`directional`** ("community reputation"), with source + capture
+   date. Framed as aggregated public sentiment, **never as Meridian's verdict**. *(Faculty-LEVEL strength
+   + faculty entities are a separate pass — `PHASE1C1F_PROMPT.md` / `FACULTY_LAYER.md`. Build the
+   `D.sources[]` registry + epistemic-label conventions here so the faculty pass reuses them.)*
 3. **Neutral reliability scorecard.** Encode the app-store table (Marrow 4.7/33k · PrepLadder 4.4/21k ·
    DocTutorials 4.2/1.7k · Cerebellum 3.7/3.4k · eGurukul 3.0/2.3k + recurring 1–2★ themes), tagged
    `public-3p`, with date + source.

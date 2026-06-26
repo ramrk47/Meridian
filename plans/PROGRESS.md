@@ -63,11 +63,17 @@
   consensus (`DATA_INTEGRATION.md`). *H1.* *(2026-06-27)* DocTutorials Main integrated (13,202 MCQs);
   Marrow+Cerebellum preserved at 42,889. PrepLadder/eGurukul left as a clean ingest seam.
 ### Phase 1c — Data & Visual Experience (before the wedge) — `DATA_VISUAL_STANDARD.md`
-- [ ] **1c.1 · Curation (data-first)** — honest proxy-vs-yield labels; curate best-platform/faculty
+- [ ] **1c.1 · Curation (data-first)** — honest proxy-vs-yield labels; curate best-**platform**
   per-subject matrix (`directional`, sourced) + neutral reliability scorecard (`public-3p`, dated) into
   `D`; `D.sources[]` + "How we rate" surface. Prompt: `plans/PHASE1C1_PROMPT.md`.
+- [ ] **1c.1F · Faculty layer** (`FACULTY_LAYER.md`) — `D.faculty[]` schema + ~10–20 curated seed
+  (career history, gated profile + rolled-up video ratings, `directional`/`verifiedVia`), faculty surface.
+  The IMDB *people* pillar; voting enforced post-backend. Prompt: `plans/PHASE1C1F_PROMPT.md`. *Run after 1c.1.*
+- [ ] **Faculty data pass** (greenlit) — Chrome+research gathering of rosters / movement history / ratings →
+  `_raw/curated/`. Needs user's logged-in browser. Prompt: `plans/FACULTY_DATA_PASS_PROMPT.md`. *Parallel; enriches 1c.1F.*
 - [ ] **1c.2 · Depiction (viz)** — desktop-led data-viz: subject×platform heatmap, consensus view,
-  best-for-subject matrix, MCQ/yield treemap, progress sparklines. Prompt issued after 1c.1 verifies.
+  best-for-subject matrix, **faculty career timeline / per-subject strength**, MCQ/yield treemap,
+  progress sparklines. Prompt issued after 1c.1 + 1c.1F verify.
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **Free Rank/College Predictor** (results-season lead magnet) — if fork #1 says predictor-first.
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer).
@@ -84,6 +90,12 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Faculty layer added as a first-class pillar** (`FACULTY_LAYER.md`) — the IMDB *people*
+  layer. Faculty entities w/ career history (platforms→solo/super-specialty) + two neutral ratings
+  (gated profile votes; rolled-up video rating). We hold ~no faculty data today (verified). Decided:
+  **schema + ~10–20 curated seed now** (`directional`, sourced), **greenlit a data-gathering pass**, and
+  **verifiedVia="in-app-activity"** for voting (enforced post-backend). Guardrail: aggregate-only,
+  community-sentiment framing, never a "worst faculty" board. Passes: 1c.1F + faculty data pass.
 - 2026-06-27 **Phase 1c added before the wedge** (user: baseline *data curation* + *visual experience*
   need a major upgrade). Insight: we show **inventory (counts), not judgment** — the moat data
   (best-faculty/subject, reliability scorecard, true yield) sits in research docs, not the app; desktop

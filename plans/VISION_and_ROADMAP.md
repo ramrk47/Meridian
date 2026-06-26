@@ -100,10 +100,16 @@ in. Meridian is the Switzerland: it makes multi-source study coherent. The data 
 *Decided 2026-06-27: the baseline shows inventory (counts), not the curated cross-platform judgment
 that is Meridian's reason to exist; desktop is still the sparse pre-mobile layout. Raise the floor
 before building the predictor/tracker on it. Governed by `DATA_VISUAL_STANDARD.md`. Two passes:*
-- **1c.1 · Curation (data-first).** Relabel proxy-vs-yield honestly; curate the **best-platform/faculty
+- **1c.1 · Curation (data-first).** Relabel proxy-vs-yield honestly; curate the **best-platform
   per-subject matrix** (H3, `directional`, sourced) + the **neutral reliability scorecard** (`public-3p`,
   dated) into `D` via `build_data.py`; add a `D.sources[]` registry + "How we rate" surface. Neutrality
   firewall enforced; PrepLadder/eGurukul count-drilling is an optional separate Chrome session (don't block).
+- **1c.1F · Faculty layer (the "people" pillar)** — `FACULTY_LAYER.md`. Faculty as first-class entities
+  with **career history** (platforms over time → solo / super-specialty) + two neutral ratings (gated
+  profile votes; rolled-up video rating). The IMDB *people* layer + a unique moat (incumbents can't track
+  a teacher who left). **Now:** schema + ~10–20 curated seed (`directional`, sourced) + a faculty surface;
+  `verifiedVia:"in-app-activity"` designed, **voting enforced post-backend**. Enriched by a greenlit
+  **faculty data-gathering pass** (`FACULTY_DATA_PASS_PROMPT.md`).
 - **1c.2 · Depiction (viz).** Desktop-led data-viz layer: subject×platform **heatmap**, **consensus**
   view, **best-for-subject matrix**, MCQ/yield **treemap/ranked bars**, progress **sparklines** — using
   the width (multi-panel). Mobile-aware per the density standard. Warm almanac identity retained.
