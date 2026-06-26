@@ -1,5 +1,5 @@
 /* ===== Meridian — cross-platform exam almanac ===== */
-const D = window.QBANK_DATA;
+const D = window.QBANK_DATA;   // exam-agnostic model: { exam, platforms[], tests, videos } (QBANK_DATA aliases window.D)
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const fmt = n => (n == null ? "—" : n.toLocaleString("en-IN"));
@@ -16,47 +16,60 @@ const CANON = {
   "Dermatology":"Dermatology","Psychiatry":"Psychiatry","Radiology":"Radiology","Medicine":"Medicine",
   "Surgery":"Surgery","Orthopaedics":"Orthopaedics","Orthopedics":"Orthopaedics","Paediatrics":"Paediatrics",
   "Pediatrics":"Paediatrics","Obstetrics & Gynaecology":"Obstetrics & Gynaecology","Obstetrics & Gynecology":"Obstetrics & Gynaecology",
+  // new-platform aliases (DocTutorials / PrepLadder / eGurukul)
+  "PSM":"Community Medicine / PSM","OB & G":"Obstetrics & Gynaecology","OBG":"Obstetrics & Gynaecology",
+  "Gynaecology & Obstetrics":"Obstetrics & Gynaecology","Obs & Gynae":"Obstetrics & Gynaecology",
 };
 const canon = s => CANON[s] || s;
 const PYQ = "Previous Year Question Papers";
 
-/* ---- totals ---- */
-const marrowFresh = D.marrow.subjects.filter(s => s.subject !== PYQ);
-const marrowMCQ = D.marrow.subjects.reduce((a, s) => a + s.mcqs, 0);
-const cereMCQ = D.cerebellum.subjects.reduce((a, s) => a + s.mcqs, 0);
-const marrowMods = D.marrow.subjects.reduce((a, s) => a + s.modules, 0);
-const cereMods = D.cerebellum.subjects.reduce((a, s) => a + s.modules, 0);
+/* ---- platform registry (N-platform; no hardcoded marrow/cerebellum keys) ---- */
+const PLATFORMS = D.platforms;
+const QBANKS = PLATFORMS.filter(p => p.kind === "qbank");
+const PLAT_BY_ID = Object.fromEntries(PLATFORMS.map(p => [p.id, p]));
+const platName = id => PLAT_BY_ID[id]?.name || id;
+const platCls = id => PLAT_BY_ID[id]?.cls || "m";          // maps to .m/.c/.k color hooks in styles.css
+const platColor = id => PLAT_BY_ID[id]?.color || "var(--marrow)";
+const platInitial = id => (platName(id)[0] || "?").toUpperCase();
+// precompute per-subject MCQ totals once (subject summaries derive from the modules themselves)
+PLATFORMS.forEach(p => p.subjects.forEach(s => { s._mcqs = s.modules.reduce((a, m) => a + m.mcqs, 0); }));
+const freshSubjects = p => p.subjects.filter(s => s.subject !== PYQ);   // drop PYQ paper bucket from rollups
 
-/* ---- flat leaf index (modules + units) ---- */
+/* ---- totals ---- */
+const platMCQ = id => PLAT_BY_ID[id].subjects.reduce((a, s) => a + s._mcqs, 0);
+const platMods = id => PLAT_BY_ID[id].subjects.reduce((a, s) => a + s.modules.length, 0);
+const QBANK_MCQ = QBANKS.reduce((a, p) => a + platMCQ(p.id), 0);   // all integrated banks combined
+
+/* ---- flat leaf index (every platform's modules/units/chapters) ---- */
 const LEAVES = [];
-D.marrow.modules.forEach(m => LEAVES.push({ id: m.id, platform: "marrow", name: m.module, subject: m.subject, canon: canon(m.subject), cat: m.category, rating: m.rating, mcqs: m.mcqs, priority: m.priority, hyScore: m.hyScore }));
-D.cerebellum.units.forEach(u => LEAVES.push({ id: u.id, platform: "cerebellum", name: u.unit, subject: u.subject, canon: canon(u.subject), cat: null, modulesCount: u.modules, rating: null, mcqs: u.mcqs, priority: u.priority, hyScore: u.hyScore }));
+PLATFORMS.forEach(p => p.subjects.forEach(s => s.modules.forEach(m => LEAVES.push({
+  id: m.id, platform: p.id, name: m.name, subject: s.subject, canon: canon(s.subject),
+  cat: m.category || null, rating: m.rating ?? null, mcqs: m.mcqs, modulesCount: m.modulesCount ?? null,
+  priority: m.priority, hyScore: m.hyScore,
+}))));
 const LEAF_BY_ID = Object.fromEntries(LEAVES.map(l => [l.id, l]));
 const allModuleIds = LEAVES.map(l => l.id);
 
 /* subject lookups */
-function subjectsOf(platform) {
-  if (platform === "marrow") {
-    const a = marrowFresh.map(s => s.subject);
-    if (D.marrow.subjects.some(s => s.subject === PYQ)) a.push(PYQ);
-    return a;
-  }
-  return D.cerebellum.subjects.map(s => s.subject);
+function subjectsOf(platform) {                       // PYQ paper bucket (if any) sorts last
+  const p = PLAT_BY_ID[platform]; if (!p) return [];
+  return [...freshSubjects(p), ...p.subjects.filter(s => s.subject === PYQ)].map(s => s.subject);
 }
 function subjMeta(platform, subject) {
-  return platform === "marrow"
-    ? D.marrow.subjects.find(s => s.subject === subject)
-    : D.cerebellum.subjects.find(s => s.subject === subject);
+  const s = PLAT_BY_ID[platform]?.subjects.find(x => x.subject === subject);
+  return s ? { subject, mcqs: s._mcqs, modules: s.modules.length } : null;
 }
 function leavesOf(platform, subject) { return LEAVES.filter(l => l.platform === platform && l.subject === subject); }
-/* Marrow subject -> [{cat, items}]; Cerebellum -> single group {cat:null, items} */
+/* group by category when the platform has one (Marrow); otherwise a single flat group */
 function treeOf(platform, subject) {
   const ls = leavesOf(platform, subject);
-  if (platform !== "marrow") return [{ cat: null, items: ls }];
+  if (!ls.some(l => l.cat)) return [{ cat: null, items: ls }];
   const map = new Map();
   ls.forEach(l => { if (!map.has(l.cat)) map.set(l.cat, []); map.get(l.cat).push(l); });
   return [...map.entries()].map(([cat, items]) => ({ cat, items }));
 }
+/* the platform's "unit" noun for headers (modules vs units vs chapters) */
+const platUnitNoun = id => id === "marrow" ? "modules" : id === "doctutorials" ? "chapters" : "units";
 
 /* rollups */
 function rollup(ids) { let a = 0, r = 0, t = 0; ids.forEach(id => { const p = Store.prog(id); if (p.a) a++; if (p.r) r++; if (p.t) t++; }); return { a, r, t, total: ids.length }; }
@@ -71,22 +84,28 @@ const STOP = new Set("and the of for with system systems disease diseases its hi
 const _tokCache = new Map();
 function toksC(s) { if (_tokCache.has(s)) return _tokCache.get(s); const t = new Set((s || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(w => w.length > 2 && !STOP.has(w))); _tokCache.set(s, t); return t; }
 function sim(a, b) { const ta = toksC(a), tb = toksC(b); if (!ta.size || !tb.size) return 0; let i = 0; ta.forEach(w => { if (tb.has(w)) i++; }); return i / Math.min(ta.size, tb.size); }
-function scoredCross(leaf) {
-  const other = leaf.platform === "marrow" ? "cerebellum" : "marrow";
-  const pool = LEAVES.filter(l => l.platform === other && l.canon === leaf.canon);
+function scoredCross(leaf) {     // matches on ANY other platform sharing the canonical subject
+  const pool = LEAVES.filter(l => l.platform !== leaf.platform && l.canon === leaf.canon);
   return pool.map(l => ({ l, s: Math.max(sim(leaf.name, l.name), leaf.cat ? sim(leaf.cat, l.name) * 0.7 : 0) })).filter(x => x.s >= 0.34).sort((a, b) => b.s - a.s);
 }
-function crossMatches(leaf, limit = 4) { return scoredCross(leaf).slice(0, limit).map(x => x.l); }
+function crossMatches(leaf, limit = 6) { return scoredCross(leaf).slice(0, limit).map(x => x.l); }
 const _bestCross = new Map();
-function bestCross(leaf) {
+function bestCross(leaf) {       // single most-confident match across all other platforms
   if (_bestCross.has(leaf.id)) return _bestCross.get(leaf.id);
   const top = scoredCross(leaf)[0];
   const res = top && top.s >= 0.5 ? top : null; // only confident matches
   _bestCross.set(leaf.id, res); return res;
 }
+const _bestCrossByPlat = new Map();
+function bestCrossByPlat(leaf) { // { platformId: bestLeaf } — best confident match per other platform
+  if (_bestCrossByPlat.has(leaf.id)) return _bestCrossByPlat.get(leaf.id);
+  const out = {};
+  scoredCross(leaf).forEach(({ l, s }) => { if (s >= 0.5 && !out[l.platform]) out[l.platform] = l; });
+  _bestCrossByPlat.set(leaf.id, out); return out;
+}
 function siblings(leaf, limit = 8) {
   let pool;
-  if (leaf.platform === "marrow" && leaf.cat) pool = LEAVES.filter(l => l.platform === "marrow" && l.subject === leaf.subject && l.cat === leaf.cat && l.id !== leaf.id);
+  if (leaf.cat) pool = LEAVES.filter(l => l.platform === leaf.platform && l.subject === leaf.subject && l.cat === leaf.cat && l.id !== leaf.id);
   else pool = LEAVES.filter(l => l.platform === leaf.platform && l.subject === leaf.subject && l.id !== leaf.id);
   return pool.slice(0, limit);
 }
@@ -94,8 +113,8 @@ function siblings(leaf, limit = 8) {
 /* tests index */
 function buildTests() {
   const out = [];
-  D.corebtr.tests.forEach(t => out.push({ id: t.id, platform: "CoreBTR", name: t.name, q: t.questions, status: t.status }));
-  D.cerebellum.gt2026.forEach(t => out.push({ id: t.id, platform: "Cerebellum", name: t.name, q: +t.questions || null, status: t.date }));
+  D.tests.corebtr.forEach(t => out.push({ id: t.id, platform: "CoreBTR", name: t.name, q: t.questions, status: t.status }));
+  D.tests.gt2026.forEach(t => out.push({ id: t.id, platform: "Cerebellum", name: t.name, q: +t.questions || null, status: t.date }));
   Store.state.customTests.forEach(t => out.push({ ...t, custom: true }));
   return out;
 }
@@ -124,7 +143,7 @@ function renderOverview() {
   const stats = el("div", "statgrid");
   const card = (cls, big, lbl, note) => `<div class="stat ${cls}"><div class="big">${big}</div><div class="lbl">${lbl}</div><div class="note">${note}</div></div>`;
   stats.innerHTML =
-    card("g", fmt(marrowMCQ + cereMCQ), "Combined MCQs", `${fmt(allModuleIds.length)} trackable topics across both banks`) +
+    card("g", fmt(QBANK_MCQ), "Combined MCQs", `${fmt(allModuleIds.length)} trackable topics across ${QBANKS.length} banks`) +
     card("m", `${pct(att, allModuleIds.length)}%`, "Modules attempted", `${fmt(att)} of ${fmt(allModuleIds.length)} · ${fmt(rev)} reviewed`) +
     card("c", `${pct(hyDone, hyTotal)}%`, "High-yield covered", `${hyDone} of ${hyTotal} ★★★ topics`) +
     card("k", fmt(scored), "Tests scored", "your accuracy log");
@@ -141,9 +160,9 @@ function renderOverview() {
   if (recent.length) {
     const lst = el("div", "mini-list");
     recent.forEach(l => lst.appendChild(el("div", "mini-row",
-      `<span class="dot ${l.platform === "marrow" ? "m" : "c"}"></span>
+      `<span class="dot ${platCls(l.platform)}" style="background:${platColor(l.platform)}"></span>
        <span class="mini-n" data-open-leaf="${l.id}">${esc(l.name)}</span>
-       <span class="mini-sub">${esc(l.canon)} · ${l.platform === "marrow" ? "Marrow" : "Cerebellum"}</span>
+       <span class="mini-sub">${esc(l.canon)} · ${esc(platName(l.platform))}</span>
        ${statusDots(l.id)}`)));
     contPanel.appendChild(lst);
   } else {
@@ -167,22 +186,23 @@ function renderOverview() {
   grid.appendChild(nextPanel);
   v.appendChild(grid);
 
-  // comparison bars (clickable -> jump)
+  // comparison bars (clickable -> jump) — one bar per QBank, per subject
   const panel = el("div", "panel");
-  panel.innerHTML = `<div class="ph"><div><h3>MCQ volume by subject — Marrow vs Cerebellum</h3>
+  panel.innerHTML = `<div class="ph"><div><h3>MCQ volume by subject — ${QBANKS.map(p => esc(p.name)).join(" · ")}</h3>
     <span class="muted" style="font-size:12px">click a subject to open it in the tracker</span></div>
-    <div class="legend"><span><i style="background:var(--marrow)"></i>Marrow</span><span><i style="background:var(--cere)"></i>Cerebellum</span></div></div>`;
+    <div class="legend">${QBANKS.map(p => `<span><i style="background:${p.color}"></i>${esc(p.name)}</span>`).join("")}</div></div>`;
   const bars = el("div", "bars");
-  const mMap = Object.fromEntries(marrowFresh.map(s => [canon(s.subject), s.mcqs]));
-  const cMap = Object.fromEntries(D.cerebellum.subjects.map(s => [canon(s.subject), s.mcqs]));
-  const subs = [...new Set([...Object.keys(mMap), ...Object.keys(cMap)])];
-  const maxV = Math.max(...subs.map(s => Math.max(mMap[s] || 0, cMap[s] || 0)));
-  subs.sort((a, b) => ((mMap[b] || 0) + (cMap[b] || 0)) - ((mMap[a] || 0) + (cMap[a] || 0)));
+  const maps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s._mcqs])));
+  const subs = [...new Set(maps.flatMap(m => Object.keys(m)))];
+  const subTotal = s => maps.reduce((a, m) => a + (m[s] || 0), 0);
+  const maxV = Math.max(1, ...subs.map(s => Math.max(...maps.map(m => m[s] || 0))));
+  subs.sort((a, b) => subTotal(b) - subTotal(a));
   subs.forEach(s => {
-    const m = mMap[s] || 0, c = cMap[s] || 0;
-    bars.appendChild(el("div", "barrow clickable", `<div class="name" data-jump-subj="${esc(s)}">${s}</div><div class="track">
-       <div class="bar m" style="width:${(m / maxV * 100).toFixed(1)}%"><span class="val${m / maxV < .22 ? " out" : ""}">${fmt(m)}</span></div>
-       <div class="bar c" style="width:${(c / maxV * 100).toFixed(1)}%"><span class="val${c / maxV < .22 ? " out" : ""}">${fmt(c)}</span></div></div>`));
+    const track = QBANKS.map((p, i) => {
+      const val = maps[i][s] || 0;
+      return `<div class="bar ${p.cls}" style="width:${(val / maxV * 100).toFixed(1)}%;background:${p.color}"><span class="val${val / maxV < .22 ? " out" : ""}">${fmt(val)}</span></div>`;
+    }).join("");
+    bars.appendChild(el("div", "barrow clickable", `<div class="name" data-jump-subj="${esc(s)}">${esc(s)}</div><div class="track">${track}</div>`));
   });
   panel.appendChild(bars);
   v.appendChild(panel);
@@ -197,6 +217,23 @@ function statusDots(id) {
    ============================================================ */
 const QB = { platform: "marrow", subject: null, sort: "hy", status: "all", hyOnly: false, search: "", subjSort: "size" };
 function qbDefaultSubject() { const s = subjectsOf(QB.platform); return s[0]; }
+/* N-way platform switch: segmented up to 3 banks, dropdown beyond */
+function qbankSwitchHTML() {
+  if (QBANKS.length > 3) {
+    return `<select class="sel mini" id="qplat" title="QBank platform">${QBANKS.map(p =>
+      `<option value="${p.id}" ${QB.platform === p.id ? "selected" : ""}>${esc(p.name)}</option>`).join("")}</select>`;
+  }
+  return `<div class="seg" id="qseg">${QBANKS.map(p =>
+    `<button data-p="${p.id}" class="${QB.platform === p.id ? "on" : ""}"${QB.platform === p.id ? ` style="background:${p.color};color:#fff"` : ""}>${esc(p.name)}</button>`).join("")}</div>`;
+}
+function switchQbankPlatform(id) {
+  if (!id || id === QB.platform || !PLAT_BY_ID[id]) return;
+  const prevCanon = QB.subject ? canon(QB.subject) : null;   // land on the same topic across banks
+  QB.platform = id;
+  const list = subjectsOf(QB.platform);
+  QB.subject = (prevCanon && list.find(s => canon(s) === prevCanon)) || qbDefaultSubject();
+  QB.search = ""; renderQbank();
+}
 
 function renderQbank() {
   const v = $("#view-qbank"); v.innerHTML = "";
@@ -206,10 +243,7 @@ function renderQbank() {
   layout.innerHTML = `
     <aside class="qb-side">
       <div class="qb-side-top">
-        <div class="seg ${QB.platform}" id="qseg">
-          <button data-p="marrow" class="${QB.platform === "marrow" ? "on" : ""}">Marrow</button>
-          <button data-p="cerebellum" class="${QB.platform === "cerebellum" ? "on" : ""}">Cerebellum</button>
-        </div>
+        ${qbankSwitchHTML()}
         <select class="sel mini" id="qSubjSort" title="Order subjects">
           <option value="size">By size</option><option value="alpha">A–Z</option>
           <option value="completion">By completion</option><option value="gaps">By high-yield gaps</option>
@@ -219,7 +253,7 @@ function renderQbank() {
     </aside>
     <div class="qb-main">
       <div class="qb-controls" id="qbControls">
-        <input class="search" id="qsearch" placeholder="Search ${QB.platform === "marrow" ? "Marrow" : "Cerebellum"} topics…" value="${esc(QB.search)}">
+        <input class="search" id="qsearch" placeholder="Search ${esc(platName(QB.platform))} topics…" value="${esc(QB.search)}">
         <select class="sel" id="qsort" aria-label="Sort topics">
           <option value="hy">Sort: high-yield</option>
           <option value="mcqs">Sort: most MCQs</option>
@@ -247,15 +281,9 @@ function renderQbank() {
   v.appendChild(layout);
 
   $("#qsort").value = QB.sort; $("#qstatus").value = QB.status; $("#qSubjSort").value = QB.subjSort;
-  // wiring
-  $("#qseg").addEventListener("click", e => {
-    const b = e.target.closest("button"); if (!b || b.dataset.p === QB.platform) return;
-    const prevCanon = QB.subject ? canon(QB.subject) : null;        // land on the same topic across banks
-    QB.platform = b.dataset.p;
-    const list = subjectsOf(QB.platform);
-    QB.subject = (prevCanon && list.find(s => canon(s) === prevCanon)) || qbDefaultSubject();
-    QB.search = ""; renderQbank();
-  });
+  // wiring — platform switch is segmented (≤3 banks) or a dropdown (>3)
+  const qseg = $("#qseg"); if (qseg) qseg.addEventListener("click", e => { const b = e.target.closest("button"); if (b) switchQbankPlatform(b.dataset.p); });
+  const qplat = $("#qplat"); if (qplat) qplat.addEventListener("change", e => switchQbankPlatform(e.target.value));
   $("#qSubjSort").addEventListener("change", e => { QB.subjSort = e.target.value; drawSidebar(); });
   $("#qsearch").addEventListener("input", e => { QB.search = e.target.value; drawSidebar(); drawSubject(); });
   $("#qsort").addEventListener("change", e => { QB.sort = e.target.value; drawSubject(); });
@@ -327,17 +355,17 @@ function drawSubject() {
   const ls = leavesOf(QB.platform, subject);
   const ro = rollupLeaves(ls);
   const meta = subjMeta(QB.platform, subject);
-  const other = SUBJ_OTHER(subject);
+  const others = subjOthers(subject);
   // header
   const head = el("div", "subj-hero");
   head.innerHTML = `
     <div class="sh-top">
       <h2 class="sh-name">${esc(subject)}</h2>
-      ${other ? `<button class="linkbtn" data-jump-other="${esc(other.subject)}" data-jump-plat="${other.platform}">↔ ${other.platform === "marrow" ? "Marrow" : "Cerebellum"} equivalent</button>` : ""}
+      ${others.map(o => `<button class="linkbtn" data-jump-other="${esc(o.subject)}" data-jump-plat="${o.platform}">↔ ${esc(platName(o.platform))}</button>`).join("")}
     </div>
     <div class="sh-meters">
       <div class="sh-stat"><b>${fmt(meta?.mcqs || 0)}</b><span>MCQs</span></div>
-      <div class="sh-stat"><b>${ls.length}</b><span>${QB.platform === "marrow" ? "modules" : "units"}</span></div>
+      <div class="sh-stat"><b>${ls.length}</b><span>${platUnitNoun(QB.platform)}</span></div>
       <div class="sh-stat"><b>${pct(ro.a, ro.total)}%</b><span>attempted</span></div>
       <div class="sh-stat"><b>${ro.r}</b><span>reviewed</span></div>
       <div class="sh-stat"><b>${ls.filter(l => l.priority === 3).length}</b><span>high-yield</span></div>
@@ -382,17 +410,17 @@ function bigMeter(ro) {
   return `<div class="bigmeter"><div class="bm-bar"><i style="width:${pct(ro.a, ro.total)}%"></i><b style="width:${pct(ro.r, ro.total)}%"></b></div>
     <div class="bm-key"><span><i class="k a"></i>${ro.a} attempted</span><span><i class="k r"></i>${ro.r} reviewed</span><span><i class="k t"></i>${ro.t} mastered</span></div></div>`;
 }
-function coverageBadge(l) {
-  const bc = bestCross(l); if (!bc) return "";
-  const p = Store.prog(bc.l.id); if (!p.a && !p.r) return "";
-  const oc = l.platform === "marrow" ? "c" : "m";
-  const letter = l.platform === "marrow" ? "C" : "M";
-  return `<span class="xcov ${oc}" data-xgo="${bc.l.id}" title="${l.platform === "marrow" ? "Cerebellum" : "Marrow"}: ${esc(bc.l.name)} — ${p.r ? "reviewed" : "attempted"} on the other bank">${letter} ✓</span>`;
+function coverageBadge(l) {            // one ✓ per other platform where the matched topic is tracked
+  const byP = bestCrossByPlat(l);
+  return Object.entries(byP).map(([pid, ol]) => {
+    const p = Store.prog(ol.id); if (!p.a && !p.r) return "";
+    return `<span class="xcov ${platCls(pid)}" data-xgo="${ol.id}" style="color:${platColor(pid)}" title="${esc(platName(pid))}: ${esc(ol.name)} — ${p.r ? "reviewed" : "attempted"} on the other bank">${platInitial(pid)} ✓</span>`;
+  }).join("");
 }
 function leafRow(l) {
   const p = Store.prog(l.id), st = Store.state.stars[l.id];
   const row = el("div", "row mrow" + (p.a ? " done" : "")); row.dataset.id = l.id;
-  const rate = l.platform === "marrow" && l.rating != null ? `<span class="rrate">${l.rating.toFixed(1)}</span>` : (l.platform === "cerebellum" ? `<span class="rrate">${l.modulesCount} mod</span>` : "<span class='rrate'></span>");
+  const rate = l.rating != null ? `<span class="rrate">${l.rating.toFixed(1)}</span>` : (l.modulesCount != null ? `<span class="rrate">${l.modulesCount} mod</span>` : "<span class='rrate'></span>");
   row.innerHTML = `
     <div class="rname"><button class="pinstar ${st ? "on" : ""}" data-act="star" aria-pressed="${st ? "true" : "false"}" aria-label="Pin topic" title="Pin">${st ? "★" : "☆"}</button><span class="leaf-link" role="button" tabindex="0" data-open-leaf="${l.id}" aria-label="Open ${esc(l.name)}">${esc(l.name)}</span> ${hyBadge(l.priority)}${coverageBadge(l)}</div>
     <div class="chips">
@@ -403,12 +431,12 @@ function leafRow(l) {
     ${rate}<div class="rmcq">${fmt(l.mcqs)}</div>`;
   return row;
 }
-function SUBJ_OTHER(subject) {
-  if (subject === PYQ) return null;
-  const c = canon(subject); const other = QB.platform === "marrow" ? "cerebellum" : "marrow";
-  const list = other === "marrow" ? marrowFresh : D.cerebellum.subjects;
-  const found = list.find(s => canon(s.subject) === c);
-  return found ? { platform: other, subject: found.subject } : null;
+function subjOthers(subject) {        // same canonical subject on every OTHER qbank
+  if (subject === PYQ) return [];
+  const c = canon(subject);
+  return QBANKS.filter(p => p.id !== QB.platform)
+    .map(p => { const f = p.subjects.find(s => canon(s.subject) === c); return f ? { platform: p.id, subject: f.subject } : null; })
+    .filter(Boolean);
 }
 
 /* live meter sync after a toggle (no full re-render) */
@@ -456,9 +484,10 @@ function openDrawer(id) {
   const dr = $("#drawer"), body = $("#drawerBody");
   const p = Store.prog(l.id), st = Store.state.stars[l.id];
   const cross = crossMatches(l), sibs = siblings(l, 8), tests = relatedTests(l.canon);
-  const platLabel = l.platform === "marrow" ? "Marrow" : "Cerebellum";
+  const crossByPlat = {};
+  cross.forEach(c => (crossByPlat[c.platform] = crossByPlat[c.platform] || []).push(c));
   body.innerHTML = `
-    <div class="dr-eyebrow"><span class="platlabel ${l.platform === "marrow" ? "m" : "c"}">${platLabel}</span> · ${esc(l.canon)}${l.cat ? " · " + esc(l.cat) : ""}</div>
+    <div class="dr-eyebrow"><span class="platlabel ${platCls(l.platform)}" style="color:${platColor(l.platform)}">${esc(platName(l.platform))}</span> · ${esc(l.canon)}${l.cat ? " · " + esc(l.cat) : ""}</div>
     <h2 class="dr-title">${esc(l.name)} ${hyBadge(l.priority)}</h2>
     <div class="dr-facts">
       <span><b>${fmt(l.mcqs)}</b> MCQs</span>
@@ -476,8 +505,11 @@ function openDrawer(id) {
       </div>
       <button class="linkbtn" data-goto-leaf="${l.id}">Open in QBank Tracker →</button>
     </div>
-    ${cross.length ? `<div class="dr-sec"><div class="dr-lbl">Same topic on ${l.platform === "marrow" ? "Cerebellum" : "Marrow"}</div>
-      ${cross.map(c => drLink(c)).join("")}</div>` : `<div class="dr-sec"><div class="dr-lbl">Same topic on ${l.platform === "marrow" ? "Cerebellum" : "Marrow"}</div><div class="muted small">No close match found in the other bank.</div></div>`}
+    <div class="dr-sec"><div class="dr-lbl">Same topic on other platforms</div>
+      ${cross.length ? QBANKS.filter(p => crossByPlat[p.id]).map(p =>
+        `<div class="dr-subgrp"><span class="platlabel ${p.cls}" style="color:${p.color};font-size:11px">${esc(p.name)}</span>
+         ${crossByPlat[p.id].map(c => drLink(c)).join("")}</div>`).join("")
+        : `<div class="muted small">No close match found on the other banks.</div>`}</div>
     <div class="dr-sec"><div class="dr-lbl">${l.cat ? "More in " + esc(l.cat) : "Related in " + esc(l.canon)}</div>
       ${sibs.length ? sibs.map(s => drLink(s)).join("") : `<div class="muted small">—</div>`}</div>
     <div class="dr-sec"><div class="dr-lbl">Related tests</div>
@@ -527,44 +559,41 @@ function renderHY() {
   v.appendChild(sg);
 
   v.appendChild(el("div", "callout",
-    `<b>High-yield engine.</b> Marrow modules scored from their <b>star-rating</b> × MCQ share; Cerebellum units from <b>volume × density</b>.
-     ★★★ = top tier within a subject. <b>Click any topic</b> to open its card — track it, jump to the bank, or see the same topic on the other platform.`));
+    `<b>High-yield engine.</b> Marrow modules scored from their <b>star-rating</b> × MCQ share; Cerebellum units from <b>volume × density</b>; DocTutorials chapters from <b>MCQ share</b> (no rating captured).
+     ★★★ = top tier within a subject. <b>Click any topic</b> to open its card — track it, jump to the bank, or see the same topic on another platform.`));
 
-  // consensus: ★★★ on BOTH banks for the same topic
+  // consensus: a topic that is ★★★ on ≥2 independent platforms
   const consensus = [];
-  const seen = new Set();
-  LEAVES.filter(l => l.platform === "marrow" && l.priority === 3).forEach(m => {
-    const bc = bestCross(m);
-    if (bc && bc.l.priority === 3) {
-      const key = m.id + "|" + bc.l.id; if (seen.has(key)) return; seen.add(key);
-      consensus.push({ m, c: bc.l, mcqs: m.mcqs + bc.l.mcqs });
-    }
+  const used = new Set();
+  LEAVES.filter(l => l.priority === 3).forEach(l => {
+    if (used.has(l.id)) return;
+    const members = { [l.platform]: l };
+    Object.entries(bestCrossByPlat(l)).forEach(([pid, ol]) => { if (ol.priority === 3) members[pid] = ol; });
+    if (Object.keys(members).length < 2) return;             // needs agreement from another bank
+    Object.values(members).forEach(x => used.add(x.id));
+    consensus.push({ members, canon: l.canon, mcqs: Object.values(members).reduce((a, x) => a + x.mcqs, 0) });
   });
   consensus.sort((a, b) => b.mcqs - a.mcqs);
   if (consensus.length) {
     const cp = el("div", "panel consensus");
-    cp.innerHTML = `<div class="ph"><div><h3>Consensus high-yield — both banks agree ★★★</h3>
-      <span class="muted" style="font-size:12px">the strongest prioritisation signal: top-tier on Marrow <em>and</em> Cerebellum</span></div>
+    cp.innerHTML = `<div class="ph"><div><h3>Consensus high-yield — banks agree ★★★</h3>
+      <span class="muted" style="font-size:12px">the strongest prioritisation signal: top-tier on two or more platforms for the same topic</span></div>
       <span class="count-pill">${consensus.length} topics</span></div>`;
     const tbl = el("table");
-    tbl.innerHTML = `<thead><tr><th>Subject</th><th>Marrow</th><th>Cerebellum</th><th class="num">Σ MCQs</th><th>Your coverage</th></tr></thead><tbody></tbody>`;
+    tbl.innerHTML = `<thead><tr><th>Subject</th>${QBANKS.map(p => `<th>${esc(p.name)}</th>`).join("")}<th class="num">Σ MCQs</th><th>Your coverage</th></tr></thead><tbody></tbody>`;
     const tb = $("tbody", tbl);
     consensus.slice(0, 24).forEach(x => {
-      tb.appendChild(el("tr", null,
-        `<td style="font-weight:600">${esc(x.m.canon)}</td>
-         <td><span class="leaf-link" data-open-leaf="${x.m.id}">${esc(x.m.name)}</span></td>
-         <td><span class="leaf-link" data-open-leaf="${x.c.id}">${esc(x.c.name)}</span></td>
-         <td class="num" style="font-weight:700">${fmt(x.mcqs)}</td>
-         <td>${statusDots(x.m.id)} <span class="muted small">M</span> &nbsp; ${statusDots(x.c.id)} <span class="muted small">C</span></td>`));
+      const cells = QBANKS.map(p => { const m = x.members[p.id]; return `<td>${m ? `<span class="leaf-link" data-open-leaf="${m.id}">${esc(m.name)}</span>` : '<span class="muted">—</span>'}</td>`; }).join("");
+      const cov = QBANKS.map(p => { const m = x.members[p.id]; return m ? `${statusDots(m.id)} <span class="muted small">${platInitial(p.id)}</span>` : ""; }).filter(Boolean).join(" &nbsp; ");
+      tb.appendChild(el("tr", null, `<td style="font-weight:600">${esc(x.canon)}</td>${cells}<td class="num" style="font-weight:700">${fmt(x.mcqs)}</td><td>${cov}</td>`));
     });
     cp.appendChild(tbl);
     v.appendChild(cp);
   }
 
-  const cMap = Object.fromEntries(D.cerebellum.subjects.map(s => [canon(s.subject), s]));
-  const mMap = Object.fromEntries(marrowFresh.map(s => [canon(s.subject), s]));
-  const subjects = [...new Set([...Object.keys(mMap), ...Object.keys(cMap)])]
-    .sort((a, b) => ((mMap[b]?.mcqs || 0) + (cMap[b]?.mcqs || 0)) - ((mMap[a]?.mcqs || 0) + (cMap[a]?.mcqs || 0)));
+  const subjMaps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s])));
+  const subjTotal = cs => subjMaps.reduce((a, m) => a + (m[cs]?._mcqs || 0), 0);
+  const subjects = [...new Set(subjMaps.flatMap(m => Object.keys(m)))].sort((a, b) => subjTotal(b) - subjTotal(a));
 
   const ctr = el("div", "controls");
   ctr.innerHTML = `<select class="sel" id="hysub" aria-label="Subject"><option value="all">All subjects (top picks each)</option>
@@ -584,28 +613,27 @@ function renderHY() {
   $("#hystatus").addEventListener("change", e => { hyStatus = e.target.value; renderHY(); });
 
   const wrap = el("div"); v.appendChild(wrap);
+  const n = hySubject === "all" ? 5 : 12;
+  const top = arr => [...arr].sort((a, b) => b.hyScore - a.hyScore).slice(0, n);
+  const col = (label, cls, color, mods) => {
+    const c = el("div", "hy-col");
+    c.innerHTML = `<div class="hy-h ${cls}" style="color:${color}">${esc(label)}</div>`;
+    const rows = top(mods.filter(hyLeafMatch));
+    rows.forEach(l => c.appendChild(el("div", "hy-row", `<span class="hy ${l.priority === 3 ? "" : "med"}">${priStars(l.priority) || "★"}</span>
+      <span class="hy-n" role="button" tabindex="0" data-open-leaf="${l.id}">${esc(l.name)}</span><span class="hy-q">${statusDots(l.id)} ${fmt(l.mcqs)}</span>`)));
+    if (!rows.length) c.appendChild(el("div", "hy-row muted", "—"));
+    return c;
+  };
   (hySubject === "all" ? subjects : [hySubject]).forEach(cs => {
     const panel = el("div", "panel hy-panel");
-    const mSubj = marrowFresh.find(s => canon(s.subject) === cs);
-    const cSubj = D.cerebellum.subjects.find(s => canon(s.subject) === cs);
-    const mMods = mSubj ? LEAVES.filter(l => l.platform === "marrow" && l.subject === mSubj.subject) : [];
-    const cMods = cSubj ? LEAVES.filter(l => l.platform === "cerebellum" && l.subject === cSubj.subject) : [];
-    const n = hySubject === "all" ? 5 : 12;
-    const top = arr => [...arr].sort((a, b) => b.hyScore - a.hyScore).slice(0, n);
-    panel.innerHTML = `<div class="ph"><div><h3 class="hy-jump" data-jump-subj="${esc(cs)}">${cs}</h3>
-      <span class="muted" style="font-size:12px">${fmt((mSubj?.mcqs || 0) + (cSubj?.mcqs || 0))} combined MCQs · click a row</span></div></div><div class="hy-cols"></div>`;
+    panel.innerHTML = `<div class="ph"><div><h3 class="hy-jump" data-jump-subj="${esc(cs)}">${esc(cs)}</h3>
+      <span class="muted" style="font-size:12px">${fmt(subjTotal(cs))} combined MCQs · click a row</span></div></div><div class="hy-cols"></div>`;
     const cols = $(".hy-cols", panel);
-    const col = (label, cls, mods) => {
-      const c = el("div", "hy-col");
-      c.innerHTML = `<div class="hy-h ${cls}">${label}</div>`;
-      const rows = top(mods.filter(hyLeafMatch));
-      rows.forEach(l => c.appendChild(el("div", "hy-row", `<span class="hy ${l.priority === 3 ? "" : "med"}">${priStars(l.priority) || "★"}</span>
-        <span class="hy-n" role="button" tabindex="0" data-open-leaf="${l.id}">${esc(l.name)}</span><span class="hy-q">${statusDots(l.id)} ${fmt(l.mcqs)}</span>`)));
-      if (!rows.length) c.appendChild(el("div", "hy-row muted", "—"));
-      return c;
-    };
-    cols.appendChild(col("Marrow", "m", mMods));
-    cols.appendChild(col("Cerebellum", "c", cMods));
+    QBANKS.forEach((p, i) => {
+      const subjObj = subjMaps[i][cs];
+      const mods = subjObj ? LEAVES.filter(l => l.platform === p.id && l.subject === subjObj.subject) : [];
+      cols.appendChild(col(p.name, p.cls, p.color, mods));
+    });
     wrap.appendChild(panel);
   });
 }
@@ -615,14 +643,13 @@ function renderHY() {
    ============================================================ */
 function renderProgress() {
   const v = $("#view-progress"); v.innerHTML = "";
-  const overall = platform => { const kids = platform === "marrow" ? D.marrow.modules : D.cerebellum.units; return { total: kids.length, ...rollup(kids.map(k => k.id)) }; };
-  const mo = overall("marrow"), co = overall("cerebellum");
+  const overall = id => { const kids = LEAVES.filter(l => l.platform === id); return { total: kids.length, ...rollup(kids.map(k => k.id)) }; };
+  const os = QBANKS.map(p => ({ p, o: overall(p.id) }));
+  const tot = os.reduce((a, x) => ({ a: a.a + x.o.a, total: a.total + x.o.total, r: a.r + x.o.r, t: a.t + x.o.t }), { a: 0, total: 0, r: 0, t: 0 });
   const sg = el("div", "statgrid");
   sg.innerHTML =
-    `<div class="stat m"><div class="big">${pct(mo.a, mo.total)}%</div><div class="lbl">Marrow attempted</div><div class="note">${mo.a}/${mo.total} · ${mo.r} reviewed · ${mo.t} mastered</div></div>
-     <div class="stat c"><div class="big">${pct(co.a, co.total)}%</div><div class="lbl">Cerebellum attempted</div><div class="note">${co.a}/${co.total} · ${co.r} reviewed · ${co.t} mastered</div></div>
-     <div class="stat g"><div class="big">${pct(mo.a + co.a, mo.total + co.total)}%</div><div class="lbl">Combined attempted</div><div class="note">${mo.a + co.a}/${mo.total + co.total} modules</div></div>
-     <div class="stat k"><div class="big">${mo.r + co.r}</div><div class="lbl">Reviewed total</div><div class="note">${mo.t + co.t} mastered for retention</div></div>`;
+    os.map(({ p, o }) => `<div class="stat ${p.cls}"><div class="big">${pct(o.a, o.total)}%</div><div class="lbl">${esc(p.name)} attempted</div><div class="note">${o.a}/${o.total} · ${o.r} reviewed · ${o.t} mastered</div></div>`).join("") +
+    `<div class="stat g"><div class="big">${pct(tot.a, tot.total)}%</div><div class="lbl">Combined attempted</div><div class="note">${tot.a}/${tot.total} items · ${tot.r} reviewed · ${tot.t} mastered</div></div>`;
   v.appendChild(sg);
 
   // combined coverage ledger (union of both banks per subject)
@@ -630,43 +657,43 @@ function renderProgress() {
   ledger.innerHTML = `<div class="ph"><div><h3>Combined coverage — both banks per subject</h3>
     <span class="muted" style="font-size:12px">attempted across the union of Marrow + Cerebellum · ⚠ flags a lopsided subject covered from one source only</span></div></div>`;
   const ltbl = el("table");
-  ltbl.innerHTML = `<thead><tr><th>Subject</th><th class="num">Items</th><th class="num">Combined</th><th class="num">Marrow</th><th class="num">Cerebellum</th><th style="width:26%">Coverage</th></tr></thead><tbody></tbody>`;
+  ltbl.innerHTML = `<thead><tr><th>Subject</th><th class="num">Items</th><th class="num">Combined</th>${QBANKS.map(p => `<th class="num">${esc(p.name)}</th>`).join("")}<th style="width:24%">Coverage</th></tr></thead><tbody></tbody>`;
   const ltb = $("tbody", ltbl);
-  const cMapAll = Object.fromEntries(D.cerebellum.subjects.map(s => [canon(s.subject), s]));
-  const mMapAll = Object.fromEntries(marrowFresh.map(s => [canon(s.subject), s]));
-  [...new Set([...Object.keys(mMapAll), ...Object.keys(cMapAll)])]
+  const maps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s.subject])));
+  [...new Set(maps.flatMap(m => Object.keys(m)))]
     .map(cs => {
-      const mLs = mMapAll[cs] ? leavesOf("marrow", mMapAll[cs].subject) : [];
-      const cLs = cMapAll[cs] ? leavesOf("cerebellum", cMapAll[cs].subject) : [];
-      const all = [...mLs, ...cLs];
+      const perPlat = QBANKS.map((p, i) => maps[i][cs] ? leavesOf(p.id, maps[i][cs]) : []);
+      const all = perPlat.flat();
       const att = all.filter(l => Store.prog(l.id).a).length;
-      const mPct = pct(mLs.filter(l => Store.prog(l.id).a).length, mLs.length);
-      const cPct = pct(cLs.filter(l => Store.prog(l.id).a).length, cLs.length);
-      return { cs, total: all.length, att, comb: pct(att, all.length), mPct, cPct, lop: (mLs.length && cLs.length && Math.abs(mPct - cPct) >= 40) };
+      const pcts = perPlat.map(ls => pct(ls.filter(l => Store.prog(l.id).a).length, ls.length));
+      const present = pcts.filter((_, i) => perPlat[i].length);
+      const lop = present.length >= 2 && (Math.max(...present) - Math.min(...present) >= 40);
+      return { cs, total: all.length, att, comb: pct(att, all.length), pcts, perPlat, lop };
     })
     .sort((a, b) => b.comb - a.comb || b.total - a.total)
     .forEach(x => {
       const tr = el("tr", "rowlink"); tr.dataset.jumpSubj = x.cs;
+      const platCells = QBANKS.map((p, i) => `<td class="num" style="color:${p.color};font-weight:600">${x.perPlat[i].length ? x.pcts[i] + "%" : "—"}</td>`).join("");
       tr.innerHTML = `<td style="font-weight:600">${esc(x.cs)} ${x.lop ? `<span class="lop" title="Lopsided: covered mainly from one bank">⚠</span>` : ""}</td>
         <td class="num">${x.total}</td><td class="num" style="font-weight:700">${x.comb}%</td>
-        <td class="num pf-m">${x.mPct}%</td><td class="num pf-c">${x.cPct}%</td>
+        ${platCells}
         <td><div class="pbar lg"><i style="width:${x.comb}%"></i></div></td>`;
       ltb.appendChild(tr);
     });
   ledger.appendChild(ltbl);
   v.appendChild(ledger);
 
-  [["marrow", "Marrow", marrowFresh, "m"], ["cerebellum", "Cerebellum", D.cerebellum.subjects, "c"]].forEach(([plat, label, subs, cls]) => {
+  QBANKS.forEach(p => {
     const panel = el("div", "panel");
-    panel.innerHTML = `<div class="ph"><div><h3><span class="platlabel ${cls}">${label}</span> · per-subject progress</h3>
+    panel.innerHTML = `<div class="ph"><div><h3><span class="platlabel ${p.cls}" style="color:${p.color}">${esc(p.name)}</span> · per-subject progress</h3>
       <span class="muted" style="font-size:12px">click a subject to open it in the tracker</span></div>
       <div class="legend"><span><i style="background:var(--marrow)"></i>attempted</span><span><i style="background:var(--core)"></i>reviewed</span></div></div>`;
     const tbl = el("table");
     tbl.innerHTML = `<thead><tr><th>Subject</th><th class="num">Items</th><th class="num">Attempted</th><th class="num">Reviewed</th><th style="width:34%">Progress</th></tr></thead><tbody></tbody>`;
     const tb = $("tbody", tbl);
-    subs.forEach(s => {
-      const ro = rollupLeaves(leavesOf(plat, s.subject));
-      const tr = el("tr", "rowlink"); tr.dataset.jumpSubj = canon(s.subject); tr.dataset.jumpPlat = plat;
+    p.subjects.forEach(s => {
+      const ro = rollupLeaves(leavesOf(p.id, s.subject));
+      const tr = el("tr", "rowlink"); tr.dataset.jumpSubj = canon(s.subject); tr.dataset.jumpPlat = p.id;
       tr.innerHTML = `<td style="font-weight:600">${s.subject}</td><td class="num">${ro.total}</td>
         <td class="num pf-m">${ro.a}</td><td class="num pf-c">${ro.r}</td>
         <td><div class="pbar lg"><i style="width:${pct(ro.a, ro.total)}%"></i><b style="width:${pct(ro.r, ro.total)}%"></b></div></td>`;
@@ -715,7 +742,7 @@ function renderTests() {
   sg.innerHTML =
     `<div class="stat k"><div class="big">${scores.length}</div><div class="lbl">Tests scored</div><div class="note">your accuracy log</div></div>
      <div class="stat g"><div class="big">${pct(totR, totQ)}%</div><div class="lbl">Overall accuracy</div><div class="note">${fmt(totR)} right / ${fmt(totQ)} attempted</div></div>
-     <div class="stat m"><div class="big">${D.corebtr.tests.length + D.cerebellum.gt2026.length + Store.state.customTests.length}</div><div class="lbl">Tests in hub</div><div class="note">incl. ${Store.state.customTests.length} you added</div></div>
+     <div class="stat m"><div class="big">${D.tests.corebtr.length + D.tests.gt2026.length + Store.state.customTests.length}</div><div class="lbl">Tests in hub</div><div class="note">incl. ${Store.state.customTests.length} you added</div></div>
      <div class="stat c"><div class="big">106</div><div class="lbl">Cerebellum GTs</div><div class="note">2023–26 archive</div></div>`;
   v.appendChild(sg);
 
@@ -779,7 +806,7 @@ function renderTests() {
   p2.innerHTML = `<div class="ph"><div><h3><span class="platlabel c">Cerebellum</span> · 2026 Grand Test schedule</h3>
     <span class="muted" style="font-size:12px">dated calendar to pace against</span></div></div>`;
   const tl = el("div", "timeline");
-  D.cerebellum.gt2026.forEach(t => tl.appendChild(el("div", "tl",
+  D.tests.gt2026.forEach(t => tl.appendChild(el("div", "tl",
     `<div class="tdate">${t.date}</div><div class="tname">${t.name}</div><div class="tmeta">${t.questions} Q · ${t.duration} min</div>`)));
   p2.appendChild(tl);
   v.appendChild(p2);
@@ -986,18 +1013,22 @@ function syncVideoAfterToggle(id) {
 function renderPlanner() {
   const v = $("#view-planner"); v.innerHTML = "";
   v.appendChild(el("div", "callout",
-    `<b>How this is built.</b> Subjects tiered by <b>combined MCQ weight</b> (Marrow fresh + Cerebellum) — a proxy for exam weight.
+    `<b>How this is built.</b> Subjects tiered by <b>combined MCQ weight</b> across ${QBANKS.map(p => esc(p.name)).join(" + ")} — a proxy for exam weight.
      Pair every subject pass with its tests, then layer Grand Tests weekly. Click a subject to open it.`));
-  const mMap = Object.fromEntries(marrowFresh.map(s => [canon(s.subject), s]));
-  const cMap = Object.fromEntries(D.cerebellum.subjects.map(s => [canon(s.subject), s]));
-  const subs = [...new Set([...Object.keys(mMap), ...Object.keys(cMap)])]
-    .map(s => ({ s, m: mMap[s]?.mcqs || 0, c: cMap[s]?.mcqs || 0, t: (mMap[s]?.mcqs || 0) + (cMap[s]?.mcqs || 0) })).sort((a, b) => b.t - a.t);
+  const maps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s._mcqs])));
+  const subs = [...new Set(maps.flatMap(m => Object.keys(m)))]
+    .map(s => {
+      const per = QBANKS.map((p, i) => ({ name: p.name, mcqs: maps[i][s] || 0 }));
+      const t = per.reduce((a, x) => a + x.mcqs, 0);
+      const top = per.slice().sort((a, b) => b.mcqs - a.mcqs)[0];
+      return { s, per, t, top: top.name };
+    }).sort((a, b) => b.t - a.t);
   const n = subs.length, hi = subs.slice(0, Math.ceil(n / 3)), mid = subs.slice(Math.ceil(n / 3), Math.ceil(2 * n / 3)), lo = subs.slice(Math.ceil(2 * n / 3));
   const grid = el("div", "plan-grid");
   const tier = (cls, title, sub, arr) => {
     const t = el("div", "tier " + cls);
     t.innerHTML = `<h4>${title}</h4><div class="tsub">${sub}</div><ul>${
-      arr.map(x => `<li data-jump-subj="${esc(x.s)}"><span>${x.s}</span><span class="v">${fmt(x.t)} <span style="color:var(--dim)">· ${x.m >= x.c ? "Marrow" : "Cerebellum"}</span></span></li>`).join("")}</ul>`;
+      arr.map(x => `<li data-jump-subj="${esc(x.s)}"><span>${esc(x.s)}</span><span class="v">${fmt(x.t)} <span style="color:var(--dim)">· ${esc(x.top)}</span></span></li>`).join("")}</ul>`;
     return t;
   };
   grid.appendChild(tier("hi", "Tier 1 · Heavy", "Full first pass in the bigger bank + every subject test", hi));
@@ -1015,9 +1046,9 @@ function renderPlanner() {
       <tr><td>Sun</td><td>Full review of the week's error log</td><td><b>Grand Test (200 Q)</b> — rotate platforms</td></tr>
     </tbody></table>
     <div class="kpi-row">
-      <div class="kpi"><b>${fmt(marrowMCQ + cereMCQ)}</b> MCQs total</div>
-      <div class="kpi">at <b>100/day</b> → <b>${Math.round((marrowMCQ + cereMCQ) / 100)}</b> days for one full pass</div>
-      <div class="kpi">at <b>150/day</b> → <b>${Math.round((marrowMCQ + cereMCQ) / 150)}</b> days</div>
+      <div class="kpi"><b>${fmt(QBANK_MCQ)}</b> MCQs total</div>
+      <div class="kpi">at <b>100/day</b> → <b>${Math.round(QBANK_MCQ / 100)}</b> days for one full pass</div>
+      <div class="kpi">at <b>150/day</b> → <b>${Math.round(QBANK_MCQ / 150)}</b> days</div>
     </div>`;
   v.appendChild(p);
 }
@@ -1029,10 +1060,11 @@ let PALETTE_INDEX = null, palSel = 0, palResults = [];
 function buildPaletteIndex() {
   const idx = [];
   // subjects
-  ["marrow", "cerebellum"].forEach(plat => subjectsOf(plat).forEach(s =>
-    idx.push({ type: "Subject", label: s, sub: plat === "marrow" ? "Marrow" : "Cerebellum", run: () => jumpToSubject(canon(s), plat) })));
+  QBANKS.forEach(p => subjectsOf(p.id).forEach(s =>
+    idx.push({ type: "Subject", label: s, sub: p.name, run: () => jumpToSubject(canon(s), p.id) })));
   // leaves
-  LEAVES.forEach(l => idx.push({ type: l.platform === "marrow" ? "Module" : "Unit", label: l.name, sub: `${l.platform === "marrow" ? "Marrow" : "Cerebellum"} · ${l.canon}`, leaf: l, run: () => openDrawer(l.id) }));
+  const leafType = { marrow: "Module", cerebellum: "Unit", doctutorials: "Chapter" };
+  LEAVES.forEach(l => idx.push({ type: leafType[l.platform] || "Topic", label: l.name, sub: `${platName(l.platform)} · ${l.canon}`, leaf: l, run: () => openDrawer(l.id) }));
   // tests
   buildTests().forEach(t => idx.push({ type: "Test", label: t.name, sub: t.platform, run: () => { gotoTest(t.id); } }));
   // videos
@@ -1113,8 +1145,7 @@ function gotoTest(id) {
   setTimeout(() => { const row = $(`#view-tests .scorerow[data-id="${cssEsc(id)}"]`); if (row) { row.scrollIntoView({ block: "center", behavior: "smooth" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); } }, 60);
 }
 const SUBJ_BY_CANON = {};
-marrowFresh.forEach(s => { const c = canon(s.subject); (SUBJ_BY_CANON[c] = SUBJ_BY_CANON[c] || {}).marrow = s.subject; });
-D.cerebellum.subjects.forEach(s => { const c = canon(s.subject); (SUBJ_BY_CANON[c] = SUBJ_BY_CANON[c] || {}).cere = s.subject; });
+QBANKS.forEach(p => p.subjects.forEach(s => { const c = canon(s.subject); (SUBJ_BY_CANON[c] = SUBJ_BY_CANON[c] || {})[p.id] = s.subject; }));
 
 /* ============================================================
    GLOBAL EVENT DELEGATION
