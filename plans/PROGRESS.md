@@ -62,6 +62,12 @@
 - [x] **1a · Multi-platform data model** — exam-agnostic `D.platforms[]` + DocTutorials ingest + N-way
   consensus (`DATA_INTEGRATION.md`). *H1.* *(2026-06-27)* DocTutorials Main integrated (13,202 MCQs);
   Marrow+Cerebellum preserved at 42,889. PrepLadder/eGurukul left as a clean ingest seam.
+### Phase 1c — Data & Visual Experience (before the wedge) — `DATA_VISUAL_STANDARD.md`
+- [ ] **1c.1 · Curation (data-first)** — honest proxy-vs-yield labels; curate best-platform/faculty
+  per-subject matrix (`directional`, sourced) + neutral reliability scorecard (`public-3p`, dated) into
+  `D`; `D.sources[]` + "How we rate" surface. Prompt: `plans/PHASE1C1_PROMPT.md`.
+- [ ] **1c.2 · Depiction (viz)** — desktop-led data-viz: subject×platform heatmap, consensus view,
+  best-for-subject matrix, MCQ/yield treemap, progress sparklines. Prompt issued after 1c.1 verifies.
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **Free Rank/College Predictor** (results-season lead magnet) — if fork #1 says predictor-first.
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer).
@@ -78,6 +84,12 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Phase 1c added before the wedge** (user: baseline *data curation* + *visual experience*
+  need a major upgrade). Insight: we show **inventory (counts), not judgment** — the moat data
+  (best-faculty/subject, reliability scorecard, true yield) sits in research docs, not the app; desktop
+  is still the sparse pre-mobile layout. Wrote **`DATA_VISUAL_STANDARD.md`** (laws: show judgment not
+  inventory; draw relationships not numbers; neutrality firewall + epistemic labels). Scope: both as
+  one workstream, **before** the Phase 2 predictor. Runs data-first (1c.1) → viz (1c.2).
 - 2026-06-27 **Phase 1b.2 density redesign shipped** — clears the 1b rejection against
   `MOBILE_DESIGN_STANDARD.md`. Presentation-only (data layer frozen): `index.html` + `styles.css` +
   render layer of `app.js`. **Overview** 4 giant cards → **6 compact KPI tiles** (2-col, tabular
