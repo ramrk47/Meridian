@@ -1,0 +1,20 @@
+{
+  "_comment": "Best-platform-per-subject by COMMUNITY REPUTATION. epistemic=directional: aggregated public sentiment (comparison blogs + Q&A snippets), NOT Meridian's measurement or verdict. Traces to RESEARCH_FINDINGS.md H3 line 78-81. Subject names are canonical (must match app.js CANON outputs). platformId is null where the platform is named in reputation but not yet integrated as a content source (PrepLadder = ingest seam).",
+  "epistemic": "directional",
+  "captured": "2026-06-26",
+  "framing": "community reputation",
+  "claim": "Which platform aspirants most often call strongest for each subject, aggregated from public comparison blogs and Q&A. Reputation only — not a Meridian ranking, not based on Meridian's measurement.",
+  "sourceIds": ["src-medicotopics-marrow-prepladder", "src-quora-marrow-prepladder"],
+  "subjects": [
+    { "subject": "Surgery", "strong": [{ "platform": "Marrow", "platformId": "marrow" }] },
+    { "subject": "ENT", "strong": [{ "platform": "Marrow", "platformId": "marrow" }] },
+    { "subject": "Ophthalmology", "strong": [{ "platform": "Marrow", "platformId": "marrow" }] },
+    { "subject": "Pathology", "strong": [{ "platform": "Marrow", "platformId": "marrow" }] },
+    { "subject": "Obstetrics & Gynaecology", "strong": [{ "platform": "Marrow", "platformId": "marrow" }] },
+    { "subject": "Anatomy", "strong": [{ "platform": "PrepLadder", "platformId": null }] },
+    { "subject": "Pharmacology", "strong": [{ "platform": "PrepLadder", "platformId": null }] },
+    { "subject": "Medicine", "strong": [{ "platform": "PrepLadder", "platformId": null }] },
+    { "subject": "Orthopaedics", "strong": [{ "platform": "PrepLadder", "platformId": null }] },
+    { "subject": "Dermatology", "strong": [{ "platform": "PrepLadder", "platformId": null }] }
+  ]
+}

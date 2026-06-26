@@ -1,0 +1,72 @@
+{
+  "_comment": "Shared evidence registry for all curated claims. Every directional / public-3p figure in D references one of these by id. Faculty pass (1c.1F) APPENDS its own sources here; do not renumber existing ids. Nothing here is fabricated — each entry is a real, resolvable source captured on the stated date.",
+  "sources": [
+    {
+      "id": "src-medicotopics-marrow-prepladder",
+      "type": "blog",
+      "title": "Marrow or PrepLadder — subject-wise comparison",
+      "publisher": "medicotopics.com",
+      "url": "https://medicotopics.com/marrow-or-prepladder/",
+      "captured": "2026-06-26",
+      "note": "Secondary comparison blog (downweighted vs primary user voice). Corroborates the subject-split reputation."
+    },
+    {
+      "id": "src-quora-marrow-prepladder",
+      "type": "forum-snippet",
+      "title": "Which question bank is best for NEET PG — PrepLadder or Marrow",
+      "publisher": "Quora (search snippet)",
+      "url": "https://www.quora.com/Which-question-bank-of-PrepLadder-or-of-Marrow-is-best-for-the-NEET-PG",
+      "captured": "2026-06-26",
+      "note": "Question page returns 403; quote recovered from search snippet. Directional only."
+    },
+    {
+      "id": "src-appstore-marrow",
+      "type": "app-store",
+      "title": "Marrow for NEET PG & NExT — iOS App Store (India)",
+      "publisher": "Apple App Store (IN)",
+      "url": "https://apps.apple.com/in/app/marrow-for-neet-pg-next/id1226886654",
+      "captured": "2026-06-26"
+    },
+    {
+      "id": "src-appstore-prepladder",
+      "type": "app-store",
+      "title": "PrepLadder — iOS App Store (India)",
+      "publisher": "Apple App Store (IN)",
+      "url": "https://apps.apple.com/in/app/prepladder/id1622337839",
+      "captured": "2026-06-26"
+    },
+    {
+      "id": "src-appstore-doctutorials",
+      "type": "app-store",
+      "title": "DocTutorials NEET PG, SS & FMGE — iOS App Store (India)",
+      "publisher": "Apple App Store (IN)",
+      "url": "https://apps.apple.com/in/app/doctutorials-neet-pg-ss-fmge/id1475350376",
+      "captured": "2026-06-26"
+    },
+    {
+      "id": "src-appstore-cerebellum",
+      "type": "app-store",
+      "title": "Cerebellum NEET PG INICET FMGE — iOS App Store (India)",
+      "publisher": "Apple App Store (IN)",
+      "url": "https://apps.apple.com/in/app/cerebellum-neet-pg-inicet-fmge/id1662462131",
+      "captured": "2026-06-26"
+    },
+    {
+      "id": "src-appstore-egurukul",
+      "type": "app-store",
+      "title": "eGurukul eLearning by DBMCI — iOS App Store (India)",
+      "publisher": "Apple App Store (IN)",
+      "url": "https://apps.apple.com/in/app/egurukul-elearning-by-dbmci/id1491444366",
+      "captured": "2026-06-26"
+    },
+    {
+      "id": "src-research-findings",
+      "type": "research-doc",
+      "title": "Meridian Research Findings — aspirant sentiment (H3, app-store scorecard)",
+      "publisher": "Meridian (internal research)",
+      "url": "plans/RESEARCH_FINDINGS.md",
+      "captured": "2026-06-26",
+      "note": "Internal harvest that aggregated the public sources above. Cite the primary source where one exists."
+    }
+  ]
+}

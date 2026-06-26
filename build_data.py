@@ -238,6 +238,55 @@ platforms = [
     {"id": "doctutorials", "name": "DocTutorials", "kind": "qbank", "color": "#5d7a52", "cls": "k", "subjects": dt_subjects},
 ]
 
+# ---------- curated judgment layer (Phase 1c.1 — substance, honestly labelled) ----------
+# Curated, sourced claims live in _raw/curated/*.json (never hardcoded here). Every directional /
+# public-3p figure references a source in the shared registry. epistemic labels: measured | proxy |
+# directional | public-3p. The faculty pass (1c.1F) reuses D.sources + D.methodology + these conventions.
+CURATED = os.path.join(RAW, "curated")
+
+def load_curated(name):
+    path = os.path.join(CURATED, name)
+    if not os.path.exists(path):
+        print(f"WARN: curated/{name} missing — skipping")
+        return None
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+_sources_doc = load_curated("sources.json") or {"sources": []}
+_strength_doc = load_curated("subject_strength.json")
+_reliab_doc = load_curated("reliability.json")
+_method_doc = load_curated("methodology.json")
+
+sources = _sources_doc.get("sources", [])
+source_ids = {s["id"] for s in sources}
+
+# Source-integrity guard: no curated claim may reference a source that isn't in the registry
+# (catches typos / fabricated source refs before they ship). Collect every referenced id.
+def _collect_refs(doc):
+    refs = set()
+    if not doc:
+        return refs
+    refs.update(doc.get("sourceIds", []) or [])
+    for subj in doc.get("subjects", []) or []:
+        refs.update(subj.get("sourceIds", []) or [])
+    for app in doc.get("apps", []) or []:
+        if app.get("sourceId"):
+            refs.add(app["sourceId"])
+    return refs
+
+referenced = _collect_refs(_strength_doc) | _collect_refs(_reliab_doc)
+dangling = referenced - source_ids
+if dangling:
+    raise SystemExit(f"ABORT (neutrality firewall): curated claims reference unknown source ids: {sorted(dangling)}")
+
+# Attach the public-3p reliability record to each integrated platform by id (convenience pointer;
+# D.reliability stays the canonical full scorecard incl. non-integrated apps PrepLadder / eGurukul).
+if _reliab_doc:
+    by_pid = {a["platformId"]: a for a in _reliab_doc.get("apps", []) if a.get("platformId")}
+    for p in platforms:
+        if p["id"] in by_pid:
+            p["reliability"] = by_pid[p["id"]]
+
 data = {
     "exam": "NEET PG / INI-CET",
     "captured": "26 June 2026",
@@ -247,6 +296,11 @@ data = {
               "cereSubjectTests": cere_subject_tests, "cereGtSummary": cere_gt_summary,
               "marrowTests": marrow_tests},
     "videos": btr_videos,
+    # curated judgment layer (each block carries its own epistemic tag + sourceIds + capture date)
+    "sources": sources,
+    "subjectStrength": _strength_doc,
+    "reliability": _reliab_doc,
+    "methodology": _method_doc,
 }
 
 out = os.path.join(os.path.dirname(__file__), "data.js")
@@ -271,4 +325,8 @@ print(f"DocTutorials (Main): {len(dt_subjects)} subjects, "
       f"(subject-overview states {dt_subj}; +{dt_leaf-dt_subj} capture variance)")
 print(f"CoreBTR tests: {len(corebtr_tests)}   Cerebellum GT-2026 listed: {len(cere_gt_2026)}")
 print(f"CoreBTR topic videos: {len(btr_videos)}  total minutes: {sum(v['durMin'] or 0 for v in btr_videos)}")
+print(f"Curated: {len(sources)} sources, "
+      f"{len(_strength_doc.get('subjects', [])) if _strength_doc else 0} subject-strength rows (directional), "
+      f"{len(_reliab_doc.get('apps', [])) if _reliab_doc else 0} reliability rows (public-3p); "
+      f"all source refs resolve")
 print(f"Wrote {out}")

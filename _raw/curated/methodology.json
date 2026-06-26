@@ -1,0 +1,10 @@
+{
+  "_comment": "Powers the 'How we rate / Sources' surface and the epistemic-badge tooltips. Single source of truth for the four epistemic labels so every surface (and the faculty pass) uses identical wording. Edit copy here, not in app.js.",
+  "labels": [
+    { "tag": "measured", "name": "Measured", "desc": "Counts we actually hold — MCQ / module totals pulled directly from platform captures." },
+    { "tag": "proxy", "name": "Proxy", "desc": "Derived, not the real thing. Our density score is MCQ share within a subject — a stand-in for exam weight, NOT measured exam yield. We do not hold PYQ-weighted exam-frequency data, so we do not claim it." },
+    { "tag": "directional", "name": "Directional", "desc": "Community reputation / sentiment from public forums and comparison blogs. Aggregated opinion, not measurement — and never Meridian's verdict." },
+    { "tag": "public-3p", "name": "Public 3rd-party", "desc": "Third-party public data (e.g. app-store star ratings), shown with its exact source and capture date. A reliability signal, not content quality." }
+  ],
+  "firewall": "Meridian sells no content of its own — which is exactly why it can rate everyone's. Every figure here is either a count we hold, community sentiment, or public third-party data, each labelled and sourced. Nothing is Meridian's verdict on a platform or teacher, and nothing here is or ever will be influenced by money."
+}

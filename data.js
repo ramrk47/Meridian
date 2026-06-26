@@ -10532,7 +10532,20 @@ window.D = {
       }
      ]
     }
-   ]
+   ],
+   "reliability": {
+    "name": "Marrow",
+    "platformId": "marrow",
+    "rating": 4.7,
+    "ratingApprox": true,
+    "ratingsLabel": "~33k",
+    "themes": [
+     "pricing",
+     "price hikes",
+     "video view-count caps"
+    ],
+    "sourceId": "src-appstore-marrow"
+   }
   },
   {
    "id": "cerebellum",
@@ -13346,7 +13359,21 @@ window.D = {
       }
      ]
     }
-   ]
+   ],
+   "reliability": {
+    "name": "Cerebellum",
+    "platformId": "cerebellum",
+    "rating": 3.7,
+    "ratingApprox": false,
+    "ratingsLabel": "~3.4k",
+    "themes": [
+     "freezes / crashes",
+     "dated UI",
+     "no PiP",
+     "no dark mode"
+    ],
+    "sourceId": "src-appstore-cerebellum"
+   }
   },
   {
    "id": "doctutorials",
@@ -19246,7 +19273,20 @@ window.D = {
       }
      ]
     }
-   ]
+   ],
+   "reliability": {
+    "name": "DocTutorials",
+    "platformId": "doctutorials",
+    "rating": 4.2,
+    "ratingApprox": false,
+    "ratingsLabel": "~1.7k",
+    "themes": [
+     "stuck loading after updates",
+     "screenshot blocking",
+     "“buy again” bug"
+    ],
+    "sourceId": "src-appstore-doctutorials"
+   }
   }
  ],
  "tests": {
@@ -21729,7 +21769,281 @@ window.D = {
    "confidence": "high",
    "file": "12 - Transplant surgery [high].mp4"
   }
- ]
+ ],
+ "sources": [
+  {
+   "id": "src-medicotopics-marrow-prepladder",
+   "type": "blog",
+   "title": "Marrow or PrepLadder — subject-wise comparison",
+   "publisher": "medicotopics.com",
+   "url": "https://medicotopics.com/marrow-or-prepladder/",
+   "captured": "2026-06-26",
+   "note": "Secondary comparison blog (downweighted vs primary user voice). Corroborates the subject-split reputation."
+  },
+  {
+   "id": "src-quora-marrow-prepladder",
+   "type": "forum-snippet",
+   "title": "Which question bank is best for NEET PG — PrepLadder or Marrow",
+   "publisher": "Quora (search snippet)",
+   "url": "https://www.quora.com/Which-question-bank-of-PrepLadder-or-of-Marrow-is-best-for-the-NEET-PG",
+   "captured": "2026-06-26",
+   "note": "Question page returns 403; quote recovered from search snippet. Directional only."
+  },
+  {
+   "id": "src-appstore-marrow",
+   "type": "app-store",
+   "title": "Marrow for NEET PG & NExT — iOS App Store (India)",
+   "publisher": "Apple App Store (IN)",
+   "url": "https://apps.apple.com/in/app/marrow-for-neet-pg-next/id1226886654",
+   "captured": "2026-06-26"
+  },
+  {
+   "id": "src-appstore-prepladder",
+   "type": "app-store",
+   "title": "PrepLadder — iOS App Store (India)",
+   "publisher": "Apple App Store (IN)",
+   "url": "https://apps.apple.com/in/app/prepladder/id1622337839",
+   "captured": "2026-06-26"
+  },
+  {
+   "id": "src-appstore-doctutorials",
+   "type": "app-store",
+   "title": "DocTutorials NEET PG, SS & FMGE — iOS App Store (India)",
+   "publisher": "Apple App Store (IN)",
+   "url": "https://apps.apple.com/in/app/doctutorials-neet-pg-ss-fmge/id1475350376",
+   "captured": "2026-06-26"
+  },
+  {
+   "id": "src-appstore-cerebellum",
+   "type": "app-store",
+   "title": "Cerebellum NEET PG INICET FMGE — iOS App Store (India)",
+   "publisher": "Apple App Store (IN)",
+   "url": "https://apps.apple.com/in/app/cerebellum-neet-pg-inicet-fmge/id1662462131",
+   "captured": "2026-06-26"
+  },
+  {
+   "id": "src-appstore-egurukul",
+   "type": "app-store",
+   "title": "eGurukul eLearning by DBMCI — iOS App Store (India)",
+   "publisher": "Apple App Store (IN)",
+   "url": "https://apps.apple.com/in/app/egurukul-elearning-by-dbmci/id1491444366",
+   "captured": "2026-06-26"
+  },
+  {
+   "id": "src-research-findings",
+   "type": "research-doc",
+   "title": "Meridian Research Findings — aspirant sentiment (H3, app-store scorecard)",
+   "publisher": "Meridian (internal research)",
+   "url": "plans/RESEARCH_FINDINGS.md",
+   "captured": "2026-06-26",
+   "note": "Internal harvest that aggregated the public sources above. Cite the primary source where one exists."
+  }
+ ],
+ "subjectStrength": {
+  "_comment": "Best-platform-per-subject by COMMUNITY REPUTATION. epistemic=directional: aggregated public sentiment (comparison blogs + Q&A snippets), NOT Meridian's measurement or verdict. Traces to RESEARCH_FINDINGS.md H3 line 78-81. Subject names are canonical (must match app.js CANON outputs). platformId is null where the platform is named in reputation but not yet integrated as a content source (PrepLadder = ingest seam).",
+  "epistemic": "directional",
+  "captured": "2026-06-26",
+  "framing": "community reputation",
+  "claim": "Which platform aspirants most often call strongest for each subject, aggregated from public comparison blogs and Q&A. Reputation only — not a Meridian ranking, not based on Meridian's measurement.",
+  "sourceIds": [
+   "src-medicotopics-marrow-prepladder",
+   "src-quora-marrow-prepladder"
+  ],
+  "subjects": [
+   {
+    "subject": "Surgery",
+    "strong": [
+     {
+      "platform": "Marrow",
+      "platformId": "marrow"
+     }
+    ]
+   },
+   {
+    "subject": "ENT",
+    "strong": [
+     {
+      "platform": "Marrow",
+      "platformId": "marrow"
+     }
+    ]
+   },
+   {
+    "subject": "Ophthalmology",
+    "strong": [
+     {
+      "platform": "Marrow",
+      "platformId": "marrow"
+     }
+    ]
+   },
+   {
+    "subject": "Pathology",
+    "strong": [
+     {
+      "platform": "Marrow",
+      "platformId": "marrow"
+     }
+    ]
+   },
+   {
+    "subject": "Obstetrics & Gynaecology",
+    "strong": [
+     {
+      "platform": "Marrow",
+      "platformId": "marrow"
+     }
+    ]
+   },
+   {
+    "subject": "Anatomy",
+    "strong": [
+     {
+      "platform": "PrepLadder",
+      "platformId": null
+     }
+    ]
+   },
+   {
+    "subject": "Pharmacology",
+    "strong": [
+     {
+      "platform": "PrepLadder",
+      "platformId": null
+     }
+    ]
+   },
+   {
+    "subject": "Medicine",
+    "strong": [
+     {
+      "platform": "PrepLadder",
+      "platformId": null
+     }
+    ]
+   },
+   {
+    "subject": "Orthopaedics",
+    "strong": [
+     {
+      "platform": "PrepLadder",
+      "platformId": null
+     }
+    ]
+   },
+   {
+    "subject": "Dermatology",
+    "strong": [
+     {
+      "platform": "PrepLadder",
+      "platformId": null
+     }
+    ]
+   }
+  ]
+ },
+ "reliability": {
+  "_comment": "Neutral app reliability scorecard. epistemic=public-3p: third-party public data (iOS India App Store star ratings + recurring 1-2 star complaint themes), captured 2026-06-26. Reliability / UX signal only — NOT content quality and NOT a Meridian score. Traces to RESEARCH_FINDINGS.md lines 141-153. Ratings & counts are approximate as published by the store. platformId null = app shown in the scorecard but not integrated as a Meridian content source (PrepLadder, eGurukul = ingest seam).",
+  "epistemic": "public-3p",
+  "captured": "2026-06-26",
+  "scale": "iOS App Store (India) — average star rating",
+  "framing": "third-party public ratings",
+  "note": "Marrow is the quality benchmark; its complaints are about price/access caps, not stability. Everyone below it loses stars on reliability. An incumbent structurally cannot publish this about its rivals — Meridian can.",
+  "apps": [
+   {
+    "name": "Marrow",
+    "platformId": "marrow",
+    "rating": 4.7,
+    "ratingApprox": true,
+    "ratingsLabel": "~33k",
+    "themes": [
+     "pricing",
+     "price hikes",
+     "video view-count caps"
+    ],
+    "sourceId": "src-appstore-marrow"
+   },
+   {
+    "name": "PrepLadder",
+    "platformId": null,
+    "rating": 4.4,
+    "ratingApprox": false,
+    "ratingsLabel": "~21k",
+    "themes": [
+     "buffering",
+     "playback resets to 1×",
+     "“other device” logouts"
+    ],
+    "sourceId": "src-appstore-prepladder"
+   },
+   {
+    "name": "DocTutorials",
+    "platformId": "doctutorials",
+    "rating": 4.2,
+    "ratingApprox": false,
+    "ratingsLabel": "~1.7k",
+    "themes": [
+     "stuck loading after updates",
+     "screenshot blocking",
+     "“buy again” bug"
+    ],
+    "sourceId": "src-appstore-doctutorials"
+   },
+   {
+    "name": "Cerebellum",
+    "platformId": "cerebellum",
+    "rating": 3.7,
+    "ratingApprox": false,
+    "ratingsLabel": "~3.4k",
+    "themes": [
+     "freezes / crashes",
+     "dated UI",
+     "no PiP",
+     "no dark mode"
+    ],
+    "sourceId": "src-appstore-cerebellum"
+   },
+   {
+    "name": "eGurukul (DBMCI)",
+    "platformId": null,
+    "rating": 3.0,
+    "ratingApprox": false,
+    "ratingsLabel": "~2.3k",
+    "themes": [
+     "buggy playback",
+     "auto-logout on close",
+     "validity expired early"
+    ],
+    "sourceId": "src-appstore-egurukul"
+   }
+  ]
+ },
+ "methodology": {
+  "_comment": "Powers the 'How we rate / Sources' surface and the epistemic-badge tooltips. Single source of truth for the four epistemic labels so every surface (and the faculty pass) uses identical wording. Edit copy here, not in app.js.",
+  "labels": [
+   {
+    "tag": "measured",
+    "name": "Measured",
+    "desc": "Counts we actually hold — MCQ / module totals pulled directly from platform captures."
+   },
+   {
+    "tag": "proxy",
+    "name": "Proxy",
+    "desc": "Derived, not the real thing. Our density score is MCQ share within a subject — a stand-in for exam weight, NOT measured exam yield. We do not hold PYQ-weighted exam-frequency data, so we do not claim it."
+   },
+   {
+    "tag": "directional",
+    "name": "Directional",
+    "desc": "Community reputation / sentiment from public forums and comparison blogs. Aggregated opinion, not measurement — and never Meridian's verdict."
+   },
+   {
+    "tag": "public-3p",
+    "name": "Public 3rd-party",
+    "desc": "Third-party public data (e.g. app-store star ratings), shown with its exact source and capture date. A reliability signal, not content quality."
+   }
+  ],
+  "firewall": "Meridian sells no content of its own — which is exactly why it can rate everyone's. Every figure here is either a count we hold, community sentiment, or public third-party data, each labelled and sourced. Nothing is Meridian's verdict on a platform or teacher, and nothing here is or ever will be influenced by money."
+ }
 };
 // back-compat shim: legacy reads of window.QBANK_DATA resolve to the new model.
 window.QBANK_DATA = window.D;

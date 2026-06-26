@@ -1,0 +1,15 @@
+{
+  "_comment": "Neutral app reliability scorecard. epistemic=public-3p: third-party public data (iOS India App Store star ratings + recurring 1-2 star complaint themes), captured 2026-06-26. Reliability / UX signal only — NOT content quality and NOT a Meridian score. Traces to RESEARCH_FINDINGS.md lines 141-153. Ratings & counts are approximate as published by the store. platformId null = app shown in the scorecard but not integrated as a Meridian content source (PrepLadder, eGurukul = ingest seam).",
+  "epistemic": "public-3p",
+  "captured": "2026-06-26",
+  "scale": "iOS App Store (India) — average star rating",
+  "framing": "third-party public ratings",
+  "note": "Marrow is the quality benchmark; its complaints are about price/access caps, not stability. Everyone below it loses stars on reliability. An incumbent structurally cannot publish this about its rivals — Meridian can.",
+  "apps": [
+    { "name": "Marrow", "platformId": "marrow", "rating": 4.7, "ratingApprox": true, "ratingsLabel": "~33k", "themes": ["pricing", "price hikes", "video view-count caps"], "sourceId": "src-appstore-marrow" },
+    { "name": "PrepLadder", "platformId": null, "rating": 4.4, "ratingApprox": false, "ratingsLabel": "~21k", "themes": ["buffering", "playback resets to 1×", "“other device” logouts"], "sourceId": "src-appstore-prepladder" },
+    { "name": "DocTutorials", "platformId": "doctutorials", "rating": 4.2, "ratingApprox": false, "ratingsLabel": "~1.7k", "themes": ["stuck loading after updates", "screenshot blocking", "“buy again” bug"], "sourceId": "src-appstore-doctutorials" },
+    { "name": "Cerebellum", "platformId": "cerebellum", "rating": 3.7, "ratingApprox": false, "ratingsLabel": "~3.4k", "themes": ["freezes / crashes", "dated UI", "no PiP", "no dark mode"], "sourceId": "src-appstore-cerebellum" },
+    { "name": "eGurukul (DBMCI)", "platformId": null, "rating": 3.0, "ratingApprox": false, "ratingsLabel": "~2.3k", "themes": ["buggy playback", "auto-logout on close", "validity expired early"], "sourceId": "src-appstore-egurukul" }
+  ]
+}
