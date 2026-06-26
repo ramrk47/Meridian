@@ -38,7 +38,9 @@ in. Meridian is the Switzerland: it makes multi-source study coherent. The data 
   Topic → Item). One codebase, many exam "verticals"; the cross-platform + ratings layer is the
   same everywhere. Becomes a compendium hub for all streams of aspirants.
 
-## Roadmap backlog (pre-research ranking — re-rank after RESEARCH_FINDINGS.md)
+## Roadmap backlog (pre-research ranking) — **SUPERSEDED** by "Sequenced roadmap" below (2026-06-27)
+> Kept for history. The live build order is the **Sequenced roadmap** section further down,
+> which folds in RESEARCH_FINDINGS.md, MARKET_INTEL.md, and the resolved strategic forks.
 **P0 — foundational**
 - Responsive layout rework + exquisite mobile view (see RESPONSIVE_MOBILE_REWORK.md). Current
   desktop space utilization is poor; no mobile view exists. Blocks everything else's usability.
@@ -61,6 +63,69 @@ in. Meridian is the Switzerland: it makes multi-source study coherent. The data 
 - Accounts + PHP/DB backend; deploy to subdomain.
 - Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher.
 - Mobile app shell.
+
+## Resolved strategic forks (2026-06-27) — these drive the sequence
+1. **Launch hook → Predictor first, tracker retains.** Free, no-login Rank/College Predictor is the
+   public results-season lead magnet; the cross-platform tracker is the retain surface users funnel into.
+2. **Ratings source → Hybrid.** Seed editorial "best faculty by subject" + the dated app-store
+   reliability scorecard, then graduate to observed usage/outcome signals as scale arrives. Avoids
+   both cold-start (pure usage) and selection-bias (pure crowd).
+3. **Account/backend timing → Local-first now, backend after the wedge proves.** `storage.js` stays
+   the seam; accounts + PHP/DB enter only once tracker+predictor show traction. Gates pace-benchmark,
+   pods, crowd-rating aggregation, and Pro payments.
+4. **B2B timing → Delay until scale.** Build the aggregate data asset now; no B2B sales conversations
+   until there's real scale — protects the neutrality moat.
+5. **Neutrality → locked + public from day one.** The firewall (money buys labeled visibility, never
+   the score; rate from observed data; publish methodology; disclose paid placements) is a first-class,
+   visible product feature, stated openly at launch.
+
+## Sequenced roadmap (post-forks — this is the live build order)
+
+### Phase 1 — Foundation (local-first; the rails, no new user features) — **build first regardless**
+- **1a · Exam-agnostic data model.** Refactor `window.QBANK_DATA.{marrow,cerebellum}` →
+  `D = { exam, platforms[], tests, videos }` (Exam→Platform→Subject→Topic→Item, per DATA_INTEGRATION.md).
+  Integrate **DocTutorials now** (has MCQ totals); PrepLadder/eGurukul once drilled. Extend `CANON`
+  aliases. Generalize consensus **2 → N** (high on ≥2 independent platforms). Preserve the 42,889
+  Marrow+Cerebellum sanity total. Files: `build_data.py`, `data.js`, `app.js` (data-access + helpers).
+- **1b · Mobile-first responsive rebuild** on the *frozen* N-platform schema (RESPONSIVE_MOBILE_REWORK.md):
+  fluid container, sticky compact header + **bottom tab nav**, QBank subject chip-strip, drawer→bottom-sheet,
+  palette→full-screen, tables→card lists, container queries, safe-area insets, **PWA** manifest + SW.
+  Sweep the two micro-drifts here (footer "1–6"→"1–7"; dynamic platform subhead). Files: `index.html`,
+  `styles.css`, `app.js` (render layer + mirror `show()` to bottom nav).
+- *Sequencing:* **1a before 1b** — freeze the schema so the responsive renderers are written once
+  against the final shape, not twice. Both are the cohesive app.js/styles.css/index.html surface →
+  built by the coordinator, sequentially (app.js is the shared seam; do not parallelize).
+
+### Phase 2 — Free wedge / acquisition (the launch)
+- **2a · Free Rank/College Predictor** — public, no-login, shareable, results-season hook; neutral
+  published methodology. The acquisition magnet.
+- **2b · Cross-platform tracker + PYQ tracker** as the retain surface (tracker core mostly exists →
+  extend to N platforms; add PYQ tracking). The spreadsheet-killer.
+- *Quick win when slack:* **subscription/validity tracker** (H6 — show each platform's expiry vs the
+  exam date, warn before lapse; cheap, emotionally resonant).
+
+### Phase 3 — Retention + the ratings graph (the moat; still local-first)
+- **3a · Spaced-revision "Due" queue** across all platforms (H2 — top unmet need).
+- **3b · Do-next intelligence** — weakest-subject routing from scores + untracked-high-yield gap (H4).
+- **3c · Ratings scaffold (hybrid)** — seed "best faculty by subject" + read-only dated reliability
+  scorecard; local-first, schema ready to sync; neutrality firewall labeled (H3).
+
+### ⟐ Gate — wedge proves traction → add **accounts + backend** (PHP/DB on the `storage.js` seam)
+Unlocks pace-benchmark, pods, crowd-rating aggregation, and Pro payments. Deploy to a
+notalonestudios.com subdomain.
+
+### Phase 4 — Premium "Pro" (₹1,999/yr via 7–14d free trial; needs payments → post-gate)
+Cross-platform weak-topic heatmap · rank prediction with cross-platform normalization · Last-10-Days
+deadline engine · spaced repetition across sources · ad-free.
+
+### Phase 5 — B2B demand-intelligence (only at scale — the durable revenue engine)
+Anonymized aggregate dashboards (category demand, share-of-attention, completion/satisfaction
+benchmarks) sold per platform. Neutrality firewall enforced; methodology published; lead-in with the
+safest aggregate product, no per-enrollment lead-gen at launch.
+
+### Later — Compendium
+UPSC/NEET-UG/JEE/KCET verticals behind an exam switcher (`D.exam` already in the schema); mobile app
+shell via Capacitor/Tauri on the PWA base.
 
 ## Guardrails / principles
 - **Neutral & honest:** never fake counts; label inferred data; respect each platform's guardrails
