@@ -11,7 +11,9 @@
 - **Repo:** `~/Meridian`, git → `git@github.com:ramrk47/Meridian.git` (`main`, SSH; gh token invalid).
 - **Research DONE (two layers):** `RESEARCH_FINDINGS.md` (micro — aspirant sentiment, H1/H2/H3/H6
   confirmed) + `MARKET_INTEL.md` (macro — market size, competitors, white-space, GTM, monetization).
-- **Working tree:** clean / code at last-shipped v2 = the live **7-tab** app (Overview · QBank · Progress · Tests · High-Yield · Videos · Planner), fully wired (`TAB_ORDER`, keys 1–7, `show()`). Data is still **platform-keyed** (`window.QBANK_DATA.{marrow,cerebellum}`), not yet the exam-agnostic `D.platforms[]`.
+- **Working tree:** clean / live **7-tab** app on the **exam-agnostic `D.platforms[]`** model (Phase 1a done).
+  Three QBanks now: **Marrow · Cerebellum · DocTutorials** (`window.D = {exam, platforms[], tests, videos}`;
+  `QBANK_DATA` is a back-compat alias). N-way consensus + cross-platform layer live.
 - **Known micro-drift (fold into the mobile rebuild, not a standalone commit):** footer says "press 1–6" but there are 7 tabs/keys (`index.html:49`); subhead hardcodes "Marrow · Cerebellum · CoreBTR" (`index.html:16`).
 - **Blocking next:** decide the 5 strategic forks → sequence roadmap; then foundation (mobile + multi-platform data).
 
@@ -29,24 +31,28 @@
 4. **Account/backend → Local-first now**, accounts + PHP/DB only after the wedge proves traction.
 5. **Neutrality → locked + public from day one** (firewall is a first-class, visible feature).
 
-## Data inventory (`_raw/NewPlatforms/`) — captured, NOT yet integrated
-| File | Rows | Level |
-|------|-----:|-------|
-| `doctutorials_subjects.csv` | 57 | subject×{Main,QRP,PYQ} |
-| `doctutorials_chapters.csv` | 1311 | chapter |
-| `egurukul_topics.csv` | 1282 | topic |
-| `egurukul_other.csv` | 1809 | topic (PYQ/Express) |
-| `prepladder_modules.csv` | 1115 | module |
-| `prepladder_pyq.csv` | 361 | topic/year |
-| `prepladder_subject_totals.csv` | 19 | subject |
+## Data inventory (`_raw/NewPlatforms/`) — DocTutorials INTEGRATED; rest captured, not yet integrated
+| File | Rows | Level | Status |
+|------|-----:|-------|--------|
+| `doctutorials_subjects.csv` | 57 | subject×{Main,QRP,PYQ} | ✅ Main in `D.platforms` (QRP/PYQ = seam) |
+| `doctutorials_chapters.csv` | 1311 | chapter | ✅ 644 Main chapters → leaves (13,202 MCQs) |
+| `egurukul_topics.csv` | 1282 | topic | ⏳ seam (no counts on overview) |
+| `egurukul_other.csv` | 1809 | topic (PYQ/Express) | ⏳ seam |
+| `prepladder_modules.csv` | 1115 | module | ⏳ seam (no MCQ totals yet) |
+| `prepladder_pyq.csv` | 361 | topic/year | ⏳ seam |
+| `prepladder_subject_totals.csv` | 19 | subject | ⏳ seam |
 - ⚠️ Dedup the `(1)/(2)` copies; verify DocTutorials Main-vs-PYQ overlap; HTML page saves are gitignored fallback.
+- Ingest seam for PrepLadder/eGurukul: add a `_platform()` builder in `build_data.py` + an entry in
+  `platforms[]` — app.js is already N-platform, so they light up with zero UI changes once counts land.
 
 ## Roadmap (strategy-informed; SEQUENCE depends on the forks — confirm with user)
 ### Phase 0 — settle strategy
 - [x] Resolve the 5 forks; produce a re-ranked, sequenced roadmap into `VISION_and_ROADMAP.md`. *(2026-06-27)*
 ### Phase 1 — foundation (powers the free tracker; needed regardless of forks)
-- [ ] **Responsive + mobile-first rebuild** (`RESPONSIVE_MOBILE_REWORK.md`). *Incumbents are mobile-first (H5).*
-- [ ] **Multi-platform data model** — exam-agnostic `D.platforms[]`, ingest 5 platforms, N-way consensus (`DATA_INTEGRATION.md`). *H1.*
+- [ ] **1b · Responsive + mobile-first rebuild** (`RESPONSIVE_MOBILE_REWORK.md`). *Incumbents are mobile-first (H5).* **← next**
+- [x] **1a · Multi-platform data model** — exam-agnostic `D.platforms[]` + DocTutorials ingest + N-way
+  consensus (`DATA_INTEGRATION.md`). *H1.* *(2026-06-27)* DocTutorials Main integrated (13,202 MCQs);
+  Marrow+Cerebellum preserved at 42,889. PrepLadder/eGurukul left as a clean ingest seam.
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **Free Rank/College Predictor** (results-season lead magnet) — if fork #1 says predictor-first.
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer).
@@ -63,6 +69,14 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Phase 1a shipped** (commits `7bae112..e5af3ca`). `build_data.py` → exam-agnostic
+  `window.D = {exam, platforms[], tests, videos}` + `QBANK_DATA` alias shim. DocTutorials Main
+  integrated (19 subj / 644 chapters / **13,202 MCQs**; subject-overview states 13,199 → +3 capture
+  variance; hyScore = within-subject MCQ share, no rating captured). Marrow+Cerebellum **preserved at
+  42,889**. app.js fully N-platform: consensus 2→N (high on ≥2 banks), N-way cross-matcher/drawer/
+  palette/coverage, QBank N-way switch (segmented ≤3, dropdown beyond), generalized Overview/Progress/
+  HY/Planner. Fixed `cerebellum_tests.csv` path drift. Verified clean in Preview (all 7 tabs, no console
+  errors). PrepLadder/eGurukul left as a clean ingest seam. **Next: Phase 1b mobile rebuild.**
 - 2026-06-27 **5 forks resolved** (predictor-first · hybrid ratings · local-first→backend-after-wedge ·
   delay-B2B · public neutrality). Sequenced roadmap written to `VISION_and_ROADMAP.md`. Reconciled
   code drift (7-tab app is live v2; footer "1–6" + static subhead noted to fix in mobile rebuild).
