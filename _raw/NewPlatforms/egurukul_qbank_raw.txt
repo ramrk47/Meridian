@@ -1,0 +1,20 @@
+eGurukul (DBMCI) QBank (captured 26 Jun 2026, logged in)
+URL: https://dashboard.egurukulapp.com/#/qblayer
+Structure: Subject -> Topics(N) -> each topic has N Questions (drill to get counts)
+
+SUBJECTS (19, Subject-Wise QB):
+Anatomy, Biochemistry, Physiology, Pathology, Microbiology, Pharmacology,
+Forensic Medicine, ENT, PSM, OBG, Pediatrics, Medicine, Anesthesia, Surgery,
+Orthopaedics, Ophthalmology, Radiology, Psychiatry, Dermatology
+(Video layer splits Microbiology into Organism/System and Medicine into 2 faculty; QBank does not.)
+
+SAMPLE — Anatomy (subject id 615c39011243276d9a4ec7a0): Topics (10)
+  Abdomen, Pelvis & Perineum | General Embryology | Head, Neck & Face | Histology |
+  Lower Limb | Neuroanatomy | Osteology | Systemic Embryology | Thorax | Upper Limb
+
+Other resources: PYQ, Express Question Bank, Express QB 23-24, Free QBank.
+Free QB sample items carry counts, e.g. "Cardiovascular Regulation & Reflexes 0/14 Questions",
+"Vasculature 0/7", "History of Anesthesia 0/5" — so per-topic MCQ counts exist on drill.
+
+FOLLOW-UP (next session): drill each of the 19 subjects to capture Topics(N) and per-topic
+question counts. Same for PrepLadder per-subject MCQ totals and DocTutorials QRP/PYQ tabs.

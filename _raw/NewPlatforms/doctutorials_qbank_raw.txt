@@ -1,0 +1,28 @@
+DocTutorials QBank — Main module (captured 26 Jun 2026, logged in as sriramkagadal4444)
+URL: https://app.doctutorials.com/question-bank/modules/main
+Format: Subject | Chapters | Total MCQs
+
+Anatomy | 47 | 714
+Physiology | 32 | 595
+Biochemistry | 30 | 555
+Pathology | 38 | 1003
+Microbiology | 35 | 720
+Pharmacology | 29 | 672
+Forensic Medicine | 19 | 430
+ENT | 32 | 405
+Ophthalmology | 31 | 743
+PSM | 48 | 880
+Medicine | 68 | 1464
+Surgery | 42 | 978
+OB & G | 41 | 844
+Pediatrics | 25 | 560
+Anaesthesia | 23 | 607
+Dermatology | 25 | 432
+Orthopaedics | 34 | 770
+Psychiatry | 24 | 504
+Radiology | 21 | 323
+
+Notes:
+- 19 subjects. Also has "QRP" and "PYQs" sub-tabs (not yet captured) + Custom Module builder.
+- Counts shown as 0/N (user attempted 0). N = total MCQs available.
+- DocTutorials now redirects from/with PrepLadder (app.doctutorials.com <-> prepladder.com merged brand).

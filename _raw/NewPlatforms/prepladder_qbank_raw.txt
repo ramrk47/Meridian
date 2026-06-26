@@ -1,0 +1,34 @@
+PrepLadder QBank (captured 26 Jun 2026, logged in as Sriram Kagadal — FREE PLAN)
+URL: https://www.prepladder.com/app/qbank
+Format: Subject | Modules (the "0/N completed" N = total learning modules in subject)
+NOTE: MCQ totals per subject are NOT on this overview — require drilling into each subject (follow-up).
+Grouped by Prof year.
+
+[Prof 1]
+Anatomy | 71
+Physiology | 57
+Biochemistry | 43
+[Prof 2]
+Pathology | 95
+Pharmacology | 76
+Microbiology | 52
+[Final Prof Part 1]
+Forensic Medicine | 35
+PSM | 81
+ENT | 40
+Ophthalmology | 46
+[Final Prof Part 2 — Major]
+Gynaecology & Obstetrics | 74
+Pediatrics | 60
+Surgery | 80
+Medicine | 116
+[Final Prof Part 2 — Minor]
+Radiology | 31
+Anaesthesia | 29
+Orthopaedics | 41
+Psychiatry | 41
+Dermatology | 47
+
+Notes:
+- 19 subjects. Has QBANK TRACKER, PYQ's, Bookmarks, Custom Module, Quick Revision (Blueprint: 2500+ repeated topics), Rapid Revision.
+- Free plan account — full MCQ counts may need a paid view or per-subject drill.
