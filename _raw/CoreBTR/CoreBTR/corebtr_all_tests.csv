@@ -1,0 +1,30 @@
+Platform,Test Name,Status,Duration (min),Questions,Marks
+CoreBTR,Integrated systems Test-2,Ended,110,100,400
+CoreBTR,Grand Test (GT) - 6,Ended,210,200,800
+CoreBTR,Integrated systems Test-1,Ended,100,100,400
+CoreBTR,FMGE Mock GT ( Paper-B ),Ended,150,150,150
+CoreBTR,FMGE Mock GT ( Paper-A ),Ended,150,150,150
+CoreBTR,Anatomy Mini-Test,Ended,100,100,400
+CoreBTR,Grand Test (GT) - 5,Ended,210,200,800
+CoreBTR,Offline BTR Scholarship Test,Ended,25,50,200
+CoreBTR,Microbiology Mini-Test,Ended,100,100,400
+CoreBTR,Orthopedics-Radiology Mini-test,Ended,100,100,400
+CoreBTR,Surgery Mini-Test,Ended,100,100,400
+CoreBTR,Baseline GRAND TEST - 4,Ended,210,200,800
+CoreBTR,Surprise Mini Test - Top 100 Misleading Questions,Ended,100,100,100
+CoreBTR,Mini-Test 4 ( PSM | OBG | Peds | Opthal ),Ended,110,100,100
+CoreBTR,National INICET Mock GT,Ended,180,200,200
+CoreBTR,Surprise Mini Test - Hardest 100 Challenge,Ended,100,100,100
+CoreBTR,Mini-Test 3 ( Integrated systems-Derma-Anesthesia ),Ended,110,100,100
+CoreBTR,Grand Test (GT) - 3,Ended,180,200,200
+CoreBTR,Mini-Test 2 (Micro | Anat | Psych | ENT),Ended,110,100,100
+CoreBTR,Grand Test (GT) - 2,Ended,180,200,200
+CoreBTR,"Mini-Test 1 (Surg, Ortho, Radio, FMT, Biochem)",Ended,110,100,100
+CoreBTR,Grand Test (GT) - 1,Ended,180,200,200
+CoreBTR,Core Drop Surprise Test-6,Non-Competitive,15,15,60
+CoreBTR,Core Drop Surprise Test-5,Non-Competitive,15,15,15
+CoreBTR,Core Drop Surprise Test-4,Non-Competitive,15,15,15
+CoreBTR,Core Drop Surprise Test-3,Non-Competitive,15,15,15
+CoreBTR,Core Drop Surprise Test-2,Non-Competitive,15,15,15
+CoreBTR,Core Drop Surprise Test-1,Non-Competitive,15,15,15
+CoreBTR,TOTAL (28 tests),,,,3040

@@ -1,0 +1,272 @@
+Platform,Subject,Unit/Topic,Modules,Questions
+Cerebellum,Anatomy,"Basic Concepts, Tricks and Magics of Anatomy",1,2
+Cerebellum,Anatomy,General Anatomy,5,43
+Cerebellum,Anatomy,Upper Limb,11,99
+Cerebellum,Anatomy,Lower Limb,8,104
+Cerebellum,Anatomy,"Head, Neck and Face",8,200
+Cerebellum,Anatomy,Brain,8,209
+Cerebellum,Anatomy,Thorax,5,81
+Cerebellum,Anatomy,Abdomen & Pelvis,8,196
+Cerebellum,Anatomy,Histology,5,75
+Cerebellum,Anatomy,Embryology,7,131
+Cerebellum,Physiology,General Physiology,2,168
+Cerebellum,Physiology,Nerve Muscle,8,145
+Cerebellum,Physiology,CVS,13,140
+Cerebellum,Physiology,Respiratory System,7,147
+Cerebellum,Physiology,Central Nervous System,13,239
+Cerebellum,Physiology,Renal,6,135
+Cerebellum,Physiology,Endocrine,6,147
+Cerebellum,Physiology,GIT,4,127
+Cerebellum,Biochemistry,Concepts,1,7
+Cerebellum,Biochemistry,Carbohydrate Chemistry,5,37
+Cerebellum,Biochemistry,Carbohydrate Metabolism,17,195
+Cerebellum,Biochemistry,Enzymes,9,127
+Cerebellum,Biochemistry,Amino Acids,8,113
+Cerebellum,Biochemistry,Proteins,8,72
+Cerebellum,Biochemistry,Lipids,11,156
+Cerebellum,Biochemistry,Genetics / Molecular Biology,17,245
+Cerebellum,Biochemistry,Miscellaneous,27,268
+Cerebellum,Pharmacology,General Pharmacology,13,157
+Cerebellum,Pharmacology,Autonomic Nervous System,7,106
+Cerebellum,Pharmacology,Autacoids,5,51
+Cerebellum,Pharmacology,Cardiovascular System,6,111
+Cerebellum,Pharmacology,Kidney,2,33
+Cerebellum,Pharmacology,Endocrine System,8,117
+Cerebellum,Pharmacology,Central Nervous System,7,143
+Cerebellum,Pharmacology,Anaesthesia,3,27
+Cerebellum,Pharmacology,Hematology,3,55
+Cerebellum,Pharmacology,Respiratory System,2,30
+Cerebellum,Pharmacology,Gastrointestinal System,2,46
+Cerebellum,Pharmacology,Antimicrobial Agents,7,194
+Cerebellum,Pharmacology,Anti-Cancer Drugs & Immunosuppressants,5,72
+Cerebellum,Pharmacology,Drug Interactions and Antidotes,1,35
+Cerebellum,Pharmacology,Miscellaneous Topics,1,32
+Cerebellum,Pharmacology,New Drugs,1,4
+Cerebellum,Pathology,Cell Injury,8,113
+Cerebellum,Pathology,Inflammation,1,6
+Cerebellum,Pathology,Immunity,1,24
+Cerebellum,Pathology,Inflammation,2,19
+Cerebellum,Pathology,Immunity,2,14
+Cerebellum,Pathology,Inflammation,1,2
+Cerebellum,Pathology,Immunity,1,5
+Cerebellum,Pathology,Inflammation,1,6
+Cerebellum,Pathology,Immunity,3,18
+Cerebellum,Pathology,Inflammation,1,20
+Cerebellum,Pathology,Immunity,1,50
+Cerebellum,Pathology,Hematology,20,283
+Cerebellum,Pathology,Gastrointestinal System,8,81
+Cerebellum,Pathology,Cardiovascular System,6,77
+Cerebellum,Pathology,Respiratory System,7,80
+Cerebellum,Pathology,Renal System,5,86
+Cerebellum,Pathology,Neoplasia,6,84
+Cerebellum,Pathology,Male and Female Genital Tract,8,66
+Cerebellum,Pathology,CNS,3,46
+Cerebellum,Pathology,Endocrinology,5,56
+Cerebellum,Pathology,Liver,3,42
+Cerebellum,Pathology,Genetics,3,51
+Cerebellum,Pathology,Hemodynamics,1,2
+Cerebellum,Microbiology,General Microbiology,11,74
+Cerebellum,Microbiology,Immunity,11,68
+Cerebellum,Microbiology,Bacteriology,32,432
+Cerebellum,Microbiology,Virology,16,263
+Cerebellum,Microbiology,Parasitology,16,131
+Cerebellum,Microbiology,Mycology,8,105
+Cerebellum,Microbiology,Hospital Infection Control,4,25
+Cerebellum,Microbiology,Clinical Microbiology,7,50
+Cerebellum,Preventive & Social Medicine,Epidemiology,3,64
+Cerebellum,Preventive & Social Medicine,Health and Disease,6,47
+Cerebellum,Preventive & Social Medicine,Vaccines and Cold Chain,7,81
+Cerebellum,Preventive & Social Medicine,Screening of Disease,5,49
+Cerebellum,Preventive & Social Medicine,Communicable Diseases,8,116
+Cerebellum,Preventive & Social Medicine,Non-communicable Diseases,4,69
+Cerebellum,Preventive & Social Medicine,"H. Programs, Schemes, Acts",7,96
+Cerebellum,Preventive & Social Medicine,Demography and Health,4,66
+Cerebellum,Preventive & Social Medicine,Family Planning and Contraception,6,34
+Cerebellum,Preventive & Social Medicine,"Preventive Obstetrics, Paediatrics & Geriatrics",5,70
+Cerebellum,Preventive & Social Medicine,Nutrition and Health,6,76
+Cerebellum,Preventive & Social Medicine,Environment and Health,6,123
+Cerebellum,Preventive & Social Medicine,Social Sciences and Health,5,27
+Cerebellum,Preventive & Social Medicine,Occupational Health,5,62
+Cerebellum,Preventive & Social Medicine,Biomedical Waste Management,3,30
+Cerebellum,Preventive & Social Medicine,Disaster Management,4,26
+Cerebellum,Preventive & Social Medicine,Genetics and Health,3,19
+Cerebellum,Preventive & Social Medicine,Mental Health,4,16
+Cerebellum,Preventive & Social Medicine,Health Communication,4,25
+Cerebellum,Preventive & Social Medicine,Health Planning,3,28
+Cerebellum,Preventive & Social Medicine,Health Management,4,28
+Cerebellum,Preventive & Social Medicine,Health Care System in India,5,42
+Cerebellum,Preventive & Social Medicine,International Health,5,24
+Cerebellum,Preventive & Social Medicine,History of Medicine,2,16
+Cerebellum,Preventive & Social Medicine,Biostatistics,8,92
+Cerebellum,Ophthalmology,Optics,4,76
+Cerebellum,Ophthalmology,Lens,5,43
+Cerebellum,Ophthalmology,Glaucoma,6,79
+Cerebellum,Ophthalmology,Cornea,5,80
+Cerebellum,Ophthalmology,Conjunctiva,3,51
+Cerebellum,Ophthalmology,Neuro Ophthalmology,6,84
+Cerebellum,Ophthalmology,Retina,2,70
+Cerebellum,Ophthalmology,Uvea,3,73
+Cerebellum,Ophthalmology,Strabismus,4,55
+Cerebellum,Ophthalmology,Orbit,7,50
+Cerebellum,Ophthalmology,Ocular Adnexa,3,38
+Cerebellum,Ophthalmology,Community Ophthalmology & Miscellaneous,2,41
+Cerebellum,ENT,Ear,9,391
+Cerebellum,ENT,Larynx,6,283
+Cerebellum,ENT,Nose,6,341
+Cerebellum,ENT,Oral Cavity & Salivary Glands,2,31
+Cerebellum,ENT,Pharynx and oesophagus,2,117
+Cerebellum,Forensic Medicine,Medical Law & Ethics,2,42
+Cerebellum,Forensic Medicine,Legal Procedures,2,47
+Cerebellum,Forensic Medicine,Stains,2,16
+Cerebellum,Forensic Medicine,Thanatology,2,75
+Cerebellum,Forensic Medicine,Identification,2,80
+Cerebellum,Forensic Medicine,Asphyxia,2,63
+Cerebellum,Forensic Medicine,Injuries,3,127
+Cerebellum,Forensic Medicine,Thermal Injuries,2,40
+Cerebellum,Forensic Medicine,Sexual Offences,2,43
+Cerebellum,Forensic Medicine,Infanticide & Child Abuse,2,55
+Cerebellum,Forensic Medicine,Forensic Psychiatry,2,20
+Cerebellum,Forensic Medicine,Toxicology,2,218
+Cerebellum,Forensic Medicine,"Impotency, Sterility, Virginity, Pregnancy, Delivery",2,25
+Cerebellum,Medicine,Cardiology,8,305
+Cerebellum,Medicine,Endocrinology,6,259
+Cerebellum,Medicine,Neurology,7,240
+Cerebellum,Medicine,Pulmonary Medicine & Critical Care,9,286
+Cerebellum,Medicine,Nephrology,6,150
+Cerebellum,Medicine,Rheumatology,5,163
+Cerebellum,Medicine,Medical Oncology,14,172
+Cerebellum,Medicine,Hematology & Tranfusion,10,270
+Cerebellum,Medicine,Gastroenterology,4,208
+Cerebellum,Medicine,Extra Advantage Series,8,208
+Cerebellum,Surgery,Gastrointestinal Tract,12,314
+Cerebellum,Surgery,Hepato-Pancreatico-Biliary,7,146
+Cerebellum,Surgery,Trauma,5,125
+Cerebellum,Surgery,Urology,7,155
+Cerebellum,Surgery,Plastic Surgery,3,64
+Cerebellum,Surgery,Pediatric Surgery,2,34
+Cerebellum,Surgery,Vascular Surgery and Lymphatics,3,101
+Cerebellum,Surgery,General Surgery,6,162
+Cerebellum,Surgery,Breast and Endocrine,6,150
+Cerebellum,Surgery,Miscellaneous,5,62
+Cerebellum,Pediatrics,Growth & Development,15,96
+Cerebellum,Pediatrics,Neonatology,13,83
+Cerebellum,Pediatrics,Respiratory System,7,50
+Cerebellum,Pediatrics,Cardiovascular System,12,39
+Cerebellum,Pediatrics,Behavioral Disorders,3,11
+Cerebellum,Pediatrics,Central Nervous System,10,89
+Cerebellum,Pediatrics,Immune System: Vasculitis,3,16
+Cerebellum,Pediatrics,Breast Feeding,3,33
+Cerebellum,Pediatrics,Severe Acute Malnutrition,2,40
+Cerebellum,Pediatrics,Micronutrients,2,24
+Cerebellum,Pediatrics,Vaccines,5,26
+Cerebellum,Pediatrics,Infectious Disease/Hematology,8,89
+Cerebellum,Pediatrics,Renal System,2,27
+Cerebellum,Pediatrics,Musculoskeletal System,6,19
+Cerebellum,Pediatrics,GIT/Hepatology,7,49
+Cerebellum,Pediatrics,Inborn Errors of Metabolism,10,36
+Cerebellum,Obstetrics & Gynecology,Basic Obs and Gynae,4,74
+Cerebellum,Obstetrics & Gynecology,Antenatal Care,8,186
+Cerebellum,Obstetrics & Gynecology,Early Pregnancy Complications,4,139
+Cerebellum,Obstetrics & Gynecology,Fetal Assessment,3,47
+Cerebellum,Obstetrics & Gynecology,Labor (Normal),6,85
+Cerebellum,Obstetrics & Gynecology,Abnormal Labor,9,121
+Cerebellum,Obstetrics & Gynecology,Medical and Surgical Complications,10,198
+Cerebellum,Obstetrics & Gynecology,Complications Specific to Pregnancy,10,180
+Cerebellum,Obstetrics & Gynecology,Puerperium,2,24
+Cerebellum,Obstetrics & Gynecology,Drugs in Obs,2,27
+Cerebellum,Obstetrics & Gynecology,Operative Obstetrics,2,29
+Cerebellum,Obstetrics & Gynecology,Instruments in Obs,2,13
+Cerebellum,Obstetrics & Gynecology,Preventive and Social Obstetrics,2,20
+Cerebellum,Obstetrics & Gynecology,Physiology of Menstruation,2,25
+Cerebellum,Obstetrics & Gynecology,Amenorrhoea,5,91
+Cerebellum,Obstetrics & Gynecology,Mullerian Anomalies,2,32
+Cerebellum,Obstetrics & Gynecology,Infertility,4,59
+Cerebellum,Obstetrics & Gynecology,Menopause,2,17
+Cerebellum,Obstetrics & Gynecology,Infections in Gynecology,4,42
+Cerebellum,Obstetrics & Gynecology,Benign Gynae Disorders,6,71
+Cerebellum,Obstetrics & Gynecology,Abnormal Uterine Bleeding,2,17
+Cerebellum,Obstetrics & Gynecology,Pelvic Floor Disorders and Urogynecology,3,32
+Cerebellum,Obstetrics & Gynecology,Gynae Oncology,7,131
+Cerebellum,Obstetrics & Gynecology,Instruments in Gynae,2,34
+Cerebellum,Obstetrics & Gynecology,Drugs in Gynae,2,12
+Cerebellum,Obstetrics & Gynecology,Contraception and MTP,4,100
+Cerebellum,Obstetrics & Gynecology,Imaging in Gynecology,2,17
+Cerebellum,Obstetrics & Gynecology,Operative Gynecology,2,54
+Cerebellum,Orthopedics,Bone & Imaging,2,28
+Cerebellum,Orthopedics,Bone & Joint Infections,2,33
+Cerebellum,Orthopedics,Tuberculosis of Bone & Joints,2,25
+Cerebellum,Orthopedics,Orthopedics Oncology,2,59
+Cerebellum,Orthopedics,Nerve Injuries,2,144
+Cerebellum,Orthopedics,General + Upper Limb Traumatology,2,176
+Cerebellum,Orthopedics,Spine + Pelvis + Lower Limb Traumatology,2,225
+Cerebellum,Orthopedics,Arthritis,2,116
+Cerebellum,Orthopedics,Metabolic Disorders,2,92
+Cerebellum,Orthopedics,Sports Injury & NM Disorders,2,185
+Cerebellum,Orthopedics,Pediatric Orthopedics,2,87
+Cerebellum,Psychiatry,Basics of Psychiatry,2,42
+Cerebellum,Psychiatry,Schizophrenia and Other Primary Psychotic Disorders,2,75
+Cerebellum,Psychiatry,Mood Disorders (Depressive Disorders),2,57
+Cerebellum,Psychiatry,Mood Disorders (Bipolar and Related Disorders),2,44
+Cerebellum,Psychiatry,Anxiety or Fear-Related Disorders,2,20
+Cerebellum,Psychiatry,Obsessive-compulsive and Related Disorders,2,30
+Cerebellum,Psychiatry,Impulse Control Disorders,1,3
+Cerebellum,Psychiatry,Disorders Specifically Associated with Stress,2,12
+Cerebellum,Psychiatry,Somatic Symptoms and Related Disorders,2,14
+Cerebellum,Psychiatry,Dissociative Disorders,2,9
+Cerebellum,Psychiatry,Substance Related and Addictive Disorders,2,70
+Cerebellum,Psychiatry,Neurocognitive Disorders,2,50
+Cerebellum,Psychiatry,Personality Disorders,2,20
+Cerebellum,Psychiatry,Eating Disorders,2,24
+Cerebellum,Psychiatry,Sleep Disorders,2,21
+Cerebellum,Psychiatry,Sexual Disorders,2,17
+Cerebellum,Psychiatry,Child Psychiatry,2,32
+Cerebellum,Psychiatry,Psychoanalysis,2,18
+Cerebellum,Psychiatry,Miscellaneous,2,45
+Cerebellum,Radiology,Introduction,3,44
+Cerebellum,Radiology,X-ray,2,13
+Cerebellum,Radiology,CT,2,19
+Cerebellum,Radiology,MRI,2,22
+Cerebellum,Radiology,USG,2,17
+Cerebellum,Radiology,Contrast Media,2,16
+Cerebellum,Radiology,Gastrointestinal Imaging,2,50
+Cerebellum,Radiology,Hepato-Pancreatico-Biliary-Imaging,2,20
+Cerebellum,Radiology,Genito-Urinary Radiology,2,32
+Cerebellum,Radiology,Women's Imaging,2,28
+Cerebellum,Radiology,Neuroradiology,2,47
+Cerebellum,Radiology,Respiratory Radiology,2,50
+Cerebellum,Radiology,CVS Radiology,2,29
+Cerebellum,Radiology,MSK Imaging,2,43
+Cerebellum,Radiology,Nuclear Medicine,2,34
+Cerebellum,Radiology,Radiotherapy,2,28
+Cerebellum,Radiology,Radiological Anatomy,2,17
+Cerebellum,Radiology,Named X-Ray Views,2,9
+Cerebellum,Dermatology,Basics of Dermatology,3,59
+Cerebellum,Dermatology,Hair,2,29
+Cerebellum,Dermatology,Nail,2,25
+Cerebellum,Dermatology,Adnexa & Appendages,2,27
+Cerebellum,Dermatology,Papulosquamous Disorders,3,62
+Cerebellum,Dermatology,Blistering (Vesiculobullous) Diseases,3,60
+Cerebellum,Dermatology,Leprosy,3,55
+Cerebellum,Dermatology,Infectious Disorders,6,147
+Cerebellum,Dermatology,Sexually Transmitted Diseases,4,67
+Cerebellum,Dermatology,Eczematous Disorders,2,35
+Cerebellum,Dermatology,Pigmentary Disorders,2,25
+Cerebellum,Dermatology,Connective Tissue Disorders & Drug Eruptions,2,33
+Cerebellum,Dermatology,Genetics & Skin,2,22
+Cerebellum,Dermatology,Systemic & Nutritional Dermatology,2,24
+Cerebellum,Dermatology,Skin Tumours,2,22
+Cerebellum,Dermatology,Short Topics in Dermatology,2,15
+Cerebellum,Anesthesia,Introduction of Anesthesia,1,12
+Cerebellum,Anesthesia,Day Care Anesthesia,2,8
+Cerebellum,Anesthesia,Pre-Anesthesia Evaluation,2,39
+Cerebellum,Anesthesia,Monitoring in Anesthesia,2,42
+Cerebellum,Anesthesia,Instruments in Anesthesia,2,71
+Cerebellum,Anesthesia,Inhalational Anesthetic Agents,2,32
+Cerebellum,Anesthesia,Intravenous Anesthetic Agents,2,61
+Cerebellum,Anesthesia,Local Anesthetics,2,38
+Cerebellum,Anesthesia,Neuromuscular Blocking Drugs,2,34
+Cerebellum,Anesthesia,Regional Anesthesia,2,56
+Cerebellum,Anesthesia,Cardiopulmonary Resuscitation,2,34
+Cerebellum,Anesthesia,Pediatric and Obstetric Anesthesia,2,25
+Cerebellum,Anesthesia,Anesthetic Implication of Concurrent Diseases,2,26
+Cerebellum,Anesthesia,Miscellaneous,1,40

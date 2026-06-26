@@ -1,0 +1,2 @@
+# Never serve raw tracking JSON directly; only api.php may read it
+Require all denied

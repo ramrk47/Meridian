@@ -1,0 +1,9 @@
+# secrets & per-user server state
+server/config.php
+server/data/*.json
+
+# dev / editor / OS
+.claude/
+.DS_Store
+*.log
+node_modules/

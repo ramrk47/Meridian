@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian — Cross-platform exam almanac</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">M</span>
+    <div class="brandtxt">
+      <h1>Meridian</h1>
+      <p class="sub">Cross-platform exam almanac · NEET PG / INI-CET · Marrow · Cerebellum · CoreBTR · <span id="capDate"></span></p>
+    </div>
+    <div class="toolbar">
+      <button class="tbtn key" id="btnSearch" title="Universal search (⌘K / Ctrl-K)"><span>⌘K</span> Search</button>
+      <button class="tbtn" id="btnTheme" title="Day / evening edition">☀ Day</button>
+      <button class="tbtn" id="btnExport" title="Download your tracking as JSON">⤓ Export</button>
+      <button class="tbtn" id="btnImport" title="Load tracking from a JSON backup">⤒ Import</button>
+      <button class="tbtn danger" id="btnReset" title="Clear your tracking">⟲ Reset</button>
+      <input type="file" id="importFile" accept="application/json" hidden>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
+    <button class="tab active" role="tab" aria-selected="true" data-view="overview">Overview</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="qbank">QBank Tracker</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="progress">Progress</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="tests">Tests &amp; Scores</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="hy">High-Yield</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="videos">Videos</button>
+    <button class="tab" role="tab" aria-selected="false" data-view="planner">Study Planner</button>
+  </nav>
+</header>
+
+<main id="app">
+  <section id="view-overview" class="view active"></section>
+  <section id="view-qbank" class="view"></section>
+  <section id="view-progress" class="view"></section>
+  <section id="view-tests" class="view"></section>
+  <section id="view-hy" class="view"></section>
+  <section id="view-videos" class="view"></section>
+  <section id="view-planner" class="view"></section>
+</main>
+
+<footer class="foot">
+  <span>Local-first · your ticks &amp; scores save on this device · <b>⌘K</b> to search · press <b>1–6</b> to switch tabs · export anytime · server-ready (see <code>server/</code>)</span>
+</footer>
+
+<!-- detail drawer -->
+<div class="drawer-scrim" id="drawerScrim"></div>
+<aside class="drawer" id="drawer" aria-label="Topic detail" aria-hidden="true">
+  <div class="drawer-head"><button class="xbtn" id="drawerClose" title="Close (Esc)" aria-label="Close">✕</button></div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<!-- command palette -->
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="pal-scrim" id="palScrim"></div>
+  <div class="pal-box">
+    <input class="pal-input" id="palInput" placeholder="Search topics, subjects, tests, actions…" autocomplete="off">
+    <div class="pal-list" id="palList"></div>
+    <div class="pal-foot"><span><b>↑↓</b> move</span><span><b>↵</b> open</span><span><b>esc</b> close</span></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="storage.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
