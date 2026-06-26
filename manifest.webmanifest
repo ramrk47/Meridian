@@ -1,0 +1,17 @@
+{
+  "name": "Meridian — Cross-platform Exam Almanac",
+  "short_name": "Meridian",
+  "description": "Neutral cross-platform tracker for NEET PG / INI-CET / FMGE — Marrow, Cerebellum, DocTutorials in one place.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "id": "meridian-almanac",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f1ea",
+  "theme_color": "#f4f1ea",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

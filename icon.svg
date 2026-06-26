@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Meridian">
+  <rect width="512" height="512" fill="#1f4a3f"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#f4f1ea" stroke-width="13"/>
+  <text x="256" y="324" font-family="'Palatino Linotype',Palatino,'Hoefler Text',Georgia,serif" font-size="210" font-weight="500" fill="#f4f1ea" text-anchor="middle" letter-spacing="2">M</text>
+</svg>
