@@ -64,7 +64,7 @@ for row in rd(f"{RAW}/CoreBTR/CoreBTR/corebtr_all_tests.csv")[1:]:
 
 # ---------- Cerebellum tests (loose csv, multi-section) ----------
 cere_subject_tests, cere_gt_summary, cere_gt_2026 = [], [], []
-lines = open(f"{DOWNLOADS}/cerebellum_tests.csv", encoding="utf-8").read().splitlines()
+lines = open(f"{RAW}/NewPlatforms/cerebellum_tests.csv", encoding="utf-8").read().splitlines()
 section = None
 for ln in lines:
     s = ln.strip()
@@ -180,29 +180,95 @@ if os.path.exists(vid_path):
             "timerange": timerange, "durMin": dur, "confidence": conf, "file": fname,
         })
 
+# ---------- DocTutorials QBank (Main section: subject -> chapter) ----------
+# DocTutorials gives chapter + MCQ totals. We ingest the "Main" topic bank (the surface
+# directly comparable to Marrow modules / Cerebellum units). QRP + PYQ sections are also
+# captured in doctutorials_chapters.csv — left as a clean seam for a later pass.
+# No star-rating or sub-module counts are available, so high-yield is scored from MCQ
+# volume share within a subject only (honest: real counts, no fabricated rating signal).
+dt_order, dt_by_subject = [], {}
+DT_PATH = f"{RAW}/NewPlatforms/doctutorials_chapters.csv"
+if os.path.exists(DT_PATH):
+    for row in rd(DT_PATH)[1:]:
+        if len(row) < 4 or row[0] != "Main":
+            continue
+        _, subject, chapter, mcq = row[0], row[1], row[2], row[3]
+        if subject not in dt_by_subject:
+            dt_by_subject[subject] = []; dt_order.append(subject)
+        dt_by_subject[subject].append({"name": chapter, "mcqs": int(mcq) if mcq.isdigit() else 0})
+
+dt_subjects = []
+for subject in dt_order:
+    chs = dt_by_subject[subject]
+    mx = max((c["mcqs"] for c in chs), default=1) or 1
+    mods = []
+    for i, c in enumerate(chs):
+        score = round(c["mcqs"] / mx, 3)  # within-subject MCQ share
+        mods.append({
+            "id": "d-" + slug(subject, c["name"])[:80] + f"-{i}",
+            "category": None, "name": c["name"], "mcqs": c["mcqs"],
+            "rating": None, "priority": tier_from(score), "hyScore": score,
+        })
+    dt_subjects.append({"subject": subject, "modules": mods})
+
+# ---------- assemble exam-agnostic model: D = {exam, platforms[], tests, videos} ----------
+def _marrow_platform():
+    by = {}
+    for m in marrow_modules:
+        by.setdefault(m["subject"], []).append(m)
+    subs = [{"subject": s["subject"], "modules": [
+        {"id": m["id"], "category": m["category"], "name": m["module"], "mcqs": m["mcqs"],
+         "rating": m["rating"], "priority": m["priority"], "hyScore": m["hyScore"]}
+        for m in by.get(s["subject"], [])]} for s in marrow_subjects]
+    return {"id": "marrow", "name": "Marrow", "kind": "qbank", "color": "#3a5a78", "cls": "m", "subjects": subs}
+
+def _cere_platform():
+    by = {}
+    for u in cere_units:
+        by.setdefault(u["subject"], []).append(u)
+    subs = [{"subject": s["subject"], "modules": [
+        {"id": u["id"], "category": None, "name": u["unit"], "mcqs": u["mcqs"],
+         "modulesCount": u["modules"], "rating": None, "priority": u["priority"], "hyScore": u["hyScore"]}
+        for u in by.get(s["subject"], [])]} for s in cere_subjects]
+    return {"id": "cerebellum", "name": "Cerebellum", "kind": "qbank", "color": "#b0613b", "cls": "c", "subjects": subs}
+
+platforms = [
+    _marrow_platform(),
+    _cere_platform(),
+    {"id": "doctutorials", "name": "DocTutorials", "kind": "qbank", "color": "#5d7a52", "cls": "k", "subjects": dt_subjects},
+]
+
 data = {
+    "exam": "NEET PG / INI-CET",
     "captured": "26 June 2026",
-    "marrow": {"subjects": marrow_subjects, "modules": marrow_modules, "tests": marrow_tests},
-    "cerebellum": {"subjects": cere_subjects, "units": cere_units,
-                   "subjectTests": cere_subject_tests, "gtSummary": cere_gt_summary, "gt2026": cere_gt_2026},
-    "corebtr": {"tests": corebtr_tests},
+    "platforms": platforms,
+    # tests stay structured (CoreBTR + Cerebellum GTs have different shapes; timeline needs gt2026)
+    "tests": {"corebtr": corebtr_tests, "gt2026": cere_gt_2026,
+              "cereSubjectTests": cere_subject_tests, "cereGtSummary": cere_gt_summary,
+              "marrowTests": marrow_tests},
     "videos": btr_videos,
 }
 
 out = os.path.join(os.path.dirname(__file__), "data.js")
 with open(out, "w", encoding="utf-8") as f:
     f.write("// Auto-generated from extracted CSVs. Do not edit by hand.\n")
-    f.write("window.QBANK_DATA = ")
+    f.write("window.D = ")
     json.dump(data, f, ensure_ascii=False, indent=1)
     f.write(";\n")
+    f.write("// back-compat shim: legacy reads of window.QBANK_DATA resolve to the new model.\n")
+    f.write("window.QBANK_DATA = window.D;\n")
 
 # sanity
-mt = sum(s["mcqs"] for s in marrow_subjects)
-ct = sum(s["mcqs"] for s in cere_subjects)
-print(f"Marrow subjects: {len(marrow_subjects)}  modules: {len(marrow_modules)}  MCQs: {mt}")
-print(f"Cerebellum subjects: {len(cere_subjects)}  units: {len(cere_units)}  MCQs: {ct}")
-print(f"CoreBTR tests: {len(corebtr_tests)}")
-print(f"Cerebellum subject-tests: {len(cere_subject_tests)}  GT-2026 listed: {len(cere_gt_2026)}")
-print(f"Combined MCQs: {mt+ct}")
+mt = sum(m["mcqs"] for p in platforms if p["id"] == "marrow" for s in p["subjects"] for m in s["modules"])
+ct = sum(m["mcqs"] for p in platforms if p["id"] == "cerebellum" for s in p["subjects"] for m in s["modules"])
+dt_leaf = sum(m["mcqs"] for s in dt_subjects for m in s["modules"])
+dt_subj = 13199  # per doctutorials_subjects.csv Main totals (chapter capture sums to dt_leaf)
+print(f"Marrow:     {len(marrow_subjects)} subjects, {len(marrow_modules)} modules, {mt} MCQs")
+print(f"Cerebellum: {len(cere_subjects)} subjects, {len(cere_units)} units, {ct} MCQs")
+print(f"Marrow+Cerebellum combined MCQs: {mt+ct}  (must equal 42889)")
+print(f"DocTutorials (Main): {len(dt_subjects)} subjects, "
+      f"{sum(len(s['modules']) for s in dt_subjects)} chapters, {dt_leaf} MCQs "
+      f"(subject-overview states {dt_subj}; +{dt_leaf-dt_subj} capture variance)")
+print(f"CoreBTR tests: {len(corebtr_tests)}   Cerebellum GT-2026 listed: {len(cere_gt_2026)}")
 print(f"CoreBTR topic videos: {len(btr_videos)}  total minutes: {sum(v['durMin'] or 0 for v in btr_videos)}")
 print(f"Wrote {out}")
