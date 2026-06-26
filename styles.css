@@ -501,7 +501,31 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
 .botnav button:active{background:var(--paper-3)}
 
 /* desktop default: hide all mobile-only chrome (after .iconbtn so the combo .iconbtn.mob-only stays hidden) */
-.mob-title,.mob-only{display:none}
+.mob-title,.mob-only,.mob-ctrl{display:none}
+
+/* ---- option bottom-sheet (mobile sort / filter) — hidden until .open ---- */
+.sheet-scrim{position:fixed;inset:0;background:rgba(20,17,14,.34);opacity:0;pointer-events:none;transition:.25s;z-index:66}
+.sheet-scrim.open{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:68;background:var(--paper-2);
+  border-top:1px solid var(--line-2);border-radius:18px 18px 0 0;box-shadow:0 -22px 60px rgba(20,17,14,.3);
+  transform:translateY(102%);transition:transform .3s cubic-bezier(.22,.61,.36,1);
+  padding-bottom:calc(10px + var(--safe-b));max-height:80vh;display:flex;flex-direction:column}
+.sheet.open{transform:none}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px 16px 10px;position:relative;border-bottom:1px solid var(--line)}
+.sheet-head::before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);
+  width:40px;height:5px;border-radius:3px;background:var(--line-2)}
+.sheet-title{font-family:var(--serif);font-size:16px;font-weight:500;color:var(--ink)}
+.sheet-body{overflow-y:auto;padding:6px}
+.sheet-opt{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;
+  background:none;border:0;border-radius:11px;padding:14px 14px;min-height:50px;cursor:pointer;
+  text-align:left;font:500 15px var(--sans);color:var(--ink)}
+.sheet-opt:hover,.sheet-opt:active{background:var(--paper-3)}
+.sheet-opt.on{background:var(--accent-soft);color:var(--ink);font-weight:600}
+.sheet-tick{color:var(--accent);font-weight:700}
+.iconbtn.has-dot{position:relative}
+.iconbtn.has-dot::after{content:"";position:absolute;top:7px;right:7px;width:7px;height:7px;
+  border-radius:50%;background:var(--cere);border:1.5px solid var(--paper)}
 
 /* keep 16px+ inputs everywhere on touch to stop iOS auto-zoom (applied in mobile layer) */
 
@@ -535,13 +559,24 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
   /* segmented controls (platform / test filters) scroll instead of overflowing */
   .controls .seg{max-width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .seg button{white-space:nowrap}
-  h2.section{font-size:18px}
-  .panel{padding:18px 16px;border-radius:13px;margin-bottom:16px}
-  .callout{padding:15px 16px}
-  .statgrid{gap:11px;margin-bottom:18px}
-  .stat{padding:18px 18px 16px}
-  .stat .big{font-size:34px}
-  .stat::before,.stat.m::before,.stat.c::before,.stat.k::before,.stat.g::before{left:18px}
+  h2.section{font-size:17px;margin:2px 0 10px}
+  .panel{padding:13px 14px;border-radius:13px;margin-bottom:12px}
+  .panel h3{font-size:16px}
+  .ph{margin-bottom:11px;gap:6px}
+  .two-col{gap:12px;margin-bottom:12px}
+  .callout{padding:13px 14px;margin-bottom:12px;font-size:13px;line-height:1.5}
+  /* mini-rows: ensure 44px tap rows + bigger quick-add target */
+  .mini-row{padding:7px 0;min-height:44px}
+  .qmark{width:44px;height:44px;font-size:15px}
+  /* --- KPI stat tiles: compact 2-col grid (Health/Kite-style), not giant cards --- */
+  .statgrid{grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px}
+  .stat{padding:21px 12px 11px;border-radius:11px;min-height:84px;display:flex;flex-direction:column;justify-content:flex-start}
+  .stat .big{font-family:var(--sans);font-size:22px;font-weight:600;letter-spacing:-.2px;font-variant-numeric:tabular-nums;line-height:1.05;color:var(--ink)}
+  .stat .lbl{margin-top:5px;font-size:10px;letter-spacing:.08em}
+  .stat .note{margin-top:3px;font-size:10.5px;line-height:1.3;color:var(--ink-4);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .stat::before{left:12px;top:11px;width:22px;height:3px}
+  .stat.m::before{left:12px}.stat.c::before{left:12px}.stat.k::before{left:12px}.stat.g::before{left:12px}
 
   /* inputs ≥16px → no iOS zoom; full-width controls */
   input.search,select.sel,.sin,.pal-input{font-size:16px}
@@ -571,27 +606,38 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
   .sb-item.on{background:var(--ink);border-color:var(--ink)}
   .sb-item.on .sb-name,.sb-item.on .meter-txt{color:var(--paper)}
 
-  /* qb controls: search on its own row, rest scrolls horizontally */
-  .qb-controls{gap:8px;padding:10px 0}
-  .qb-controls .search{order:-1;flex:1 1 100%;min-width:0}
-  .qb-controls .sel{flex:1 1 auto;min-width:0;font-size:14px;padding:9px 10px}
+  /* qb controls: ONE compact row — slim search + sort/filter icon buttons + hi-yield pill */
+  .qb-controls{gap:7px;padding:9px 0;flex-wrap:nowrap;align-items:center}
+  .qb-controls .desk-ctrl{display:none}
+  .qb-controls .mob-ctrl{display:inline-flex}
+  .qb-controls .search{flex:1 1 auto;min-width:0;order:0}
+  .qb-controls .iconbtn{width:44px;height:44px;flex:none}
+  .qb-controls #qHy{flex:none;min-height:44px;padding:8px 13px;font-size:15px}
+  .qb-controls #qHy .ctrl-lbl{display:none}
   .qb-controls .spacer{display:none}
-  .qb-controls .chipbtn,.qb-controls .ghostbtn{min-height:42px}
 
-  .subj-hero{padding:4px 0 12px}
-  .sh-name{font-size:21px}
-  .sh-meters{gap:16px 20px;margin-top:10px}
+  .subj-hero{padding:2px 0 9px;margin-bottom:6px}
+  .sh-name{font-size:19px}
+  .sh-top{gap:8px}
+  .sh-meters{gap:9px 16px;margin-top:8px;align-items:flex-start}
+  .sh-stat b{font-family:var(--sans);font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
+  .sh-stat span{font-size:9px;margin-top:2px;letter-spacing:.07em}
+  .sh-progress{flex:1 1 100%;min-width:0;margin-top:2px}
+  .sh-progress .bm-key{display:none}   /* stats row already shows attempted/reviewed */
 
-  /* category header: drop the inline meter, keep chev/name/mcq/bulk */
-  .cat-head{grid-template-columns:16px 1fr auto auto;gap:9px;padding:13px 13px}
+  /* category header: compact ~52px row, drop the inline meter */
+  .tree{gap:6px}
+  .cat-head{grid-template-columns:14px 1fr auto auto;gap:8px;padding:10px 12px;min-height:50px}
   .cat-head .cat-meter{display:none}
-  .cat-name{font-size:14px}
-  .bulkbtn{min-height:38px;padding:6px 10px}
+  .cat-name{font-size:13.5px}
+  .cat-mcq{font-size:12px;min-width:36px}
+  .cat-hy{font-size:10.5px}
+  .bulkbtn{min-height:34px;padding:5px 9px;font-size:10.5px}
 
   /* leaf rows: name on top, big tappable A/R/Rt chips below */
   .row.mrow{grid-template-columns:auto auto 1fr;
     grid-template-areas:"name name name" "rate mcq chips";
-    gap:7px 12px;padding:13px 13px}
+    gap:5px 12px;padding:10px 12px}
   .row.mrow .rname{grid-area:name;display:flex;align-items:center;flex-wrap:wrap;gap:4px}
   .row.mrow .rrate{grid-area:rate;text-align:left}
   .row.mrow .rmcq{grid-area:mcq;text-align:left;font-size:13px}
@@ -655,6 +701,11 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
 
   /* toast clears the bottom nav */
   .toast{bottom:calc(20px + var(--botnav-h) + var(--safe-b))}
+}
+
+/* roomier phones: 3-col KPI tiles where they stay legible */
+@media (min-width:414px) and (max-width:640px){
+  .statgrid{grid-template-columns:repeat(3,1fr)}
 }
 
 /* very narrow phones (≤360px): shave a little more */

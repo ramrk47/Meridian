@@ -140,13 +140,16 @@ function renderOverview() {
   const hyTotal = LEAVES.filter(l => l.priority === 3).length;
   const hyDone = LEAVES.filter(l => l.priority === 3 && Store.prog(l.id).a).length;
 
-  const stats = el("div", "statgrid");
+  const mastered = allModuleIds.filter(id => Store.prog(id).t).length;
+  const stats = el("div", "statgrid tiles");
   const card = (cls, big, lbl, note) => `<div class="stat ${cls}"><div class="big">${big}</div><div class="lbl">${lbl}</div><div class="note">${note}</div></div>`;
   stats.innerHTML =
-    card("g", fmt(QBANK_MCQ), "Combined MCQs", `${fmt(allModuleIds.length)} trackable topics across ${QBANKS.length} banks`) +
-    card("m", `${pct(att, allModuleIds.length)}%`, "Modules attempted", `${fmt(att)} of ${fmt(allModuleIds.length)} · ${fmt(rev)} reviewed`) +
-    card("c", `${pct(hyDone, hyTotal)}%`, "High-yield covered", `${hyDone} of ${hyTotal} ★★★ topics`) +
-    card("k", fmt(scored), "Tests scored", "your accuracy log");
+    card("g", fmt(QBANK_MCQ), "Combined MCQs", `${fmt(allModuleIds.length)} topics · ${QBANKS.length} banks`) +
+    card("m", `${pct(att, allModuleIds.length)}%`, "Attempted", `${fmt(att)} of ${fmt(allModuleIds.length)}`) +
+    card("k", fmt(rev), "Reviewed", `2nd-pass topics`) +
+    card("c", `${pct(hyDone, hyTotal)}%`, "High-yield", `${hyDone} of ${hyTotal} ★★★`) +
+    card("g", fmt(hyTotal - hyDone), "HY gaps", `untouched ★★★`) +
+    card("k", fmt(scored), "Tests scored", `${mastered} mastered`);
   v.appendChild(stats);
 
   // two-up: continue + next moves
@@ -216,6 +219,8 @@ function statusDots(id) {
    QBANK TRACKER — sidebar workspace + 3-level tree
    ============================================================ */
 const QB = { platform: "marrow", subject: null, sort: "hy", status: "all", hyOnly: false, search: "", subjSort: "size" };
+const QB_SORT_OPTS = [["hy", "High-yield"], ["mcqs", "Most MCQs"], ["rating", "Rating / difficulty"], ["name", "A–Z"], ["leastdone", "Least attempted"], ["completion", "Least complete"]];
+const QB_STATUS_OPTS = [["all", "All statuses"], ["untracked", "Yet to attempt"], ["attempted", "Attempted"], ["review", "Needs review"], ["mastered", "Mastered (retaken)"], ["starred", "My starred"], ["hard", "High difficulty (top-rated)"]];
 function qbDefaultSubject() { const s = subjectsOf(QB.platform); return s[0]; }
 /* N-way platform switch: segmented up to 3 banks, dropdown beyond */
 function qbankSwitchHTML() {
@@ -254,27 +259,18 @@ function renderQbank() {
     <div class="qb-main">
       <div class="qb-controls" id="qbControls">
         <input class="search" id="qsearch" placeholder="Search ${esc(platName(QB.platform))} topics…" value="${esc(QB.search)}">
-        <select class="sel" id="qsort" aria-label="Sort topics">
-          <option value="hy">Sort: high-yield</option>
-          <option value="mcqs">Sort: most MCQs</option>
-          <option value="rating">Sort: rating / difficulty</option>
-          <option value="name">Sort: A–Z</option>
-          <option value="leastdone">Sort: least attempted</option>
-          <option value="completion">Sort: least complete</option>
+        <select class="sel desk-ctrl" id="qsort" aria-label="Sort topics">
+          ${QB_SORT_OPTS.map(([v, l]) => `<option value="${v}">Sort: ${l}</option>`).join("")}
         </select>
-        <select class="sel" id="qstatus" aria-label="Filter topics">
-          <option value="all">All statuses</option>
-          <option value="untracked">Yet to attempt</option>
-          <option value="attempted">Attempted</option>
-          <option value="review">Needs review</option>
-          <option value="mastered">Mastered (retaken)</option>
-          <option value="starred">My starred</option>
-          <option value="hard">High difficulty (top-rated)</option>
+        <select class="sel desk-ctrl" id="qstatus" aria-label="Filter topics">
+          ${QB_STATUS_OPTS.map(([v, l]) => `<option value="${v}">${l}</option>`).join("")}
         </select>
-        <button class="chipbtn ${QB.hyOnly ? "on" : ""}" id="qHy">★ High-yield</button>
+        <button class="iconbtn mob-ctrl" id="qSortBtn" aria-label="Sort topics" title="Sort">⇅</button>
+        <button class="iconbtn mob-ctrl" id="qFilterBtn" aria-label="Filter topics" title="Filter">⛁</button>
+        <button class="chipbtn ${QB.hyOnly ? "on" : ""}" id="qHy" title="High-yield only">★<span class="ctrl-lbl"> High-yield</span></button>
         <div class="spacer"></div>
-        <button class="ghostbtn" id="qExpand" title="Expand all">⊕ Expand</button>
-        <button class="ghostbtn" id="qCollapse" title="Collapse all">⊖ Collapse</button>
+        <button class="ghostbtn desk-ctrl" id="qExpand" title="Expand all">⊕ Expand</button>
+        <button class="ghostbtn desk-ctrl" id="qCollapse" title="Collapse all">⊖ Collapse</button>
       </div>
       <div class="qb-content" id="qbContent"></div>
     </div>`;
@@ -288,9 +284,13 @@ function renderQbank() {
   $("#qsearch").addEventListener("input", e => { QB.search = e.target.value; drawSidebar(); drawSubject(); });
   $("#qsort").addEventListener("change", e => { QB.sort = e.target.value; drawSubject(); });
   $("#qstatus").addEventListener("change", e => { QB.status = e.target.value; drawSidebar(); drawSubject(); });
-  $("#qHy").addEventListener("click", () => { QB.hyOnly = !QB.hyOnly; $("#qHy").classList.toggle("on", QB.hyOnly); drawSidebar(); drawSubject(); });
+  $("#qHy").addEventListener("click", () => { QB.hyOnly = !QB.hyOnly; $("#qHy").classList.toggle("on", QB.hyOnly); updateQbFilterBadge(); drawSidebar(); drawSubject(); });
   $("#qExpand").addEventListener("click", () => $$(".cat-block", $("#qbContent")).forEach(b => b.classList.add("open")));
   $("#qCollapse").addEventListener("click", () => $$(".cat-block", $("#qbContent")).forEach(b => b.classList.remove("open")));
+  // mobile: sort/filter open a bottom-sheet instead of native selects
+  $("#qSortBtn")?.addEventListener("click", () => openSheet("Sort topics", QB_SORT_OPTS, QB.sort, val => { QB.sort = val; const s = $("#qsort"); if (s) s.value = val; drawSubject(); }));
+  $("#qFilterBtn")?.addEventListener("click", () => openSheet("Filter by status", QB_STATUS_OPTS, QB.status, val => { QB.status = val; const s = $("#qstatus"); if (s) s.value = val; updateQbFilterBadge(); drawSidebar(); drawSubject(); }));
+  updateQbFilterBadge();
 
   drawSidebar(); drawSubject();
 }
@@ -529,6 +529,25 @@ function closeDrawer() {
   const dr = $("#drawer"); if (!dr.classList.contains("open")) return;
   dr.classList.remove("open"); $("#drawerScrim").classList.remove("open"); dr.setAttribute("aria-hidden", "true");
   if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch {} lastFocus = null; }
+}
+
+/* ---- option bottom-sheet (mobile sort / filter) ---- */
+let sheetPick = null, sheetLastFocus = null;
+function openSheet(title, opts, current, onPick) {
+  sheetLastFocus = document.activeElement; sheetPick = onPick;
+  const sh = $("#sheet"); $("#sheetTitle").textContent = title;
+  $("#sheetBody").innerHTML = opts.map(([v, l]) =>
+    `<button class="sheet-opt${v === current ? " on" : ""}" data-v="${esc(v)}"><span>${esc(l)}</span>${v === current ? '<span class="sheet-tick">✓</span>' : ""}</button>`).join("");
+  $("#sheetScrim").classList.add("open"); sh.classList.add("open"); sh.setAttribute("aria-hidden", "false");
+  setTimeout(() => $("#sheetClose").focus(), 30);
+}
+function closeSheet() {
+  const sh = $("#sheet"); if (!sh.classList.contains("open")) return;
+  sh.classList.remove("open"); $("#sheetScrim").classList.remove("open"); sh.setAttribute("aria-hidden", "true"); sheetPick = null;
+  if (sheetLastFocus && sheetLastFocus.focus) { try { sheetLastFocus.focus(); } catch {} sheetLastFocus = null; }
+}
+function updateQbFilterBadge() {
+  const b = $("#qFilterBtn"); if (b) b.classList.toggle("has-dot", QB.status !== "all");
 }
 
 /* ============================================================
@@ -1369,7 +1388,7 @@ document.addEventListener("keydown", e => {
     }
     return;
   }
-  if (e.key === "Escape") { closeDrawer(); return; }
+  if (e.key === "Escape") { closeSheet(); closeDrawer(); return; }
   if (typing) return;
   if (e.key === "/") { e.preventDefault(); openPalette(); return; }
   if (e.key >= "1" && e.key <= "7") { show(TAB_ORDER[+e.key - 1]); return; }
@@ -1412,6 +1431,10 @@ function init() {
   $("#palScrim").addEventListener("click", closePalette);
   $("#drawerScrim").addEventListener("click", closeDrawer);
   $("#drawerClose").addEventListener("click", closeDrawer);
+  // option bottom-sheet wiring
+  $("#sheetScrim").addEventListener("click", closeSheet);
+  $("#sheetClose").addEventListener("click", closeSheet);
+  $("#sheetBody").addEventListener("click", e => { const b = e.target.closest(".sheet-opt"); if (b) { const v = b.dataset.v, cb = sheetPick; closeSheet(); if (cb) cb(v); } });
   window.addEventListener("resize", setHeaderHeight);
   // initial view from hash
   const h = (location.hash || "").replace("#", "");
