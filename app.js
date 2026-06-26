@@ -77,7 +77,37 @@ function rollupLeaves(ls) { return rollup(ls.map(l => l.id)); }
 
 /* priority */
 const priStars = p => (p === 3 ? "★★★" : p === 2 ? "★★" : "");
-const hyBadge = p => p === 3 ? `<span class="hy" title="High-yield">★★★</span>` : p === 2 ? `<span class="hy med" title="Medium-yield">★★</span>` : "";
+const hyBadge = p => p === 3 ? `<span class="hy" title="Top MCQ-density tier (proxy, not measured exam yield)">★★★</span>` : p === 2 ? `<span class="hy med" title="Mid MCQ-density tier (proxy)">★★</span>` : "";
+
+/* ---- curated judgment layer: epistemic labels + sources (Phase 1c.1) ----
+   measured | proxy | directional | public-3p. Every curated figure carries its tag + source + date.
+   These helpers are reused by the faculty pass (1c.1F). */
+const CUR = { sources: D.sources || [], strength: D.subjectStrength || null, reliability: D.reliability || null, method: D.methodology || null };
+const SRC_BY_ID = Object.fromEntries(CUR.sources.map(s => [s.id, s]));
+const EPI_DEF = Object.fromEntries((CUR.method?.labels || []).map(l => [l.tag, l]));
+const epiName = tag => EPI_DEF[tag]?.name || tag;
+const epiDesc = tag => EPI_DEF[tag]?.desc || "";
+/* small pill; title carries the full definition so every figure self-documents on hover/focus */
+function epiBadge(tag) {
+  if (!tag) return "";
+  return `<span class="epi ${tag}" tabindex="0" role="note" title="${esc(epiName(tag))} — ${esc(epiDesc(tag))}">${esc(epiName(tag))}</span>`;
+}
+function srcLink(id) {
+  const s = SRC_BY_ID[id]; if (!s) return esc(id);
+  const lbl = esc(s.publisher || s.title);
+  return /^https?:/.test(s.url || "")
+    ? `<a class="srclink" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.title)} · captured ${esc(s.captured)}">${lbl} ↗</a>`
+    : `<span class="srclink" title="${esc(s.title)} · captured ${esc(s.captured)}">${lbl}</span>`;
+}
+const srcLinks = ids => (ids || []).map(srcLink).filter(Boolean).join(" · ");
+/* a "Source: … · captured DATE" line for a curated panel */
+const srcLine = (ids, captured) => `<div class="srcline">Source: ${srcLinks(ids)}${captured ? ` · captured ${esc(captured)}` : ""}</div>`;
+/* platform name chip — colour-coded if Meridian integrates it, plain + flagged if reputation-only */
+function platRefChip(ref) {
+  const pid = ref.platformId;
+  if (pid && PLAT_BY_ID[pid]) return `<span class="platlabel ${platCls(pid)}" style="color:${platColor(pid)}">${esc(ref.platform)}</span>`;
+  return `<span class="platlabel off" title="Named in community reputation; not yet tracked in Meridian">${esc(ref.platform)}<span class="off-note"> · not yet tracked</span></span>`;
+}
 
 /* cross-platform topic matching */
 const STOP = new Set("and the of for with system systems disease diseases its his amp general basic concepts tricks magics drugs drug disorders disorder management basics introduction clinical miscellaneous related".split(" "));
@@ -147,8 +177,8 @@ function renderOverview() {
     card("g", fmt(QBANK_MCQ), "Combined MCQs", `${fmt(allModuleIds.length)} topics · ${QBANKS.length} banks`) +
     card("m", `${pct(att, allModuleIds.length)}%`, "Attempted", `${fmt(att)} of ${fmt(allModuleIds.length)}`) +
     card("k", fmt(rev), "Reviewed", `2nd-pass topics`) +
-    card("c", `${pct(hyDone, hyTotal)}%`, "High-yield", `${hyDone} of ${hyTotal} ★★★`) +
-    card("g", fmt(hyTotal - hyDone), "HY gaps", `untouched ★★★`) +
+    card("c", `${pct(hyDone, hyTotal)}%`, "Top-density", `${hyDone} of ${hyTotal} ★★★`) +
+    card("g", fmt(hyTotal - hyDone), "Density gaps", `untouched ★★★`) +
     card("k", fmt(scored), "Tests scored", `${mastered} mastered`);
   v.appendChild(stats);
 
@@ -176,7 +206,7 @@ function renderOverview() {
   // next best moves (untracked high-yield)
   const nextPanel = el("div", "panel");
   nextPanel.innerHTML = `<div class="ph"><div><h3>Your next best moves</h3>
-    <span class="muted" style="font-size:12px">high-yield topics you haven't started</span></div>
+    <span class="muted" style="font-size:12px">top MCQ-density topics you haven't started (proxy for exam weight)</span></div>
     <button class="linkbtn" data-jump-hygaps>See all gaps →</button></div>`;
   const gaps = LEAVES.filter(l => l.priority === 3 && !Store.prog(l.id).a).sort((a, b) => b.hyScore - a.hyScore).slice(0, 6);
   const nlst = el("div", "mini-list");
@@ -191,8 +221,8 @@ function renderOverview() {
 
   // comparison bars (clickable -> jump) — one bar per QBank, per subject
   const panel = el("div", "panel");
-  panel.innerHTML = `<div class="ph"><div><h3>MCQ volume by subject — ${QBANKS.map(p => esc(p.name)).join(" · ")}</h3>
-    <span class="muted" style="font-size:12px">click a subject to open it in the tracker</span></div>
+  panel.innerHTML = `<div class="ph"><div><h3>MCQ volume by subject — ${QBANKS.map(p => esc(p.name)).join(" · ")} ${epiBadge("measured")}</h3>
+    <span class="muted" style="font-size:12px">raw MCQ counts we hold · click a subject to open it in the tracker</span></div>
     <div class="legend">${QBANKS.map(p => `<span><i style="background:${p.color}"></i>${esc(p.name)}</span>`).join("")}</div></div>`;
   const bars = el("div", "bars");
   const maps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s._mcqs])));
@@ -209,10 +239,75 @@ function renderOverview() {
   });
   panel.appendChild(bars);
   v.appendChild(panel);
+
+  // curated judgment layer — the reason Meridian exists: cross-platform judgment, honestly labelled
+  const sub = renderSubjectStrength(); if (sub) v.appendChild(sub);
+  const rel = renderReliability(); if (rel) v.appendChild(rel);
+  v.appendChild(renderMethodology());
 }
 function statusDots(id) {
   const p = Store.prog(id);
   return `<span class="sdots">${["a","r","t"].map(k => `<i class="sd ${k} ${p[k] ? "on" : ""}"></i>`).join("")}</span>`;
+}
+
+/* ---- curated surfaces (Phase 1c.1): best-platform/subject · reliability · how-we-rate ---- */
+function renderSubjectStrength() {
+  const s = CUR.strength; if (!s || !s.subjects?.length) return null;
+  const p = el("div", "panel");
+  p.innerHTML = `<div class="ph"><div><h3>Best platform per subject — community reputation ${epiBadge(s.epistemic)}</h3>
+    <span class="muted" style="font-size:12px">which platform aspirants most often call strongest for each subject — reputation only, never Meridian's verdict</span></div></div>
+    ${srcLine(s.sourceIds, s.captured)}`;
+  const tbl = el("table", "resp strength");
+  tbl.innerHTML = `<thead><tr><th>Subject</th><th>Reputed strongest (community)</th></tr></thead><tbody>${
+    s.subjects.map(r => `<tr><td style="font-weight:600">${esc(r.subject)}</td>
+      <td>${r.strong.map(platRefChip).join(" ")}</td></tr>`).join("")}</tbody>`;
+  p.appendChild(tbl);
+  return p;
+}
+function renderReliability() {
+  const r = CUR.reliability; if (!r || !r.apps?.length) return null;
+  const p = el("div", "panel");
+  p.innerHTML = `<div class="ph"><div><h3>App reliability — iOS App Store (India) ${epiBadge(r.epistemic)}</h3>
+    <span class="muted" style="font-size:12px">third-party star ratings + recurring complaints — a reliability / UX signal, not content quality, not a Meridian score</span></div>
+    <span class="count-pill">captured ${esc(r.captured)}</span></div>`;
+  const tbl = el("table", "resp reliab");
+  tbl.innerHTML = `<thead><tr><th>App</th><th class="num">Rating</th><th class="num">Ratings</th><th>Recurring 1–2★ themes</th><th>Source</th></tr></thead><tbody>${
+    r.apps.map(a => {
+      const name = a.platformId && PLAT_BY_ID[a.platformId]
+        ? `<span class="platlabel ${platCls(a.platformId)}" style="color:${platColor(a.platformId)}">${esc(a.name)}</span>`
+        : `<span class="platlabel off" title="Shown for neutrality; not tracked in Meridian">${esc(a.name)}</span>`;
+      const rating = `${a.ratingApprox ? "~" : ""}${a.rating.toFixed(1)}<span class="star">★</span>`;
+      return `<tr><td>${name}</td><td class="num" style="font-weight:700">${rating}</td>
+        <td class="num">${esc(a.ratingsLabel)}</td><td class="themes">${a.themes.map(esc).join(" · ")}</td>
+        <td>${srcLink(a.sourceId)}</td></tr>`;
+    }).join("")}</tbody>`;
+  p.appendChild(tbl);
+  if (r.note) p.appendChild(el("div", "muted small srcnote", esc(r.note)));
+  return p;
+}
+function renderMethodology() {
+  const m = CUR.method;
+  const p = el("div", "panel howrate");
+  p.innerHTML = `<div class="ph"><div><h3>How we rate · sources</h3>
+    <span class="muted" style="font-size:12px">every figure in Meridian is labelled by how much we actually know — counts, proxy, community reputation, or public data</span></div></div>`;
+  if (m?.labels?.length) {
+    const defs = el("div", "epi-defs");
+    defs.innerHTML = m.labels.map(l => `<div class="epi-def"><span class="epi ${l.tag}">${esc(l.name)}</span><span class="epi-d">${esc(l.desc)}</span></div>`).join("");
+    p.appendChild(defs);
+  }
+  if (m?.firewall) p.appendChild(el("div", "callout firewall", `<b>Neutrality firewall.</b> ${esc(m.firewall)}`));
+  if (CUR.sources.length) {
+    p.appendChild(el("div", "dr-lbl", "Sources"));
+    const ul = el("ul", "src-list");
+    ul.innerHTML = CUR.sources.map(s => {
+      const t = /^https?:/.test(s.url || "")
+        ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>`
+        : `<span>${esc(s.title)}</span>`;
+      return `<li>${t} <span class="muted">— ${esc(s.publisher || "")} · ${esc(s.type)} · captured ${esc(s.captured)}</span></li>`;
+    }).join("");
+    p.appendChild(ul);
+  }
+  return p;
 }
 
 /* ============================================================
@@ -493,7 +588,7 @@ function openDrawer(id) {
       <span><b>${fmt(l.mcqs)}</b> MCQs</span>
       ${l.rating != null ? `<span><b>${l.rating.toFixed(1)}</b> rating</span>` : ""}
       ${l.modulesCount != null ? `<span><b>${l.modulesCount}</b> modules</span>` : ""}
-      <span><b>${l.priority === 3 ? "High" : l.priority === 2 ? "Medium" : "Normal"}</b> yield</span>
+      <span><b>${l.priority === 3 ? "High" : l.priority === 2 ? "Medium" : "Standard"}</b> MCQ density ${epiBadge("proxy")}</span>
     </div>
     <div class="dr-track">
       <span class="dr-lbl">Your status</span>
@@ -571,15 +666,16 @@ function renderHY() {
   const hyDone = hyAll.filter(l => Store.prog(l.id).a).length;
   const sg = el("div", "statgrid");
   sg.innerHTML =
-    `<div class="stat g"><div class="big">${hyAll.length}</div><div class="lbl">High-yield topics</div><div class="note">★★★ across both banks</div></div>
+    `<div class="stat g"><div class="big">${hyAll.length}</div><div class="lbl">Top-density topics</div><div class="note">★★★ across ${QBANKS.length} banks</div></div>
      <div class="stat m"><div class="big">${pct(hyDone, hyAll.length)}%</div><div class="lbl">You've started</div><div class="note">${hyDone} of ${hyAll.length} attempted</div></div>
-     <div class="stat c"><div class="big">${hyAll.length - hyDone}</div><div class="lbl">Gaps remaining</div><div class="note">untouched high-yield</div></div>
+     <div class="stat c"><div class="big">${hyAll.length - hyDone}</div><div class="lbl">Gaps remaining</div><div class="note">untouched ★★★</div></div>
      <div class="stat k"><div class="big">${pct(LEAVES.filter(l => l.priority >= 2 && Store.prog(l.id).r).length, LEAVES.filter(l => l.priority >= 2).length)}%</div><div class="lbl">★★+ reviewed</div><div class="note">depth of revision</div></div>`;
   v.appendChild(sg);
 
-  v.appendChild(el("div", "callout",
-    `<b>High-yield engine.</b> Marrow modules scored from their <b>star-rating</b> × MCQ share; Cerebellum units from <b>volume × density</b>; DocTutorials chapters from <b>MCQ share</b> (no rating captured).
-     ★★★ = top tier within a subject. <b>Click any topic</b> to open its card — track it, jump to the bank, or see the same topic on another platform.`));
+  v.appendChild(el("div", "callout proxy-note",
+    `<b>This is MCQ density ${epiBadge("proxy")} — a proxy, not measured exam yield.</b>
+     ★★★ marks the topics carrying the most question mass <em>within their subject</em>: Marrow scored from its <b>star-rating × MCQ share</b>, Cerebellum from <b>volume × density</b>, DocTutorials from <b>MCQ share</b>.
+     We don't hold PYQ-weighted exam-frequency data, so we don't claim real "high-yield." It's a prioritisation signal, honestly. <b>Click any topic</b> to track it, jump to the bank, or see it on another platform. <span class="muted">Full method → How we rate, on Overview.</span>`));
 
   // consensus: a topic that is ★★★ on ≥2 independent platforms
   const consensus = [];
@@ -595,8 +691,8 @@ function renderHY() {
   consensus.sort((a, b) => b.mcqs - a.mcqs);
   if (consensus.length) {
     const cp = el("div", "panel consensus");
-    cp.innerHTML = `<div class="ph"><div><h3>Consensus high-yield — banks agree ★★★</h3>
-      <span class="muted" style="font-size:12px">the strongest prioritisation signal: top-tier on two or more platforms for the same topic</span></div>
+    cp.innerHTML = `<div class="ph"><div><h3>Consensus — banks agree ★★★ ${epiBadge("proxy")}</h3>
+      <span class="muted" style="font-size:12px">the strongest prioritisation signal we can build today: top MCQ-density tier on two or more platforms for the same topic (agreement on density, still a proxy for exam weight)</span></div>
       <span class="count-pill">${consensus.length} topics</span></div>`;
     const tbl = el("table", "resp");
     tbl.innerHTML = `<thead><tr><th>Subject</th>${QBANKS.map(p => `<th>${esc(p.name)}</th>`).join("")}<th class="num">Σ MCQs</th><th>Your coverage</th></tr></thead><tbody></tbody>`;
@@ -1035,7 +1131,7 @@ function syncVideoAfterToggle(id) {
 function renderPlanner() {
   const v = $("#view-planner"); v.innerHTML = "";
   v.appendChild(el("div", "callout",
-    `<b>How this is built.</b> Subjects tiered by <b>combined MCQ weight</b> across ${QBANKS.map(p => esc(p.name)).join(" + ")} — a proxy for exam weight.
+    `<b>How this is built.</b> Subjects tiered by <b>combined MCQ weight</b> across ${QBANKS.map(p => esc(p.name)).join(" + ")} — a proxy for exam weight ${epiBadge("proxy")}, not measured exam yield.
      Pair every subject pass with its tests, then layer Grand Tests weekly. Click a subject to open it.`));
   const maps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s._mcqs])));
   const subs = [...new Set(maps.flatMap(m => Object.keys(m)))]
