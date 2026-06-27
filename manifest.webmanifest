@@ -1,6 +1,6 @@
 {
-  "name": "Meridian — Cross-platform Exam Almanac",
-  "short_name": "Meridian",
+  "name": "Calvetra — Cross-platform Exam Almanac",
+  "short_name": "Calvetra",
   "description": "Neutral cross-platform tracker for NEET PG / INI-CET / FMGE — Marrow, Cerebellum, DocTutorials in one place.",
   "start_url": "./index.html",
   "scope": "./",

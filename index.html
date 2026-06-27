@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Meridian — Cross-platform exam almanac</title>
+<title>Calvetra — Cross-platform exam almanac</title>
 <meta name="description" content="Neutral cross-platform tracker for NEET PG / INI-CET / FMGE — Marrow, Cerebellum, DocTutorials in one place.">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/components.css">
@@ -24,16 +24,16 @@
 <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#181513" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Meridian">
+<meta name="apple-mobile-web-app-title" content="Calvetra">
 <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
 <a class="skip" href="#app">Skip to content</a>
 <header class="topbar">
   <div class="brand">
-    <button class="logo" id="btnHome" aria-label="Overview (home)" title="Overview — home">M</button>
+    <button class="logo" id="btnHome" aria-label="Overview (home)" title="Overview — home">C</button>
     <div class="brandtxt">
-      <h1>Meridian</h1>
+      <h1>Calvetra</h1>
       <p class="sub" id="subhead">Cross-platform exam almanac</p>
     </div>
     <span class="mob-title" id="mobTitle" aria-hidden="true">Overview</span>
@@ -58,23 +58,23 @@
     </div>
   </div>
   <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" role="tab" aria-selected="false" data-view="qbank">QBank Tracker</button>
-    <button class="tab" role="tab" aria-selected="false" data-view="progress">Progress</button>
-    <button class="tab" role="tab" aria-selected="false" data-view="tests">Tests &amp; Scores</button>
-    <button class="tab" role="tab" aria-selected="false" data-view="hy">High-Yield</button>
-    <button class="tab" role="tab" aria-selected="false" data-view="videos">Videos</button>
-    <button class="tab" role="tab" aria-selected="false" data-view="planner">Study Planner</button>
+    <button class="tab" role="tab" id="tab-qbank" aria-controls="view-qbank" aria-selected="false" tabindex="-1" data-view="qbank">QBank Tracker</button>
+    <button class="tab" role="tab" id="tab-progress" aria-controls="view-progress" aria-selected="false" tabindex="-1" data-view="progress">Progress</button>
+    <button class="tab" role="tab" id="tab-tests" aria-controls="view-tests" aria-selected="false" tabindex="-1" data-view="tests">Tests &amp; Scores</button>
+    <button class="tab" role="tab" id="tab-hy" aria-controls="view-hy" aria-selected="false" tabindex="-1" data-view="hy">High-Yield</button>
+    <button class="tab" role="tab" id="tab-videos" aria-controls="view-videos" aria-selected="false" tabindex="-1" data-view="videos">Videos</button>
+    <button class="tab" role="tab" id="tab-planner" aria-controls="view-planner" aria-selected="false" tabindex="-1" data-view="planner">Study Planner</button>
   </nav>
 </header>
 
-<main id="app">
+<main id="app" tabindex="-1">
   <section id="view-overview" class="view active"></section>
-  <section id="view-qbank" class="view"></section>
-  <section id="view-progress" class="view"></section>
-  <section id="view-tests" class="view"></section>
-  <section id="view-hy" class="view"></section>
-  <section id="view-videos" class="view"></section>
-  <section id="view-planner" class="view"></section>
+  <section id="view-qbank" class="view" role="tabpanel" aria-labelledby="tab-qbank" tabindex="0"></section>
+  <section id="view-progress" class="view" role="tabpanel" aria-labelledby="tab-progress" tabindex="0"></section>
+  <section id="view-tests" class="view" role="tabpanel" aria-labelledby="tab-tests" tabindex="0"></section>
+  <section id="view-hy" class="view" role="tabpanel" aria-labelledby="tab-hy" tabindex="0"></section>
+  <section id="view-videos" class="view" role="tabpanel" aria-labelledby="tab-videos" tabindex="0"></section>
+  <section id="view-planner" class="view" role="tabpanel" aria-labelledby="tab-planner" tabindex="0"></section>
   <!-- entity pages (NOT tabs): routed via goSubject/goPlatform/goFaculty -->
   <section id="view-subject" class="view"></section>
   <section id="view-platform" class="view"></section>
@@ -97,7 +97,7 @@
 
 <!-- detail drawer / bottom-sheet -->
 <div class="drawer-scrim" id="drawerScrim"></div>
-<aside class="drawer" id="drawer" aria-label="Topic detail" aria-hidden="true">
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Topic detail" aria-hidden="true">
   <div class="drawer-head"><button class="xbtn" id="drawerClose" title="Close (Esc)" aria-label="Close">✕</button></div>
   <div class="drawer-body" id="drawerBody"></div>
 </aside>
@@ -121,9 +121,10 @@
 
 <script src="data.js"></script>
 <script src="storage.js"></script>
-<!-- module load order (all global scope, no bundler): core → ds → surfaces → entities → main -->
+<!-- module load order (all global scope, no bundler): core → ds → motion → surfaces → entities → main -->
 <script src="js/core.js"></script>
 <script src="js/ds.js"></script>
+<script src="js/motion.js"></script>
 <script src="js/surfaces/overview.js"></script>
 <script src="js/surfaces/qbank.js"></script>
 <script src="js/surfaces/progress.js"></script>
@@ -139,6 +140,99 @@
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
+</script>
+<script>
+/* ── a11y wiring (index-scoped; layers ONTO main.js, never overrides it) ─────────
+   Spec §2: roving tabindex + Arrow/Home/End on #tabs (tablist↔tabpanel already
+   linked in markup), a shared focus trap for drawer/sheet/palette, and a skip-link
+   that actually lands focus in #app. Pure progressive enhancement — every existing
+   route, click handler, Esc-to-close, and focus-restore stays exactly as-is. */
+(function () {
+  "use strict";
+  var tabs = document.getElementById("tabs");
+
+  /* skip-link should land focus, not just scroll. #app has tabindex="-1"; suppress
+     the stray focus ring (programmatic focus only, keyboard a11y unaffected). */
+  var app = document.getElementById("app");
+  if (app) app.style.outline = "none";
+
+  /* ── roving tabindex on the desktop tablist ──
+     keep the selected tab the only Tab-stop; main.js already toggles aria-selected
+     inside show(), so we mirror tabindex off that via a MutationObserver (works no
+     matter who calls show — click, keyboard, hash route, 1-7 hotkeys). */
+  if (tabs) {
+    var tabBtns = function () { return Array.prototype.slice.call(tabs.querySelectorAll(".tab")); };
+    var syncRoving = function () {
+      tabBtns().forEach(function (t) {
+        t.setAttribute("tabindex", t.getAttribute("aria-selected") === "true" ? "0" : "-1");
+      });
+    };
+    // initial sync, then keep in lockstep with aria-selected changes
+    syncRoving();
+    try {
+      new MutationObserver(syncRoving).observe(tabs, {
+        subtree: true, attributes: true, attributeFilter: ["aria-selected"]
+      });
+    } catch (e) { /* no MutationObserver: roving still seeds correctly on load */ }
+
+    // Arrow/Home/End move focus AND activate (automatic-activation tablist pattern)
+    tabs.addEventListener("keydown", function (e) {
+      var k = e.key;
+      if (k !== "ArrowLeft" && k !== "ArrowRight" && k !== "Home" && k !== "End") return;
+      var list = tabBtns(); if (!list.length) return;
+      var cur = list.indexOf(document.activeElement);
+      if (cur < 0) cur = 0;
+      var next = cur;
+      if (k === "ArrowLeft")  next = (cur - 1 + list.length) % list.length;
+      else if (k === "ArrowRight") next = (cur + 1) % list.length;
+      else if (k === "Home") next = 0;
+      else if (k === "End")  next = list.length - 1;
+      e.preventDefault();
+      var btn = list[next];
+      if (typeof show === "function" && btn.dataset.view) show(btn.dataset.view); // activate
+      btn.focus(); // move focus (show() repaints aria-selected → observer fixes tabindex)
+    });
+  }
+
+  /* ── shared focus trap for the three overlays (drawer / sheet / palette) ──
+     they open by gaining the `.open` class; we observe that and trap Tab within the
+     open overlay. Focus-IN and focus-RESTORE on close already live in main.js /
+     qbank.js, so this is trap-only — we add nothing that fights existing behavior. */
+  var FOCUSABLE = 'a[href],area[href],button:not([disabled]),input:not([disabled]),' +
+                  'select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"]),' +
+                  'audio[controls],video[controls],summary,[contenteditable="true"]';
+  function visibleFocusables(container) {
+    return Array.prototype.slice.call(container.querySelectorAll(FOCUSABLE)).filter(function (el) {
+      return el.offsetParent !== null || el === document.activeElement;
+    });
+  }
+  function trapTab(container, e) {
+    if (e.key !== "Tab") return;
+    var f = visibleFocusables(container);
+    if (!f.length) { e.preventDefault(); return; }
+    var first = f[0], last = f[f.length - 1], a = document.activeElement;
+    if (e.shiftKey) {
+      if (a === first || !container.contains(a)) { e.preventDefault(); last.focus(); }
+    } else {
+      if (a === last || !container.contains(a)) { e.preventDefault(); first.focus(); }
+    }
+  }
+  function wireTrap(id) {
+    var node = document.getElementById(id);
+    if (!node) return;
+    var handler = function (e) { trapTab(node, e); };
+    var setOpen = function () {
+      var open = node.classList.contains("open");
+      if (open && !node.__trapOn) { node.__trapOn = true; document.addEventListener("keydown", handler, true); }
+      else if (!open && node.__trapOn) { node.__trapOn = false; document.removeEventListener("keydown", handler, true); }
+    };
+    setOpen();
+    try {
+      new MutationObserver(setOpen).observe(node, { attributes: true, attributeFilter: ["class"] });
+    } catch (e) { /* no MutationObserver: overlays still keyboard-operable, just untrapped */ }
+  }
+  ["drawer", "sheet", "palette"].forEach(wireTrap);
+})();
 </script>
 </body>
 </html>

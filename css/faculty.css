@@ -86,3 +86,171 @@
 
 /* ---- evening edition: shared tokens already flip; only guard chip contrast ---- */
 body.evening #view-faculty .echip.off{background:transparent}
+
+/* ============================================================
+   CRAFT ELEVATION (1c.2-craft) — faculty entity page
+   ------------------------------------------------------------
+   Additive, fully scoped under #view-faculty (loads after charts.css so these
+   refine, never collide). ENTRANCE motion is entrance-only: it hangs off the
+   .cframe.plate.is-in class that motion.js (chartIntro) adds ONCE on first
+   visibility, and the [data-reveal] .in class that reveal() adds ONCE. ALL of
+   it is transform/opacity/dashoffset (GPU) and the tokens.css reduced-motion
+   firewall collapses every animation/transition to its final state — so every
+   name, date, score, epistemic label and source stays fully legible with zero
+   motion. Warm almanac tokens only (--accent-2 pine, --gold, --line*); no neon.
+   ============================================================ */
+
+/* ---- reveal wrapper: keep the [data-reveal] div a clean grid cell so wrapping
+   timeline/ratings/links for the staggered rise doesn't disturb the layout
+   (the plate/panel inside stretches to fill; stray bottom margin removed). ---- */
+#view-faculty .panel-grid>[data-reveal],
+#view-faculty .inst-grid>[data-reveal]{min-width:0;display:flex;flex-direction:column}
+#view-faculty [data-reveal]>.cframe.plate,
+#view-faculty [data-reveal]>.panel{flex:1 1 auto;margin-bottom:0}
+
+/* gentle paper-soft rise on entrance, staggered by --i (capped at 4 in reveal()).
+   Final state IS the no-class default, so a missing .in (no JS / reduced motion)
+   leaves the panel fully visible. */
+#view-faculty [data-reveal]{opacity:0;transform:translateY(8px)}
+#view-faculty [data-reveal].in{
+  opacity:1;transform:none;
+  transition:opacity var(--d-3) var(--ease-soft),transform var(--d-4) var(--ease-rise);
+  transition-delay:calc(var(--i,0) * var(--stagger));
+}
+
+/* ---- hero numeral: lining-tabular figures so the count-up ticks on a fixed
+   grid (no width jitter); optical sizing tightens the serif display face. ---- */
+#view-faculty .eh-hero .hero-num{
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1;
+  font-optical-sizing:auto;line-height:.95;
+}
+/* small-caps serif eyebrow + balanced label — meticulous type rhythm */
+#view-faculty .entity-head .eyebrow{
+  font-variant-caps:all-small-caps;font-feature-settings:"smcp","c2sc";
+  letter-spacing:.07em;
+}
+#view-faculty .hero-lbl{letter-spacing:.06em}
+
+/* ---- subject/aka chips: quiet hover lift + underline-grow on the link chips,
+   tactile letterpress on press. Transform/opacity only. ---- */
+#view-faculty .echip.is-link,
+#view-faculty .ftl-org.is-link,
+#view-faculty .rs-name.is-link{
+  transition:color var(--d-2) var(--ease-soft),
+             border-color var(--d-2) var(--ease-soft),
+             transform var(--d-1) var(--ease-rise);
+}
+#view-faculty .echip.is-link:hover{border-color:var(--line-2);color:var(--ink)}
+#view-faculty .echip.is-link:active,
+#view-faculty .ftl-org.is-link:active{transform:scale(.985)}
+/* editorial underline-grow on timeline org links (the entity hops) */
+#view-faculty .ftl-org.is-link{
+  text-decoration:none;
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2) var(--ease-soft),color var(--d-2) var(--ease-soft);
+}
+#view-faculty .ftl-org.is-link:hover{background-size:100% 1px;text-decoration:none}
+
+/* ---- bio: editorial measure + soft wrapping for comfortable reading ---- */
+#view-faculty .fac-bio{max-width:62ch;text-wrap:pretty;hanging-punctuation:first last}
+
+/* ============================================================
+   CAREER TIMELINE — engraving finish + entrance (the moat viz)
+   ------------------------------------------------------------
+   .ftl* base lives in charts.css; these are #view-faculty-scoped refinements.
+   ============================================================ */
+
+/* current affiliation: an INSET letterpress node (pressed into the paper),
+   NOT a glowing dot — the shared ring stays; we add an engraved inner well. */
+#view-faculty .ftl-item.st-current .ftl-node{
+  box-shadow:0 0 0 3px var(--plate),
+             0 0 0 5px color-mix(in srgb,var(--accent-2) 35%,transparent),
+             inset 0 1px 1px rgba(0,0,0,.28);
+}
+/* solo / superspecialty: tighten the gold rhythm to a crisp 3px/3px dash */
+#view-faculty .ftl-item.st-solo,
+#view-faculty .ftl-item.st-superspecialty{
+  border-left-color:var(--gold);border-image:none;
+  border-left-style:dashed;border-left-width:2px;
+}
+
+/* ENTRANCE — rail draws + nodes stagger scale-in, ONCE, when chartIntro adds
+   .is-in to the enclosing .cframe.plate. GPU only; firewall → final state. */
+#view-faculty .cframe.plate.is-in .ftl-item{
+  animation:fac-rail var(--d-4) var(--ease-rise) both;
+  animation-delay:calc(var(--reveal-i,0) * var(--stagger));
+}
+#view-faculty .cframe.plate.is-in .ftl-node{
+  transform-origin:center;
+  animation:fac-node var(--d-3) var(--ease-rise) both;
+  animation-delay:calc(var(--reveal-i,0) * var(--stagger) + 60ms);
+}
+@keyframes fac-rail{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes fac-node{from{transform:scale(0)}to{transform:scale(1)}}
+/* per-item stagger index (cap small — a long career never crawls) */
+#view-faculty .ftl-item:nth-child(1){--reveal-i:0}
+#view-faculty .ftl-item:nth-child(2){--reveal-i:1}
+#view-faculty .ftl-item:nth-child(3){--reveal-i:2}
+#view-faculty .ftl-item:nth-child(4){--reveal-i:3}
+#view-faculty .ftl-item:nth-child(n+5){--reveal-i:4}
+
+/* DESKTOP horizontal axis: a hairline dashed "now" rule at the right edge,
+   labelled in small-caps serif — reads as the present moment the career runs
+   toward. Pure decoration; carries no datum, so no source/label obligation. */
+@media (min-width:1024px){
+  #view-faculty .ftl{position:relative}
+  #view-faculty .ftl::after{
+    content:"now";
+    position:absolute;top:0;right:0;bottom:8px;
+    width:0;border-left:1px dashed var(--line-2);
+    padding-left:6px;
+    font-family:var(--serif);font-size:var(--t-micro);
+    font-variant-caps:all-small-caps;font-feature-settings:"smcp";
+    letter-spacing:.1em;color:var(--ink-4);
+    pointer-events:none;
+  }
+  /* the rise on desktop columns reads better as a left→right reveal */
+  #view-faculty .cframe.plate.is-in .ftl-item{
+    animation-name:fac-col;
+  }
+  @keyframes fac-col{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+}
+
+/* ============================================================
+   TWO RATINGS — quiet focus + press refinement (firewall intact:
+   aggregate/directional only; the "seed / verified voting" notes and
+   epistemic badges are never animated away). ============================================================ */
+#view-faculty .scorecard .rs-name.is-link:active{transform:scale(.99);display:inline-block}
+#view-faculty .rs-row.faculty .star{transition:opacity var(--d-2) var(--ease-soft)}
+
+/* ---- focus-visible: a calm two-layer ring on the page's interactive people-hops
+   (chips, timeline orgs) — reads on paper and dusk alike. ---- */
+#view-faculty .echip.is-link:focus-visible,
+#view-faculty .ftl-org.is-link:focus-visible,
+#view-faculty .rs-name.is-link:focus-visible{
+  outline:2px solid color-mix(in srgb,var(--accent) 60%,transparent);
+  outline-offset:2px;border-radius:4px;
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 16%,transparent);
+}
+
+/* ============================================================
+   RICHER EMPTY / SEEDING STATE — "a plate awaiting its engraving"
+   ------------------------------------------------------------
+   The gated faculty page (no roster / not-in-seed) renders panel()s; lift the
+   honest seeding note from a flat block to an engraved plate-mark, matching the
+   gated-honesty contract (forthcoming, not broken). Scoped so it only dresses
+   the empty-state panels, never the populated page. ============================================================ */
+#view-faculty .ftl .empty{
+  background:var(--plate);
+  border:1px solid var(--line);border-radius:var(--r-plate);
+  box-shadow:var(--e1-plate),inset 0 0 0 1px var(--plate-edge);
+  padding:18px 16px;text-align:center;color:var(--ink-3);
+  text-wrap:pretty;max-width:62ch;margin-inline:auto;
+}
+
+/* ============================================================
+   MOBILE: the desktop "now" rule + horizontal reveal don't apply (<1024 is the
+   vertical rail); nothing above changes mobile density — chips, rows, hero band
+   and the 6-tile strip keep their existing compact rhythm. ============================================================ */

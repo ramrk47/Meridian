@@ -39,9 +39,15 @@ function _subjApplyMode(view) {
 }
 
 /* one persistent breakpoint listener (module scope, attached once) so we
-   reflow on resize/orientation change without stacking a listener per render. */
+   reflow on resize/orientation change without stacking a listener per render.
+   The sliding indicator is re-seated by the shared placeAllSegInds() machinery
+   (ds.js §2.5c) — no bespoke per-render placer here. */
 if (_subjMQ) {
-  const onChange = () => { const v = $("#view-subject"); if (v && v.childElementCount) _subjApplyMode(v); };
+  const onChange = () => {
+    const v = $("#view-subject"); if (!v || !v.childElementCount) return;
+    _subjApplyMode(v);
+    if (typeof placeAllSegInds === "function") placeAllSegInds(v); // re-seat indicator (no slide on layout change)
+  };
   if (_subjMQ.addEventListener) _subjMQ.addEventListener("change", onChange);
   else if (_subjMQ.addListener) _subjMQ.addListener(onChange); // older Safari
 }
@@ -115,6 +121,29 @@ function _subjScoreSeries(canonSubj) {
     .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
+/* ---- local empty-state engraving -----------------------------------------
+   Reads as "a plate awaiting its engraving", not a missing thing: plate ground
+   + engraved hairline, a monochrome STROKE-ONLY mark (never colour), serif
+   title, meta body, optional linkbtn CTA. NOTE for integrator: this duplicates
+   the intended shared emptyState({icon,title,body,action}) primitive (spec §4)
+   which does not yet exist in ds.js — promote + dedupe when it lands. Keeps the
+   honest "forthcoming"/count framing for the gated-faculty firewall. */
+const _SUBJ_MARKS = {
+  // stroke-only inline SVG marks — quill / open ledger / film / compass
+  quill: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4S8 6 5 15l4 4C18 16 20 4 20 4Z"/><path d="M5 19l3.5-3.5"/></svg>`,
+  ledger: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6C9 4 5 4 3 5v14c2-1 6-1 9 1 3-2 7-2 9-1V5c-2-1-6-1-9 1Z"/><path d="M12 6v14"/></svg>`,
+  film: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5v14M17 5v14"/></svg>`,
+  gauge: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14l4-3"/><path d="M4 14h2M18 14h2M12 6v2"/></svg>`,
+};
+function _subjEmpty(o) {
+  o = o || {};
+  const mark = _SUBJ_MARKS[o.mark] || _SUBJ_MARKS.quill;
+  return `<div class="subj-empty"><span class="se-mark" aria-hidden="true">${mark}</span>`
+    + `<div class="se-title">${esc(o.title || "Awaiting engraving")}</div>`
+    + (o.body ? `<p class="se-body">${o.body}</p>` : "")
+    + `</div>`;
+}
+
 /* ---- panel builders (each returns a chartFrame/panel string) ------------ */
 
 function _subjCoveragePanel(canonSubj, stats, cap) {
@@ -149,7 +178,8 @@ function _subjConsensusPanel(canonSubj, cap) {
   if (!topics.length) {
     return panel({ title: "Consensus high-yield topics", epi: "proxy", curated: true,
       sourceIds: [], captured: cap,
-      body: `<div class="empty small">No high-yield topics flagged for this subject yet (proxy density).</div>` });
+      body: _subjEmpty({ mark: "ledger", title: "No consensus yet",
+        body: `No high-yield topics are flagged for this subject across platforms so far. Consensus is a proxy density heuristic ${epiBadge("proxy")} — it fills in as more platforms agree.` }) });
   }
   const rows = topics.map(tp => {
     const l = tp.leaf;
@@ -198,18 +228,22 @@ function _subjTeachersPanel(canonSubj, cap) {
       });
     }), "teachers");
   } else {
-    roster = `<div class="empty small">Faculty profiles are being seeded (directional, sourced). ${FACULTY.length} profiles live.</div>`;
+    roster = `<span class="tb-h">Faculty who teach ${esc(canonSubj)}</span>`
+      + _subjEmpty({ mark: "quill", title: "Profiles forthcoming",
+        body: `No faculty profiles map to this subject yet — the people layer is being seeded from public sources (directional). <b>${FACULTY.length}</b> profile${FACULTY.length === 1 ? "" : "s"} live across Calvetra so far. Aggregate-only · community-sentiment · never a ranking of peers.` });
   }
 
   return panel({ title: "Who teaches it best", epi: "directional", curated: true,
     sourceIds: CUR.strength ? CUR.strength.sourceIds : [], captured: CUR.strength && CUR.strength.captured,
     body: plat + `<div class="teach-block">${roster}</div>`
-      + `<p class="firewall-note">Community reputation, aggregate-only — not a Meridian verdict, never a ranking against peers.</p>` });
+      + `<p class="firewall-note">Community reputation, aggregate-only — not a Calvetra verdict, never a ranking against peers.</p>` });
 }
 
 function _subjVideosPanel(canonSubj, cap) {
   const vids = _subjVideos(canonSubj, 12);
-  if (!vids.length) return panel({ title: "Related videos", body: `<div class="empty small">No mapped videos for this subject yet.</div>` });
+  if (!vids.length) return panel({ title: "Related videos",
+    body: _subjEmpty({ mark: "film", title: "No videos mapped yet",
+      body: `No lectures are mapped to this subject so far. The video layer grows as faculty teaching is sourced and tagged.` }) });
   const rows = vids.map(v => {
     const fac = (v.facultyIds || (v.facultyId ? [v.facultyId] : [])).map(facById).filter(Boolean)[0];
     const st = Store.video(v.id);
@@ -235,7 +269,8 @@ function _subjProgressPanel(canonSubj, cap) {
     ? chartFrame("Your accuracy on " + esc(canonSubj) + " tests", "measured", [], cap,
         sparkline(series.map(s => ({ y: s.y })), { unit: "test" }),
         { note: `Tracked on this device — single-subject tests only. ${acc ? acc.pct + "% across " + acc.tests + " test(s)." : ""}` })
-    : `<div class="empty small">No single-subject test scores logged yet — accuracy sparkline appears once you record one.</div>`;
+    : _subjEmpty({ mark: "gauge", title: "Awaiting your first score",
+        body: `Your accuracy trend draws here once you log a single-subject test in the Tests tab — tracked locally on this device ${epiBadge("measured")}.` });
 
   return panel({ title: "Your progress", epi: "measured", curated: true, sourceIds: [], captured: cap,
     body: `<div class="prog-meter">${meter}<div class="pm-key muted small">${ro.a}/${ro.total} topics attempted · ${ro.r} reviewed · ${ro.t} mastered — measured, this device</div></div>`
@@ -283,7 +318,7 @@ function renderSubjectPage(canonSubj) {
   // Render every panel VISIBLE by default (no [hidden] in markup). _subjApplyMode()
   // below decides single-panel vs multi-panel from JS state, so a missing/late
   // css/subject.css can never hide desktop content.
-  const wrap = (key, html) => `<div class="subj-panel" data-panel="${key}">${html}</div>`;
+  const wrap = (key, html) => `<div class="subj-panel" data-panel="${key}" data-reveal>${html}</div>`;
 
   v.innerHTML = `
     <div class="entity-head">
@@ -292,7 +327,7 @@ function renderSubjectPage(canonSubj) {
       <div class="eh-top">
         <div class="eh-id"><h2 class="sh-name">${esc(canonSubj)}</h2></div>
         <div class="eh-hero">
-          <span class="hero-num num">${fmt(totalMCQ)}</span>
+          <span class="hero-num num" data-count="${totalMCQ}">${fmt(totalMCQ)}</span>
           <span class="hero-lbl">MCQs across platforms ${epiBadge("measured")}</span>
         </div>
       </div>
@@ -314,16 +349,21 @@ function renderSubjectPage(canonSubj) {
       </div>
     </div>`;
 
-  // wire the mobile segmented swap (scoped to this view; re-attached each render)
+  // wire the mobile segmented swap (scoped to this view; re-attached each render).
+  // The sliding indicator + its initial seat / resize re-seat / slide-on-click are
+  // all handled by the shared placeSegInd() machinery (ds.js §2.5c) — this handler
+  // only owns subject's own concern: which single panel is visible on mobile.
   const seg = v.querySelector('.seg[data-seg="subjtab"]');
-  if (seg) seg.addEventListener("click", e => {
-    const b = e.target.closest("button[data-seg-v]"); if (!b) return;
-    _subjTab = b.dataset.segV;
-    seg.querySelectorAll("button").forEach(x => { const on = x.dataset.segV === _subjTab; x.classList.toggle("on", on); x.setAttribute("aria-selected", on); });
-    // single-panel mode: show only the active panel. (No-op visually on desktop,
-    // where _subjApplyMode keeps every panel visible.)
-    v.querySelectorAll(".subj-panel").forEach(p => { p.hidden = _subjIsMobile() && (p.dataset.panel !== _subjTab); });
-  });
+  if (seg) {
+    seg.addEventListener("click", e => {
+      const b = e.target.closest("button[data-seg-v]"); if (!b) return;
+      _subjTab = b.dataset.segV;
+      seg.querySelectorAll("button").forEach(x => { const on = x.dataset.segV === _subjTab; x.classList.toggle("on", on); x.setAttribute("aria-checked", on); });
+      // single-panel mode: show only the active panel. (No-op visually on desktop,
+      // where _subjApplyMode keeps every panel visible.)
+      v.querySelectorAll(".subj-panel").forEach(p => { p.hidden = _subjIsMobile() && (p.dataset.panel !== _subjTab); });
+    });
+  }
 
   // apply the current breakpoint state now that the panels are in the DOM.
   // Desktop -> all panels visible (independent of any stylesheet); mobile ->

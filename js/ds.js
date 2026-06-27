@@ -1,5 +1,5 @@
 /* ============================================================
-   Meridian — ds.js  (shared COMPONENT + CHART library)  ·  Stage 3b
+   Calvetra — ds.js  (shared COMPONENT + CHART library)  ·  Stage 3b
    Loads after core.js, before surfaces/entities. Every function is a
    PURE function returning an HTML/SVG string (no DOM, no side effects),
    so it drops straight into the el()/innerHTML flow + appClick delegation.
@@ -98,13 +98,119 @@ function epiDot(tag) {
 }
 
 /* §2.5 segmented(opts,current,name) — generalize .seg.
-   opts = [{v,label}] (or plain strings). tint ∈ ""|marrow|cere for active pill. */
+   opts = [{v,label}] (or plain strings). tint ∈ ""|marrow|cere for active pill.
+   A11y: these are CLICK-ONLY toggles (surface handlers swap a single panel), not
+   ARIA tabs with tabpanels — so we use the conformant role="radiogroup"/role="radio"
+   + aria-checked pattern (NOT role="tablist"/tab, which would promise tabpanels that
+   don't exist). Roving tabindex (only the checked pill is in the tab order) + Arrow/
+   Home/End navigation are added by the scoped installer below. */
 function segmented(opts, current, name, tint = "") {
   const items = (opts || []).map(o => (typeof o === "string" ? { v: o, label: o } : o));
-  return `<div class="seg ${tint}" role="tablist"${name ? ` data-seg="${esc(name)}"` : ""}>`
-    + items.map(o => `<button type="button" role="tab" class="${o.v === current ? "on" : ""}" data-seg-v="${esc(o.v)}" aria-selected="${o.v === current}">${esc(o.label)}</button>`).join("")
+  return `<div class="seg ${tint} has-ind" role="radiogroup"${name ? ` data-seg="${esc(name)}"` : ""}>`
+    + `<span class="seg-ind" aria-hidden="true"></span>`
+    + items.map(o => { const on = o.v === current; return `<button type="button" role="radio" class="${on ? "on" : ""}" data-seg-v="${esc(o.v)}" aria-checked="${on}" tabindex="${on ? "0" : "-1"}">${esc(o.label)}</button>`; }).join("")
     + `</div>`;
 }
+
+/* §2.5c — shared SLIDING-INDICATOR machinery for EVERY segmented() group.
+   The pill (.seg-ind) is the single moving element: one canonical placer slides it
+   under the active radio on subject / qbank / tests / platform alike — no per-surface
+   bespoke copy. It starts width:0 (invisible) until placed, so any surface that
+   never wires it degrades cleanly; reduced-motion collapses the slide to an instant
+   jump (CSS). Animates transform/opacity + width only (GPU); never blocks paint.
+   - placeSegInd(seg, animate): seat the pill under button.on. animate=false
+     suppresses the entrance slide (first paint / layout reflow) via a flush.
+   - placeAllSegInds(scope): re-seat every indicator in scope (post-render / resize),
+     always WITHOUT a slide — a layout change must not read as a deliberate move. */
+function placeSegInd(seg, animate) {
+  if (!seg) return;
+  const ind = seg.querySelector(":scope > .seg-ind");
+  const on = seg.querySelector("button.on");
+  if (!ind || !on) return;
+  if (!animate) ind.style.transition = "none";
+  ind.style.setProperty("--seg-x", on.offsetLeft + "px");
+  ind.style.width = on.offsetWidth + "px";
+  if (!animate) { void ind.offsetWidth; ind.style.transition = ""; } // flush, then re-enable
+}
+function placeAllSegInds(scope) {
+  const root = scope || document;
+  if (!root.querySelectorAll) return;
+  root.querySelectorAll(".seg.has-ind[data-seg]").forEach(s => placeSegInd(s, false));
+}
+/* Global wiring (attached once, at module load — ds.js loads before surfaces):
+   - delegated click (capture) on any seg radio slides its indicator to the new pill.
+     Purely visual + additive; each surface keeps its own selection handler, and the
+     roving installer above keeps aria/tabindex in sync off the same .on class.
+   - one resize listener re-seats every indicator (no per-render stacking).
+   - a MutationObserver on #app (childList only, rAF-debounced) re-seats indicators
+     after any surface re-render, so qbank/tests/platform/subject light up uniformly
+     without touching motion.js or each surface. */
+(function wireSegInds() {
+  if (typeof document === "undefined" || !document.addEventListener) return;
+  const appNode = () => ((typeof $ === "function" && $("#app")) || document.getElementById("app") || document);
+  document.addEventListener("click", e => {
+    const b = e.target.closest && e.target.closest('.seg.has-ind[data-seg] button[data-seg-v]');
+    if (!b) return;
+    const seg = b.closest(".seg.has-ind");
+    // reflect active state for the placer, then slide. Idempotent + order-independent
+    // with each surface's own .on toggling (capture runs first; a surface re-render,
+    // if any, re-paints fresh markup that the observer then re-seats).
+    seg.querySelectorAll("button[data-seg-v]").forEach(x => x.classList.toggle("on", x === b));
+    placeSegInd(seg, true);
+  }, true);
+  let _segRAF = 0;
+  const reseatAll = () => {
+    if (typeof requestAnimationFrame !== "function") { placeAllSegInds(appNode()); return; }
+    cancelAnimationFrame(_segRAF);
+    _segRAF = requestAnimationFrame(() => placeAllSegInds(appNode()));
+  };
+  if (typeof window !== "undefined") window.addEventListener("resize", reseatAll);
+  const start = () => {
+    const app = appNode();
+    if (app !== document && typeof MutationObserver !== "undefined") {
+      new MutationObserver(reseatAll).observe(app, { childList: true, subtree: true });
+    }
+    placeAllSegInds(app);
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();
+
+/* §2.5b roving keyboard nav for every segmented() group (scoped to ds.js).
+   - Arrow/Home/End move focus across the radios (roving tabindex).
+   - keeps aria-checked + tabindex in sync with the .on class even when a surface
+     re-paints only .on (e.g. subject.js toggles .on without touching aria), so the
+     announced state never drifts. Honors the surfaces' own click handlers — we only
+     synthesize a .click() so their existing data-seg-v logic still fires. */
+(function installSegRoving() {
+  if (typeof document === "undefined") return;
+  function sync(seg) {
+    const btns = seg.querySelectorAll('button[role="radio"]');
+    btns.forEach(b => { const on = b.classList.contains("on"); b.setAttribute("aria-checked", on ? "true" : "false"); b.setAttribute("tabindex", on ? "0" : "-1"); });
+  }
+  document.addEventListener("keydown", e => {
+    const btn = e.target.closest && e.target.closest('.seg[role="radiogroup"] button[role="radio"]');
+    if (!btn) return;
+    const seg = btn.closest('.seg[role="radiogroup"]');
+    const btns = Array.prototype.slice.call(seg.querySelectorAll('button[role="radio"]'));
+    const i = btns.indexOf(btn);
+    let j = -1;
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") j = (i + 1) % btns.length;
+    else if (e.key === "ArrowLeft" || e.key === "ArrowUp") j = (i - 1 + btns.length) % btns.length;
+    else if (e.key === "Home") j = 0;
+    else if (e.key === "End") j = btns.length - 1;
+    else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); btn.click(); return; }
+    else return;
+    e.preventDefault();
+    btns[j].focus();
+    btns[j].click();          // surfaces' [data-seg-v] handler does the actual selection
+  });
+  // After any seg click (surface re-renders or in-place .on swap), realign aria/tabindex.
+  document.addEventListener("click", e => {
+    const btn = e.target.closest && e.target.closest('.seg[role="radiogroup"] button[role="radio"]');
+    if (btn) requestAnimationFrame(() => { const seg = btn.closest('.seg[role="radiogroup"]'); if (seg) sync(seg); });
+  });
+})();
 
 /* §2.7 panel({title,epi,sourceIds,captured,body,actions})
    Section container for non-chart content. epi+sourceIds MANDATORY when body
@@ -119,6 +225,44 @@ function panel(o) {
     + (o.sourceIds && o.sourceIds.length ? srcLine(o.sourceIds, o.captured) : "")
     + `<div class="panel-body">${o.body || ""}</div>`
     + `</section>`;
+}
+
+/* §2.9 emptyState({icon,title,body,action}) — THE shared "plate awaiting its
+   engraving" primitive (spec §4). Replaces the ~7 bespoke per-surface stand-ins
+   (hy/videos/qbank/platform/subject) so every empty plate shares ONE mark, copy
+   rhythm, hairline + plate-mark treatment — the opposite of bespoke one-offs.
+   - centered block on the --plate ground, engraved hairline + inner plate-mark
+     inset rule (reuses the shipped `.empty.es-trail` CSS contract from overview).
+   - ONE monochrome STROKE-ONLY inline-SVG mark in --line-2 — NEVER colour (keeps
+     the neutrality firewall + warm-almanac identity; renders no fabricated data).
+   - serif title (.es-title), --t-meta body (.es-body), optional linkbtn CTA (.es-cta).
+   icon ∈ quill|ledger|film|compass|gauge (default quill).
+   title = plain text. body = caller markup allowed (e.g. <b>filter name</b>).
+   action = {label, act}  → act becomes data-act-ui (the qbEmpty CTA convention),
+            or {label, attrs:'data-hy-clearstatus'} for a bespoke activation hook. */
+const _ES_MARKS = {
+  quill: `<path d="M20 4S8 6 5 15l4 4C18 16 20 4 20 4Z"/><path d="M5 19l3.5-3.5"/>`,
+  ledger: `<path d="M12 6C9 4 5 4 3 5v14c2-1 6-1 9 1 3-2 7-2 9-1V5c-2-1-6-1-9 1Z"/><path d="M12 6v14"/>`,
+  film: `<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5v14M17 5v14"/>`,
+  compass: `<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2Z"/>`,
+  gauge: `<path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14l4-3"/><path d="M4 14h2M18 14h2M12 6v2"/>`,
+};
+function emptyState(o) {
+  o = o || {};
+  const glyph = _ES_MARKS[o.icon] || _ES_MARKS.quill;
+  const mark = `<svg class="es-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" `
+    + `fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${glyph}</svg>`;
+  let cta = "";
+  if (o.action && o.action.label) {
+    const a = o.action;
+    const hook = a.attrs ? " " + a.attrs : (a.act ? ` data-act-ui="${esc(a.act)}"` : "");
+    cta = `<button type="button" class="linkbtn es-cta"${hook}>${esc(a.label)}</button>`;
+  }
+  return `<div class="empty es-trail">${mark}`
+    + `<div class="es-title">${esc(o.title || "Awaiting engraving")}</div>`
+    + (o.body ? `<div class="es-body">${o.body}</div>` : "")
+    + cta
+    + `</div>`;
 }
 
 /* ============================================================
@@ -198,14 +342,29 @@ function heatmap(rows, cols, valueFn, opts) {
       const ringed = ring && ring === c.id;
       const style = has ? `background:${yieldFill(t)};color:${yieldInk(t)}` : "";
       const disp = !has ? "" : (compact ? `<span class="hm-dot"></span>` : `<span class="hm-v">${esc(String(d.v == null ? "" : d.v))}</span>`);
+      // epistemic tag for this cell: measured count; ringed cells add a directional overlay.
+      const epi = ringed ? "directional" : "measured";
+      const ttl = `${esc(r.label)} · ${esc(c.label)}: ${has ? esc(fmt(d.raw)) + " MCQs (measured)" : "not covered"}${ringed ? " · community-reputed strongest (directional)" : ""}`;
+      // data-read-plate routes taps to the already-wired readPlateSheet (main.js) so the
+      // per-cell measured/directional firewall label is reachable on TOUCH (title= is hover-only);
+      // data-hm-* + aria-label keep the custom .cf-tip + screen-reader paths working.
       return `<button type="button" class="hm-cell${has ? "" : " empty"}${ringed ? " ring" : ""}" style="${style}"`
         + ` data-hm-row="${esc(r.label)}" data-hm-col="${esc(c.label)}" data-hm-raw="${esc(String(d.raw == null ? "" : d.raw))}"`
-        + ` title="${esc(r.label)} · ${esc(c.label)}: ${has ? esc(fmt(d.raw)) + " MCQs (measured)" : "not covered"}${ringed ? " · community-reputed strongest (directional)" : ""}">${disp}</button>`;
+        + ` data-hm-epi="${epi}" data-hm-disp="${has ? esc(fmt(d.raw)) + " MCQs" : "not covered"}"${ringed ? ' data-hm-ring="1"' : ""}`
+        + ` data-read-plate="${epi}" aria-label="${ttl}"`
+        + ` title="${ttl}">${disp}</button>`;
     }).join("");
-    const lbl = r.go ? `<a class="hm-rl is-link"${_goAttr(r.go)}>${esc(r.label)}</a>` : `<span class="hm-rl">${esc(r.label)}</span>`;
+    // role="link" + tabindex make the subject jump-affordance keyboard-reachable;
+    // main.js's keydown handler already activates [data-go-subject] with role="link".
+    const lbl = r.go ? `<a class="hm-rl is-link" role="link" tabindex="0"${_goAttr(r.go)}>${esc(r.label)}</a>` : `<span class="hm-rl">${esc(r.label)}</span>`;
     return `<div class="hm-row" style="grid-template-columns:${colTpl}">${lbl}${cells}</div>`;
   }).join("");
-  return `<div class="heatmap${compact ? " compact" : ""}">${head}${body}</div>`;
+  // role="grid" + visually-hidden caption give AT users the matrix's identity & axes;
+  // each cell already carries an aria-label (row · col · value + epistemic tag).
+  const cap = `${rows.length} ${rows.length === 1 ? "subject" : "subjects"} × ${cols.length} ${cols.length === 1 ? "platform" : "platforms"} — MCQ density (measured count, proxy bucketing); a gold ring marks the community-reputed strongest (directional).`;
+  return `<div class="heatmap${compact ? " compact" : ""}" role="grid" aria-label="${esc(cap)}">`
+    + `<span class="vh" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">${esc(cap)}</span>`
+    + `${head}${body}</div>`;
 }
 
 /* §3.2 consensusMark(n, plats) — how many of the (independent) platforms agree HY (0..3).
@@ -215,15 +374,132 @@ function consensusMark(n, plats, opts) {
   opts = opts || {};
   const total = plats ? plats.length : 3;
   const agree = (n == null && plats) ? plats.filter(p => p.on).length : (n || 0);
+  // data-read-plate="proxy" routes a TAP to readPlateSheet so the "(proxy)" framing
+  // — invisible in native title= on touch — stays reachable on mobile (neutrality firewall).
   if (opts.glyph) {
     const g = ["○", "◔", "◑", "●"][Math.max(0, Math.min(3, agree))];
-    return `<span class="cmark-glyph" style="color:${conFill(agree)}" title="${agree} of ${total} platforms flag high-yield (proxy)">${g}</span>`;
+    const t = `${agree} of ${total} platforms flag high-yield (proxy)`;
+    return `<span class="cmark-glyph" role="button" tabindex="0" data-read-plate="proxy" aria-label="${t}" style="color:${conFill(agree)}" title="${t}">${g}</span>`;
   }
   const pips = (plats || Array.from({ length: total }, () => ({}))).map(p =>
     `<span class="cpip${p.on ? " on" : ""}" style="border-color:${p.id ? platColor(p.id) : 'var(--ink-4)'};background:${p.on ? conFill(agree) : 'transparent'}" title="${esc(p.id ? platName(p.id) : "platform")}${p.on ? " · flags HY" : ""}"></span>`
   ).join("");
-  return `<span class="cmark" title="${agree} of ${total} platforms flag this high-yield (proxy)">${pips}</span>`;
+  const ct = `${agree} of ${total} platforms flag this high-yield (proxy)`;
+  return `<span class="cmark" role="button" tabindex="0" data-read-plate="proxy" aria-label="${ct}" title="${ct}">${pips}</span>`;
 }
+
+/* §3.1b cf-tip — ONE body-appended custom chart tooltip that replaces the hover-only,
+   touch-invisible native title= on heatmap cells. Renders an almanac plate (row · col,
+   value with its epiBadge, gold-ring directional note) positioned via GPU transform.
+   TOUCH path is untouched: data-read-plate already routes a tap to readPlateSheet so the
+   firewall context is reachable on mobile. Self-installing; honors prefers-reduced-motion
+   (no fade) and feature-degrades silently. Scoped entirely to ds.js — no new main.js wiring. */
+(function installCfTip() {
+  if (typeof document === "undefined" || typeof matchMedia !== "function") return;
+  // Hover-capable, fine-pointer only: touch devices use the data-read-plate tap path (sheet).
+  if (!matchMedia("(hover:hover) and (pointer:fine)").matches) return;
+  const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  let tip = null, raf = 0, px = 0, py = 0;
+  // Scoped almanac styling injected once (keeps the upgrade entirely within ds.js):
+  // hairline + faint warm shadow plate, fixed-positioned, GPU transform, fade gated
+  // behind prefers-reduced-motion so reduced-motion users get an instant (non-faded) tip.
+  function ensureStyle() {
+    if (document.getElementById("cf-tip-style")) return;
+    const st = document.createElement("style");
+    st.id = "cf-tip-style";
+    st.textContent =
+      ".cf-tip{position:fixed;top:0;left:0;z-index:90;max-width:230px;pointer-events:none;"
+      + "background:var(--plate,var(--paper-2));border:1px solid var(--line);border-radius:9px;"
+      + "padding:8px 10px;box-shadow:0 6px 20px -8px color-mix(in srgb,var(--ink) 26%,transparent),0 1px 0 var(--line);"
+      + "display:flex;flex-direction:column;gap:3px;opacity:0;transition:opacity var(--d-2,180ms) var(--ease-soft,ease);"
+      + "will-change:transform,opacity}"
+      + ".cf-tip.on{opacity:1}"
+      + ".cf-tip .cf-tip-head{font:600 11.5px/1.25 var(--sans);color:var(--ink-2);letter-spacing:.01em}"
+      + ".cf-tip .cf-tip-x{color:var(--ink-4)}"
+      + ".cf-tip .cf-tip-val{display:flex;align-items:center;gap:6px;font:600 13px var(--sans);color:var(--ink-1,var(--ink))}"
+      + ".cf-tip .cf-tip-val .num{font-variant-numeric:tabular-nums}"
+      + ".cf-tip .cf-tip-note{font:500 10.5px/1.3 var(--sans);color:var(--gold,var(--ink-3))}"
+      + "@media (prefers-reduced-motion:reduce){.cf-tip{transition:none}}";
+    document.head.appendChild(st);
+  }
+  function ensure() {
+    if (tip) return tip;
+    ensureStyle();
+    tip = document.createElement("div");
+    tip.className = "cf-tip";
+    tip.setAttribute("role", "tooltip");
+    tip.setAttribute("aria-hidden", "true");
+    document.body.appendChild(tip);
+    return tip;
+  }
+  function render(cell) {
+    const row = cell.getAttribute("data-hm-row") || "";
+    const col = cell.getAttribute("data-hm-col") || "";
+    const disp = cell.getAttribute("data-hm-disp") || "";
+    const epi = cell.getAttribute("data-hm-epi") || "measured";
+    const ring = cell.getAttribute("data-hm-ring") === "1";
+    const t = ensure();
+    t.innerHTML =
+      `<span class="cf-tip-head">${esc(row)} <span class="cf-tip-x">·</span> ${esc(col)}</span>`
+      + `<span class="cf-tip-val"><b class="num">${esc(disp)}</b> ${epiBadge(epi)}</span>`
+      + (ring ? `<span class="cf-tip-note">Gold ring = community-reputed strongest (directional)</span>` : "");
+    t.classList.add("on");
+    t.setAttribute("aria-hidden", "false");
+  }
+  function place() {
+    raf = 0;
+    if (!tip) return;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = px + 14, y = py + 16;
+    if (x + w > innerWidth - 8) x = px - w - 14;
+    if (y + h > innerHeight - 8) y = py - h - 16;
+    tip.style.transform = `translate(${Math.max(8, x)}px,${Math.max(8, y)}px)`;
+  }
+  function hide() {
+    if (!tip) return;
+    tip.classList.remove("on");
+    tip.setAttribute("aria-hidden", "true");
+  }
+  document.addEventListener("pointerover", e => {
+    const cell = e.target.closest && e.target.closest(".hm-cell:not(.empty)");
+    if (!cell) return;
+    render(cell);
+    px = e.clientX; py = e.clientY;
+    if (!raf) raf = requestAnimationFrame(place);
+  });
+  document.addEventListener("pointermove", e => {
+    if (!tip || !tip.classList.contains("on")) return;
+    px = e.clientX; py = e.clientY;
+    if (!raf) raf = requestAnimationFrame(place);
+  });
+  document.addEventListener("pointerout", e => {
+    const cell = e.target.closest && e.target.closest(".hm-cell");
+    if (cell) hide();
+  });
+  // Keyboard parity: focus a cell → show; blur → hide (positioned at the cell).
+  document.addEventListener("focusin", e => {
+    const cell = e.target.closest && e.target.closest(".hm-cell:not(.empty)");
+    if (!cell) return;
+    render(cell);
+    const r = cell.getBoundingClientRect();
+    px = r.left + r.width / 2; py = r.bottom;
+    if (!raf) raf = requestAnimationFrame(place);
+  });
+  document.addEventListener("focusout", e => {
+    if (e.target.closest && e.target.closest(".hm-cell")) hide();
+  });
+  // Keyboard activation for the consensus glyph/cmark (role=button spans): Enter/Space
+  // synthesizes a click so the existing [data-read-plate] handler opens readPlateSheet.
+  // Native <button> hm-cells already activate on their own; this covers the spans only.
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const tgt = e.target;
+    if (!tgt || !tgt.matches || !tgt.matches('.cmark[data-read-plate],.cmark-glyph[data-read-plate]')) return;
+    e.preventDefault();
+    tgt.click();
+  });
+  void reduce; // fade is gated in CSS via prefers-reduced-motion; flag retained for clarity
+})();
 
 /* §3.3 rankedBars(items, opts) — mass / where-to-spend (horizontal, mobile-safe).
    items = [{label,value,t?,colorFn?,go?,sub?}]  opts.colorFn(item) overrides; default yieldFill(t).
@@ -235,7 +511,7 @@ function rankedBars(items, opts) {
   return `<div class="rbars">` + list.map(i => {
     const w = Math.max(2, Math.round((i.value || 0) / mx * 100));
     const fill = opts.colorFn ? opts.colorFn(i) : (i.color || yieldFill(i.t != null ? i.t : (i.value || 0) / mx));
-    const lbl = i.go ? `<a class="rb-name is-link"${_goAttr(i.go)}>${esc(i.label)}</a>` : `<span class="rb-name">${esc(i.label)}</span>`;
+    const lbl = i.go ? `<a class="rb-name is-link" role="link" tabindex="0"${_goAttr(i.go)}>${esc(i.label)}</a>` : `<span class="rb-name">${esc(i.label)}</span>`;
     return `<div class="rbrow">${lbl}`
       + `<span class="rb-track"><i class="rb-bar" style="width:${w}%;background:${fill}"></i>`
       + (i.mark != null ? `<span class="rb-mark">${i.mark}</span>` : "")
@@ -308,7 +584,7 @@ function sparkline(series, opts) {
 function smallMultiples(seriesByKey, opts) {
   opts = opts || {};
   return `<div class="smgrid">` + (seriesByKey || []).map(s => {
-    const head = s.go ? `<a class="sm-l is-link"${_goAttr(s.go)}>${esc(s.label)}</a>` : `<span class="sm-l">${esc(s.label)}</span>`;
+    const head = s.go ? `<a class="sm-l is-link" role="link" tabindex="0"${_goAttr(s.go)}>${esc(s.label)}</a>` : `<span class="sm-l">${esc(s.label)}</span>`;
     return `<div class="sm-cell">${head}`
       + (s.value != null ? `<span class="sm-v num">${esc(String(s.value))}</span>` : "")
       + sparkline(s.series, { w: 120, h: 34, unit: opts.unit }) + `</div>`;
@@ -332,7 +608,7 @@ function facultyTimeline(faculty) {
     // integrated → its name; reputation-only id → friendly name; else the affiliation's own name / Independent
     const name = integrated ? platName(pid) : (pid ? platDisplayName(pid) : (a.name || "Independent"));
     const span = `${a.from ? esc(a.from) + (a.fromApproximate ? "≈" : "") : "—"} → ${a.to ? esc(a.to) : (a.status === "current" ? "now" : "—")}`;
-    const nameHtml = integrated ? `<a class="ftl-org is-link" data-go-platform="${esc(pid)}">${esc(name)}</a>` : `<span class="ftl-org off">${esc(name)}</span>`;
+    const nameHtml = integrated ? `<a class="ftl-org is-link" role="link" tabindex="0" data-go-platform="${esc(pid)}">${esc(name)}</a>` : `<span class="ftl-org off">${esc(name)}</span>`;
     return `<li class="ftl-item st-${esc(a.status || "past")}">`
       + `<span class="ftl-node" style="--c:${color}"></span>`
       + `<div class="ftl-body">`
@@ -374,7 +650,7 @@ function ratingScorecard(data, mode) {
   const apps = data || [];
   return `<div class="scorecard">` + apps.map(a => {
     const nm = a.platformId && PLAT_BY_ID[a.platformId]
-      ? `<a class="rs-name is-link" data-go-platform="${esc(a.platformId)}" style="color:${platColor(a.platformId)}">${esc(a.name)}</a>`
+      ? `<a class="rs-name is-link" role="link" tabindex="0" data-go-platform="${esc(a.platformId)}" style="color:${platColor(a.platformId)}">${esc(a.name)}</a>`
       : `<span class="rs-name off" title="not yet integrated">${esc(a.name)}</span>`;
     const num = (a.ratingApprox ? "~" : "") + (a.rating == null ? "—" : a.rating);
     const themes = (a.themes || []).map(t => `<span class="theme-chip"><span class="wdot"></span>${esc(t)}</span>`).join("");

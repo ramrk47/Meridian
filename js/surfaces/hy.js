@@ -93,13 +93,21 @@ function renderHY() {
     statTile({ accent: "k", value: fmt(subjTotal(topSubj)), label: "Heaviest subject", note: esc(topSubj), epi: "measured", go: "subject:" + topSubj }) +
     statTile({ accent: "m", value: pct(hhRev, hh.length) + "%", label: "★★+ reviewed", note: "depth of revision", epi: "measured" });
   v.appendChild(tiles);
+  // count-up the ONE hero serif numeral (top-density topics). statTile already
+  // printed the final en-IN string; we just stamp data-count="<raw int>" so the
+  // shared countUp() (run by animateView after render) tweens to it ONCE.
+  // Reduced-motion / no-IO → countUp is a no-op and the final text stays put.
+  const heroV = tiles.querySelector(".tile.is-hero .tile-v");
+  if (heroV) heroV.dataset.count = String(hyAll.length);
 
   /* ── honest proxy framing (the badge-in-view requirement) ── */
-  v.appendChild(el("div", "callout proxy-note",
+  const proxyNote = el("div", "callout proxy-note",
     `<b>This tab ranks MCQ density ${epiBadge("proxy")} — a proxy, not measured exam yield.</b>
      ★★★ marks the topics carrying the most question mass <em>within their subject</em> (Marrow: star-rating × MCQ share · Cerebellum: volume × density · DocTutorials: MCQ share).
      We hold no PYQ-weighted exam-frequency data, so we never claim real "high-yield" — it's an honest prioritisation signal. The strongest signal we can build is <b>consensus</b>: a topic that two or more independent banks both flag.
-     <span class="muted">Click any subject or topic to open it. Full method → <button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button></span>`));
+     <span class="muted">Click any subject or topic to open it. Full method → <button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button></span>`);
+  proxyNote.setAttribute("data-reveal", "");
+  v.appendChild(proxyNote);
 
   /* ──────────────────────────────────────────────────────────
      Pl.1 — RELATIONAL HERO: density mass by subject, consensus-ranked.
@@ -124,7 +132,7 @@ function renderHY() {
     + `<span class="lg-con"><span class="cpip on" style="border-color:var(--gold);background:var(--con-all)"></span>banks agree (proxy)</span>`
     + `<span class="lg-best"><span class="hy-best">●</span>reputed strongest (directional)</span>`;
 
-  // Source attribution: the density + consensus figure is a Meridian-derived proxy
+  // Source attribution: the density + consensus figure is a Calvetra-derived proxy
   // over measured MCQ counts — the proxy badge + note disclose the method, so we cite
   // NO third-party source for it. SS_SRC (subjectStrength: reputation blogs/Quora) backs
   // ONLY the directional "community-reputed strongest" gold chip, disclosed inline below.
@@ -155,10 +163,10 @@ function renderHY() {
         go: undefined,
       }).replace('class="lrow"', `class="lrow is-link" data-open-leaf="${esc(c.lead.id)}" role="button" tabindex="0"`);
     });
-    v.appendChild(_frame(panel({
+    const consensusPanel = panel({
       title: `Consensus — banks agree ★★★`,
       epi: "proxy",
-      // Meridian-derived proxy (cross-bank ★★★ agreement over measured counts):
+      // Calvetra-derived proxy (cross-bank ★★★ agreement over measured counts):
       // method disclosed in the cf-note below. No third-party source attached —
       // SS_SRC (reputation blogs) does NOT substantiate this density computation.
       sourceIds: undefined,
@@ -167,7 +175,44 @@ function renderHY() {
       actions: `<button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button> <span class="count-pill">${consensus.length} topics</span>`,
       body: groupList(rows, "hy-consensus")
         + `<div class="cf-note">Agreement on MCQ density across two or more independent banks for the same topic — the strongest prioritisation signal buildable today (still a proxy for exam weight, not measured consensus). Click a topic to track it or jump to the bank.</div>`,
-    })));
+    });
+
+    /* Companion compact subject-density panel (right column on desktop) — the
+       subjects carrying the most consensus topics, each with combined mass +
+       a within-set density bar (proxy). Reinforces the same signal at the
+       subject grain; on mobile it stacks below the consensus list (no density
+       penalty — it's a summary of data already on the page). */
+    const denseSubj = subjects
+      .map(cs => ({ cs, con: consensusByCanon[cs] || 0, mass: subjTotal(cs) }))
+      .filter(s => s.mass > 0)
+      .sort((a, b) => (b.con - a.con) || (b.mass - a.mass))
+      .slice(0, 8);
+    const denseMax = Math.max(1, ...denseSubj.map(s => s.mass));
+    const denseRows = denseSubj.map(s => {
+      const t = s.mass / denseMax;
+      const w = Math.max(6, Math.round(t * 100));
+      const dens = `<span class="hy-dbar"><i style="width:${w}%;background:${yieldFill(t)}"></i></span>`;
+      const conChip = s.con ? `<span class="hy-concount" title="${s.con} consensus topic${s.con > 1 ? "s" : ""} (proxy)">${s.con}×★★★</span>` : `<span class="hy-concount none">—</span>`;
+      return listRow({
+        title: `<a class="hy-jump is-link" data-go-subject="${esc(s.cs)}">${esc(s.cs)}</a>`,
+        trail: `${dens}${conChip}<span class="hy-q num">${fmt(s.mass)}</span>`,
+      }).replace('class="lrow"', 'class="lrow"');
+    });
+    const densePanel = panel({
+      title: `Where the density sits`,
+      epi: "proxy",
+      sourceIds: undefined,
+      captured: CAP,
+      curated: true,
+      actions: `<span class="count-pill">top ${denseSubj.length} subjects</span>`,
+      body: groupList(denseRows, "hy-dlist hy-densesum")
+        + `<div class="cf-note">Combined MCQ mass (measured) per subject with its consensus-topic count (proxy). A compact read of where prioritisation effort concentrates. Click a subject to open it.</div>`,
+    });
+
+    const grid = el("div", "panel-grid hy-consensus-grid");
+    grid.setAttribute("data-reveal", "");
+    grid.innerHTML = consensusPanel + densePanel;
+    v.appendChild(grid);
   }
 
   /* ── ONE sticky toolbar — shared idiom with QBank: native <select> on desktop
@@ -244,21 +289,69 @@ function renderHY() {
       + `<span class="count-pill">density ${epiBadge("proxy")}</span></div>`;
 
     const sec = el("section", "panel hy-panel");
+    sec.setAttribute("data-reveal", "");        // gentle rise on entrance (shared reveal)
     sec.innerHTML = head
       + (strongPid && SS_SRC.length ? srcLine(SS_SRC, CAP) : "")
-      + `<div class="panel-body">${top.length ? groupList(rows, "hy-dlist") : `<div class="empty small">No topics match this filter.</div>`}</div>`;
+      + `<div class="panel-body">${top.length ? groupList(rows, "hy-dlist") : hyEmpty(cs)}</div>`;
     v.appendChild(sec);
     plateNo++;
   });
 
-  // reusable, always-working "How we rate" affordance (firewall surface).
-  // The methodology panel only lives on Overview (id=howrate); a plain "#howrate"
-  // link is dead while another tab is active, so we navigate THEN scroll.
-  v.addEventListener("click", e => {
-    if (e.target.closest("[data-hy-howrate]")) { e.preventDefault(); hyGotoMethodology(); }
+  // make every Pl. N plate-number a keyboard+pointer affordance for the metaphor
+  // sheet (idempotent per-render: attribute stamping is safe to repeat).
+  $$(".hy-frame .plate-no", v).forEach(no => {
+    no.setAttribute("data-plate-explain", "");
+    no.setAttribute("tabindex", "0");
+    no.setAttribute("role", "button");
+    no.setAttribute("aria-label", "What this engraved plate means");
   });
 
+  // Delegated view-level handlers — bound ONCE on #view-hy (a render-survivor:
+  // v.innerHTML="" clears children but not listeners on v itself). The guard flag
+  // prevents the stack-up that would otherwise duplicate every renderHY() the
+  // status/subject filters trigger. (Pre-existing "How we rate" listener folded in.)
+  if (!v.dataset.hyBound) {
+    v.dataset.hyBound = "1";
+    const explainFrom = t => { const pn = t.closest("[data-plate-explain]"); if (pn) { hyExplainPlate(pn.closest(".cframe.plate")); return true; } return false; };
+    v.addEventListener("click", e => {
+      if (e.target.closest("[data-hy-howrate]")) { e.preventDefault(); hyGotoMethodology(); return; }
+      if (e.target.closest("[data-hy-clearstatus]")) { e.preventDefault(); hyStatus = "all"; renderHY(); return; }
+      // .plate-no explains the engraved-plate metaphor + jumps to imprint sources.
+      // Self-wired (appClick has no data-plate-explain handler yet — shared gap).
+      if (explainFrom(e.target)) e.preventDefault();
+    });
+    v.addEventListener("keydown", e => {
+      if ((e.key === "Enter" || e.key === " ") && e.target.closest && e.target.closest("[data-plate-explain]")) {
+        e.preventDefault(); explainFrom(e.target);
+      }
+    });
+  }
+
   labelizeResponsiveTables();
+  // renderHY() is reached DIRECTLY (subject/status filters, sheet callbacks, clear-status click) —
+  // bypassing show()'s central animateView(). Without this, the fresh [data-reveal] panels (proxy note,
+  // consensus/dense grids, per-subject plates) stay opacity:0 → the whole HY view is invisible for
+  // motion-OK users until they leave + return. Idempotent (once-only IO + data-done), mirroring
+  // tests.js / qbank.js / overview.js, so the show()-path call stays harmless.
+  if (typeof animateView === "function") animateView($("#view-hy"));
+}
+
+/* Richer empty state — "a plate awaiting its engraving", not a missing thing.
+   Local stand-in until the shared ds.emptyState() primitive lands (noted in the
+   return for the integrator). Monochrome stroke-only mark (NEVER color → keeps
+   the firewall + warm-almanac identity), serif title, meta body, a clear-filter
+   CTA when a status filter is the reason the plate is bare. Reads honestly: the
+   topics exist, this filter just hides them. */
+function hyEmpty(cs) {
+  const filtered = hyStatus !== "all";
+  const quill = `<svg class="hy-empty-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 C13 6 8 11 6 18"/><path d="M6 18 L4 20"/><path d="M9 15 C12 14 16 11 18 7"/></svg>`;
+  return `<div class="hy-empty">${quill}`
+    + `<div class="hy-empty-t">${filtered ? "No topics under this filter" : "This plate is unengraved"}</div>`
+    + `<div class="hy-empty-b">${filtered
+        ? `${esc(cs)} has density topics, but none match <b>${esc((HY_STATUS_OPTS.find(o => o[0] === hyStatus) || ["", hyStatus])[1])}</b> yet.`
+        : `No ranked density topics for ${esc(cs)} in the captured banks.`}</div>`
+    + (filtered ? `<button type="button" class="linkbtn hy-empty-cta" data-hy-clearstatus>Show all statuses ↗</button>` : "")
+    + `</div>`;
 }
 
 /* Navigate to Overview and reveal the "How we rate · sources" firewall panel.
@@ -271,5 +364,32 @@ function hyGotoMethodology() {
   });
 }
 
-/* wrap a chartFrame string into an element so we can appendChild */
-function _frame(html) { const d = el("div", "hy-frame"); d.innerHTML = html; return d; }
+/* Explain the engraved-plate metaphor + jump to this plate's imprint sources.
+   "Pl. N" plates are this app's signature: every chart is an engraved plate with
+   an epistemic label + cited imprint. The sheet teaches that, then (if the plate
+   carries sources) hands off to readPlateSheet so the firewall context is one tap
+   away on mobile. Falls back gracefully if openSheet is unavailable. */
+function hyExplainPlate(plate) {
+  if (typeof openSheet !== "function") return;
+  const epiEl = plate && plate.querySelector(".cf-epi");
+  const epi = epiEl ? epiEl.dataset.readPlate : "";
+  const src = epiEl ? epiEl.dataset.readSrc : "";
+  const cap = epiEl ? epiEl.dataset.readCap : "";
+  const titleEl = plate && plate.querySelector(".cf-title");
+  const which = titleEl ? titleEl.textContent.trim() : "this plate";
+  const opts = [
+    ["_about", "Each chart is an engraved “plate”"],
+    ["_epi", "Read its epistemic label" + (epi ? ` — ${epiName(epi)}` : "")],
+  ];
+  if (src) opts.push(["_sources", "Jump to the cited imprint sources ↗"]);
+  openSheet("Pl. — " + which, opts, "_about", v => {
+    if (v === "_sources" || v === "_epi") readPlateSheet(epi, src, cap);
+  });
+}
+
+/* wrap a chartFrame string into an element so we can appendChild.
+   [data-reveal] → the shared reveal() (run by animateView post-render) gives each
+   frame ONE gentle rise+fade on entrance (staggered, cap 4). chartIntro() finds
+   the inner .cframe.plate on its own. Both collapse to final state under the
+   reduced-motion firewall, so the plate is never stuck invisible. */
+function _frame(html) { const d = el("div", "hy-frame"); d.setAttribute("data-reveal", ""); d.innerHTML = html; return d; }

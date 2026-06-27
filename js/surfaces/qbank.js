@@ -86,6 +86,7 @@ function renderQbank() {
   $("#qHy").addEventListener("click", () => { QB.hyOnly = !QB.hyOnly; $("#qHy").classList.toggle("on", QB.hyOnly); updateQbFilterBadge(); drawSidebar(); drawSubject(); });
   $("#qExpand").addEventListener("click", () => $$(".cat-block", $("#qbContent")).forEach(b => b.classList.add("open")));
   $("#qCollapse").addEventListener("click", () => $$(".cat-block", $("#qbContent")).forEach(b => b.classList.remove("open")));
+  wireChipImprint();
   // mobile: sort/filter open a bottom-sheet instead of native selects
   $("#qSortBtn")?.addEventListener("click", () => openSheet("Sort topics", QB_SORT_OPTS, QB.sort, val => { QB.sort = val; const s = $("#qsort"); if (s) s.value = val; drawSubject(); }));
   $("#qFilterBtn")?.addEventListener("click", () => openSheet("Filter by status", QB_STATUS_OPTS, QB.status, val => { QB.status = val; const s = $("#qstatus"); if (s) s.value = val; updateQbFilterBadge(); drawSidebar(); drawSubject(); }));
@@ -93,6 +94,40 @@ function renderQbank() {
 
   drawSidebar(); drawSubject();
 }
+/* Off→on confirm pulse on tracking chips (A/R/Rt/pin) — fires ONLY at the moment
+   of change, never on re-render. The shared appClick (body-bubble) flips the chip's
+   .on/aria-pressed synchronously; we sample the chip's prior state on the way DOWN
+   (capture) and, one frame later, imprint it if it newly turned on. Reduced-motion
+   safe: the keyframe lives under the firewall and we gate the class-add on MOTION_OK
+   (state is still fully conveyed by color + aria-pressed). Listener is attached to the
+   fresh #qbContent each render, so it never stacks. */
+function wireChipImprint() {
+  const host = $("#qbContent"); if (!host) return;
+  // elevated-empty CTA: clear all active filters and re-draw (the empty CTA lives inside
+  // #qbContent, which persists across drawSubject re-renders, so this delegate stays live).
+  host.addEventListener("click", e => {
+    const ui = e.target.closest('[data-act-ui="qb-clear-filters"]');
+    if (!ui) return;
+    QB.search = ""; QB.status = "all"; QB.hyOnly = false;
+    const s = $("#qsearch"); if (s) s.value = "";
+    const so = $("#qstatus"); if (so) so.value = "all";
+    const hy = $("#qHy"); if (hy) hy.classList.remove("on");
+    updateQbFilterBadge(); drawSidebar(); drawSubject();
+  });
+  host.addEventListener("click", e => {
+    if (typeof MOTION_OK === "function" && !MOTION_OK()) return;
+    const chip = e.target.closest(".chips .chip[data-act], .pinstar[data-act]");
+    if (!chip) return;
+    const wasOn = chip.classList.contains("on");
+    requestAnimationFrame(() => {
+      if (!chip.classList.contains("on") || wasOn) return;   // only off→on confirms
+      chip.classList.remove("just-on"); void chip.offsetWidth; // restart if rapid
+      chip.classList.add("just-on");
+      setTimeout(() => chip.classList.remove("just-on"), 360);
+    });
+  }, true); // capture: sample prior state before body-bubble appClick mutates it
+}
+
 function leafMatchesFilters(l) {
   if (QB.hyOnly && l.priority !== 3) return false;
   const p = Store.prog(l.id), st = Store.state.stars[l.id];
@@ -148,7 +183,7 @@ function sortLeaves(arr) {
 function drawSubject() {
   const host = $("#qbContent"); if (!host) return; host.innerHTML = "";
   resetPlates();
-  const subject = QB.subject; if (!subject) { host.appendChild(el("div", "empty", "Pick a subject.")); return; }
+  const subject = QB.subject; if (!subject) { host.appendChild(qbEmpty("Pick a subject", "Choose a subject from the rail to engrave its coverage plate.")); return; }
   const ls = leavesOf(QB.platform, subject);
   const ro = rollupLeaves(ls);
   const meta = subjMeta(QB.platform, subject);
@@ -163,6 +198,7 @@ function drawSubject() {
   const mob = qbIsMobile();
   // header — the ONE serif hero number per screen is the subject MCQ count (measured).
   const head = el("div", "subj-hero" + (mob ? " is-compact" : ""));
+  head.dataset.reveal = "";   // gentle rise+fade once on entrance (motion.js reveal)
   head.innerHTML = `
     <div class="sh-top">
       <div class="sh-id">
@@ -190,6 +226,11 @@ function drawSubject() {
     const tiles = $$(".sh-tiles .tile", head);
     [tiles[1], tiles[4], tiles[5], $(".sh-heat", head)].forEach(n => { if (n) n.style.display = "none"; });
   }
+  // Hero count-up: stamp the raw MCQ count on the ONE serif hero numeral so motion.js
+  // countUp() animates 0→count once on entrance (formats each frame through fmt(); the
+  // final inline string — incl. "measured count" note + epi dot — is untouched/restored).
+  const heroV = $(".sh-tiles .tile.is-hero .tile-v", head);
+  if (heroV) heroV.dataset.count = String(meta?.mcqs || 0);
   host.appendChild(head);
 
   let tree = treeOf(QB.platform, subject);
@@ -203,13 +244,14 @@ function drawSubject() {
     if (group.cat == null) {
       // no category level (Cerebellum): one inset-grouped container of rows
       const grp = el("div", "lgroup");
+      grp.dataset.reveal = "";
       items.forEach(l => grp.appendChild(leafRow(l)));
       body.appendChild(grp);
     } else {
       const gro = rollupLeaves(group.items);
       const hy = group.items.filter(l => l.priority === 3).length;
       const block = el("div", "cat-block" + (QB.search || QB.status !== "all" || QB.hyOnly ? " open" : ""));
-      block.dataset.cat = group.cat; block.dataset.subject = subject;
+      block.dataset.cat = group.cat; block.dataset.subject = subject; block.dataset.reveal = "";
       block.innerHTML = `<div class="cat-head" data-cat-toggle>
           <span class="chev">▶</span>
           <span class="cat-name">${esc(group.cat)}</span>
@@ -224,8 +266,31 @@ function drawSubject() {
       body.appendChild(block);
     }
   });
-  if (!shown) body.appendChild(el("div", "empty", "No topics match your filters in this subject."));
+  if (!shown) {
+    const filtering = QB.search || QB.status !== "all" || QB.hyOnly;
+    body.appendChild(qbEmpty(
+      "Nothing matches yet",
+      filtering ? "No topics in this subject match your current filters. Loosen the filter or clear the search to see more." : "No tracked topics in this subject.",
+      filtering ? { label: "Clear filters", act: "qb-clear-filters" } : null));
+  }
   host.appendChild(body);
+  // Entrance: subject-switch / sort / filter re-renders into #qbContent OUTSIDE show()'s
+  // animateView pass, so re-run it here. Idempotent (once-only IO + data-done flags), so a
+  // chip toggle that calls syncAfterToggle never re-animates already-revealed nodes; a fresh
+  // subject's brand-new hero/plate/blocks animate once.
+  if (typeof animateView === "function") animateView(host);
+}
+/* surface-local elevated empty: a "plate awaiting its engraving" block (the shared
+   emptyState() primitive is not yet in ds.js — see return note). Engraved hairline,
+   monochrome quill mark (stroke-only, never color → firewall-neutral), serif title,
+   optional ghost CTA. Reads as a plate awaiting data, not a broken box. */
+function qbEmpty(title, body, action) {
+  const wrap = el("div", "qb-empty");
+  wrap.innerHTML = `<svg class="qbe-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2 2 0 0 0-3-3L3 17l-1 4z"/><path d="M14 6l3 3"/></svg>
+    <div class="qbe-title">${esc(title)}</div>
+    <div class="qbe-body">${esc(body)}</div>${
+    action ? `<button class="linkbtn qbe-cta" data-act-ui="${esc(action.act)}">${esc(action.label)}</button>` : ""}`;
+  return wrap;
 }
 /* per-canon-subject MCQ count on a given integrated platform (measured; 0 if absent) */
 function subjMcqOn(platId, cnon) {
@@ -322,7 +387,7 @@ function syncAfterToggle(id) {
   const block = $(`#qbContent .cat-block[data-cat="${cssEsc(leaf.cat)}"][data-subject="${cssEsc(leaf.subject)}"]`);
   if (block) {
     const gro = rollupLeaves(leavesOf(QB.platform, leaf.subject).filter(l => l.cat === leaf.cat));
-    const m = $(".cat-meter", block); if (m) m.innerHTML = meterHTML(gro.a, gro.total);
+    const m = $(".cat-meter", block); if (m) { m.innerHTML = meterHTML(gro.a, gro.total); $$(".meter-bar i", m).forEach(f => f.style.animation = "none"); }
   }
   // subject hero (stat-tiles + big meter)
   if (leaf.subject === QB.subject && leaf.platform === QB.platform) {
@@ -336,7 +401,7 @@ function syncAfterToggle(id) {
       if (vals[3]) vals[3].textContent = ro.r;
       if (notes[3]) notes[3].textContent = ro.t + " mastered";
       if (vals[5]) vals[5].textContent = pct(ro.t, ro.total) + "%";
-      const bm = $(".sh-progress", hero); if (bm) bm.innerHTML = bigMeter(ro);
+      const bm = $(".sh-progress", hero); if (bm) { bm.innerHTML = bigMeter(ro); $$(".bm-bar i, .bm-bar b", bm).forEach(f => f.style.animation = "none"); }
     }
   }
   // sidebar entry

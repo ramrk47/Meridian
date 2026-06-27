@@ -60,8 +60,11 @@ table.tests td{vertical-align:middle}
 a.rb-name.is-link{cursor:pointer;text-decoration:none}
 a.rb-name.is-link:hover{color:var(--accent);text-decoration:underline}
 .rb-track{position:relative;display:flex;align-items:center;gap:8px;min-width:0}
-.rb-bar{height:13px;border-radius:2px;min-width:3px;
-  transition:width .6s cubic-bezier(.22,.61,.36,1)}
+/* width is set inline per render; entrance growth is handled GPU-side by the
+   shared `.cframe.plate.is-in .rb-bar` scaleX keyframe in charts.css (entrance-
+   ONLY). No width transition here, so a segmented-filter re-render never re-grows
+   on-screen bars (spec §2 bars convention). */
+.rb-bar{height:13px;border-radius:2px;min-width:3px}
 .rb-mark{font-size:var(--t-meta);color:var(--ink-3);white-space:nowrap;
   font-variant-numeric:tabular-nums}
 .rb-val{font-size:var(--t-row);font-weight:700;color:var(--ink);
@@ -73,6 +76,78 @@ a.rb-name.is-link:hover{color:var(--accent);text-decoration:underline}
 #view-tests .cf-key .lg-line{width:16px;height:0;border-top:1.6px solid var(--ink-2)}
 #view-tests .cf-key .lg-dot{display:inline-block;width:9px;height:9px;border-radius:2px;
   vertical-align:-1px}
+
+/* ============================================================
+   CRAFT ELEVATION (additive, scoped to #view-tests).
+   Entrance motion lives in shared motion.js/charts.css; here we add the
+   layout balance, typographic rhythm, richer empties, and refined
+   interaction states. All transform/opacity only; the reduced-motion
+   firewall in tokens.css collapses every transition to instant.
+   ============================================================ */
+
+/* ── lining-tabular serif hero numeral (count-up reads as engraved figures) ── */
+#view-tests .tile.is-hero .tile-v{
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1}
+
+/* ── desktop two-up viz band: accuracy sparkline | weakest-first bars.
+     panel-grid (components.css) gives the 1.1fr/.9fr split + mobile collapse;
+     here we equalize cell height so both plates' imprint rules baseline-align. ── */
+#view-tests .tests-viz{align-items:stretch;grid-auto-rows:1fr;margin-bottom:var(--gap)}
+#view-tests .tests-viz .vz-cell{min-width:0;display:flex}
+#view-tests .tests-viz .vz-cell>.cframe.plate{flex:1;display:flex;flex-direction:column;margin:0}
+#view-tests .tests-viz .vz-cell .cf-plot{flex:1;display:flex;flex-direction:column;justify-content:center}
+#view-tests .tests-viz .vz-cell .cf-imprint{margin-top:auto}
+
+/* ── editable score table = the intentional ledger column (centered, capped) ── */
+#view-tests .tests-ledger{max-width:min(100%,860px);margin-inline:auto}
+
+/* ── trend delta + CTA typesetting ── */
+#view-tests .d-trend{font-variant-numeric:tabular-nums;white-space:nowrap}
+#view-tests .d-trend.up{color:var(--accent)}
+#view-tests .d-trend.down{color:var(--bad)}
+#view-tests .cf-cta{display:inline-block;margin-top:2px;color:var(--accent);font-weight:600}
+
+/* ── zero-state accuracy gauge: a ruled, calibrated-but-empty axis ── */
+#view-tests .spark-empty .spk-base{stroke:var(--grid-2);stroke-width:1}
+#view-tests .spark-empty .spk-wait{stroke:var(--line-2);stroke-width:1;
+  stroke-dasharray:2 4;stroke-linecap:round}
+#view-tests .spark-empty .spk-tick{fill:var(--tick);font-size:9px;
+  font-variant-numeric:tabular-nums}
+#view-tests .spark-empty .spk-cap{fill:var(--ink-3);font-size:10px;
+  font-style:italic;letter-spacing:.01em}
+
+/* ── richer empty state: "a plate awaiting its first reading", not a broken box ── */
+#view-tests .tests-empty{display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:6px;padding:22px 18px;color:var(--ink-3);
+  background:var(--plate);border-radius:var(--r-1);
+  box-shadow:inset 0 0 0 1px var(--plate-edge)}
+#view-tests .tests-empty .te-mark{color:var(--line-2);flex:none}
+#view-tests .tests-empty .te-title{font-family:var(--serif);font-size:var(--t-panel);
+  color:var(--ink-2);text-wrap:balance}
+#view-tests .tests-empty .te-body{font-size:var(--t-meta);line-height:1.5;
+  max-width:46ch;text-wrap:pretty}
+
+/* ── refined interaction: editorial subject-link underline-grow + tactile press ── */
+#view-tests a.rb-name.is-link{text-decoration:none;
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2) var(--ease-soft),color var(--d-2) var(--ease-soft)}
+#view-tests a.rb-name.is-link:hover,
+#view-tests a.rb-name.is-link:focus-visible{color:var(--accent);background-size:100% 1px}
+#view-tests a.rb-name.is-link:active{transform:scale(.985);
+  transition:transform var(--d-1) var(--ease-rise)}
+
+/* difficulty stars: quiet tactile press + softened hover (transform-only) */
+#view-tests .ds{transition:color var(--d-1) var(--ease-soft),transform var(--d-1) var(--ease-rise)}
+#view-tests .ds:active{transform:scale(.9)}
+
+/* add-test CTA: bring the bare .15s into the motion band + a calm press */
+#view-tests .btn{transition:background var(--d-2) var(--ease-soft),transform var(--d-1) var(--ease-rise)}
+#view-tests .btn:active{transform:scale(.985)}
+
+/* score inputs: focus settles with the shared band (no abrupt border snap) */
+#view-tests .sin{transition:border-color var(--d-1) var(--ease-soft)}
 
 /* ---------- mobile density (≤640) ---------- */
 @media (max-width:640px){

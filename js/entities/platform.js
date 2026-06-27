@@ -20,6 +20,28 @@ function _platReliability(id) {
   return ((D.reliability && D.reliability.apps) || []).find(a => a.platformId === id) || null;
 }
 
+/* ---- local empty-state engraving (CRAFT) ---------------------------------
+   Reads as "a plate awaiting its engraving", not a missing thing: plate ground
+   + a monochrome STROKE-ONLY mark (never colour), serif title, meta body.
+   NOTE for integrator: this duplicates the intended shared
+   emptyState({icon,title,body,action}) primitive (spec §4) which does not yet
+   exist in ds.js — and is mirrored in entities/subject.js (_subjEmpty). Promote
+   + dedupe when the shared primitive lands. Keeps every epistemic label intact
+   and the gated-faculty "forthcoming" framing for the neutrality firewall. */
+const _PLAT_MARKS = {
+  quill: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4S8 6 5 15l4 4C18 16 20 4 20 4Z"/><path d="M5 19l3.5-3.5"/></svg>`,
+  ledger: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6C9 4 5 4 3 5v14c2-1 6-1 9 1 3-2 7-2 9-1V5c-2-1-6-1-9 1Z"/><path d="M12 6v14"/></svg>`,
+  compass: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2Z"/></svg>`,
+};
+function _platEmpty(o) {
+  o = o || {};
+  const mark = _PLAT_MARKS[o.mark] || _PLAT_MARKS.quill;
+  return `<div class="plat-empty"><span class="pe-mark" aria-hidden="true">${mark}</span>`
+    + `<div class="pe-title">${esc(o.title || "Awaiting engraving")}</div>`
+    + (o.body ? `<p class="pe-body">${o.body}</p>` : "")
+    + `</div>`;
+}
+
 function renderPlatformPage(id) {
   const v = $("#view-platform"); if (!v) return;
   resetPlates();
@@ -36,7 +58,7 @@ function renderPlatformPage(id) {
         title: repName ? `${repName} — reputation only` : "Unknown platform",
         epi: repName ? "directional" : null,
         body: repName
-          ? `<p class="muted">${esc(repName)} appears in Meridian's neutral reliability scorecard and community-reputation matrix, but its content is <b>not yet integrated</b> — so it has no coverage page. It stays an honest reputation chip until ingested.</p>`
+          ? `<p class="muted">${esc(repName)} appears in Calvetra's neutral reliability scorecard and community-reputation matrix, but its content is <b>not yet integrated</b> — so it has no coverage page. It stays an honest reputation chip until ingested.</p>`
           : `<p class="muted">No such platform.</p>`
       })}`;
     return;
@@ -71,7 +93,7 @@ function renderPlatformPage(id) {
           </div>
         </div>
         <div class="eh-hero">
-          <span class="hero-num num">${heroNum === "—" ? "—" : "★ " + esc(String(heroNum))}</span>
+          <span class="hero-num num">${heroNum === "—" ? "—" : '<span class="hn-star" aria-hidden="true">★</span> ' + esc(String(heroNum))}</span>
           <span class="hero-lbl">${reli ? "App-Store rating " + epiBadge("public-3p") : "no public rating"}</span>
           <span class="hero-note muted small">${reli ? esc(reli.ratingsLabel || "") + " ratings · captured " + esc(reliCap) : ""}</span>
         </div>
@@ -106,7 +128,8 @@ function renderPlatformPage(id) {
     reliPlate = panel({
       title: "Reliability — iOS App Store",
       epi: "public-3p",
-      body: `<p class="muted">No public App-Store rating captured for ${esc(p.name)} yet.</p>`
+      body: _platEmpty({ mark: "compass", title: "No public rating yet",
+        body: `No iOS App-Store rating is captured for ${esc(p.name)} so far. This plate fills in when a public third-party signal is sourced ${epiBadge("public-3p")} — money never moves the score.` })
     });
   }
 
@@ -154,13 +177,15 @@ function renderPlatformPage(id) {
     facultyPanel = panel({
       title: "Faculty roster",
       epi: "directional",
-      body: `<p class="muted small">Faculty profiles are being seeded from public sources. <b>0 live.</b> Aggregate-only · community-sentiment · never a ranking of "worst" faculty.</p>`
+      body: _platEmpty({ mark: "quill", title: "Profiles forthcoming",
+        body: `Faculty profiles are being seeded from public sources. <b>0 live</b> across Calvetra so far. Aggregate-only · community-sentiment · never a ranking of peers ${epiBadge("directional")}.` })
     });
   } else if (!roster.length) {
     facultyPanel = panel({
       title: "Faculty roster",
       epi: "directional",
-      body: `<p class="muted small">No seeded faculty currently list ${esc(p.name)} among their affiliations. The roster grows as more profiles are sourced.</p>`
+      body: _platEmpty({ mark: "quill", title: "No affiliations listed here yet",
+        body: `No seeded faculty currently list ${esc(p.name)} among their affiliations. The roster grows as more profiles are sourced ${epiBadge("directional")}.` })
     });
   } else {
     const rows = roster.map(f => {
@@ -205,16 +230,57 @@ function renderPlatformPage(id) {
             go: "subject:" + x.subject
           }))) + `</div>`
         : "")
-    : `<p class="muted">You haven't tracked any ${esc(unitNoun)} on ${esc(p.name)} yet. Open the QBank Tracker to start ticking.</p>`;
+    : _platEmpty({ mark: "ledger", title: "Your trail starts here",
+        body: `You haven't tracked any ${esc(unitNoun)} on ${esc(p.name)} yet. Open the QBank Tracker to start ticking — it stays private on this device ${epiBadge("measured")}.` });
   const tracking = panel({
     title: "Your tracking on this platform",
     epi: "measured",
     body: trackBody
-      + `<p class="muted small" style="margin-top:8px">Your tracked activity on this device (measured, local). Stays private — Meridian is local-first.</p>`
+      + `<p class="muted small" style="margin-top:8px">Your tracked activity on this device (measured, local). Stays private — Calvetra is local-first.</p>`
   });
 
   v.innerHTML = head + tiles
     + `<div class="panel-grid">${reliPlate}${coverage}</div>`
     + `<div class="inst-grid">${facultyPanel}${tracking}</div>`
     + treemapBand;
+
+  /* ---- CRAFT post-render enhancement (all additive, reduced-motion-safe) ----
+     animateView() in main.js handles [data-reveal] rise/fade + .cframe.plate
+     chartIntro once on entrance via the shared once-only IntersectionObserver.
+     Here we only (a) flag the structural blocks as reveal targets (stagger cap
+     handled by motion.js) and (b) make the desktop treemap tiles a real, calm,
+     accessible affordance — without touching the shared treemap() output. */
+  _platEnhance(v, p);
+}
+
+/* Stamp reveal targets + upgrade treemap tiles. Pure DOM post-pass over the
+   freshly-rendered view; never changes data, labels, or routes. */
+function _platEnhance(v, p) {
+  // (a) reveal: entity head + each plate/panel in the two grids + the treemap band.
+  const eh = v.querySelector(".entity-head"); if (eh) eh.setAttribute("data-reveal", "");
+  v.querySelectorAll(".panel-grid > *, .inst-grid > *, .plat-treemap > *")
+    .forEach(n => n.setAttribute("data-reveal", ""));
+
+  // (b) treemap tiles → calm, accessible affordance. The shared treemap() emits
+  // <g class="tm-tile is-link"> with the go-attr already; we add a programmatic
+  // label, keyboard reachability, and a per-tile entrance index (--ti, largest
+  // first — tiles are already sorted by mass desc in treemap()). Hover/focus
+  // lift + entrance live in css/platform.css (transform-free; firewall-safe).
+  const tiles = v.querySelectorAll(".plat-treemap .tm-tile");
+  tiles.forEach((g, i) => {
+    g.style.setProperty("--ti", Math.min(i, 12));   // cap so a big set never crawls
+    if (g.classList.contains("is-link")) {
+      if (!g.hasAttribute("tabindex")) g.setAttribute("tabindex", "0");
+      g.setAttribute("role", "link");
+      const t = g.querySelector("title");
+      if (t && !g.hasAttribute("aria-label")) g.setAttribute("aria-label", t.textContent + " — open subject");
+      // Enter/Space activates via the existing data-go delegation (synthesize a click).
+      if (!g.dataset.kb) {
+        g.dataset.kb = "1";
+        g.addEventListener("keydown", e => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); g.dispatchEvent(new MouseEvent("click", { bubbles: true })); }
+        });
+      }
+    }
+  });
 }

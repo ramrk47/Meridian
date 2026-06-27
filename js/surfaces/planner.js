@@ -64,11 +64,13 @@ function renderPlanner() {
   const topGap = weak[0];
 
   /* ── INTRO callout — what this surface is, honestly framed ── */
-  v.appendChild(el("div", "callout plan-intro",
+  const intro = el("div", "callout plan-intro",
     `<b>Do-next, not a content dump.</b> Subjects are ranked by the MCQ <b>mass you still have to attempt</b> ${epiBadge("proxy")} —
      a density proxy for where your effort goes next, not measured exam yield. Reputation names the strongest bank per subject ${epiBadge("directional")};
      your progress is tracked on this device ${epiBadge("measured")}.
-     <span class="muted">Click any subject to open it. Full method → How we rate, on Overview.</span>`));
+     <span class="muted">Click any subject to open it. Full method → How we rate, on Overview.</span>`);
+  intro.dataset.reveal = "";
+  v.appendChild(intro);
 
   /* ── 6 stat-tiles (mobile 2/3-col, 84–104px). One hero serif numeral. ── */
   const tiles = el("div", "tiles plan-tiles");
@@ -79,6 +81,12 @@ function renderPlanner() {
     statTile({ accent: "k", value: fmt(weak.length), label: "Subjects with debt", note: "still have mass left", epi: "measured" }) +
     statTile({ accent: "g", value: topGap ? fmt(stat[topGap].remaining) : "—", label: "Biggest gap", note: topGap ? esc(topGap) : "all caught up", epi: "proxy", go: topGap ? "subject:" + topGap : undefined }) +
     statTile({ accent: "m", value: Math.max(1, Math.round(totalRemaining / 100)), label: "Days @ 100/day", note: "to clear remaining", epi: "proxy" });
+  // hero count-up: tag the ONE serif numeral with its raw int so the shared
+  // countUp() (animateView, after render) tweens it once on entrance. The text
+  // already carries the final en-IN string, so reduced-motion/no-support = no-op.
+  tiles.innerHTML = tiles.innerHTML.replace(
+    '<span class="tile-v num">' + fmt(totalRemaining) + '</span>',
+    '<span class="tile-v num" data-count="' + totalRemaining + '">' + fmt(totalRemaining) + '</span>');
   v.appendChild(tiles);
 
   /* ──────────────────────────────────────────────────────────
@@ -190,6 +198,7 @@ function renderPlanner() {
       });
     });
     const sec = el("section", "panel plan-tier " + td.cls);
+    sec.dataset.reveal = "";
     sec.innerHTML = `<div class="ph"><div class="ph-l"><h3>${esc(td.title)} ${epiBadge("proxy")}</h3>`
       + `<span class="muted pl-tsub">${esc(td.sub)}</span></div>`
       + `<span class="count-pill">${td.arr.length} subjects</span></div>`
@@ -222,13 +231,18 @@ function renderPlanner() {
       <div class="pl-kpi"><b class="num">${Math.max(1, Math.round(totalRemaining / 100))}</b><span>days @ 100/day to clear ${epiBadge("proxy")}</span></div>
       <div class="pl-kpi"><b class="num">${Math.max(1, Math.round(totalRemaining / 150))}</b><span>days @ 150/day ${epiBadge("proxy")}</span></div>
     </div>`;
-  v.appendChild(el("div", "plan-rhythm-wrap", panel({
+  const rhythmWrap = el("div", "plan-rhythm-wrap", panel({
     title: "Suggested weekly rhythm",
     body: rhythmBody,
-  })));
+  }));
+  rhythmWrap.dataset.reveal = "";
+  v.appendChild(rhythmWrap);
 
   labelizeResponsiveTables();
 }
 
-/* wrap a chartFrame/panel string into an element so we can appendChild */
-function _planFrame(html) { const d = el("div", "pl-frame"); d.innerHTML = html; return d; }
+/* wrap a chartFrame/panel string into an element so we can appendChild.
+   Carries [data-reveal] so the shared reveal() (animateView, post-render) gives
+   it a gentle once-only rise+fade on entrance; the inner .cframe.plate still
+   gets its own chartIntro. Reduced-motion firewall collapses both to final. */
+function _planFrame(html) { const d = el("div", "pl-frame"); d.dataset.reveal = ""; d.innerHTML = html; return d; }

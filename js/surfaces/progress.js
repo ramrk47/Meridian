@@ -51,6 +51,12 @@ function renderProgress() {
       accent: p.cls, epi: "measured"
     })).join("");
   v.appendChild(sg);
+  /* CRAFT: count-up the ONE hero serif numeral (Attempted-%). statTile renders
+     the final string ("78%"); we hand motion.js the raw int via data-count so it
+     tweens 0→78 once on entrance, then snaps back to the exact "78%" string.
+     Reduced-motion / no-IO → motion.js leaves the final text untouched. */
+  const heroV = sg.querySelector(".tile.is-hero .tile-v");
+  if (heroV) heroV.dataset.count = String(pct(tot.a, tot.total));
   const cap = el("div", "prog-cap");
   cap.innerHTML = `${epiBadge("measured")} <span>Your tracked activity on this device — counts are measured locally, nothing is sent anywhere.</span>`;
   v.appendChild(cap);
@@ -68,6 +74,7 @@ function renderProgress() {
     return { key: s.cs, label: s.cs, series, value: s.comb + "%", go: "subject:" + s.cs };
   });
   const smPanel = el("section", "panel");
+  smPanel.dataset.reveal = "";
   smPanel.innerHTML = chartFrame(
     "Coverage shape, per subject",
     "measured", [], CAP,
@@ -79,7 +86,12 @@ function renderProgress() {
       legend: `<span><span class="leg-line"></span>attempted-% by bank</span>`
     }
   );
-  v.appendChild(smPanel);
+  /* CRAFT: the two COMPACT plates (coverage-shape + weak↔strong heatmap) share a
+     .prog-spread so desktop ≥1024 lays them 2-up (editorial spread); mobile keeps
+     them stacked single-column (density preserved — see progress.css §A). */
+  const spread = el("div", "prog-spread");
+  spread.appendChild(smPanel);
+  v.appendChild(spread);
 
   /* ============================================================
      §3  WEAK ↔ STRONG HEATMAP — subject × platform attempted-%.
@@ -97,6 +109,7 @@ function renderProgress() {
     return { v: c.pct + "%", raw: c.pct, t: c.pct / 100 };
   };
   const hmPanel = el("section", "panel");
+  hmPanel.dataset.reveal = "";
   const hmLegend =
     `<span><span class="lg-ramp"><i style="background:var(--y0)"></i><i style="background:var(--y1)"></i><i style="background:var(--y2)"></i><i style="background:var(--y3)"></i><i style="background:var(--y4)"></i><i style="background:var(--y5)"></i></span>0→100% attempted</span>` +
     `<span><span class="lg-ring"></span>community-strongest (directional)</span>`;
@@ -110,7 +123,7 @@ function renderProgress() {
         `${epiBadge("directional")} ${srcLine((D.subjectStrength && D.subjectStrength.sourceIds) || [], (D.subjectStrength && D.subjectStrength.captured) || CAP)} — a pale ringed cell is a high-stakes gap.`
     }
   );
-  v.appendChild(hmPanel);
+  spread.appendChild(hmPanel);
 
   /* ============================================================
      §4  COMBINED LEDGER — inset-grouped rows (NOT cards).
@@ -132,6 +145,7 @@ function renderProgress() {
     });
   });
   const ledger = el("section", "panel");
+  ledger.dataset.reveal = "";
   ledger.innerHTML =
     `<div class="ph"><div class="ph-l"><h3>Combined coverage — both banks per subject ${epiBadge("measured")}</h3></div></div>`
     + `<div class="cf-note ledger-note">Attempted across the union of every integrated bank that carries the subject. A <span class="warn-dot inline"></span> flags a lopsided subject covered mainly from one source. Counts measured locally.</div>`
@@ -143,8 +157,9 @@ function renderProgress() {
      time (measured, local). Draws only where a real series exists.
      ============================================================ */
   const gtSeries = examAccuracySeries();
+  const accPanel = el("section", "panel");
+  accPanel.dataset.reveal = "";
   if (gtSeries.length) {
-    const accPanel = el("section", "panel");
     accPanel.innerHTML = chartFrame(
       "Grand-test accuracy over time",
       "measured", [], CAP,
@@ -155,8 +170,26 @@ function renderProgress() {
           : `Accuracy on your scored grand tests, oldest→newest (${gtSeries.length} tests). Measured from your own entries.`
       }
     );
-    v.appendChild(accPanel);
+  } else {
+    /* CRAFT richer empty: a calibrated-but-empty gauge — the axis + an
+       "awaiting data" midline — reads as a plate awaiting its engraving, not a
+       broken box. (emptyState() primitive is integrator-owned; until it lands we
+       render this surface-scoped equivalent. See shared-gap note.) */
+    accPanel.innerHTML = chartFrame(
+      "Grand-test accuracy over time",
+      "measured", [], CAP,
+      `<div class="acc-empty" aria-hidden="true">`
+      + `<svg class="spark acc-empty-axis" viewBox="0 0 520 84" preserveAspectRatio="none" role="img" aria-label="Awaiting your first scored grand test">`
+      + `<line class="spk-base" x1="0" y1="78" x2="520" y2="78"/>`
+      + `<line class="acc-empty-mid" x1="0" y1="42" x2="520" y2="42"/>`
+      + `<text class="spk-tick" x="2" y="12">100</text><text class="spk-tick" x="2" y="76">0</text>`
+      + `</svg></div>`,
+      {
+        note: `No scored grand tests yet — this gauge is calibrated and waiting. Log your first GT in <strong>Tests &amp; Scores</strong> to draw the line.`
+      }
+    );
   }
+  v.appendChild(accPanel);
 
   labelizeResponsiveTables();
 }

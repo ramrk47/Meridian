@@ -75,6 +75,82 @@
 
 /* keep the honest proxy note legible + airy */
 .proxy-note em { font-style: italic; color: var(--ink-2); }
+.proxy-note { max-width: 74ch; text-wrap: pretty; hanging-punctuation: first last; }
+
+/* ── CRAFT ELEVATION (additive; reduced-motion firewall lives in tokens.css) ──
+   All transitions ride the shared motion tokens (--d-*, --ease-*); all hover/
+   press effects are transform/opacity/box-shadow only (GPU, no reflow). */
+
+/* the hero density numeral seats on the cap grid, lining-tabular figures */
+.hy-tiles .tile.is-hero .tile-v {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+
+/* "Pl. N" plate numeral is now an affordance: quiet letterpress on hover/press,
+   focus-visible ring inherited from components.css. Reads as pressed-into-paper. */
+.hy-frame .plate-no[data-plate-explain] { cursor: help; transition: color var(--d-2, 180ms) var(--ease-soft, ease), transform var(--d-1, 120ms) var(--ease-rise, ease); }
+.hy-frame .plate-no[data-plate-explain]:hover { color: var(--ink-2); }
+.hy-frame .plate-no[data-plate-explain]:active { transform: scale(.96); }
+
+/* editorial link underline-grow on the in-row subject jumps + best-platform chip
+   (background-size sweep, GPU-cheap, no layout shift; replaces the hard hover line) */
+.hy-jump.is-link,
+.hy-best[data-go-platform] {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat;
+  transition: background-size var(--d-2, 180ms) var(--ease-soft, ease);
+}
+.hy-jump.is-link:hover,
+.hy-jump.is-link:focus-visible,
+.hy-best[data-go-platform]:hover,
+.hy-best[data-go-platform]:focus-visible { background-size: 100% 1px; }
+.hy-best[data-go-platform]:hover { text-decoration: none; }   /* supersede the legacy underline */
+
+/* consensus + density rows: quiet hover lift + press, transform/opacity only */
+.hy-consensus .lrow.is-link,
+.hy-dlist .lrow.is-link { transition: background var(--d-2, 180ms) var(--ease-soft, ease), transform var(--d-1, 120ms) var(--ease-rise, ease); }
+.hy-consensus .lrow.is-link:active,
+.hy-dlist .lrow.is-link:active { transform: scale(.99); }
+
+/* consensus glyph nudges up a hair on row hover — directs the eye to the signal */
+.hy-consensus .lrow.is-link:hover .cmark-glyph,
+.hy-dlist .lrow.is-link:hover .cmark-glyph { transform: scale(1.08); transition: transform var(--d-2, 180ms) var(--ease-rise, ease); }
+.cmark-glyph { display: inline-block; transition: transform var(--d-2, 180ms) var(--ease-rise, ease); }
+
+/* density micro-bar fill: a soft warm sheen so the proxy reads as engraved */
+.hy-dbar > i { box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
+
+/* ── desktop multi-panel: consensus (wide) + density summary (compact) ──
+   single column under ~860; 1.6fr / 1fr above so the consensus list stays the
+   hero and the summary is a quiet companion. */
+.hy-consensus-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 24px; }
+@media (min-width: 861px) {
+  .hy-consensus-grid { grid-template-columns: 1.6fr 1fr; align-items: start; }
+  .hy-consensus-grid > .panel { margin-bottom: 0; }
+}
+
+/* compact subject-density summary rows */
+.hy-densesum .lrow-trail { gap: 9px; }
+.hy-concount { font-size: var(--t-micro, 10px); font-weight: 700; color: var(--gold);
+  letter-spacing: .01em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hy-concount.none { color: var(--ink-4); font-weight: 600; }
+
+/* richer empty state — "a plate awaiting its engraving" (NOT a missing thing).
+   Engraved hairline + inner plate-mark rule + stroke-only monochrome mark. */
+.hy-empty {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: 6px; padding: 26px 20px; border-radius: 12px;
+  background: var(--plate, var(--paper)); border: 1px solid var(--line);
+  box-shadow: var(--e1-plate, 0 1px 0 var(--plate-edge)), inset 0 0 0 1px color-mix(in srgb, var(--plate-edge) 40%, transparent);
+  max-width: 62ch; margin: 2px auto;
+}
+.hy-empty-mark { color: var(--line-2, var(--ink-4)); margin-bottom: 2px; opacity: .9; }
+.hy-empty-t { font-family: var(--serif); font-size: var(--t-panel, 16px); font-weight: 500; color: var(--ink-2); text-wrap: balance; }
+.hy-empty-b { font-size: var(--t-meta, 12px); color: var(--ink-3); line-height: var(--lh-body, 1.55); text-wrap: pretty; }
+.hy-empty-b b { color: var(--ink-2); font-weight: 600; }
+.hy-empty-cta { margin-top: 4px; }
 
 /* ============================================================
    MOBILE DENSITY (≤640) — tiles 2/3-col, rows stay 48px, no h-scroll
@@ -99,6 +175,12 @@
 
   /* the consensus per-row glyph lead is enough; mass numeral stays tabular */
   .hy-mass { font-size: 13px; }
+
+  /* consensus + density panels stack (grid already 1col here); tighten gap */
+  .hy-consensus-grid { gap: 12px; margin-bottom: 12px; }
+  .hy-densesum .lrow-trail { gap: 6px; }
+  .hy-concount { font-size: 9.5px; }
+  .hy-empty { padding: 20px 16px; }
 }
 
 /* very narrow (≤360): drop the density micro-bar, keep glyph + count only */

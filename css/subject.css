@@ -16,12 +16,63 @@
 .subj-toolbar .seg { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; min-width: 0; }
 .subj-toolbar .seg button { white-space: nowrap; }
 
+/* ============================================================
+   CRAFT ELEVATION — typographic rhythm, segmented sliding indicator,
+   engraved empty states, refined hover/focus/press. Additive only;
+   all motion uses the shared tokens + collapses under prefers-reduced-motion;
+   every datum keeps its epistemic label + source. No new colours, no neon.
+   ============================================================ */
+
+/* ── typographic rhythm ── */
+/* true small-caps eyebrow (serif-context label) + calmer tracking */
+#view-subject .entity-head .eyebrow { font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp", "c2sc"; letter-spacing: .08em; }
+/* lining-tabular serif numerals on the hero + name when numeric; seat caps on
+   the cap/alphabetic grid where supported (graceful no-op fallback). */
+#view-subject .hero-num, #view-subject .sh-name {
+  font-variant-numeric: lining-nums tabular-nums; font-feature-settings: "lnum" 1, "tnum" 1; }
+#view-subject .hero-num { line-height: .95; text-box-trim: trim-both; text-box-edge: cap alphabetic; }
+#view-subject .sh-name { text-wrap: balance; }
+/* readable measure + soft wrap on prose/notes (desktop progressive enhancement) */
+#view-subject .cf-note, #view-subject .firewall-note, #view-subject .se-body {
+  max-width: 62ch; text-wrap: pretty; }
+
+/* ── segmented sliding indicator ──
+   Promoted to the shared component: the canonical .seg.has-ind / .seg-ind rules now
+   live in components.css and apply to EVERY segmented() control (subject toolbar
+   included) — no bespoke per-surface copy here. (Subject keeps only its scroll +
+   sizing rules for .subj-toolbar .seg above.) */
+
+/* ── engraved empty state — "a plate awaiting its engraving", not a void ── */
+.subj-empty { display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: var(--sp-2); padding: var(--sp-5) var(--sp-4); background: var(--plate);
+  border-radius: var(--r-2, 10px); box-shadow: var(--e1-plate), inset 0 0 0 1px var(--plate-edge); }
+.subj-empty .se-mark { width: 34px; height: 34px; color: var(--ink-4); opacity: .85; }
+.subj-empty .se-mark svg { width: 100%; height: 100%; display: block; }
+.subj-empty .se-title { font-family: var(--serif); font-size: var(--t-panel);
+  font-weight: 500; color: var(--ink-2); letter-spacing: .01em; }
+.subj-empty .se-body { margin: 0; color: var(--ink-3); font-size: var(--t-meta); line-height: 1.5; }
+.subj-empty .se-body b { color: var(--ink-2); font-weight: 600;
+  font-variant-numeric: lining-nums tabular-nums; }
+
 /* stat-tile strip: density on this entity's hero metrics */
 .subj-tiles { margin-bottom: var(--gap); }
 
 /* per-platform coverage links under the heatmap (the triangle) */
 .cov-links { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-3); }
-.cov-links .echip.plat { cursor: pointer; }
+.cov-links .echip.plat { cursor: pointer;
+  transition: border-color var(--d-2) var(--ease-soft), color var(--d-2) var(--ease-soft),
+    background var(--d-2) var(--ease-soft); }
+.cov-links .echip.plat:hover { background: color-mix(in srgb, var(--c, var(--line)) 9%, var(--paper-2));
+  border-color: color-mix(in srgb, var(--c, var(--line)) 60%, var(--line)); }
+/* tactile letterpress on press — transform-only (GPU); firewall collapses it */
+.cov-links .echip.plat:active { transform: scale(.985); transition: transform var(--d-1) var(--ease-rise); }
+
+/* editorial underline-grow on the "open in QBank" back link (draws on hover) */
+#view-subject .entity-head .back { background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat;
+  transition: background-size var(--d-2) var(--ease-soft); text-decoration: none; }
+#view-subject .entity-head .back:hover { background-size: 100% 1px; }
 
 /* heatmap legend bits */
 .cf-legend .lg-ramp { display: inline-flex; align-items: center; gap: 3px; }

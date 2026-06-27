@@ -55,3 +55,150 @@
 
 /* keep the platform-tinted entity name from overpowering on evening theme */
 body.evening #view-platform .sh-name{ filter:saturate(.9) brightness(1.05); }
+
+/* ============================================================
+   CRAFT ELEVATION — platform entity page. Additive polish only:
+   typographic rhythm, treemap affordance + entrance, engraved empty
+   states. All motion is transform/opacity, entrance-only, and collapses
+   to final state under the reduced-motion firewall in tokens.css. No
+   neon; every datum keeps its label + source (untouched by this layer).
+   ============================================================ */
+
+/* ── hero numeral: lining-tabular serif figures, optically seated; the
+   ★ glyph sits a touch smaller + gold so the number reads as the figure ── */
+#view-platform .entity-head .hero-num{
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1;
+}
+#view-platform .hero-num .hn-star{
+  color:var(--gold);
+  font-size:.7em;
+  vertical-align:.06em;
+  margin-right:.04em;
+}
+/* tabular figures everywhere the platform page shows counts/ratings */
+#view-platform .tile-v,
+#view-platform .rb-val,
+#view-platform .eh-tags .echip{
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum" 1;
+}
+/* eyebrow + tile labels: drop the wide tracking a hair for a calmer rhythm */
+#view-platform .entity-head .eyebrow{ letter-spacing:.07em; }
+
+/* ── coverage bars: quiet hover/focus lift on the linked subject name
+   (transform-free; the bar itself never re-grows on interaction) ── */
+#view-platform .rbrow .rb-name.is-link{
+  transition:color var(--d-2) var(--ease-soft);
+}
+#view-platform .rbrow .rb-name.is-link:hover{ color:var(--accent); }
+#view-platform .rbrow:hover .rb-track{
+  transition:filter var(--d-2) var(--ease-soft);
+  filter:brightness(1.03);
+}
+
+/* ── desktop width balance: on wide viewports give the reliability +
+   coverage plates a touch more breathing room and let the roster/tracking
+   band share width evenly; the treemap band spans full width below ── */
+@media (min-width:1024px){
+  #view-platform .panel-grid{ grid-template-columns:1fr 1.15fr; }
+  #view-platform .plat-treemap .cframe.plate{ padding-block:14px 12px; }
+}
+
+/* ============================================================
+   TREEMAP — calm, accessible affordance + area-staggered entrance
+   (the shared treemap() SVG output is untouched; platform.js stamps
+   --ti / tabindex / role / aria-label post-render).
+   ============================================================ */
+#view-platform .treemap{ display:block; width:100%; height:auto; }
+
+/* tile labels: lining-tabular value, balanced label; let CSS theme the ink-2
+   caption rule the engraving reads as printed, not pixel-fitted */
+#view-platform .treemap .tm-l{ font:600 15px var(--sans); }
+#view-platform .treemap .tm-v{
+  font:500 13px var(--sans);
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1;
+  opacity:.82;
+}
+
+/* the whole tile group reacts; the <rect> carries the visible state. Hover/
+   focus = quiet brightness lift + a widened plate-stroke (transform-free, so
+   no reflow), plus the cursor + focus ring. */
+#view-platform .tm-tile{ outline:none; }
+#view-platform .tm-tile.is-link{ cursor:pointer; }
+#view-platform .tm-tile.is-link rect{
+  transition:filter var(--d-2) var(--ease-soft), stroke-width var(--d-2) var(--ease-soft);
+}
+#view-platform .tm-tile.is-link:hover rect{
+  filter:brightness(1.04);
+  stroke-width:3;
+}
+/* keyboard focus: brighten + a gold-on-accent ring drawn on the rect itself
+   (SVG can't take the global box-shadow ring), readable on any cell tint */
+#view-platform .tm-tile.is-link:focus-visible rect{
+  filter:brightness(1.04);
+  stroke:var(--accent);
+  stroke-width:3;
+}
+#view-platform .tm-tile.is-link:focus-visible{
+  outline:2px solid var(--focus-ring);
+  outline-offset:-3px;
+}
+/* tactile press (transform-only, GPU; firewall collapses to instant) */
+#view-platform .tm-tile.is-link:active rect{ filter:brightness(.99); }
+
+/* ENTRANCE — tiles fade in by area (largest first) ONCE when the plate
+   becomes visible (.is-in added by chartIntro via the shared IO). --ti is the
+   per-tile index (largest first, capped at 12) set in platform.js. Opacity +
+   a hair of scale from the tile's own box; never on reflow. */
+#view-platform .plat-treemap .cframe.plate.is-in .tm-tile{
+  transform-box:fill-box;
+  transform-origin:center;
+  animation:plat-tm-in var(--d-3) var(--ease-rise) both;
+  animation-delay:calc(var(--ti,0) * var(--stagger));
+}
+@keyframes plat-tm-in{ from{opacity:0;transform:scale(.985)} to{opacity:1;transform:none} }
+@media (prefers-reduced-motion:reduce){
+  #view-platform .plat-treemap .cframe.plate.is-in .tm-tile{ animation:none; }
+}
+
+/* ============================================================
+   EMPTY STATES — "a plate awaiting its engraving" (engraved hairline +
+   inner plate-mark rule, a stroke-only monochrome mark, serif title).
+   NOTE TO INTEGRATOR: mirrors entities/subject.js .subj-empty; promote to
+   the shared emptyState()/.empty primitive (spec §4) and dedupe.
+   ============================================================ */
+#view-platform .plat-empty{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:7px;
+  padding:22px 18px;
+  border-radius:var(--r-2);
+  background:var(--plate);
+  box-shadow:var(--e1-plate), inset 0 0 0 1px var(--plate-edge);
+}
+#view-platform .pe-mark{
+  display:inline-flex;
+  width:30px;height:30px;
+  color:var(--ink-4);
+}
+#view-platform .pe-mark svg{ width:100%; height:100%; }
+#view-platform .pe-title{
+  font-family:var(--serif);
+  font-size:var(--t-panel);
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:-.1px;
+}
+#view-platform .pe-body{
+  margin:0;
+  max-width:46ch;
+  font-size:var(--t-meta);
+  line-height:1.5;
+  color:var(--ink-3);
+  text-wrap:pretty;
+}
+#view-platform .pe-body b{ color:var(--ink-2); }

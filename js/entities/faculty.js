@@ -70,8 +70,12 @@ function renderFacultyPage(id) {
   /* ---- HERO numeral: prefer real community ★; while votes are seeding (all null),
      fall back to a datum the seed actually supports (years active — directional, sourced)
      rather than a hollow "—". The label + epistemic badge adapt to whichever it is, so the
-     reader is never misled about what the single hero number means. ---- */
-  let heroNum, heroLbl, heroEpi, heroNote;
+     reader is never misled about what the single hero number means.
+     heroCount = the integer to count up to (CRAFT: motion.js countUp), set ONLY when the
+     hero number is a whole-integer datum (years active). Star ratings are decimals/seed
+     placeholders, so they animate to their exact final string with no count-up — never a
+     misleading tick through fabricated values. ---- */
+  let heroNum, heroLbl, heroEpi, heroNote, heroCount = null;
   if (profScore != null) {
     heroNum = profScore; heroLbl = "community ★"; heroEpi = "directional";
     heroNote = (r.profile.count || 0) + " votes · seed";
@@ -80,7 +84,7 @@ function renderFacultyPage(id) {
     heroNote = "verified voting opens with accounts";
   } else if (years != null) {
     heroNum = years + "y"; heroLbl = "years active"; heroEpi = "directional";
-    heroNote = "community ★ opens with verified voting";
+    heroNote = "community ★ opens with verified voting"; heroCount = years;
   } else {
     heroNum = "—"; heroLbl = "community ★"; heroEpi = "directional";
     heroNote = "seed · verified voting opens with accounts";
@@ -95,7 +99,7 @@ function renderFacultyPage(id) {
           <div class="eh-tags">${subs.map(s => `<a class="echip is-link" role="link" tabindex="0" data-go-subject="${esc(s)}">${esc(s)}</a>`).join("")}</div>
         </div>
         <div class="eh-hero">
-          <span class="hero-num num">${esc(String(heroNum))}</span>
+          <span class="hero-num num"${heroCount != null ? ` data-count="${heroCount}"` : ""}>${esc(String(heroNum))}</span>
           <span class="hero-lbl">${esc(heroLbl)} ${epiBadge(heroEpi)}</span>
           <span class="hero-note muted small">${esc(heroNote)}</span>
         </div>
@@ -139,7 +143,7 @@ function renderFacultyPage(id) {
     const pid = a.platformId;
     if (pid && PLAT_BY_ID[pid]) return `<a class="echip plat is-link" role="link" tabindex="0" data-go-platform="${esc(pid)}" style="--c:${platColor(pid)}">${esc(platName(pid))}<span class="echip-st">${esc(a.status || "")}</span></a>`;
     const offName = pid ? platDisplayName(pid) : (a.name || "Independent");
-    return `<span class="echip off" title="Named in public sources; not yet integrated in Meridian">${esc(offName)}<span class="echip-st">${esc(a.status || "")}</span></span>`;
+    return `<span class="echip off" title="Named in public sources; not yet integrated in Calvetra">${esc(offName)}<span class="echip-st">${esc(a.status || "")}</span></span>`;
   }).join("");
   const links = panel({
     title: "Subjects taught · linked platforms",
@@ -169,7 +173,14 @@ function renderFacultyPage(id) {
     });
   }
 
+  /* CRAFT entrance: wrap each grid child in [data-reveal] so animateView()
+     (called by renderFacultyView after this render) gives panels a gentle,
+     staggered rise-in ONCE. Charts inside still expose .cframe.plate, so
+     chartIntro() finds + animates them independently (timeline rail draw +
+     node stagger, ratings star-meters). Reduced-motion firewall collapses
+     both to final state — every datum, label and source stays visible. */
+  const rv = html => `<div data-reveal>${html}</div>`;
   v.innerHTML = head + tiles
-    + `<div class="panel-grid">${timeline}${ratings}</div>`
-    + `<div class="inst-grid">${links}${videos}</div>`;
+    + `<div class="panel-grid">${rv(timeline)}${rv(ratings)}</div>`
+    + `<div class="inst-grid">${rv(links)}${videos ? rv(videos) : ""}</div>`;
 }

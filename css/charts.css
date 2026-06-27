@@ -88,3 +88,45 @@
   .ftl .ftl-item .ftl-body{display:flex;flex-direction:column}
   .ftl .ftl-item .ftl-subs{margin-top:6px}
 }
+
+/* ============================================================
+   SVG figures + chart-entrance hooks (CRAFT shared seam).
+   Entrance is ENTRANCE-ONLY: motion.js adds .is-in once on first visibility
+   (never on reflow / Store-toggle). All keyframes here are GPU
+   (transform/opacity/dashoffset) and collapse to final state under the
+   reduced-motion firewall in tokens.css. Final state IS the no-class default,
+   so charts are fully visible without JS / under reduced-motion.
+   ============================================================ */
+
+/* tabular figures inside SVG (the body tnum does NOT inherit into <text>) */
+.cf-plot text, svg text{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* ranked / comparison bars — grow from the left baseline ONCE (transform, not
+   width, so no layout thrash). Default = full size; .is-in plays the grow. */
+.cframe.plate.is-in .rb-bar,.cframe.plate.is-in .bar{
+  transform-origin:left center;
+  animation:bar-grow var(--d-4) var(--ease-rise) both;
+}
+@keyframes bar-grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* heatmap cells — stagger-fade in (left-to-right via --i set by motion.js, cap 12) */
+.cframe.plate.is-in .hm-cell{
+  animation:hm-in var(--d-3) var(--ease-rise) both;
+  animation-delay:calc(var(--i,0) * var(--stagger));
+}
+@keyframes hm-in{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+
+/* sparkline — draw-on via dashoffset, then the endpoint dot scales in */
+.cframe.plate.is-in .spk-line{
+  stroke-dasharray:1000;stroke-dashoffset:1000;
+  animation:spk-draw var(--d-4) var(--ease-rise) forwards;
+}
+@keyframes spk-draw{to{stroke-dashoffset:0}}
+.cframe.plate.is-in .spk-dot{
+  transform-box:fill-box;transform-origin:center;
+  animation:spk-dot var(--d-2) var(--ease-rise) var(--d-4) both;
+}
+@keyframes spk-dot{from{transform:scale(0)}to{transform:scale(1)}}
+
+/* tactile press on heatmap cells (transform-only; firewall → instant) */
+.hm-cell:active{transform:scale(.96)}

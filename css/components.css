@@ -33,9 +33,13 @@
 .tab.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);border-radius:2px}
 
 main{width:min(100% - 2rem,var(--container));margin:0 auto;padding:clamp(20px,3vw,34px) var(--pad) calc(60px + var(--botnav-h))}
-.view{display:none;animation:fade .4s ease}
+.view{display:none;animation:fade var(--d-3) var(--ease-rise)}
 .view.active{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+/* when the View Transitions API is driving the swap, the ::view-transition
+   pseudo-elements own the cross-fade — suppress the per-view keyframe to avoid
+   a double animation (calm, single motion). */
+@supports (view-transition-name:none){ .view{animation:none} }
 
 /* section headers */
 h2.section{font-family:var(--serif);font-size:19px;font-weight:500;margin:6px 0 18px;color:var(--ink)}
@@ -75,6 +79,28 @@ h2.section{font-family:var(--serif);font-size:19px;font-weight:500;margin:6px 0 
 .seg button.on{background:var(--ink);color:var(--paper)}
 .seg.marrow button.on{background:var(--marrow);color:#fff}
 .seg.cere button.on{background:var(--cere);color:#fff}
+/* ── canonical segmented SLIDING INDICATOR (system-wide: subject/qbank/tests/platform) ──
+   The .seg-ind pill is the single moving element; with .has-ind the active button's
+   background goes transparent so only the sliding plate reads (text flips to paper).
+   Position is seated by the shared placeSegInd() (ds.js §2.5c) via --seg-x + width.
+   Slides on the shared motion tokens; reduced-motion collapses it to an instant jump
+   (state stays full). A missing @property --seg-x degrades to an instant move. */
+.seg.has-ind{position:relative}
+.seg.has-ind .seg-ind{position:absolute;top:3px;bottom:3px;left:0;width:0;
+  transform:translateX(var(--seg-x,0px));background:var(--ink);border-radius:6px;
+  z-index:0;pointer-events:none;box-shadow:0 1px 2px rgba(35,32,27,.12);
+  transition:transform var(--d-2) var(--ease-rise),width var(--d-2) var(--ease-rise)}
+.seg.has-ind.marrow .seg-ind{background:var(--marrow)}
+.seg.has-ind.cere .seg-ind{background:var(--cere)}
+.seg.has-ind button{position:relative;z-index:1}
+/* the static .on background is suppressed so the slide is the ONLY moving fill;
+   only the text colour flips over the travelling plate. */
+.seg.has-ind button.on,.seg.has-ind.marrow button.on,.seg.has-ind.cere button.on{
+  background:transparent;color:var(--paper);transition:color var(--d-2) var(--ease-soft)}
+@media (prefers-reduced-motion:reduce){
+  .seg.has-ind .seg-ind{transition:none}
+  .seg.has-ind button.on{transition:none}
+}
 input.search,select.sel{background:var(--paper-2);border:1px solid var(--line-2);color:var(--ink);padding:9px 13px;border-radius:9px;font:400 13.5px var(--sans);outline:none}
 input.search{min-width:240px}
 input.search::placeholder{color:var(--ink-3)}
@@ -180,7 +206,11 @@ td.num,th.num{text-align:right}
 /* ---------- overhaul chrome: skip link, focus, key hint ---------- */
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:0 0 8px 0;z-index:100}
 .skip:focus{left:0}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+/* two-layer focus ring — reads on any ground (tokenized → evening remaps) */
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:4px;
+  box-shadow:0 0 0 4px var(--focus-halo)}
+/* inset variant for rounded containers where an outset halo would clip */
+.pal-item:focus-visible,.sheet-opt:focus-visible,.hm-cell:focus-visible{outline-offset:-2px;box-shadow:none}
 .tbtn.key{display:inline-flex;align-items:center;gap:6px}
 .tbtn.key span{font:600 10px var(--sans);background:var(--paper-3);border:1px solid var(--line-2);border-radius:5px;padding:1px 5px;color:var(--ink-2)}
 
@@ -726,4 +756,53 @@ a.lrow.is-link:hover{background:var(--paper-3)}
    Entity views + #view-overview carry container-type:inline-size, so this is container-scoped. */
 @container (min-width:760px){
   .tiles{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--gap)}
+}
+
+/* ============================================================
+   CRAFT — shared elevation primitives (additive; the reduced-motion firewall
+   in tokens.css collapses every animation/transition below to instant).
+   ============================================================ */
+
+/* ── View Transitions: calm editorial cross-fade + gentle rise (NOT the
+   browser's default slide). Feature-gated by the API's own presence. ── */
+::view-transition-old(root){animation:vt-out var(--d-3) var(--ease-soft) both}
+::view-transition-new(root){animation:vt-in  var(--d-3) var(--ease-rise) both}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* directional Back cue: new view enters from above, old exits downward */
+[data-vt-dir=back]::view-transition-new(root){animation:vt-in-back var(--d-3) var(--ease-rise) both}
+@keyframes vt-in-back{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* ── scroll-reveal entrance: gentle rise+fade ONCE (motion.js adds .in;
+   --i staggers panels, capped at 4). Content is never permanently hidden: the
+   hidden state is paired with a pure-CSS fail-safe that lands on the visible
+   final state, so even if reveal()/animateView() never runs (e.g. a surface
+   render throws after inserting [data-reveal] nodes but before its animateView
+   call, or motion.js fails to load) the panel still un-hides. The JS path adds
+   .in, which cancels the fallback and reveals immediately. ── */
+[data-reveal]{opacity:0;transform:translateY(8px);
+  transition:opacity var(--d-3) var(--ease-soft),transform var(--d-3) var(--ease-rise);
+  transition-delay:calc(var(--i,0) * var(--stagger));
+  /* CSS-only guardrail: if .in is never applied, force-reveal after a short
+     safety delay so content is never stuck invisible. forwards-fill holds the
+     visible end state. */
+  animation:reveal-failsafe 1ms linear 1200ms forwards}
+[data-reveal].in{opacity:1;transform:none;animation:none}
+@keyframes reveal-failsafe{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){ [data-reveal]{opacity:1;transform:none;animation:none} }
+
+/* ── custom scrollbars (token-driven → evening remaps automatically) ── */
+html{scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--line-2);border:3px solid var(--paper);border-radius:var(--r-pill)}
+::-webkit-scrollbar-thumb:hover{background:var(--ink-4)}
+::-webkit-scrollbar-track{background:transparent}
+.drawer-body,.sheet-body,.pal-list{scrollbar-width:thin}
+.drawer-body::-webkit-scrollbar,.sheet-body::-webkit-scrollbar,.pal-list::-webkit-scrollbar{width:8px}
+
+/* ── tactile letterpress on :active (transform-only, GPU; firewall → instant) ── */
+.tile.is-link:active,.lrow.is-link:active,.chip:active,.echip:active,
+.seg button:active,.tbtn:active,.botnav button:active,.sheet-opt:active,
+.qmark:active,.pinstar:active{
+  transform:scale(.985); transition:transform var(--d-1) var(--ease-rise);
 }

@@ -8,9 +8,12 @@
 .qb-side-top{display:flex;flex-direction:column;gap:8px}
 .sel.mini{padding:6px 9px;font-size:12px}
 .sb-list{overflow-y:auto;display:flex;flex-direction:column;gap:3px;padding-right:3px;min-height:0}
-.sb-item{text-align:left;background:transparent;border:1px solid transparent;border-radius:9px;padding:9px 11px;cursor:pointer;transition:.12s;width:100%}
+.sb-item{text-align:left;background:transparent;border:1px solid transparent;border-radius:9px;padding:9px 11px;cursor:pointer;width:100%;
+  transition:background var(--d-2) var(--ease-soft),border-color var(--d-2) var(--ease-soft),box-shadow var(--d-2) var(--ease-soft)}
 .sb-item:hover{background:var(--paper-2);border-color:var(--line)}
-.sb-item.on{background:var(--paper-2);border-color:var(--line-2)}
+/* selected subject: a faint warm letterpress imprint (inset hairline + marrow spine) so the
+   active rail item reads pressed-into-paper, not just tinted. */
+.sb-item.on{background:var(--paper-2);border-color:var(--line-2);box-shadow:inset 2px 0 0 var(--marrow),inset 0 0 0 1px color-mix(in srgb,var(--line-2) 60%,transparent)}
 .sb-item.on .sb-name{color:var(--ink);font-weight:600}
 .sb-row1{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .sb-name{font-size:13px;color:var(--ink-2);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -19,7 +22,7 @@
 .sb-mcq,.sb-match{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .meter{display:inline-flex;align-items:center;gap:6px;flex:1}
 .meter-bar{flex:1;height:4px;border-radius:3px;background:var(--paper-3);overflow:hidden;border:1px solid var(--line);min-width:40px}
-.meter-bar i{display:block;height:100%;background:var(--marrow);border-radius:3px;transition:width .4s}
+.meter-bar i{display:block;height:100%;background:var(--marrow);border-radius:3px}
 .meter-txt{font-size:10.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
 
 .qb-main{min-width:0}
@@ -44,8 +47,8 @@
 .sh-progress{margin-top:14px}
 .sh-heat{margin-top:14px}
 .bigmeter .bm-bar{position:relative;height:9px;border-radius:5px;background:var(--paper-3);overflow:hidden;border:1px solid var(--line)}
-.bigmeter .bm-bar i{position:absolute;left:0;top:0;height:100%;background:var(--marrow);border-radius:5px;transition:width .4s}
-.bigmeter .bm-bar b{position:absolute;left:0;top:0;height:100%;background:var(--core);opacity:.75;border-radius:5px;transition:width .4s}
+.bigmeter .bm-bar i{position:absolute;left:0;top:0;height:100%;background:var(--marrow);border-radius:5px}
+.bigmeter .bm-bar b{position:absolute;left:0;top:0;height:100%;background:var(--core);opacity:.75;border-radius:5px}
 .bm-key{display:flex;gap:16px;margin-top:7px;font-size:11px;color:var(--ink-3)}
 .bm-key i.k{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:5px;vertical-align:0}
 .bm-key i.k.a{background:var(--marrow)} .bm-key i.k.r{background:var(--core)} .bm-key i.k.t{background:var(--rt)}
@@ -53,9 +56,9 @@
 /* tree / category blocks */
 .tree{display:flex;flex-direction:column;gap:8px}
 .cat-block{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--paper-2)}
-.cat-head{display:grid;grid-template-columns:18px 1fr auto auto auto auto;gap:12px;align-items:center;padding:12px 16px;cursor:pointer;transition:background .12s}
+.cat-head{display:grid;grid-template-columns:18px 1fr auto auto auto auto;gap:12px;align-items:center;padding:12px 16px;cursor:pointer;transition:background var(--d-2) var(--ease-soft)}
 .cat-head:hover{background:var(--paper-3)}
-.cat-head .chev{color:var(--ink-3);font-size:10px;transition:.2s}
+.cat-head .chev{color:var(--ink-3);font-size:10px;transition:transform var(--d-2) var(--ease-rise)}
 .cat-block.open .chev{transform:rotate(90deg)}
 .cat-name{font-weight:600;font-size:13.5px;color:var(--ink);letter-spacing:.01em}
 .cat-hy{font-size:11px;color:var(--gold);font-weight:700;white-space:nowrap}
@@ -94,26 +97,43 @@
 .cpip{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink-4);background:transparent;box-sizing:border-box}
 .cmark-glyph{font-size:13px;line-height:1}
 
-/* ---- subject × platform heatmap — hero relational viz. Shared chart class, scoped here
-   until charts.css ships it (see return note). Sized to column COUNT → never page-scrolls ---- */
+/* ---- subject × platform heatmap — hero relational viz (CANONICAL shared body).
+   This unscoped .heatmap/.hm-* block is the ONE heatmap vocabulary the whole app
+   inherits (qbank, overview, subject entity, progress). It loads after components
+   but ahead of the surface css, so it acts as the shared canonical version the
+   spec §3 ordered (charts.css holds only the entrance keyframes). Look = the flat
+   yield-ramp variant: hairline-disciplined, NO heavy material lift — true to the
+   almanac ethos (hairline + faint warm shadow, never a card). Cell data ground is
+   the inline yieldFill(t) from ds.js; the CSS ground here is the no-data fallback.
+   Sized to column COUNT → never page-scrolls. ---- */
 .heatmap{display:flex;flex-direction:column;gap:3px;width:100%}
 .hm-row{display:grid;gap:3px;align-items:stretch}
-.hm-head .hm-corner{}
+.hm-head .hm-corner{display:block}
 .hm-col{font-size:var(--t-label);text-transform:uppercase;letter-spacing:.06em;font-weight:700;
   text-align:center;align-self:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hm-rl{font-size:var(--t-row);color:var(--ink);align-self:center;overflow:hidden;
   text-overflow:ellipsis;white-space:nowrap;font-weight:500}
-a.hm-rl.is-link{cursor:pointer;text-decoration:none}
+a.hm-rl.is-link{cursor:pointer;text-decoration:none;border-radius:3px}
 a.hm-rl.is-link:hover{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
-.hm-cell{min-height:38px;border:1px solid var(--line);border-radius:6px;background:var(--paper-3);
+a.hm-rl.is-link:focus-visible{outline:2px solid color-mix(in srgb,var(--accent) 60%,transparent);outline-offset:2px}
+.hm-cell{position:relative;min-height:30px;border:none;border-radius:3px;background:var(--y0);
   cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;
-  font:600 12.5px var(--sans);font-variant-numeric:tabular-nums;color:var(--ink-2);transition:.12s}
-.hm-cell:hover{box-shadow:var(--e2)}
-.hm-cell.empty{cursor:default;background:var(--paper-3);border-style:dashed;color:var(--ink-4)}
-.hm-cell.empty:hover{box-shadow:none}
-.hm-cell.ring{outline:2px solid var(--con-two);outline-offset:-2px}
-.hm-v{pointer-events:none}
-.hm-dot{width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.85}
+  font-size:var(--t-meta);font-weight:600;
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;color:var(--y-ink-lo);
+  transition:filter var(--d-2) var(--ease-soft),transform var(--d-1) var(--ease-rise)}
+/* quiet hover lift — canonical brightness, no box-shadow card, no border-color shift */
+.hm-cell:not(.empty):hover{filter:brightness(.95)}
+.hm-cell.empty{cursor:default;background:transparent;border:1px solid var(--line);color:var(--ink-4)}
+.hm-cell.empty:hover{filter:none}
+/* directional "community-strongest" gold ring — inset so it survives any cell ground */
+.hm-cell.ring{box-shadow:inset 0 0 0 2px var(--con-two)}
+/* keyboard focus: inset two-step warm ring that sits above the gold ring without obscuring it */
+.hm-cell:focus-visible{outline:none;
+  box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px color-mix(in srgb,var(--accent) 70%,transparent)}
+.hm-cell.ring:focus-visible{box-shadow:inset 0 0 0 2px var(--con-two),
+  inset 0 0 0 4px var(--paper),inset 0 0 0 5px color-mix(in srgb,var(--accent) 70%,transparent)}
+.hm-v{pointer-events:none;line-height:1}
+.hm-dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85}
 .cf-key .lg-ring{display:inline-block;width:11px;height:11px;border-radius:50%;
   border:2px solid var(--con-two);box-sizing:border-box}
 
@@ -122,6 +142,75 @@ a.hm-rl.is-link:hover{color:var(--accent);text-decoration:underline;text-underli
 .mrow.flash{scroll-margin-top:calc(var(--hh) + 80px)}
 button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-height:1}
 .leaf-link{border-radius:4px}
+
+/* ============================================================
+   CRAFT ELEVATION (additive) — entrance grow, chip imprint, refined
+   states, elevated empty. All GPU (transform/opacity); all collapse to
+   final state under the prefers-reduced-motion firewall in tokens.css
+   (which zeroes animation/transition durations). Every datum keeps its
+   label + source; motion never hides text.
+   ============================================================ */
+
+/* meter + bigMeter fills GROW from the left ONCE on entrance (scaleX, GPU — the
+   inline width:X% set by ds.js stays the FINAL size). Keyed to the shared reveal
+   .in class on the [data-reveal] hero / cat-block, so it plays once on entrance.
+
+   CRITICAL (spec §2 — animate once, never on reflow): syncAfterToggle() (qbank.js)
+   replaces the INNER markup of the PERSISTENT containers .sh-progress and .cat-meter
+   on every A/R/Rt chip tap (bm.innerHTML = bigMeter / m.innerHTML = meterHTML). The
+   ancestor .subj-hero / .cat-block keeps .in, so if this animation were keyed to the
+   freshly-inserted fills (.bm-bar i/b, .meter-bar i) it would replay scaleX(0)->1
+   from baseline on EVERY toggle. To make the grow play ONCE on entrance and NEVER
+   on a chip re-render — using CSS only (no JS hook to strip a carrier class) — the
+   animation is keyed to the PERSISTENT container node itself (.sh-progress /
+   .cat-meter), which keeps its identity across innerHTML swaps. A CSS animation does
+   not restart when only a node's descendants are replaced, so the toggle snaps
+   instantly with no re-grow. Sidebar meters live outside a reveal container → they
+   simply snap (correct for live updates). */
+.subj-hero[data-reveal].in .sh-progress,
+.cat-block[data-reveal].in .cat-meter{
+  transform-origin:left center;
+  animation:qb-grow var(--d-4) var(--ease-rise) both;
+}
+@keyframes qb-grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* off→on confirm pulse on tracking chips / pin (class added by wireChipImprint at
+   the MOMENT of change only). A quiet letterpress: scale down then settle, with a
+   brief inset ring. Reduced-motion → JS skips the class AND the firewall zeroes it;
+   state stays fully conveyed by color + aria-pressed. */
+.chips .chip.just-on,.pinstar.just-on{animation:qb-imprint 340ms var(--ease-rise) both}
+@keyframes qb-imprint{
+  0%{transform:scale(1)}
+  42%{transform:scale(.9)}
+  100%{transform:scale(1)}
+}
+
+/* refined hover/focus on the rail item + leaf link + cross-cov chip — quiet, token-driven */
+.sb-item:focus-visible{outline-offset:-2px}
+.xcov{transition:border-color var(--d-2) var(--ease-soft),box-shadow var(--d-2) var(--ease-soft)}
+.xcov:hover{box-shadow:var(--e1)}
+/* editorial underline-grow on the subject-page link (draws in on hover, paper-soft) */
+.sh-name .sh-link{
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2) var(--ease-soft),color var(--d-2) var(--ease-soft)}
+.sh-name .sh-link:hover{background-size:100% 1px;text-decoration:none}
+
+/* lining-tabular serif numerals on the ONE hero numeral (optical figure rhythm) */
+.sh-tiles .tile.is-hero .tile-v{font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+
+/* ELEVATED EMPTY — "a plate awaiting its engraving" (the shared emptyState()
+   primitive is not yet in ds.js; this is the surface-local equivalent). Engraved
+   hairline on plate ground + inner plate-mark rule + monochrome quill mark
+   (stroke-only, NEVER color → firewall-neutral) + serif title. */
+.qb-empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;
+  padding:34px 24px;border:1px solid var(--line);border-radius:14px;
+  background:var(--plate,var(--paper-2));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--plate-edge) 45%,transparent);
+  max-width:62ch;margin-inline:auto}
+.qbe-mark{color:var(--line-2);margin-bottom:2px}
+.qbe-title{font-family:var(--serif);font-size:var(--t-panel);font-weight:500;color:var(--ink);text-wrap:balance}
+.qbe-body{font-size:var(--t-meta);color:var(--ink-3);line-height:1.5;max-width:46ch;text-wrap:pretty}
+.qbe-cta{margin-top:6px}
 
 /* tablet band only (641–840): single column + vertical sidebar list.
    Gated >640 so it never clobbers the mobile chip-strip below (≤640). */
@@ -170,8 +259,9 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
   .qb-content .lrow-trail .rmcq{order:3;min-width:42px;font-size:13px}
   .qb-content .lrow-trail .chips{gap:7px}
   .qb-content .lrow .chip{width:46px;height:44px;border-radius:9px;font-size:14px}
-  /* heatmap: 3 fixed cols sized to count → never page-scrolls; tighter label gutter */
+  /* heatmap: 3 fixed cols sized to count → never page-scrolls; tighter label gutter.
+     Taller cell for a ≥44px tap target; radius stays on the canonical flat scale. */
   .hm-row{grid-template-columns:74px 1fr 1fr 1fr !important;gap:4px}
-  .hm-cell{min-height:44px;border-radius:7px}
+  .hm-cell{min-height:44px;border-radius:4px}
   .hm-rl{font-size:var(--t-meta)}
 }

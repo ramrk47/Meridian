@@ -1,4 +1,4 @@
-# Meridian — Cross-platform exam almanac
+# Calvetra — Cross-platform exam almanac
 
 A local-first **tracking + review hub** across Marrow, Cerebellum, and CoreBTR — an
 "IMDB of medical exams" for NEET PG / INI-CET aspirants. Built from data extracted from each
@@ -6,7 +6,7 @@ platform (captured 26 Jun 2026). Runs offline; deploys to a subdomain when you w
 
 > **Design:** a warm editorial "almanac" — paper + ink, a serif display face, hairline rules and
 > muted clinical colours instead of neon. Calm and considered for long study sessions; an
-> **evening edition** dark theme for late nights. *"Meridian" is a placeholder name (serif "M"
+> **evening edition** dark theme for late nights. *"Calvetra" is a working name (serif "C"
 > monogram, top-left) — rename it freely in `index.html`, e.g. as a NotAloneStudios sub-brand.*
 
 ## Open it

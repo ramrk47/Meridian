@@ -4,11 +4,16 @@ Everything stays **global scope** — no `import`/`export`, no `type="module"`. 
 defined in **exactly one** module. Load order (index.html + sw.js SHELL) is dependency-correct:
 
 ```
-data.js → storage.js → js/core.js → js/ds.js →
+data.js → storage.js → js/core.js → js/ds.js → js/motion.js →
   js/surfaces/{overview,qbank,progress,tests,hy,videos,planner}.js →
   js/entities/{subject,platform,faculty}.js →
   js/main.js   (loads LAST; calls Store.load().then(init))
 ```
+
+`js/motion.js` (CRAFT shared seam) loads AFTER ds.js, BEFORE the surfaces — it
+depends on `MOTION_OK`/`VT_OK`/`fmt` (core.js) and is consumed by surfaces + main.
+Globals: `observeOnce`, `viewTransition`, `reveal`, `countUp`, `chartIntro`,
+`animateView`. All reduced-motion + feature-detect guarded; all idempotent.
 
 CSS load order: `css/tokens.css → css/components.css → css/charts.css → css/<surface>.css`
 (base rules first, mobile media layer lives at the bottom of components.css to preserve cascade).

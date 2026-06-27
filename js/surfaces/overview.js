@@ -10,6 +10,7 @@
    "show all" toggle (mirrors Progress's 16-row cap + the spec's ≤360px collapse). */
 let OV_HEAT_ALL = false;
 const OV_HEAT_CAP = 14;
+let OV_ENTERED = false;   // entrance plays once per session; self re-renders settle to final state
 
 function renderOverview() {
   resetPlates();                                  // each surface starts at Pl. 1
@@ -30,9 +31,13 @@ function renderOverview() {
      Tiles route to entities where they map to one (the relational hook).
      ============================================================ */
   const deck = el("div", "ov-deck tiles");
+  deck.dataset.reveal = "";                         // panels/decks rise+fade once on entrance
   deck.innerHTML =
+    // hero numeral carries data-count so the shared countUp() animates it ONCE
+    // (reduced-motion-safe — the final fmt() string stays the rendered text).
     statTile({ value: fmt(QBANK_MCQ), label: `MCQs · ${QBANKS.length} BANKS`,
-      note: QBANKS.map(p => p.name).join(" + "), accent: "g", epi: "measured", hero: true }) +
+      note: QBANKS.map(p => p.name).join(" + "), accent: "g", epi: "measured", hero: true })
+      .replace('<span class="tile-v num">', `<span class="tile-v num" data-count="${QBANK_MCQ}">`) +
     statTile({ value: `${pct(att, allModuleIds.length)}%`, label: "Attempted",
       note: `${fmt(att)} of ${fmt(allModuleIds.length)} topics`, accent: "m", epi: "measured" }) +
     statTile({ value: fmt(rev), label: "Reviewed",
@@ -50,6 +55,7 @@ function renderOverview() {
      Preserves tracking wiring: data-open-leaf (drawer) + data-quick-a (toggle).
      ============================================================ */
   const grid = el("div", "inst-grid");
+  grid.dataset.reveal = "";                          // do-next pair rises once on entrance
 
   // continue where you left off — most recently tracked modules (local)
   const recent = Object.entries(Store.state.progress)
@@ -62,7 +68,7 @@ function renderOverview() {
         sub: `${esc(l.canon)} · ${esc(platName(l.platform))}`,
         trail: statusDots(l.id),
       })))
-    : `<div class="empty">No modules tracked yet. Open the <b>QBank Tracker</b> and tick a few — your trail shows up here.</div>`;
+    : ovEmptyTrail();
   grid.appendChild(el("div", "", panel({
     title: "Continue where you left off",
     body: contBody,
@@ -153,6 +159,7 @@ function renderOverview() {
      §4  CONSENSUS + RELIABILITY — judgment band (two panels desktop).
      ============================================================ */
   const band = el("div", "panel-grid");
+  band.dataset.reveal = "";                           // judgment band rises once on entrance
 
   // consensus: how many of the 3 integrated platforms flag a subject top-density (proxy)
   const consensus = subjectsRanked.map(c => {
@@ -191,15 +198,61 @@ function renderOverview() {
       body: ratingScorecard(CUR.reliability.apps, "reliability") +
         (CUR.reliability.note ? `<div class="ph-sub" style="margin-top:8px">${esc(CUR.reliability.note)}</div>` : ""),
     }).replace(epiBadge(CUR.reliability.epistemic) + '</h3>',
-      epiBadge(CUR.reliability.epistemic) + `</h3><span class="ph-sub">third-party stars + recurring complaints · captured ${esc(CUR.reliability.captured)} — reliability signal, not content quality, not a Meridian score</span>`)));
+      epiBadge(CUR.reliability.epistemic) + `</h3><span class="ph-sub">third-party stars + recurring complaints · captured ${esc(CUR.reliability.captured)} — reliability signal, not content quality, not a Calvetra score</span>`)));
   }
   v.appendChild(band);
 
   /* ============================================================
      §5  CURATED JUDGMENT TABLES + METHODOLOGY (reachable "How we rate")
      ============================================================ */
-  const sub = renderSubjectStrength(); if (sub) v.appendChild(sub);
-  v.appendChild(renderMethodology());
+  const sub = renderSubjectStrength(); if (sub) { sub.dataset.reveal = ""; v.appendChild(sub); }
+  const method = renderMethodology(); method.dataset.reveal = ""; v.appendChild(method);
+
+  // empty-trail CTA → jump to the QBank tracker (self-contained, like the heat toggle;
+  // no shared-handler dependency). Only present when the trail is empty.
+  v.querySelector("[data-ov-start-trail]")?.addEventListener("click", () => show("qbank"));
+
+  // Entrance wiring. show() calls animateView() centrally on TAB switches, but this
+  // surface ALSO re-renders itself (heat toggle, quick-add) which rebuilds innerHTML —
+  // on those paths animateView never runs, so fresh [data-reveal] panels would be
+  // stuck at opacity:0. Play the entrance ONCE per session (first paint); thereafter
+  // settle the rebuilt nodes straight to final state (no replay on a chip/toggle tap,
+  // honoring the "charts animate once, never on reflow" contract). animateView is a
+  // no-op under reduced-motion (CSS firewall paints final state regardless).
+  if (!OV_ENTERED && typeof animateView === "function") { animateView(v); OV_ENTERED = true; }
+  else {
+    v.querySelectorAll("[data-reveal]").forEach(e => { e.classList.add("in"); e.dataset.revealDone = "1"; });
+    v.querySelectorAll(".cframe.plate").forEach(c => { c.classList.add("is-in"); c.dataset.introDone = "1"; });
+    const hero = v.querySelector(".tile.is-hero .tile-v[data-count]");
+    if (hero) hero.dataset.countDone = "1";
+  }
+}
+
+/* ---- richer empty state for "Continue where you left off" ----
+   Spec: a plate awaiting its engraving, not a missing thing. Quill mark + serif
+   title + CTA into the tracker, plus an HONEST ghost-preview of the REAL top-density
+   topics (opacity .4, clearly labelled "preview") — NO fabricated tracking state,
+   neutrality firewall intact. Reduced-motion-safe (pure CSS, no JS animation). */
+function ovEmptyTrail() {
+  // real top-density topics the aspirant could start with (proxy for exam weight) —
+  // shown as inert preview rows, never as if they were already tracked.
+  const seed = LEAVES.filter(l => l.priority === 3)
+    .sort((a, b) => b.hyScore - a.hyScore).slice(0, 3);
+  const quill = `<svg class="es-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" `
+    + `fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">`
+    + `<path d="M20 4c-3 .5-7 2.5-10 6S5.5 17 5 20"/><path d="M20 4c.4 4-1 8-4 10s-7 2.4-9 1"/>`
+    + `<path d="M5 20l3-3"/></svg>`;
+  const ghost = seed.length
+    ? `<div class="es-preview" aria-hidden="true">`
+      + `<span class="es-preview-lbl">preview · top-density topics</span>`
+      + seed.map(l => `<span class="es-ghost"><i class="es-ghost-dot"></i>${esc(l.name)}</span>`).join("")
+      + `</div>`
+    : "";
+  return `<div class="empty es-trail">${quill}`
+    + `<div class="es-title">Your trail starts here</div>`
+    + `<div class="es-body">Open the QBank tracker and tick a few topics — your most recently touched modules show up here, on this device.</div>`
+    + `<button class="linkbtn es-cta" type="button" data-ov-start-trail>Start in the QBank tracker →</button>`
+    + ghost + `</div>`;
 }
 
 /* ---- best-platform-per-subject (community reputation, directional) ---- */
@@ -217,7 +270,7 @@ function renderSubjectStrength() {
     captured: s.captured,
     body: groupList(rows),
   }).replace(epiBadge(s.epistemic) + '</h3>',
-    epiBadge(s.epistemic) + '</h3><span class="ph-sub">which platform aspirants most often call strongest — reputation only, never Meridian\'s verdict</span>'));
+    epiBadge(s.epistemic) + '</h3><span class="ph-sub">which platform aspirants most often call strongest — reputation only, never Calvetra\'s verdict</span>'));
 }
 
 /* renderReliability kept for back-compat callers; Overview now uses the inline scorecard. */
@@ -237,7 +290,7 @@ function renderMethodology() {
   const p = el("section", "panel howrate");
   p.id = "howrate";
   p.innerHTML = `<div class="ph"><div class="ph-l"><h3>How we rate · sources</h3>
-    <span class="ph-sub">every figure in Meridian is labelled by how much we actually know — counts, proxy, community reputation, or public data</span></div></div>`;
+    <span class="ph-sub">every figure in Calvetra is labelled by how much we actually know — counts, proxy, community reputation, or public data</span></div></div>`;
   if (m?.labels?.length) {
     const defs = el("div", "epi-defs");
     defs.innerHTML = m.labels.map(l => `<div class="epi-def"><span class="epi ${l.tag}">${esc(l.name)}</span><span class="epi-d">${esc(l.desc)}</span></div>`).join("");

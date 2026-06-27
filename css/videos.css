@@ -77,3 +77,67 @@
   .vmeta{gap:4px}
   /* toggle chips reach 44px via shared `.vrow .chip` rule in components.css */
 }
+
+/* ============================================================
+   CRAFT ELEVATION (additive) — entrance, refined states, empties.
+   All motion is transform/opacity only, entrance-only, and collapses to
+   the final state under the reduced-motion firewall (tokens.css). Tokens
+   only — no one-off colors. Every datum keeps its epistemic label + source.
+   ============================================================ */
+
+/* ── 2-up band: faculty-of-record rollup (left) + tracking callout (right).
+     Collapses to one column via shared .panel-grid media at narrow widths. ── */
+.vid-band{margin-bottom:var(--sp-4);align-items:start}
+.vid-band .vid-facroll,.vid-band .vid-callout-cell{margin-bottom:0;min-width:0}
+.vid-callout-cell{display:flex}
+.vid-callout{margin:0;flex:1;align-self:stretch;
+  max-width:62ch;text-wrap:pretty}        /* measure cap + nicer rag (progressive) */
+
+/* ── faculty rollup bars: GPU scaleX grow from the left baseline, ONCE on the
+     plate's entrance (.is-in set by motion.js), staggered per row. Reuses the
+     shared `bar-grow` keyframe from charts.css; never re-grows on reflow. ── */
+.cframe.plate.is-in .vfr-bar{
+  transform-origin:left center;
+  animation:bar-grow var(--d-4) var(--ease-rise) both;
+}
+.vfr-list .vfr-row:nth-child(2) .vfr-bar{animation-delay:var(--stagger)}
+.vfr-list .vfr-row:nth-child(3) .vfr-bar{animation-delay:calc(var(--stagger)*2)}
+.vfr-list .vfr-row:nth-child(4) .vfr-bar{animation-delay:calc(var(--stagger)*3)}
+.vfr-list .vfr-row:nth-child(n+5) .vfr-bar{animation-delay:calc(var(--stagger)*4)}
+
+/* ── refined interaction states — quiet, paper-soft, token-driven ── */
+.vfr-row.is-link{transition:background var(--d-2) var(--ease-soft)}
+.vfr-row.is-link:active,.vrow:active{transform:scale(.992);
+  transition:transform var(--d-1) var(--ease-rise)}     /* tactile letterpress */
+.vrow{transition:background var(--d-2) var(--ease-soft),opacity var(--d-2) var(--ease-soft)}
+/* editorial underline-grow on the faculty name (draw in on hover, not a hard line) */
+.vfr-name{background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2) var(--ease-soft),color var(--d-2) var(--ease-soft)}
+.vfr-row.is-link:hover .vfr-name{color:var(--accent);text-decoration:none;background-size:100% 1px}
+.vtopic{background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2) var(--ease-soft),color var(--d-2) var(--ease-soft)}
+.vtopic:hover{color:var(--accent);text-decoration:none;background-size:100% 1px}
+/* the row's tracking chips press in too (transform-only; firewall → instant) */
+.vrow .chip:active,.vchips.big .chip:active{transform:scale(.96)}
+
+/* ── empty / forthcoming plate — "a plate awaiting its engraving" ── */
+.vid-empty{margin-top:var(--sp-3)}
+.vid-emptyblock{display:flex;flex-direction:column;align-items:center;text-align:center;
+  gap:8px;padding:34px 20px;background:var(--plate,var(--paper-2));
+  border-radius:var(--r-2,12px);
+  box-shadow:inset 0 0 0 1px var(--line);        /* engraved hairline plate-mark */
+  max-width:46ch;margin-inline:auto}
+.vid-emptyblock.is-compact{padding:22px 16px;background:transparent;box-shadow:none;max-width:54ch}
+/* win over the shared `.cf-plot svg{width:100%}` for the in-plate ledger mark */
+.vid-emptyblock .ve-mark,.cf-plot .ve-mark{color:var(--line-2);opacity:.85;width:30px;height:30px;flex:none}
+.ve-title{font-family:var(--serif);font-weight:500;font-size:var(--t-panel);color:var(--ink-2);
+  font-variant-caps:normal;text-wrap:balance}
+.ve-body{font-size:var(--t-meta);color:var(--ink-3);line-height:var(--lh-body,1.55);
+  max-width:48ch;text-wrap:pretty}
+
+@media (prefers-reduced-motion:reduce){
+  .cframe.plate.is-in .vfr-bar{animation:none}
+  .vfr-row.is-link:active,.vrow:active,.vrow .chip:active,.vchips.big .chip:active{transform:none}
+}

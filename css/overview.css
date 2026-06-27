@@ -15,15 +15,56 @@
 #view-overview .panel-grid{margin-bottom:20px}
 #view-overview .cframe.plate{margin-bottom:20px}
 
-/* panel subtitle (injected under the h3) — shared .panel has no subtitle slot */
-.ph-sub{display:block;font-size:var(--t-meta);color:var(--ink-3);line-height:1.4;margin-top:2px}
+/* hero numeral — lining + tabular serif figures so the count-up tweens on a
+   fixed grid (no horizontal jitter as digits change width during animation) */
+#view-overview .tile.is-hero .tile-v{
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1}
+
+/* panel subtitle (injected under the h3) — shared .panel has no subtitle slot.
+   measure-capped + balanced so the editorial sub-line never runs the full width */
+.ph-sub{display:block;font-size:var(--t-meta);color:var(--ink-3);line-height:1.45;
+  margin-top:2px;max-width:58ch;text-wrap:pretty}
+
+/* DO-NEXT pair: panels are equal-height columns so the curated source colophon /
+   subtitle pins to the bottom and the shorter "Continue" column bottom-aligns
+   with "Next moves" (desktop balance; mobile single-col stack is unaffected). */
+#view-overview .inst-grid{align-items:start;grid-auto-rows:1fr}
+#view-overview .inst-grid>div{display:flex;flex-direction:column}
+#view-overview .inst-grid>div>.panel{flex:1;display:flex;flex-direction:column}
+#view-overview .inst-grid>div>.panel>.panel-body{flex:1}
 
 /* quick-add (+) button in the next-best-moves trail — desktop size;
    shared mobile layer upsizes .qmark to 44px for tap targets */
 .qmark{width:30px;height:30px;border-radius:var(--r-1);border:1px solid var(--line-2);
   background:var(--paper);color:var(--accent);font-weight:700;cursor:pointer;line-height:1;
-  display:inline-flex;align-items:center;justify-content:center;font-size:16px}
+  display:inline-flex;align-items:center;justify-content:center;font-size:16px;
+  transition:background var(--d-2) var(--ease-soft),color var(--d-2) var(--ease-soft),
+    border-color var(--d-2) var(--ease-soft),transform var(--d-1) var(--ease-rise)}
 .qmark:hover{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.qmark:active{transform:scale(.92)}        /* quiet letterpress (GPU; RM firewall collapses it) */
+
+/* ── richer empty state for "Continue where you left off" ──────────────────
+   A plate awaiting its engraving (not a missing thing): the engraved hairline +
+   inner plate-mark rule, a stroke-only quill mark, serif title, measured body,
+   a CTA, and an HONEST ghost-preview of REAL top-density topics (NO fabricated
+   tracking state — neutrality firewall). Pure CSS; reduced-motion-safe. */
+.es-trail{border-style:solid;border-color:var(--plate-edge);background:var(--plate);
+  box-shadow:var(--e1-plate),inset 0 0 0 1px var(--plate-edge);
+  padding:26px 22px 22px;text-align:center;border-radius:12px}
+.es-mark{color:var(--line-2);margin-bottom:10px;display:inline-block}
+.es-title{font-family:var(--serif);font-size:var(--t-panel);font-weight:500;color:var(--ink);
+  letter-spacing:.1px;line-height:1.2;text-wrap:balance}
+.es-body{font-size:var(--t-meta);color:var(--ink-3);line-height:1.5;margin:6px auto 0;
+  max-width:46ch;text-wrap:pretty}
+.es-cta{margin-top:12px;display:inline-block}
+.es-preview{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);
+  display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left}
+.es-preview-lbl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-4);font-weight:600;margin-bottom:2px}
+.es-ghost{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-3);
+  opacity:.4;line-height:1.35}                /* inert preview — clearly de-emphasised */
+.es-ghost-dot{width:7px;height:7px;border-radius:2px;background:var(--line-2);flex:none}
 
 /* status dots (a/r/t) used by the shared statusDots() helper — CSS still lives here */
 .sdots{display:inline-flex;gap:3px;vertical-align:1px}

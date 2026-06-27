@@ -31,6 +31,36 @@ function subjectAccuracy() {
 }
 let testPlat = "all";
 
+/* Typeset figures — true minus (U+2212) + hair-space before the unit so deltas
+   read as engraved metrics, not ASCII. Local to this surface until the shared
+   fmtPct/fmtDelta land in core.js (see return note). Reduced-motion-agnostic
+   (pure string formatting, never animated). */
+const _HAIR = " ";                                   // hair space
+function fmtPctT(n) { return (n == null ? "—" : Math.round(n) + _HAIR + "%"); }
+function fmtDeltaT(n) {                                    // signed, true minus, hair-space unit
+  if (n == null) return "—";
+  const neg = n < 0, mag = Math.abs(Math.round(n));
+  return (neg ? "−" : "+") + mag + _HAIR + "pts";
+}
+
+/* Zero-state accuracy gauge — a calibrated-but-empty axis (baseline + 0/100 ticks
+   + dotted "awaiting data" midline + CTA), NOT a dashed broken box. Reads as a
+   gauge that has been ruled and is waiting for its first reading. Pure SVG; the
+   firewall leaves it fully visible (no entrance dependency). */
+function emptyAccuracyAxis() {
+  const W = 560, H = 96, pad = 6, mid = H / 2;
+  return `<svg class="spark spark-empty" viewBox="0 0 ${W} ${H}" role="img" `
+    + `aria-label="Accuracy gauge — calibrated, awaiting your first scored mock (measured, this device)" `
+    + `preserveAspectRatio="none">`
+    + `<line class="spk-base" x1="0" y1="${H - pad}" x2="${W}" y2="${H - pad}"/>`
+    + `<line class="spk-base" x1="0" y1="${pad}" x2="${W}" y2="${pad}"/>`
+    + `<line class="spk-wait" x1="${pad}" y1="${mid}" x2="${W - pad}" y2="${mid}"/>`
+    + `<text class="spk-tick" x="2" y="${pad + 8}">100</text>`
+    + `<text class="spk-tick" x="2" y="${H - pad - 2}">0</text>`
+    + `<text class="spk-cap" x="${W / 2}" y="${mid - 6}" text-anchor="middle">awaiting your first scored mock</text>`
+    + `</svg>`;
+}
+
 /* YOUR accuracy across scored tests, in test-hub order (a real measured series, not fabricated dates).
    Broad/full tests only (GT/Integrated/INICET) so the trend reads as overall-mock momentum. */
 function scoreSeries() {
@@ -72,31 +102,76 @@ function renderTests() {
     statTile({ accent: "c", value: cereTotal, label: "Cerebellum GT archive", note: "2023–26, public schedule", epi: "public-3p" })
   ].join("");
   v.appendChild(tiles);
+  // count-up the ONE hero numeral (overall accuracy). data-count = raw int; the
+  // displayed text keeps its "%" suffix — motion.js preserves the final string and
+  // is reduced-motion / no-IO safe (no-op → final state). Only when there's data.
+  if (totQ) {
+    const heroV = $(".tile.is-hero .tile-v", tiles);
+    if (heroV) heroV.dataset.count = String(pct(totR, totQ));
+  }
 
-  /* ── Relational viz: YOUR accuracy trend across scored mocks (measured, local) ── */
-  const trend = el("div", "");
+  /* ── Relational viz band (desktop two-up): accuracy sparkline (left) ·
+       per-subject weakest-first rankedBars (right). Mobile collapses to one
+       column (panel-grid handles the breakpoint). ── */
+  let trendHTML;
   if (series.length) {
     const spk = sparkline(series.map((p, i) => ({ x: i, y: p.y })), { w: 560, h: 96, unit: "test" });
     const last = series[series.length - 1], first = series[0];
     const delta = series.length > 1 ? last.y - first.y : null;
     const note = series.length === 1
       ? "one mock scored — trend appears as you log more"
-      : `${series.length} mocks · latest ${last.y}%` + (delta != null ? ` · ${delta >= 0 ? "▲" : "▼"} ${Math.abs(delta)} pts vs first` : "");
-    trend.innerHTML = chartFrame(
+      : `${series.length} mocks · latest ${fmtPctT(last.y)}`
+        + (delta != null ? ` · <span class="d-trend ${delta >= 0 ? "up" : "down"}">${delta >= 0 ? "▲" : "▼"} ${fmtDeltaT(delta)} vs first</span>` : "");
+    trendHTML = chartFrame(
       "Accuracy across your scored mocks", "measured", [], cap, spk,
       { note, legend: `<span class="cf-key"><span class="lg-line"></span>accuracy %, test-hub order · this device</span>` }
     );
   } else {
-    trend.innerHTML = chartFrame(
+    // calibrated-but-empty gauge (axis + dotted midline + CTA) instead of a dashed box
+    trendHTML = chartFrame(
       "Accuracy across your scored mocks", "measured", [], cap,
-      `<div class="empty small">No grand-test scores yet. Log a Grand Test / INICET mock below and your accuracy trend draws here — locally, on this device.</div>`,
-      {}
+      emptyAccuracyAxis(),
+      { note: `No grand-test scores yet — the gauge is ruled and waiting. Log a Grand Test / INICET mock below and your accuracy trend draws here, locally on this device. <span class="cf-cta">Log your first GT below ↓</span>` }
     );
   }
-  v.appendChild(trend);
+
+  /* per-subject accuracy plate — weakest-first rankedBars; richer empty state
+     (a ruled plate awaiting its first single-subject reading) when none scored */
+  let saccHTML;
+  if (sacc.length) {
+    const items = sacc.map(x => ({
+      label: x.cs,
+      value: x.pct,
+      // magnitude color = accuracy band (low→high); kept on the sequential yield ramp
+      color: x.pct < 55 ? "var(--bad)" : x.pct < 70 ? "var(--gold)" : "var(--accent)",
+      go: "subject:" + x.cs,
+      mark: `${fmt(x.q)} Q · ${x.tests} test${x.tests > 1 ? "s" : ""}`
+    }));
+    const bars = rankedBars(items, { nosort: true, colorFn: i => i.color });
+    saccHTML = chartFrame(
+      "Your subjects — accuracy, weakest first", "measured", [], cap, bars,
+      {
+        note: "inferred from your scored single-subject tests; broad GTs excluded to avoid split-credit noise · tap a subject to drill in",
+        legend: `<span class="cf-key"><span class="lg-dot" style="background:var(--bad)"></span>&lt;55%<span class="lg-dot" style="background:var(--gold)"></span>55–70%<span class="lg-dot" style="background:var(--accent)"></span>&ge;70%</span>`
+      }
+    );
+  } else {
+    saccHTML = chartFrame(
+      "Your subjects — accuracy, weakest first", "measured", [], cap,
+      `<div class="tests-empty"><svg class="te-mark" viewBox="0 0 24 24" aria-hidden="true" width="26" height="26">`
+      + `<path d="M4 19h16M6 16l4-7 3 4 2-3 3 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+      + `<div class="te-title">No single-subject reading yet</div>`
+      + `<div class="te-body">Score a Subject test (Anatomy, Pathology…) below and your accuracy ranks here, weakest first — broad GTs are excluded to keep the read clean.</div></div>`,
+      { note: "one bar per scored single-subject test · this device" }
+    );
+  }
+
+  const vizband = el("div", "panel-grid tests-viz");
+  vizband.innerHTML = `<div class="vz-cell" data-reveal>${trendHTML}</div><div class="vz-cell" data-reveal>${saccHTML}</div>`;
+  v.appendChild(vizband);
 
   /* ── Add a custom test (preserved behavior; Store seam) ── */
-  const add = el("section", "panel");
+  const add = el("section", "panel"); add.dataset.reveal = "1";
   add.innerHTML = `<div class="ph"><div class="ph-l"><h3>Add a Grand Test / custom test</h3></div></div>
      <div class="srcline">your own GTs, offline mocks, anything not listed — stored locally, this device <i class="tile-epi">${epiDot("measured")}</i></div>
      <div class="addform">
@@ -129,7 +204,7 @@ function renderTests() {
   if (cur === "custom") rows = rows.filter(t => t.custom);
   else if (cur !== "all") rows = rows.filter(t => t.platform === cur);
 
-  const panel = el("section", "panel");
+  const panel = el("section", "panel tests-ledger"); panel.dataset.reveal = "1";
   panel.innerHTML = `<table class="tests resp"><thead><tr>
     <th>Test</th><th>Type</th><th class="num">Q</th><th class="num">Right</th><th class="num">Wrong</th>
     <th class="num">Acc.</th><th>Difficulty</th><th></th></tr></thead><tbody></tbody></table>`;
@@ -137,30 +212,8 @@ function renderTests() {
   rows.forEach(t => tb.appendChild(scoreRow(t)));
   v.appendChild(panel);
 
-  /* ── Per-subject accuracy: relational rankedBars, weakest-first, names → Subject pages ── */
-  if (sacc.length) {
-    const items = sacc.map(x => ({
-      label: x.cs,
-      value: x.pct,
-      // magnitude color = accuracy band (low→high); kept on the sequential yield ramp
-      color: x.pct < 55 ? "var(--bad)" : x.pct < 70 ? "var(--gold)" : "var(--accent)",
-      go: "subject:" + x.cs,
-      mark: `${fmt(x.q)} Q · ${x.tests} test${x.tests > 1 ? "s" : ""}`
-    }));
-    const bars = rankedBars(items, { nosort: true, colorFn: i => i.color });
-    const ap = el("div", "");
-    ap.innerHTML = chartFrame(
-      "Your subjects — accuracy, weakest first", "measured", [], cap, bars,
-      {
-        note: "inferred from your scored single-subject tests; broad GTs excluded to avoid split-credit noise · tap a subject to drill in",
-        legend: `<span class="cf-key"><span class="lg-dot" style="background:var(--bad)"></span>&lt;55%<span class="lg-dot" style="background:var(--gold)"></span>55–70%<span class="lg-dot" style="background:var(--accent)"></span>&ge;70%</span>`
-      }
-    );
-    v.appendChild(ap);
-  }
-
   /* ── 2026 Cerebellum GT schedule — dated calendar to pace against (public-3p) ── */
-  const p2 = el("section", "panel");
+  const p2 = el("section", "panel"); p2.dataset.reveal = "1";
   p2.innerHTML = `<div class="ph"><div class="ph-l"><h3><span class="platlabel c">Cerebellum</span> · 2026 Grand Test schedule ${epiBadge("public-3p")}</h3></div></div>
     <div class="srcline">published calendar to pace against${cap ? ` · captured ${esc(cap)}` : ""}</div>`;
   const tl = el("div", "timeline");
@@ -170,10 +223,18 @@ function renderTests() {
   v.appendChild(p2);
 
   labelizeResponsiveTables();
+
+  // Self-re-render paths (add/delete custom test, segment switch) call renderTests()
+  // directly, bypassing show()'s central animateView(). Without this, the freshly
+  // rebuilt [data-reveal] panels (viz band, add-form, ledger, schedule) stay stuck at
+  // opacity:0 (components.css:757) for motion-OK users until they leave + return.
+  // Idempotent (once-only IO + data-done flags), so the show()-path call is harmless.
+  // Mirrors qbank.js drawSubject / overview.js render.
+  if (typeof animateView === "function") animateView($("#view-tests"));
 }
 function scoreRow(t) {
   const s = Store.score(t.id) || {};
-  const acc = (s.right != null && (s.right + s.wrong + (s.skipped || 0)) > 0) ? pct(s.right, s.right + s.wrong + (s.skipped || 0)) + "%" : "—";
+  const acc = (s.right != null && (s.right + s.wrong + (s.skipped || 0)) > 0) ? fmtPctT(pct(s.right, s.right + s.wrong + (s.skipped || 0))) : "—";
   const tr = el("tr", "scorerow"); tr.dataset.id = t.id;
   tr.innerHTML = `
     <td style="font-weight:600">${esc(t.name)}${t.custom ? ' <span class="tag misc">mine</span>' : ""}</td>
@@ -192,7 +253,7 @@ function testsInput(e) {
   const rv = $('input[data-f="right"]', row).value, wv = $('input[data-f="wrong"]', row).value;
   const right = +rv || 0, wrong = +wv || 0;
   Store.setScore(id, { right: rv === "" ? null : right, wrong });
-  $(".acc", row).textContent = (right + wrong) ? pct(right, right + wrong) + "%" : "—";
+  $(".acc", row).textContent = (right + wrong) ? fmtPctT(pct(right, right + wrong)) : "—";
 }
 function testsClick(e) {
   const star = e.target.closest(".diff .ds");

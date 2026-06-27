@@ -29,12 +29,14 @@
 #view-progress .lgroup.ledger .lrow-sub{font-size:var(--t-meta)}
 #view-progress .lg-trail{display:inline-flex;align-items:center;gap:6px;justify-content:flex-end;flex-wrap:nowrap}
 #view-progress .lg-plat{
-  font-size:var(--t-label);font-variant-numeric:tabular-nums;
+  font-size:var(--t-label);
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
   color:var(--c,var(--ink-2));font-weight:600;white-space:nowrap;
 }
 #view-progress .lg-plat.off{color:var(--ink-4);font-weight:500}
 #view-progress .lg-comb{
-  font-size:var(--t-row);font-variant-numeric:tabular-nums;
+  font-size:var(--t-row);
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
   color:var(--ink);font-weight:700;min-width:38px;text-align:right;
 }
 
@@ -58,13 +60,13 @@
 
 /* ============================================================
    SHARED-LAYER SHIM (scoped to #view-progress).
-   The chart primitives I consume from ds.js — heatmap(), smallMultiples()
-   and sparkline() — have NO base rules in the shared css/charts.css yet
-   (only .ftl + comparison .bars are styled there). To keep this surface
-   at full density NOW, the styling below is SCOPED to #view-progress so
-   it cannot collide with the global vocabulary the integrator will add.
-   INTEGRATOR: once charts.css defines .heatmap/.smgrid/.spark globally,
-   delete this whole block — the surface will inherit the shared look.
+   heatmap() is now consolidated: it inherits the ONE canonical .heatmap/.hm-*
+   body promoted to css/qbank.css (the shared-vocabulary slot), so its scoped
+   duplicate was deleted below. smallMultiples() (.smgrid/.sm-*) and the
+   sparkline() body (.spark/.spk-*) still have no canonical home in the shared
+   layer, so they stay SCOPED to #view-progress here to avoid colliding with the
+   per-surface spark variants (e.g. tests.css). INTEGRATOR: once charts.css
+   defines .smgrid/.spark globally, delete those two blocks too.
    ============================================================ */
 
 /* --- smallMultiples: tidy grid of mini-sparklines, one per subject --- */
@@ -76,16 +78,22 @@
   border:1px solid var(--line);border-radius:var(--r-1);
   background:var(--paper-2);padding:8px 10px 4px;
   display:flex;flex-direction:column;gap:1px;min-width:0;
+  transition:border-color var(--d-2) var(--ease-soft),background var(--d-2) var(--ease-soft);
 }
+/* hover lifts the whole mini-plate by warming its hairline (no transform/reflow) */
+#view-progress .sm-cell:hover{border-color:var(--line-2);background:var(--paper)}
+#view-progress .sm-cell:active{transform:scale(.99);transition:transform var(--d-1) var(--ease-rise)}
 #view-progress .sm-l{
-  font-size:var(--t-label);letter-spacing:.04em;color:var(--ink-2);font-weight:600;
+  font-size:var(--t-label);letter-spacing:.06em;color:var(--ink-2);font-weight:600;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none;
 }
-#view-progress a.sm-l.is-link{cursor:pointer}
+#view-progress a.sm-l.is-link{cursor:pointer;border-radius:3px}
 #view-progress a.sm-l.is-link:hover{color:var(--accent)}
+#view-progress a.sm-l.is-link:focus-visible{outline:2px solid color-mix(in srgb,var(--accent) 60%,transparent);outline-offset:2px}
 #view-progress .sm-v{
   font-size:var(--t-stat);font-weight:600;color:var(--ink);
-  font-variant-numeric:tabular-nums;letter-spacing:-.2px;line-height:1;
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
+  letter-spacing:-.2px;line-height:1;
 }
 @container (max-width:415px){
   #view-progress .smgrid{grid-template-columns:repeat(2,1fr)}
@@ -96,44 +104,68 @@
 #view-progress .spk-base{stroke:var(--grid-2);stroke-width:1}
 #view-progress .spk-line{fill:none;stroke:var(--ink-2);stroke-width:1.5;
   stroke-linejoin:round;stroke-linecap:round}
-#view-progress .spk-dot{fill:var(--accent)}
-#view-progress .spk-tick{fill:var(--tick);font-size:8px;font-variant-numeric:tabular-nums}
+/* endpoint dot + a soft warm halo (drop-shadow = GPU, no extra SVG node) so the
+   latest reading reads as the "live" tip of the line */
+#view-progress .spk-dot{fill:var(--accent);
+  filter:drop-shadow(0 0 3px color-mix(in srgb,var(--accent) 45%,transparent))}
+#view-progress .spk-tick{fill:var(--tick);font-size:8px;
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
 #view-progress .spk-cap{fill:var(--ink-3);font-size:8px}
 
-/* --- heatmap: subject × platform CSS grid, sized to col count (no x-scroll) --- */
-#view-progress .heatmap{
-  display:flex;flex-direction:column;gap:3px;width:100%;
-}
-#view-progress .hm-row{display:grid;gap:3px;align-items:stretch}
-#view-progress .hm-head .hm-col{
-  font-size:var(--t-label);letter-spacing:.04em;font-weight:700;
-  text-align:center;align-self:center;white-space:nowrap;
-  overflow:hidden;text-overflow:ellipsis;
-}
-#view-progress .hm-corner{display:block}
-#view-progress .hm-rl{
-  font-size:var(--t-row);color:var(--ink);font-weight:500;align-self:center;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none;
-}
-#view-progress a.hm-rl.is-link{cursor:pointer}
-#view-progress a.hm-rl.is-link:hover{color:var(--accent)}
-#view-progress .hm-cell{
-  position:relative;border:none;cursor:pointer;
-  min-height:30px;border-radius:3px;background:var(--y0);
-  display:flex;align-items:center;justify-content:center;
-  font-size:var(--t-meta);font-variant-numeric:tabular-nums;font-weight:600;
-  color:var(--y-ink-lo);padding:0;
-}
-#view-progress .hm-cell.empty{
-  background:transparent;border:1px solid var(--line);cursor:default;
-}
-#view-progress .hm-cell.ring{box-shadow:inset 0 0 0 2px var(--con-two)}
-#view-progress .hm-cell:not(.empty):hover{filter:brightness(.95)}
-#view-progress .hm-v{line-height:1}
-#view-progress .hm-dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85}
-
-/* mobile heatmap: shrink subject label column, keep 3 fixed data cols */
+/* --- heatmap: subject × platform CSS grid ---
+   The full .heatmap/.hm-* body now lives ONCE as the canonical shared vocabulary
+   in css/qbank.css (loads before this file). Progress inherits it verbatim — the
+   flat yield-ramp cell, inset gold ring, two-step warm focus ring and 7px dot were
+   identical here, so the duplicate was deleted per spec §3 (one component, one look).
+   Only the genuinely surface-specific override survives below: progress lays its
+   heatmap inside a container-query plate, so the mobile breakpoint is a @container
+   (not the canonical @media ≤640) and the label gutter is 84px (vs qbank's 74px). */
 @container (max-width:520px){
   #view-progress .hm-row{grid-template-columns:84px repeat(3,1fr) !important}
   #view-progress .hm-rl{font-size:var(--t-meta)}
+}
+
+/* ============================================================
+   CRAFT ELEVATION — typographic rhythm, calibrated empty gauge,
+   measured-caption polish, desktop width balance. Additive only;
+   every datum keeps its epistemic label + source; warm almanac, no neon.
+   ============================================================ */
+
+/* §1 hero numeral: lining-tabular serif figures so the count-up reads on a
+   stable grid (no width jitter while digits tween) + seat caps on the baseline */
+#view-progress .tile.is-hero .tile-v{
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
+}
+#view-progress .prog-tiles .tile-v{
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
+}
+
+/* measured-data caption: tighter optical rhythm, balanced wrap on desktop */
+#view-progress .prog-cap > span{text-wrap:pretty}
+@media (min-width:720px){ #view-progress .prog-cap > span{max-width:78ch} }
+
+/* chart-frame notes read as prose: comfortable measure + pretty wrap */
+#view-progress .cf-note{text-wrap:pretty}
+@media (min-width:720px){ #view-progress .cf-note{max-width:74ch} }
+
+/* §5 calibrated-but-empty accuracy gauge — a plate awaiting its engraving,
+   NOT a broken/dashed box. The axis + a dotted "awaiting data" midline. */
+#view-progress .acc-empty{padding:2px 0}
+#view-progress .acc-empty-axis{height:84px}
+#view-progress .acc-empty-mid{
+  stroke:var(--line-2);stroke-width:1;stroke-dasharray:2 5;opacity:.7;
+}
+
+/* §A desktop width balance: the two COMPACT plates (coverage-shape small-
+   multiples + weak↔strong heatmap) sit 2-up so the page uses the width as an
+   editorial spread instead of a single tall column. The wide ledger + the
+   full-width accuracy sparkline stay below, full-bleed. Mobile is untouched
+   (single column), preserving density. Pure progressive enhancement. */
+@media (min-width:1024px){
+  #view-progress .prog-spread{
+    display:grid;gap:var(--gap,20px);
+    grid-template-columns:1fr 1fr;align-items:start;
+    margin-bottom:var(--sp-3);
+  }
+  #view-progress .prog-spread > .panel{margin-bottom:0}
 }

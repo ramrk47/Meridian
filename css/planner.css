@@ -5,42 +5,84 @@
    .count-pill, .epi, .cpip) come from components.css / charts.css.
    Desktop base; the bottom @media layer hits mobile density (375×812).
    Warm almanac identity retained — paper/ink/pine/gold tokens only.
+
+   CRAFT pass: consolidated continuous legend ramp, lining-tabular serif
+   figures, true small-caps tier eyebrows, quiet hover/focus + underline-grow
+   on the directional name link, measure caps + balanced wrap, and a steadier
+   desktop column rhythm. All motion is transform/opacity/background-size only
+   and collapses under the global reduced-motion firewall (tokens.css). No new
+   density; every epistemic label + source kept exactly as rendered.
    ============================================================ */
 
 #view-planner .plan-intro{margin-bottom:var(--sp-4,16px)}
 #view-planner .plan-tiles{margin-bottom:var(--sp-4,16px)}
 #view-planner .pl-frame{margin:var(--sp-4,16px) 0}
 
-/* ── chartFrame legend (scoped here; hy.css's copy is scoped to its surface) ── */
+/* intro callout: editorial measure + balanced wrap so the honest framing reads
+   as a printed standfirst, not a stretched banner on wide screens. */
+#view-planner .plan-intro{max-width:74ch;line-height:1.55}
+#view-planner .plan-intro b{font-weight:600}
+
+/* lining-tabular serif/num figures across the surface (the body tnum does not
+   force lining; engraved plates want figures that sit on one baseline). */
+#view-planner .tile-v,
+#view-planner .pl-tier-v,
+#view-planner .pl-tier-rem,
+#view-planner .pl-q,
+#view-planner .pl-kpi b{
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1}
+
+/* ── chartFrame legend: ONE continuous ramp bar (consolidated look) ──
+   replaces the old discrete swatch blocks; the gradient reads as a single
+   "low → high share" scale, matching the canonical .cf-legend ramp. The six
+   <i class="r0..r5"> markers stay in the markup but render as gradient stops
+   inside one rounded bar (no extra DOM, no behavior change). */
 #view-planner .cf-legend .lg-ramp,
 #view-planner .cf-legend .lg-con,
 #view-planner .cf-legend .lg-best{
-  display:inline-flex;align-items:center;gap:5px;
+  display:inline-flex;align-items:center;gap:6px;
   font-size:var(--t-micro,10px);color:var(--ink-3);margin-left:14px;white-space:nowrap}
-#view-planner .cf-legend .lg-ramp i{width:11px;height:11px;border-radius:2px;display:inline-block}
-#view-planner .cf-legend .lg-ramp i.r0{background:var(--y0)}
-#view-planner .cf-legend .lg-ramp i.r1{background:var(--y1)}
-#view-planner .cf-legend .lg-ramp i.r2{background:var(--y2)}
-#view-planner .cf-legend .lg-ramp i.r3{background:var(--y3)}
-#view-planner .cf-legend .lg-ramp i.r4{background:var(--y4)}
-#view-planner .cf-legend .lg-ramp i.r5{background:var(--y5)}
+#view-planner .cf-legend .lg-ramp{gap:6px}
+/* ::before is the continuous ramp bar; the six <i> markers collapse to nothing
+   (no extra DOM), and the trailing caption <span> flows normally beside it. */
+#view-planner .cf-legend .lg-ramp::before{
+  content:"";width:46px;height:11px;border-radius:2px;flex:0 0 auto;
+  background:linear-gradient(90deg,var(--y0),var(--y1),var(--y2),var(--y3),var(--y4),var(--y5))}
+#view-planner .cf-legend .lg-ramp i{display:none}                /* markers folded into the gradient bar */
+#view-planner .cf-legend .lg-ramp>span{                          /* "share left" caption, small-caps almanac finish */
+  font-variant-caps:all-small-caps;
+  font-feature-settings:"smcp" 1,"c2sc" 1;letter-spacing:.04em}
 
-/* reputed-strongest directional name chip (gold, tabular-aligned, links when actionable) */
+/* reputed-strongest directional name chip (gold, tabular-aligned, links when
+   actionable). Underline-grow on hover: a paper-soft draw-on, transform-free,
+   GPU-cheap (background-size), collapses to instant under the firewall. */
 #view-planner .pl-best,
 #view-planner .rb-mark .pl-best{
   color:var(--gold);font-size:var(--t-micro,10px);font-weight:600;
-  letter-spacing:.02em;margin-left:6px;white-space:nowrap}
-#view-planner .cf-legend .lg-best .pl-best{font-weight:700}
+  letter-spacing:.02em;margin-left:6px;white-space:nowrap;
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2,180ms) var(--ease-soft,cubic-bezier(.4,0,.2,1))}
+#view-planner .rb-mark .pl-best:hover{background-size:100% 1px}
+#view-planner .cf-legend .lg-best .pl-best{font-weight:700;background-image:none}
 
 /* ── do-next group: untracked high-yield rows ── */
-#view-planner .plan-donext .lrow-title{font-weight:500}
+#view-planner .plan-donext .lrow-title{font-weight:500;text-wrap:pretty}
 #view-planner .plan-donext .lrow-sub .echip{cursor:pointer}
-#view-planner .plan-donext .lrow-sub .echip:hover{text-decoration:underline}
-#view-planner .pl-q{font-variant-numeric:tabular-nums;color:var(--ink-2);margin-left:8px;min-width:3.2em;text-align:right;display:inline-block}
+/* echip subject jump: same quiet underline-grow as the directional chip */
+#view-planner .plan-donext .lrow-sub .echip{
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size var(--d-2,180ms) var(--ease-soft,cubic-bezier(.4,0,.2,1)),
+             border-color var(--d-2,180ms) var(--ease-soft,cubic-bezier(.4,0,.2,1)),
+             color var(--d-2,180ms) var(--ease-soft,cubic-bezier(.4,0,.2,1))}
+#view-planner .plan-donext .lrow-sub .echip:hover{background-size:100% 1px;text-decoration:none}
+#view-planner .pl-q{font-variant-numeric:lining-nums tabular-nums;color:var(--ink-2);margin-left:8px;min-width:3.2em;text-align:right;display:inline-block}
 
 /* ── tiers: three inset-grouped panels side by side on desktop ── */
 #view-planner .plan-tier-grid{
-  display:grid;gap:var(--gap,16px);
+  display:grid;gap:var(--gap,16px);align-items:start;
   grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));
   margin:var(--sp-4,16px) 0}
 #view-planner .plan-tier-grid>*{min-width:0}
@@ -48,10 +90,20 @@
 #view-planner .plan-tier.hi{border-top-color:var(--cere)}
 #view-planner .plan-tier.mid{border-top-color:var(--gold)}
 #view-planner .plan-tier.lo{border-top-color:var(--core)}
-#view-planner .plan-tier .pl-tsub{display:block;margin-top:3px;font-size:11.5px;line-height:1.35}
+/* tier title carries a true small-caps almanac eyebrow finish */
+#view-planner .plan-tier .ph h3{
+  font-variant-caps:all-small-caps;font-feature-settings:"smcp" 1,"c2sc" 1;
+  letter-spacing:.02em;text-wrap:balance}
+#view-planner .plan-tier .pl-tsub{display:block;margin-top:3px;font-size:11.5px;line-height:1.35;text-wrap:pretty}
 #view-planner .plan-tier .srcline{margin-top:8px}
-#view-planner .pl-tier-v{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;font-size:14px}
-#view-planner .pl-tier-rem{display:block;font-variant-numeric:tabular-nums;color:var(--ink-3);font-size:11px;margin-top:1px;text-align:right}
+#view-planner .pl-tier-v{color:var(--ink);font-weight:600;font-size:14px}
+#view-planner .pl-tier-rem{display:block;color:var(--ink-3);font-size:11px;margin-top:1px;text-align:right}
+/* quiet hover on tier rows: a faint warm wash + the colored dot lead steadies
+   the eye to the row you're about to open (color/opacity only, no reflow). */
+#view-planner .plan-tierlist .lrow.is-link{
+  transition:background-color var(--d-2,180ms) var(--ease-soft,cubic-bezier(.4,0,.2,1))}
+#view-planner .plan-tierlist .lrow.is-link:hover{background:var(--accent-soft)}
+#view-planner .plan-tierlist .lrow.is-link:hover .pl-tier-v{color:var(--accent-2)}
 
 /* ── weekly rhythm panel + KPI strip ── */
 #view-planner .plan-rhythm-wrap{margin-top:var(--sp-4,16px)}
@@ -59,7 +111,7 @@
   display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
 #view-planner .pl-kpi{display:flex;flex-direction:column;gap:2px}
-#view-planner .pl-kpi b{color:var(--ink);font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.05}
+#view-planner .pl-kpi b{color:var(--ink);font-size:20px;font-weight:600;line-height:1.05}
 #view-planner .pl-kpi span{font-size:11.5px;color:var(--ink-2);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 
 /* ============================================================

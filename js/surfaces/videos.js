@@ -20,6 +20,25 @@
 let vSubject = null;
 function vDefaultSubject() { return videoSubjects()[0]; }
 
+/* a refined empty/forthcoming state — reads as "a plate awaiting its engraving",
+   not a broken box. Monochrome stroke-only mark (open ledger), serif title, meta
+   body. `compact` trims chrome for the in-plate (faculty-forthcoming) variant.
+   NOTE: the spec's canonical emptyState() belongs in the shared ds.js; it is
+   absent today, so this scoped helper carries the intent without editing shared
+   files (flagged for the integrator). No color, no fabricated data — firewall-safe. */
+function _vidEmptyState(title, body, compact) {
+  const mark = `<svg class="ve-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">`
+    + `<rect x="5.5" y="6.5" width="21" height="19" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>`
+    + `<line x1="16" y1="6.5" x2="16" y2="25.5" stroke="currentColor" stroke-width="1.3"/>`
+    + `<line x1="8.5" y1="12" x2="13.5" y2="12" stroke="currentColor" stroke-width="1"/>`
+    + `<line x1="8.5" y1="16" x2="13.5" y2="16" stroke="currentColor" stroke-width="1"/>`
+    + `<line x1="18.5" y1="12" x2="23.5" y2="12" stroke="currentColor" stroke-width="1"/>`
+    + `<line x1="18.5" y1="16" x2="23.5" y2="16" stroke="currentColor" stroke-width="1"/></svg>`;
+  return `<div class="vid-emptyblock${compact ? " is-compact" : ""}">${mark}`
+    + `<div class="ve-title">${esc(title)}</div>`
+    + `<div class="ve-body">${esc(body)}</div></div>`;
+}
+
 /* faculty-of-record for the loaded video set: [{fac, clips}] desc by clips.
    DIRECTIONAL (seed). Drives the relational rollup + per-row faculty chip. */
 function _videoFacultyRollup() {
@@ -41,7 +60,15 @@ function _videoFacultySources(roll) {
 function renderVideos() {
   resetPlates();
   const v = $("#view-videos"); v.innerHTML = "";
-  if (!VIDEOS.length) { v.appendChild(el("div", "empty", "No videos loaded yet.")); return; }
+  if (!VIDEOS.length) {
+    // richer empty state — a plate awaiting its engraving, not a missing thing.
+    // (emptyState() is the spec's shared ds.js primitive; absent today — see return notes.
+    //  This scoped .vid-empty markup matches the intent so the surface stays whole.)
+    v.appendChild(el("div", "vid-empty", _vidEmptyState(
+      "No video set loaded yet",
+      "This layer is source-agnostic — a CoreBTR (or any future) topic-cut lecture set drops in here and lights up tracking, faculty of record, and module matching automatically.")));
+    return;
+  }
   if (!vSubject || !videoSubjects().includes(vSubject)) vSubject = vDefaultSubject();
 
   const all = vidRollup(VIDEOS);
@@ -50,8 +77,12 @@ function renderVideos() {
 
   /* ── KPI tiles: 6 above the fold, compact 2/3-col. ONE serif hero. ── */
   const tiles = el("div", "tiles vid-tiles");
+  tiles.dataset.reveal = "";                          // the deck rises+fades once on entrance
   tiles.innerHTML = [
-    statTile({ accent: "k", hero: true, value: fmt(VIDEOS.length), label: "CoreBTR clips", note: "topic-cut lecture set", epi: "measured" }),
+    // hero numeral carries data-count → shared countUp() animates it ONCE (reduced-motion-safe;
+    // the final fmt() string stays the rendered text so the figure is never left mid-count).
+    statTile({ accent: "k", hero: true, value: fmt(VIDEOS.length), label: "CoreBTR clips", note: "topic-cut lecture set", epi: "measured" })
+      .replace('<span class="tile-v num">', `<span class="tile-v num" data-count="${VIDEOS.length}">`),
     statTile({ accent: "m", value: pct(all.w, all.total) + "%", label: "Watched", note: `${all.w} of ${all.total} clips`, epi: "measured" }),
     statTile({ accent: "c", value: fmt(all.r), label: "Revised", note: "second-pass clips", epi: "measured" }),
     statTile({ accent: "g", value: hrs + "h", label: "Runtime", note: `${fmt(all.mins)} min total`, epi: "measured" }),
@@ -60,16 +91,22 @@ function renderVideos() {
   ].join("");
   v.appendChild(tiles);
 
-  /* ── RELATIONAL viz: who teaches this set → Faculty pages (gated). ── */
-  v.appendChild(_facultyRollupSection(roll));
-
-  v.appendChild(el("div", "callout",
-    `<b>Video tracking.</b> Your CoreBTR lecture set, cut topic-by-topic. Mark <b>Watched</b> / <b>Revised</b>; each clip is
-     <b>matched to the question-bank modules it likely covers</b> across Marrow &amp; Cerebellum by topic similarity ${epiDot("proxy")} — open a
-     clip for suggested modules, jumps, and the faculty of record. This layer is source-agnostic: any future video set drops in the same way.`));
+  /* ── RELATIONAL viz + intent, 2-up (desktop) → faculty-of-record rollup left,
+       the tracking callout right; collapses to one column on mobile (panel-grid). ── */
+  const band = el("div", "panel-grid vid-band");
+  band.appendChild(_facultyRollupSection(roll));      // already a [data-reveal]-able .cframe.plate inside
+  const calloutCell = el("div", "vid-callout-cell");
+  calloutCell.dataset.reveal = "";
+  calloutCell.innerHTML = `<div class="callout vid-callout">
+    <b>Video tracking.</b> Your CoreBTR lecture set, cut topic-by-topic. Mark <b>Watched</b> / <b>Revised</b>; each clip is
+    <b>matched to the question-bank modules it likely covers</b> across Marrow &amp; Cerebellum by topic similarity ${epiDot("proxy")} — open a
+    clip for suggested modules, jumps, and the faculty of record. This layer is source-agnostic: any future video set drops in the same way.</div>`;
+  band.appendChild(calloutCell);
+  v.appendChild(band);
 
   /* ── sidebar + dense rows (reuses the mobile-sticky qb shell) ── */
   const layout = el("div", "qb-layout");
+  layout.dataset.reveal = "";                          // the tracking workspace rises in last
   layout.innerHTML = `
     <aside class="qb-side">
       <div class="sb-list" id="vbList"></div>
@@ -98,10 +135,15 @@ function renderVideos() {
    own public sources. Gated to an honest empty-state when no mapping seeded. */
 function _facultyRollupSection(roll) {
   const wrap = el("div", "vid-facroll");
+  wrap.dataset.reveal = "";                            // panel rises+fades once on entrance
   if (!roll.length) {
+    // honest "plate awaiting engraving" — forthcoming, not empty (gated-honesty contract).
     wrap.innerHTML = chartFrame(
       "Faculty of record", "directional", [], D.subjectStrength ? D.subjectStrength.captured : "",
-      `<div class="empty small">No faculty mapped to this set yet (directional seed). As clips are attributed, the people teaching them surface here.</div>`,
+      _vidEmptyState(
+        "Faculty of record — forthcoming",
+        "No clips attributed to a teacher yet. As the set is mapped, the people teaching it engrave here and link to their career timelines.",
+        true),
       { note: "Faculty layer is seeded — aggregate, community-sentiment, never a ranking of people." });
     return wrap;
   }
@@ -203,8 +245,8 @@ function openVideoDrawer(id) {
     <div class="dr-track">
       <span class="dr-lbl">Your status ${epiDot("measured")}</span>
       <div class="vchips big" data-vid="${id}">
-        <button class="chip a ${x.w ? "on" : ""}" data-vdract="w">Watched</button>
-        <button class="chip r ${x.v ? "on" : ""}" data-vdract="v">Revised</button>
+        <button class="chip a ${x.w ? "on" : ""}" data-vdract="w" aria-pressed="${x.w ? "true" : "false"}" aria-label="Watched">Watched</button>
+        <button class="chip r ${x.v ? "on" : ""}" data-vdract="v" aria-pressed="${x.v ? "true" : "false"}" aria-label="Revised">Revised</button>
       </div>
       <div class="muted small">File: ${esc(vid.file)}</div>
     </div>

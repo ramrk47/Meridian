@@ -1,5 +1,5 @@
 /* ============================================================
-   Meridian — core.js  (shared seam; loads first after data.js/storage.js)
+   Calvetra — core.js  (shared seam; loads first after data.js/storage.js)
    D alias, DOM/format helpers, canonical-subject map, platform registry,
    leaf index, rollups, priority/HY badges, curation (epistemic) helpers,
    token + cross-platform matching, tests index, video helpers, faculty
@@ -13,6 +13,13 @@ const pct = (a, b) => (b ? Math.round(a / b * 100) : 0);
 const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; return e; };
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 function cssEsc(s) { return String(s).replace(/["\\]/g, "\\$&"); }
+
+/* ---- live motion guard (motion.js + surfaces consume these) ----
+   matchMedia query is LIVE: .matches is re-read at call time so an OS
+   reduced-motion toggle mid-session is honored. Never cache the boolean. */
+const RM = (typeof matchMedia === "function") ? matchMedia("(prefers-reduced-motion:reduce)") : { matches: false };
+const MOTION_OK = () => !RM.matches;                              // call it; never cache the value
+const VT_OK = () => !!document.startViewTransition && MOTION_OK(); // View Transitions + motion allowed
 
 /* ---- canonical subject names across platforms ---- */
 const CANON = {
@@ -127,11 +134,11 @@ function srcLink(id) {
 const srcLinks = ids => (ids || []).map(srcLink).filter(Boolean).join(" · ");
 /* a "Source: … · captured DATE" line for a curated panel */
 const srcLine = (ids, captured) => `<div class="srcline">Source: ${srcLinks(ids)}${captured ? ` · captured ${esc(captured)}` : ""}</div>`;
-/* platform name chip — colour-coded if Meridian integrates it, plain + flagged if reputation-only */
+/* platform name chip — colour-coded if Calvetra integrates it, plain + flagged if reputation-only */
 function platRefChip(ref) {
   const pid = ref.platformId;
   if (pid && PLAT_BY_ID[pid]) return `<span class="platlabel ${platCls(pid)}" style="color:${platColor(pid)}">${esc(ref.platform)}</span>`;
-  return `<span class="platlabel off" title="Named in community reputation; not yet tracked in Meridian">${esc(ref.platform)}<span class="off-note"> · not yet tracked</span></span>`;
+  return `<span class="platlabel off" title="Named in community reputation; not yet tracked in Calvetra">${esc(ref.platform)}<span class="off-note"> · not yet tracked</span></span>`;
 }
 
 /* cross-platform topic matching */

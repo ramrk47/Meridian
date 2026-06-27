@@ -93,12 +93,12 @@ function gotoLeaf(id) {
   setTimeout(() => {
     const block = $(`#qbContent .cat-block[data-cat="${cssEsc(l.cat)}"]`); if (block) block.classList.add("open");
     const row = $(`#qbContent .mrow[data-id="${cssEsc(id)}"]`);
-    if (row) { row.scrollIntoView({ block: "center", behavior: "smooth" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); }
+    if (row) { row.scrollIntoView({ block: "center", behavior: MOTION_OK() ? "smooth" : "auto" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); }
   }, 60);
 }
 function gotoTest(id) {
   show("tests");
-  setTimeout(() => { const row = $(`#view-tests .scorerow[data-id="${cssEsc(id)}"]`); if (row) { row.scrollIntoView({ block: "center", behavior: "smooth" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); } }, 60);
+  setTimeout(() => { const row = $(`#view-tests .scorerow[data-id="${cssEsc(id)}"]`); if (row) { row.scrollIntoView({ block: "center", behavior: MOTION_OK() ? "smooth" : "auto" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); } }, 60);
 }
 
 /* ---- ENTITY ROUTING (entity pages are NOT tabs; they live in their own view sections) ----
@@ -116,12 +116,16 @@ function showEntity(kind) {
   const home = $("#btnHome"); if (home) { home.classList.remove("active"); home.setAttribute("aria-current", "false"); }
   $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + kind));
   labelizeResponsiveTables(); setHeaderHeight();
-  window.scrollTo({ top: 0 });
+  window.scrollTo({ top: 0, behavior: "instant" });
 }
-/* render-only entity painters (no hash side-effect) — used by the router */
-function renderSubjectView(canonSubj) { renderSubjectPage(canonSubj); showEntity("subject"); const mt = $("#mobTitle"); if (mt) mt.textContent = canonSubj; currentView = "subject"; }
-function renderPlatformView(id) { renderPlatformPage(id); showEntity("platform"); const mt = $("#mobTitle"); if (mt) mt.textContent = platName(id); currentView = "platform"; }
-function renderFacultyView(id) { renderFacultyPage(id); showEntity("faculty"); const mt = $("#mobTitle"); if (mt) { const f = facById(id); mt.textContent = f ? f.name : "Faculty"; } currentView = "faculty"; }
+/* render-only entity painters (no hash side-effect) — used by the router.
+   Wrapped in viewTransition (feature-detected + reduced-motion-guarded): this
+   single seam covers goSubject/goPlatform/goFaculty AND Back/refresh routing.
+   Fallback runs the body synchronously → unchanged behavior. animateView fires
+   the entrance once after the entity renders. */
+function renderSubjectView(canonSubj) { viewTransition(() => { renderSubjectPage(canonSubj); showEntity("subject"); const mt = $("#mobTitle"); if (mt) mt.textContent = canonSubj; currentView = "subject"; animateView($("#view-subject")); }); }
+function renderPlatformView(id) { viewTransition(() => { renderPlatformPage(id); showEntity("platform"); const mt = $("#mobTitle"); if (mt) mt.textContent = platName(id); currentView = "platform"; animateView($("#view-platform")); }); }
+function renderFacultyView(id) { viewTransition(() => { renderFacultyPage(id); showEntity("faculty"); const mt = $("#mobTitle"); if (mt) { const f = facById(id); mt.textContent = f ? f.name : "Faculty"; } currentView = "faculty"; animateView($("#view-faculty")); }); }
 /* public navigation helpers — push a hash, let the router paint (keeps Back/refresh honest) */
 let pendingHashWrite = false; // set when WE write the hash, so the hashchange handler doesn't treat it as a Back
 function setHash(h) {
@@ -143,6 +147,10 @@ function goFaculty(id) { if (routing) { renderFacultyView(id); return; } setHash
 /* unified back affordance for all entity pages: real browser history when we have somewhere to
    go back to, else fall to Overview. Keeps subject/platform/faculty consistent (finding fix). */
 function goBack() {
+  // directional cue for the View Transition: the new view enters from above, the
+  // old exits downward (set one frame before history.back; cleared after the route
+  // paints). Purely a CSS hint — no effect when VT is unsupported / reduced-motion.
+  if (VT_OK()) { document.documentElement.dataset.vtDir = "back"; }
   if (window.__meridianNavDepth > 0) { history.back(); return; }
   show("overview");
 }
@@ -161,7 +169,17 @@ function routeFromHash() {
     else if ((m = raw.match(/^\/platform\/(.+)$/))) { const id = decodeURIComponent(m[1]); if (PLAT_BY_ID[id]) renderPlatformView(id); else show("overview"); }
     else if ((m = raw.match(/^\/faculty\/(.+)$/))) { const id = decodeURIComponent(m[1]); if (facById(id)) renderFacultyView(id); else show("overview"); }
     else { const v = raw.replace(/^\//, ""); show(RENDER[v] ? v : "overview"); }
-  } finally { routing = false; }
+  } finally {
+    routing = false;
+    // clear the directional Back cue after this route's transition has been kicked
+    // off (rAF for foreground; setTimeout so a hidden/throttled tab still clears it
+    // and the cue can't leak into the next forward navigation).
+    if (document.documentElement.dataset.vtDir) {
+      const clearDir = () => { delete document.documentElement.dataset.vtDir; };
+      requestAnimationFrame(clearDir);
+      setTimeout(clearDir, 400);
+    }
+  }
 }
 
 /* ============================================================
@@ -206,7 +224,7 @@ function appClick(e) {
     }
   }
   const ov = e.target.closest("[data-open-video]"); if (ov) { openVideoDrawer(ov.dataset.openVideo); return; }
-  const vsb = e.target.closest("[data-vsubj]"); if (vsb) { vSubject = vsb.dataset.vsubj; drawVideoSidebar(); drawVideoSubject(); $("#vbContent").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+  const vsb = e.target.closest("[data-vsubj]"); if (vsb) { vSubject = vsb.dataset.vsubj; drawVideoSidebar(); drawVideoSubject(); $("#vbContent").scrollIntoView({ block: "start", behavior: MOTION_OK() ? "smooth" : "auto" }); return; }
   // cross-bank coverage jump
   const xg = e.target.closest("[data-xgo]"); if (xg) { e.stopPropagation(); gotoLeaf(xg.dataset.xgo); return; }
   // open drawer
@@ -232,7 +250,7 @@ function appClick(e) {
     return;
   }
   // sidebar subject select
-  const sb = e.target.closest("[data-subj]"); if (sb) { QB.subject = sb.dataset.subj; drawSidebar(); drawSubject(); $("#qbContent").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+  const sb = e.target.closest("[data-subj]"); if (sb) { QB.subject = sb.dataset.subj; drawSidebar(); drawSubject(); $("#qbContent").scrollIntoView({ block: "start", behavior: MOTION_OK() ? "smooth" : "auto" }); return; }
   // jumps
   const js = e.target.closest("[data-jump-subj]"); if (js) { jumpToSubject(js.dataset.jumpSubj, js.dataset.jumpPlat || js.closest("[data-jump-plat]")?.dataset.jumpPlat); return; }
   const jo = e.target.closest("[data-jump-other]"); if (jo) { QB.platform = jo.dataset.jumpPlat; QB.subject = jo.dataset.jumpOther; QB.search = ""; QB.status = "all"; QB.hyOnly = false; renderQbank(); return; }
@@ -310,10 +328,29 @@ function wireDrawerDrag() {
     if (curY > 90) closeDrawer();
   });
 }
+/* persistent visually-hidden live region so transient toasts are announced to
+   screen readers (the .toast element itself is not announced). polite for
+   confirmations, assertive for the bad/error variant. Created lazily, once. */
+function srAnnounce(msg, bad) {
+  const id = bad ? "srLiveAssertive" : "srLivePolite";
+  let region = document.getElementById(id);
+  if (!region) {
+    region = el("div", "sr-only");
+    region.id = id;
+    region.setAttribute("role", "status");
+    region.setAttribute("aria-live", bad ? "assertive" : "polite");
+    region.setAttribute("aria-atomic", "true");
+    document.body.appendChild(region);
+  }
+  // clear then set on the next frame so repeated identical messages re-announce
+  region.textContent = "";
+  requestAnimationFrame(() => { region.textContent = msg; });
+}
 function toast(msg, bad) {
   const t = el("div", "toast" + (bad ? " bad" : ""), msg); document.body.appendChild(t);
   setTimeout(() => t.classList.add("show"), 10);
   setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2200);
+  srAnnounce(msg, bad);
 }
 function toggleTheme() {
   const dark = document.body.classList.toggle("evening");
@@ -329,18 +366,25 @@ function show(view) {
   // entity views aren't tabs and have no RENDER entry — re-paint them from the live hash instead
   // (keeps show(currentView) safe after import/reset while an entity page is open).
   if (!RENDER[view]) { routeKey = "\0"; routeFromHash(); return; }
-  currentView = view;
-  $$(".tab").forEach(t => { const on = t.dataset.view === view; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
-  $$("#botnav button").forEach(b => { const on = b.dataset.view === view; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
-  const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
-  const mt = $("#mobTitle"); if (mt) mt.textContent = TAB_LABEL[view] || view;
-  $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + view));
-  RENDER[view]();
-  labelizeResponsiveTables();
-  setHeaderHeight();
+  // calm editorial cross-fade via the View Transitions API (feature-detected +
+  // reduced-motion-guarded inside viewTransition); the synchronous fallback IS
+  // today's exact behavior, so routing/Back/refresh logic is unchanged.
+  viewTransition(() => {
+    currentView = view;
+    $$(".tab").forEach(t => { const on = t.dataset.view === view; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
+    $$("#botnav button").forEach(b => { const on = b.dataset.view === view; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
+    const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
+    const mt = $("#mobTitle"); if (mt) mt.textContent = TAB_LABEL[view] || view;
+    $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + view));
+    RENDER[view]();
+    labelizeResponsiveTables();
+    setHeaderHeight();
+    animateView($("#view-" + view));     // reveal panels / chart intro / hero count-up (once)
+  });
   setHash("#/" + view); // suppressed while routing (router is painting); else writes a Back-able entry
   routeKey = "/" + view; // we just painted this tab — mark it so the echo hashchange is a no-op
-  window.scrollTo({ top: 0 });
+  // tab change scroll-to-top is always instant (never a smooth fight with the transition)
+  window.scrollTo({ top: 0, behavior: "instant" });
 }
 /* card-list table mode (mobile): auto-stamp each cell with its column header,
    and wrap wide tables in a horizontal-scroll fallback for the tablet range
@@ -356,8 +400,12 @@ function labelizeResponsiveTables() {
   });
 }
 function setHeaderHeight() {
-  const h = $(".topbar")?.offsetHeight || 110;
-  document.documentElement.style.setProperty("--hh", h + "px");
+  // defer the offsetHeight read into a rAF so the write→read→write layout thrash
+  // on every show() collapses into one frame (no forced sync reflow mid-swap).
+  requestAnimationFrame(() => {
+    const h = $(".topbar")?.offsetHeight || 110;
+    document.documentElement.style.setProperty("--hh", h + "px");
+  });
 }
 
 function qbVisibleRows() { return $$("#qbContent .mrow").filter(r => r.offsetParent !== null); }
@@ -424,11 +472,15 @@ function init() {
   $("#btnHome")?.addEventListener("click", () => show("overview"));
   document.body.addEventListener("click", appClick); // body, not #app — drawer/palette live outside #app
   $("#app").addEventListener("input", testsInput);
-  // keyboard activation for focusable non-button controls (Enter / Space)
+  // keyboard activation for focusable non-button controls (Enter / Space).
+  // Covers both role="button" widgets AND role="link" entity navigators
+  // (data-go-subject/platform/faculty) so keyboard users can open entity pages.
   document.body.addEventListener("keydown", e => {
     if (e.key !== "Enter" && e.key !== " ") return;
-    const t = e.target.closest('[data-open-leaf],[data-jump-subj],[data-goto-leaf],[data-xgo],[data-quick-a],[data-open-video]');
-    if (t && t.getAttribute("role") === "button") { e.preventDefault(); t.click(); }
+    const t = e.target.closest('[data-open-leaf],[data-jump-subj],[data-goto-leaf],[data-xgo],[data-quick-a],[data-open-video],[data-go-subject],[data-go-platform],[data-go-faculty]');
+    if (!t) return;
+    const role = t.getAttribute("role");
+    if (role === "button" || role === "link") { e.preventDefault(); t.click(); }
   });
   // palette wiring
   $("#palInput").addEventListener("input", e => { palSel = 0; drawPalette(e.target.value); });
