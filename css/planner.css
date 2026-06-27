@@ -41,8 +41,9 @@
 /* ── tiers: three inset-grouped panels side by side on desktop ── */
 #view-planner .plan-tier-grid{
   display:grid;gap:var(--gap,16px);
-  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));
   margin:var(--sp-4,16px) 0}
+#view-planner .plan-tier-grid>*{min-width:0}
 #view-planner .plan-tier{margin:0;border-top:3px solid var(--ink-3)} /* grid owns spacing; tier color on top rule */
 #view-planner .plan-tier.hi{border-top-color:var(--cere)}
 #view-planner .plan-tier.mid{border-top-color:var(--gold)}
@@ -67,7 +68,8 @@
    ============================================================ */
 @media (max-width:640px){
   #view-planner .pl-frame{margin:12px 0}
-  #view-planner .plan-tier-grid{grid-template-columns:1fr;gap:12px;margin:12px 0}
+  #view-planner .plan-tier-grid{grid-template-columns:minmax(0,1fr);gap:12px;margin:12px 0}
+  #view-planner .pl-tier-rem{white-space:normal;overflow-wrap:anywhere}
   #view-planner .cf-legend .lg-ramp,
   #view-planner .cf-legend .lg-con,
   #view-planner .cf-legend .lg-best{margin-left:0;margin-right:12px}

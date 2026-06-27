@@ -7,14 +7,28 @@ const QB = { platform: "marrow", subject: null, sort: "hy", status: "all", hyOnl
 const QB_SORT_OPTS = [["hy", "High-yield"], ["mcqs", "Most MCQs"], ["rating", "Rating / difficulty"], ["name", "A–Z"], ["leastdone", "Least attempted"], ["completion", "Least complete"]];
 const QB_STATUS_OPTS = [["all", "All statuses"], ["untracked", "Yet to attempt"], ["attempted", "Attempted"], ["review", "Needs review"], ["mastered", "Mastered (retaken)"], ["starred", "My starred"], ["hard", "High difficulty (top-rated)"]];
 function qbDefaultSubject() { const s = subjectsOf(QB.platform); return s[0]; }
-/* N-way platform switch: segmented up to 3 banks, dropdown beyond */
+/* mobile fold breakpoint (matches css/qbank.css @media(max-width:640px)) */
+const QB_MOBILE_MQ = (typeof matchMedia === "function") ? matchMedia("(max-width:640px)") : { matches: false };
+function qbIsMobile() { return !!QB_MOBILE_MQ.matches; }
+/* re-draw the compact/full subject hero when crossing the fold breakpoint (rotation/resize) */
+if (QB_MOBILE_MQ.addEventListener) {
+  QB_MOBILE_MQ.addEventListener("change", () => { if ($("#qbContent")) drawSubject(); });
+} else if (QB_MOBILE_MQ.addListener) {
+  QB_MOBILE_MQ.addListener(() => { if ($("#qbContent")) drawSubject(); });
+}
+/* active-pill tint for the shared seg → only theme-tokened tints (CSS: .seg.marrow/.seg.cere);
+   any other bank falls back to the default ink pill, which themes correctly in evening. */
+const QSEG_TINT = { marrow: "marrow", cerebellum: "cere" };
+/* N-way platform switch: segmented up to 3 banks, dropdown beyond.
+   Uses the shared segmented() component (data-seg-v + tokened .seg tints) so the
+   active pill themes correctly in evening — no raw data-hex / #fff injected into markup. */
 function qbankSwitchHTML() {
   if (QBANKS.length > 3) {
     return `<select class="sel mini" id="qplat" title="QBank platform">${QBANKS.map(p =>
       `<option value="${p.id}" ${QB.platform === p.id ? "selected" : ""}>${esc(p.name)}</option>`).join("")}</select>`;
   }
-  return `<div class="seg" id="qseg">${QBANKS.map(p =>
-    `<button data-p="${p.id}" class="${QB.platform === p.id ? "on" : ""}"${QB.platform === p.id ? ` style="background:${p.color};color:#fff"` : ""}>${esc(p.name)}</button>`).join("")}</div>`;
+  const opts = QBANKS.map(p => ({ v: p.id, label: p.name }));
+  return segmented(opts, QB.platform, "qplatseg", QSEG_TINT[QB.platform] || "");
 }
 function switchQbankPlatform(id) {
   if (!id || id === QB.platform || !PLAT_BY_ID[id]) return;
@@ -63,7 +77,7 @@ function renderQbank() {
 
   $("#qsort").value = QB.sort; $("#qstatus").value = QB.status; $("#qSubjSort").value = QB.subjSort;
   // wiring — platform switch is segmented (≤3 banks) or a dropdown (>3)
-  const qseg = $("#qseg"); if (qseg) qseg.addEventListener("click", e => { const b = e.target.closest("button"); if (b) switchQbankPlatform(b.dataset.p); });
+  const qseg = $('[data-seg="qplatseg"]'); if (qseg) qseg.addEventListener("click", e => { const b = e.target.closest("[data-seg-v]"); if (b) switchQbankPlatform(b.dataset.segV); });
   const qplat = $("#qplat"); if (qplat) qplat.addEventListener("change", e => switchQbankPlatform(e.target.value));
   $("#qSubjSort").addEventListener("change", e => { QB.subjSort = e.target.value; drawSidebar(); });
   $("#qsearch").addEventListener("input", e => { QB.search = e.target.value; drawSidebar(); drawSubject(); });
@@ -140,8 +154,15 @@ function drawSubject() {
   const meta = subjMeta(QB.platform, subject);
   const cnon = canon(subject);
   const hyCount = ls.filter(l => l.priority === 3).length;
+  // Mobile fold (EXPERIENCE_DESIGN_SPEC §7: header + toolbar + ≥4 leaf rows must be visible
+  // at 375×812). On phones we keep the hero compact — hero MCQ tile + Attempted + Reviewed,
+  // plus the bigMeter — and DEFER the units/high-yield/mastered tiles and the per-subject
+  // heatmap (the same coverage×density viz already lives on the Subject entity page). Tiles
+  // stay in DOM in their canonical order (deferred ones hidden) so syncAfterToggle's positional
+  // indices remain valid; the matchMedia listener re-draws on breakpoint change.
+  const mob = qbIsMobile();
   // header — the ONE serif hero number per screen is the subject MCQ count (measured).
-  const head = el("div", "subj-hero");
+  const head = el("div", "subj-hero" + (mob ? " is-compact" : ""));
   head.innerHTML = `
     <div class="sh-top">
       <div class="sh-id">
@@ -160,6 +181,15 @@ function drawSubject() {
     </div>
     <div class="sh-progress">${bigMeter(ro)}</div>
     <div class="sh-heat">${subjectHeatmap(cnon, subject)}</div>`;
+  // Mobile fold: defer the units / high-yield / mastered tiles + the per-subject heatmap so
+  // header + sticky toolbar + ≥4 leaf rows clear the fold at 375×812. Kept in the DOM (just
+  // hidden inline) so syncAfterToggle's positional tile indices stay valid; the matchMedia
+  // listener re-draws on breakpoint change. The same coverage×density heatmap lives on the
+  // Subject entity page, so no judgment/firewall signal is lost.
+  if (mob) {
+    const tiles = $$(".sh-tiles .tile", head);
+    [tiles[1], tiles[4], tiles[5], $(".sh-heat", head)].forEach(n => { if (n) n.style.display = "none"; });
+  }
   host.appendChild(head);
 
   let tree = treeOf(QB.platform, subject);

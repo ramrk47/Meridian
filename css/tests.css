@@ -3,12 +3,16 @@
    Owns: score inputs, difficulty stars, the add-test form, and the
    per-surface tweaks to the shared KPI strip / chart plates.
 
-   NOTE (shared-layer gap): the chart bodies .rbars/.rb-* (rankedBars)
-   and .spark/.spk-* (sparkline) have no base styles in css/charts.css
-   yet — hy.css + platform.css already assume .rbars exists. Until the
-   integrator lands them in the shared charts.css, the rules below are
-   SCOPED to #view-tests so this surface renders correctly in isolation
-   and never collides with the eventual shared definition.
+   SHARED CHART BODIES (rankedBars .rbars/.rb-* + sparkline .spark/.spk-*):
+   the base layout below is now UNSCOPED so it applies on every surface
+   that emits a rankedBars chart (Planner, High-Yield, Platform entity,
+   Tests). tests.css is linked after charts.css/components.css but before
+   hy.css/planner.css, so these base rules act as the shared vocabulary
+   the integrator left empty in charts.css (the .rbars slot at charts.css
+   L19-20). The previous #view-tests scoping meant every other surface
+   rendered bar-less, collapsed text rows (rb-bar width:0); promoting the
+   base out of scope fixes planner/hy/platform while leaving only the
+   true per-surface deltas under #view-tests below.
    ============================================================ */
 
 /* ---------- add-test form ---------- */
@@ -42,21 +46,26 @@ table.tests td{vertical-align:middle}
 #view-tests .spk-tick{fill:var(--tick);font-size:9px;font-variant-numeric:tabular-nums}
 #view-tests .spk-cap{fill:var(--ink-3);font-size:9px}
 
-/* ---------- chartFrame body: rankedBars (scoped; shared gap) ---------- */
-#view-tests .rbars{display:flex;flex-direction:column;gap:9px}
-#view-tests .rbrow{display:grid;grid-template-columns:minmax(120px,160px) 1fr auto;
+/* ---------- chartFrame body: rankedBars (UNSCOPED — shared vocabulary) ----------
+   Applies on Planner, High-Yield, Platform entity AND Tests. The .rbrow grid
+   is name | track | value; .rb-track flexes so .rb-bar gets a real width and
+   .rb-val pins to the right. Without these, .rbrow falls back to inline and
+   .rb-bar collapses to width:0 — the bar-less broken-list bug on every
+   surface other than Tests. */
+.rbars{display:flex;flex-direction:column;gap:9px}
+.rbrow{display:grid;grid-template-columns:minmax(120px,160px) 1fr auto;
   align-items:center;gap:12px}
-#view-tests .rb-name{font-size:var(--t-row);color:var(--ink);font-weight:600;
+.rb-name{font-size:var(--t-row);color:var(--ink);font-weight:600;
   text-align:right;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#view-tests a.rb-name.is-link{cursor:pointer;text-decoration:none}
-#view-tests a.rb-name.is-link:hover{color:var(--accent);text-decoration:underline}
-#view-tests .rb-track{position:relative;display:flex;align-items:center;gap:8px;min-width:0}
-#view-tests .rb-bar{height:13px;border-radius:2px;min-width:3px;
+a.rb-name.is-link{cursor:pointer;text-decoration:none}
+a.rb-name.is-link:hover{color:var(--accent);text-decoration:underline}
+.rb-track{position:relative;display:flex;align-items:center;gap:8px;min-width:0}
+.rb-bar{height:13px;border-radius:2px;min-width:3px;
   transition:width .6s cubic-bezier(.22,.61,.36,1)}
-#view-tests .rb-mark{font-size:var(--t-meta);color:var(--ink-3);white-space:nowrap;
+.rb-mark{font-size:var(--t-meta);color:var(--ink-3);white-space:nowrap;
   font-variant-numeric:tabular-nums}
-#view-tests .rb-val{font-size:var(--t-row);font-weight:700;color:var(--ink);
-  font-variant-numeric:tabular-nums;text-align:right;min-width:42px}
+.rb-val{font-size:var(--t-row);font-weight:700;color:var(--ink);
+  font-variant-numeric:tabular-nums;text-align:right;min-width:42px;margin-left:auto}
 
 /* ---------- chartFrame legend keys (scoped) ---------- */
 #view-tests .cf-key{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;
@@ -69,8 +78,11 @@ table.tests td{vertical-align:middle}
 @media (max-width:640px){
   /* score inputs already widened by the shared table.tests.resp rule; keep tap targets */
   .btn{flex:1 1 100%}
-  #view-tests .rbrow{grid-template-columns:minmax(96px,1fr) 1.2fr auto;gap:9px}
-  #view-tests .rb-name{font-size:13px}
-  #view-tests .rb-mark{display:none}            /* keep the row to one bar + value on narrow */
-  #view-tests .rb-val{min-width:38px}
+  /* rankedBars mobile density — UNSCOPED so the bar stays visible + compact on
+     Planner / High-Yield / Platform as well as Tests at 375px. Narrow the name
+     column, drop the per-bar mark to keep the row to one bar + value. */
+  .rbrow{grid-template-columns:minmax(96px,1fr) 1.2fr auto;gap:9px}
+  .rb-name{font-size:13px}
+  .rb-mark{display:none}            /* keep the row to one bar + value on narrow */
+  .rb-val{min-width:38px}
 }

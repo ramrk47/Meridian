@@ -319,42 +319,18 @@ for f in faculty:
             pids.append({"platformId": pid}); seen.add(pid)
     f["platforms"] = pids
 
-# ---------- map D.videos[].facultyId where subject+platform confidently identifies ONE faculty ----------
-# CoreBTR is Cerebellum's video series, so a video maps to a faculty only when that faculty has a
-# Cerebellum affiliation AND is the UNIQUE seeded teacher of the video's canonical subject. Where
-# more than one (or zero) seeded faculty teach the subject, we leave facultyId unset (honest).
-_CANON = {
-    "Anatomy":"Anatomy","Physiology":"Physiology","Biochemistry":"Biochemistry","Pharmacology":"Pharmacology",
-    "Microbiology":"Microbiology","Pathology":"Pathology","Community Medicine":"Community Medicine / PSM",
-    "Forensic Medicine":"Forensic Medicine","Ophthalmology":"Ophthalmology","ENT":"ENT","Psychiatry":"Psychiatry",
-    "Radiology":"Radiology","Medicine":"Medicine","Surgery":"Surgery","Orthopaedics":"Orthopaedics",
-    "Paediatrics":"Paediatrics","Obstetrics and Gynaecology":"Obstetrics & Gynaecology","Dermatology":"Dermatology",
-    "Anaesthesia":"Anaesthesia","Anesthesia":"Anaesthesia",
-}
-def _canon(s): return _CANON.get(s, s)
-# video-subject -> canonical QBank subject (mirrors BTR_CANON in core.js)
-_BTR_CANON = {
-    "Anatomy":"Anatomy","Anesthesia":"Anaesthesia","Biochemistry":"Biochemistry","Dermatology":"Dermatology",
-    "ENT":"ENT","Forensic Medicine":"Forensic Medicine","General Pathology":"Pathology","General Pharmacology":"Pharmacology",
-    "General Physiology":"Physiology","Hematology":"Pathology","Immunology":"Microbiology","Integrated CVS":"Medicine",
-    "Integrated Renal-Electrolytes":"Medicine","Integrative Neurology":"Medicine","Microbiology":"Microbiology",
-    "Obstetrics and Gynaecology":"Obstetrics & Gynaecology","Ophthalmology":"Ophthalmology","Orthopedics":"Orthopaedics",
-    "Pediatrics":"Paediatrics","Preventive and Social Medicine":"Community Medicine / PSM","Psychiatry":"Psychiatry",
-    "Radiology":"Radiology","Surgery":"Surgery",
-}
-# canonical subject -> [faculty ids] for faculty with a Cerebellum affiliation
-_cere_by_subj = {}
-for f in faculty:
-    if any(a.get("platformId") == "cerebellum" for a in f.get("affiliations", []) or []):
-        for s in f.get("subjects", []):
-            _cere_by_subj.setdefault(_canon(s), []).append(f["id"])
-_vid_mapped = 0
-for v in btr_videos:
-    cc = _BTR_CANON.get(v["subject"])
-    facs = _cere_by_subj.get(cc, []) if cc else []
-    if len(facs) == 1:               # unique seeded teacher → confident
-        v["facultyId"] = facs[0]
-        _vid_mapped += 1
+# ---------- video → faculty attribution: INTENTIONALLY NOT EMITTED (neutrality firewall) ----------
+# We previously derived D.videos[].facultyId by picking the UNIQUE seeded Cerebellum teacher of a
+# video's canonical subject. That is a Meridian-side heuristic, NOT a source-backed fact: no entry in
+# faculty_sources.json ties any specific CoreBTR clip to any specific person — the sources only confirm
+# that a faculty teaches that subject on Cerebellum. Asserting it on individual video rows fabricates a
+# person-level attribution the sources do not support, and surfacing it as "Faculty of record
+# (directional)" mislabels a derived heuristic (which methodology.json defines as "proxy", not
+# "directional"). Per the firewall (no fabrication; aggregate-only), we DROP the inference at the source:
+# no facultyId is set on any video. The consuming surfaces already degrade honestly when it is absent
+# (empty "Videos by" panels show "none attributed yet"; no "Faculty of record" chip renders).
+# When a source actually attributes clips to people, populate facultyId from curated raw data here.
+_vid_mapped = 0  # kept for the build summary; no videos are attributed to a person without a source
 
 data = {
     "exam": "NEET PG / INI-CET",

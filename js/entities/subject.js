@@ -15,6 +15,37 @@
    Desktop ignores this (all panels render in the grid). */
 let _subjTab = "coverage";
 
+/* Single source of truth for "are we in single-panel (mobile) mode?".
+   Keyed on the SAME 640px breakpoint the CSS uses (css/subject.css).
+   We DO NOT stamp [hidden] in markup or rely on a stylesheet to un-hide
+   panels on desktop — a missing or late-loading css/subject.css must never
+   be able to collapse the multi-panel desktop layout. Instead JS itself
+   drives panel/toolbar visibility from this matchMedia state. */
+const _subjMQ = (typeof matchMedia === "function") ? matchMedia("(max-width:640px)") : null;
+function _subjIsMobile() { return !!(_subjMQ && _subjMQ.matches); }
+
+/* apply current breakpoint state to the live view: in single-panel mode show
+   only the active panel + the segmented toolbar; otherwise show every panel
+   and hide the (mobile-only) toolbar. Defensive: works with zero CSS. */
+function _subjApplyMode(view) {
+  const v = view || $("#view-subject"); if (!v) return;
+  const mobile = _subjIsMobile();
+  v.classList.toggle("single-panel", mobile);
+  const tb = v.querySelector(".subj-toolbar");
+  if (tb) tb.style.display = mobile ? "" : "none";
+  v.querySelectorAll(".subj-panel").forEach(p => {
+    p.hidden = mobile ? (p.dataset.panel !== _subjTab) : false;
+  });
+}
+
+/* one persistent breakpoint listener (module scope, attached once) so we
+   reflow on resize/orientation change without stacking a listener per render. */
+if (_subjMQ) {
+  const onChange = () => { const v = $("#view-subject"); if (v && v.childElementCount) _subjApplyMode(v); };
+  if (_subjMQ.addEventListener) _subjMQ.addEventListener("change", onChange);
+  else if (_subjMQ.addListener) _subjMQ.addListener(onChange); // older Safari
+}
+
 /* ---- data assembly for one canonical subject ---------------------------- */
 function _subjPlatStats(canonSubj) {
   // measured per-platform MCQ totals + module counts for this canonical subject
@@ -249,7 +280,10 @@ function renderSubjectPage(canonSubj) {
   const pVideos = _subjVideosPanel(canonSubj, cap);
   const pProgress = _subjProgressPanel(canonSubj, cap);
 
-  const wrap = (key, html) => `<div class="subj-panel" data-panel="${key}"${key === _subjTab ? "" : ' hidden'}>${html}</div>`;
+  // Render every panel VISIBLE by default (no [hidden] in markup). _subjApplyMode()
+  // below decides single-panel vs multi-panel from JS state, so a missing/late
+  // css/subject.css can never hide desktop content.
+  const wrap = (key, html) => `<div class="subj-panel" data-panel="${key}">${html}</div>`;
 
   v.innerHTML = `
     <div class="entity-head">
@@ -286,6 +320,13 @@ function renderSubjectPage(canonSubj) {
     const b = e.target.closest("button[data-seg-v]"); if (!b) return;
     _subjTab = b.dataset.segV;
     seg.querySelectorAll("button").forEach(x => { const on = x.dataset.segV === _subjTab; x.classList.toggle("on", on); x.setAttribute("aria-selected", on); });
-    v.querySelectorAll(".subj-panel").forEach(p => { p.hidden = (p.dataset.panel !== _subjTab); });
+    // single-panel mode: show only the active panel. (No-op visually on desktop,
+    // where _subjApplyMode keeps every panel visible.)
+    v.querySelectorAll(".subj-panel").forEach(p => { p.hidden = _subjIsMobile() && (p.dataset.panel !== _subjTab); });
   });
+
+  // apply the current breakpoint state now that the panels are in the DOM.
+  // Desktop -> all panels visible (independent of any stylesheet); mobile ->
+  // active panel only + sticky toolbar.
+  _subjApplyMode(v);
 }

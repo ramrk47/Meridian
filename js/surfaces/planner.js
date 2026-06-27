@@ -112,9 +112,14 @@ function renderPlanner() {
     + `<span class="lg-con"><span class="cpip on" style="border-color:var(--gold);background:var(--con-all)"></span>banks flag ★★★ (proxy)</span>`
     + `<span class="lg-best"><span class="pl-best">●</span>reputed strongest (directional)</span>`;
 
+  // No sourceIds: this figure is your-tracking remaining mass (measured local) +
+  // density proxy + an internal consensus computation — the reputation comparison
+  // sources (SS_SRC) do not substantiate it, so attaching them would lend false
+  // third-party authority. Method is disclosed by the proxy badge + note below;
+  // SS_SRC stays where it belongs (the reputed-strongest chip / tiers).
   v.appendChild(_planFrame(chartFrame(
     "MCQ mass remaining by subject — weak-first", "proxy",
-    SS_SRC.length ? SS_SRC : undefined, SS_CAP,
+    undefined, SS_CAP,
     rankedBars(items, { nosort: true }),
     {
       legend, plateNo: 1,

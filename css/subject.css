@@ -10,6 +10,12 @@
 #view-subject { overflow-x: clip; }
 #view-subject .cf-note, #view-subject .srcline, #view-subject .firewall-note { overflow-wrap: anywhere; }
 
+/* the segmented control (Coverage/Consensus/Teachers/Videos/You) can exceed
+   narrow viewports (≈417px) — scroll it INTERNALLY so it never widens the page.
+   min-width:0 lets the flex child shrink below its content's min-content width. */
+.subj-toolbar .seg { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; min-width: 0; }
+.subj-toolbar .seg button { white-space: nowrap; }
+
 /* stat-tile strip: density on this entity's hero metrics */
 .subj-tiles { margin-bottom: var(--gap); }
 

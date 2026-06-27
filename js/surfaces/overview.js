@@ -6,6 +6,11 @@
    consensusMark / ratingScorecard / chartFrame / panel) — every datum
    epistemically labelled + sourced; entity links route the IMDB triangle.
    ============================================================ */
+/* heatmap row cap — collapse to top-N subjects by mass on the Atlas home, with a
+   "show all" toggle (mirrors Progress's 16-row cap + the spec's ≤360px collapse). */
+let OV_HEAT_ALL = false;
+const OV_HEAT_CAP = 14;
+
 function renderOverview() {
   resetPlates();                                  // each surface starts at Pl. 1
   const v = $("#view-overview"); v.innerHTML = "";
@@ -103,7 +108,11 @@ function renderOverview() {
     if (top) strongBy[canon(r.subject)] = top.platformId;
   });
 
-  const hmRows = subjectsRanked.map(c => ({ key: c, label: c, go: "subject:" + c }));
+  // cap to top-N subjects by mass (subjectsRanked is already sorted by subTotal desc);
+  // a "show all" toggle reveals the long tail so the hero viz never dominates the home.
+  const heatCapped = !OV_HEAT_ALL && subjectsRanked.length > OV_HEAT_CAP;
+  const hmSubjects = heatCapped ? subjectsRanked.slice(0, OV_HEAT_CAP) : subjectsRanked;
+  const hmRows = hmSubjects.map(c => ({ key: c, label: c, go: "subject:" + c }));
   const hmCols = QBANKS.map(p => ({ id: p.id, label: p.name, color: platColor(p.id) }));
   const hmVal = (rowKey, colId) => {
     const raw = (subMap[rowKey] || {})[colId] || 0;
@@ -116,17 +125,29 @@ function renderOverview() {
     `<i style="background:var(--y3)"></i><i style="background:var(--y4)"></i><i style="background:var(--y5)"></i></span>MCQ density ${epiBadge("proxy")}</span>` +
     (Object.keys(strongBy).length
       ? `<span class="cf-key"><span class="lg-ring"></span>community-reputed strongest ${epiBadge("directional")}</span>` : "");
+  const heatToggle = subjectsRanked.length > OV_HEAT_CAP
+    ? ` <button class="linkbtn" type="button" data-ov-heat-toggle>` +
+      (OV_HEAT_ALL
+        ? `Show top ${OV_HEAT_CAP} ↑`
+        : `Show all ${subjectsRanked.length} subjects ↓`) + `</button>`
+    : "";
   const heatNote = "Cell shade = within-subject MCQ density (proxy, not measured exam yield). Counts are measured. " +
     "Gold ring = the platform aspirants most often call strongest for that subject — community reputation, directional. " +
-    "Tap a cell for the raw count; tap a subject to open its page.";
-  v.appendChild(el("div", "", chartFrame(
+    "Tap a cell for the raw count; tap a subject to open its page." +
+    (heatCapped ? ` Showing the top ${OV_HEAT_CAP} subjects by MCQ mass.` : "") + heatToggle;
+  const heatFig = el("div", "", chartFrame(
     "Subject × platform — MCQ density",
     "proxy",
     (CUR.strength?.sourceIds || []),
     CUR.strength?.captured || D.captured,
     heatmap(hmRows, hmCols, hmVal, { ringFn: c => strongBy[c] || null }),
     { legend: heatLegend, note: heatNote }
-  )));
+  ));
+  // self-contained toggle wiring (this surface re-renders via renderOverview)
+  heatFig.querySelector("[data-ov-heat-toggle]")?.addEventListener("click", () => {
+    OV_HEAT_ALL = !OV_HEAT_ALL; renderOverview();
+  });
+  v.appendChild(heatFig);
 
   /* ============================================================
      §4  CONSENSUS + RELIABILITY — judgment band (two panels desktop).

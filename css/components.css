@@ -513,9 +513,11 @@ h3 .epi{vertical-align:2px}
   table.resp td:has(.pbar){display:block}
   table.resp td:has(.pbar)::before{display:block;margin-bottom:7px}
   /* tests: larger score inputs in card mode */
-  table.tests.resp .sin{width:84px;height:40px;font-size:16px}
-  table.tests.resp .diff{display:flex;gap:4px}
-  table.tests.resp .ds{font-size:22px;padding:2px}
+  table.tests.resp .sin{width:84px;height:44px;font-size:16px}
+  table.tests.resp .diff{display:flex;gap:0}
+  /* each star is its own tap control — 44px centered hit-area, glyph stays 22px */
+  table.tests.resp .ds{font-size:22px;padding:0;min-width:44px;min-height:44px;
+    display:inline-flex;align-items:center;justify-content:center}
 
   /* --- detail drawer → bottom sheet --- */
   .drawer{top:auto;right:0;left:0;bottom:0;width:100%;max-width:100%;height:auto;max-height:88vh;
@@ -563,7 +565,10 @@ h3 .epi{vertical-align:2px}
 /* coarse-pointer (touch) anywhere: remove hover-only reveals, enlarge taps */
 @media (hover:none){
   .leaf-link,.mini-n,.vtopic{ -webkit-tap-highlight-color:transparent }
-  .tbtn,.chipbtn,.ghostbtn,.btn,.linkbtn{min-height:40px}
+  .tbtn,.chipbtn,.ghostbtn,.btn,.linkbtn{min-height:44px}
+  /* entity chips are real nav controls in dense subs — grow hit-area to 44px via padding,
+     not line-height, so they still wrap inline inside .lrow-sub */
+  .echip,a.echip{display:inline-flex;align-items:center;min-height:44px;padding-top:0;padding-bottom:0}
 }
 
 /* ============================================================
@@ -716,4 +721,9 @@ a.lrow.is-link:hover{background:var(--paper-3)}
 }
 @media (max-width:370px){
   .tiles{grid-template-columns:1fr 1fr}
+}
+/* desktop: dense KPI deck — 6 tiles flow into one row instead of a sparse 2-col block.
+   Entity views + #view-overview carry container-type:inline-size, so this is container-scoped. */
+@container (min-width:760px){
+  .tiles{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--gap)}
 }

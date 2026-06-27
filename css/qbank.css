@@ -123,7 +123,9 @@ a.hm-rl.is-link:hover{color:var(--accent);text-decoration:underline;text-underli
 button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-height:1}
 .leaf-link{border-radius:4px}
 
-@media(max-width:840px){
+/* tablet band only (641–840): single column + vertical sidebar list.
+   Gated >640 so it never clobbers the mobile chip-strip below (≤640). */
+@media(min-width:641px) and (max-width:840px){
   .qb-layout{grid-template-columns:1fr}
   .qb-side{position:static;max-height:none;flex-direction:column}
   .sb-list{max-height:220px}
@@ -131,6 +133,27 @@ button.pinstar{background:transparent;border:0;padding:0;font:inherit;line-heigh
 
 /* ---- mobile density layer (≤640) ---- */
 @media(max-width:640px){
+  /* sidebar → horizontal scroll-snap chip-strip. Re-asserted here (qbank.css loads
+     after components.css) so it beats this file's non-media base column rules
+     (.qb-side L7, .sb-list L10-11) on source order. Mirrors components.css ≤640. */
+  .qb-layout{grid-template-columns:minmax(0,1fr);gap:12px}
+  .qb-side{position:static;max-height:none;flex-direction:row;flex-wrap:wrap;gap:8px;min-width:0}
+  /* subject-sort is a desktop affordance: a full-width native <select> stacked above the data is
+     the mobile anti-pattern (MOBILE_DESIGN_STANDARD). Hide it on mobile to reclaim the fold row —
+     chips default to "by size". Scoped to #qSubjSort so the >3-platform #qplat dropdown survives. */
+  #view-qbank #qSubjSort{display:none}
+  .sb-list{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;overflow-y:visible;max-height:none;
+    gap:8px;min-width:0;width:100%;padding:2px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .sb-item{flex:0 0 auto;width:auto;min-height:44px;border:1px solid var(--line-2);border-radius:22px;
+    padding:8px 15px;scroll-snap-align:start}
+  .sb-item .meter-bar{display:none}              /* keep chip compact: text count only */
+  .sb-item .meter{gap:0}
+  /* control bar: ONE compact row — search flexes, icon-buttons + hi-yield pill stay inline.
+     Beats this file's non-media .qb-controls{flex-wrap:wrap} (L26) on source order. */
+  .qb-controls{gap:7px;padding:9px 0;flex-wrap:nowrap;align-items:center}
+  .qb-controls .search{flex:1 1 auto;min-width:0}
+  .qb-controls #qHy{flex:none;min-height:44px}
+
   .subj-hero{padding:2px 0 12px}
   .sh-name{font-size:var(--t-display)}
   .sh-tiles{grid-template-columns:1fr 1fr;gap:7px}

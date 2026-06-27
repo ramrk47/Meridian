@@ -20370,8 +20370,7 @@ window.D = {
    "timerange": "00:00:16 - 00:26:23",
    "durMin": 26,
    "confidence": "high",
-   "file": "01 - Cell injury [high].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "01 - Cell injury [high].mp4"
   },
   {
    "id": "v-btr-general-pathology-2",
@@ -20382,8 +20381,7 @@ window.D = {
    "timerange": "00:26:23 - 00:44:57",
    "durMin": 19,
    "confidence": "estimated",
-   "file": "02 - Miscellaneous pathology [estimated].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "02 - Miscellaneous pathology [estimated].mp4"
   },
   {
    "id": "v-btr-general-pathology-3",
@@ -20394,8 +20392,7 @@ window.D = {
    "timerange": "00:44:57 - 01:18:23",
    "durMin": 33,
    "confidence": "high",
-   "file": "03 - Neoplasia [high].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "03 - Neoplasia [high].mp4"
   },
   {
    "id": "v-btr-general-pharmacology-1",
@@ -20406,8 +20403,7 @@ window.D = {
    "timerange": "00:00:00 - 00:01:04",
    "durMin": 1,
    "confidence": "estimated",
-   "file": "01 - General pharmacology [estimated].mp4",
-   "facultyId": "fac-gobind-rai-garg"
+   "file": "01 - General pharmacology [estimated].mp4"
   },
   {
    "id": "v-btr-general-pharmacology-2",
@@ -20418,8 +20414,7 @@ window.D = {
    "timerange": "00:01:04 - 01:27:28",
    "durMin": 86,
    "confidence": "high",
-   "file": "02 - ANS [high].mp4",
-   "facultyId": "fac-gobind-rai-garg"
+   "file": "02 - ANS [high].mp4"
   },
   {
    "id": "v-btr-general-pharmacology-3",
@@ -20430,8 +20425,7 @@ window.D = {
    "timerange": "01:27:28 - 01:51:06",
    "durMin": 24,
    "confidence": "high",
-   "file": "03 - Anti-cancer drugs [high].mp4",
-   "facultyId": "fac-gobind-rai-garg"
+   "file": "03 - Anti-cancer drugs [high].mp4"
   },
   {
    "id": "v-btr-general-physiology-1",
@@ -20497,8 +20491,7 @@ window.D = {
    "timerange": "00:00:00 - 00:57:09",
    "durMin": 57,
    "confidence": "estimated",
-   "file": "01 - RBC disorders [estimated].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "01 - RBC disorders [estimated].mp4"
   },
   {
    "id": "v-btr-hematology-2",
@@ -20509,8 +20502,7 @@ window.D = {
    "timerange": "00:57:09 - 02:39:48",
    "durMin": 103,
    "confidence": "estimated",
-   "file": "02 - WBC disorders [estimated].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "02 - WBC disorders [estimated].mp4"
   },
   {
    "id": "v-btr-hematology-3",
@@ -20521,8 +20513,7 @@ window.D = {
    "timerange": "02:39:48 - 03:18:28",
    "durMin": 39,
    "confidence": "medium",
-   "file": "03 - Platelet and coagulation disorders [medium].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "03 - Platelet and coagulation disorders [medium].mp4"
   },
   {
    "id": "v-btr-hematology-4",
@@ -20533,8 +20524,7 @@ window.D = {
    "timerange": "03:18:28 - 03:48:36",
    "durMin": 30,
    "confidence": "high",
-   "file": "04 - Transfusion medicine [high].mp4",
-   "facultyId": "fac-sparsh-gupta"
+   "file": "04 - Transfusion medicine [high].mp4"
   },
   {
    "id": "v-btr-immunology-1",
@@ -21238,8 +21228,7 @@ window.D = {
    "timerange": "01:22:22 - 01:59:02",
    "durMin": 37,
    "confidence": "high",
-   "file": "01 - Clinical tests [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "01 - Clinical tests [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-2",
@@ -21250,8 +21239,7 @@ window.D = {
    "timerange": "01:59:02 - 02:04:17",
    "durMin": 5,
    "confidence": "high",
-   "file": "02 - Nerve injuries [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "02 - Nerve injuries [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-3",
@@ -21262,8 +21250,7 @@ window.D = {
    "timerange": "02:04:17 - 02:48:00",
    "durMin": 44,
    "confidence": "high",
-   "file": "03 - Fractures [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "03 - Fractures [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-4",
@@ -21274,8 +21261,7 @@ window.D = {
    "timerange": "02:48:00 - 03:03:24",
    "durMin": 15,
    "confidence": "high",
-   "file": "04 - Bone infections [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "04 - Bone infections [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-5",
@@ -21286,8 +21272,7 @@ window.D = {
    "timerange": "03:03:24 - 03:07:32",
    "durMin": 4,
    "confidence": "medium",
-   "file": "05 - Spine pathologies and scoliosis [medium].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "05 - Spine pathologies and scoliosis [medium].mp4"
   },
   {
    "id": "v-btr-orthopedics-6",
@@ -21298,8 +21283,7 @@ window.D = {
    "timerange": "03:07:32 - 03:39:30",
    "durMin": 32,
    "confidence": "high",
-   "file": "06 - Bone tumors [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "06 - Bone tumors [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-7",
@@ -21310,8 +21294,7 @@ window.D = {
    "timerange": "03:39:30 - 04:05:46",
    "durMin": 26,
    "confidence": "high",
-   "file": "07 - Metabolic bone diseases [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "07 - Metabolic bone diseases [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-8",
@@ -21322,8 +21305,7 @@ window.D = {
    "timerange": "04:05:46 - 04:33:38",
    "durMin": 28,
    "confidence": "high",
-   "file": "08 - Pediatric orthopedics [high].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "08 - Pediatric orthopedics [high].mp4"
   },
   {
    "id": "v-btr-orthopedics-9",
@@ -21334,8 +21316,7 @@ window.D = {
    "timerange": "04:33:38 - 04:41:13",
    "durMin": 8,
    "confidence": "medium",
-   "file": "09 - Miscellaneous [medium].mp4",
-   "facultyId": "fac-apurv-mehra"
+   "file": "09 - Miscellaneous [medium].mp4"
   },
   {
    "id": "v-btr-pediatrics-1",
@@ -21434,8 +21415,7 @@ window.D = {
    "timerange": "00:00:02 - 01:39:06",
    "durMin": 99,
    "confidence": "high",
-   "file": "01 - Epidemiology [high].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "01 - Epidemiology [high].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-2",
@@ -21446,8 +21426,7 @@ window.D = {
    "timerange": "01:39:06 - 02:34:18",
    "durMin": 55,
    "confidence": "high",
-   "file": "02 - Biostatistics [high].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "02 - Biostatistics [high].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-3",
@@ -21458,8 +21437,7 @@ window.D = {
    "timerange": "02:34:18 - 03:21:41",
    "durMin": 47,
    "confidence": "high",
-   "file": "03 - Vaccines [high].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "03 - Vaccines [high].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-4",
@@ -21470,8 +21448,7 @@ window.D = {
    "timerange": "03:21:41 - 03:46:32",
    "durMin": 25,
    "confidence": "high",
-   "file": "04 - Demography [high].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "04 - Demography [high].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-5",
@@ -21482,8 +21459,7 @@ window.D = {
    "timerange": "03:46:32 - 04:32:05",
    "durMin": 46,
    "confidence": "high",
-   "file": "05 - Nutrition [high].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "05 - Nutrition [high].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-6",
@@ -21494,8 +21470,7 @@ window.D = {
    "timerange": "04:32:05 - 04:53:41",
    "durMin": 22,
    "confidence": "low",
-   "file": "06 - Health programs [low].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "06 - Health programs [low].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-7",
@@ -21506,8 +21481,7 @@ window.D = {
    "timerange": "04:53:41 - 05:49:10",
    "durMin": 55,
    "confidence": "high",
-   "file": "07 - Environment [high].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "07 - Environment [high].mp4"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-8",
@@ -21518,8 +21492,7 @@ window.D = {
    "timerange": "05:49:10 - 06:01:13",
    "durMin": 12,
    "confidence": "medium",
-   "file": "08 - Miscellaneous [medium].mp4",
-   "facultyId": "fac-vivek-jain-psm"
+   "file": "08 - Miscellaneous [medium].mp4"
   },
   {
    "id": "v-btr-psychiatry-1",
@@ -21530,8 +21503,7 @@ window.D = {
    "timerange": "00:00:02 - 01:11:50",
    "durMin": 72,
    "confidence": "low",
-   "file": "01 - Basics of psychiatry [low].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "01 - Basics of psychiatry [low].mp4"
   },
   {
    "id": "v-btr-psychiatry-2",
@@ -21542,8 +21514,7 @@ window.D = {
    "timerange": "01:11:50 - 01:31:20",
    "durMin": 20,
    "confidence": "medium",
-   "file": "02 - Psychotic disorders and anti-psychotics [medium].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "02 - Psychotic disorders and anti-psychotics [medium].mp4"
   },
   {
    "id": "v-btr-psychiatry-3",
@@ -21554,8 +21525,7 @@ window.D = {
    "timerange": "01:31:20 - 02:03:38",
    "durMin": 32,
    "confidence": "low",
-   "file": "03 - Mood disorders and anti-depressants [low].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "03 - Mood disorders and anti-depressants [low].mp4"
   },
   {
    "id": "v-btr-psychiatry-4",
@@ -21566,8 +21536,7 @@ window.D = {
    "timerange": "02:03:38 - 02:19:25",
    "durMin": 16,
    "confidence": "low",
-   "file": "04 - Anxiety and related disorders [low].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "04 - Anxiety and related disorders [low].mp4"
   },
   {
    "id": "v-btr-psychiatry-5",
@@ -21578,8 +21547,7 @@ window.D = {
    "timerange": "02:19:25 - 02:27:19",
    "durMin": 8,
    "confidence": "high",
-   "file": "05 - Childhood psychiatry [high].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "05 - Childhood psychiatry [high].mp4"
   },
   {
    "id": "v-btr-psychiatry-6",
@@ -21590,8 +21558,7 @@ window.D = {
    "timerange": "02:27:19 - 02:40:31",
    "durMin": 13,
    "confidence": "low",
-   "file": "06 - Sleep and related disorders [low].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "06 - Sleep and related disorders [low].mp4"
   },
   {
    "id": "v-btr-psychiatry-7",
@@ -21602,8 +21569,7 @@ window.D = {
    "timerange": "02:40:31 - 02:52:38",
    "durMin": 12,
    "confidence": "medium",
-   "file": "07 - Miscellaneous [medium].mp4",
-   "facultyId": "fac-praveen-tripathi"
+   "file": "07 - Miscellaneous [medium].mp4"
   },
   {
    "id": "v-btr-radiology-1",
@@ -22377,16 +22343,16 @@ window.D = {
     },
     {
      "platformId": "prepladder",
-     "role": "pharmacology faculty (session contributor)",
+     "role": "guest MCQ-marathon session (May 2022)",
      "subjects": [
       "Pharmacology"
      ],
-     "from": null,
-     "to": null,
+     "from": "2022",
+     "to": "2022",
      "status": "past",
      "fromApproximate": true,
      "toApproximate": true,
-     "note": "PrepLadder Facebook page (May 2022) confirms he ran a live MCQ Marathon for PrepLadder. Exact tenure unknown; likely before Cerebellum launch (2022)."
+     "note": "Sole basis is one PrepLadder Facebook post (May 4, 2022) advertising a single live Pharmacology 'MCQ Marathon' session. This is a one-off guest session, NOT a documented staff tenure — no employment-level source exists. Rendered as a session, not as employment."
     },
     {
      "platformId": "cerebellum",

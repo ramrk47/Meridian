@@ -23,14 +23,14 @@
         },
         {
           "platformId": "prepladder",
-          "role": "pharmacology faculty (session contributor)",
+          "role": "guest MCQ-marathon session (May 2022)",
           "subjects": ["Pharmacology"],
-          "from": null,
-          "to": null,
+          "from": "2022",
+          "to": "2022",
           "status": "past",
           "fromApproximate": true,
           "toApproximate": true,
-          "note": "PrepLadder Facebook page (May 2022) confirms he ran a live MCQ Marathon for PrepLadder. Exact tenure unknown; likely before Cerebellum launch (2022)."
+          "note": "Sole basis is one PrepLadder Facebook post (May 4, 2022) advertising a single live Pharmacology 'MCQ Marathon' session. This is a one-off guest session, NOT a documented staff tenure — no employment-level source exists. Rendered as a session, not as employment."
         },
         {
           "platformId": "cerebellum",

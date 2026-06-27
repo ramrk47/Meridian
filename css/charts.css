@@ -49,3 +49,42 @@
 .cf-key .lg-seg.st-current{border-top-color:var(--accent-2)}
 .cf-key .lg-seg.st-past{border-top-color:var(--line-2)}
 .cf-key .lg-seg.st-solo{border-top-color:var(--gold);border-top-style:dashed}
+
+/* ---------- facultyTimeline — DESKTOP horizontal time axis (≥1024px) ----------
+   §3.5 spec: horizontal time axis on desktop / vertical on mobile. Same markup
+   (.ftl > .ftl-item, sorted by from-year in facultyTimeline()); at desktop width
+   the vertical rail becomes a left→right career axis that USES the width:
+   items flow as columns, the spine runs horizontal across the TOP edge, nodes
+   sit ON the axis, and each affiliation's status colors its own axis segment
+   (current=pine, past=muted, solo/superspecialty=gold dashed). The cross-platform
+   movement now reads chronologically across the page, not down a narrow column. */
+@media (min-width:1024px){
+  .ftl{
+    display:flex;flex-direction:row;align-items:stretch;
+    gap:0;padding:18px 0 0 0;overflow-x:auto;
+    scrollbar-width:thin;-webkit-overflow-scrolling:touch;
+  }
+  /* each affiliation becomes a column on the axis; min-width keeps segments
+     legible while flex-grow lets longer-running roles claim more width */
+  .ftl .ftl-item{
+    flex:1 1 0;min-width:148px;
+    padding:18px 16px 2px 0;
+    border-left:none;                 /* drop the vertical spine */
+    border-top:2px solid var(--line); /* the horizontal time axis */
+  }
+  .ftl .ftl-item:last-child{padding-bottom:2px;padding-right:0}
+  .ftl .ftl-item.st-current{border-top-color:var(--accent-2)}
+  .ftl .ftl-item.st-past{border-top-color:var(--line-2)}
+  .ftl .ftl-item.st-solo,
+  .ftl .ftl-item.st-superspecialty{border-top-color:var(--gold);border-top-style:dashed}
+  /* node moves onto the horizontal axis (top edge), left-aligned = its start */
+  .ftl .ftl-item .ftl-node{
+    left:0;top:-7px;
+  }
+  /* status emphasis ring already keyed off .st-current .ftl-node (still applies) */
+  .ftl .ftl-item .ftl-body{padding-right:8px}
+  /* span sits up by the axis as the year label; body details read below it */
+  .ftl .ftl-item .ftl-span{margin-top:0;order:-1;margin-bottom:4px}
+  .ftl .ftl-item .ftl-body{display:flex;flex-direction:column}
+  .ftl .ftl-item .ftl-subs{margin-top:6px}
+}

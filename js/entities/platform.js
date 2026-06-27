@@ -82,7 +82,7 @@ function renderPlatformPage(id) {
   const topSub = subjects.slice().sort((a, b) => b._mcqs - a._mcqs)[0];
   const tiles = `<div class="tiles">`
     + statTile({ accent: platCls(id), value: reli && reli.rating != null ? (reli.ratingApprox ? "~" : "") + reli.rating : "—", label: "RATING ★", note: reli ? (reli.ratingsLabel || "App Store") : "no public rating", epi: reli ? "public-3p" : null })
-    + statTile({ accent: platCls(id), value: fmt(totalMCQ), label: "MCQs", note: "across " + subjects.length + " subjects", hero: true })
+    + statTile({ accent: platCls(id), value: fmt(totalMCQ), label: "MCQs", note: "across " + subjects.length + " subjects" })
     + statTile({ accent: platCls(id), value: subjects.length, label: "SUBJECTS", note: topSub ? "top: " + esc(canon(topSub.subject)) : "" })
     + statTile({ value: roster.length || "—", label: "FACULTY", note: roster.length ? "with affiliations here" : "none seeded yet", epi: roster.length ? "directional" : null })
     + statTile({ value: ro.a, label: "YOU ATTEMPTED", note: pct(ro.a, ro.total) + "% of " + fmt(ro.total) + " " + esc(unitNoun), epi: "measured" })
@@ -131,14 +131,22 @@ function renderPlatformPage(id) {
     }
   );
 
-  /* desktop-only treemap of the same mass (degrades to the bars above on mobile) */
-  const tmItems = covItems.filter(i => i.value > 0).map(i => ({ label: i.label, value: i.value, go: i.go }));
-  const treemapPlate = chartFrame(
-    "Where the mass sits — treemap",
-    "measured", [], D.captured,
-    treemap(tmItems),
-    { note: "Tile area = MCQ mass per subject (measured). Desktop view of the same data as the ranked bars — tap a tile to open the Subject page." }
-  );
+  /* desktop-only treemap of the same mass (≥1024); degrades to the ranked bars
+     above on narrow viewports. Gate in JS so the contract holds even where the
+     `.plat-treemap{display:none}` CSS gate is not linked — a thin treemap is
+     unreadable and would otherwise duplicate the coverage bars on mobile. */
+  const isDesktop = (typeof matchMedia !== "function") || matchMedia("(min-width:1024px)").matches;
+  let treemapBand = "";
+  if (isDesktop) {
+    const tmItems = covItems.filter(i => i.value > 0).map(i => ({ label: i.label, value: i.value, go: i.go }));
+    const treemapPlate = chartFrame(
+      "Where the mass sits — treemap",
+      "measured", [], D.captured,
+      treemap(tmItems),
+      { note: "Tile area = MCQ mass per subject (measured). Desktop view of the same data as the ranked bars — tap a tile to open the Subject page." }
+    );
+    treemapBand = `<div class="plat-treemap">${treemapPlate}</div>`;
+  }
 
   /* ---- FACULTY ROSTER (gated; aggregate-only; → Faculty pages) ---- */
   let facultyPanel;
@@ -208,5 +216,5 @@ function renderPlatformPage(id) {
   v.innerHTML = head + tiles
     + `<div class="panel-grid">${reliPlate}${coverage}</div>`
     + `<div class="inst-grid">${facultyPanel}${tracking}</div>`
-    + `<div class="plat-treemap">${treemapPlate}</div>`;
+    + treemapBand;
 }

@@ -64,9 +64,9 @@ function renderVideos() {
   v.appendChild(_facultyRollupSection(roll));
 
   v.appendChild(el("div", "callout",
-    `<b>Video tracking.</b> Your CoreBTR lecture set, cut topic-by-topic. Mark <b>Watched</b> / <b>Revised</b>; each clip is wired to the
-     <b>question-bank modules it covers</b> across Marrow &amp; Cerebellum — open a clip for suggested modules, jumps, and the faculty of record.
-     This layer is source-agnostic: any future video set drops in the same way.`));
+    `<b>Video tracking.</b> Your CoreBTR lecture set, cut topic-by-topic. Mark <b>Watched</b> / <b>Revised</b>; each clip is
+     <b>matched to the question-bank modules it likely covers</b> across Marrow &amp; Cerebellum by topic similarity ${epiDot("proxy")} — open a
+     clip for suggested modules, jumps, and the faculty of record. This layer is source-agnostic: any future video set drops in the same way.`));
 
   /* ── sidebar + dense rows (reuses the mobile-sticky qb shell) ── */
   const layout = el("div", "qb-layout");
@@ -210,7 +210,8 @@ function openVideoDrawer(id) {
     </div>
     ${facs.length ? `<div class="dr-sec"><div class="dr-lbl">Faculty of record <span class="epi directional" title="directional — community-sourced career history">directional</span></div>
       <div class="echips">${facs.map(f => `<a class="echip is-link" data-go-faculty="${esc(f.id)}">${esc(f.name)}</a>`).join("")}</div></div>` : ""}
-    <div class="dr-sec"><div class="dr-lbl">Question-bank modules this video covers</div>
+    <div class="dr-sec"><div class="dr-lbl">Question-bank modules this video likely covers <span class="epi proxy" title="proxy — matched by topic similarity, not a known coverage relation">proxy</span></div>
+      <div class="muted small">Matched by topic similarity — not a verified coverage map.</div>
       ${sugg.length ? sugg.map(l => drLink(l)).join("") : `<div class="muted small">No close module match — try the command palette.</div>`}</div>
     <div class="dr-sec"><div class="dr-lbl">Related tests</div>
       ${cc ? relatedTests(cc).map(t => `<button class="dr-itemlink" data-goto-test="${esc(t.id)}"><span>${esc(t.name)}</span><span class="muted">${t.platform}</span></button>`).join("") || `<div class="muted small">—</div>` : `<div class="muted small">—</div>`}</div>`;

@@ -163,7 +163,7 @@ function readPlateSheet(epi, srcIds, captured) {
 
 /* §2.x bottomSheetOpt — a single sheet option row (used by openSheet bodies) */
 function bottomSheetOpt(v, label, on) {
-  return `<button class="sheet-opt ${on ? "on" : ""}" data-sheet-v="${esc(v)}">${esc(label)}${on ? ' <span class="tick">✓</span>' : ""}</button>`;
+  return `<button class="sheet-opt ${on ? "on" : ""}" data-v="${esc(v)}">${esc(label)}${on ? ' <span class="tick">✓</span>' : ""}</button>`;
 }
 
 /* ============================================================
@@ -180,7 +180,10 @@ function bottomSheetOpt(v, label, on) {
    opts.compact (mobile) → initials + dot, sized to col count so it NEVER page-scrolls. */
 function heatmap(rows, cols, valueFn, opts) {
   opts = opts || {};
-  const compact = !!opts.compact;
+  // Mobile auto-engages compact mode (initials M/C/D + color dot) so headers
+  // NEVER mid-word truncate to "CEREBELL…"; callers needn't pass compact:true.
+  const isMobile = (typeof matchMedia === "function") && matchMedia("(max-width:640px)").matches;
+  const compact = !!opts.compact || isMobile;
   const colTpl = `120px repeat(${cols.length}, 1fr)`;
   const head = `<div class="hm-row hm-head" style="grid-template-columns:${colTpl}">`
     + `<span class="hm-corner"></span>`

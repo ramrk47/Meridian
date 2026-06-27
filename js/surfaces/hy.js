@@ -13,6 +13,10 @@
    ============================================================ */
 let hySubject = "all", hyStatus = "all";
 
+/* status filter options — shared [v,label] tuple shape with QBank (QB_STATUS_OPTS),
+   so the same desktop-select + mobile-bottom-sheet toolbar idiom is reused here. */
+const HY_STATUS_OPTS = [["all", "All statuses"], ["untracked", "Yet to attempt"], ["attempted", "Attempted"], ["review", "Needs review"], ["mastered", "Mastered"], ["starred", "My starred"]];
+
 function hyLeafMatch(l) {
   const p = Store.prog(l.id), st = Store.state.stars[l.id];
   switch (hyStatus) {
@@ -95,7 +99,7 @@ function renderHY() {
     `<b>This tab ranks MCQ density ${epiBadge("proxy")} — a proxy, not measured exam yield.</b>
      ★★★ marks the topics carrying the most question mass <em>within their subject</em> (Marrow: star-rating × MCQ share · Cerebellum: volume × density · DocTutorials: MCQ share).
      We hold no PYQ-weighted exam-frequency data, so we never claim real "high-yield" — it's an honest prioritisation signal. The strongest signal we can build is <b>consensus</b>: a topic that two or more independent banks both flag.
-     <span class="muted">Click any subject or topic to open it. Full method → How we rate, on Overview.</span>`));
+     <span class="muted">Click any subject or topic to open it. Full method → <button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button></span>`));
 
   /* ──────────────────────────────────────────────────────────
      Pl.1 — RELATIONAL HERO: density mass by subject, consensus-ranked.
@@ -120,12 +124,17 @@ function renderHY() {
     + `<span class="lg-con"><span class="cpip on" style="border-color:var(--gold);background:var(--con-all)"></span>banks agree (proxy)</span>`
     + `<span class="lg-best"><span class="hy-best">●</span>reputed strongest (directional)</span>`;
 
+  // Source attribution: the density + consensus figure is a Meridian-derived proxy
+  // over measured MCQ counts — the proxy badge + note disclose the method, so we cite
+  // NO third-party source for it. SS_SRC (subjectStrength: reputation blogs/Quora) backs
+  // ONLY the directional "community-reputed strongest" gold chip, disclosed inline below.
   v.appendChild(_frame(chartFrame(
     "MCQ-density mass by subject — consensus-ranked", "proxy",
-    SS_SRC.length ? SS_SRC : undefined, CAP,
+    undefined, CAP,
     rankedBars(subjItems, { nosort: true }),
     { legend: massLegend, plateNo: 1,
-      note: `Bar length = combined MCQ mass (measured) · fill = within-set density (proxy) · pips = how many of ${QBANKS.length} banks flag ★★★ (proxy) · gold name = community-reputed strongest (directional).` })));
+      note: `Bar length = combined MCQ mass (measured) · fill = within-set density (proxy) · pips = how many of ${QBANKS.length} banks flag ★★★ (proxy) · gold name = community-reputed strongest`
+        + (SS_SRC.length ? ` (directional, sourced separately: ${srcLinks(SS_SRC)})` : ` (directional)`) + `.` })));
 
   /* ──────────────────────────────────────────────────────────
      Consensus inset-group — topics where ≥2 independent banks agree ★★★.
@@ -149,35 +158,44 @@ function renderHY() {
     v.appendChild(_frame(panel({
       title: `Consensus — banks agree ★★★`,
       epi: "proxy",
-      sourceIds: SS_SRC.length ? SS_SRC : undefined,
+      // Meridian-derived proxy (cross-bank ★★★ agreement over measured counts):
+      // method disclosed in the cf-note below. No third-party source attached —
+      // SS_SRC (reputation blogs) does NOT substantiate this density computation.
+      sourceIds: undefined,
       captured: CAP,
       curated: true,
-      actions: `<span class="count-pill">${consensus.length} topics</span>`,
+      actions: `<button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button> <span class="count-pill">${consensus.length} topics</span>`,
       body: groupList(rows, "hy-consensus")
         + `<div class="cf-note">Agreement on MCQ density across two or more independent banks for the same topic — the strongest prioritisation signal buildable today (still a proxy for exam weight, not measured consensus). Click a topic to track it or jump to the bank.</div>`,
     })));
   }
 
-  /* ── ONE sticky toolbar: subject segmented (scrolls) + status filter ── */
-  const ctr = el("div", "controls hy-controls");
+  /* ── ONE sticky toolbar — shared idiom with QBank: native <select> on desktop
+        (desk-ctrl) + icon-button → bottom-sheet (mob-ctrl) on mobile. Subject is a
+        large dynamic set; status reuses HY_STATUS_OPTS. ── */
+  const HY_SUBJ_OPTS = [["all", "All subjects (top picks each)"]].concat(subjects.map(s => [s, s]));
+  // reuse the .qb-controls container class so the established responsive toggle
+  // (desk-ctrl native selects on desktop · mob-ctrl icon-buttons → sheet on mobile)
+  // applies here too — one shared toolbar idiom, no per-surface CSS.
+  const ctr = el("div", "controls hy-controls qb-controls");
   ctr.innerHTML =
-    `<select class="sel" id="hysub" aria-label="Subject">
-       <option value="all">All subjects (top picks each)</option>
-       ${subjects.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join("")}
+    `<select class="sel desk-ctrl" id="hysub" aria-label="Subject">
+       ${HY_SUBJ_OPTS.map(([vv, l]) => `<option value="${esc(vv)}">${esc(l)}</option>`).join("")}
      </select>
-     <select class="sel" id="hystatus" aria-label="Filter by your status">
-       <option value="all">All statuses</option>
-       <option value="untracked">Yet to attempt</option>
-       <option value="attempted">Attempted</option>
-       <option value="review">Needs review</option>
-       <option value="mastered">Mastered</option>
-       <option value="starred">My starred</option>
+     <select class="sel desk-ctrl" id="hystatus" aria-label="Filter by your status">
+       ${HY_STATUS_OPTS.map(([vv, l]) => `<option value="${esc(vv)}">${esc(l)}</option>`).join("")}
      </select>
+     <button class="iconbtn mob-ctrl" id="hySubBtn" aria-label="Choose subject" title="Subject">☰</button>
+     <button class="iconbtn mob-ctrl" id="hyStatusBtn" aria-label="Filter topics" title="Filter">⛁</button>
      <div class="spacer"></div><span class="count-pill">click a topic → detail card</span>`;
   v.appendChild(ctr);
   $("#hysub").value = hySubject; $("#hystatus").value = hyStatus;
   $("#hysub").addEventListener("change", e => { hySubject = e.target.value; renderHY(); });
   $("#hystatus").addEventListener("change", e => { hyStatus = e.target.value; renderHY(); });
+  // mobile: subject/status open a bottom-sheet (same openSheet helper QBank uses)
+  $("#hySubBtn")?.addEventListener("click", () => openSheet("Choose subject", HY_SUBJ_OPTS, hySubject, val => { hySubject = val; renderHY(); }));
+  $("#hyStatusBtn")?.addEventListener("click", () => openSheet("Filter by status", HY_STATUS_OPTS, hyStatus, val => { hyStatus = val; renderHY(); }));
+  $("#hyStatusBtn")?.classList.toggle("has-dot", hyStatus !== "all");
 
   /* ──────────────────────────────────────────────────────────
      Per-subject density — top topics by hyScore, as inset groupLists.
@@ -233,7 +251,24 @@ function renderHY() {
     plateNo++;
   });
 
+  // reusable, always-working "How we rate" affordance (firewall surface).
+  // The methodology panel only lives on Overview (id=howrate); a plain "#howrate"
+  // link is dead while another tab is active, so we navigate THEN scroll.
+  v.addEventListener("click", e => {
+    if (e.target.closest("[data-hy-howrate]")) { e.preventDefault(); hyGotoMethodology(); }
+  });
+
   labelizeResponsiveTables();
+}
+
+/* Navigate to Overview and reveal the "How we rate · sources" firewall panel.
+   Works from any surface: switches the view first, then scrolls #howrate in. */
+function hyGotoMethodology() {
+  show("overview");
+  requestAnimationFrame(() => {
+    const m = document.getElementById("howrate");
+    if (m) m.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 /* wrap a chartFrame string into an element so we can appendChild */

@@ -92,7 +92,7 @@ function renderFacultyPage(id) {
       <div class="eyebrow"><button class="linkbtn back" data-go-overview>‹ Home</button> · FACULTY</div>
       <div class="eh-top">
         <div class="eh-id"><h2 class="sh-name">${esc(f.name)}</h2>${aka}
-          <div class="eh-tags">${subs.map(s => `<span class="echip" data-go-subject="${esc(s)}">${esc(s)}</span>`).join("")}</div>
+          <div class="eh-tags">${subs.map(s => `<a class="echip is-link" role="link" tabindex="0" data-go-subject="${esc(s)}">${esc(s)}</a>`).join("")}</div>
         </div>
         <div class="eh-hero">
           <span class="hero-num num">${esc(String(heroNum))}</span>
@@ -109,7 +109,7 @@ function renderFacultyPage(id) {
     + statTile({ value: years != null ? years + "y" : "—", label: "YEARS ACTIVE", note: years != null ? "since earliest known" : "dates approx.", epi: "directional" })
     + statTile({ value: profScore != null ? profScore : "—", label: "PROFILE ★", note: profScore != null ? (r.profile.count + " votes") : "gated · seed", epi: "directional" })
     + statTile({ value: vidAvg != null ? vidAvg.toFixed(1) : "—", label: "VIDEO ★", note: vidAvg != null ? "rolled up" : "rolled up · seed", epi: "directional" })
-    + statTile({ value: vids.length, label: "VIDEOS", note: vids.length ? "attributed (confident)" : "none attributed yet" })
+    + statTile({ value: vids.length, label: "VIDEOS", note: vids.length ? "inferred by subject" : "none inferred yet", epi: "proxy" })
     + `</div>`;
 
   /* ---- Pl.1 — CAREER TIMELINE (the moat) ---- */
@@ -137,14 +137,14 @@ function renderFacultyPage(id) {
   /* ---- SUBJECTS + LINKED PLATFORMS (the triangle) ---- */
   const platChips = (f.affiliations || []).map(a => {
     const pid = a.platformId;
-    if (pid && PLAT_BY_ID[pid]) return `<a class="echip plat is-link" data-go-platform="${esc(pid)}" style="--c:${platColor(pid)}">${esc(platName(pid))}<span class="echip-st">${esc(a.status || "")}</span></a>`;
+    if (pid && PLAT_BY_ID[pid]) return `<a class="echip plat is-link" role="link" tabindex="0" data-go-platform="${esc(pid)}" style="--c:${platColor(pid)}">${esc(platName(pid))}<span class="echip-st">${esc(a.status || "")}</span></a>`;
     const offName = pid ? platDisplayName(pid) : (a.name || "Independent");
     return `<span class="echip off" title="Named in public sources; not yet integrated in Meridian">${esc(offName)}<span class="echip-st">${esc(a.status || "")}</span></span>`;
   }).join("");
   const links = panel({
     title: "Subjects taught · linked platforms",
     body: `<div class="fac-links">
-        <div class="fl-block"><span class="fl-h">Subjects</span><div class="echips">${subs.map(s => `<a class="echip is-link" data-go-subject="${esc(s)}">${esc(s)}</a>`).join("")}</div></div>
+        <div class="fl-block"><span class="fl-h">Subjects</span><div class="echips">${subs.map(s => `<a class="echip is-link" role="link" tabindex="0" data-go-subject="${esc(s)}">${esc(s)}</a>`).join("")}</div></div>
         <div class="fl-block"><span class="fl-h">Affiliations</span><div class="echips">${platChips}</div></div>
       </div>
       ${f.bio ? `<p class="fac-bio muted small">${esc(f.bio)}</p>` : ""}`,
@@ -161,9 +161,11 @@ function renderFacultyPage(id) {
       trail: confTag(vi.confidence || "")
     }));
     videos = panel({
-      title: `Videos by ${esc(f.name)}`,
-      body: groupList(rows) + (vids.length > 12 ? `<p class="muted small" style="margin-top:8px">+${vids.length - 12} more attributed</p>` : ""),
-      epi: "measured"
+      title: `Likely clips by ${esc(f.name)} (inferred)`,
+      body: groupList(rows)
+        + (vids.length > 12 ? `<p class="muted small" style="margin-top:8px">+${vids.length - 12} more inferred</p>` : "")
+        + `<p class="muted small" style="margin-top:8px">Attribution is by unique-subject inference — not source-confirmed per clip.</p>`,
+      epi: "proxy"
     });
   }
 

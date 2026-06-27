@@ -101,8 +101,14 @@ function gotoTest(id) {
   setTimeout(() => { const row = $(`#view-tests .scorerow[data-id="${cssEsc(id)}"]`); if (row) { row.scrollIntoView({ block: "center", behavior: "smooth" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); } }, 60);
 }
 
-/* ---- ENTITY ROUTING (entity pages are NOT tabs; they live in their own view sections) ---- */
+/* ---- ENTITY ROUTING (entity pages are NOT tabs; they live in their own view sections) ----
+   Entity pages push a real hash (#/subject/<canon>, #/platform/<id>, #/faculty/<id>) so the
+   browser Back button and a page refresh both restore them (spec §4). A single hashchange
+   listener (routeFromHash) is the source of truth: navigation helpers only WRITE the hash, the
+   listener does the rendering. `routing` guards re-entrancy so programmatic hash writes (here and
+   in show()) don't double-render or loop. */
 const ENTITY_VIEWS = ["subject", "platform", "faculty"];
+let routing = false; // true while we are applying a hash → suppress echo writes
 function showEntity(kind) {
   // deactivate tab nav highlight + show the matching entity section only
   $$(".tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
@@ -112,9 +118,51 @@ function showEntity(kind) {
   labelizeResponsiveTables(); setHeaderHeight();
   window.scrollTo({ top: 0 });
 }
-function goSubject(canonSubj) { renderSubjectPage(canonSubj); showEntity("subject"); const mt = $("#mobTitle"); if (mt) mt.textContent = canonSubj; }
-function goPlatform(id) { renderPlatformPage(id); showEntity("platform"); const mt = $("#mobTitle"); if (mt) mt.textContent = platName(id); }
-function goFaculty(id) { renderFacultyPage(id); showEntity("faculty"); const mt = $("#mobTitle"); if (mt) { const f = facById(id); mt.textContent = f ? f.name : "Faculty"; } }
+/* render-only entity painters (no hash side-effect) — used by the router */
+function renderSubjectView(canonSubj) { renderSubjectPage(canonSubj); showEntity("subject"); const mt = $("#mobTitle"); if (mt) mt.textContent = canonSubj; currentView = "subject"; }
+function renderPlatformView(id) { renderPlatformPage(id); showEntity("platform"); const mt = $("#mobTitle"); if (mt) mt.textContent = platName(id); currentView = "platform"; }
+function renderFacultyView(id) { renderFacultyPage(id); showEntity("faculty"); const mt = $("#mobTitle"); if (mt) { const f = facById(id); mt.textContent = f ? f.name : "Faculty"; } currentView = "faculty"; }
+/* public navigation helpers — push a hash, let the router paint (keeps Back/refresh honest) */
+let pendingHashWrite = false; // set when WE write the hash, so the hashchange handler doesn't treat it as a Back
+function setHash(h) {
+  if (routing) return;
+  try {
+    if (location.hash !== h) {
+      window.__meridianNavDepth = (window.__meridianNavDepth || 0) + 1;
+      pendingHashWrite = true;
+      // NOTE: do NOT mark routeKey here. Only a caller that already PAINTED its target may
+      // suppress the echo repaint (show() does, below). goSubject/goPlatform/goFaculty only
+      // WRITE the hash — their echo hashchange MUST reach routeFromHash and paint the entity.
+      location.hash = h;
+    }
+  } catch {}
+}
+function goSubject(canonSubj) { if (routing) { renderSubjectView(canonSubj); return; } setHash("#/subject/" + encodeURIComponent(canonSubj)); }
+function goPlatform(id) { if (routing) { renderPlatformView(id); return; } setHash("#/platform/" + encodeURIComponent(id)); }
+function goFaculty(id) { if (routing) { renderFacultyView(id); return; } setHash("#/faculty/" + encodeURIComponent(id)); }
+/* unified back affordance for all entity pages: real browser history when we have somewhere to
+   go back to, else fall to Overview. Keeps subject/platform/faculty consistent (finding fix). */
+function goBack() {
+  if (window.__meridianNavDepth > 0) { history.back(); return; }
+  show("overview");
+}
+/* central router: read the hash, paint the matching entity or tab. Re-entrancy-guarded.
+   `routeKey` lets us skip a redundant repaint when show()/goX already rendered before writing the
+   hash (the resulting echo hashchange lands on the same target). */
+let routeKey = "\0"; // sentinel that never equals a real hash, so the first route always paints
+function routeFromHash() {
+  const raw = (location.hash || "").replace(/^#/, "");
+  if (raw === routeKey) return; // already painted this exact route (echo from our own write)
+  routeKey = raw;
+  routing = true;
+  try {
+    let m;
+    if ((m = raw.match(/^\/subject\/(.+)$/))) renderSubjectView(canon(decodeURIComponent(m[1])));
+    else if ((m = raw.match(/^\/platform\/(.+)$/))) { const id = decodeURIComponent(m[1]); if (PLAT_BY_ID[id]) renderPlatformView(id); else show("overview"); }
+    else if ((m = raw.match(/^\/faculty\/(.+)$/))) { const id = decodeURIComponent(m[1]); if (facById(id)) renderFacultyView(id); else show("overview"); }
+    else { const v = raw.replace(/^\//, ""); show(RENDER[v] ? v : "overview"); }
+  } finally { routing = false; }
+}
 
 /* ============================================================
    GLOBAL EVENT DELEGATION
@@ -167,7 +215,7 @@ function appClick(e) {
   const es = e.target.closest("[data-go-subject]"); if (es) { goSubject(es.dataset.goSubject); return; }
   const ep = e.target.closest("[data-go-platform]"); if (ep) { goPlatform(ep.dataset.goPlatform); return; }
   const ef = e.target.closest("[data-go-faculty]"); if (ef) { goFaculty(ef.dataset.goFaculty); return; }
-  const eh = e.target.closest("[data-go-overview]"); if (eh) { show("overview"); return; }
+  const eh = e.target.closest("[data-go-overview]"); if (eh) { goBack(); return; }
   // engraved-plate imprint badge (touch answer to hover tooltips) → "How we know this" sheet
   const rp = e.target.closest("[data-read-plate]"); if (rp) { readPlateSheet(rp.dataset.readPlate, rp.dataset.readSrc, rp.dataset.readCap); return; }
   // category collapse (ignore clicks on the bulk button inside the header)
@@ -278,6 +326,9 @@ const TAB_ORDER = ["overview", "qbank", "progress", "tests", "hy", "videos", "pl
 const TAB_LABEL = { overview: "Overview", qbank: "QBank Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
 let currentView = "overview";
 function show(view) {
+  // entity views aren't tabs and have no RENDER entry — re-paint them from the live hash instead
+  // (keeps show(currentView) safe after import/reset while an entity page is open).
+  if (!RENDER[view]) { routeKey = "\0"; routeFromHash(); return; }
   currentView = view;
   $$(".tab").forEach(t => { const on = t.dataset.view === view; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
   $$("#botnav button").forEach(b => { const on = b.dataset.view === view; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
@@ -287,7 +338,8 @@ function show(view) {
   RENDER[view]();
   labelizeResponsiveTables();
   setHeaderHeight();
-  try { location.hash = view; } catch {}
+  setHash("#/" + view); // suppressed while routing (router is painting); else writes a Back-able entry
+  routeKey = "/" + view; // we just painted this tab — mark it so the echo hashchange is a no-op
   window.scrollTo({ top: 0 });
 }
 /* card-list table mode (mobile): auto-stamp each cell with its column header,
@@ -389,8 +441,15 @@ function init() {
   $("#sheetClose").addEventListener("click", closeSheet);
   $("#sheetBody").addEventListener("click", e => { const b = e.target.closest(".sheet-opt"); if (b) { const v = b.dataset.v, cb = sheetPick; closeSheet(); if (cb) cb(v); } });
   window.addEventListener("resize", setHeaderHeight);
-  // initial view from hash
-  const h = (location.hash || "").replace("#", "");
-  show(RENDER[h] ? h : "overview");
+  // hash routing: Back/Forward + refresh restore the exact entity page or tab (spec §4).
+  // Browser Back decrements our nav depth so goBack() knows when there's history left.
+  window.addEventListener("hashchange", () => {
+    if (pendingHashWrite) { pendingHashWrite = false; } // our own forward write — depth already incremented
+    else if (window.__meridianNavDepth > 0) window.__meridianNavDepth--; // user pressed Back/Forward
+    routeFromHash();
+  });
+  // initial view from hash (supports legacy bare "#qbank" and new "#/qbank" / "#/subject/..." forms)
+  window.__meridianNavDepth = 0;
+  routeFromHash();
 }
 Store.load().then(init);
