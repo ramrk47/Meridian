@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Convert all extracted CSVs into a single embedded data.js for the dashboard."""
-import csv, json, os, re
+import csv, json, os, re, zipfile
+from xml.etree import ElementTree as ET
 
 RAW = os.path.join(os.path.dirname(__file__), "_raw")
 DOWNLOADS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,6 +9,52 @@ DOWNLOADS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def rd(path):
     with open(path, newline="", encoding="utf-8") as f:
         return list(csv.reader(f))
+
+# ---------- minimal stdlib .xlsx reader (no openpyxl dependency) ----------
+# Reads a workbook into {sheet_name: [ [cellval,...], ... ]} preserving column
+# position (gaps become ""). Used for the community PYQ-importance masterlist.
+_XL_M = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+_XL_R = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
+
+def _xl_colnum(ref):
+    n = 0
+    for ch in re.match(r"[A-Z]+", ref).group(0):
+        n = n * 26 + (ord(ch) - 64)
+    return n
+
+def read_xlsx(path):
+    z = zipfile.ZipFile(path)
+    shared = []
+    if "xl/sharedStrings.xml" in z.namelist():
+        for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall(f"{_XL_M}si"):
+            shared.append("".join(t.text or "" for t in si.iter(f"{_XL_M}t")))
+    rels = {r.get("Id"): r.get("Target")
+            for r in ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))}
+    wb = ET.fromstring(z.read("xl/workbook.xml"))
+    out = {}
+    for s in wb.find(f"{_XL_M}sheets"):
+        name = s.get("name")
+        tgt = rels[s.get(f"{_XL_R}id")]
+        member = tgt if tgt.startswith("xl/") else "xl/" + tgt
+        rows = []
+        for row in ET.fromstring(z.read(member)).find(f"{_XL_M}sheetData").findall(f"{_XL_M}row"):
+            cells = {}
+            for c in row.findall(f"{_XL_M}c"):
+                t = c.get("t"); v = c.find(f"{_XL_M}v"); isn = c.find(f"{_XL_M}is")
+                if t == "s" and v is not None:
+                    val = shared[int(v.text)]
+                elif t == "inlineStr" and isn is not None:
+                    val = "".join(x.text or "" for x in isn.iter(f"{_XL_M}t"))
+                elif v is not None:
+                    val = v.text
+                else:
+                    val = None
+                if val is not None and str(val).strip() != "":
+                    cells[_xl_colnum(c.get("r"))] = str(val).strip()
+            width = max(cells) if cells else 0
+            rows.append([cells.get(i, "") for i in range(1, width + 1)])
+        out[name] = rows
+    return out
 
 # ---------- Marrow QBank ----------
 marrow_subjects = []
@@ -211,6 +258,131 @@ for subject in dt_order:
         })
     dt_subjects.append({"subject": subject, "modules": mods})
 
+# ---------- canonical subject map (Python mirror of js/core.js CANON outputs) ----------
+# Native platform / sheet subject name -> the single canonical subject string the app
+# groups on. MUST stay in sync with the canonical OUTPUTS of CANON in js/core.js.
+CANON = {
+    "Anatomy": "Anatomy", "Physiology": "Physiology", "Biochemistry": "Biochemistry",
+    "Pharmacology": "Pharmacology", "Microbiology": "Microbiology", "Pathology": "Pathology",
+    "Community Medicine": "Community Medicine / PSM", "Preventive & Social Medicine": "Community Medicine / PSM",
+    "PSM": "Community Medicine / PSM", "Forensic Medicine": "Forensic Medicine",
+    "Ophthalmology": "Ophthalmology", "ENT": "ENT", "Anaesthesia": "Anaesthesia", "Anesthesia": "Anaesthesia",
+    "Dermatology": "Dermatology", "Psychiatry": "Psychiatry", "Radiology": "Radiology", "Medicine": "Medicine",
+    "Surgery": "Surgery", "Orthopaedics": "Orthopaedics", "Orthopedics": "Orthopaedics",
+    "Paediatrics": "Paediatrics", "Pediatrics": "Paediatrics",
+    "Obstetrics & Gynaecology": "Obstetrics & Gynaecology", "Obstetrics & Gynecology": "Obstetrics & Gynaecology",
+    "Gynaecology & Obstetrics": "Obstetrics & Gynaecology", "OB & G": "Obstetrics & Gynaecology",
+    "OBG": "Obstetrics & Gynaecology", "Obs & Gynae": "Obstetrics & Gynaecology",
+}
+def canon(s): return CANON.get(s, s)
+
+# ---------- Canonical Topic Library & Importance Spine (Phase 1d) ----------
+# Parse the community-curated PYQ-importance masterlist into a canonical
+# Subject -> Section -> Topic library. importance is DERIVED from PYQ frequency
+# (Times Repeated) + the curator's priority band; epistemic = directional. We omit
+# the author's personal revision-tracking columns. No counts/mappings are fabricated:
+# a missing datum stays null. platformRefs{} is filled later by the mapping stage.
+ML_PATH = f"{RAW}/curated/Masterlist_topic_importance.xlsx"
+# masterlist SHEET name -> native subject string fed through canon()
+ML_SHEET_SUBJECT = {
+    "SURGERY": "Surgery", "OBG": "Obstetrics & Gynaecology", "PATHOLOGY": "Pathology",
+    "PHARMACOLOGY": "Pharmacology", "MICROBIOLOGY": "Microbiology", "FORENSIC": "Forensic Medicine",
+    "PEDIATRICS": "Paediatrics", "BIOCHEMISTRY": "Biochemistry", "MEDICINE": "Medicine",
+    "PSM": "Community Medicine / PSM", "ORTHO": "Orthopaedics", "PSYCHIATRY": "Psychiatry",
+    "PHYSIOLOGY": "Physiology", "ENT": "ENT", "OPHTHAL": "Ophthalmology", "DERMATOLOGY": "Dermatology",
+    "ANATOMY": "Anatomy", "RADIOLOGY": "Radiology", "ANAESTHESIA": "Anaesthesia",
+}
+_HEADER_KEYS = ("number", "no.", "sl", "s.no")
+_PRI_W = {"High": 1.0, "Moderate": 0.55, "Low": 0.25}
+_TIMES_CAP = 6  # >99% of topics repeat ≤6×; a couple of outliers (9,15) clamp here
+
+def _ml_norm_priority(raw):
+    if not raw: return None
+    p = raw.strip().capitalize()
+    return p if p in _PRI_W else None
+
+def _ml_priority_from_times(times):
+    if times is None: return "Low"
+    return "High" if times >= 3 else "Moderate" if times == 2 else "Low"
+
+def _ml_importance(times, priority):
+    tn = min(times or 1, _TIMES_CAP) / _TIMES_CAP
+    pw = _PRI_W.get(priority, 0.25)
+    return round(0.65 * tn + 0.35 * pw, 3)
+
+_TIER = {"High": 3, "Moderate": 2, "Low": 1}
+
+def _ml_split_aliases(cell):
+    # "Inguinal Hernia, Hernia" -> ("Inguinal Hernia", ["Hernia"]); strip trailing commas/space
+    parts = [p.strip() for p in cell.split(",") if p.strip()]
+    if not parts: return cell.strip(), []
+    return parts[0], parts[1:]
+
+def build_library():
+    if not os.path.exists(ML_PATH):
+        print(f"WARN: masterlist {ML_PATH} missing — D.library skipped")
+        return None
+    book = read_xlsx(ML_PATH)
+    subjects_out = []
+    tid = 0
+    for sheet, native in ML_SHEET_SUBJECT.items():
+        rows = book.get(sheet)
+        if not rows:
+            print(f"WARN: masterlist sheet {sheet!r} missing/empty — skipped")
+            continue
+        subj = canon(native)
+        pos = {"num": 0, "topic": 1, "times": 2, "pyq": 3, "pri": 4, "src": 5}  # 0-based defaults A–F
+        sections, cur = [], None
+        for r in rows:
+            def g(k):
+                i = pos[k]
+                return r[i].strip() if i < len(r) and r[i] else ""
+            a, b = g("num"), g("topic")
+            al, bl = a.lower(), b.lower()
+            # header row -> remap column positions by fuzzy header text
+            if (al in _HEADER_KEYS or al.startswith("number")) and "topic" in bl:
+                for i, cell in enumerate(r):
+                    lc = (cell or "").strip().lower()
+                    if lc.startswith("number") or lc in _HEADER_KEYS: pos["num"] = i
+                    elif "topic" in lc: pos["topic"] = i
+                    elif "times" in lc or "repeat" in lc: pos["times"] = i
+                    elif "pyq" in lc or "asked" in lc: pos["pyq"] = i
+                    elif "priorit" in lc: pos["pri"] = i
+                    elif "source" in lc: pos["src"] = i
+                continue
+            times_raw = g("times"); pri_raw = g("pri")
+            is_topic = bool(b) and (a.replace(".", "").isdigit() or times_raw or pri_raw)
+            if is_topic:
+                if cur is None:
+                    cur = {"name": "(uncategorized)", "topics": []}
+                    sections.append(cur)
+                times = int(times_raw) if times_raw.replace(".", "").isdigit() else None
+                priority = _ml_norm_priority(pri_raw) or _ml_priority_from_times(times)
+                name, aliases = _ml_split_aliases(b)
+                tid += 1
+                cur["topics"].append({
+                    "id": "lib-" + slug(subj, name)[:70] + f"-{tid}",
+                    "name": name, "aliases": aliases,
+                    "timesRepeated": times, "priority": priority,
+                    "pyqAngle": g("pyq") or None, "sourceRec": g("src") or None,
+                    "importance": _ml_importance(times, priority),
+                    "tier": _TIER[priority], "platformRefs": {},
+                })
+            elif a and not b:
+                cur = {"name": a, "topics": []}
+                sections.append(cur)
+        # drop empty sections (e.g. a stray header with no rows beneath)
+        sections = [s for s in sections if s["topics"]]
+        subjects_out.append({"subject": subj, "sheet": sheet, "sections": sections})
+    return {
+        "source": {"id": "src-masterlist-pyq-reddit",
+                   "label": "Community-curated PYQ-importance masterlist (Reddit)",
+                   "epistemic": "directional", "captured": "2026-06-27"},
+        "subjects": subjects_out,
+    }
+
+library = build_library()
+
 # ---------- assemble exam-agnostic model: D = {exam, platforms[], tests, videos} ----------
 def _marrow_platform():
     by = {}
@@ -294,6 +466,9 @@ def _collect_refs(doc):
     return refs
 
 referenced = _collect_refs(_strength_doc) | _collect_refs(_reliab_doc) | _collect_refs(_faculty_doc)
+# the canonical library must also reference a registered source (Phase 1d)
+if library:
+    referenced.add(library["source"]["id"])
 dangling = referenced - source_ids
 if dangling:
     raise SystemExit(f"ABORT (neutrality firewall): curated claims reference unknown source ids: {sorted(dangling)}")
@@ -348,6 +523,9 @@ data = {
     "methodology": _method_doc,
     # faculty "people" layer — directional seed; aggregate-only; every datum sourced
     "faculty": faculty,
+    # canonical Subject→Section→Topic library + PYQ-frequency importance spine (Phase 1d)
+    # directional; platformRefs filled by the mapping stage below.
+    "library": library,
 }
 
 out = os.path.join(os.path.dirname(__file__), "data.js")
@@ -378,4 +556,10 @@ print(f"Curated: {len(sources)} sources, "
       f"all source refs resolve")
 print(f"Faculty: {len(faculty)} profiles (directional seed), "
       f"{_vid_mapped} videos mapped to a faculty by subject+platform")
+if library:
+    _lib_secs = sum(len(s["sections"]) for s in library["subjects"])
+    _lib_tops = sum(len(sec["topics"]) for s in library["subjects"] for sec in s["sections"])
+    _lib_hy = sum(1 for s in library["subjects"] for sec in s["sections"] for t in sec["topics"] if t["tier"] == 3)
+    print(f"Library: {len(library['subjects'])} subjects, {_lib_secs} sections, {_lib_tops} topics "
+          f"({_lib_hy} high-priority); importance directional (PYQ-frequency masterlist)")
 print(f"Wrote {out}")

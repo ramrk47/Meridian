@@ -67,6 +67,15 @@
       "url": "plans/RESEARCH_FINDINGS.md",
       "captured": "2026-06-26",
       "note": "Internal harvest that aggregated the public sources above. Cite the primary source where one exists."
+    },
+    {
+      "id": "src-masterlist-pyq-reddit",
+      "type": "community-masterlist",
+      "title": "Community-curated NEET PG topic-importance masterlist (PYQ frequency)",
+      "publisher": "Reddit (aspirant community, user-shared spreadsheet)",
+      "url": "_raw/curated/Masterlist_topic_importance.xlsx",
+      "captured": "2026-06-27",
+      "note": "Subject→section→topic list with PYQ-repeat counts (Times Repeated), priority bands and the angle each topic is asked from. Community-curated, not a measured exam-yield dataset — surfaced as directional. The author's personal revision-tracking columns are ignored on ingest."
     }
   ]
 }

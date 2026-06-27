@@ -21839,6 +21839,15 @@ window.D = {
    "note": "Internal harvest that aggregated the public sources above. Cite the primary source where one exists."
   },
   {
+   "id": "src-masterlist-pyq-reddit",
+   "type": "community-masterlist",
+   "title": "Community-curated NEET PG topic-importance masterlist (PYQ frequency)",
+   "publisher": "Reddit (aspirant community, user-shared spreadsheet)",
+   "url": "_raw/curated/Masterlist_topic_importance.xlsx",
+   "captured": "2026-06-27",
+   "note": "Subject→section→topic list with PYQ-repeat counts (Times Repeated), priority bands and the angle each topic is asked from. Community-curated, not a measured exam-yield dataset — surfaced as directional. The author's personal revision-tracking columns are ignored on ingest."
+  },
+  {
    "id": "src-fac-prepladder-faculty-page",
    "type": "platform-faculty-page",
    "title": "Find the Best Faculty for NEET PG Preparation at PrepLadder",
@@ -23156,7 +23165,10498 @@ window.D = {
     }
    ]
   }
- ]
+ ],
+ "library": {
+  "source": {
+   "id": "src-masterlist-pyq-reddit",
+   "label": "Community-curated PYQ-importance masterlist (Reddit)",
+   "epistemic": "directional",
+   "captured": "2026-06-27"
+  },
+  "subjects": [
+   {
+    "subject": "Surgery",
+    "sheet": "SURGERY",
+    "sections": [
+     {
+      "name": "GASTROINTESTINAL TRACT",
+      "topics": [
+       {
+        "id": "lib-surgery-inguinal-hernia-1",
+        "name": "Inguinal Hernia",
+        "aliases": [
+         "Hernia"
+        ],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Anatomy, complication of surgery like nerve entrapment,Hernia repair",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-oesophageal-varices-2",
+        "name": "Oesophageal Varices",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Image of endoscopy showing varices",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-hydatid-cyst-3",
+        "name": "Hydatid cyst",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Gharbi classification based on image, Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-rectal-carcinoma-4",
+        "name": "Rectal Carcinoma",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Complications of surgery",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-hollow-viscus-perforation-5",
+        "name": "Hollow Viscus Perforation",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Management,Thromboelastography,Diagnosis with image,Boerhaave syndrome",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-corrosive-esophageal-injury-6",
+        "name": "Corrosive Esophageal Injury",
+        "aliases": [
+         "Foreign body in esophagus"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Caustiic esophagitis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-choledocholithiasis-7",
+        "name": "Choledocholithiasis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Retained stones, Clinical scenario and management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-acute-pancreatitis-8",
+        "name": "Acute Pancreatitis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Diagnosis, Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-peptic-ulcer-9",
+        "name": "Peptic Ulcer",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Treatment",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-primary-sclerosing-cholangitis-10",
+        "name": "Primary Sclerosing Cholangitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image based diagnosis and management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-pancreatic-carcinoma-11",
+        "name": "Pancreatic Carcinoma",
+        "aliases": [
+         "Chronic pancreatitis"
+        ],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management of both, Palliative gastrojejunostomy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-hepatocellular-carcinoma-12",
+        "name": "Hepatocellular Carcinoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-liver-transplantation-13",
+        "name": "Liver Transplantation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Selection criteria in wilson disease",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-gallstone-ileus-14",
+        "name": "Gallstone Ileus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-umbilical-hernia-15",
+        "name": "Umbilical hernia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "management of obstructed hernia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-rectal-polyp-16",
+        "name": "Rectal polyp",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Identification with histo,",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-rectal-prolapse-17",
+        "name": "Rectal prolapse",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management- surgical techniques",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-zenkers-diverticulum-18",
+        "name": "Zenkers diverticulum",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosis with image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-achalasia-cardia-19",
+        "name": "Achalasia Cardia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chicago classification",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-diverticulitis-20",
+        "name": "Diverticulitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Hincheys Classification",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "General Surgery",
+      "topics": [
+       {
+        "id": "lib-surgery-breast-cancer-21",
+        "name": "Breast Cancer",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Staging based management, Image of histopathology with diagnosis of tumor,BIRADS",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-oral-cavity-cancer-22",
+        "name": "Oral Cavity Cancer",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "SCC of lip , Management - radiotherapy, modified radical neck dissection,Leukoplakia,Parotid tumor identification with image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-triage-23",
+        "name": "Triage",
+        "aliases": [
+         "Trauma"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "eFAST,Classification as ambulatory,medium risk etc, Primary survey",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-fistula-in-ano-24",
+        "name": "Fistula in Ano",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Diagnosis with image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-cystourethroscope-25",
+        "name": "Cystourethroscope",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "can be seen in instruments and urology also",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-ulcer-26",
+        "name": "Ulcer",
+        "aliases": [
+         "Pressure Sore Staging"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Image and staging, Type of ulcer with image, asepsis wound score",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-post-mastectomy-lymphedema-27",
+        "name": "Post Mastectomy Lymphedema",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "image and dignosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-surgical-knots-28",
+        "name": "Surgical Knots",
+        "aliases": [
+         "Blades"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "images",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-burns-29",
+        "name": "BURNS",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Management, percentage",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-meleney-s-gangrene-30",
+        "name": "Meleney's gangrene",
+        "aliases": [
+         "Fourniers gangrene"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Diagnosis , Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-putty-kidney-31",
+        "name": "Putty Kidney",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosis with image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-lymphedema-32",
+        "name": "Lymphedema",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosis based on clinical scenarios",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-vaccum-assisted-closure-33",
+        "name": "Vaccum assisted closure",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Pressure used",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-graft-34",
+        "name": "Graft",
+        "aliases": [
+         "Flap"
+        ],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Graft nutrition on Day 3 of syrgery,TRAM flap versus DIEP flap",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-varicose-veins-35",
+        "name": "Varicose veins",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CEAP classification",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-keloid-36",
+        "name": "Keloid",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-sialolithiasis-37",
+        "name": "Sialolithiasis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image based diagnosis and management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-basal-cell-carcinoma-38",
+        "name": "Basal cell carcinoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image based diagnosis and management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-tension-pneumothorax-39",
+        "name": "Tension Pneumothorax",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management, subcutaneous emphysema",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-thoracoscore-40",
+        "name": "Thoracoscore",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Components",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Neurosurgery",
+      "topics": [
+       {
+        "id": "lib-surgery-subarachnoid-hemorrhage-41",
+        "name": "Subarachnoid Hemorrhage",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Treatment, saccular aneurysm rupture",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-glasgow-coma-scale-42",
+        "name": "Glasgow Coma Scale",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-subdural-hemorrhage-43",
+        "name": "Subdural Hemorrhage",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image based for diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-qsofa-score-44",
+        "name": "qSOFA Score",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Components",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-compartment-syndrome-45",
+        "name": "Compartment Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosis, Treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-blast-injuries-46",
+        "name": "Blast Injuries",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosis, Treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Endocrinology",
+      "topics": [
+       {
+        "id": "lib-surgery-thyroid-nodule-47",
+        "name": "Thyroid Nodule",
+        "aliases": [
+         "Goitre"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Surgical complications, facts of the disease",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-thyroidectomy-48",
+        "name": "Thyroidectomy",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Complications following surgery",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-papillary-thyroid-carcinoma-49",
+        "name": "Papillary Thyroid Carcinoma",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image based diagnosis , Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-men-1-syndrome-50",
+        "name": "MEN-1 Syndrome",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Components",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-addisonian-crisis-51",
+        "name": "Addisonian Crisis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Post adrenalectomy complication",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-insulinoma-52",
+        "name": "Insulinoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Neuroendocrine tumor",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-hashimoto-s-thyroiditis-53",
+        "name": "Hashimoto’s Thyroiditis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-thyroglossal-cyst-54",
+        "name": "Thyroglossal cyst",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "identification with image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-parathyroidectomy-55",
+        "name": "Parathyroidectomy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Technique, surgical compication",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-neuroendocrine-tumor-56",
+        "name": "Neuroendocrine tumor",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Types , most common -insulinoma",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Cardiovascular",
+      "topics": [
+       {
+        "id": "lib-surgery-aortic-dissection-57",
+        "name": "Aortic Dissection",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Types, Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-peripheral-arterial-disease-58",
+        "name": "Peripheral arterial disease",
+        "aliases": [
+         "Leriche’s Syndrome",
+         "Aorto-iliac disease"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical facts,Intermittent claudication",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-raynaud-s-syndrome-59",
+        "name": "Raynaud’s Syndrome",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-deep-vein-thrombosis-60",
+        "name": "Deep Vein Thrombosis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image based diagnosis, Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-cirsoid-aneurysm-61",
+        "name": "Cirsoid Aneurysm",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image based diagnsosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-venous-ulcer-62",
+        "name": "Venous Ulcer",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Identificarion from image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-abdominal-aortic-aneurysm-63",
+        "name": "Abdominal aortic aneurysm",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Urology",
+      "topics": [
+       {
+        "id": "lib-surgery-bladder-carcinoma-64",
+        "name": "Bladder Carcinoma",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Gross pathology image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-penile-carcinoma-65",
+        "name": "Penile Carcinoma",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Types of carcinoma and management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-bladder-exstrophy-66",
+        "name": "Bladder Exstrophy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Identification from image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-urethral-strictur-67",
+        "name": "Urethral Strictur",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image based diagnsosis,Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-ca-prostrate-68",
+        "name": "Ca Prostrate",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Anatomy  of mets, Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-renal-stones-69",
+        "name": "Renal Stones",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "DJ stent and cystourethroscope, image of crystal and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-urethral-injury-70",
+        "name": "Urethral Injury",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image/clinical scenario  based diagnsosis,Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-vesico-ureteric-reflux-71",
+        "name": "Vesico Ureteric Reflux",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Isolated renal cyst image on CT",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-polycystic-kidney-disease-72",
+        "name": "Polycystic Kidney Disease",
+        "aliases": [
+         "Renal cyst"
+        ],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image with diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-testicular-torsion-73",
+        "name": "Testicular Torsion",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image based diagnsosis,Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-posterior-urethral-valve-74",
+        "name": "Posterior Urethral Valve",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image of PUV and management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-surgery-renal-cell-carcinoma-75",
+        "name": "Renal cell carcinoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Obstetrics & Gynaecology",
+    "sheet": "OBG",
+    "sections": [
+     {
+      "name": "GENERAL GYNAECOLOGY",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-endiometriosis-endometrioma-76",
+        "name": "Endiometriosis/Endometrioma",
+        "aliases": [],
+        "timesRepeated": 6,
+        "priority": "High",
+        "pyqAngle": "Chocolate cyst,mass near episiotomy scar, complication with transverse vaginal septum,USG appearance ground glass ovarian mass",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-fibroids-77",
+        "name": "Fibroids",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Intramural fibroid, Torsion, Treatment options,complications of removal",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-mullerian-anomalies-78",
+        "name": "Mullerian anomalies",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Uterine Didelphys, Septate uterus-Management,Image with HSG,Image based diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-prolapse-79",
+        "name": "Prolapse",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Fothergill surgery,stress incontinence,Degree of prolapse,POP-Q grid system",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-menstrual-cycle-80",
+        "name": "Menstrual cycle",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Normal vaginal discharge with various phases,Ovulation egg-secondary oocyte at the end of meosis 1",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-postmenopausal-bleeding-81",
+        "name": "Postmenopausal bleeding",
+        "aliases": [
+         "mass"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Endometrial polyp, Myxomatous polyp",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-primary-amenorrhea-82",
+        "name": "Primary amenorrhea",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Imperforate Hymen,Karyotyping, Septate Hymen management,androgen insensitivity",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-dilatation-and-curettage-83",
+        "name": "Dilatation and Curettage",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-vesico-vaginal-fistula-84",
+        "name": "Vesico vaginal fistula",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Management,post operative advice",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hydrosalpinx-85",
+        "name": "Hydrosalpinx",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image based  diagnosis,cog wheel appearance on usg",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-anatomy-86",
+        "name": "Anatomy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Ligaments of uterus",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-embryology-87",
+        "name": "Embryology",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Fate of Mullerian duct, wolffian duct",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-puberty-88",
+        "name": "Puberty",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Hormones",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-menorrhagia-89",
+        "name": "Menorrhagia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hysterectmy-90",
+        "name": "Hysterectmy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Advantage of Laparoscopic versus open",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-sacrocolpopexy-91",
+        "name": "Sacrocolpopexy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Surgical mesh attached to sacral promontory",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hormone-replacement-therapy-92",
+        "name": "Hormone replacement therapy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Types, complications",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GYNAEC INFECTIONS",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-vaginal-and-other-infections-pid-93",
+        "name": "Vaginal  and other infections(PID)",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Bacterial vaginosis, granuloma inguinale, Trachomonas vaginalis,Neisseria Gonorrhea",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-genital-tb-94",
+        "name": "Genital TB",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical scenario and diagnosis,",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-bartholin-abscess-95",
+        "name": "Bartholin abscess",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical scenario and diagnosis with image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-vulval-warts-96",
+        "name": "Vulval warts",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cause",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "INFERTILITY AND CONTRACEPTION",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-hysteroscopy-97",
+        "name": "Hysteroscopy",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Hydrosalpinx image,disinfection, image based diagnosis,Indication",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-ovarian-hyperstimulation-syndrome-98",
+        "name": "Ovarian Hyperstimulation syndrome",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "USG image for diagnosis,Clinical scenario and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-infertility-99",
+        "name": "Infertility",
+        "aliases": [
+         "PCOD"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Approach, when to reassure,PCOD",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-iucd-100",
+        "name": "IUCD",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "CONTRAINDICATIONS,INDICATIONS,IUCD with pregnancy management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-oral-contraception-progesterone-only-pills-101",
+        "name": "Oral contraception Progesterone only pills",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Schedule of taking,Desogestrel ,emergency/post coital contraception",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-medical-termonation-of-pregnancy-mtp-102",
+        "name": "Medical Termonation of Pregnancy(MTP)",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Drugs used, Consent",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-tubectomy-fimbriectomy-kroeners-procedure-103",
+        "name": "Tubectomy /Fimbriectomy(kroeners procedure)",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Location",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-tubal-blockage-and-ligation-104",
+        "name": "Tubal blockage and ligation",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Instruments",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-female-condom-105",
+        "name": "Female condom",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image based diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GYNAECOLOGIC ONCOLOGY",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-hpv-vaccine-106",
+        "name": "HPV vaccine",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Indication, types",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-cervical-carcinoma-107",
+        "name": "Cervical Carcinoma",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Management, HPV screening in cervical erosion and spotting,pap smear,staging",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-condyloma-acuminata-108",
+        "name": "Condyloma acuminata",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image based diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-ovarian-tumors-109",
+        "name": "Ovarian tumors",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Tumor markers",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-endometrial-cancer-110",
+        "name": "Endometrial cancer",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Radiotherapy facts,",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "FUNDAMENTALS OF REPRODUCTION",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-placenta-111",
+        "name": "Placenta",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Implantation site at OS can cause bleeding,Time between fertilisation and implantation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hormones-during-pregnancy-112",
+        "name": "Hormones during pregnancy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "hCG stimulates testosterone secretion",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-fertilisation-113",
+        "name": "Fertilisation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Location of fertilisation - fallopian tubes",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NORMAL PREGNANCY AND ANTENATAL CARE",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-obstetric-score-114",
+        "name": "Obstetric score",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical condition and mention the score ex:G2P1",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-pcpndt-act-115",
+        "name": "PCPNDT act",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario where parents are asking for sex detremination - further steos",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-gestational-age-assessment-116",
+        "name": "Gestational Age assessment",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Best technique,HCG levels in preganancy",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-antenatal-visits-117",
+        "name": "Antenatal visits",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Iron supplementation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-twin-preganacy-118",
+        "name": "Twin preganacy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Type od delivery",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-uterine-artery-doppler-119",
+        "name": "Uterine Artery DOPPLER",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "For diagnosis of early onset Preeclampsia",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-additional-calorie-intake-in-pregnancy-120",
+        "name": "Additional calorie intake in pregnancy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Trimester wise,",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-physiology-of-pregnancy-121",
+        "name": "Physiology of pregnancy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Hypotension on lying down straingh",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-neural-tube-defects-122",
+        "name": "Neural Tube defects",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Anencephaly",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MEDICAL AND SURGICAL COMPLICATIONS OF PREGNANCY",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-high-risk-pregnancy-123",
+        "name": "High risk pregnancy",
+        "aliases": [
+         "Mother on anticoagulant(also see peripartum cardiomyopathy and HIV in pregnancy)"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Rh negative  mother fetus ,warfarin toxicity, Mother on anticoagulant trimester appropriate - near term heparin",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-pre-eclampsia-124",
+        "name": "Pre eclampsia",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario and management,APLA syndrome,Pathogenesis, Magnesium toxicity,Pritchard regimen",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hellp-syndrome-125",
+        "name": "HELLP syndrome",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-gestational-diabetes-mellitus-126",
+        "name": "Gestational Diabetes Mellitus",
+        "aliases": [
+         "Pregestational Diabetes Mellitus"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Image of baby with macrosomia, caudal regression syndrome",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-radiation-exposure-during-pregnancy-127",
+        "name": "Radiation exposure during pregnancy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Further management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-varicella-in-mother-128",
+        "name": "Varicella in mother",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Varicella/ Herpes during delivery",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hyperthyroidism-in-pregnancy-129",
+        "name": "Hyperthyroidism in pregnancy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Drug of choice in each trimeseter1st trim-PTU",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "OBSTETRIC COMPLICATIONS",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-postpartum-haemorrhage-130",
+        "name": "Postpartum haemorrhage",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Sheehans syndrome, Artery ligation,Incomplete removal of placenta and haemorrhage management,Managemnet in patient with Asthma",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-ectopic-pregnancy-131",
+        "name": "Ectopic pregnancy",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-amniotic-fluid-embolism-132",
+        "name": "Amniotic fluid embolism",
+        "aliases": [
+         "Oligamnios",
+         "Polyamnios"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario and diagnosis,Clinical scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-placenta-previa-133",
+        "name": "Placenta Previa",
+        "aliases": [
+         "Placenta accreta"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Image ased diagnosis, Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-superfecundation-134",
+        "name": "Superfecundation",
+        "aliases": [
+         "Superfetation"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical scenario and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-cervical-cerclage-135",
+        "name": "Cervical Cerclage",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Contraindications",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-hydatidiform-mole-136",
+        "name": "Hydatidiform mole",
+        "aliases": [
+         "Choriocarcinoma"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "LABOUR AND PUERPERIUM",
+      "topics": [
+       {
+        "id": "lib-obstetrics-gynaecology-breech-and-vertex-presentation-137",
+        "name": "Breech and Vertex presentation",
+        "aliases": [
+         "Persistent occipito posterior"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Burn Marshall manouevre,Indication for c section, Face to pubis delivery in anthropoid pelvis,Pipers forceps -image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-normal-labour-138",
+        "name": "Normal labour",
+        "aliases": [
+         "PARTOGRAPH"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Fetal presentation , Active labour cervical diameter, Indication",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-c-section-indications-139",
+        "name": "C-SECTION indications",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario and indications",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-perineal-tear-140",
+        "name": "Perineal tear",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Management, Degree, structures involved",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-uterus-involution-141",
+        "name": "Uterus Involution",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Lenghth of uterus on days after postpartum",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-active-labour-142",
+        "name": "Active Labour",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Stages,obstructed",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-external-cephalic-veersion-143",
+        "name": "External cephalic veersion",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Transverse lie,Indication and contraindication",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-obstetrics-gynaecology-ventouse-delivery-pelvic-anatomy-and-diameters-144",
+        "name": "Ventouse delivery- pelvic anatomy and diameters",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Flexion point",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Pathology",
+    "sheet": "PATHOLOGY",
+    "sections": [
+     {
+      "name": "HAEMATOLOGY",
+      "topics": [
+       {
+        "id": "lib-pathology-lymphoma-145",
+        "name": "Lymphoma",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Burkitt(v.imp-histology), Hodgkin,Follicular lymphoma",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-leukaemia-146",
+        "name": "Leukaemia",
+        "aliases": [],
+        "timesRepeated": 8,
+        "priority": "High",
+        "pyqAngle": "Learn slides of al,l CML-Most sensitive TEST FISH -translocation 9,22,CLL-smudge cells,AML-t15,17,APML-PML RARA,Leukaemia -Benzene",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-disorders-of-haemoglobin-147",
+        "name": "Disorders of Haemoglobin",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Hereditary spherocytosis-parvo aplastic anemia-osmptic fragility test,Sickle cell anemia, Thalassemia- clinical history and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-coagulation-disorders-148",
+        "name": "Coagulation disorders",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Hemophilia-clinical history and diagnosis,vWD-Types,Coagulation test -APTT",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-multiple-myeloma-and-amyloid-149",
+        "name": "Multiple Myeloma and Amyloid",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Diagnosing with clinical condition and M spike, Biopsy fo amyloid,Poor prognostic factor",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-macrocytic-anemia-150",
+        "name": "Macrocytic anemia",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Vitamin B12 - complication after ileal resection, Folic acid deficiency,Chronic alcoholism",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-iron-deficiency-anemia-151",
+        "name": "Iron deficiency anemia",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "TSAT in IDA-reduced, other lab investigation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-hemolytic-anemia-152",
+        "name": "Hemolytic anemia",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "MAHA-mechanical heart valve,PNH-diagnosis from clinical scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-transfusion-153",
+        "name": "Transfusion",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "TACO,Storage of blood products in CPD",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-types-of-rbc-in-ps-154",
+        "name": "Types of RBC in PS",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Acanthocytosis-Abetalipoproteinemia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-aplastic-anemia-155",
+        "name": "Aplastic anemia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical diagnosis withbone marrow",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GENERAL PATHOLOGY",
+      "topics": [
+       {
+        "id": "lib-pathology-genetics-and-syndrome-156",
+        "name": "Genetics and syndrome",
+        "aliases": [],
+        "timesRepeated": 8,
+        "priority": "High",
+        "pyqAngle": "Mendelian inheritance ,Turner syndrome(2), Gauchers-macrophage appearance,Pedigree chart-Wiscott Aldrich ,Turner-chromosome,Prader willi syndrome chromosome,Defect in Xeroderma Pigmentosa",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-inflammation-157",
+        "name": "Inflammation",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Interleukin- role in ARDS,Neutrophil extracellular traps,B cells produce IgE by IL-4",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-grafts-158",
+        "name": "Grafts",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Isograft vs allograft vs autograft vs Xenograft",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-metaplasia-and-malignancy-159",
+        "name": "Metaplasia and Malignancy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Warburg effect, Definition",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-cell-injury-and-adaptation-160",
+        "name": "Cell injury and adaptation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "cell  injury",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-thrombosis-161",
+        "name": "Thrombosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Initiated by endothelial injury",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-telomere-162",
+        "name": "Telomere",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Telomerase theory of ageing",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-malakoplakia-163",
+        "name": "Malakoplakia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cutaneous Malakoplakia image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-severe-combined-immunodeficiency-164",
+        "name": "Severe Combined Immunodeficiency",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosing with clinical hstory.",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-staining-165",
+        "name": "Staining",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sup[ravital stain- Ca larynx",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-dysplasia-166",
+        "name": "Dysplasia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dysplasia vs Metaplasia vs anaplasia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CVS,BLOOD VESSEL AND VASCULITIS",
+      "topics": [
+       {
+        "id": "lib-pathology-myocardial-infarction-167",
+        "name": "Myocardial infarction",
+        "aliases": [
+         "reperfused myocardium"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Reperfused myocardium-eosinophilic contraction bands",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-rheumatic-heart-disease-and-infective-endocarditis-168",
+        "name": "Rheumatic Heart disease and Infective endocarditis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Aschoff bodies, pathology-large friable vegetation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-aortic-dissection-169",
+        "name": "Aortic dissection",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical featire",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-vasculitis-170",
+        "name": "Vasculitis",
+        "aliases": [
+         "Kawasaki disease"
+        ],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical diagnosis - pulmonary renal syndrome",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-lymphocytic-myocarditis-171",
+        "name": "Lymphocytic myocarditis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical history and pathology",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-cardiomyopathy-172",
+        "name": "Cardiomyopathy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "HOCM - pathology and clinical history",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RESPIRATORY SYSTEM",
+      "topics": [
+       {
+        "id": "lib-pathology-carcinoma-lung-and-thymoma-173",
+        "name": "Carcinoma Lung  and Thymoma",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Squamous with paraneoplastic hypercalcemia-anthracotic pigment , Adenocarcinoma-TTF1 marker",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-asbestosis-174",
+        "name": "Asbestosis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Image of histology with clinical history,clinical history of cement factory worker",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-ards-175",
+        "name": "ARDS",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Role of IL-8,COVID postmortem pathology",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-tb-176",
+        "name": "TB",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Biopsy showing Lymph node",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-copd-177",
+        "name": "COPD",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Panacinar emphysema",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ENDOCRINE SYSTEM AND BREAST",
+      "topics": [
+       {
+        "id": "lib-pathology-thyroid-178",
+        "name": "Thyroid",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Papillary Ca Thyroid-ORPHAN ANNNIE NUCLEUS with RET gene, Hashimoto's",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-malignancy-of-breast-179",
+        "name": "Malignancy of breast",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Phylloides tumor, Colloid Ca Breast",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-marfans-syndrome-180",
+        "name": "Marfans syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Fibrillin protein defect",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-pheochromocytoma-181",
+        "name": "Pheochromocytoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "RULE of 10 and MEN syndrome",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RENAL SYSTEM",
+      "topics": [
+       {
+        "id": "lib-pathology-glomerular-diseases-182",
+        "name": "Glomerular diseases",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "PSGN,RPGN-AntiGBM,MCD,Membranous Nephropathy,Henoch Scholein Purpura",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-rcc-183",
+        "name": "RCC",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Chromophobe",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-uti-184",
+        "name": "UTI",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "mIcroscopy of HSV multinucleated giant cell, Renal malakoplakia",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GASTROINTESTINAL SYSTEM",
+      "topics": [
+       {
+        "id": "lib-pathology-intestinal-disorders-185",
+        "name": "Intestinal disorders",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Hirschsprung disease-absence of neurons in which layer ,Celiac disease-gluten free diet, antibody involved, Juvenile polyps",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-esophageal-disorders-186",
+        "name": "Esophageal disorders",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Acahalasia Cardia",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-stomach-187",
+        "name": "Stomach",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Vitamin to be supplemented after gastrectomy-Vitamin B12",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-alcoholic-hepatitis-188",
+        "name": "Alcoholic hepatitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Mallory-Denk body",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CENTRAL NERVOUS SYSTEM",
+      "topics": [
+       {
+        "id": "lib-pathology-tumors-189",
+        "name": "Tumors",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Craniopharyngioma,Schwannoma,Retinoblastoma,Von Hippel Lindau",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-degenerative-disorders-190",
+        "name": "Degenerative disorders",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Alzheimers- Marker ABETA 40 and 42,Huntington's chorea",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BONE,SKIN,MUSCULOSKELETAL",
+      "topics": [
+       {
+        "id": "lib-pathology-ewing-s-sarcoma-191",
+        "name": "Ewing's sarcoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical picture and biopsy image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-myxoid-liposarcoma-192",
+        "name": "Myxoid Liposarcoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical picture and biopsy image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pathology-schwannoma-193",
+        "name": "Schwannoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Verocay body",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Pharmacology",
+    "sheet": "PHARMACOLOGY",
+    "sections": [
+     {
+      "name": "GENERAL PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-pharmacokinetics-and-pharmacodynamics-194",
+        "name": "Pharmacokinetics and Pharmacodynamics",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Dose respone curve ,Drug potency,Non competitive inhibition,  Digoxin pharmacokinetics , Dosing rate of drug formula",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-enzyme-inducers-and-inhibitors-195",
+        "name": "Enzyme inducers and inhibitors",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Erythromycin inhibiting effect of Theophylline",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-drug-prescription-196",
+        "name": "Drug prescription",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Alprazolam",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-drug-dosing-197",
+        "name": "Drug dosing",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Loading dose dependent on volume of distribution",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ANTIMICROBIALS",
+      "topics": [
+       {
+        "id": "lib-pharmacology-anti-tb-198",
+        "name": "Anti TB",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Isoniazid (asked twice) ,Inclusion criteria for Bedaquiline ,Rifampicin-,MOA induces OCP metabolism, Pyridoxine supplementation with Isoniazid",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antimalarials-199",
+        "name": "Antimalarials",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Chloroquine-side effect-gets deposited in cornea (asked twice)",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antifungal-200",
+        "name": "Antifungal",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clotrimazole- treatment of oral thrush, Amphotercin B-treatment of mucor, Azoles- Voriconazole not useful in mucormycosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antimicrobials-201",
+        "name": "Antimicrobials",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Floroquinolones-Pefloxacin contraindicated in liver disease, Mechanism of action, Mechanism of resistnace in Bera-lactams,Clarithromycin can cause digoxin toxicity",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antiparasitic-202",
+        "name": "Antiparasitic",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Metronidazole- Disulfiram reaction with alcohol",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antihiv-203",
+        "name": "AntiHIV",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Drug interaction with Rifampicin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CVS PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-antihypertensives-204",
+        "name": "Antihypertensives",
+        "aliases": [],
+        "timesRepeated": 7,
+        "priority": "High",
+        "pyqAngle": "Bisoprolol (imoproves cardiac mortality ), Clonidine - rebound hypertension (asked twice),Omapratilat-Mechanism of action,ARB-Losartan - Drug induced angioedema, Drugs contraindicated in pregnancy",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antiarrhythmic-205",
+        "name": "Antiarrhythmic",
+        "aliases": [],
+        "timesRepeated": 6,
+        "priority": "High",
+        "pyqAngle": "Amiodarone-adverse effects (asked thrice),Digoxin toxicity - Digifab(asked twice),Adenosine",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antianginal-206",
+        "name": "Antianginal",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Ranolazine-MOA",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-drugs-for-dyslipidemia-207",
+        "name": "Drugs for Dyslipidemia",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Nicotinamide adverse effects,Evolocumab-MOA",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CNS PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-antiparkinsons-208",
+        "name": "Antiparkinsons",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Trihexiphenidyl/Benzhexol- Drug induced dyskinesia (asked twice) , Selegiline",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antipsychotic-and-antidepressant-209",
+        "name": "Antipsychotic and Antidepressant",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Lithium-toxicity, SNRI - Reboxatine",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-benzodiazepine-210",
+        "name": "Benzodiazepine",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Alprazolam prescription in the night",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ANS PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-antimuscarinic-211",
+        "name": "Antimuscarinic",
+        "aliases": [],
+        "timesRepeated": 7,
+        "priority": "High",
+        "pyqAngle": "Atropine-OP poisoning treatment (asked thrice ),Dhatura poisoning , Tolterodine, Botulinum toxin",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-anti-adrenergic-212",
+        "name": "Anti adrenergic",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Tamsulosin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-epinephrine-213",
+        "name": "Epinephrine",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Shifts potassium into cells",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-methylphenidate-214",
+        "name": "Methylphenidate",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "used in treatment of ADHD",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-reversal-of-anaesthesia-muscle-relaxant-215",
+        "name": "Reversal of Anaesthesia/ Muscle relaxant",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Neostigmine for revrsal of Vecuronium in renal failure",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-muscarinic-216",
+        "name": "Muscarinic",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Bethanechol for post operative urinary retention",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ENDOCRINE PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-gh-analogue-217",
+        "name": "GH analogue",
+        "aliases": [
+         "Inhibition"
+        ],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Pegvisomant-indication, Tesamorelin-HIV associated Lipodystrophy, Octreotide-GH producing tumor-Acromegaly treatment",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-oha-218",
+        "name": "OHA",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Metformin (asked twice)",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-osteoporosis-219",
+        "name": "Osteoporosis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Bisphosphanates",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "AUTACOIDS AND PAIN",
+      "topics": [
+       {
+        "id": "lib-pharmacology-nsaids-220",
+        "name": "NSAIDs",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Aspirin-,Mechanism of action ,Samters triad, Toxicity(asked thrice ) ,Indomethacin-premature closure of PDA ( asked twice )",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-opioids-and-withdrawal-221",
+        "name": "Opioids and withdrawal",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Buprenorphine- opiod withdrawal , Morphine-aggravates biliary colic",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-prostaglandins-222",
+        "name": "Prostaglandins",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Carboprost-CI in treatment of PPH with Asthma , Latanoprost-Antiglaucoma",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antispasmodic-223",
+        "name": "Antispasmodic",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dicyclomine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-analgesic-in-ckd-224",
+        "name": "Analgesic in CKD",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Acetaminophen can be used",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "HAEMATOLOGY AND ANTICANCER DRUGS",
+      "topics": [
+       {
+        "id": "lib-pharmacology-anticoagulants-and-fibrinolytics-225",
+        "name": "Anticoagulants and Fibrinolytics",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "warfarin-Purple toe syndrome (asked twice ) , Vitamin K-deficiency causing bleeding ( asked twice ), Tissue plasminogen activator- MOA,LMWH - pregnant with DVT",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-methotrexate-226",
+        "name": "Methotrexate",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Reduced synthesis of TMP, competitive inhibitor of DHFR",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-bortezomib-227",
+        "name": "Bortezomib",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Increase risk of zoster",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-operlvekin-228",
+        "name": "Operlvekin",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment of chemotherapy induced thrombocytopenia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-hemostatics-229",
+        "name": "Hemostatics",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Aminocaproic acid- Mechanism of action",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antimetabolites-230",
+        "name": "Antimetabolites",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "6-Mercaptopurine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GIT PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-antiemetics-231",
+        "name": "Antiemetics",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Prokinetic agents , Metoclopramide-side effects , Promethazine- treatment of motion sickness ( asked twice ),Aprepitant-MOA",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-antidiarrheals-232",
+        "name": "Antidiarrheals",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Atropine + Diphenoxylate to reduce addiction potential",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RS PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-anti-asthmatics-233",
+        "name": "Anti asthmatics",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Inhaled steroids, Theophylline-Diuresis,  MOA through Adenosine receptor",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-pulmonary-fibrosis-234",
+        "name": "Pulmonary fibrosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Drugs causing - Methysergide, Bleomycin , Nitrofurantoin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RENAL PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-pharmacology-diuretics-235",
+        "name": "Diuretics",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Thiazides- contraindicated in gout , preferred antihypertensive with renal colic(asked twice ) , Mannitol",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-gout-236",
+        "name": "Gout",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "Moderate",
+        "pyqAngle": "Drugs causing gout ,Peglotocase, Allopurinol",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.518,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-tolvaptan-237",
+        "name": "Tolvaptan",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Mechanism of action",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-pharmacology-toclizumab-238",
+        "name": "Toclizumab",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Mechanism of action",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-pharmacology-iron-posoning-239",
+        "name": "Iron posoning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "British AntiLewisite contraindicated",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Microbiology",
+    "sheet": "MICROBIOLOGY",
+    "sections": [
+     {
+      "name": "GENERAL MICROBIOLOGY",
+      "topics": [
+       {
+        "id": "lib-microbiology-culture-medium-240",
+        "name": "Culture Medium",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Selenite F broth- salmonella and shigella , Sorbitol Mac Conkey agar-E coli",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-bacterial-structure-241",
+        "name": "Bacterial structure",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Flagella, Fimbriae-helps adhesion",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-techniques-242",
+        "name": "Techniques",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Multiplex PCR",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BACTERIOLOGY",
+      "topics": [
+       {
+        "id": "lib-microbiology-neisseria-gonorrhea-243",
+        "name": "Neisseria Gonorrhea",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Diagnosis of urethritis , Treatment",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-nesseria-meningitides-244",
+        "name": "Nesseria Meningitides",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-vibrio-245",
+        "name": "Vibrio",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Diarrhea by V.parahaemolyticus, receptor of vibrio cholerae",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-leptospirosis-246",
+        "name": "Leptospirosis",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Investigation of choice - microagglutination test,Clinical scenario and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-clostridium-difficile-247",
+        "name": "Clostridium difficile",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "diagnosis - toxin assay,treatment",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-food-poisoning-248",
+        "name": "Food poisoning",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "staphylococcal",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-enteric-fever-249",
+        "name": "Enteric fever",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Selenite F broth",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-nocardia-250",
+        "name": "Nocardia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario with microscopy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-h-influenza-251",
+        "name": "H influenza",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Meningitis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-anthrax-252",
+        "name": "Anthrax",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Bioterrorism",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-pseudomonas-253",
+        "name": "Pseudomonas",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Oxidase test positive",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-staphylococcus-aureus-254",
+        "name": "Staphylococcus aureus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Food poisonong",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-streptococcus-pyogenes-255",
+        "name": "Streptococcus pyogenes",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "production of superantigens",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-non-gonococcal-urethritis-256",
+        "name": "Non Gonococcal urethritis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "organism causing",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-uti-257",
+        "name": "UTI",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "diagnosis with respect to colony counts",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-rickettsia-prowazekii-258",
+        "name": "Rickettsia prowazekii",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "clinical symptoms and diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-treponema-pallidum-259",
+        "name": "Treponema pallidum",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dark field microscope",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "VIROLOGY",
+      "topics": [
+       {
+        "id": "lib-microbiology-herpes-260",
+        "name": "Herpes",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Herpes simplex image , HSV Encephalitis-diagnosis with PCR",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-cmv-261",
+        "name": "CMV",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "examination-owl eye, postrenal transplant",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-dengue-262",
+        "name": "Dengue",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario of DHF",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-rota-263",
+        "name": "Rota",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Diagnosis- antigen detection in stool",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-measles-264",
+        "name": "Measles",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Type of virus-ssRNA",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-zika-265",
+        "name": "Zika",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Primary vector- Aedes Aegypti",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-japanese-encephalitis-266",
+        "name": "Japanese Encephalitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Ardeid birds reservoir,pig amplifier",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-parainfluenza-267",
+        "name": "Parainfluenza",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario-stridor",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-yellow-fever-268",
+        "name": "Yellow fever",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "vaccine  strain-17D",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MYCOLOGY",
+      "topics": [
+       {
+        "id": "lib-microbiology-candidiasis-269",
+        "name": "Candidiasis",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Infection in ICU,Oral candidiasis,CHROM agar",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-trycophyton-270",
+        "name": "Trycophyton",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Rubrum,Mentagrophytes",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-aspergillosis-271",
+        "name": "Aspergillosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Drug of choice",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-blastomycosis-272",
+        "name": "Blastomycosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Broad based budding",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-pneumocystis-jirovecii-273",
+        "name": "Pneumocystis jirovecii",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "HIV patient clinical history",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-talaromyces-marnefii-274",
+        "name": "Talaromyces marnefii",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "fungal culture - red velvetty growth",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-sporothrix-shenkii-275",
+        "name": "Sporothrix shenkii",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "infection following traumatic inoculatio of skin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-coccidioides-immitis-276",
+        "name": "Coccidioides immitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Valley fever/desert rheumatism",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-mucor-277",
+        "name": "Mucor",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical history , image and diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PARASITOLOGY",
+      "topics": [
+       {
+        "id": "lib-microbiology-nematodes-278",
+        "name": "Nematodes",
+        "aliases": [],
+        "timesRepeated": 6,
+        "priority": "High",
+        "pyqAngle": "W.bancrofti-sheath with no nuclei, diagnosis, clinical scenario and image(asked thrice),Strongyloides-migration to lungs, HIV patient clinical history,  B.malayi- appearance ,Enterobius-image of egg,Trichuris-image of egg",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-malaria-279",
+        "name": "Malaria",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "Moderate",
+        "pyqAngle": "P.falciparum-HRP2 used for diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.518,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-hemoflagellates-280",
+        "name": "Hemoflagellates",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "Moderate",
+        "pyqAngle": "Leishmania-kala azar sand fly ,cutaneous Leishmaniasis (asked twice ), Trypanosoma",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.518,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-flagellates-281",
+        "name": "Flagellates",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Giardia- histology of intestine image, Trichomonas-motility",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-toxoplasma-282",
+        "name": "Toxoplasma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario and diagnosis-",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-acanthamoeba-283",
+        "name": "Acanthamoeba",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario and diagnosis-",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-trematode-284",
+        "name": "Trematode",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chlonorchis sinensis- Cholangiocarcinoma",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "IMMUNOLOGY",
+      "topics": [
+       {
+        "id": "lib-microbiology-prozone-phenomen-285",
+        "name": "Prozone phenomen",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical case",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-immunoglobulin-structure-286",
+        "name": "Immunoglobulin structure",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "identifying the class",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-microbiology-immunochromatography-287",
+        "name": "Immunochromatography",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "test kit image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Forensic Medicine",
+    "sheet": "FORENSIC",
+    "sections": [
+     {
+      "name": "FORENSIC TOXICOLOGY",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-arsenic-288",
+        "name": "Arsenic",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Aldrich Mees Lines",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-datura-poisoning-289",
+        "name": "Datura poisoning",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Clinical scenario, antidote-physostigmine",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-strychnine-poisoning-290",
+        "name": "Strychnine poisoning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical scenario, antidote-physostigmine",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-lead-poisoning-291",
+        "name": "Lead poisoning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "ALA dehydratase",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-thallium-poisoning-292",
+        "name": "Thallium poisoning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Effects",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-cocaine-poisoning-293",
+        "name": "Cocaine poisoning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical features",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-semicarpus-anacardium-294",
+        "name": "Semicarpus Anacardium",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Active principle of poison - Bhilawanol",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-heroin-295",
+        "name": "Heroin",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Physical dependence",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-viper-bite-296",
+        "name": "Viper Bite",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "clinical scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BALLISTICS",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-gunshot-injury-297",
+        "name": "Gunshot injury",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Range of gunshot",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ASPHYXIAL DEATH",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-asphyxial-death-298",
+        "name": "Asphyxial Death",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Smothering-brusing in perioral region, Ligature strangulation-horizontal below the level of thyroid , Drowning",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "TRAUMATOLOGY",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-defence-wounds-299",
+        "name": "Defence wounds",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-laceration-300",
+        "name": "Laceration",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "POSTMORETEM",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-postmortem-301",
+        "name": "Postmortem",
+        "aliases": [],
+        "timesRepeated": 7,
+        "priority": "High",
+        "pyqAngle": "Adipocere-saponification,Putrefaction, Rigor mortis-sequence Head to foot,PM caloricity,PM changes-immersion for 36 hrs,Tattoo in Lymph node",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-autopsy-techniques-302",
+        "name": "Autopsy techniques",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "police in RTA,Lettule technique, Rokitansky - HIV",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SEXUAL JURISPRUDENCE",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-barberio-test-303",
+        "name": "Barberio test",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Image of the stain",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-transvestic-fetishism-304",
+        "name": "Transvestic Fetishism",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "dignosing",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-exhibitionism-305",
+        "name": "Exhibitionism",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Scenario",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-hymen-in-child-rape-306",
+        "name": "Hymen in child rape",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Unruptured",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BNS",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-bns-sections-307",
+        "name": "BNS SECTIONS",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "30,90",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-ipc-314-308",
+        "name": "IPC 314",
+        "aliases": [
+         "193"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Death of mother by act done with intent to cause miscarriage,perjury",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "LAW/EVIDENCE/IDENTIFICATION",
+      "topics": [
+       {
+        "id": "lib-forensic-medicine-age-estimation-309",
+        "name": "Age estimation",
+        "aliases": [
+         "I dentification"
+        ],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Bone xray based estimation(asked twice),superfetation, superfecundation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-negligence-310",
+        "name": "Negligence",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Criminal-surgeon operating under the effect of alcohol, civil-evidence against doctor to be given by patient",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-cross-examination-311",
+        "name": "Cross examination",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-posthumous-child-312",
+        "name": "Posthumous child",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Case scenario - child born after death of parents",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-consent-313",
+        "name": "Consent",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Surgical consent",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-closed-court-proceeding-314",
+        "name": "Closed court proceeding",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "In which situation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-forensic-medicine-mtp-315",
+        "name": "MTP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Authorization",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Paediatrics",
+    "sheet": "PEDIATRICS",
+    "sections": [
+     {
+      "name": "GROWTH AND DEVELOPMENT",
+      "topics": [
+       {
+        "id": "lib-paediatrics-growth-charts-and-curves-316",
+        "name": "Growth charts and curves",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Growth monitoring in infants",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-cleft-lip-surgery-317",
+        "name": "Cleft lip surgery",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "3 months -surgery",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-maximum-brain-growth-318",
+        "name": "Maximum brain growth",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "1st year",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-congenital-cystic-adenomatoid-malformation-319",
+        "name": "Congenital Cystic Adenomatoid malformation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image and clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "INFECTIOUS DISEASE",
+      "topics": [
+       {
+        "id": "lib-paediatrics-measles-320",
+        "name": "Measles",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "SSPE(asked twice), Kopliks spo(asked twice )",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-congenital-infections-321",
+        "name": "Congenital infections",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Rubella-clinical , CMV- presentation, Toxoplasma-clinical presentation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-pertusis-322",
+        "name": "Pertusis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Treatment-Azithromycin",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-diptheria-323",
+        "name": "Diptheria",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Treatment of contact-erythromycin",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-croup-324",
+        "name": "Croup",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Acute laryngotracheobronchitis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-rotavirus-325",
+        "name": "Rotavirus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical  presentation and diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-baby-born-to-hiv-mother-326",
+        "name": "Baby born to HIV mother",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presntation and diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-meningococcal-meningitis-327",
+        "name": "Meningococcal Meningitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Prophylaxis for contact",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-polio-328",
+        "name": "Polio",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Maternal antibody does not give immunity",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "INBORN ERRORS OF METABOLISM",
+      "topics": [
+       {
+        "id": "lib-paediatrics-gauchers-disease-329",
+        "name": "Gauchers disease",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Crumpled tissue paper appearance",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-galactosemia-330",
+        "name": "Galactosemia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "GAL-1-P uridyl transferase enzyme deficinecy",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-pompes-disease-331",
+        "name": "Pompes disease",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC GASTROENTEROLOGY",
+      "topics": [
+       {
+        "id": "lib-paediatrics-intestinal-disorders-332",
+        "name": "Intestinal disorders",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Celiac disease-treatment, Positive for Class II HLADQ2, antibodies(asked twice), Intususception-Barium enema , Biliary atresia- Clinical presentation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-gastric-disorders-333",
+        "name": "Gastric disorders",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Pyloric stenosis-metabolic abnormality Hypochloremic, Hypokalemic alkalosis, Gastroschisis VS omphalocele-protrusion of bowel wall through abdominal wall",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC RESPIRATORY DISORDERS",
+      "topics": [
+       {
+        "id": "lib-paediatrics-respiratory-distress-syndrome-334",
+        "name": "Respiratory distress syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Lack of Lecithin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-cystic-fibrosis-335",
+        "name": "Cystic Fibrosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sweat chloride levels",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-foreign-body-in-bronchus-336",
+        "name": "Foreign body in bronchus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Investigation showing unilateral hyperinflation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC ENDOCRINOLOGY",
+      "topics": [
+       {
+        "id": "lib-paediatrics-dka-337",
+        "name": "DKA",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "ISPAD guideline",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-congenital-hypothyroidism-338",
+        "name": "Congenital Hypothyroidism",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Investigation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-rickets-339",
+        "name": "Rickets",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Hypophosphatemic rickets diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-congenital-adrenal-hyperplasia-340",
+        "name": "Congenital Adrenal Hyperplasia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "clinical scenario - 21 hydroxylase deficiency",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC NEUROLOGY",
+      "topics": [
+       {
+        "id": "lib-paediatrics-duchenne-muscular-dystrophy-341",
+        "name": "Duchenne Muscular Dystrophy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Death, Clinical presentation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-congenital-hydrocephalus-342",
+        "name": "Congenital Hydrocephalus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Meningitis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-west-syndrome-343",
+        "name": "West syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "DOC- ACTH",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-congenital-diaphragmatic-hernia-344",
+        "name": "Congenital Diaphragmatic hernia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Most common - Bochdalek hernia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC NEPHROLOGY",
+      "topics": [
+       {
+        "id": "lib-paediatrics-nephrotic-syndrome-345",
+        "name": "Nephrotic syndrome",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "MCD-pathology, clinical scenario",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-bladder-extrophy-346",
+        "name": "Bladder extrophy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-hsp-347",
+        "name": "HSP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC CARDIOLOGY",
+      "topics": [
+       {
+        "id": "lib-paediatrics-tof-348",
+        "name": "TOF",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-psvt-349",
+        "name": "PSVT",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment-adenosine 0.1mg/kg",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC HEMAT-ONCO",
+      "topics": [
+       {
+        "id": "lib-paediatrics-tumor-lysis-syndrome-350",
+        "name": "Tumor Lysis Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-itp-351",
+        "name": "ITP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Prognostic factor",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-leukaemia-352",
+        "name": "Leukaemia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "ALL-Treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NUTRITION AND MALNUTRITION",
+      "topics": [
+       {
+        "id": "lib-paediatrics-malnutrition-353",
+        "name": "Malnutrition",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Kwashiorkor,Chronic Malnutrition-diagnosis,Malnutrition classification, Vitamin C deficiency",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-dietary-guidelines-for-children-and-adolescents-354",
+        "name": "Dietary guidelines for children and adolescents",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Energy from saturated fat- <10% of percentage of caloric intake",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-paediatrics-dehydration-355",
+        "name": "Dehydration",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Levels of Dehydration",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-baby-at-risk-356",
+        "name": "Baby at risk",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Conditions",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-fetal-circulation-357",
+        "name": "Fetal circulation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Umbilical artery",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-paediatrics-caus-of-greenish-brown-stool-358",
+        "name": "Caus of greenish brown stool",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Meconium",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Biochemistry",
+    "sheet": "BIOCHEMISTRY",
+    "sections": [
+     {
+      "name": "VITAMINS",
+      "topics": [
+       {
+        "id": "lib-biochemistry-vitamins-359",
+        "name": "Vitamins",
+        "aliases": [],
+        "timesRepeated": 15,
+        "priority": "High",
+        "pyqAngle": "Vitamin B12-Isolated folate supplementation worsening neuropathy -animal products(asked thrice) ,Vitamin D Def, Niacin deficiency-diet rich in maize (asked twice) ,Vitamin B6, Vitamin K-gamma glutamyl carboxylase activation, Vitamin B3-image of cassals necklace,Viatmin B1 , Vitamin C deficiency-decreased collagen, Biotin deficiency, Vitamin B2 deficinecy-Glutathione reductase, Vitamin A deficiency-conjunctival xerosis, Vitamin B9",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-minerals-360",
+        "name": "Minerals",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Zinc deficiency,copper deficiency",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-chronic-alcoholism-361",
+        "name": "Chronic alcoholism",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "With gouty arthritis -increased urate and lactate levels",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CARBOHYDRATE METABOLISM",
+      "topics": [
+       {
+        "id": "lib-biochemistry-glycogen-storage-disorders-362",
+        "name": "Glycogen storage disorders",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Pompes-clinical presentation(2) ,McArdles-Myophosphorylase deficiency, Glycogen storage disorder - Type 0",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-cycles-insulin-glucagon-ratio-363",
+        "name": "Cycles - Insulin:Glucagon ratio",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Glucose 6 phosphatase , Hormone sensitive lipase activation in low insulin glucagon ratio",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-galactosemia-364",
+        "name": "Galactosemia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Gal PUT deficiency",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-hmp-pathway-365",
+        "name": "HMP pathway",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Primaquine induced hemolytic anemia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-gags-in-corenal-transparency-366",
+        "name": "GAGs in corenal transparency",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Keratan sulfate",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-hepatic-glycogenolysis-367",
+        "name": "Hepatic glycogenolysis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Responsible for fasting blood sugar",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-pdh-complex-368",
+        "name": "PDH complex",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "cellular respiration",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-cellulose-369",
+        "name": "Cellulose",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Absorbs least water",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-glucose-transporters-370",
+        "name": "Glucose transporters",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Insulin sensitive-GLUT 4",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "LIPID METABOLISM",
+      "topics": [
+       {
+        "id": "lib-biochemistry-lysosomal-storage-disorder-371",
+        "name": "Lysosomal storage disorder",
+        "aliases": [],
+        "timesRepeated": 6,
+        "priority": "High",
+        "pyqAngle": "Gauchers disease-crumpled tissue paer appearance ,glucocerbroside deficiency (5) , Tay Sachs disease-cherry red spot",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-familial-hypercholesterolemia-372",
+        "name": "Familial Hypercholesterolemia",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "LDL receptor defect, Achilles tendon xanthoma",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-apolipoprotein-cii-373",
+        "name": "Apolipoprotein CII",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Familial Chylomicronemia syndrome",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-carnitine-deficiency-374",
+        "name": "Carnitine deficiency",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Muscle biopsy shows fat vacuoles",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-transportation-of-fatty-acid-through-inner-mitochondrial--375",
+        "name": "Transportation of fatty acid through inner mitochondrial membrane",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Carnitine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "AMINO ACID AND PROTEIN METABOLISM",
+      "topics": [
+       {
+        "id": "lib-biochemistry-alkaptonuria-376",
+        "name": "Alkaptonuria",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Homogentisic acid 1,2-dioxygenase deficiency , Urine turns black on standing",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-homocystinuria-377",
+        "name": "Homocystinuria",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Cysteine supplementation,Cystathione Beta synthase which needs Vitamin B6 as cofactor",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-phenylketonuria-378",
+        "name": "Phenylketonuria",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dihydrobiopterene reductase deficiency",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-uv-absorbance-of-protein-379",
+        "name": "UV absorbance of protein",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Replacing alanine by Tryptopahn increases UV absorbance of protein at 280 nm",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-protein-structure-380",
+        "name": "Protein structure",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Tertiary sytructire in 3 dimensional",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-no-synthesis-381",
+        "name": "NO synthesis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "From L arginine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GENETICS",
+      "topics": [
+       {
+        "id": "lib-biochemistry-autosomal-recessive-inheritance-382",
+        "name": "Autosomal recessive inheritance",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Cystic Fibrosis -AR",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-non-sense-mutation-383",
+        "name": "Non sense mutation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Single mutation in nucleotide base pair leading to a termination codon",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-dna-packing-384",
+        "name": "DNA packing",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Histone responsible for DNA packing",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-mismatch-repair-385",
+        "name": "Mismatch repair",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "HNPCC",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-proteasome-386",
+        "name": "Proteasome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Function in protein degradation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-rna-editing-387",
+        "name": "RNA editing",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "in syntheis of apolipoprotein B48",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-chargaff-rule-388",
+        "name": "Chargaff rule",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Percentage of nucelotides in DNA - THYMINE 28% , CYTOSINE 22%",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "OXIDATIVE PHOSPHORYLATION",
+      "topics": [
+       {
+        "id": "lib-biochemistry-etc-389",
+        "name": "ETC",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "ETC",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-complex-iv-inhibitors-390",
+        "name": "Complex IV inhibitors",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Cyanide is inhibitor",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-mitochondrial-respiration-391",
+        "name": "Mitochondrial Respiration",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Blocked by oligomycin",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ENZYME DEFECTS",
+      "topics": [
+       {
+        "id": "lib-biochemistry-lesch-nyhan-syndrome-392",
+        "name": "Lesch Nyhan Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical history",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-biochemistry-inhibition-393",
+        "name": "Inhibition",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Competitive- increasing substrate will overcome inhibition, graph  and Non competitive",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-van-den-berg-reaction-394",
+        "name": "Van Den Berg reaction",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Obstructive jaundice - direct positive",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-biochemistry-lead-poisoning-395",
+        "name": "Lead poisoning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Urinary coproporphyrin positive",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Medicine",
+    "sheet": "MEDICINE",
+    "sections": [
+     {
+      "name": "Cardiology",
+      "topics": [
+       {
+        "id": "lib-medicine-ecg-396",
+        "name": "ECG",
+        "aliases": [
+         "Arrhythmia and heart blocks"
+        ],
+        "timesRepeated": 9,
+        "priority": "High",
+        "pyqAngle": "Tricyclic antidepressant toxicity,PSVT, AF-anticoagulation,VT,VFIB, Heart blocks, Drugs causing Torsades De Pointes -Astemizole",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-valvular-heart-disease-397",
+        "name": "Valvular heart disease",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Aortic stenosis-pathogenesis ,Acute rheumatic fever ,MR in marfans,Penicillin prophylaxis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-coronary-artery-disease-398",
+        "name": "Coronary artery disease",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "MI, Angina, Unstable angina-management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-heart-failure-399",
+        "name": "Heart failure",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Xray finding,examination, treatment",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-disorders-of-aorta-400",
+        "name": "Disorders of Aorta",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Aortic dissection - diagnosis and management ,Coarctation of aorta",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-jvp-401",
+        "name": "JVP",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Constrictive pericarditis, restrictive cardiomyopathy , Prominent a wave - TS, absent a wave- AF",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-infective-endocarditis-402",
+        "name": "Infective endocarditis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Prophylaxis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-cardiomyopathy-403",
+        "name": "Cardiomyopathy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "HOCM - murmur",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-cardiac-tamponade-404",
+        "name": "Cardiac Tamponade",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation and treatment - Pericardiocentesis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-constrictive-pericarditis-405",
+        "name": "Constrictive pericarditis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "JVP",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-pulmonary-embolism-406",
+        "name": "Pulmonary embolism",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Wells score",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-pulse-and-its-types-407",
+        "name": "Pulse and its types",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Water Hammer pulse",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Hematology-covered in Pathology",
+      "topics": [
+       {
+        "id": "lib-medicine-macrocytic-408",
+        "name": "Macrocytic",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "SACD",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-sickle-cell-anemia-409",
+        "name": "Sickle cell anemia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-coagulation-disorders-vwd-410",
+        "name": "Coagulation disorders – vWD",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Von willebrand disease",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-thrombocytopenia-411",
+        "name": "Thrombocytopenia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Wiskott- Aldrich syndrome",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Endocrinology",
+      "topics": [
+       {
+        "id": "lib-medicine-dm-dka-and-hhs-412",
+        "name": "DM – DKA and HHS",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "DKA Management, Type 1 Diabetes Mellitus - stage 3",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-pituitary-disorders-di-and-siadh-413",
+        "name": "Pituitary disorders – DI and SIADH",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Acromegaly, Prolactinoma, Nephrogenic DI, Pituitary apoplexy",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-thyroid-disorders-414",
+        "name": "Thyroid disorders",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Investigation in graves , Primary versus secondary hypothyroidism",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-adrenal-disease-cushing-s-and-addison-415",
+        "name": "Adrenal disease – Cushing's and Addison",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Addisons",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-pheochromocytoma-416",
+        "name": "Pheochromocytoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-men-syndrome-417",
+        "name": "MEN syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Types of MEN",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-wilson-disease-418",
+        "name": "Wilson disease",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Investigation.",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Neurology",
+      "topics": [
+       {
+        "id": "lib-medicine-parkinson-s-419",
+        "name": "Parkinson’s",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Basal ganglia, Clinical question",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-headache-420",
+        "name": "Headache",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Migraine ,Medication overuse headache",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-stroke-localisation-421",
+        "name": "Stroke – localisation",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Millard - Gubler syndrome ,Aphasia, Optic tract",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-multiple-sclerosis-422",
+        "name": "Multiple sclerosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Loss of myelin sheath",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-dementia-423",
+        "name": "Dementia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Normal Pressure Hydrocepahlus",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-myasthenia-gravis-424",
+        "name": "Myasthenia gravis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Infection",
+      "topics": [
+       {
+        "id": "lib-medicine-hiv-425",
+        "name": "HIV",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Opportunustic infection,treatment monitoring-Viral load",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-tb-426",
+        "name": "TB",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "TB-Meningitis,MDR TB - resistance to INH and RIFAMPICIN",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-meningitis-427",
+        "name": "Meningitis",
+        "aliases": [
+         "Encephalitis"
+        ],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "HSV",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-pneumonia-428",
+        "name": "Pneumonia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CURB-65 score",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Rheumatology",
+      "topics": [
+       {
+        "id": "lib-medicine-vasculitis-429",
+        "name": "Vasculitis",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "GPA, PAN, Giant cell arteritis - steroids, Takayasu arteritis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-scleroderma-430",
+        "name": "Scleroderma",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Diagnosis from clinical condition,Limited versus Diffuse",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-sle-431",
+        "name": "SLE",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Lupus Nephritis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-gout-432",
+        "name": "Gout",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Acute Gout",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-ankylosing-spondylitis-433",
+        "name": "Ankylosing spondylitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-sarcoidosis-434",
+        "name": "Sarcoidosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "General",
+      "topics": [
+       {
+        "id": "lib-medicine-poisoning-435",
+        "name": "Poisoning",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Iron,Paracetamol, Lead poisoning",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-high-altitude-disorders-436",
+        "name": "High altitude disorders",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-frostbite-437",
+        "name": "Frostbite",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Temperature- 42degrees",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-copper-syndrome-438",
+        "name": "Copper Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Nephrology",
+      "topics": [
+       {
+        "id": "lib-medicine-abg-and-rta-439",
+        "name": "ABG and RTA",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Metabolic acidosis, alkalosis; Respiratory acidosis , alkalosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-electrolyte-disorders-440",
+        "name": "Electrolyte disorders",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Hyponatremia, Hypokalemia, Hyperkalemia",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-dialysis-disequilibrium-syndrome-441",
+        "name": "Dialysis Disequilibrium syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment-iv mannitol",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-vhl-syndrome-442",
+        "name": "VHL syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Gastroenterology",
+      "topics": [
+       {
+        "id": "lib-medicine-malabsorption-disorders-443",
+        "name": "Malabsorption disorders",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "AntiTTG-celiac disease, Distal intestinal obstruction nutritional deficiency",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-and-its-complications-444",
+        "name": "and its complications",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "SBP , Child-Pugh score, Management of variceal bleed",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-viral-hepatitis-445",
+        "name": "Viral hepatitis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Treatment of chronic Hepatitis , Acute Hepatitis - antibodies",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-approach-to-jaundice-446",
+        "name": "Approach to Jaundice",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Obstructive jaundice",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "Respiratory System",
+      "topics": [
+       {
+        "id": "lib-medicine-pleural-disease-447",
+        "name": "Pleural disease",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Pneumothorax-fracture rib , paradoxical breathing, Lights criteria",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-asthma-copd-448",
+        "name": "Asthma/COPD",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "NIPPV, Treatment of Asthma",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-ards-449",
+        "name": "ARDS",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-pancoast-tumor-450",
+        "name": "Pancoast tumor",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-occupational-lung-disease-451",
+        "name": "Occupational lung disease",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Tropical Pulmonary Eosinophilia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-idiopathic-pulmonary-fibrosis-452",
+        "name": "Idiopathic pulmonary fibrosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cause of death - respiratory failure",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-medicine-kartageners-syndrome-453",
+        "name": "Kartageners syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dextrocardia Chest Xray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Community Medicine / PSM",
+    "sheet": "PSM",
+    "sections": [
+     {
+      "name": "EPIDEMIOLOGY",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-phc-454",
+        "name": "PHC",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Overseeing a scholl health program",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-iceberg-phenomenon-455",
+        "name": "Iceberg phenomenon",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "In influenza",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-u-chc-456",
+        "name": "U-CHC",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "100 bed facility in metro cities",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-types-of-evaluation-457",
+        "name": "Types of Evaluation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Ptocess evaluation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-phase-of-clinical-trials-458",
+        "name": "Phase of clinical trials",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "In which phase what is done",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-types-of-barrier-459",
+        "name": "Types of Barrier",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cultural",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CONCEPTS OF HEALTH AND DISEASE",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-health-education-model-460",
+        "name": "Health education model",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Steps",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-quarantine-period-461",
+        "name": "Quarantine period",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Duration based on incubation period",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-semantic-barrier-462",
+        "name": "Semantic barrier",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Definition",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-tracking-of-bp-463",
+        "name": "Tracking of BP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Primary prevention",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-longevity-dividend-464",
+        "name": "Longevity dividend",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Definition",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-years-of-potential-life-lost-465",
+        "name": "Years of potential life lost",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Year lost due to premature death",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "DEMOGRAPHY AND FERTILITY INDICATORS",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-hdi-pqli-466",
+        "name": "HDI/PQLI",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image, Components of PQLI",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-qaly-467",
+        "name": "QALY",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Definition",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-demograohy-demographic-cycle-468",
+        "name": "Demograohy/Demographic cycle",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Order",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "VACCINES AND COLD CHAIN",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-vaccine-ci-for-live-vaccine-immunisation-schedu-469",
+        "name": "Vaccine/CI for live vaccine /Immunisation schedule",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "CI for live vaccine, Td vaccine given at 10 years, Age appropriate immunisation schedule",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-cholera-vaccine-470",
+        "name": "Cholera vaccine",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Shancol vaccine - bivalent",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-diphtheria-vaccine-471",
+        "name": "Diphtheria vaccine",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Age given",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-ice-lined-refrigerator-472",
+        "name": "Ice-lined refrigerator",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Freeze and heat sensitive vaccines",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-open-vial-policy-473",
+        "name": "Open vial policy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "OPV",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-tetanus-vaccine-474",
+        "name": "Tetanus vaccine",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Moderate",
+        "pyqAngle": "Age given, booster",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.301,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "FAMILY PLANNING AND CONTARCEPTIVE",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-asha-475",
+        "name": "ASHA",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Responsibilities, benefits",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-mtp-476",
+        "name": "MTP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Duration",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NUTRITION",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-vitamin-deficiency-477",
+        "name": "Vitamin deficiency",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Thiamine, Niacin , Vitamin A, Vitamin C",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-ecology-of-malnutrition-478",
+        "name": "Ecology of malnutrition",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Factors contributing",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-global-hunger-index-479",
+        "name": "Global Hunger Index",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Components",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-neurolathyrism-480",
+        "name": "Neurolathyrism",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Toxin-BOAA",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-rda-481",
+        "name": "RDA",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Definition",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-epidemic-dropsy-482",
+        "name": "Epidemic dropsy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Paper chromatography-most sensitive",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PREVENTIVE OBS,PEDS AND GERIATRICS",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-infant-mortality-ratio-483",
+        "name": "Infant Mortality ratio",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Claculation , Formula",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-maternal-mortality-ratio-484",
+        "name": "Maternal mortality ratio",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Calculation,Formula, Sustainable Development Goal 3",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-imr-485",
+        "name": "IMR",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Components",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-neonatal-mortality-486",
+        "name": "Neonatal mortality",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Calculation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-sti-kits-487",
+        "name": "STI kits",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Colour coding",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-unicef-488",
+        "name": "UNICEF",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Functions",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ENVIRONMENT AND HEALTH",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-biomedical-waste-management-489",
+        "name": "Biomedical waste management",
+        "aliases": [],
+        "timesRepeated": 6,
+        "priority": "High",
+        "pyqAngle": "Chemical waste disposal, Sharp waste - white bagColour coding,Blood bag ,Throat swab disposal - yellow, Blood spill management",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-kata-thermometer-490",
+        "name": "Kata  thermometer",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "image ,used for",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-disaster-management-491",
+        "name": "Disaster management",
+        "aliases": [
+         "Disaster cycle"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Vaccine protocol after disaster,Disaster preparedness,Flood management prophylaxis - doxycycline and malathion,Impact-response-rehab-mitigation,recovery phase",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-air-quality-index-492",
+        "name": "Air Quality Index",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Classifcation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-disinfectants-493",
+        "name": "Disinfectants",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Bleachimg powder- Hypochlorous acid",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-indicators-for-routine-monitoring-of-air-pollut-494",
+        "name": "Indicators for routine monitoring of air pollution are",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sulfur dioxide, lead and particulate matter",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-collection-of-water-sample-495",
+        "name": "Collection of water sample",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Procedure",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-factories-act-1948-496",
+        "name": "Factories act 1948",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Max number of working hours allowed per week is 60",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "COMMUNICABLE AND NON COMMUNICABLE DISEASE",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-varicella-497",
+        "name": "Varicella",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Incubation period, isolation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-pulmonary-tb-498",
+        "name": "Pulmonary TB",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Definition of cure",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-rabies-499",
+        "name": "Rabies",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Way to reduce incidence of rabies",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-generation-time-500",
+        "name": "Generation time",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Meaning",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-nipah-501",
+        "name": "Nipah",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical history",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-step-approach-of-who-502",
+        "name": "STEP approach of WHO",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Steps involved",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-bubonic-plague-vector-503",
+        "name": "Bubonic plague - vector",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Xenopsylla cheopis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-metabolic-syndrome-504",
+        "name": "Metabolic syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "NCEP-ATP III guideliness",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NATIONAL HEALTH PROGRAMMES",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-nlep-505",
+        "name": "NLEP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Logo",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-ayushman-bharat-506",
+        "name": "Ayushman Bharat",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Components",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-colombo-plan-507",
+        "name": "Colombo plan",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Setting up cobalt therapy units for cancer",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-janani-shishu-suraksha-karyakram-508",
+        "name": "Janani Shishu Suraksha Karyakram",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Full form of JSSK",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-sapna-leprosy-509",
+        "name": "Sapna Leprosy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-ntep-510",
+        "name": "NTEP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Procedure",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-project-monica-511",
+        "name": "Project MONICA",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cardiovascular disease",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-cost-benefit-analysis-512",
+        "name": "Cost Benefit Analysis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Financial advantage quantified",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BIOSTATISTICS",
+      "topics": [
+       {
+        "id": "lib-community-medicine-psm-parametric-test-513",
+        "name": "Parametric test",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Chi square, Student t test",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-case-control-study-514",
+        "name": "Case-control study",
+        "aliases": [
+         "Cohort study"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Correct seqence of case control,cohort study-asked twice - example of retrospective cohort study",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-coefficient-of-regression-coefficient-of-variat-515",
+        "name": "Coefficient of regression/coefficient of variation",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Definition of both",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-tests-of-significance-516",
+        "name": "Tests of significance",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Scenario",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-stratified-sampling-517",
+        "name": "Stratified sampling",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Example given",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-median-518",
+        "name": "Median",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Calculation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-attributable-risk-relative-risk-519",
+        "name": "Attributable risk/Relative risk",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "cas e scenario",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-standard-deviation-520",
+        "name": "Standard deviation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Scenario",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-correlation-coefficient-521",
+        "name": "Correlation coefficient",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "<0.5 weak correlation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-observational-study-522",
+        "name": "Observational study",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Ecological study",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-community-medicine-psm-screening-523",
+        "name": "Screening",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Prospective",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Orthopaedics",
+    "sheet": "ORTHO",
+    "sections": [
+     {
+      "name": "UPPER LIMB TRAUMA",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-supracondylar-of-humerus-524",
+        "name": "Supracondylar # of Humerus",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Gartland 3, gunstock deformity",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-median-nerve-tests-525",
+        "name": "Median Nerve – Tests",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Pen test",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-pulled-elbow-526",
+        "name": "Pulled Elbow",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "History and diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-clavicle-fracture-527",
+        "name": "Clavicle fracture",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "LOWER LIMB TRAUMA",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-knee-528",
+        "name": "Knee",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Lachman test,Tibial Tuberosity,Bipartite patella, Below knee amputation,periarticular fracture of knee - spanning fixator",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-ankle-529",
+        "name": "Ankle",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Inversion injury to ankle,Medial malleolar fracture",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-hip-530",
+        "name": "Hip",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Dynamic hip screw, Posterior hip dislocation",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-metatarsal-fracture-531",
+        "name": "Metatarsal fracture",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "wear cast for 6-8 weeks",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "COMPLICATIONS OF FRACTURES",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-fat-embolism-532",
+        "name": "Fat Embolism",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "History and diagnosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-scoliosis-image-533",
+        "name": "Scoliosis [Image]",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Measurement of scoliosis - cobbs angle",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NERVE INJURY",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-radial-nerve-palsy-image-534",
+        "name": "Radial Nerve Palsy [Image]",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Splint image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-carpal-tunnel-syndrome-535",
+        "name": "Carpal tunnel syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical history",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PEDIATRIC ORTHO",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-rickets-536",
+        "name": "Rickets",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-hypophosphatemic-rickets-537",
+        "name": "Hypophosphatemic Rickets",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chemical abnormality",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-osteogenesis-imperfecta-538",
+        "name": "Osteogenesis Imperfecta",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "History- fetus with multiple long bone fracture",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BONE INFECTION",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-acute-osteomyelitis-539",
+        "name": "Acute Osteomyelitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-septic-arthritis-540",
+        "name": "Septic arthritis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image and history",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "BONE TUMOURS",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-giant-cell-tumor-osteoclastoma-541",
+        "name": "Giant Cell Tumor (Osteoclastoma)",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Image, Histology",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-fibrous-dysplasia-542",
+        "name": "Fibrous Dysplasia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-multiple-enchondroma-543",
+        "name": "Multiple Enchondroma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "METABOLIC BONE DISEASE",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-osteoporosis-544",
+        "name": "Osteoporosis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Images",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-scurvy-image-545",
+        "name": "Scurvy [Image]",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SPINAL INJURIES AND DISEASES",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-ivdp-546",
+        "name": "IVDP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-spinous-process-fracture-547",
+        "name": "Spinous process fracture",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-spondylolisthesis-548",
+        "name": "Spondylolisthesis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-ankylosing-spondylitis-549",
+        "name": "Ankylosing spondylitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "History",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GENERAL",
+      "topics": [
+       {
+        "id": "lib-orthopaedics-osteoarthritis-550",
+        "name": "Osteoarthritis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "History and diagnosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-epiphyseal-plate-551",
+        "name": "Epiphyseal Plate",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Linear growth of bone is disturbed in fracture of which location",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-orthopaedics-primary-healing-552",
+        "name": "Primary healing",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image - Cortex of one side of fracture unites with cortex of other side",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Psychiatry",
+    "sheet": "PSYCHIATRY",
+    "sections": [
+     {
+      "name": "MOOD DISORDER",
+      "topics": [
+       {
+        "id": "lib-psychiatry-postpartum-blues-553",
+        "name": "Postpartum Blues",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Treatment  support and education ,Tearfulness, insomnia postpartum",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-depression-554",
+        "name": "Depression",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Psychotic depression clinical features",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-mania-555",
+        "name": "Mania",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NEUROTIC,STRESS RELATED AND OBSESSIVE COMPULSIVE DISORDER",
+      "topics": [
+       {
+        "id": "lib-psychiatry-panic-disorder-556",
+        "name": "Panic disorder",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-conversion-disorder-557",
+        "name": "Conversion disorder",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Psychotherapy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-body-dysmorphic-disorder-558",
+        "name": "Body Dysmorphic Disorder",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment-SSRI",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-generalised-anxiety-disorder-559",
+        "name": "Generalised anxiety disorder",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Symptoms",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SEXUAL DISORDER",
+      "topics": [
+       {
+        "id": "lib-psychiatry-premature-ejaculation-560",
+        "name": "Premature Ejaculation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Squeeze therpay , non pharmacological management",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SLEEP DISORDER",
+      "topics": [
+       {
+        "id": "lib-psychiatry-eeg-waves-sleep-stages-561",
+        "name": "EEG WAVES(Sleep stages )",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sleep satges",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-restess-leg-syndrome-562",
+        "name": "Restess Leg Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Gabapentin treatment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ORGANIC MENTAL DISORDER",
+      "topics": [
+       {
+        "id": "lib-psychiatry-adhd-563",
+        "name": "ADHD",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Low",
+        "pyqAngle": "Conduct disorder ,SNRI - Reboxetine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.304,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-antisocial-pd-564",
+        "name": "Antisocial PD",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SCHIZOPHRENIA",
+      "topics": [
+       {
+        "id": "lib-psychiatry-formal-thought-disorder-565",
+        "name": "Formal Thought Disorder",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Derailment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-mental-health-care-act-2017-566",
+        "name": "Mental Health care act -2017",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Days of voluntary admission - 30 days",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SUBSTANCE ABUSE",
+      "topics": [
+       {
+        "id": "lib-psychiatry-alcohol-wernicke-s-567",
+        "name": "Alcohol/Wernicke's",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Withdrawal prevented by Lorazepam,Wernickes encephalopathy - Thiamine supplementation before dextrose, Delirium tremens",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-cocaine-568",
+        "name": "Cocaine",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Features of tpxicity",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-opioid-withdrawal-569",
+        "name": "Opioid withdrawal",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "High",
+        "pyqAngle": "Buprenorphine maintenance phase",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.458,
+        "tier": 3,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "OTHERS",
+      "topics": [
+       {
+        "id": "lib-psychiatry-bulimia-nervosa-570",
+        "name": "Bulimia Nervosa",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical presentation -Bulimia versus anorexia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-clozapine-571",
+        "name": "Clozapine",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "side effect salivation and hyperglycemia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-psychotherapy-572",
+        "name": "Psychotherapy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Countertransference",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-psychiatry-types-of-learning-573",
+        "name": "Types of Learning",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Psychomotor learning",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Physiology",
+    "sheet": "PHYSIOLOGY",
+    "sections": [
+     {
+      "name": "GENERAL PHYSIOLOGY",
+      "topics": [
+       {
+        "id": "lib-physiology-glut-transporters-574",
+        "name": "GLUT Transporters",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "GLUT, SGLT",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-resting-membrane-potential-575",
+        "name": "Resting Membrane Potential",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Potassium responsible, hyperkalemia",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-action-potential-curve-576",
+        "name": "Action Potential Curve",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Nerve graph , Neuromuscular sequence",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-cell-to-cell-signalling-mechanisms-577",
+        "name": "Cell to Cell Signalling Mechanisms",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Paracrine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-facilitated-diffusion-578",
+        "name": "Facilitated Diffusion",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-second-messengers-579",
+        "name": "Second Messengers",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Adenyl cyclase",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-fluid-compartments-580",
+        "name": "Fluid Compartments",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Identify based on electrolyte composition",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-baroreceptor-reflex-581",
+        "name": "Baroreceptor Reflex",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Negative feedback",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-tyrosine-kinase-signalling-582",
+        "name": "Tyrosine Kinase Signalling",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Insulin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-cystometrogram-583",
+        "name": "Cystometrogram",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Segment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-oxygen-haemoglobin-dissocaition-curve-584",
+        "name": "Oxygen haemoglobin dissocaition curve",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CENTRAL NERVOUS SYSTEM",
+      "topics": [
+       {
+        "id": "lib-physiology-sensory-fibres-585",
+        "name": "Sensory fibres",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Tingling sensation Abeta fibres ,A fibres are more sensitive to pressure than C fibres",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-pacinian-corpuscle-586",
+        "name": "Pacinian Corpuscle",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Vibration",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-brodmann-areas-587",
+        "name": "Brodmann Areas",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Inferior frontal gyrus-motor speech area",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-hypothalamic-thermostat-588",
+        "name": "Hypothalamic Thermostat",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Graph",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-hemiballismus-589",
+        "name": "Hemiballismus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Involvement of substantia Nigra",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-lesions-in-optic-pathway-590",
+        "name": "Lesions in Optic Pathway",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Wernicke's hemianopic pupil",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-multiple-sclerosis-591",
+        "name": "Multiple Sclerosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Oligodendrocytes involved",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-cortical-plasticity-592",
+        "name": "Cortical Plasticity",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Phantom limb",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-allodynia-593",
+        "name": "Allodynia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Hyperlagesia and Allodynia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-tracts-594",
+        "name": "Tracts",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dorsal column involvement",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CARDIOVASCULAR SYSTEM",
+      "topics": [
+       {
+        "id": "lib-physiology-jvp-waves-595",
+        "name": "JVP waves",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "waves",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-myocardial-action-potential-596",
+        "name": "Myocardial Action Potential",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RESPIRATORY SYTSEM",
+      "topics": [
+       {
+        "id": "lib-physiology-respiratory-distress-syndrome-597",
+        "name": "Respiratory Distress Syndrome",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Deficiency of Dipalmitoyl Phsophatidyl choline ,Defect in Type 2 pneumocytes",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-spirometry-598",
+        "name": "Spirometry",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "FRC",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-surfactant-599",
+        "name": "Surfactant",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Function",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-v-q-ratio-600",
+        "name": "V/Q Ratio",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "dead space",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GASTROINTESTINAL SYSTEM",
+      "topics": [
+       {
+        "id": "lib-physiology-tongue-601",
+        "name": "Tongue",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Papilla, taste buds",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-post-gastrectomy-602",
+        "name": "Post gastrectomy",
+        "aliases": [
+         "ileal and jejunal resection"
+        ],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Vitamin B12 deficiency",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-enterogastric-reflexes-603",
+        "name": "Enterogastric Reflexes",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "gastric emptying is delayed",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RENAL SYSTEM",
+      "topics": [
+       {
+        "id": "lib-physiology-electrolytes-604",
+        "name": "Electrolytes",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sodium deficit",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-renal-clearance-605",
+        "name": "RENAL  clearance",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Graph",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-glomerular-basement-membrane-606",
+        "name": "Glomerular Basement Membrane",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Heparan sulfate",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ENDOCRINE",
+      "topics": [
+       {
+        "id": "lib-physiology-acth-cortisol-607",
+        "name": "ACTH & Cortisol",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Time when its maximum",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-factors-affecting-prolactin-secretion-608",
+        "name": "Factors Affecting Prolactin Secretion",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Time when its maximum",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-thyroid-609",
+        "name": "Thyroid",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sodium iodide symporter",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "HAEMATOLOGY",
+      "topics": [
+       {
+        "id": "lib-physiology-clotting-factors-warfarin-therapy-610",
+        "name": "Clotting Factors & Warfarin Therapy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clotting factors affected",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-physiology-blood-storage-611",
+        "name": "Blood Storage",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CPDA superior than ACD",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "ENT",
+    "sheet": "ENT",
+    "sections": [
+     {
+      "name": "EAR",
+      "topics": [
+       {
+        "id": "lib-ent-inner-ear-612",
+        "name": "Inner Ear",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "Vestibular Neuronitis- Head impulse test ,Saccule located in vestibule of inner ear,Basilar membrane",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-ear-nerve-supply-613",
+        "name": "Ear-Nerve Supply",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image, scratching external acoustic canal causes cough by auricular branch of vagus",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-rinne-s-test-614",
+        "name": "Rinne's Test",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Positive/negative,conductive hearing loss",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-otitis-media-615",
+        "name": "Otitis Media",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Serous- Image, Tuberculous",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-ear-ossicles-616",
+        "name": "Ear Ossicles",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image of Incus",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-pure-tone-audiometry-carhart-s-notch-617",
+        "name": "Pure tone audiometry- Carhart's Notch",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Schwartz sign",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-glomus-tymapnicum-618",
+        "name": "Glomus Tymapnicum",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Red vascular mass on otoscopy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-battle-sign-619",
+        "name": "Battle sign",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Skull fracture with bleeding behind ears image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "HEAD AND NECK",
+      "topics": [
+       {
+        "id": "lib-ent-nasopharyngeal-angiofibroma-620",
+        "name": "Nasopharyngeal Angiofibroma",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-rhino-orbital-cerebral-mucormycosis-621",
+        "name": "Rhino Orbital Cerebral Mucormycosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "clinical history - Biopsy with histopath examinationƒ",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-foreign-body-in-esophagus-622",
+        "name": "Foreign Body in Esophagus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Double ring sign",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-quinsy-623",
+        "name": "Quinsy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NOSE AND PARANASAL SINUSES",
+      "topics": [
+       {
+        "id": "lib-ent-atrophic-rhinitis-624",
+        "name": "Atrophic Rhinitis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Roomy nasal cavity",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-maxillary-sinus-625",
+        "name": "Maxillary Sinus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT PNS image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-frontal-mucocele-626",
+        "name": "Frontal Mucocele",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-water-s-view-627",
+        "name": "Water's View",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Xray of Orbito-meatal angle",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-juvenile-nasopharyngeal-angiofibroma-628",
+        "name": "Juvenile Nasopharyngeal angiofibroma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CECT investigation of choice",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-nasopharyngeal-airway-629",
+        "name": "Nasopharyngeal airway",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-open-rhinoplasty-630",
+        "name": "Open rhinoplasty",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Incision",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-fossa-of-rosenmuller-631",
+        "name": "Fossa of Rosenmuller",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Lateral wall of Nasopharynx",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-epistaxis-632",
+        "name": "Epistaxis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Ligation of sphenopalatine artery",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-ent-hemlich-maneuver-633",
+        "name": "Hemlich Maneuver",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-parotid-abscess-634",
+        "name": "Parotid Abscess",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-facial-nerve-635",
+        "name": "Facial Nerve",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Palsy - findings",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "THROAT/LARYNX",
+      "topics": [
+       {
+        "id": "lib-ent-tonsil-636",
+        "name": "Tonsil",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Post tonsillectomy complication , Tonsillitis -Ear pain due ti glossopharyngeal nerve",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-tracheostomy-tube-637",
+        "name": "Tracheostomy Tube",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-total-laryngectomy-638",
+        "name": "Total Laryngectomy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-mitomycin-c-639",
+        "name": "Mitomycin-C",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Used in subglottic stenosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-bilateral-recurrent-laryngeal-nerve-injury-640",
+        "name": "Bilateral Recurrent Laryngeal Nerve Injury",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "breathing difficulty and unsuccessful extubation after total thyroidectomy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-vocal-cords-641",
+        "name": "Vocal Cords",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Depressed and bowing-cricothyroid",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-laryngotracheal-stenosis-642",
+        "name": "Laryngotracheal stenosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cottom- Meyer classificatiom",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ent-croup-643",
+        "name": "Croup",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Ophthalmology",
+    "sheet": "OPHTHAL",
+    "sections": [
+     {
+      "name": "ANTERIOR SEGMENT/CONJUNCTIVA/SCLERA",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-uvea-acute-anterior-uveitis-644",
+        "name": "Uvea -Acute Anterior Uveitis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Panuveitis, Clinical question about hypopyon",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-episcleritis-645",
+        "name": "Episcleritis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-giant-papillary-conjunctivitis-646",
+        "name": "Giant Papillary Conjunctivitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-herbert-pits-trachoma-647",
+        "name": "Herbert Pits (Trachoma)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CORNEA",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-corneal-endothelium-648",
+        "name": "Corneal Endothelium",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Moisture and clarity of cornea",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-fungal-corneal-ulcer-649",
+        "name": "Fungal Corneal Ulcer",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Satellite lesion",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-acanthamoeba-keratitis-650",
+        "name": "Acanthamoeba Keratitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical question about acanthamoeba keratitis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-exposure-keratopathy-651",
+        "name": "Exposure Keratopathy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-keratoconus-652",
+        "name": "Keratoconus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GLAUCOMA",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-glaucoma-drugs-653",
+        "name": "Glaucoma - Drugs",
+        "aliases": [],
+        "timesRepeated": 5,
+        "priority": "High",
+        "pyqAngle": "Image,LatanoprostPrimary angle closure glaucome",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.892,
+        "tier": 3,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "INFECTIOUS/INFLAMMATORY",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-acanthamoeba-keratitis-654",
+        "name": "Acanthamoeba Keratitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical question about acanthamoeba keratitis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-rheumatoid-arthritis-655",
+        "name": "Rheumatoid Arthritis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Scleromalacia perforans",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-sympathetic-ophthalmitis-656",
+        "name": "Sympathetic Ophthalmitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Penetrating trauma",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-pseudo-exfoliation-syndrome-657",
+        "name": "Pseudo Exfoliation Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "LENS/CATARACT",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-after-cataract-658",
+        "name": "After Cataract",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Posterior Capsular opacification",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-immature-senile-cataract-659",
+        "name": "Immature Senile Cataract",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment and identification",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-congenital-cataract-660",
+        "name": "Congenital cataract",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Immediate surgery",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NEURO-OPTHALMOLOGY/VISUAL PATHWAYS",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-visual-pathway-defects-661",
+        "name": "Visual Pathway Defects",
+        "aliases": [],
+        "timesRepeated": 6,
+        "priority": "High",
+        "pyqAngle": "Blind spot enlargement , Abducent Nerve palsy ,3rd CN palsy ,Left optic tract- affects right halves of both eyes, Homonymous hemianopia",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 1.0,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-cavernous-sinus-thrombosis-662",
+        "name": "Cavernous Sinus Thrombosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Abducent nerve palsy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "OPTIC NERVE / FILED TESTING",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-worth-s-four-dot-test-663",
+        "name": "Worth’s Four Dot Test",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "To test binocular vision / diplopia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-photostress-test-664",
+        "name": "Photostress Test",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Differentiate between Macula and optic nerve disease",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "REFRACTIVE ERRORS",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-astigmatism-665",
+        "name": "Astigmatism",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image, not compliant with spectacles of myopic astigmatism",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-hyperopia-666",
+        "name": "Hyperopia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-index-myopia-667",
+        "name": "Index Myopia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical scenario and image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RETINA",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-diabetic-retinopathy-668",
+        "name": "Diabetic Retinopathy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image of hard exudates - diabetes mellitus,Treatment PRP",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-retinal-detachment-669",
+        "name": "Retinal Detachment",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Exudative retinal detachment",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-retinitis-pigmentosa-670",
+        "name": "Retinitis Pigmentosa",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-tay-sachs-disease-671",
+        "name": "Tay Sachs disease",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cherry red spot",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SQUINT/STRABISMUS",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-squint-types-paralytic-672",
+        "name": "Squint Types (Paralytic)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Paralytic",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "TUMORS/MASS LESIONS",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-retinoblastoma-673",
+        "name": "Retinoblastoma",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Rosettes with scanty cytoplasm, positive for synaptophysin and chromogranin",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-limbal-dermoid-674",
+        "name": "Limbal Dermoid",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-dermoid-cyst-675",
+        "name": "Dermoid cyst",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-ophthalmology-thyroid-ophthalmopathy-676",
+        "name": "Thyroid Ophthalmopathy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-distichiasis-677",
+        "name": "Distichiasis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "2 rows of eyelash",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-intraocular-foreign-body-678",
+        "name": "Intraocular Foreign Body",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "MRI of eye",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-wilson-s-disease-679",
+        "name": "Wilson’s Disease",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "KF ring",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-ophthalmology-fluorescein-dye-cobalt-blue-filter-680",
+        "name": "Fluorescein dye cobalt blue filter",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Dermatology",
+    "sheet": "DERMATOLOGY",
+    "sections": [
+     {
+      "name": "CUTANEOUS INFECTION",
+      "topics": [
+       {
+        "id": "lib-dermatology-kerion-681",
+        "name": "Kerion",
+        "aliases": [
+         "Favus"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image , Inflammatory alopecia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-acne-vulgaris-682",
+        "name": "Acne Vulgaris",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Treatment, Evaluation of hyperandrogenism in females",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-trichophyton-683",
+        "name": "Trichophyton",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-tinea-capitis-684",
+        "name": "Tinea Capitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-mycetoma-685",
+        "name": "Mycetoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Histology image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-chromoblastomycosis-686",
+        "name": "Chromoblastomycosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-acute-paronychia-687",
+        "name": "Acute Paronychia",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Treatment -Amoxiclav",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-onychomycosis-688",
+        "name": "Onychomycosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Nail lacquer - Amorilfine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MYCOBACTERIAL INFECTION",
+      "topics": [
+       {
+        "id": "lib-dermatology-leprosy-689",
+        "name": "Leprosy",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "lepra reaction ,Lepromatpus leprosy with negative lepromin test",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-cutaneous-tuberculosis-690",
+        "name": "Cutaneous Tuberculosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "IMMUNOBULLOUS DISORDERS",
+      "topics": [
+       {
+        "id": "lib-dermatology-pemphigus-vulgaris-691",
+        "name": "Pemphigus Vulgaris",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Fishnet pattern of immunofluorescence, Flaccid bullae and suprabasal split",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PAPULOSQUAMOUS DISORDERS",
+      "topics": [
+       {
+        "id": "lib-dermatology-psoriasis-692",
+        "name": "Psoriasis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Isomorphic phenomenonIrregular pitting of nails with subungual hyperkeratosis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "DISORDERS OF SKIN APPENDAGES",
+      "topics": [
+       {
+        "id": "lib-dermatology-telogen-effluvium-693",
+        "name": "Telogen Effluvium",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Hair loss after COVID 19",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SEXUALLY TRANSMITTED INFECTION",
+      "topics": [
+       {
+        "id": "lib-dermatology-syphilis-694",
+        "name": "Syphilis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Secondary syphilis, Painless ulcer in genital region",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-genital-herpes-695",
+        "name": "Genital Herpes",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ECZEMATOUS DISORDERS",
+      "topics": [
+       {
+        "id": "lib-dermatology-contact-dermatitis-696",
+        "name": "Contact Dermatitis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "After exposure to PPD in dye",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PIGMENTARY DISORDERS",
+      "topics": [
+       {
+        "id": "lib-dermatology-acanthosis-nigricans-697",
+        "name": "Acanthosis Nigricans",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "IMAGE - associated with Metabolic syndrome",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "SKIN TUMOURS",
+      "topics": [
+       {
+        "id": "lib-dermatology-malignant-melanoma-698",
+        "name": "Malignant Melanoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-suspected-malignant-lesion-699",
+        "name": "Suspected Malignant lesion",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Excisional biopsy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-anogenital-warts-700",
+        "name": "Anogenital warts",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "HPV 18",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-dermatology-pityriasis-rubra-pilaris-701",
+        "name": "Pityriasis Rubra Pilaris",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-morphea-localized-scleroderma-702",
+        "name": "Morphea (localized scleroderma)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image and histology",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-glands-703",
+        "name": "Glands",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sebaceous gland image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-phrynoderma-704",
+        "name": "Phrynoderma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-herpes-labialis-705",
+        "name": "Herpes Labialis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-dermatology-harlequin-icthyosis-706",
+        "name": "Harlequin icthyosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Anatomy",
+    "sheet": "ANATOMY",
+    "sections": [
+     {
+      "name": "NEUROANATOMY",
+      "topics": [
+       {
+        "id": "lib-anatomy-cerebellum-707",
+        "name": "Cerebellum",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Histology , Blood supply and superior cerebellar artery thrombosis",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-cranial-nerve-708",
+        "name": "Cranial nerve",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "5,6,7,8,9",
+        "sourceRec": null,
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-receptors-and-function-709",
+        "name": "Receptors and function",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Ruffini, Merkel, Pacinian , Meissner",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-gag-reflex-710",
+        "name": "Gag Reflex",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "9,10 cranial nerve",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-superior-orbital-fissure-711",
+        "name": "Superior Orbital Fissure",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image and nerve passing",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-lateral-pontine-syndrome-712",
+        "name": "Lateral Pontine Syndrome",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical question",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-brodmann-area-22-713",
+        "name": "Brodmann area 22",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "receptive aphasia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "HEAD AND NECK",
+      "topics": [
+       {
+        "id": "lib-anatomy-muscles-of-mastication-714",
+        "name": "Muscles of Mastication",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Locked jaw- spasm of Lateral pterygoid",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-great-auricular-nerve-715",
+        "name": "Great Auricular Nerve",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Swelling under left ear lobule and pain",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-bowing-of-vocal-cord-716",
+        "name": "Bowing of vocal cord",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cricothyroid muscle",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-musles-of-th-eye-717",
+        "name": "Musles of th eye",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Ptosis -paralysis of superior tarsal muscle",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-prevention-of-upwards-extension-of-thyroid-718",
+        "name": "Prevention of upwards extension of thyroid",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Sternothyroid",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "THORAX",
+      "topics": [
+       {
+        "id": "lib-anatomy-nerves-medial-pectoral-nerve-719",
+        "name": "Nerves -Medial Pectoral nerve",
+        "aliases": [
+         "Dorsal scapular nerve"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-anatomical-closure-of-foramen-ovale-720",
+        "name": "Anatomical closure of foramen ovale",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "3-5 days",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ABDOMEN AND PELVIS",
+      "topics": [
+       {
+        "id": "lib-anatomy-umbilicus-721",
+        "name": "Umbilicus",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "allantois -medial umbilical ligament ,fecal discharge -ileal diverticulum, Omphalocele derived from amnion",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-pancreas-histology-722",
+        "name": "Pancreas – Histology",
+        "aliases": [
+         "Parts and attachments"
+        ],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Islet cell, uncinate process affects which vessel",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-portal-hypertension-723",
+        "name": "Portal Hypertension",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Anastomosis between esophageal and left gastric veins",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-abdominal-wall-anatomy-724",
+        "name": "Abdominal wall anatomy",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Defect in fascia Transversalis leads to direct inguinal hernia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-anus-725",
+        "name": "Anus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Lymph node-inguinal",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-common-hepatic-artery-726",
+        "name": "Common Hepatic artery",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Branches",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "LIMBS",
+      "topics": [
+       {
+        "id": "lib-anatomy-nerves-727",
+        "name": "NERVES",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Median Nerve - supply in hand, Obturator nerve -supplies hybrid muscle and spared in sciatica, Common fibular nerve- Lack of dorsiflexion, Saphenpus nerve - sensory loss over medial aspect of leg and foot after surgery of varicose vein",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-abductor-pollicis-brevis-728",
+        "name": "Abductor Pollicis Brevis",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Function, De Quervains tenosynovitis- Finkelstein",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-posterior-tibial-artery-729",
+        "name": "Posterior Tibial Artery",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Course",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-segmental-innervation-730",
+        "name": "Segmental innervation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Nerve root",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-inguinal-canal-731",
+        "name": "Inguinal Canal",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Boundaries",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-inguinal-lymph-nodes-732",
+        "name": "Inguinal Lymph Nodes",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Supply",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-anatomical-snuff-box-733",
+        "name": "Anatomical Snuff Box",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Boundaries",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-lumbricals-interossei-734",
+        "name": "Lumbricals & Interossei",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Extension at MCP joint and flexion at IP joint",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-popeye-sign-735",
+        "name": "Popeye Sign",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Biceps tendon rupture",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "HISTOLOGY",
+      "topics": [
+       {
+        "id": "lib-anatomy-white-fibrocartilage-736",
+        "name": "White Fibrocartilage",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-elastic-cartilage-histology-737",
+        "name": "Elastic Cartilage – Histology",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "EMBRYOLOGY",
+      "topics": [
+       {
+        "id": "lib-anatomy-oocyte-738",
+        "name": "Oocyte",
+        "aliases": [
+         "Fertilization",
+         "Cortical reaction"
+        ],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Implantation on Day 5,Polyspermy ,secondary oocyte arrested in metaphase -2, Meosis in ovary",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-aortic-arches-739",
+        "name": "Aortic Arches",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image -6th arch -PDA, 6th arch- loss of recurrent laryngeal nerve",
+        "sourceRec": "RR video+notes➡️Main",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-foetal-circulation-740",
+        "name": "Foetal Circulation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Fetal circulation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GENITOURINARY",
+      "topics": [
+       {
+        "id": "lib-anatomy-glomerulus-741",
+        "name": "Glomerulus",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Histology of image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-anatomy-falciform-ligament-742",
+        "name": "Falciform ligament",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-glands-identification-with-histology-743",
+        "name": "Glands identification with histology",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Eccrine, Arrector, Sebaceous, Apocrine",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anatomy-joint-744",
+        "name": "Joint",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Types-Synovial",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Radiology",
+    "sheet": "RADIOLOGY",
+    "sections": [
+     {
+      "name": "CONGENITAL/SYNDROMES",
+      "topics": [
+       {
+        "id": "lib-radiology-craniopharyngioma-745",
+        "name": "Craniopharyngioma",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "CT and history suggestive of Bitemporal hemianopia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-congenital-malformations-of-airway-746",
+        "name": "Congenital malformations of Airway",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "History with CT",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-chiari-type-1-malformation-747",
+        "name": "Chiari Type 1 Malformation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GASTROINTESTINAL",
+      "topics": [
+       {
+        "id": "lib-radiology-bowel-obstruction-748",
+        "name": "Bowel Obstruction",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Erect X ray Abdomen",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-choledochal-cyst-749",
+        "name": "Choledochal Cyst",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "MRCP",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-intussusception-750",
+        "name": "Intussusception",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-congenital-hypertrophic-pyloric-stenosis-751",
+        "name": "Congenital hypertrophic Pyloric stenosis",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "GENITOURINARY",
+      "topics": [
+       {
+        "id": "lib-radiology-putty-kidney-752",
+        "name": "Putty Kidney",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Erect X ray Abdomen",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-pet-ct-753",
+        "name": "PET-CT",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-posterior-urethral-valve-754",
+        "name": "Posterior urethral valve",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "MCU",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-polycystic-kidney-755",
+        "name": "Polycystic kidney",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "HEPATOBILIARY/PANCREAS",
+      "topics": [
+       {
+        "id": "lib-radiology-pancreatic-calcificatoion-756",
+        "name": "Pancreatic calcificatoion",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Xray of abdomen",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MUSCULOSKELETAL",
+      "topics": [
+       {
+        "id": "lib-radiology-psoas-abscess-757",
+        "name": "Psoas Abscess",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "NEURO/CNS",
+      "topics": [
+       {
+        "id": "lib-radiology-sub-arachnoid-hemorrhage-758",
+        "name": "Sub Arachnoid Hemorrhage",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "History with CT",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-cephalhaematoma-759",
+        "name": "Cephalhaematoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "X-ray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "ONCOLOGY",
+      "topics": [
+       {
+        "id": "lib-radiology-endometrial-carcinoma-760",
+        "name": "Endometrial Carcinoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Radiotherapy",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-thymoma-761",
+        "name": "Thymoma",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RADIOLOGICAL TECHNIQUES",
+      "topics": [
+       {
+        "id": "lib-radiology-radiation-therpay-762",
+        "name": "Radiation therpay",
+        "aliases": [],
+        "timesRepeated": 3,
+        "priority": "High",
+        "pyqAngle": "TLD badge, Neurological sensitivity of cell",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.675,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-barium-studies-763",
+        "name": "Barium Studies",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "RESPIRATORY SYSTEM",
+      "topics": [
+       {
+        "id": "lib-radiology-ards-764",
+        "name": "ARDS",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chest X Ray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-lung-abscess-765",
+        "name": "Lung abscess",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chest X ray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-consolidation-766",
+        "name": "Consolidation",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chest X Ray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-tension-pneumothorax-767",
+        "name": "Tension Pneumothorax",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chest X Ray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "CARDIO VASCULAR",
+      "topics": [
+       {
+        "id": "lib-radiology-tapvc-768",
+        "name": "TAPVC",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Image, Plethoric lung fields",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-saccular-aneurysm-769",
+        "name": "Saccular Aneurysm",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "CT image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-coarctation-of-aorta-770",
+        "name": "Coarctation of Aorta",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Chest X Ray",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MISCELLANEOUS",
+      "topics": [
+       {
+        "id": "lib-radiology-fast-usg-771",
+        "name": "FAST-USG",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Clinical",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-radiology-mickey-mouse-sign-772",
+        "name": "Mickey Mouse Sign",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Common femoral vein, common femoral artery and great saphenous vein",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "subject": "Anaesthesia",
+    "sheet": "ANAESTHESIA",
+    "sections": [
+     {
+      "name": "AIRWAY AND VENTILATION",
+      "topics": [
+       {
+        "id": "lib-anaesthesia-capnography-773",
+        "name": "Capnography",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "High",
+        "pyqAngle": "Image, Image of alveolar plateau",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.567,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-sniffing-position-774",
+        "name": "Sniffing Position",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Position used for intubation",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-mapleson-circuit-775",
+        "name": "Mapleson Circuit",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Pressure setting of valve",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-peep-776",
+        "name": "PEEP",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Open alveoli and prevent atelectasis",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "EMERGENCY AND RESUSCITATION",
+      "topics": [
+       {
+        "id": "lib-anaesthesia-acls-777",
+        "name": "ACLS",
+        "aliases": [],
+        "timesRepeated": 4,
+        "priority": "High",
+        "pyqAngle": "Head tilt and chin lift",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.783,
+        "tier": 3,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-malignant-hyperthermia-778",
+        "name": "Malignant Hyperthermia",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Suxamethonium ,Halothane",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "MONITORING AND DEVICES",
+      "topics": [
+       {
+        "id": "lib-anaesthesia-perioperative-monitoring-neuromuscular-779",
+        "name": "Perioperative Monitoring (neuromuscular)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "ulnar nerve",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-oxygen-delivering-systems-nrbm-mask-780",
+        "name": "Oxygen Delivering Systems (NRBM Mask)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Image",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-capnography-781",
+        "name": "Capnography",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Verifying ET placement",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PHARMACOLOGY",
+      "topics": [
+       {
+        "id": "lib-anaesthesia-muscle-relaxants-782",
+        "name": "Muscle Relaxants",
+        "aliases": [],
+        "timesRepeated": 2,
+        "priority": "Moderate",
+        "pyqAngle": "Neostigmine, Reversal-sugammadex",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.409,
+        "tier": 2,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-emla-patch-783",
+        "name": "EMLA Patch",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Methhemoglobinemia",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PREOP RISK ASSESSMENT",
+      "topics": [
+       {
+        "id": "lib-anaesthesia-predicting-risk-of-perioperative-cardiac-complications-dob-784",
+        "name": "Predicting Risk of Perioperative Cardiac Complications (Dobutamine Stress Echo)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Dobutamine stress echo",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-doc-for-pre-op-prophylaxis-for-patient-undergoing-cardiac--785",
+        "name": "DOC for pre op prophylaxis for patient undergoing cardiac surgery",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Cefazolin",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     },
+     {
+      "name": "PROCEDURES",
+      "topics": [
+       {
+        "id": "lib-anaesthesia-lumbar-puncture-layers-pierced-786",
+        "name": "Lumbar Puncture (layers pierced)",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Last structure pierced",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       },
+       {
+        "id": "lib-anaesthesia-local-anaesthesia-complications-787",
+        "name": "Local Anaesthesia - complications",
+        "aliases": [],
+        "timesRepeated": 1,
+        "priority": "Low",
+        "pyqAngle": "Systemic complications",
+        "sourceRec": "RR Notes ➡️ RR",
+        "importance": 0.196,
+        "tier": 1,
+        "platformRefs": {}
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
 };
 // back-compat shim: legacy reads of window.QBANK_DATA resolve to the new model.
 window.QBANK_DATA = window.D;
