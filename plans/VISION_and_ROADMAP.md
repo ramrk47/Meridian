@@ -115,6 +115,13 @@ before building the predictor/tracker on it. Governed by `DATA_VISUAL_STANDARD.m
   voting enforced post-backend. *(Absorbs the former 1c.1F + 1c.2.)*
 - **Faculty data pass** (greenlit, separate — needs the user's logged-in browser) — `FACULTY_DATA_PASS_PROMPT.md`;
   enriches the seed afterward with zero UI churn.
+- **1d · Canonical Topic Library & Importance Spine** — `PHASE1D_CANONICAL_LIBRARY_PROMPT.md`. *Added
+  2026-06-27 from a user-provided authoritative source.* Build an in-house **Subject→Section→Topic** library
+  + **PYQ-frequency importance** from `_raw/curated/Masterlist_topic_importance.xlsx` (reliable Reddit-sourced),
+  so QBanks' differing names stop causing missed/double-counted modules. Folds in **PrepLadder + eGurukul
+  integration** + **maps all 5 platforms onto the spine** (replacing brittle fuzzy `sim()` matching), and
+  **upgrades High-Yield from the MCQ-density proxy → real importance** (labeled `directional`, sourced).
+  The data backbone the tracker depends on — runs **before** Phase 2.
 
 ### Phase 2 — Free wedge / acquisition (the launch)
 - **2a · Free Rank/College Predictor** — public, no-login, shareable, results-season hook; neutral

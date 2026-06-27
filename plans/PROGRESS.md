@@ -95,9 +95,15 @@
   multi-agent Workflow (design-explore→judge→foundation→parallel impl→adversarial review). *User runs with ultracode.*
 - [ ] **Faculty data pass** (greenlit, separate — needs user's logged-in browser) — `FACULTY_DATA_PASS_PROMPT.md`;
   enriches the seed afterward, zero UI churn. *(`PHASE1C1F_PROMPT.md` is superseded by the overhaul brief.)*
+### Phase 1d — Canonical Topic Library & Importance Spine (NEW, before Phase 2) — `PHASE1D_CANONICAL_LIBRARY_PROMPT.md`
+- [ ] In-house **Subject→Section→Topic** library + **PYQ-frequency importance** from the user-provided
+  `_raw/curated/Masterlist_topic_importance.xlsx` (reliable Reddit-sourced; `directional`). Folds in
+  **PrepLadder+eGurukul integration** + **maps all 5 platforms onto the spine** (replaces fuzzy `sim()`) +
+  **upgrades High-Yield: MCQ-density proxy → real importance**. *The backbone the tracker needs. Opus xhigh.*
 ### Phase 2 — free wedge / acquisition (GTM)
-- [ ] **Free Rank/College Predictor** (results-season lead magnet) — if fork #1 says predictor-first.
-- [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer).
+- [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer) —
+  `PHASE2B_PROMPT.md`, now **rebuilt on the 1d canonical spine** (its Stage-1 platform integration moved into 1d).
+- [ ] **Free Rank/College Predictor** (results-season lead magnet) — Phase 2a, its own data-first session next.
 ### Phase 3 — retention & the ratings graph (the moat)
 - [ ] **Spaced revision / error-log → verified re-test queue** (H2/job#4 — top pain).
 - [ ] **"Best platform/faculty per subject" ratings graph** (H3) — structured, voted, neutral.
@@ -111,6 +117,14 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Canonical Topic Library added (Phase 1d), reordered before Phase 2.** User provided an
+  authoritative source — `_raw/curated/Masterlist_topic_importance.xlsx` (Reddit-sourced, reliable): 19
+  subject sheets, Subject→Section→Topic with **PYQ-frequency `Times Repeated` + Priority**. It's both the
+  **canonical spine** (so QBanks' differing names stop causing missed/double-counted modules — replaces
+  brittle fuzzy `sim()`) and a **real importance signal** (retires the MCQ-density proxy on High-Yield,
+  labeled `directional`). 1d folds in PrepLadder+eGurukul integration + maps all 5 onto the spine. Prompt:
+  `PHASE1D_CANONICAL_LIBRARY_PROMPT.md` (Opus xhigh). Then Phase 2b tracker rebuilt on the spine. **Crux/risk:
+  the platform↔topic mapping** — flag `unmapped` over forcing matches; may warrant an adversarial audit.
 - 2026-06-27 **Product renamed Meridian → Calvetra** (user pick from the naming workflow). Coined mark
   ("clear/calibrate"), neutral-scales bucket (doesn't box in the exam-agnostic compendium; rejected medical-
   flavored "Synapse" for scale + crowded-namespace reasons). In-app brand only (title/H1/monogram→C/manifest/
