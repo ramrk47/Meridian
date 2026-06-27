@@ -35,11 +35,8 @@ const _PLAT_MARKS = {
 };
 function _platEmpty(o) {
   o = o || {};
-  const mark = _PLAT_MARKS[o.mark] || _PLAT_MARKS.quill;
-  return `<div class="plat-empty"><span class="pe-mark" aria-hidden="true">${mark}</span>`
-    + `<div class="pe-title">${esc(o.title || "Awaiting engraving")}</div>`
-    + (o.body ? `<p class="pe-body">${o.body}</p>` : "")
-    + `</div>`;
+  // delegate to the shared ds.emptyState() primitive; o.mark (quill|ledger|compass) → icon. body carries markup.
+  return emptyState({ icon: o.mark, title: o.title, body: o.body });
 }
 
 function renderPlatformPage(id) {

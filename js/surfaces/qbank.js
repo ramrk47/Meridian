@@ -285,12 +285,11 @@ function drawSubject() {
    monochrome quill mark (stroke-only, never color → firewall-neutral), serif title,
    optional ghost CTA. Reads as a plate awaiting data, not a broken box. */
 function qbEmpty(title, body, action) {
-  const wrap = el("div", "qb-empty");
-  wrap.innerHTML = `<svg class="qbe-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3-1 11-11a2 2 0 0 0-3-3L3 17l-1 4z"/><path d="M14 6l3 3"/></svg>
-    <div class="qbe-title">${esc(title)}</div>
-    <div class="qbe-body">${esc(body)}</div>${
-    action ? `<button class="linkbtn qbe-cta" data-act-ui="${esc(action.act)}">${esc(action.label)}</button>` : ""}`;
-  return wrap;
+  // delegate to the shared ds.emptyState() primitive (quill mark); action {act,label} → data-act-ui.
+  // Returns the element (call sites append it) — body is plain text, so esc it.
+  const wrap = el("div");
+  wrap.innerHTML = emptyState({ icon: "quill", title, body: esc(body), action });
+  return wrap.firstElementChild;
 }
 /* per-canon-subject MCQ count on a given integrated platform (measured; 0 if absent) */
 function subjMcqOn(platId, cnon) {

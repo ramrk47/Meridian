@@ -137,11 +137,8 @@ const _SUBJ_MARKS = {
 };
 function _subjEmpty(o) {
   o = o || {};
-  const mark = _SUBJ_MARKS[o.mark] || _SUBJ_MARKS.quill;
-  return `<div class="subj-empty"><span class="se-mark" aria-hidden="true">${mark}</span>`
-    + `<div class="se-title">${esc(o.title || "Awaiting engraving")}</div>`
-    + (o.body ? `<p class="se-body">${o.body}</p>` : "")
-    + `</div>`;
+  // delegate to the shared ds.emptyState() primitive; o.mark (quill|ledger|film|gauge) → icon. body carries markup.
+  return emptyState({ icon: o.mark, title: o.title, body: o.body });
 }
 
 /* ---- panel builders (each returns a chartFrame/panel string) ------------ */

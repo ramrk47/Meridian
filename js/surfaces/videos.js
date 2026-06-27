@@ -27,16 +27,11 @@ function vDefaultSubject() { return videoSubjects()[0]; }
    absent today, so this scoped helper carries the intent without editing shared
    files (flagged for the integrator). No color, no fabricated data — firewall-safe. */
 function _vidEmptyState(title, body, compact) {
-  const mark = `<svg class="ve-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">`
-    + `<rect x="5.5" y="6.5" width="21" height="19" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>`
-    + `<line x1="16" y1="6.5" x2="16" y2="25.5" stroke="currentColor" stroke-width="1.3"/>`
-    + `<line x1="8.5" y1="12" x2="13.5" y2="12" stroke="currentColor" stroke-width="1"/>`
-    + `<line x1="8.5" y1="16" x2="13.5" y2="16" stroke="currentColor" stroke-width="1"/>`
-    + `<line x1="18.5" y1="12" x2="23.5" y2="12" stroke="currentColor" stroke-width="1"/>`
-    + `<line x1="18.5" y1="16" x2="23.5" y2="16" stroke="currentColor" stroke-width="1"/></svg>`;
-  return `<div class="vid-emptyblock${compact ? " is-compact" : ""}">${mark}`
-    + `<div class="ve-title">${esc(title)}</div>`
-    + `<div class="ve-body">${esc(body)}</div></div>`;
+  // delegate to the shared ds.emptyState() primitive (film mark). body is plain text here,
+  // so esc it (emptyState inserts body as markup; it esc's the title itself). compact keeps
+  // its modifier class for any tighter sidebar contexts.
+  const html = emptyState({ icon: "film", title, body: esc(body) });
+  return compact ? html.replace('class="empty es-trail"', 'class="empty es-trail is-compact"') : html;
 }
 
 /* faculty-of-record for the loaded video set: [{fac, clips}] desc by clips.

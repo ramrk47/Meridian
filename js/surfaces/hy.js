@@ -344,14 +344,14 @@ function renderHY() {
    topics exist, this filter just hides them. */
 function hyEmpty(cs) {
   const filtered = hyStatus !== "all";
-  const quill = `<svg class="hy-empty-mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 C13 6 8 11 6 18"/><path d="M6 18 L4 20"/><path d="M9 15 C12 14 16 11 18 7"/></svg>`;
-  return `<div class="hy-empty">${quill}`
-    + `<div class="hy-empty-t">${filtered ? "No topics under this filter" : "This plate is unengraved"}</div>`
-    + `<div class="hy-empty-b">${filtered
-        ? `${esc(cs)} has density topics, but none match <b>${esc((HY_STATUS_OPTS.find(o => o[0] === hyStatus) || ["", hyStatus])[1])}</b> yet.`
-        : `No ranked density topics for ${esc(cs)} in the captured banks.`}</div>`
-    + (filtered ? `<button type="button" class="linkbtn hy-empty-cta" data-hy-clearstatus>Show all statuses ↗</button>` : "")
-    + `</div>`;
+  return emptyState({
+    icon: "quill",
+    title: filtered ? "No topics under this filter" : "This plate is unengraved",
+    body: filtered
+      ? `${esc(cs)} has density topics, but none match <b>${esc((HY_STATUS_OPTS.find(o => o[0] === hyStatus) || ["", hyStatus])[1])}</b> yet.`
+      : `No ranked density topics for ${esc(cs)} in the captured banks.`,
+    action: filtered ? { label: "Show all statuses ↗", attrs: "data-hy-clearstatus" } : null,
+  });
 }
 
 /* Navigate to Overview and reveal the "How we rate · sources" firewall panel.
