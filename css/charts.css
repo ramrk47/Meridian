@@ -1,0 +1,51 @@
+/* ============================================================
+   charts.css — shared CHART vocabulary (foundation layer)
+   Comparison bars today; heatmap / treemap / ranked-bars / sparkline /
+   faculty-timeline / rating-scorecard arrive in 3b. Loaded after
+   components.css base but before surface css so charts stay shared.
+   ============================================================ */
+
+/* ---------- comparison bars (overview MCQ-volume, reused as rankedBars) ---------- */
+.bars{display:flex;flex-direction:column;gap:13px}
+.barrow{display:grid;grid-template-columns:158px 1fr;align-items:center;gap:16px}
+.barrow .name{font-size:13px;color:var(--ink);text-align:right;font-weight:500}
+.barrow .track{display:flex;flex-direction:column;gap:4px}
+.bar{height:13px;border-radius:2px;position:relative;min-width:2px;transition:width .7s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center}
+.bar.m{background:var(--marrow)} .bar.c{background:var(--cere)}
+.bar .val{position:absolute;right:8px;font-size:10.5px;font-weight:600;color:var(--paper-2);font-variant-numeric:tabular-nums}
+.bar .val.out{right:auto;left:calc(100% + 8px);color:var(--ink-2)}
+.barrow.clickable .name{cursor:pointer} .barrow.clickable .name:hover{color:var(--accent)}
+
+/* 3b chart classes (heatmap/consensusMark/treemap/sparkline/facultyTimeline/
+   ratingScorecard) land here as the shared vocabulary fills in. */
+
+/* ---------- facultyTimeline — career history (the un-buildable-by-incumbents viz) ----------
+   Vertical timeline: node colored by platform (WHO) + segment styled by status (WHEN).
+   current = solid pine spine; past = muted; solo/superspecialty = gold-edged, no platform. */
+.ftl{list-style:none;margin:0;padding:0 0 0 4px;position:relative}
+.ftl-item{position:relative;padding:0 0 16px 22px;border-left:2px solid var(--line)}
+.ftl-item:last-child{padding-bottom:2px}
+.ftl-item.st-current{border-left-color:var(--accent-2)}
+.ftl-item.st-past{border-left-color:var(--line-2)}
+.ftl-item.st-solo,.ftl-item.st-superspecialty{border-left-color:var(--gold);border-left-style:dashed}
+.ftl-node{position:absolute;left:-7px;top:1px;width:var(--tl-dot);height:var(--tl-dot);border-radius:50%;
+  background:var(--c,var(--ink-3));box-shadow:0 0 0 3px var(--plate)}
+.ftl-item.st-current .ftl-node{box-shadow:0 0 0 3px var(--plate),0 0 0 5px color-mix(in srgb,var(--accent-2) 35%,transparent)}
+.ftl-item.st-solo .ftl-node,.ftl-item.st-superspecialty .ftl-node{background:var(--gold)}
+.ftl-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.ftl-org{font-weight:600;font-size:var(--t-body);color:var(--ink);text-decoration:none}
+.ftl-org.is-link{cursor:pointer} .ftl-org.is-link:hover{text-decoration:underline}
+.ftl-org.off{color:var(--ink-2);font-weight:600}
+.ftl-status{font-size:var(--t-label);text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.ftl-item.st-current .ftl-status{color:var(--accent-2)}
+.ftl-item.st-solo .ftl-status,.ftl-item.st-superspecialty .ftl-status{color:var(--gold)}
+.ftl-role{font-size:var(--t-row);color:var(--ink-2);margin-top:1px}
+.ftl-span{font-size:var(--t-meta);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-top:2px}
+.ftl-subs{margin-top:5px;display:flex;flex-wrap:wrap;gap:0}
+
+/* facultyTimeline legend swatches (chartFrame legend) */
+.cf-key{display:inline-flex;align-items:center;gap:5px;font-size:var(--t-micro);color:var(--ink-3)}
+.cf-key .lg-seg{width:14px;height:0;border-top:2px solid var(--line)}
+.cf-key .lg-seg.st-current{border-top-color:var(--accent-2)}
+.cf-key .lg-seg.st-past{border-top-color:var(--line-2)}
+.cf-key .lg-seg.st-solo{border-top-color:var(--gold);border-top-style:dashed}

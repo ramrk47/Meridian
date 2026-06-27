@@ -1,0 +1,33 @@
+/* ============================================================
+   overview.css — OVERVIEW surface glue only.
+   Layout primitives (.tiles/.tile, .panel, .inst-grid, .panel-grid),
+   the heatmap, consensusMark, ratingScorecard, listRow/groupList and
+   chartFrame are all styled by the shared layer (components.css /
+   charts.css). This file holds ONLY overview-specific spacing + the few
+   classes whose CSS still lives here (status dots, quick-add, subtitle).
+   Mobile density (2/3-col tiles 84-104px, single-col stack) comes from
+   the shared .tiles + .inst-grid container rules.
+   ============================================================ */
+
+/* KPI deck spacing — sits directly under the page header */
+.ov-deck{margin-bottom:20px}
+#view-overview .inst-grid{margin-bottom:20px}
+#view-overview .panel-grid{margin-bottom:20px}
+#view-overview .cframe.plate{margin-bottom:20px}
+
+/* panel subtitle (injected under the h3) — shared .panel has no subtitle slot */
+.ph-sub{display:block;font-size:var(--t-meta);color:var(--ink-3);line-height:1.4;margin-top:2px}
+
+/* quick-add (+) button in the next-best-moves trail — desktop size;
+   shared mobile layer upsizes .qmark to 44px for tap targets */
+.qmark{width:30px;height:30px;border-radius:var(--r-1);border:1px solid var(--line-2);
+  background:var(--paper);color:var(--accent);font-weight:700;cursor:pointer;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;font-size:16px}
+.qmark:hover{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+
+/* status dots (a/r/t) used by the shared statusDots() helper — CSS still lives here */
+.sdots{display:inline-flex;gap:3px;vertical-align:1px}
+.sd{width:7px;height:7px;border-radius:2px;display:inline-block;background:var(--paper-3);border:1px solid var(--line-2)}
+.sd.a.on{background:var(--p-marrow);border-color:var(--p-marrow)}
+.sd.r.on{background:var(--p-doc);border-color:var(--p-doc)}
+.sd.t.on{background:var(--gold);border-color:var(--gold)}

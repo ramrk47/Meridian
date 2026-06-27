@@ -2,10 +2,19 @@
    Network-first for same-origin GETs (always fresh online; cache is the
    offline fallback). The app is local-first, so a stale cache never loses
    user data — tracking lives in localStorage/IndexedDB via storage.js. */
-const CACHE = "meridian-shell-v1";
+const CACHE = "meridian-shell-v2";
 const SHELL = [
-  "./", "./index.html", "./styles.css", "./app.js",
-  "./data.js", "./storage.js", "./manifest.webmanifest", "./icon.svg",
+  "./", "./index.html",
+  "./css/tokens.css", "./css/components.css", "./css/charts.css",
+  "./css/overview.css", "./css/qbank.css", "./css/progress.css",
+  "./css/tests.css", "./css/hy.css", "./css/videos.css", "./css/planner.css",
+  "./data.js", "./storage.js",
+  "./js/core.js", "./js/ds.js",
+  "./js/surfaces/overview.js", "./js/surfaces/qbank.js", "./js/surfaces/progress.js",
+  "./js/surfaces/tests.js", "./js/surfaces/hy.js", "./js/surfaces/videos.js", "./js/surfaces/planner.js",
+  "./js/entities/subject.js", "./js/entities/platform.js", "./js/entities/faculty.js",
+  "./js/main.js",
+  "./manifest.webmanifest", "./icon.svg",
 ];
 
 self.addEventListener("install", e => {

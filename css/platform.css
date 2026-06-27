@@ -1,0 +1,57 @@
+/* ============================================================
+   css/platform.css — styles OWNED by the Platform entity page
+   (renderPlatformPage in js/entities/platform.js).
+   The page reuses the shared vocabulary in components.css / charts.css
+   (.entity-head, .eh-top, .tiles, .panel-grid, .inst-grid, .scorecard,
+   .rbars, .treemap, .lgroup, .bigmeter, .cf-key, .lg-swatch …). This
+   file only adds the handful of platform-specific affordances.
+
+   NOTE TO INTEGRATOR: index.html does not yet <link> the entity CSS
+   files. Add `<link rel="stylesheet" href="css/platform.css">` after
+   css/charts.css (and to the sw.js SHELL list) so these rules apply.
+   Until then the page still renders correctly via the shared layer —
+   these rules are progressive polish only.
+   ============================================================ */
+
+/* ◆ "community-reputed strongest" marker on a coverage bar + its legend key */
+.plat-cov .rb-mark .rb-strong,
+.rb-strong{
+  color:var(--gold);
+  font-size:11px;
+  line-height:1;
+}
+.cf-key .rb-strong{ margin-right:2px; }
+/* nudge the in-bar strongest marker to read as an overlay, not part of the value */
+.rbars .rb-mark{ display:inline-flex; align-items:center; }
+
+/* standalone warn dot in a chart legend key (reliability complaint themes) */
+.cf-key .wdot{
+  display:inline-block;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--warn);
+  flex:0 0 auto;
+}
+
+/* faculty-roster row: small status caption ("current"/"past") inside the sub line */
+.rost-st{
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  font-size:var(--t-micro);
+  color:var(--ink-3);
+}
+
+/* "Your tracking" — per-subject mini progress list sits under the big meter */
+.track-subs{ margin-top:12px; }
+
+/* a quiet note in a panel header's actions slot */
+.ph-note{ font-size:var(--t-meta); color:var(--ink-3); }
+
+/* desktop-only treemap band: the squarified mass view degrades to the
+   ranked bars on narrow viewports (treemaps are unreadable when thin) */
+.plat-treemap{ margin-top:var(--gap); }
+@media (max-width:1023px){
+  .plat-treemap{ display:none; }
+}
+
+/* keep the platform-tinted entity name from overpowering on evening theme */
+body.evening #view-platform .sh-name{ filter:saturate(.9) brightness(1.05); }

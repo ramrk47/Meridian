@@ -1,0 +1,396 @@
+/* ============================================================
+   main.js — orchestrator (loads LAST)
+   Command palette, navigation / deep links, entity routing, global
+   event delegation, toolbar / toast / nav / keyboard wiring, the
+   RENDER map + show(view), and init().
+   ============================================================ */
+
+/* ============================================================
+   COMMAND PALETTE
+   ============================================================ */
+let PALETTE_INDEX = null, palSel = 0, palResults = [];
+function buildPaletteIndex() {
+  const idx = [];
+  // subjects
+  QBANKS.forEach(p => subjectsOf(p.id).forEach(s =>
+    idx.push({ type: "Subject", label: s, sub: p.name, run: () => jumpToSubject(canon(s), p.id) })));
+  // leaves
+  const leafType = { marrow: "Module", cerebellum: "Unit", doctutorials: "Chapter" };
+  LEAVES.forEach(l => idx.push({ type: leafType[l.platform] || "Topic", label: l.name, sub: `${platName(l.platform)} · ${l.canon}`, leaf: l, run: () => openDrawer(l.id) }));
+  // tests
+  buildTests().forEach(t => idx.push({ type: "Test", label: t.name, sub: t.platform, run: () => { gotoTest(t.id); } }));
+  // videos
+  VIDEOS.forEach(vi => idx.push({ type: "Video", label: vi.topic, sub: `CoreBTR · ${vi.subject}`, run: () => openVideoDrawer(vi.id) }));
+  // platforms (integrated content platforms → entity pages)
+  QBANKS.forEach(p => idx.push({ type: "Platform", label: p.name, sub: `${fmt(platMCQ(p.id))} MCQs`, run: () => goPlatform(p.id) }));
+  // faculty (gated: only indexed when seeded — never a fabricated roster)
+  FACULTY.forEach(f => idx.push({ type: "Faculty", label: f.name, sub: (f.subjects || []).map(canon).join(" · ") + " · directional", run: () => goFaculty(f.id) }));
+  // actions
+  [["Overview", "overview"], ["QBank Tracker", "qbank"], ["Progress", "progress"], ["Tests & Scores", "tests"], ["High-Yield", "hy"], ["Study Planner", "planner"]]
+    .forEach(([lbl, view]) => idx.push({ type: "Go to", label: lbl, sub: "tab", run: () => show(view) }));
+  idx.push({ type: "Action", label: "Export tracking (backup)", sub: "", run: () => $("#btnExport").click() });
+  return idx;
+}
+function scoreMatch(q, s) {
+  s = s.toLowerCase(); q = q.toLowerCase();
+  if (s === q) return 100; if (s.startsWith(q)) return 70; const i = s.indexOf(q);
+  if (i >= 0) return 50 - i * 0.1;
+  // token subsequence
+  let pos = 0; for (const ch of q) { pos = s.indexOf(ch, pos); if (pos < 0) return -1; pos++; } return 10;
+}
+let palLastFocus = null;
+function openPalette() {
+  palLastFocus = document.activeElement;
+  PALETTE_INDEX = buildPaletteIndex(); // refresh (custom tests / state)
+  $("#palette").classList.add("open"); $("#palInput").value = ""; palSel = 0;
+  drawPalette(""); setTimeout(() => $("#palInput").focus(), 20);
+}
+function closePalette() {
+  $("#palette").classList.remove("open");
+  if (palLastFocus && palLastFocus.focus) { try { palLastFocus.focus(); } catch {} palLastFocus = null; }
+}
+function drawPalette(q) {
+  q = q.trim();
+  if (!q) {
+    palResults = [
+      ...PALETTE_INDEX.filter(x => x.type === "Go to"),
+      ...PALETTE_INDEX.filter(x => x.leaf && x.leaf.priority === 3).slice(0, 5).map(x => ({ ...x, type: "High-yield" })),
+    ];
+  } else {
+    palResults = PALETTE_INDEX.map(x => ({ x, sc: Math.max(scoreMatch(q, x.label), scoreMatch(q, x.sub) - 20) }))
+      .filter(o => o.sc > 0).sort((a, b) => b.sc - a.sc).slice(0, 40).map(o => o.x);
+  }
+  palSel = Math.max(0, Math.min(palSel, palResults.length - 1));
+  const list = $("#palList"); list.innerHTML = "";
+  palResults.forEach((r, i) => {
+    const it = el("div", "pal-item" + (i === palSel ? " sel" : ""));
+    it.dataset.i = i;
+    it.innerHTML = `<span class="pal-type ${r.type.replace(/\s/g, "").toLowerCase()}">${r.type}</span>
+      <span class="pal-label">${esc(r.label)}${r.leaf ? " " + hyBadge(r.leaf.priority) : ""}</span>
+      <span class="pal-sub">${esc(r.sub)}</span>`;
+    list.appendChild(it);
+  });
+  if (!palResults.length) list.appendChild(el("div", "pal-empty", "No matches."));
+}
+function palMove(d) { palSel = (palSel + d + palResults.length) % (palResults.length || 1); drawPalette($("#palInput").value); ensurePalVisible(); }
+function ensurePalVisible() { const s = $(".pal-item.sel"); if (s) s.scrollIntoView({ block: "nearest" }); }
+function palChoose() { const r = palResults[palSel]; if (r) { closePalette(); r.run(); } }
+
+/* ============================================================
+   NAVIGATION / DEEP LINKS
+   ============================================================ */
+function jumpToSubject(canonSubj, platform) {
+  QB.platform = platform || QB.platform;
+  const list = subjectsOf(QB.platform);
+  const native = list.find(s => canon(s) === canonSubj) || list[0];
+  QB.subject = native; QB.search = ""; QB.status = "all"; QB.hyOnly = false;
+  show("qbank");
+}
+function gotoLeaf(id) {
+  const l = LEAF_BY_ID[id]; if (!l) return;
+  QB.platform = l.platform; QB.subject = l.subject; QB.search = ""; QB.status = "all"; QB.hyOnly = false;
+  closeDrawer(); show("qbank");
+  setTimeout(() => {
+    const block = $(`#qbContent .cat-block[data-cat="${cssEsc(l.cat)}"]`); if (block) block.classList.add("open");
+    const row = $(`#qbContent .mrow[data-id="${cssEsc(id)}"]`);
+    if (row) { row.scrollIntoView({ block: "center", behavior: "smooth" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); }
+  }, 60);
+}
+function gotoTest(id) {
+  show("tests");
+  setTimeout(() => { const row = $(`#view-tests .scorerow[data-id="${cssEsc(id)}"]`); if (row) { row.scrollIntoView({ block: "center", behavior: "smooth" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1500); } }, 60);
+}
+
+/* ---- ENTITY ROUTING (entity pages are NOT tabs; they live in their own view sections) ---- */
+const ENTITY_VIEWS = ["subject", "platform", "faculty"];
+function showEntity(kind) {
+  // deactivate tab nav highlight + show the matching entity section only
+  $$(".tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+  $$("#botnav button").forEach(b => { b.classList.remove("active"); b.setAttribute("aria-current", "false"); });
+  const home = $("#btnHome"); if (home) { home.classList.remove("active"); home.setAttribute("aria-current", "false"); }
+  $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + kind));
+  labelizeResponsiveTables(); setHeaderHeight();
+  window.scrollTo({ top: 0 });
+}
+function goSubject(canonSubj) { renderSubjectPage(canonSubj); showEntity("subject"); const mt = $("#mobTitle"); if (mt) mt.textContent = canonSubj; }
+function goPlatform(id) { renderPlatformPage(id); showEntity("platform"); const mt = $("#mobTitle"); if (mt) mt.textContent = platName(id); }
+function goFaculty(id) { renderFacultyPage(id); showEntity("faculty"); const mt = $("#mobTitle"); if (mt) { const f = facById(id); mt.textContent = f ? f.name : "Faculty"; } }
+
+/* ============================================================
+   GLOBAL EVENT DELEGATION
+   ============================================================ */
+function appClick(e) {
+  // test interactions first
+  if (testsClick(e)) return;
+
+  // tracking chips (qbank rows or drawer)
+  const actBtn = e.target.closest("[data-act],[data-dract]");
+  if (actBtn) {
+    const drawerChips = actBtn.closest(".chips.big");
+    const id = drawerChips ? drawerChips.dataset.id : (e.target.closest(".mrow")?.dataset.id);
+    const act = actBtn.dataset.act || actBtn.dataset.dract;
+    if (id && act) {
+      if (act === "star") Store.star(id); else Store.toggle(id, act);
+      refreshRowEverywhere(id);
+      if (drawerChips) refreshDrawerChips(id);
+      syncAfterToggle(id);
+      return;
+    }
+  }
+  // video tracking chips (row or drawer)
+  const vBtn = e.target.closest("[data-vact],[data-vdract]");
+  if (vBtn) {
+    const drawerV = vBtn.closest(".vchips.big");
+    const id = drawerV ? drawerV.dataset.vid : e.target.closest(".vrow")?.dataset.vid;
+    const act = vBtn.dataset.vact || vBtn.dataset.vdract;
+    if (id && act) {
+      Store.toggleVideo(id, act);
+      const x = Store.video(id);
+      $$(`.vrow[data-vid="${cssEsc(id)}"]`).forEach(r => {
+        r.classList.toggle("done", !!x.w);
+        const w = $(".chip.a", r), rv = $(".chip.r", r);
+        if (w) { w.classList.toggle("on", !!x.w); w.setAttribute("aria-pressed", x.w ? "true" : "false"); }
+        if (rv) { rv.classList.toggle("on", !!x.v); rv.setAttribute("aria-pressed", x.v ? "true" : "false"); }
+      });
+      if (drawerV) { $(".chip.a", drawerV)?.classList.toggle("on", !!x.w); $(".chip.r", drawerV)?.classList.toggle("on", !!x.v); }
+      syncVideoAfterToggle(id);
+      return;
+    }
+  }
+  const ov = e.target.closest("[data-open-video]"); if (ov) { openVideoDrawer(ov.dataset.openVideo); return; }
+  const vsb = e.target.closest("[data-vsubj]"); if (vsb) { vSubject = vsb.dataset.vsubj; drawVideoSidebar(); drawVideoSubject(); $("#vbContent").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+  // cross-bank coverage jump
+  const xg = e.target.closest("[data-xgo]"); if (xg) { e.stopPropagation(); gotoLeaf(xg.dataset.xgo); return; }
+  // open drawer
+  const op = e.target.closest("[data-open-leaf]"); if (op) { openDrawer(op.dataset.openLeaf); return; }
+  // entity-page links (scaffolding for 3b surfaces)
+  const es = e.target.closest("[data-go-subject]"); if (es) { goSubject(es.dataset.goSubject); return; }
+  const ep = e.target.closest("[data-go-platform]"); if (ep) { goPlatform(ep.dataset.goPlatform); return; }
+  const ef = e.target.closest("[data-go-faculty]"); if (ef) { goFaculty(ef.dataset.goFaculty); return; }
+  const eh = e.target.closest("[data-go-overview]"); if (eh) { show("overview"); return; }
+  // engraved-plate imprint badge (touch answer to hover tooltips) → "How we know this" sheet
+  const rp = e.target.closest("[data-read-plate]"); if (rp) { readPlateSheet(rp.dataset.readPlate, rp.dataset.readSrc, rp.dataset.readCap); return; }
+  // category collapse (ignore clicks on the bulk button inside the header)
+  const ct = e.target.closest("[data-cat-toggle]"); if (ct && !e.target.closest("[data-bulk]")) { ct.closest(".cat-block").classList.toggle("open"); return; }
+  // bulk mark
+  const bulk = e.target.closest("[data-bulk]");
+  if (bulk) {
+    const block = bulk.closest(".cat-block"); const cat = block.dataset.cat, subject = block.dataset.subject;
+    const ls = leavesOf(QB.platform, subject).filter(l => l.cat === cat);
+    const allDone = ls.every(l => Store.prog(l.id).a);
+    ls.forEach(l => { const p = Store.prog(l.id); if (allDone ? p.a : !p.a) Store.toggle(l.id, "a"); });
+    drawSubject(); drawSidebar();
+    toast(allDone ? `Unmarked ${esc(cat)}` : `Marked ${ls.length} modules attempted`);
+    return;
+  }
+  // sidebar subject select
+  const sb = e.target.closest("[data-subj]"); if (sb) { QB.subject = sb.dataset.subj; drawSidebar(); drawSubject(); $("#qbContent").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+  // jumps
+  const js = e.target.closest("[data-jump-subj]"); if (js) { jumpToSubject(js.dataset.jumpSubj, js.dataset.jumpPlat || js.closest("[data-jump-plat]")?.dataset.jumpPlat); return; }
+  const jo = e.target.closest("[data-jump-other]"); if (jo) { QB.platform = jo.dataset.jumpPlat; QB.subject = jo.dataset.jumpOther; QB.search = ""; QB.status = "all"; QB.hyOnly = false; renderQbank(); return; }
+  const gl = e.target.closest("[data-goto-leaf]"); if (gl) { gotoLeaf(gl.dataset.gotoLeaf); return; }
+  const gt = e.target.closest("[data-goto-test]"); if (gt) { closeDrawer(); gotoTest(gt.dataset.gotoTest); return; }
+  const qa = e.target.closest("[data-quick-a]"); if (qa) { Store.toggle(qa.dataset.quickA, "a"); renderOverview(); return; }
+  const hg = e.target.closest("[data-jump-hygaps]"); if (hg) { QB.status = "untracked"; QB.hyOnly = true; QB.search = ""; show("qbank"); return; }
+}
+function refreshRowEverywhere(id) {
+  const p = Store.prog(id), st = Store.state.stars[id];
+  $$(`.mrow[data-id="${cssEsc(id)}"]`).forEach(row => {
+    row.classList.toggle("done", !!p.a);
+    [["a", p.a], ["r", p.r], ["t", p.t]].forEach(([k, val]) => { const c = $(".chip." + k, row); if (c) { c.classList.toggle("on", !!val); c.setAttribute("aria-pressed", val ? "true" : "false"); } });
+    const ps = $(".pinstar", row); if (ps) { ps.classList.toggle("on", !!st); ps.textContent = st ? "★" : "☆"; ps.setAttribute("aria-pressed", st ? "true" : "false"); }
+  });
+}
+function refreshDrawerChips(id) {
+  const p = Store.prog(id), st = Store.state.stars[id];
+  const box = $(`.chips.big[data-id="${cssEsc(id)}"]`); if (!box) return;
+  $(".chip.a", box)?.classList.toggle("on", !!p.a);
+  $(".chip.r", box)?.classList.toggle("on", !!p.r);
+  $(".chip.t", box)?.classList.toggle("on", !!p.t);
+  const star = $(".chip.star", box); if (star) { star.classList.toggle("on", !!st); star.textContent = st ? "★ Pinned" : "☆ Pin"; }
+}
+
+/* ============================================================
+   TOOLBAR / TOAST / NAV / KEYBOARD
+   ============================================================ */
+function wireToolbar() {
+  $("#btnExport").addEventListener("click", () => {
+    const blob = new Blob([Store.export()], { type: "application/json" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+    a.download = `meridian-tracking-${Store.state.profile}.json`; a.click(); URL.revokeObjectURL(a.href);
+  });
+  $("#btnImport").addEventListener("click", () => $("#importFile").click());
+  $("#importFile").addEventListener("change", e => {
+    const f = e.target.files[0]; if (!f) return; const rd = new FileReader();
+    rd.onload = () => { try { Store.import(rd.result); show(currentView); toast("Tracking imported"); } catch { toast("Invalid file", true); } };
+    rd.readAsText(f);
+  });
+  $("#btnReset").addEventListener("click", () => {
+    if (confirm("Reset all your tracking (progress, scores, stars, custom tests)? The QBank data itself stays.")) { Store.reset(); show(currentView); toast("Tracking reset"); }
+  });
+  $("#btnSearch")?.addEventListener("click", openPalette);
+  $("#btnTheme")?.addEventListener("click", toggleTheme);
+}
+/* mobile-only chrome: compact search button + overflow "⋯" menu (proxies the toolbar) */
+function wireMobileChrome() {
+  $("#btnSearchM")?.addEventListener("click", openPalette);
+  const ovBtn = $("#btnOverflow"), ovMenu = $("#overflowMenu");
+  if (!ovBtn || !ovMenu) return;
+  const close = () => { ovMenu.hidden = true; ovBtn.setAttribute("aria-expanded", "false"); };
+  ovBtn.addEventListener("click", e => {
+    e.stopPropagation();
+    const willOpen = ovMenu.hidden; ovMenu.hidden = !willOpen; ovBtn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+  });
+  ovMenu.addEventListener("click", e => { const b = e.target.closest("[data-proxy]"); if (b) { close(); $("#" + b.dataset.proxy)?.click(); } });
+  document.addEventListener("click", e => { if (!ovMenu.hidden && !e.target.closest(".overflow")) close(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !ovMenu.hidden) close(); });
+}
+/* bottom-sheet drawer: drag the handle down to dismiss (mobile only) */
+function wireDrawerDrag() {
+  const dr = $("#drawer"), head = $(".drawer-head", dr); if (!head) return;
+  let startY = 0, curY = 0, dragging = false;
+  const isSheet = () => matchMedia("(max-width:640px)").matches;
+  head.addEventListener("touchstart", e => {
+    if (!isSheet() || !dr.classList.contains("open")) return;
+    dragging = true; startY = e.touches[0].clientY; curY = 0; dr.style.transition = "none";
+  }, { passive: true });
+  head.addEventListener("touchmove", e => {
+    if (!dragging) return; curY = Math.max(0, e.touches[0].clientY - startY); dr.style.transform = `translateY(${curY}px)`;
+  }, { passive: true });
+  head.addEventListener("touchend", () => {
+    if (!dragging) return; dragging = false; dr.style.transition = ""; dr.style.transform = "";
+    if (curY > 90) closeDrawer();
+  });
+}
+function toast(msg, bad) {
+  const t = el("div", "toast" + (bad ? " bad" : ""), msg); document.body.appendChild(t);
+  setTimeout(() => t.classList.add("show"), 10);
+  setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2200);
+}
+function toggleTheme() {
+  const dark = document.body.classList.toggle("evening");
+  try { localStorage.setItem("meridian_theme", dark ? "evening" : "day"); } catch {}
+  $("#btnTheme").textContent = dark ? "☾ Evening" : "☀ Day";
+}
+
+const RENDER = { overview: renderOverview, qbank: renderQbank, progress: renderProgress, tests: renderTests, hy: renderHY, videos: renderVideos, planner: renderPlanner };
+const TAB_ORDER = ["overview", "qbank", "progress", "tests", "hy", "videos", "planner"];
+const TAB_LABEL = { overview: "Overview", qbank: "QBank Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
+let currentView = "overview";
+function show(view) {
+  currentView = view;
+  $$(".tab").forEach(t => { const on = t.dataset.view === view; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
+  $$("#botnav button").forEach(b => { const on = b.dataset.view === view; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
+  const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
+  const mt = $("#mobTitle"); if (mt) mt.textContent = TAB_LABEL[view] || view;
+  $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + view));
+  RENDER[view]();
+  labelizeResponsiveTables();
+  setHeaderHeight();
+  try { location.hash = view; } catch {}
+  window.scrollTo({ top: 0 });
+}
+/* card-list table mode (mobile): auto-stamp each cell with its column header,
+   and wrap wide tables in a horizontal-scroll fallback for the tablet range
+   (cards take over ≤640px, where .tbl-scroll goes overflow:visible). */
+function labelizeResponsiveTables() {
+  $$("#app .view.active table.resp").forEach(tbl => {
+    if (!tbl.parentElement.classList.contains("tbl-scroll")) {
+      const wrap = el("div", "tbl-scroll");
+      tbl.parentNode.insertBefore(wrap, tbl); wrap.appendChild(tbl);
+    }
+    const heads = $$("thead th", tbl).map(th => th.textContent.trim());
+    $$("tbody tr", tbl).forEach(tr => $$("td", tr).forEach((td, i) => { if (heads[i]) td.setAttribute("data-label", heads[i]); }));
+  });
+}
+function setHeaderHeight() {
+  const h = $(".topbar")?.offsetHeight || 110;
+  document.documentElement.style.setProperty("--hh", h + "px");
+}
+
+function qbVisibleRows() { return $$("#qbContent .mrow").filter(r => r.offsetParent !== null); }
+function moveCursor(dir) {
+  const rows = qbVisibleRows(); if (!rows.length) return;
+  let idx = rows.findIndex(r => r.dataset.id === QB.cursorId);
+  idx = idx < 0 ? (dir > 0 ? 0 : rows.length - 1) : Math.max(0, Math.min(rows.length - 1, idx + dir));
+  rows.forEach(r => r.classList.remove("cursor"));
+  const row = rows[idx]; row.classList.add("cursor"); QB.cursorId = row.dataset.id;
+  row.scrollIntoView({ block: "nearest" });
+}
+function cursorAct(act) {
+  if (!QB.cursorId) { moveCursor(1); return; }
+  if (act === "star") Store.star(QB.cursorId); else Store.toggle(QB.cursorId, act);
+  refreshRowEverywhere(QB.cursorId); syncAfterToggle(QB.cursorId);
+}
+document.addEventListener("keydown", e => {
+  const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); openPalette(); return; }
+  if ($("#palette").classList.contains("open")) {
+    if (e.key === "Escape") closePalette();
+    else if (e.key === "ArrowDown") { e.preventDefault(); palMove(1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); palMove(-1); }
+    else if (e.key === "Enter") { e.preventDefault(); palChoose(); }
+    return;
+  }
+  // fast score entry: Enter jumps to next test's Right input
+  if (e.target.classList && e.target.classList.contains("sin")) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const row = e.target.closest(".scorerow"); const next = row && row.nextElementSibling;
+      const ni = next && next.querySelector('input[data-f="right"]'); if (ni) { ni.focus(); ni.select(); }
+    }
+    return;
+  }
+  if (e.key === "Escape") { closeSheet(); closeDrawer(); return; }
+  if (typing) return;
+  if (e.key === "/") { e.preventDefault(); openPalette(); return; }
+  if (e.key >= "1" && e.key <= "7") { show(TAB_ORDER[+e.key - 1]); return; }
+  // QBank keyboard tracking
+  if (currentView === "qbank") {
+    const k = e.key.toLowerCase();
+    if (k === "j" || e.key === "ArrowDown") { e.preventDefault(); moveCursor(1); }
+    else if (k === "k" || e.key === "ArrowUp") { e.preventDefault(); moveCursor(-1); }
+    else if (k === "a") cursorAct("a");
+    else if (k === "r") cursorAct("r");
+    else if (k === "t") cursorAct("t");
+    else if (k === "s") cursorAct("star");
+  }
+});
+
+function init() {
+  // dynamic subhead — derived from D.platforms (no hardcoded platform list)
+  const sub = $("#subhead");
+  if (sub) sub.textContent = `Cross-platform exam almanac · ${D.exam || ""} · ${PLATFORMS.map(p => p.name).join(" · ")} · captured ${D.captured}`;
+  // theme
+  try { if (localStorage.getItem("meridian_theme") === "evening") { document.body.classList.add("evening"); } } catch {}
+  if ($("#btnTheme")) $("#btnTheme").textContent = document.body.classList.contains("evening") ? "☾ Evening" : "☀ Day";
+  wireToolbar();
+  wireMobileChrome();
+  wireDrawerDrag();
+  $("#tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) show(b.dataset.view); });
+  $("#botnav").addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.dataset.view); });
+  $("#btnHome")?.addEventListener("click", () => show("overview"));
+  document.body.addEventListener("click", appClick); // body, not #app — drawer/palette live outside #app
+  $("#app").addEventListener("input", testsInput);
+  // keyboard activation for focusable non-button controls (Enter / Space)
+  document.body.addEventListener("keydown", e => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const t = e.target.closest('[data-open-leaf],[data-jump-subj],[data-goto-leaf],[data-xgo],[data-quick-a],[data-open-video]');
+    if (t && t.getAttribute("role") === "button") { e.preventDefault(); t.click(); }
+  });
+  // palette wiring
+  $("#palInput").addEventListener("input", e => { palSel = 0; drawPalette(e.target.value); });
+  $("#palList").addEventListener("click", e => { const it = e.target.closest(".pal-item"); if (it) { palSel = +it.dataset.i; palChoose(); } });
+  $("#palScrim").addEventListener("click", closePalette);
+  $("#drawerScrim").addEventListener("click", closeDrawer);
+  $("#drawerClose").addEventListener("click", closeDrawer);
+  // option bottom-sheet wiring
+  $("#sheetScrim").addEventListener("click", closeSheet);
+  $("#sheetClose").addEventListener("click", closeSheet);
+  $("#sheetBody").addEventListener("click", e => { const b = e.target.closest(".sheet-opt"); if (b) { const v = b.dataset.v, cb = sheetPick; closeSheet(); if (cb) cb(v); } });
+  window.addEventListener("resize", setHeaderHeight);
+  // initial view from hash
+  const h = (location.hash || "").replace("#", "");
+  show(RENDER[h] ? h : "overview");
+}
+Store.load().then(init);

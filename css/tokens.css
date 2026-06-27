@@ -1,0 +1,145 @@
+/* ============================================================
+   tokens.css — design tokens, theme, base element styles
+   Foundation layer (loads first). Owns :root variables, the evening
+   edition, the global reset, body typography, selection + .muted/.num.
+   ============================================================ */
+:root{
+  /* paper & ink */
+  --paper:#f4f1ea; --paper-2:#fbf9f3; --paper-3:#f0ece2;
+  --ink:#23201b; --ink-2:#655d51; --ink-3:#7a7264; --ink-4:#b3ab9c;
+  --line:#e4ddcf; --line-2:#d6cdba;
+  /* accent — deep clinical pine */
+  --accent:#1f4a3f; --accent-2:#2c6354; --accent-soft:#e8efe9;
+  /* platform hues — muted, editorial */
+  --marrow:#3a5a78;  --cere:#b0613b;  --core:#5d7a52;
+  --rt:#6a5a86;      /* retaken */
+  --gold:#a9832f;    /* antique, for high-yield + ratings */
+  --bad:#9a3b34;     /* oxblood */
+  /* legacy aliases (keep app.js var() refs valid) */
+  --mut:var(--ink-2); --dim:var(--ink-3); --panel:var(--paper-2); --panel2:var(--paper-3);
+  --txt:var(--ink); --marrowg:#2f4a64; --cereg:#9a512f; --coreg:#4d6644;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text","Sorts Mill Goudy",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,system-ui,"Helvetica Neue",sans-serif;
+  --r:13px; --hh:118px;
+  /* fluid layout tokens — grow with the viewport, cap for readability */
+  --container:1480px;
+  --pad:clamp(16px,4vw,38px);     /* side padding for top bar / main / footer */
+  --gap:clamp(14px,2.2vw,24px);   /* generic grid/flow gap */
+  --botnav-h:0px;                 /* reserved bottom-nav height (set on mobile) */
+  --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-t:env(safe-area-inset-top,0px);
+
+  /* ============================================================
+     STAGE 3b — DESIGN-SYSTEM FOUNDATION (EXPERIENCE_DESIGN_SPEC §1)
+     All hexes sit inside the paper/ink/pine/gold family. Never neon.
+     ============================================================ */
+
+  /* ── CATEGORICAL platform palette (encodes WHICH platform — identity only) ── */
+  --p-marrow:var(--marrow);   /* #3a5a78 slate-blue  · Marrow (.m) */
+  --p-cere:var(--cere);       /* #b0613b terracotta  · Cerebellum (.c) */
+  --p-doc:var(--core);        /* #5d7a52 sage        · DocTutorials (.k) */
+  --p-prepl:#7a6a3c;          /* muted ochre-bronze  · PrepLadder — reputation-only, never a content column */
+  --p-eguru:#6a5a86;          /* muted aubergine     · eGurukul   — reputation-only, never a content column */
+
+  /* ── SEQUENTIAL yield/density ramp (encodes HOW MUCH — warm pine, light→deep; never platform) ── */
+  --y0:#f0ece2;  /* = --paper-3, none/low */
+  --y1:#dbe3dc;
+  --y2:#b9ccbf;
+  --y3:#8fb0a0;
+  --y4:#5d8a78;
+  --y5:#2c6354;  /* = --accent-2, highest */
+  --y-ink-lo:var(--ink-2);    /* text on light cells (y0–y2) */
+  --y-ink-hi:var(--paper-2);  /* text on dark cells (y3–y5) */
+
+  /* ── ORDINAL consensus ramp (how many platforms agree — antique gold, never red/green neon) ── */
+  --con-none:var(--line);     /* platform absent */
+  --con-one:#cdb98a;          /* 1 platform flags HY — straw (lone signal) */
+  --con-two:#a9832f;          /* = --gold, 2 agree */
+  --con-all:#7a5b16;          /* deep antique gold, all 3 agree — strongest consensus */
+
+  /* ── INSTRUMENT neutrals: gridlines, ticks, crisp numerals ── */
+  --grid:#ece6d8;             /* faint chart gridlines — one notch lighter than --line */
+  --grid-2:#ded4c0;           /* axis baseline / zero-line */
+  --tick:var(--ink-4);        /* axis tick + value-label color */
+  --ink-num:#1a1814;          /* crisper near-black for hero tabular numerals */
+
+  /* ── ENGRAVED PLATE surface (the brand signature) ── */
+  --plate:#fcfaf4;            /* engraving ground (lighter than --paper-2) */
+  --plate-edge:#cabd9f;       /* visible plate-mark / frame rule */
+  --rule-strong:#c9bfa8;      /* heavier internal divisions (table spines) */
+  --imprint-ink:var(--ink-3); /* imprint-line / colophon text */
+
+  /* ── SEMANTIC status ── */
+  --good:var(--core); --warn:var(--gold); --bad-s:var(--bad); --neutral:var(--ink-3);
+
+  /* ── ELEVATION (almanac = flat; elevation is for overlays only) ── */
+  --e0:none;
+  --e1:0 1px 0 var(--line);
+  --e1-plate:0 1px 0 var(--plate-edge), 0 2px 8px rgba(35,32,27,.05);
+  --e2:0 8px 24px rgba(35,32,27,.10);
+  --e3:0 22px 60px rgba(20,17,14,.30);
+
+  /* ── RADII ── */
+  --r-1:7px;    /* chips, small controls */
+  --r-2:11px;   /* tiles, inset-group container */
+  --r-3:14px;   /* panels */
+  --r-plate:12px;
+  --r-pill:22px;
+
+  /* ── SPACING scale: 4 / 8 / 12 / 16 / 22 / 32 ── */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:22px; --sp-6:32px;
+
+  /* ── TYPE SCALE (serif = display/identity only, sans = ALL data, tabular numerals) ── */
+  --t-hero:clamp(30px,5vw,46px); /* the SINGLE serif hero number per screen */
+  --t-display:24px;   /* page/section H2, entity name (serif) */
+  --t-panel:18px;     /* panel H3 / chartFrame title (serif) */
+  --t-stat:20px;      /* stat-tile value (sans, tabular) */
+  --t-body:15px;      /* body / list-row primary (sans) */
+  --t-row:13.5px;     /* dense table / list secondary (sans) */
+  --t-meta:12px;      /* meta, source line */
+  --t-label:11px;     /* UPPERCASE labels, .10em tracking */
+  --t-micro:10px;     /* epistemic badge, axis ticks, imprint, bottom-nav */
+  --t-imprint:9.5px;  /* plate imprint line (epi + source colophon) */
+
+  /* ── CHART geometry ── */
+  --cell:34px;        /* heatmap cell desktop */
+  --cell-m:30px;      /* heatmap cell mobile (≤3 fixed cols → never page-scrolls) */
+  --spark-h:26px;     /* sparkline strip height */
+  --tl-dot:9px;       /* timeline node */
+  --row-h:48px;       /* canonical list-row height (44–56 band) */
+}
+/* evening edition — warm dusk, not a cold flip */
+body.evening{
+  --paper:#181513; --paper-2:#201b18; --paper-3:#2a241f;
+  --ink:#ece3d3; --ink-2:#b3a892; --ink-3:#8a8073; --ink-4:#5c544a;
+  --line:#322b24; --line-2:#41382f;
+  --accent:#5e9b86; --accent-2:#6fae98; --accent-soft:#23302b;
+  --marrow:#7da6cf; --cere:#d99368; --core:#8fb37f; --rt:#a892c2;
+  --gold:#cda64e; --bad:#d77a72;
+  /* 3b foundation — evening remap (keeps every new token working in dusk) */
+  --p-prepl:#bda86a; --p-eguru:#a892c2;
+  --y0:#2a241f; --y1:#33403a; --y2:#3f5a4f; --y3:#4f7766; --y4:#5e9b86; --y5:#6fae98;
+  --y-ink-hi:#181513; --y-ink-lo:var(--ink-2);
+  --con-none:var(--line); --con-one:#6a5a30; --con-two:var(--gold); --con-all:#cda64e;
+  --grid:#2a2620; --grid-2:#3a342c; --tick:#5c544a; --ink-num:#f3ead8;
+  --plate:#211c18; --plate-edge:#4a3f33; --rule-strong:#41382f;
+}
+/* mobile type-scale layer — exactly one --t-hero per screen at 30–34px */
+@media (max-width:640px){
+  :root{
+    --t-display:18px; --t-panel:16px; --t-stat:clamp(18px,5vw,22px);
+    --t-row:14px; --t-meta:11.5px; --t-hero:clamp(30px,8.5vw,34px);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font:15px/1.62 var(--sans);
+  font-feature-settings:"tnum" 1,"kern" 1;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:var(--accent);color:var(--paper-2)}
+.muted{color:var(--ink-2)}
+.num,td.num,th.num{font-variant-numeric:tabular-nums}

@@ -1,0 +1,79 @@
+/* ============================================================
+   videos.css — VIDEOS surface (CoreBTR clip rows + confidence tags)
+   Reuses shared primitives: .tiles/.tile (KPI), .lgroup (inset container),
+   the .qb-layout sidebar shell, .cframe plate (faculty rollup), .echip.
+   This file owns: the dense .vrow clip rows, the .vfr faculty rollup,
+   the .conf confidence chips, and surface-local layout tweaks.
+   Drawer chrome (.vchips.big) is shared and lives in components.css.
+   ============================================================ */
+
+/* ── KPI tiles: 2/3-col on mobile (shared), use the width on desktop ── */
+.vid-tiles{margin-bottom:var(--sp-4)}
+@media (min-width:980px){
+  .vid-tiles{grid-template-columns:repeat(6,1fr)}
+}
+@media (min-width:641px) and (max-width:979px){
+  .vid-tiles{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ── faculty-of-record rollup (the relational bridge → Faculty pages) ── */
+.vid-facroll{margin-bottom:var(--sp-4)}
+.vfr-list{display:flex;flex-direction:column}
+.vfr-row{display:grid;grid-template-columns:11px minmax(0,1fr) minmax(96px,180px) 40px;
+  gap:12px;align-items:center;min-height:var(--row-h);padding:7px 4px;
+  border-top:1px solid var(--grid);text-decoration:none;color:var(--ink)}
+.vfr-row:first-child{border-top:0}
+.vfr-row.is-link{cursor:pointer}
+.vfr-row.is-link:hover{background:var(--paper-3)}
+.vfr-row.is-link:hover .vfr-name{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.vfr-dot{width:9px;height:9px;border-radius:50%;background:var(--c,var(--ink-3))}
+.vfr-main{min-width:0;display:flex;flex-direction:column;gap:1px}
+.vfr-name{font-size:var(--t-body);font-weight:500;color:var(--ink);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vfr-sub{font-size:var(--t-meta);color:var(--ink-3);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vfr-track{position:relative;height:8px;border-radius:4px;background:var(--grid);overflow:hidden}
+.vfr-bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.vfr-val{justify-self:end;font-variant-numeric:tabular-nums;font-size:var(--t-row);
+  font-weight:600;color:var(--ink-2)}
+
+/* ── subject heading toolbar (reuses .qb-controls sticky behavior) ── */
+.vid-controls{align-items:baseline}
+.vid-heading{font-family:var(--serif);font-weight:500;font-size:var(--t-panel);color:var(--ink);margin:0}
+.vid-sub{font-size:var(--t-meta);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-left:2px}
+
+/* ── dense clip rows: .vrow inside ONE .lgroup container, ~48px band ── */
+.vlist{display:flex;flex-direction:column}
+.vrow{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:12px;align-items:center;
+  min-height:var(--row-h);padding:6px 14px}
+.vlist .vrow:not(:first-child){border-top:1px solid var(--line)}
+.vrow:hover{background:var(--paper-3)}
+.vrow.done .vtopic{color:var(--ink-3)}
+.vrow.done{opacity:.72}
+.vnum{font-variant-numeric:tabular-nums;color:var(--ink-4);font-size:var(--t-row);text-align:right;font-weight:600}
+.vmain{min-width:0;display:flex;flex-direction:column;gap:1px}
+.vtopic{font-weight:500;font-size:var(--t-body);color:var(--ink);cursor:pointer;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.vtopic:hover{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.vmeta{font-size:var(--t-meta);color:var(--ink-3);
+  display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.vsugg{color:var(--accent);cursor:pointer;font-weight:600}
+.vsugg:hover{text-decoration:underline;text-underline-offset:2px}
+.vfacline{margin-top:3px;line-height:1}
+.vfac{font-size:var(--t-meta)}
+.vfac.is-link:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── confidence chips (the auto-cut PROXY signal; epiDot carries the label) ── */
+.conf{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:10px}
+.conf.high{background:color-mix(in srgb,var(--core) 18%,var(--paper-2));color:var(--core)}
+.conf.medium{background:color-mix(in srgb,var(--gold) 18%,var(--paper-2));color:var(--gold)}
+.conf.low{background:color-mix(in srgb,var(--cere) 16%,var(--paper-2));color:var(--cere)}
+.conf.estimated{background:var(--paper-3);color:var(--ink-3)}
+
+/* ── mobile density: tighter rollup + chips stay tappable (>=44px) ── */
+@media (max-width:640px){
+  .vfr-row{grid-template-columns:11px minmax(0,1fr) 64px 36px;gap:9px}
+  .vrow{gap:10px;padding:3px 12px}
+  .vmeta{gap:4px}
+  /* toggle chips reach 44px via shared `.vrow .chip` rule in components.css */
+}

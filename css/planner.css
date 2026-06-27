@@ -1,0 +1,77 @@
+/* ============================================================
+   planner.css — STUDY PLANNER surface (do-next intelligence)
+   Owns ONLY #view-planner. Shared primitives (.tiles/.tile, .panel/.ph,
+   .lgroup/.lrow, .rbars/.rbrow, .cframe/.plate, .callout, .echip,
+   .count-pill, .epi, .cpip) come from components.css / charts.css.
+   Desktop base; the bottom @media layer hits mobile density (375×812).
+   Warm almanac identity retained — paper/ink/pine/gold tokens only.
+   ============================================================ */
+
+#view-planner .plan-intro{margin-bottom:var(--sp-4,16px)}
+#view-planner .plan-tiles{margin-bottom:var(--sp-4,16px)}
+#view-planner .pl-frame{margin:var(--sp-4,16px) 0}
+
+/* ── chartFrame legend (scoped here; hy.css's copy is scoped to its surface) ── */
+#view-planner .cf-legend .lg-ramp,
+#view-planner .cf-legend .lg-con,
+#view-planner .cf-legend .lg-best{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:var(--t-micro,10px);color:var(--ink-3);margin-left:14px;white-space:nowrap}
+#view-planner .cf-legend .lg-ramp i{width:11px;height:11px;border-radius:2px;display:inline-block}
+#view-planner .cf-legend .lg-ramp i.r0{background:var(--y0)}
+#view-planner .cf-legend .lg-ramp i.r1{background:var(--y1)}
+#view-planner .cf-legend .lg-ramp i.r2{background:var(--y2)}
+#view-planner .cf-legend .lg-ramp i.r3{background:var(--y3)}
+#view-planner .cf-legend .lg-ramp i.r4{background:var(--y4)}
+#view-planner .cf-legend .lg-ramp i.r5{background:var(--y5)}
+
+/* reputed-strongest directional name chip (gold, tabular-aligned, links when actionable) */
+#view-planner .pl-best,
+#view-planner .rb-mark .pl-best{
+  color:var(--gold);font-size:var(--t-micro,10px);font-weight:600;
+  letter-spacing:.02em;margin-left:6px;white-space:nowrap}
+#view-planner .cf-legend .lg-best .pl-best{font-weight:700}
+
+/* ── do-next group: untracked high-yield rows ── */
+#view-planner .plan-donext .lrow-title{font-weight:500}
+#view-planner .plan-donext .lrow-sub .echip{cursor:pointer}
+#view-planner .plan-donext .lrow-sub .echip:hover{text-decoration:underline}
+#view-planner .pl-q{font-variant-numeric:tabular-nums;color:var(--ink-2);margin-left:8px;min-width:3.2em;text-align:right;display:inline-block}
+
+/* ── tiers: three inset-grouped panels side by side on desktop ── */
+#view-planner .plan-tier-grid{
+  display:grid;gap:var(--gap,16px);
+  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  margin:var(--sp-4,16px) 0}
+#view-planner .plan-tier{margin:0;border-top:3px solid var(--ink-3)} /* grid owns spacing; tier color on top rule */
+#view-planner .plan-tier.hi{border-top-color:var(--cere)}
+#view-planner .plan-tier.mid{border-top-color:var(--gold)}
+#view-planner .plan-tier.lo{border-top-color:var(--core)}
+#view-planner .plan-tier .pl-tsub{display:block;margin-top:3px;font-size:11.5px;line-height:1.35}
+#view-planner .plan-tier .srcline{margin-top:8px}
+#view-planner .pl-tier-v{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;font-size:14px}
+#view-planner .pl-tier-rem{display:block;font-variant-numeric:tabular-nums;color:var(--ink-3);font-size:11px;margin-top:1px;text-align:right}
+
+/* ── weekly rhythm panel + KPI strip ── */
+#view-planner .plan-rhythm-wrap{margin-top:var(--sp-4,16px)}
+#view-planner .plan-kpis{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+#view-planner .pl-kpi{display:flex;flex-direction:column;gap:2px}
+#view-planner .pl-kpi b{color:var(--ink);font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.05}
+#view-planner .pl-kpi span{font-size:11.5px;color:var(--ink-2);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+
+/* ============================================================
+   MOBILE DENSITY (≤640) — tiles 2/3-col handled by shared .tiles;
+   tiers stack to one column; legend wraps below plot; no h-scroll.
+   ============================================================ */
+@media (max-width:640px){
+  #view-planner .pl-frame{margin:12px 0}
+  #view-planner .plan-tier-grid{grid-template-columns:1fr;gap:12px;margin:12px 0}
+  #view-planner .cf-legend .lg-ramp,
+  #view-planner .cf-legend .lg-con,
+  #view-planner .cf-legend .lg-best{margin-left:0;margin-right:12px}
+  #view-planner .pl-best{max-width:8.5em;overflow:hidden;text-overflow:ellipsis}
+  #view-planner .plan-kpis{grid-template-columns:repeat(2,1fr);gap:12px}
+  #view-planner .pl-kpi b{font-size:18px}
+}

@@ -1,0 +1,107 @@
+/* ============================================================
+   hy.css — HIGH-YIELD surface  ·  JUDGMENT #1 (proxy density + consensus)
+   Surface-specific only. Tiles/rows/charts/plate styling come from the
+   shared layers (components.css / charts.css). Warm almanac, never neon.
+   Desktop base; mobile density at the bottom (≤640).
+   ============================================================ */
+
+/* tiles strip — shared .tiles handles the 2/3-col grid; just spacing here */
+.hy-tiles { margin-bottom: var(--sp-3, 12px); }
+
+/* the relational hero frame holder (chartFrame already styles the plate) */
+.hy-frame { margin: var(--sp-4, 16px) 0; }
+
+/* ── legend for the density-mass rankedBars (sequential ramp + consensus + directional) ── */
+.cf-legend .lg-ramp,
+.cf-legend .lg-con,
+.cf-legend .lg-best {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: var(--t-micro, 10px); color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: .08em; margin-left: 12px;
+}
+.cf-legend .lg-ramp i {
+  width: 13px; height: 11px; display: inline-block; border: 1px solid var(--line);
+}
+.cf-legend .lg-ramp i.r0 { background: var(--y0); }
+.cf-legend .lg-ramp i.r1 { background: var(--y1); }
+.cf-legend .lg-ramp i.r2 { background: var(--y2); }
+.cf-legend .lg-ramp i.r3 { background: var(--y3); }
+.cf-legend .lg-ramp i.r4 { background: var(--y4); }
+.cf-legend .lg-ramp i.r5 { background: var(--y5); }
+.cf-legend .lg-ramp span,
+.cf-legend .lg-con,
+.cf-legend .lg-best { white-space: nowrap; }
+.cf-legend .lg-best .hy-best { color: var(--gold); font-weight: 700; letter-spacing: 0; }
+
+/* the directional best-platform chip riding the rankedBars mark slot */
+.rb-mark .hy-best,
+.hy-best {
+  font-size: var(--t-micro, 10px); font-weight: 700;
+  text-transform: none; letter-spacing: .01em; white-space: nowrap;
+}
+.hy-best[data-go-platform] { cursor: pointer; }
+.hy-best[data-go-platform]:hover { text-decoration: underline; }
+
+/* consensus group — combined-mass numeral in the trail */
+.hy-mass { color: var(--ink-2); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* per-subject density groupList rows */
+.hy-panel .ph { align-items: flex-start; }
+.hy-sh { font-size: var(--t-meta, 12px); display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.hy-jump { font: inherit; }
+
+/* the priority stars lead inside a list row */
+.hy-dlist .lrow-lead .hy { color: var(--gold); font-size: 12px; letter-spacing: -1px; white-space: nowrap; }
+.hy-dlist .lrow-lead .hy.med { color: var(--ink-4); }
+
+/* density micro-bar (proxy magnitude) sitting in the row trail */
+.hy-dbar {
+  width: 54px; height: 7px; border-radius: 4px; background: var(--y0);
+  display: inline-block; overflow: hidden; vertical-align: middle; flex: none;
+}
+.hy-dbar > i { display: block; height: 100%; border-radius: 4px; }
+
+/* trail layout: density bar · consensus glyph · status + count */
+.hy-dlist .lrow-trail,
+.hy-consensus .lrow-trail {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.hy-q { color: var(--ink-3); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+
+/* inline subject/bank chips in consensus row subs */
+.hy-consensus .lrow-sub .echip { cursor: pointer; }
+.hy-consensus .lrow-sub .echip:hover { text-decoration: underline; }
+
+/* keep the honest proxy note legible + airy */
+.proxy-note em { font-style: italic; color: var(--ink-2); }
+
+/* ============================================================
+   MOBILE DENSITY (≤640) — tiles 2/3-col, rows stay 48px, no h-scroll
+   ============================================================ */
+@media (max-width: 640px) {
+  .hy-frame { margin: 12px 0; }
+
+  /* legend wraps below the plot on mobile (chartFrame head already wraps) */
+  .cf-legend { display: flex; flex-wrap: wrap; gap: 4px 0; }
+  .cf-legend .lg-ramp,
+  .cf-legend .lg-con,
+  .cf-legend .lg-best { margin-left: 0; margin-right: 12px; }
+
+  /* density bar shrinks so the trail never pushes the row wider than the screen */
+  .hy-dbar { width: 36px; }
+  .hy-dlist .lrow-trail,
+  .hy-consensus .lrow-trail { gap: 7px; }
+
+  /* heaviest-subject tile note + best-platform chips must ellipsis, never wrap-overflow */
+  .hy-sh { font-size: 11.5px; }
+  .hy-best { max-width: 9em; overflow: hidden; text-overflow: ellipsis; }
+
+  /* the consensus per-row glyph lead is enough; mass numeral stays tabular */
+  .hy-mass { font-size: 13px; }
+}
+
+/* very narrow (≤360): drop the density micro-bar, keep glyph + count only */
+@media (max-width: 360px) {
+  .hy-dbar { display: none; }
+}

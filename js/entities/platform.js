@@ -1,0 +1,212 @@
+/* ============================================================
+   entities/platform.js — renderPlatformPage(id)   ·  Stage 3b
+   Entity page (NOT a tab): one integrated platform's profile —
+   public-3p reliability scorecard, coverage-by-subject mass (measured
+   counts, proxy density), faculty roster (career moat), and YOUR
+   tracking on this platform (measured, local). Every figure carries its
+   epistemic label + source via chartFrame()/panel(). Links out to the
+   Subject and Faculty pages — the Subject↔Platform↔Faculty triangle.
+
+   NEUTRALITY FIREWALL: never fabricate a count/rating/name/date; money
+   never moves the score; reliability complaint THEMES render as a 6px
+   warn DOT, never a shaming bar; faculty roster is aggregate-only.
+
+   GUARD RAIL: PrepLadder / eGurukul have NO platforms[] content, so they
+   get NO Platform page — they remain reputation-only chips elsewhere.
+   ============================================================ */
+
+/* the App-Store reliability row for this platform (public-3p), if any */
+function _platReliability(id) {
+  return ((D.reliability && D.reliability.apps) || []).find(a => a.platformId === id) || null;
+}
+
+function renderPlatformPage(id) {
+  const v = $("#view-platform"); if (!v) return;
+  resetPlates();
+
+  const p = PLAT_BY_ID[id];
+  /* GUARD: reputation-only / unknown ids never get a content page */
+  if (!p) {
+    const repName = REPUTATION_NAMES[id];
+    v.innerHTML = `<div class="entity-head">
+        <div class="eyebrow"><button class="linkbtn back" data-go-overview>‹ Home</button> · PLATFORMS</div>
+        <h2 class="sh-name">${esc(repName || id)}</h2>
+      </div>
+      ${panel({
+        title: repName ? `${repName} — reputation only` : "Unknown platform",
+        epi: repName ? "directional" : null,
+        body: repName
+          ? `<p class="muted">${esc(repName)} appears in Meridian's neutral reliability scorecard and community-reputation matrix, but its content is <b>not yet integrated</b> — so it has no coverage page. It stays an honest reputation chip until ingested.</p>`
+          : `<p class="muted">No such platform.</p>`
+      })}`;
+    return;
+  }
+
+  /* ---- derived ---- */
+  const subjects = freshSubjects(p);
+  const reli = _platReliability(id);
+  const totalMCQ = platMCQ(id);
+  const totalUnits = platMods(id);
+  const roster = facultyForPlatform(id);
+  const ids = LEAVES.filter(l => l.platform === id).map(l => l.id);
+  const ro = rollup(ids);
+  const unitNoun = platUnitNoun(id);
+  const reliCap = (D.reliability && D.reliability.captured) || D.captured;
+  const strengthCap = (D.subjectStrength && D.subjectStrength.captured) || D.captured;
+
+  /* subjects this platform is community-reputed strongest at (directional) */
+  const strongSubs = new Set(((D.subjectStrength && D.subjectStrength.subjects) || [])
+    .filter(s => (s.strong || []).some(x => x.platformId === id))
+    .map(s => canon(s.subject)));
+
+  /* ---- entity header: breadcrumb + name + ONE hero number (reliability ★, public-3p) ---- */
+  const heroNum = reli && reli.rating != null ? (reli.ratingApprox ? "" : "") + reli.rating : "—";
+  const head = `<div class="entity-head">
+      <div class="eyebrow"><button class="linkbtn back" data-go-overview>‹ Home</button> · PLATFORMS</div>
+      <div class="eh-top">
+        <div class="eh-id"><h2 class="sh-name" style="color:${platColor(id)}">${esc(p.name)}</h2>
+          <div class="eh-tags">
+            <span class="echip off">${fmt(totalMCQ)} MCQs · ${esc(D.exam || "NEET PG")}</span>
+            <span class="echip off">${subjects.length} subjects · ${fmt(totalUnits)} ${esc(unitNoun)}</span>
+          </div>
+        </div>
+        <div class="eh-hero">
+          <span class="hero-num num">${heroNum === "—" ? "—" : "★ " + esc(String(heroNum))}</span>
+          <span class="hero-lbl">${reli ? "App-Store rating " + epiBadge("public-3p") : "no public rating"}</span>
+          <span class="hero-note muted small">${reli ? esc(reli.ratingsLabel || "") + " ratings · captured " + esc(reliCap) : ""}</span>
+        </div>
+      </div>
+    </div>`;
+
+  /* ---- 6-tile strip (mobile density; tappable where relational) ---- */
+  const topSub = subjects.slice().sort((a, b) => b._mcqs - a._mcqs)[0];
+  const tiles = `<div class="tiles">`
+    + statTile({ accent: platCls(id), value: reli && reli.rating != null ? (reli.ratingApprox ? "~" : "") + reli.rating : "—", label: "RATING ★", note: reli ? (reli.ratingsLabel || "App Store") : "no public rating", epi: reli ? "public-3p" : null })
+    + statTile({ accent: platCls(id), value: fmt(totalMCQ), label: "MCQs", note: "across " + subjects.length + " subjects", hero: true })
+    + statTile({ accent: platCls(id), value: subjects.length, label: "SUBJECTS", note: topSub ? "top: " + esc(canon(topSub.subject)) : "" })
+    + statTile({ value: roster.length || "—", label: "FACULTY", note: roster.length ? "with affiliations here" : "none seeded yet", epi: roster.length ? "directional" : null })
+    + statTile({ value: ro.a, label: "YOU ATTEMPTED", note: pct(ro.a, ro.total) + "% of " + fmt(ro.total) + " " + esc(unitNoun), epi: "measured" })
+    + statTile({ value: ro.r, label: "YOU REVIEWED", note: pct(ro.r, ro.total) + "% reviewed", epi: "measured" })
+    + `</div>`;
+
+  /* ---- Pl.1 — RELIABILITY SCORECARD (public-3p, dated, sourced; warn = 6px dot) ---- */
+  let reliPlate;
+  if (reli) {
+    reliPlate = chartFrame(
+      "Reliability — iOS App Store",
+      "public-3p", [reli.sourceId].filter(Boolean), reliCap,
+      ratingScorecard([reli], "reliability"),
+      {
+        legend: `<span class="cf-key"><span class="wdot"></span>recurring complaint theme</span>`,
+        note: (D.reliability && D.reliability.note ? esc(D.reliability.note) + " " : "")
+          + "Public third-party signal — money never moves the score. Complaint themes are surfaced as neutral dots, never a shaming bar."
+      }
+    );
+  } else {
+    reliPlate = panel({
+      title: "Reliability — iOS App Store",
+      epi: "public-3p",
+      body: `<p class="muted">No public App-Store rating captured for ${esc(p.name)} yet.</p>`
+    });
+  }
+
+  /* ---- Pl.2 — COVERAGE BY SUBJECT (measured counts; proxy density fill; → Subject pages) ---- */
+  const covItems = subjects.map(s => {
+    const c = canon(s.subject);
+    return {
+      label: c,
+      value: s._mcqs,
+      go: "subject:" + c,
+      mark: strongSubs.has(c) ? `<span class="rb-strong" title="Community-reputed strongest here (directional)">◆</span>` : null
+    };
+  }).sort((a, b) => b.value - a.value);
+  const coverage = chartFrame(
+    "Coverage by subject — MCQ mass",
+    "measured", [], D.captured,
+    rankedBars(covItems, { colorFn: () => platColor(id) }),
+    {
+      legend: `<span class="cf-key"><span class="lg-swatch" style="background:${platColor(id)}"></span>${esc(p.name)} MCQs (measured)</span>`
+        + (strongSubs.size ? `<span class="cf-key"><span class="rb-strong">◆</span>community-reputed strongest ${epiBadge("directional")}</span>` : ""),
+      note: `Bar length = number of MCQs this platform carries in each subject (measured, ${esc(D.captured)}). ◆ marks subjects the community reputes ${esc(p.name)} strongest at (directional). Tap a subject to open its cross-platform page.`
+    }
+  );
+
+  /* desktop-only treemap of the same mass (degrades to the bars above on mobile) */
+  const tmItems = covItems.filter(i => i.value > 0).map(i => ({ label: i.label, value: i.value, go: i.go }));
+  const treemapPlate = chartFrame(
+    "Where the mass sits — treemap",
+    "measured", [], D.captured,
+    treemap(tmItems),
+    { note: "Tile area = MCQ mass per subject (measured). Desktop view of the same data as the ranked bars — tap a tile to open the Subject page." }
+  );
+
+  /* ---- FACULTY ROSTER (gated; aggregate-only; → Faculty pages) ---- */
+  let facultyPanel;
+  if (!FACULTY.length) {
+    facultyPanel = panel({
+      title: "Faculty roster",
+      epi: "directional",
+      body: `<p class="muted small">Faculty profiles are being seeded from public sources. <b>0 live.</b> Aggregate-only · community-sentiment · never a ranking of "worst" faculty.</p>`
+    });
+  } else if (!roster.length) {
+    facultyPanel = panel({
+      title: "Faculty roster",
+      epi: "directional",
+      body: `<p class="muted small">No seeded faculty currently list ${esc(p.name)} among their affiliations. The roster grows as more profiles are sourced.</p>`
+    });
+  } else {
+    const rows = roster.map(f => {
+      const aff = (f.affiliations || []).find(a => a.platformId === id) || {};
+      const subs = [...new Set((f.subjects || []).map(canon))];
+      const facSrc = [...new Set((f.affiliations || []).flatMap(a => a.sourceIds || []).concat(f.sourceIds || []))];
+      return listRow({
+        lead: dotLead(platColor(id)),
+        title: esc(f.name),
+        sub: `${subs.join(" · ")}${aff.status ? ' · <span class="rost-st">' + esc(aff.status) + "</span>" : ""}`,
+        trail: aff.status === "past"
+          ? `<span class="echip off">past</span>`
+          : `<span class="echip off">${esc(aff.role ? aff.role.split(/[,(]/)[0].trim() : "faculty")}</span>`,
+        go: "faculty:" + f.id
+      });
+    });
+    const rosterSrc = [...new Set(roster.flatMap(f => (f.affiliations || []).flatMap(a => a.sourceIds || []).concat(f.sourceIds || [])))];
+    facultyPanel = panel({
+      title: `Faculty roster · ${roster.length}`,
+      epi: "directional",
+      sourceIds: rosterSrc, captured: "2026-06-27",
+      actions: `<span class="ph-note muted small">incl. status: past</span>`,
+      body: groupList(rows)
+        + `<p class="muted small" style="margin-top:8px">Career history from public sources (directional seed). Aggregate · community-sentiment · not endorsement. Tap a name for the full career timeline.</p>`
+    });
+  }
+
+  /* ---- YOUR TRACKING ON THIS PLATFORM (measured, local) ---- */
+  /* per-subject progress mini-rows (your coverage where you've started) */
+  const subProg = subjects.map(s => {
+    const sids = LEAVES.filter(l => l.platform === id && l.subject === s.subject).map(l => l.id);
+    const r = rollup(sids);
+    return { subject: canon(s.subject), r };
+  }).filter(x => x.r.a > 0 || x.r.r > 0).sort((a, b) => b.r.a - a.r.a).slice(0, 8);
+  const trackBody = ro.a || ro.r
+    ? bigMeter(ro)
+      + (subProg.length
+        ? `<div class="track-subs">` + groupList(subProg.map(x => listRow({
+            title: esc(x.subject),
+            sub: `${x.r.a}/${x.r.total} attempted · ${x.r.r} reviewed`,
+            trail: meterHTML(x.r.a, x.r.total),
+            go: "subject:" + x.subject
+          }))) + `</div>`
+        : "")
+    : `<p class="muted">You haven't tracked any ${esc(unitNoun)} on ${esc(p.name)} yet. Open the QBank Tracker to start ticking.</p>`;
+  const tracking = panel({
+    title: "Your tracking on this platform",
+    epi: "measured",
+    body: trackBody
+      + `<p class="muted small" style="margin-top:8px">Your tracked activity on this device (measured, local). Stays private — Meridian is local-first.</p>`
+  });
+
+  v.innerHTML = head + tiles
+    + `<div class="panel-grid">${reliPlate}${coverage}</div>`
+    + `<div class="inst-grid">${facultyPanel}${tracking}</div>`
+    + `<div class="plat-treemap">${treemapPlate}</div>`;
+}

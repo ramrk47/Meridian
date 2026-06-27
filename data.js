@@ -20370,7 +20370,8 @@ window.D = {
    "timerange": "00:00:16 - 00:26:23",
    "durMin": 26,
    "confidence": "high",
-   "file": "01 - Cell injury [high].mp4"
+   "file": "01 - Cell injury [high].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-general-pathology-2",
@@ -20381,7 +20382,8 @@ window.D = {
    "timerange": "00:26:23 - 00:44:57",
    "durMin": 19,
    "confidence": "estimated",
-   "file": "02 - Miscellaneous pathology [estimated].mp4"
+   "file": "02 - Miscellaneous pathology [estimated].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-general-pathology-3",
@@ -20392,7 +20394,8 @@ window.D = {
    "timerange": "00:44:57 - 01:18:23",
    "durMin": 33,
    "confidence": "high",
-   "file": "03 - Neoplasia [high].mp4"
+   "file": "03 - Neoplasia [high].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-general-pharmacology-1",
@@ -20403,7 +20406,8 @@ window.D = {
    "timerange": "00:00:00 - 00:01:04",
    "durMin": 1,
    "confidence": "estimated",
-   "file": "01 - General pharmacology [estimated].mp4"
+   "file": "01 - General pharmacology [estimated].mp4",
+   "facultyId": "fac-gobind-rai-garg"
   },
   {
    "id": "v-btr-general-pharmacology-2",
@@ -20414,7 +20418,8 @@ window.D = {
    "timerange": "00:01:04 - 01:27:28",
    "durMin": 86,
    "confidence": "high",
-   "file": "02 - ANS [high].mp4"
+   "file": "02 - ANS [high].mp4",
+   "facultyId": "fac-gobind-rai-garg"
   },
   {
    "id": "v-btr-general-pharmacology-3",
@@ -20425,7 +20430,8 @@ window.D = {
    "timerange": "01:27:28 - 01:51:06",
    "durMin": 24,
    "confidence": "high",
-   "file": "03 - Anti-cancer drugs [high].mp4"
+   "file": "03 - Anti-cancer drugs [high].mp4",
+   "facultyId": "fac-gobind-rai-garg"
   },
   {
    "id": "v-btr-general-physiology-1",
@@ -20491,7 +20497,8 @@ window.D = {
    "timerange": "00:00:00 - 00:57:09",
    "durMin": 57,
    "confidence": "estimated",
-   "file": "01 - RBC disorders [estimated].mp4"
+   "file": "01 - RBC disorders [estimated].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-hematology-2",
@@ -20502,7 +20509,8 @@ window.D = {
    "timerange": "00:57:09 - 02:39:48",
    "durMin": 103,
    "confidence": "estimated",
-   "file": "02 - WBC disorders [estimated].mp4"
+   "file": "02 - WBC disorders [estimated].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-hematology-3",
@@ -20513,7 +20521,8 @@ window.D = {
    "timerange": "02:39:48 - 03:18:28",
    "durMin": 39,
    "confidence": "medium",
-   "file": "03 - Platelet and coagulation disorders [medium].mp4"
+   "file": "03 - Platelet and coagulation disorders [medium].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-hematology-4",
@@ -20524,7 +20533,8 @@ window.D = {
    "timerange": "03:18:28 - 03:48:36",
    "durMin": 30,
    "confidence": "high",
-   "file": "04 - Transfusion medicine [high].mp4"
+   "file": "04 - Transfusion medicine [high].mp4",
+   "facultyId": "fac-sparsh-gupta"
   },
   {
    "id": "v-btr-immunology-1",
@@ -21228,7 +21238,8 @@ window.D = {
    "timerange": "01:22:22 - 01:59:02",
    "durMin": 37,
    "confidence": "high",
-   "file": "01 - Clinical tests [high].mp4"
+   "file": "01 - Clinical tests [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-2",
@@ -21239,7 +21250,8 @@ window.D = {
    "timerange": "01:59:02 - 02:04:17",
    "durMin": 5,
    "confidence": "high",
-   "file": "02 - Nerve injuries [high].mp4"
+   "file": "02 - Nerve injuries [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-3",
@@ -21250,7 +21262,8 @@ window.D = {
    "timerange": "02:04:17 - 02:48:00",
    "durMin": 44,
    "confidence": "high",
-   "file": "03 - Fractures [high].mp4"
+   "file": "03 - Fractures [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-4",
@@ -21261,7 +21274,8 @@ window.D = {
    "timerange": "02:48:00 - 03:03:24",
    "durMin": 15,
    "confidence": "high",
-   "file": "04 - Bone infections [high].mp4"
+   "file": "04 - Bone infections [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-5",
@@ -21272,7 +21286,8 @@ window.D = {
    "timerange": "03:03:24 - 03:07:32",
    "durMin": 4,
    "confidence": "medium",
-   "file": "05 - Spine pathologies and scoliosis [medium].mp4"
+   "file": "05 - Spine pathologies and scoliosis [medium].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-6",
@@ -21283,7 +21298,8 @@ window.D = {
    "timerange": "03:07:32 - 03:39:30",
    "durMin": 32,
    "confidence": "high",
-   "file": "06 - Bone tumors [high].mp4"
+   "file": "06 - Bone tumors [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-7",
@@ -21294,7 +21310,8 @@ window.D = {
    "timerange": "03:39:30 - 04:05:46",
    "durMin": 26,
    "confidence": "high",
-   "file": "07 - Metabolic bone diseases [high].mp4"
+   "file": "07 - Metabolic bone diseases [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-8",
@@ -21305,7 +21322,8 @@ window.D = {
    "timerange": "04:05:46 - 04:33:38",
    "durMin": 28,
    "confidence": "high",
-   "file": "08 - Pediatric orthopedics [high].mp4"
+   "file": "08 - Pediatric orthopedics [high].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-orthopedics-9",
@@ -21316,7 +21334,8 @@ window.D = {
    "timerange": "04:33:38 - 04:41:13",
    "durMin": 8,
    "confidence": "medium",
-   "file": "09 - Miscellaneous [medium].mp4"
+   "file": "09 - Miscellaneous [medium].mp4",
+   "facultyId": "fac-apurv-mehra"
   },
   {
    "id": "v-btr-pediatrics-1",
@@ -21415,7 +21434,8 @@ window.D = {
    "timerange": "00:00:02 - 01:39:06",
    "durMin": 99,
    "confidence": "high",
-   "file": "01 - Epidemiology [high].mp4"
+   "file": "01 - Epidemiology [high].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-2",
@@ -21426,7 +21446,8 @@ window.D = {
    "timerange": "01:39:06 - 02:34:18",
    "durMin": 55,
    "confidence": "high",
-   "file": "02 - Biostatistics [high].mp4"
+   "file": "02 - Biostatistics [high].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-3",
@@ -21437,7 +21458,8 @@ window.D = {
    "timerange": "02:34:18 - 03:21:41",
    "durMin": 47,
    "confidence": "high",
-   "file": "03 - Vaccines [high].mp4"
+   "file": "03 - Vaccines [high].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-4",
@@ -21448,7 +21470,8 @@ window.D = {
    "timerange": "03:21:41 - 03:46:32",
    "durMin": 25,
    "confidence": "high",
-   "file": "04 - Demography [high].mp4"
+   "file": "04 - Demography [high].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-5",
@@ -21459,7 +21482,8 @@ window.D = {
    "timerange": "03:46:32 - 04:32:05",
    "durMin": 46,
    "confidence": "high",
-   "file": "05 - Nutrition [high].mp4"
+   "file": "05 - Nutrition [high].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-6",
@@ -21470,7 +21494,8 @@ window.D = {
    "timerange": "04:32:05 - 04:53:41",
    "durMin": 22,
    "confidence": "low",
-   "file": "06 - Health programs [low].mp4"
+   "file": "06 - Health programs [low].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-7",
@@ -21481,7 +21506,8 @@ window.D = {
    "timerange": "04:53:41 - 05:49:10",
    "durMin": 55,
    "confidence": "high",
-   "file": "07 - Environment [high].mp4"
+   "file": "07 - Environment [high].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-preventive-and-social-medicine-8",
@@ -21492,7 +21518,8 @@ window.D = {
    "timerange": "05:49:10 - 06:01:13",
    "durMin": 12,
    "confidence": "medium",
-   "file": "08 - Miscellaneous [medium].mp4"
+   "file": "08 - Miscellaneous [medium].mp4",
+   "facultyId": "fac-vivek-jain-psm"
   },
   {
    "id": "v-btr-psychiatry-1",
@@ -21503,7 +21530,8 @@ window.D = {
    "timerange": "00:00:02 - 01:11:50",
    "durMin": 72,
    "confidence": "low",
-   "file": "01 - Basics of psychiatry [low].mp4"
+   "file": "01 - Basics of psychiatry [low].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-psychiatry-2",
@@ -21514,7 +21542,8 @@ window.D = {
    "timerange": "01:11:50 - 01:31:20",
    "durMin": 20,
    "confidence": "medium",
-   "file": "02 - Psychotic disorders and anti-psychotics [medium].mp4"
+   "file": "02 - Psychotic disorders and anti-psychotics [medium].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-psychiatry-3",
@@ -21525,7 +21554,8 @@ window.D = {
    "timerange": "01:31:20 - 02:03:38",
    "durMin": 32,
    "confidence": "low",
-   "file": "03 - Mood disorders and anti-depressants [low].mp4"
+   "file": "03 - Mood disorders and anti-depressants [low].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-psychiatry-4",
@@ -21536,7 +21566,8 @@ window.D = {
    "timerange": "02:03:38 - 02:19:25",
    "durMin": 16,
    "confidence": "low",
-   "file": "04 - Anxiety and related disorders [low].mp4"
+   "file": "04 - Anxiety and related disorders [low].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-psychiatry-5",
@@ -21547,7 +21578,8 @@ window.D = {
    "timerange": "02:19:25 - 02:27:19",
    "durMin": 8,
    "confidence": "high",
-   "file": "05 - Childhood psychiatry [high].mp4"
+   "file": "05 - Childhood psychiatry [high].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-psychiatry-6",
@@ -21558,7 +21590,8 @@ window.D = {
    "timerange": "02:27:19 - 02:40:31",
    "durMin": 13,
    "confidence": "low",
-   "file": "06 - Sleep and related disorders [low].mp4"
+   "file": "06 - Sleep and related disorders [low].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-psychiatry-7",
@@ -21569,7 +21602,8 @@ window.D = {
    "timerange": "02:40:31 - 02:52:38",
    "durMin": 12,
    "confidence": "medium",
-   "file": "07 - Miscellaneous [medium].mp4"
+   "file": "07 - Miscellaneous [medium].mp4",
+   "facultyId": "fac-praveen-tripathi"
   },
   {
    "id": "v-btr-radiology-1",
@@ -21837,6 +21871,276 @@ window.D = {
    "url": "plans/RESEARCH_FINDINGS.md",
    "captured": "2026-06-26",
    "note": "Internal harvest that aggregated the public sources above. Cite the primary source where one exists."
+  },
+  {
+   "id": "src-fac-prepladder-faculty-page",
+   "type": "platform-faculty-page",
+   "title": "Find the Best Faculty for NEET PG Preparation at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/medical-pg/faculty",
+   "captured": "2026-06-27",
+   "note": "Official PrepLadder faculty roster page listing names, subjects, and brief bios for all NEET PG faculty."
+  },
+  {
+   "id": "src-fac-marrow-faculty-blog",
+   "type": "platform-faculty-page",
+   "title": "Marrow Faculty List",
+   "publisher": "Marrow / DailyRounds",
+   "url": "https://www.marrow.com/blog/faculty-list/",
+   "captured": "2026-06-27",
+   "note": "Marrow blog page listing their faculty roster with subject assignments."
+  },
+  {
+   "id": "src-fac-marrow-dailyrounds-blog",
+   "type": "platform-faculty-page",
+   "title": "MARROW for NEET PG — from India's top faculty & DailyRounds",
+   "publisher": "DailyRounds",
+   "url": "https://www.dailyrounds.org/blog/marrow-for-neet-pg-from-indias-top-25-faculty-dailyrounds/",
+   "captured": "2026-06-27",
+   "note": "DailyRounds blog listing 25 Marrow faculty with names, credentials, and subjects."
+  },
+  {
+   "id": "src-fac-doctutorials-faculty-page",
+   "type": "platform-faculty-page",
+   "title": "Best faculty for NEET PG, FMGE, NEET SS, PG Residency & MBBS — DocTutorials",
+   "publisher": "DocTutorials",
+   "url": "https://www.doctutorials.com/faculty",
+   "captured": "2026-06-27",
+   "note": "Official DocTutorials faculty page listing names and subjects for all NEET PG faculty."
+  },
+  {
+   "id": "src-fac-cerebellum-teachers-page",
+   "type": "platform-faculty-page",
+   "title": "Cerebellum Teachers — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/cerebellum-teachers/",
+   "captured": "2026-06-27",
+   "note": "Official Cerebellum Academy faculty directory listing names and subjects."
+  },
+  {
+   "id": "src-fac-cerebellum-about",
+   "type": "platform-about-page",
+   "title": "About Us — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/about-us/",
+   "captured": "2026-06-27",
+   "note": "Confirms the five co-founders of Cerebellum Academy and their roles. Cerebellum founded 2022."
+  },
+  {
+   "id": "src-fac-gobind-cerebellum-profile",
+   "type": "platform-faculty-profile",
+   "title": "Dr. Gobind Rai Garg Pharmacology — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/dr-gobind-rai-garg/",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Gobind Rai Garg: MBBS + MD Pharmacology from UCMS Delhi, Ex-Asst Professor at Maulana Azad Medical College, current Cerebellum Pharmacology faculty."
+  },
+  {
+   "id": "src-fac-gobind-cerebellum-journey",
+   "type": "blog",
+   "title": "The Inspiring Journey of Dr. Gobind Rai Garg — India's Pharmacology Guru",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/the-inspiring-journey-of-dr-gobind-rai-garg-indias-pharmacology-guru/",
+   "captured": "2026-06-27",
+   "note": "Details 18+ years teaching career, UCMS qualifications, Maulana Azad Medical College (MAMC) position, Cerebellum affiliation."
+  },
+  {
+   "id": "src-fac-gobind-prepladder-fb",
+   "type": "social-media",
+   "title": "PrepLadder Medical Facebook — Dr. Gobind Rai Garg MCQ Marathon (May 2022)",
+   "publisher": "PrepLadder Medical (Facebook page)",
+   "url": "https://www.facebook.com/medical.pg.entrance.prepladder/posts/join-dr-gobind-rai-garg-for-the-mcq-marathon-20-on-pharmacology-today-at-4-pmpre/5172496006170104/",
+   "captured": "2026-06-27",
+   "note": "May 4, 2022 PrepLadder Facebook post confirms Dr Gobind Rai Garg conducted a live Pharmacology MCQ Marathon session for PrepLadder. Directional evidence of prior PrepLadder association before Cerebellum (founded 2022)."
+  },
+  {
+   "id": "src-fac-sparsh-cerebellum-profile",
+   "type": "platform-faculty-profile",
+   "title": "Dr. Sparsh Gupta — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/dr-sparsh-gupta/",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Sparsh Gupta: MBBS, MD, Gold Medalist, 17+ years teaching, co-author of Review of Pathology and Genetics. Current Cerebellum Pathology faculty."
+  },
+  {
+   "id": "src-fac-vivek-cerebellum-profile",
+   "type": "platform-faculty-profile",
+   "title": "Dr. Vivek Jain PSM & Community Medicine — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/dr-vivek-jain/",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Vivek Jain: MBBS from MAMC, MD PSM from LHMC, Senior Residency at VMMC SJH and UCMS GTBH, author of Review of PSM, current Cerebellum PSM faculty."
+  },
+  {
+   "id": "src-fac-praveen-cerebellum-profile",
+   "type": "platform-faculty-profile",
+   "title": "Dr. Praveen Tripathi — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/dr-praveen-tripathi/",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Praveen Tripathi: UCMS alumnus, Psychiatry specialist, author of Review of Psychiatry, co-founder of Cerebellum Academy."
+  },
+  {
+   "id": "src-fac-apurv-cerebellum-profile",
+   "type": "platform-faculty-profile",
+   "title": "Dr. Apurv Mehra Orthopedics — Cerebellum Academy",
+   "publisher": "Cerebellum Academy",
+   "url": "https://www.cerebellumacademy.com/dr-apurv-mehra/",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Apurv Mehra: MBBS MAMC, MS Orthopedics UCMS, founder of eConceptual (launched 2020), co-founder of Cerebellum Academy (2022)."
+  },
+  {
+   "id": "src-fac-apurv-econceptual",
+   "type": "platform-about-page",
+   "title": "eConceptual — Best Medical PG Residents Preparation Platform",
+   "publisher": "eConceptual",
+   "url": "https://econceptual.com/",
+   "captured": "2026-06-27",
+   "note": "Confirms eConceptual is Dr Apurv Mehra's solo platform for PG residents (launched 2020). Orthopedics, Surgery, Anesthesia, Radiology, Psychiatry, OBG."
+  },
+  {
+   "id": "src-fac-pritesh-prepladder-surgery",
+   "type": "platform-faculty-page",
+   "title": "Prepare Surgery Online with Dr. Pritesh Singh at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/medical-pg/surgery-preparation",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Pritesh Singh as PrepLadder Surgery faculty. Described as 'India's renowned surgeon', author of Surgery Essence, teaching since 2009."
+  },
+  {
+   "id": "src-fac-pritesh-blog",
+   "type": "blog",
+   "title": "Important Topics in Surgery for NEET-PG by Dr. Pritesh Singh",
+   "publisher": "PrepLadder (medical blog)",
+   "url": "https://medical.prepladder.com/blog/1197-important-topics-in-surgery-for-neet-pg-by-dr-pritesh-singh.html",
+   "captured": "2026-06-27",
+   "note": "PrepLadder authored article by Dr Pritesh Singh, confirming platform affiliation and Surgery expertise."
+  },
+  {
+   "id": "src-fac-deepak-marwah-prepladder",
+   "type": "platform-faculty-page",
+   "title": "Prepare Medicine Online with Dr. Deepak Marwah at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/medical-pg/medicine-preparation",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Deepak Marwah as PrepLadder Medicine faculty, 15+ years experience, MAMC alumnus."
+  },
+  {
+   "id": "src-fac-deepak-marwah-solo",
+   "type": "solo-brand-website",
+   "title": "Home — Medicine Buster Classes by Dr. Deepak Marwah",
+   "publisher": "marwahmedicine.com",
+   "url": "https://www.marwahmedicine.com/",
+   "captured": "2026-06-27",
+   "note": "Confirms Medicine Buster Classes as Dr Deepak Marwah's solo brand (offline + app + YouTube). MAMC alumnus, author of One Touch Medicine and FMGE Solutions."
+  },
+  {
+   "id": "src-fac-soumen-prepladder",
+   "type": "platform-faculty-page",
+   "title": "Prepare Physiology Online with Dr. Soumen Manna at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/medical-pg/physiology-preparation",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Soumen Manna as PrepLadder Physiology faculty. MBBS Nil Ratan Sircar Medical College Kolkata, MD Physiology AIIMS Delhi (2012), VMMC Safdarjung associate professor."
+  },
+  {
+   "id": "src-fac-soumen-researchgate",
+   "type": "academic-profile",
+   "title": "Soumen Manna — ResearchGate Profile",
+   "publisher": "ResearchGate",
+   "url": "https://www.researchgate.net/profile/Soumen-Manna",
+   "captured": "2026-06-27",
+   "note": "Academic profile confirming Dr Soumen Manna's position at VMMC & Safdarjung Hospital, New Delhi."
+  },
+  {
+   "id": "src-fac-akhilesh-prepladder-fmt",
+   "type": "platform-faculty-page",
+   "title": "Prepare Forensic Medicine Online with Dr. Akhilesh Raj at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/medical-pg/forensic-medicine-preparation",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Akhilesh Raj as PrepLadder Forensic Medicine faculty. MD Forensic Medicine AIIMS Delhi, 10+ years teaching experience."
+  },
+  {
+   "id": "src-fac-shonali-prepladder",
+   "type": "platform-faculty-page",
+   "title": "Find Best Faculty for OBS-GYN Residency Preparation at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/obs-gyn-residency/faculty",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Shonali Chandra as PrepLadder OBG faculty. MS from MAMC, Gold Medallist MBBS from LLRM Meerut."
+  },
+  {
+   "id": "src-fac-shonali-youtube",
+   "type": "video",
+   "title": "Meet Dr. Shonali Chandra, Faculty for OBS-GYN Residency at PrepLadder — YouTube",
+   "publisher": "PrepLadder (YouTube)",
+   "url": "https://www.youtube.com/watch?v=3Z5eSDqHJIs",
+   "captured": "2026-06-27",
+   "note": "PrepLadder official intro video for Dr Shonali Chandra, corroborating platform role and OBG specialization."
+  },
+  {
+   "id": "src-fac-sakshi-marrow-obgyn",
+   "type": "platform-faculty-page",
+   "title": "Marrow Programme for OBS-GYN Residents — Dr. Sakshi Arora Hans",
+   "publisher": "Marrow",
+   "url": "https://www.marrow.com/neet-ss/obg",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Sakshi Arora Hans as Marrow OBG faculty for NEET SS and NEET PG. National level faculty, author of One Touch OBG."
+  },
+  {
+   "id": "src-fac-sakshi-marrow-blog",
+   "type": "blog",
+   "title": "What's new in Marrow Edition 4 — Ob-Gyn by Dr. Sakshi Arora Hans",
+   "publisher": "Marrow",
+   "url": "https://www.marrow.com/blog/whats-new-in-marrow-edition-4-ob-gyn-dr-sakshi-arora-hans/",
+   "captured": "2026-06-27",
+   "note": "Marrow blog post confirming Dr Sakshi Arora Hans as OBG faculty, with details on her course content."
+  },
+  {
+   "id": "src-fac-rohan-marrow-surgery",
+   "type": "platform-faculty-page",
+   "title": "Marrow — SS Surgery (Dr. Rohan Khandelwal)",
+   "publisher": "Marrow",
+   "url": "https://www.marrow.com/neet-ss/surgery",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Rohan Khandelwal as Marrow Surgery faculty."
+  },
+  {
+   "id": "src-fac-rohan-breasthealth",
+   "type": "clinical-profile",
+   "title": "About Dr. Rohan Khandelwal — breasthealth.in",
+   "publisher": "breasthealth.in",
+   "url": "https://www.breasthealth.in/about-dr-rohan.html",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Rohan Khandelwal's clinical qualifications (MBBS + MS Surgery VMMC Safdarjung 2002–2011, MRCS Edinburgh 2011, breast surgery career from 2013). Establishes his clinical identity independently of platform affiliation."
+  },
+  {
+   "id": "src-fac-rakesh-nair-marrow",
+   "type": "third-party-profile",
+   "title": "Dr. Rakesh Nair — ADRPLEXUS Faculty Profile",
+   "publisher": "ADRPLEXUS",
+   "url": "https://www.adrplexus.com/dr-rakesh-nair/",
+   "captured": "2026-06-27",
+   "note": "Third-party profile confirming Dr Rakesh S Nair's Medicine specialization. Marrow faculty affiliation confirmed via Marrow faculty list page and Amazon book listing (MEDICINE MARROW EDITION 8.0)."
+  },
+  {
+   "id": "src-fac-rakesh-nair-amazon",
+   "type": "book-listing",
+   "title": "MEDICINE MARROW EDITION 8.0 by Dr Rakesh Nair MBBS, MD(General Medicine), DM(Nephrology) — Amazon.in",
+   "publisher": "Amazon.in",
+   "url": "https://www.amazon.in/MEDICINE-COLOURED-2024-2025-Medicine-Nephrology/dp/B0DHLC5P8M",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Rakesh Nair's credentials (MBBS, MD General Medicine, DM Nephrology) and Marrow authorship."
+  },
+  {
+   "id": "src-fac-ankit-kumar-prepladder",
+   "type": "platform-faculty-page",
+   "title": "Prepare Pharmacology Online with Dr. Ankit Kumar at PrepLadder",
+   "publisher": "PrepLadder",
+   "url": "https://www.prepladder.com/courses/medical-pg/pharmacology-preparation",
+   "captured": "2026-06-27",
+   "note": "Confirms Dr Ankit Kumar as PrepLadder Pharmacology faculty. Gold medal MBBS Maulana Azad Medical College, MD Pharmacology, 12+ years experience, former head faculty at DAMS (Delhi Academy of Medical Sciences)."
   }
  ],
  "subjectStrength": {
@@ -22043,7 +22347,850 @@ window.D = {
    }
   ],
   "firewall": "Meridian sells no content of its own — which is exactly why it can rate everyone's. Every figure here is either a count we hold, community sentiment, or public third-party data, each labelled and sourced. Nothing is Meridian's verdict on a platform or teacher, and nothing here is or ever will be influenced by money."
- }
+ },
+ "faculty": [
+  {
+   "id": "fac-gobind-rai-garg",
+   "name": "Dr. Gobind Rai Garg",
+   "aka": [
+    "GRG",
+    "GRG Pharmacology",
+    "Dr. Gobind"
+   ],
+   "subjects": [
+    "Pharmacology"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "Maulana Azad Medical College",
+     "role": "Ex-Assistant Professor, Dept of Pharmacology",
+     "subjects": [
+      "Pharmacology"
+     ],
+     "from": "2010",
+     "to": null,
+     "status": "past",
+     "fromApproximate": true,
+     "toApproximate": true,
+     "note": "Left academic position; joining date approximate based on Cerebellum profile stating he 'joined MAMC in 2010'."
+    },
+    {
+     "platformId": "prepladder",
+     "role": "pharmacology faculty (session contributor)",
+     "subjects": [
+      "Pharmacology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "past",
+     "fromApproximate": true,
+     "toApproximate": true,
+     "note": "PrepLadder Facebook page (May 2022) confirms he ran a live MCQ Marathon for PrepLadder. Exact tenure unknown; likely before Cerebellum launch (2022)."
+    },
+    {
+     "platformId": "cerebellum",
+     "role": "co-founder & pharmacology faculty",
+     "subjects": [
+      "Pharmacology"
+     ],
+     "from": "2022",
+     "to": null,
+     "status": "current",
+     "fromApproximate": false,
+     "note": "Cerebellum Academy founded 2022; Dr Gobind Rai Garg is one of the five named co-founders."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "cerebellum",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS and MD Pharmacology from UCMS Delhi. Former Assistant Professor at Maulana Azad Medical College. One of India's best-known pharmacology educators with 18+ years of teaching. Co-founder of Cerebellum Academy (2022). Author of the bestselling Review of Pharmacology.",
+   "sourceIds": [
+    "src-fac-gobind-cerebellum-profile",
+    "src-fac-gobind-cerebellum-journey",
+    "src-fac-gobind-prepladder-fb",
+    "src-fac-cerebellum-about",
+    "src-fac-cerebellum-teachers-page"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "cerebellum"
+    }
+   ]
+  },
+  {
+   "id": "fac-sparsh-gupta",
+   "name": "Dr. Sparsh Gupta",
+   "aka": [
+    "Dr. Sparsh"
+   ],
+   "subjects": [
+    "Pathology"
+   ],
+   "affiliations": [
+    {
+     "platformId": "cerebellum",
+     "role": "co-founder & pathology faculty",
+     "subjects": [
+      "Pathology"
+     ],
+     "from": "2022",
+     "to": null,
+     "status": "current",
+     "fromApproximate": false,
+     "note": "Named co-founder of Cerebellum Academy (2022). Current Pathology faculty."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "cerebellum",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS, MD, Gold Medalist. Co-founder of Cerebellum Academy (2022). 17+ years teaching Pathology to NEET PG, FMGE, and INI-CET aspirants. Co-author of the bestselling Review of Pathology and Genetics.",
+   "sourceIds": [
+    "src-fac-sparsh-cerebellum-profile",
+    "src-fac-cerebellum-about",
+    "src-fac-cerebellum-teachers-page"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "cerebellum"
+    }
+   ]
+  },
+  {
+   "id": "fac-vivek-jain-psm",
+   "name": "Dr. Vivek Jain",
+   "aka": [
+    "Dr. Vivek Jain PSM",
+    "Vivek Jain PSM"
+   ],
+   "subjects": [
+    "Community Medicine"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "Maulana Azad Medical College (MBBS) / Lady Hardinge Medical College (MD)",
+     "role": "Alumni / MD training",
+     "subjects": [
+      "Community Medicine"
+     ],
+     "from": null,
+     "to": null,
+     "status": "past",
+     "note": "Academic credentials only — not an employed faculty position."
+    },
+    {
+     "platformId": "cerebellum",
+     "role": "co-founder & community medicine faculty",
+     "subjects": [
+      "Community Medicine"
+     ],
+     "from": "2022",
+     "to": null,
+     "status": "current",
+     "fromApproximate": false,
+     "note": "Named co-founder of Cerebellum Academy (2022). Current PSM/Community Medicine faculty."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "cerebellum",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS from Maulana Azad Medical College, MD Community Medicine from Lady Hardinge Medical College, Senior Residency at VMMC Safdarjung and UCMS GTBH. Co-founder of Cerebellum Academy (2022). Author of Review of Preventive and Social Medicine.",
+   "sourceIds": [
+    "src-fac-vivek-cerebellum-profile",
+    "src-fac-cerebellum-about",
+    "src-fac-cerebellum-teachers-page"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "cerebellum"
+    }
+   ]
+  },
+  {
+   "id": "fac-praveen-tripathi",
+   "name": "Dr. Praveen Tripathi",
+   "aka": [
+    "Dr. Praveen"
+   ],
+   "subjects": [
+    "Psychiatry"
+   ],
+   "affiliations": [
+    {
+     "platformId": "cerebellum",
+     "role": "co-founder & psychiatry faculty",
+     "subjects": [
+      "Psychiatry"
+     ],
+     "from": "2022",
+     "to": null,
+     "status": "current",
+     "fromApproximate": false,
+     "note": "Named co-founder of Cerebellum Academy (2022). Current Psychiatry faculty."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "cerebellum",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "Psychiatry and de-addiction specialist, UCMS alumnus. Co-founder of Cerebellum Academy (2022). Author of Review of Psychiatry, the bestselling Psychiatry book in India for PGMEE.",
+   "sourceIds": [
+    "src-fac-praveen-cerebellum-profile",
+    "src-fac-cerebellum-about",
+    "src-fac-cerebellum-teachers-page"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "cerebellum"
+    }
+   ]
+  },
+  {
+   "id": "fac-apurv-mehra",
+   "name": "Dr. Apurv Mehra",
+   "aka": [
+    "Dr. Apurv"
+   ],
+   "subjects": [
+    "Orthopaedics"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "eConceptual",
+     "role": "founder & orthopaedics faculty",
+     "subjects": [
+      "Orthopaedics"
+     ],
+     "from": "2020",
+     "to": null,
+     "status": "solo",
+     "fromApproximate": false,
+     "note": "eConceptual app launched 2020 per Cerebellum About page. Solo PG residency platform for MS/MD/DNB residents."
+    },
+    {
+     "platformId": "cerebellum",
+     "role": "co-founder & orthopaedics faculty",
+     "subjects": [
+      "Orthopaedics"
+     ],
+     "from": "2022",
+     "to": null,
+     "status": "current",
+     "fromApproximate": false,
+     "note": "Named co-founder of Cerebellum Academy (2022)."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "cerebellum",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS from Maulana Azad Medical College, MS Orthopaedics from UCMS. Robotic joint replacement surgeon. Founder of eConceptual (2020), a residency learning platform for MS/MD/DNB residents. Co-founder of Cerebellum Academy (2022).",
+   "sourceIds": [
+    "src-fac-apurv-cerebellum-profile",
+    "src-fac-apurv-econceptual",
+    "src-fac-cerebellum-about",
+    "src-fac-cerebellum-teachers-page"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "cerebellum"
+    }
+   ]
+  },
+  {
+   "id": "fac-pritesh-singh",
+   "name": "Dr. Pritesh Singh",
+   "aka": [
+    "Dr. Pritesh"
+   ],
+   "subjects": [
+    "Surgery"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "Dr. Pritesh Surgery Classes Pvt. Ltd.",
+     "role": "director & founder",
+     "subjects": [
+      "Surgery"
+     ],
+     "from": "2009",
+     "to": null,
+     "status": "solo",
+     "fromApproximate": true,
+     "note": "Teaching since 2009 per PrepLadder course page. Exact founding year of Pvt. Ltd. not confirmed; directional."
+    },
+    {
+     "platformId": "prepladder",
+     "role": "surgery faculty",
+     "subjects": [
+      "Surgery"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as current PrepLadder Surgery faculty per official platform page."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "prepladder",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS from Maulana Azad Medical College, MS Surgery from Lady Hardinge Medical College. Internationally known Surgery educator; teaching since 2009. Author of Surgery Essence, AIIMS Essence, and NEET Essence. Director, Dr. Pritesh Surgery Classes Pvt. Ltd. Current PrepLadder Surgery faculty.",
+   "sourceIds": [
+    "src-fac-pritesh-prepladder-surgery",
+    "src-fac-pritesh-blog",
+    "src-fac-prepladder-faculty-page"
+   ],
+   "epistemic": "directional",
+   "platforms": []
+  },
+  {
+   "id": "fac-deepak-marwah",
+   "name": "Dr. Deepak Marwah",
+   "aka": [
+    "Dr. Marwah",
+    "Medicine Maestro"
+   ],
+   "subjects": [
+    "Medicine"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "Medicine Buster Classes",
+     "role": "founder",
+     "subjects": [
+      "Medicine"
+     ],
+     "from": null,
+     "to": null,
+     "status": "solo",
+     "fromApproximate": true,
+     "note": "Solo offline + online brand confirmed via marwahmedicine.com. Founding year not confirmed in source; omitted."
+    },
+    {
+     "platformId": "prepladder",
+     "role": "medicine faculty",
+     "subjects": [
+      "Medicine"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as current PrepLadder Medicine faculty per official platform page. 15+ years experience."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "prepladder",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS from Maulana Azad Medical College. 15+ years of medical PG teaching experience. Author of Complete Review of Medicine, One Touch Medicine, and FMGE Solutions. Founder of Medicine Buster Classes (offline + app). Current PrepLadder Medicine faculty.",
+   "sourceIds": [
+    "src-fac-deepak-marwah-prepladder",
+    "src-fac-deepak-marwah-solo",
+    "src-fac-prepladder-faculty-page"
+   ],
+   "epistemic": "directional",
+   "platforms": []
+  },
+  {
+   "id": "fac-soumen-manna",
+   "name": "Dr. Soumen Manna",
+   "aka": [
+    "Physiology Dada"
+   ],
+   "subjects": [
+    "Physiology"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "Himalayan Institute of Medical Sciences, Dehradun",
+     "role": "assistant professor, physiology",
+     "subjects": [
+      "Physiology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "past",
+     "fromApproximate": true,
+     "note": "Worked 2 years as assistant professor at HIMS Dehradun; exact dates not confirmed in source."
+    },
+    {
+     "platformId": null,
+     "name": "VMMC & Safdarjung Hospital, New Delhi",
+     "role": "associate professor, physiology",
+     "subjects": [
+      "Physiology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Current academic position confirmed via ResearchGate profile and PrepLadder page."
+    },
+    {
+     "platformId": "prepladder",
+     "role": "physiology faculty",
+     "subjects": [
+      "Physiology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as PrepLadder Physiology faculty per official platform page."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "prepladder",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS from Nil Ratan Sircar Medical College, Kolkata. MD Physiology from AIIMS Delhi (2012). Associate Professor at VMMC & Safdarjung Hospital, New Delhi. Former assistant professor at HIMS Dehradun. Author of Review of Physiology. Current PrepLadder Physiology faculty. Known as 'Physiology Dada' online.",
+   "sourceIds": [
+    "src-fac-soumen-prepladder",
+    "src-fac-soumen-researchgate",
+    "src-fac-prepladder-faculty-page"
+   ],
+   "epistemic": "directional",
+   "platforms": []
+  },
+  {
+   "id": "fac-akhilesh-raj",
+   "name": "Dr. Akhilesh Raj",
+   "aka": [
+    "Dr. Akhilesh Raj Jhamad"
+   ],
+   "subjects": [
+    "Forensic Medicine"
+   ],
+   "affiliations": [
+    {
+     "platformId": "prepladder",
+     "role": "forensic medicine faculty",
+     "subjects": [
+      "Forensic Medicine"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as current PrepLadder Forensic Medicine faculty per official platform page and PrepLadder FMGE faculty page."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "prepladder",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MD Forensic Medicine from AIIMS Delhi. 10+ years of Forensic Medicine teaching in India and internationally. Author of Review of Forensic Medicine and Toxicology for PGMEE. Known for his Made Easy offline classes. PrepLadder Forensic Medicine faculty.",
+   "sourceIds": [
+    "src-fac-akhilesh-prepladder-fmt",
+    "src-fac-prepladder-faculty-page"
+   ],
+   "epistemic": "directional",
+   "platforms": []
+  },
+  {
+   "id": "fac-ankit-kumar-pharma",
+   "name": "Dr. Ankit Kumar",
+   "aka": [],
+   "subjects": [
+    "Pharmacology"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "Delhi Academy of Medical Sciences (DAMS)",
+     "role": "head faculty, pharmacology",
+     "subjects": [
+      "Pharmacology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "past",
+     "fromApproximate": true,
+     "note": "Confirmed as former head faculty at DAMS per PrepLadder course page. Exact dates not sourced."
+    },
+    {
+     "platformId": "prepladder",
+     "role": "pharmacology faculty",
+     "subjects": [
+      "Pharmacology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as current PrepLadder Pharmacology faculty per official platform page."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "prepladder",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "Gold medallist MBBS from Maulana Azad Medical College. MD Pharmacology. 12+ years in pharmacology teaching and research. Former head faculty at DAMS (Delhi Academy of Medical Sciences). Current PrepLadder Pharmacology faculty.",
+   "sourceIds": [
+    "src-fac-ankit-kumar-prepladder",
+    "src-fac-prepladder-faculty-page"
+   ],
+   "epistemic": "directional",
+   "platforms": []
+  },
+  {
+   "id": "fac-shonali-chandra",
+   "name": "Dr. Shonali Chandra",
+   "aka": [
+    "Dr. Shonali"
+   ],
+   "subjects": [
+    "Obstetrics and Gynaecology"
+   ],
+   "affiliations": [
+    {
+     "platformId": "prepladder",
+     "role": "obs-gyn faculty",
+     "subjects": [
+      "Obstetrics and Gynaecology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as PrepLadder OBG faculty per official platform page and YouTube intro video."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "prepladder",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "Gold Medallist MBBS from LLRM Medical College, Meerut. MS Obstetrics & Gynaecology with Senior Residency from Maulana Azad Medical College. Has collaborated with Médecins Sans Frontières and Jan Swasthya Sahyog in Chhattisgarh. Current PrepLadder OBG faculty.",
+   "sourceIds": [
+    "src-fac-shonali-prepladder",
+    "src-fac-shonali-youtube",
+    "src-fac-prepladder-faculty-page"
+   ],
+   "epistemic": "directional",
+   "platforms": []
+  },
+  {
+   "id": "fac-sakshi-arora-hans",
+   "name": "Dr. Sakshi Arora Hans",
+   "aka": [
+    "Dr. Sakshi Arora",
+    "Dr. Sakshi"
+   ],
+   "subjects": [
+    "Obstetrics and Gynaecology"
+   ],
+   "affiliations": [
+    {
+     "platformId": "marrow",
+     "role": "obs-gyn faculty",
+     "subjects": [
+      "Obstetrics and Gynaecology"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as Marrow OBG faculty. Listed in DailyRounds Marrow 25-faculty roster and Marrow OBS-GYN residency page."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "marrow",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS, DGO. National-level OBG faculty at Marrow. Author of One Touch OBG (CBS Publishers). Covers general obstetrics and gynaecology plus sub-specialties including gynaecologic oncology, fetal medicine, and reproductive medicine for NEET PG, FMGE, and NEET SS.",
+   "sourceIds": [
+    "src-fac-sakshi-marrow-obgyn",
+    "src-fac-sakshi-marrow-blog",
+    "src-fac-marrow-dailyrounds-blog",
+    "src-fac-marrow-faculty-blog"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "marrow"
+    }
+   ]
+  },
+  {
+   "id": "fac-rohan-khandelwal",
+   "name": "Dr. Rohan Khandelwal",
+   "aka": [
+    "Dr. Rohan"
+   ],
+   "subjects": [
+    "Surgery"
+   ],
+   "affiliations": [
+    {
+     "platformId": null,
+     "name": "CK Birla Hospital, Gurugram",
+     "role": "principal consultant, breast cancer surgery",
+     "subjects": [
+      "Surgery"
+     ],
+     "from": "2019",
+     "to": null,
+     "status": "current",
+     "fromApproximate": false,
+     "note": "Clinical role confirmed via breasthealth.in. Established his clinical identity independently."
+    },
+    {
+     "platformId": "marrow",
+     "role": "surgery faculty",
+     "subjects": [
+      "Surgery"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as Marrow Surgery faculty via Marrow SS Surgery page and DailyRounds blog. 17+ years online and offline teaching."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "marrow",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS and MS (General Surgery) from VMMC Safdarjung Hospital. MRCS Edinburgh (2011). Fellowship in onco-plastic breast surgery. Principal Consultant, Breast Cancer Surgery at CK Birla Hospital, Gurugram (2019–present). Marrow Surgery faculty. Author of Jaypee's Pre-NEET Surgery.",
+   "sourceIds": [
+    "src-fac-rohan-marrow-surgery",
+    "src-fac-rohan-breasthealth",
+    "src-fac-marrow-dailyrounds-blog",
+    "src-fac-marrow-faculty-blog"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "marrow"
+    }
+   ]
+  },
+  {
+   "id": "fac-rakesh-nair",
+   "name": "Dr. Rakesh S Nair",
+   "aka": [
+    "Dr. Rakesh Nair"
+   ],
+   "subjects": [
+    "Medicine"
+   ],
+   "affiliations": [
+    {
+     "platformId": "marrow",
+     "role": "medicine faculty",
+     "subjects": [
+      "Medicine"
+     ],
+     "from": null,
+     "to": null,
+     "status": "current",
+     "fromApproximate": true,
+     "note": "Confirmed as Marrow Medicine faculty via DailyRounds blog and Marrow Edition 8 book listing on Amazon."
+    }
+   ],
+   "ratings": {
+    "profile": {
+     "score": null,
+     "count": 0,
+     "verifiedVia": "in-app-activity",
+     "status": "directional"
+    },
+    "videoByPlatform": [
+     {
+      "platformId": "marrow",
+      "avg": null,
+      "n": 0,
+      "status": "directional"
+     }
+    ]
+   },
+   "bio": "MBBS from Government Medical College Kottayam (2010). MD General Medicine from Government Stanley Medical College Chennai (2014). DM Nephrology from Government Medical College Trivandrum (2015–2018). MRCP (Royal College of Physicians, London, 2014). Marrow Medicine faculty; author of Medicine Marrow Edition 8.",
+   "sourceIds": [
+    "src-fac-rakesh-nair-marrow",
+    "src-fac-rakesh-nair-amazon",
+    "src-fac-marrow-dailyrounds-blog",
+    "src-fac-marrow-faculty-blog"
+   ],
+   "epistemic": "directional",
+   "platforms": [
+    {
+     "platformId": "marrow"
+    }
+   ]
+  }
+ ]
 };
 // back-compat shim: legacy reads of window.QBANK_DATA resolve to the new model.
 window.QBANK_DATA = window.D;

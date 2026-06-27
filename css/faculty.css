@@ -1,0 +1,88 @@
+/* ============================================================
+   css/faculty.css — FACULTY ENTITY PAGE (#view-faculty) polish layer
+   ------------------------------------------------------------
+   The shared layer already styles the bulk of this page:
+     · components.css — .entity-head/.eh-*, .tiles/.tile*, .panel,
+       .scorecard/.rs-*/.starmeter/.theme-chip, .echip*, .fac-links,
+       .fl-*, .fac-bio, .sh-aka, .hero-*, .panel-grid, .inst-grid
+     · charts.css     — .ftl* (career timeline), .cf-key/.lg-seg legend
+   This file is PURELY ADDITIVE refinement, fully scoped under
+   #view-faculty so it can NEVER collide with classes owned by other
+   surfaces. It tightens faculty-specific density on mobile, sharpens
+   the people-pillar identity, and hardens against horizontal scroll.
+
+   Tokens only (warm almanac, never neon). No new runtime deps.
+   INTEGRATOR NOTE: index.html must add
+     <link rel="stylesheet" href="css/faculty.css">
+   after css/videos.css — the page renders styled without it (shared
+   layer), but these refinements need the link to take effect.
+   ============================================================ */
+
+/* ---- name + aka: keep the people-pillar identity legible, never wrap ugly ---- */
+#view-faculty .eh-id{min-width:0}
+#view-faculty .sh-name{letter-spacing:-.2px}
+#view-faculty .sh-aka{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
+
+/* ---- hero column: lock width so a long name on the left can't shove it off-canvas ---- */
+#view-faculty .eh-hero{max-width:46%}
+#view-faculty .eh-hero .hero-num{font-variant-numeric:tabular-nums}
+#view-faculty .eh-hero .hero-note{max-width:22ch;text-align:right}
+
+/* ---- quick-glance subject chips under the name: tight, scannable ---- */
+#view-faculty .eh-tags{display:flex;flex-wrap:wrap;gap:5px}
+
+/* ---- two-ratings plate: give the scorecard breathing room inside the plate ---- */
+#view-faculty .scorecard{margin-top:2px}
+#view-faculty .rs-row.faculty{gap:10px}
+#view-faculty .rs-row.faculty .rs-name{flex:1 1 160px}
+/* a directional rating with no votes yet reads as a calm, honest placeholder — never alarming */
+#view-faculty .rs-row.faculty .rs-num{color:var(--ink-2)}
+#view-faculty .rs-row.faculty .rs-note{flex:0 1 auto}
+
+/* ---- subjects / affiliations block: clearer separation of the two rails ---- */
+#view-faculty .fac-links{gap:16px}
+#view-faculty .fl-block + .fl-block{border-top:1px solid var(--line);padding-top:13px}
+#view-faculty .fac-links .echip{margin:0 5px 5px 0}
+/* affiliation chips carry a status word; keep platform tint subtle, status muted */
+#view-faculty .echip.plat .echip-st{color:var(--ink-3)}
+#view-faculty .echip.off{background:var(--paper-3);border-style:dashed}
+
+/* ---- career timeline: a touch more vertical air on the entity page ---- */
+#view-faculty .ftl{margin-top:2px}
+#view-faculty .ftl-subs .echip{margin:0 4px 0 0}
+/* open-ended "current" segments earn a slightly stronger living-now node already
+   via charts.css; here we just ensure the time span stays tabular + crisp */
+#view-faculty .ftl-span{letter-spacing:.01em}
+
+/* ---- videos-by-faculty group sits in the inst-grid; keep its rows dense ---- */
+#view-faculty .lgroup{margin-top:0}
+
+/* ============================================================
+   MOBILE DENSITY (≤640) — native-data-app feel, no horizontal scroll
+   ============================================================ */
+@media (max-width:640px){
+  /* header stacks; hero un-pins to the left, number shrinks to one-hero band */
+  #view-faculty .eh-top{gap:10px}
+  #view-faculty .eh-hero{max-width:100%;align-items:flex-start;text-align:left}
+  #view-faculty .eh-hero .hero-note{text-align:left;max-width:100%}
+  #view-faculty .sh-aka{display:block;margin-left:0;margin-top:2px;white-space:normal}
+
+  /* ratings rows: label:value:note stack tightly instead of a wide grid */
+  #view-faculty .rs-row.faculty{flex-wrap:wrap;padding:9px 0}
+  #view-faculty .rs-row.faculty .rs-name{flex:1 1 100%}
+  #view-faculty .rs-row.faculty .rs-meter{margin-top:1px}
+  #view-faculty .rs-row.faculty .rs-note{flex:1 1 100%;margin-top:1px}
+
+  /* timeline + chips never push the page wide */
+  #view-faculty .ftl-org{min-width:0}
+  #view-faculty .ftl-top{gap:6px}
+}
+
+/* very narrow: subjects/affiliations is one clean column already; just trim padding */
+@media (max-width:360px){
+  #view-faculty .fl-block + .fl-block{padding-top:11px}
+  #view-faculty .eh-hero .hero-num{font-size:30px}
+}
+
+/* ---- evening edition: shared tokens already flip; only guard chip contrast ---- */
+body.evening #view-faculty .echip.off{background:transparent}

@@ -1,0 +1,275 @@
+{
+  "_comment": "Faculty layer source registry. These entries APPEND to D.sources[]. All ids use prefix 'src-fac-' to avoid collision with existing src- ids in sources.json. Every sourceIds entry in faculty_seed.json MUST exist here or in sources.json.",
+  "sources": [
+    {
+      "id": "src-fac-prepladder-faculty-page",
+      "type": "platform-faculty-page",
+      "title": "Find the Best Faculty for NEET PG Preparation at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/medical-pg/faculty",
+      "captured": "2026-06-27",
+      "note": "Official PrepLadder faculty roster page listing names, subjects, and brief bios for all NEET PG faculty."
+    },
+    {
+      "id": "src-fac-marrow-faculty-blog",
+      "type": "platform-faculty-page",
+      "title": "Marrow Faculty List",
+      "publisher": "Marrow / DailyRounds",
+      "url": "https://www.marrow.com/blog/faculty-list/",
+      "captured": "2026-06-27",
+      "note": "Marrow blog page listing their faculty roster with subject assignments."
+    },
+    {
+      "id": "src-fac-marrow-dailyrounds-blog",
+      "type": "platform-faculty-page",
+      "title": "MARROW for NEET PG — from India's top faculty & DailyRounds",
+      "publisher": "DailyRounds",
+      "url": "https://www.dailyrounds.org/blog/marrow-for-neet-pg-from-indias-top-25-faculty-dailyrounds/",
+      "captured": "2026-06-27",
+      "note": "DailyRounds blog listing 25 Marrow faculty with names, credentials, and subjects."
+    },
+    {
+      "id": "src-fac-doctutorials-faculty-page",
+      "type": "platform-faculty-page",
+      "title": "Best faculty for NEET PG, FMGE, NEET SS, PG Residency & MBBS — DocTutorials",
+      "publisher": "DocTutorials",
+      "url": "https://www.doctutorials.com/faculty",
+      "captured": "2026-06-27",
+      "note": "Official DocTutorials faculty page listing names and subjects for all NEET PG faculty."
+    },
+    {
+      "id": "src-fac-cerebellum-teachers-page",
+      "type": "platform-faculty-page",
+      "title": "Cerebellum Teachers — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/cerebellum-teachers/",
+      "captured": "2026-06-27",
+      "note": "Official Cerebellum Academy faculty directory listing names and subjects."
+    },
+    {
+      "id": "src-fac-cerebellum-about",
+      "type": "platform-about-page",
+      "title": "About Us — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/about-us/",
+      "captured": "2026-06-27",
+      "note": "Confirms the five co-founders of Cerebellum Academy and their roles. Cerebellum founded 2022."
+    },
+    {
+      "id": "src-fac-gobind-cerebellum-profile",
+      "type": "platform-faculty-profile",
+      "title": "Dr. Gobind Rai Garg Pharmacology — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/dr-gobind-rai-garg/",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Gobind Rai Garg: MBBS + MD Pharmacology from UCMS Delhi, Ex-Asst Professor at Maulana Azad Medical College, current Cerebellum Pharmacology faculty."
+    },
+    {
+      "id": "src-fac-gobind-cerebellum-journey",
+      "type": "blog",
+      "title": "The Inspiring Journey of Dr. Gobind Rai Garg — India's Pharmacology Guru",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/the-inspiring-journey-of-dr-gobind-rai-garg-indias-pharmacology-guru/",
+      "captured": "2026-06-27",
+      "note": "Details 18+ years teaching career, UCMS qualifications, Maulana Azad Medical College (MAMC) position, Cerebellum affiliation."
+    },
+    {
+      "id": "src-fac-gobind-prepladder-fb",
+      "type": "social-media",
+      "title": "PrepLadder Medical Facebook — Dr. Gobind Rai Garg MCQ Marathon (May 2022)",
+      "publisher": "PrepLadder Medical (Facebook page)",
+      "url": "https://www.facebook.com/medical.pg.entrance.prepladder/posts/join-dr-gobind-rai-garg-for-the-mcq-marathon-20-on-pharmacology-today-at-4-pmpre/5172496006170104/",
+      "captured": "2026-06-27",
+      "note": "May 4, 2022 PrepLadder Facebook post confirms Dr Gobind Rai Garg conducted a live Pharmacology MCQ Marathon session for PrepLadder. Directional evidence of prior PrepLadder association before Cerebellum (founded 2022)."
+    },
+    {
+      "id": "src-fac-sparsh-cerebellum-profile",
+      "type": "platform-faculty-profile",
+      "title": "Dr. Sparsh Gupta — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/dr-sparsh-gupta/",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Sparsh Gupta: MBBS, MD, Gold Medalist, 17+ years teaching, co-author of Review of Pathology and Genetics. Current Cerebellum Pathology faculty."
+    },
+    {
+      "id": "src-fac-vivek-cerebellum-profile",
+      "type": "platform-faculty-profile",
+      "title": "Dr. Vivek Jain PSM & Community Medicine — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/dr-vivek-jain/",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Vivek Jain: MBBS from MAMC, MD PSM from LHMC, Senior Residency at VMMC SJH and UCMS GTBH, author of Review of PSM, current Cerebellum PSM faculty."
+    },
+    {
+      "id": "src-fac-praveen-cerebellum-profile",
+      "type": "platform-faculty-profile",
+      "title": "Dr. Praveen Tripathi — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/dr-praveen-tripathi/",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Praveen Tripathi: UCMS alumnus, Psychiatry specialist, author of Review of Psychiatry, co-founder of Cerebellum Academy."
+    },
+    {
+      "id": "src-fac-apurv-cerebellum-profile",
+      "type": "platform-faculty-profile",
+      "title": "Dr. Apurv Mehra Orthopedics — Cerebellum Academy",
+      "publisher": "Cerebellum Academy",
+      "url": "https://www.cerebellumacademy.com/dr-apurv-mehra/",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Apurv Mehra: MBBS MAMC, MS Orthopedics UCMS, founder of eConceptual (launched 2020), co-founder of Cerebellum Academy (2022)."
+    },
+    {
+      "id": "src-fac-apurv-econceptual",
+      "type": "platform-about-page",
+      "title": "eConceptual — Best Medical PG Residents Preparation Platform",
+      "publisher": "eConceptual",
+      "url": "https://econceptual.com/",
+      "captured": "2026-06-27",
+      "note": "Confirms eConceptual is Dr Apurv Mehra's solo platform for PG residents (launched 2020). Orthopedics, Surgery, Anesthesia, Radiology, Psychiatry, OBG."
+    },
+    {
+      "id": "src-fac-pritesh-prepladder-surgery",
+      "type": "platform-faculty-page",
+      "title": "Prepare Surgery Online with Dr. Pritesh Singh at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/medical-pg/surgery-preparation",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Pritesh Singh as PrepLadder Surgery faculty. Described as 'India's renowned surgeon', author of Surgery Essence, teaching since 2009."
+    },
+    {
+      "id": "src-fac-pritesh-blog",
+      "type": "blog",
+      "title": "Important Topics in Surgery for NEET-PG by Dr. Pritesh Singh",
+      "publisher": "PrepLadder (medical blog)",
+      "url": "https://medical.prepladder.com/blog/1197-important-topics-in-surgery-for-neet-pg-by-dr-pritesh-singh.html",
+      "captured": "2026-06-27",
+      "note": "PrepLadder authored article by Dr Pritesh Singh, confirming platform affiliation and Surgery expertise."
+    },
+    {
+      "id": "src-fac-deepak-marwah-prepladder",
+      "type": "platform-faculty-page",
+      "title": "Prepare Medicine Online with Dr. Deepak Marwah at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/medical-pg/medicine-preparation",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Deepak Marwah as PrepLadder Medicine faculty, 15+ years experience, MAMC alumnus."
+    },
+    {
+      "id": "src-fac-deepak-marwah-solo",
+      "type": "solo-brand-website",
+      "title": "Home — Medicine Buster Classes by Dr. Deepak Marwah",
+      "publisher": "marwahmedicine.com",
+      "url": "https://www.marwahmedicine.com/",
+      "captured": "2026-06-27",
+      "note": "Confirms Medicine Buster Classes as Dr Deepak Marwah's solo brand (offline + app + YouTube). MAMC alumnus, author of One Touch Medicine and FMGE Solutions."
+    },
+    {
+      "id": "src-fac-soumen-prepladder",
+      "type": "platform-faculty-page",
+      "title": "Prepare Physiology Online with Dr. Soumen Manna at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/medical-pg/physiology-preparation",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Soumen Manna as PrepLadder Physiology faculty. MBBS Nil Ratan Sircar Medical College Kolkata, MD Physiology AIIMS Delhi (2012), VMMC Safdarjung associate professor."
+    },
+    {
+      "id": "src-fac-soumen-researchgate",
+      "type": "academic-profile",
+      "title": "Soumen Manna — ResearchGate Profile",
+      "publisher": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Soumen-Manna",
+      "captured": "2026-06-27",
+      "note": "Academic profile confirming Dr Soumen Manna's position at VMMC & Safdarjung Hospital, New Delhi."
+    },
+    {
+      "id": "src-fac-akhilesh-prepladder-fmt",
+      "type": "platform-faculty-page",
+      "title": "Prepare Forensic Medicine Online with Dr. Akhilesh Raj at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/medical-pg/forensic-medicine-preparation",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Akhilesh Raj as PrepLadder Forensic Medicine faculty. MD Forensic Medicine AIIMS Delhi, 10+ years teaching experience."
+    },
+    {
+      "id": "src-fac-shonali-prepladder",
+      "type": "platform-faculty-page",
+      "title": "Find Best Faculty for OBS-GYN Residency Preparation at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/obs-gyn-residency/faculty",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Shonali Chandra as PrepLadder OBG faculty. MS from MAMC, Gold Medallist MBBS from LLRM Meerut."
+    },
+    {
+      "id": "src-fac-shonali-youtube",
+      "type": "video",
+      "title": "Meet Dr. Shonali Chandra, Faculty for OBS-GYN Residency at PrepLadder — YouTube",
+      "publisher": "PrepLadder (YouTube)",
+      "url": "https://www.youtube.com/watch?v=3Z5eSDqHJIs",
+      "captured": "2026-06-27",
+      "note": "PrepLadder official intro video for Dr Shonali Chandra, corroborating platform role and OBG specialization."
+    },
+    {
+      "id": "src-fac-sakshi-marrow-obgyn",
+      "type": "platform-faculty-page",
+      "title": "Marrow Programme for OBS-GYN Residents — Dr. Sakshi Arora Hans",
+      "publisher": "Marrow",
+      "url": "https://www.marrow.com/neet-ss/obg",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Sakshi Arora Hans as Marrow OBG faculty for NEET SS and NEET PG. National level faculty, author of One Touch OBG."
+    },
+    {
+      "id": "src-fac-sakshi-marrow-blog",
+      "type": "blog",
+      "title": "What's new in Marrow Edition 4 — Ob-Gyn by Dr. Sakshi Arora Hans",
+      "publisher": "Marrow",
+      "url": "https://www.marrow.com/blog/whats-new-in-marrow-edition-4-ob-gyn-dr-sakshi-arora-hans/",
+      "captured": "2026-06-27",
+      "note": "Marrow blog post confirming Dr Sakshi Arora Hans as OBG faculty, with details on her course content."
+    },
+    {
+      "id": "src-fac-rohan-marrow-surgery",
+      "type": "platform-faculty-page",
+      "title": "Marrow — SS Surgery (Dr. Rohan Khandelwal)",
+      "publisher": "Marrow",
+      "url": "https://www.marrow.com/neet-ss/surgery",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Rohan Khandelwal as Marrow Surgery faculty."
+    },
+    {
+      "id": "src-fac-rohan-breasthealth",
+      "type": "clinical-profile",
+      "title": "About Dr. Rohan Khandelwal — breasthealth.in",
+      "publisher": "breasthealth.in",
+      "url": "https://www.breasthealth.in/about-dr-rohan.html",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Rohan Khandelwal's clinical qualifications (MBBS + MS Surgery VMMC Safdarjung 2002–2011, MRCS Edinburgh 2011, breast surgery career from 2013). Establishes his clinical identity independently of platform affiliation."
+    },
+    {
+      "id": "src-fac-rakesh-nair-marrow",
+      "type": "third-party-profile",
+      "title": "Dr. Rakesh Nair — ADRPLEXUS Faculty Profile",
+      "publisher": "ADRPLEXUS",
+      "url": "https://www.adrplexus.com/dr-rakesh-nair/",
+      "captured": "2026-06-27",
+      "note": "Third-party profile confirming Dr Rakesh S Nair's Medicine specialization. Marrow faculty affiliation confirmed via Marrow faculty list page and Amazon book listing (MEDICINE MARROW EDITION 8.0)."
+    },
+    {
+      "id": "src-fac-rakesh-nair-amazon",
+      "type": "book-listing",
+      "title": "MEDICINE MARROW EDITION 8.0 by Dr Rakesh Nair MBBS, MD(General Medicine), DM(Nephrology) — Amazon.in",
+      "publisher": "Amazon.in",
+      "url": "https://www.amazon.in/MEDICINE-COLOURED-2024-2025-Medicine-Nephrology/dp/B0DHLC5P8M",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Rakesh Nair's credentials (MBBS, MD General Medicine, DM Nephrology) and Marrow authorship."
+    },
+    {
+      "id": "src-fac-ankit-kumar-prepladder",
+      "type": "platform-faculty-page",
+      "title": "Prepare Pharmacology Online with Dr. Ankit Kumar at PrepLadder",
+      "publisher": "PrepLadder",
+      "url": "https://www.prepladder.com/courses/medical-pg/pharmacology-preparation",
+      "captured": "2026-06-27",
+      "note": "Confirms Dr Ankit Kumar as PrepLadder Pharmacology faculty. Gold medal MBBS Maulana Azad Medical College, MD Pharmacology, 12+ years experience, former head faculty at DAMS (Delhi Academy of Medical Sciences)."
+    }
+  ]
+}

@@ -257,7 +257,21 @@ _strength_doc = load_curated("subject_strength.json")
 _reliab_doc = load_curated("reliability.json")
 _method_doc = load_curated("methodology.json")
 
+# ---------- faculty layer (Phase 1c.1F / Stage 3b) ----------
+# Faculty seed + its own source registry live on disk un-emitted until now. We APPEND the
+# faculty sources into the shared registry (so the integrity guard still validates faculty refs
+# against one combined set) and emit D.faculty[]. Epistemic: directional (seed). Aggregate-only.
+_faculty_doc = load_curated("faculty_seed.json")
+_faculty_src_doc = load_curated("faculty_sources.json")
+
 sources = _sources_doc.get("sources", [])
+# append faculty sources (prefixed src-fac- to avoid collision; dedupe by id just in case)
+if _faculty_src_doc:
+    _existing = {s["id"] for s in sources}
+    for s in _faculty_src_doc.get("sources", []):
+        if s["id"] not in _existing:
+            sources.append(s)
+            _existing.add(s["id"])
 source_ids = {s["id"] for s in sources}
 
 # Source-integrity guard: no curated claim may reference a source that isn't in the registry
@@ -272,9 +286,14 @@ def _collect_refs(doc):
     for app in doc.get("apps", []) or []:
         if app.get("sourceId"):
             refs.add(app["sourceId"])
+    # faculty docs: each faculty (+ its affiliations) carries sourceIds
+    for fac in doc.get("faculty", []) or []:
+        refs.update(fac.get("sourceIds", []) or [])
+        for aff in fac.get("affiliations", []) or []:
+            refs.update(aff.get("sourceIds", []) or [])
     return refs
 
-referenced = _collect_refs(_strength_doc) | _collect_refs(_reliab_doc)
+referenced = _collect_refs(_strength_doc) | _collect_refs(_reliab_doc) | _collect_refs(_faculty_doc)
 dangling = referenced - source_ids
 if dangling:
     raise SystemExit(f"ABORT (neutrality firewall): curated claims reference unknown source ids: {sorted(dangling)}")
@@ -286,6 +305,56 @@ if _reliab_doc:
     for p in platforms:
         if p["id"] in by_pid:
             p["reliability"] = by_pid[p["id"]]
+
+# ---------- faculty roster + a "platforms[]" convenience seam per faculty ----------
+# Derive a deduped platform list per faculty (real integrated platformIds only) from their
+# affiliations — entity pages / facultyForPlatform() read this without re-walking affiliations.
+faculty = (_faculty_doc.get("faculty", []) if _faculty_doc else [])
+_integrated_ids = {p["id"] for p in platforms}
+for f in faculty:
+    pids, seen = [], set()
+    for aff in f.get("affiliations", []) or []:
+        pid = aff.get("platformId")
+        if pid and pid in _integrated_ids and pid not in seen:
+            pids.append({"platformId": pid}); seen.add(pid)
+    f["platforms"] = pids
+
+# ---------- map D.videos[].facultyId where subject+platform confidently identifies ONE faculty ----------
+# CoreBTR is Cerebellum's video series, so a video maps to a faculty only when that faculty has a
+# Cerebellum affiliation AND is the UNIQUE seeded teacher of the video's canonical subject. Where
+# more than one (or zero) seeded faculty teach the subject, we leave facultyId unset (honest).
+_CANON = {
+    "Anatomy":"Anatomy","Physiology":"Physiology","Biochemistry":"Biochemistry","Pharmacology":"Pharmacology",
+    "Microbiology":"Microbiology","Pathology":"Pathology","Community Medicine":"Community Medicine / PSM",
+    "Forensic Medicine":"Forensic Medicine","Ophthalmology":"Ophthalmology","ENT":"ENT","Psychiatry":"Psychiatry",
+    "Radiology":"Radiology","Medicine":"Medicine","Surgery":"Surgery","Orthopaedics":"Orthopaedics",
+    "Paediatrics":"Paediatrics","Obstetrics and Gynaecology":"Obstetrics & Gynaecology","Dermatology":"Dermatology",
+    "Anaesthesia":"Anaesthesia","Anesthesia":"Anaesthesia",
+}
+def _canon(s): return _CANON.get(s, s)
+# video-subject -> canonical QBank subject (mirrors BTR_CANON in core.js)
+_BTR_CANON = {
+    "Anatomy":"Anatomy","Anesthesia":"Anaesthesia","Biochemistry":"Biochemistry","Dermatology":"Dermatology",
+    "ENT":"ENT","Forensic Medicine":"Forensic Medicine","General Pathology":"Pathology","General Pharmacology":"Pharmacology",
+    "General Physiology":"Physiology","Hematology":"Pathology","Immunology":"Microbiology","Integrated CVS":"Medicine",
+    "Integrated Renal-Electrolytes":"Medicine","Integrative Neurology":"Medicine","Microbiology":"Microbiology",
+    "Obstetrics and Gynaecology":"Obstetrics & Gynaecology","Ophthalmology":"Ophthalmology","Orthopedics":"Orthopaedics",
+    "Pediatrics":"Paediatrics","Preventive and Social Medicine":"Community Medicine / PSM","Psychiatry":"Psychiatry",
+    "Radiology":"Radiology","Surgery":"Surgery",
+}
+# canonical subject -> [faculty ids] for faculty with a Cerebellum affiliation
+_cere_by_subj = {}
+for f in faculty:
+    if any(a.get("platformId") == "cerebellum" for a in f.get("affiliations", []) or []):
+        for s in f.get("subjects", []):
+            _cere_by_subj.setdefault(_canon(s), []).append(f["id"])
+_vid_mapped = 0
+for v in btr_videos:
+    cc = _BTR_CANON.get(v["subject"])
+    facs = _cere_by_subj.get(cc, []) if cc else []
+    if len(facs) == 1:               # unique seeded teacher → confident
+        v["facultyId"] = facs[0]
+        _vid_mapped += 1
 
 data = {
     "exam": "NEET PG / INI-CET",
@@ -301,6 +370,8 @@ data = {
     "subjectStrength": _strength_doc,
     "reliability": _reliab_doc,
     "methodology": _method_doc,
+    # faculty "people" layer — directional seed; aggregate-only; every datum sourced
+    "faculty": faculty,
 }
 
 out = os.path.join(os.path.dirname(__file__), "data.js")
@@ -329,4 +400,6 @@ print(f"Curated: {len(sources)} sources, "
       f"{len(_strength_doc.get('subjects', [])) if _strength_doc else 0} subject-strength rows (directional), "
       f"{len(_reliab_doc.get('apps', [])) if _reliab_doc else 0} reliability rows (public-3p); "
       f"all source refs resolve")
+print(f"Faculty: {len(faculty)} profiles (directional seed), "
+      f"{_vid_mapped} videos mapped to a faculty by subject+platform")
 print(f"Wrote {out}")

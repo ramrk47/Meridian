@@ -5,7 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Meridian — Cross-platform exam almanac</title>
 <meta name="description" content="Neutral cross-platform tracker for NEET PG / INI-CET / FMGE — Marrow, Cerebellum, DocTutorials in one place.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/charts.css">
+<link rel="stylesheet" href="css/overview.css">
+<link rel="stylesheet" href="css/qbank.css">
+<link rel="stylesheet" href="css/progress.css">
+<link rel="stylesheet" href="css/tests.css">
+<link rel="stylesheet" href="css/hy.css">
+<link rel="stylesheet" href="css/videos.css">
+<link rel="stylesheet" href="css/planner.css">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon.svg">
@@ -63,6 +72,10 @@
   <section id="view-hy" class="view"></section>
   <section id="view-videos" class="view"></section>
   <section id="view-planner" class="view"></section>
+  <!-- entity pages (NOT tabs): routed via goSubject/goPlatform/goFaculty -->
+  <section id="view-subject" class="view"></section>
+  <section id="view-platform" class="view"></section>
+  <section id="view-faculty" class="view"></section>
 </main>
 
 <footer class="foot">
@@ -105,7 +118,20 @@
 
 <script src="data.js"></script>
 <script src="storage.js"></script>
-<script src="app.js"></script>
+<!-- module load order (all global scope, no bundler): core → ds → surfaces → entities → main -->
+<script src="js/core.js"></script>
+<script src="js/ds.js"></script>
+<script src="js/surfaces/overview.js"></script>
+<script src="js/surfaces/qbank.js"></script>
+<script src="js/surfaces/progress.js"></script>
+<script src="js/surfaces/tests.js"></script>
+<script src="js/surfaces/hy.js"></script>
+<script src="js/surfaces/videos.js"></script>
+<script src="js/surfaces/planner.js"></script>
+<script src="js/entities/subject.js"></script>
+<script src="js/entities/platform.js"></script>
+<script src="js/entities/faculty.js"></script>
+<script src="js/main.js"></script>
 <script>
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));

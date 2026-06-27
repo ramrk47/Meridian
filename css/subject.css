@@ -1,0 +1,77 @@
+/* ============================================================
+   css/subject.css — the Subject ENTITY PAGE
+   Desktop "uses the width" (multi-panel grid); mobile "hits density"
+   (6 tiles above fold + ONE segmented toolbar swapping single panels).
+   Almanac identity: warm paper/ink, hairlines, antique gold accents.
+   Owns only .subj-* selectors + this page's local tweaks.
+   ============================================================ */
+
+/* defensive containment — no transient/edge content ever forces page scroll */
+#view-subject { overflow-x: clip; }
+#view-subject .cf-note, #view-subject .srcline, #view-subject .firewall-note { overflow-wrap: anywhere; }
+
+/* stat-tile strip: density on this entity's hero metrics */
+.subj-tiles { margin-bottom: var(--gap); }
+
+/* per-platform coverage links under the heatmap (the triangle) */
+.cov-links { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-3); }
+.cov-links .echip.plat { cursor: pointer; }
+
+/* heatmap legend bits */
+.cf-legend .lg-ramp { display: inline-flex; align-items: center; gap: 3px; }
+.cf-legend .lg-ramp i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.cf-legend .lg-ramp .lg-t { margin-left: 5px; color: var(--ink-3); font-size: var(--t-micro); }
+.cf-legend .lg-ring { display: inline-flex; align-items: center; gap: 5px; margin-left: 12px; color: var(--ink-3); font-size: var(--t-micro); }
+.cf-legend .lg-ring i { width: 13px; height: 13px; border-radius: 3px; box-sizing: border-box;
+  border: 2px solid var(--con-two); background: transparent; display: inline-block; }
+
+/* consensus topic rows: a small "N× agree" flag for true consensus (≥2) */
+.con-flag { font-size: var(--t-micro); text-transform: uppercase; letter-spacing: .06em;
+  color: var(--con-all); background: color-mix(in srgb, var(--con-two) 18%, var(--paper-2));
+  border: 1px solid color-mix(in srgb, var(--con-two) 40%, var(--line));
+  border-radius: var(--r-1); padding: 1px 6px; margin-left: 6px; vertical-align: 1px; }
+
+/* who-teaches-it-best */
+.teach-block { margin-bottom: var(--sp-4); }
+.teach-block:last-child { margin-bottom: 0; }
+.teach-block .tb-h { display: block; font-size: var(--t-label); text-transform: uppercase;
+  letter-spacing: .1em; color: var(--ink-3); margin-bottom: var(--sp-2); }
+.firewall-note { margin-top: var(--sp-3); padding-top: var(--sp-3); border-top: 1px solid var(--line);
+  color: var(--ink-3); font-size: var(--t-meta); line-height: 1.45; font-style: italic; }
+
+/* video status dot lead */
+.vdot { width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+  border: 1.5px solid var(--ink-4); box-sizing: border-box; }
+.vdot.watch { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 35%, transparent); }
+.vdot.done { border-color: var(--good); background: var(--good); }
+
+/* your-progress meter */
+.prog-meter { margin-bottom: var(--sp-4); }
+.prog-meter .pm-key { margin-top: var(--sp-2); }
+
+/* ── DESKTOP (≥1024): multi-panel; ALL panels visible regardless of mobile tab ── */
+.subj-band { margin-top: var(--gap); grid-template-columns: 1fr 1fr 1fr; }
+@media (min-width: 1024px) {
+  .subj-toolbar { display: none; }                 /* segmented swap is a mobile affordance */
+  .subj-panel[hidden] { display: block !important; } /* override JS hidden — show every panel */
+}
+
+/* ── TABLET (641–1023): inline panels, 2-up; toolbar still hidden (panels stack) ── */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .subj-toolbar { display: none; }
+  .subj-panel[hidden] { display: block !important; }
+  .subj-band { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── MOBILE (≤640): density — ONE sticky toolbar, single panel at a time ── */
+@media (max-width: 640px) {
+  .subj-toolbar { position: sticky; top: var(--hh, 0); z-index: 6;
+    background: var(--paper); padding: var(--sp-2) 0; margin-bottom: var(--sp-3);
+    border-bottom: 1px solid var(--line); }
+  .subj-toolbar .seg { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .subj-toolbar .seg button { min-height: 44px; white-space: nowrap; }
+  /* the grids collapse; only the active panel shows (JS toggles [hidden]) */
+  .panel-grid, .inst-grid.subj-band { display: block; }
+  .subj-band { margin-top: 0; }
+  .subj-panel { margin-bottom: var(--sp-3); }
+}

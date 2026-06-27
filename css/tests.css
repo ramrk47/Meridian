@@ -1,0 +1,76 @@
+/* ============================================================
+   tests.css — TESTS & SCORES surface
+   Owns: score inputs, difficulty stars, the add-test form, and the
+   per-surface tweaks to the shared KPI strip / chart plates.
+
+   NOTE (shared-layer gap): the chart bodies .rbars/.rb-* (rankedBars)
+   and .spark/.spk-* (sparkline) have no base styles in css/charts.css
+   yet — hy.css + platform.css already assume .rbars exists. Until the
+   integrator lands them in the shared charts.css, the rules below are
+   SCOPED to #view-tests so this surface renders correctly in isolation
+   and never collides with the eventual shared definition.
+   ============================================================ */
+
+/* ---------- add-test form ---------- */
+.addform{display:flex;gap:11px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.btn{background:var(--accent);border:0;color:var(--paper-2);padding:10px 20px;border-radius:var(--r-1);font:600 13px var(--sans);cursor:pointer;transition:.15s;min-height:44px}
+.btn:hover{background:var(--accent-2)}
+
+/* ---------- score-entry table (kept; Store wiring depends on this DOM) ---------- */
+table.tests td{vertical-align:middle}
+.sin{width:60px;background:var(--paper);border:1px solid var(--line-2);color:var(--ink);padding:6px 8px;border-radius:var(--r-1);text-align:right;font:400 13px var(--sans);outline:none}
+.sin:focus{border-color:var(--accent)}
+.acc{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.diff{white-space:nowrap}
+.ds{color:var(--ink-4);cursor:pointer;font-size:15px;transition:.1s}
+.ds:hover,.ds.on{color:var(--gold)}
+.xbtn{background:transparent;border:1px solid var(--line-2);color:var(--ink-3);border-radius:var(--r-1);width:30px;height:30px;cursor:pointer}
+.xbtn:hover{border-color:var(--bad);color:var(--bad)}
+
+/* the add-test "stored locally" note carries an inline epi dot — align it on the srcline */
+#view-tests .panel .srcline .tile-epi{position:static;display:inline-flex;vertical-align:-2px;margin-left:4px}
+
+/* the KPI strip sits tight above the trend plate */
+#view-tests .tests-kpi{margin-bottom:14px}
+
+/* ---------- chartFrame body: sparkline (scoped; shared gap) ---------- */
+#view-tests .spark{display:block;width:100%;height:auto;overflow:visible}
+#view-tests .spk-base{stroke:var(--grid-2);stroke-width:1}
+#view-tests .spk-line{fill:none;stroke:var(--ink-2);stroke-width:1.6;
+  stroke-linejoin:round;stroke-linecap:round}
+#view-tests .spk-dot{fill:var(--accent)}
+#view-tests .spk-tick{fill:var(--tick);font-size:9px;font-variant-numeric:tabular-nums}
+#view-tests .spk-cap{fill:var(--ink-3);font-size:9px}
+
+/* ---------- chartFrame body: rankedBars (scoped; shared gap) ---------- */
+#view-tests .rbars{display:flex;flex-direction:column;gap:9px}
+#view-tests .rbrow{display:grid;grid-template-columns:minmax(120px,160px) 1fr auto;
+  align-items:center;gap:12px}
+#view-tests .rb-name{font-size:var(--t-row);color:var(--ink);font-weight:600;
+  text-align:right;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#view-tests a.rb-name.is-link{cursor:pointer;text-decoration:none}
+#view-tests a.rb-name.is-link:hover{color:var(--accent);text-decoration:underline}
+#view-tests .rb-track{position:relative;display:flex;align-items:center;gap:8px;min-width:0}
+#view-tests .rb-bar{height:13px;border-radius:2px;min-width:3px;
+  transition:width .6s cubic-bezier(.22,.61,.36,1)}
+#view-tests .rb-mark{font-size:var(--t-meta);color:var(--ink-3);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+#view-tests .rb-val{font-size:var(--t-row);font-weight:700;color:var(--ink);
+  font-variant-numeric:tabular-nums;text-align:right;min-width:42px}
+
+/* ---------- chartFrame legend keys (scoped) ---------- */
+#view-tests .cf-key{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;
+  font-size:var(--t-micro);color:var(--ink-3)}
+#view-tests .cf-key .lg-line{width:16px;height:0;border-top:1.6px solid var(--ink-2)}
+#view-tests .cf-key .lg-dot{display:inline-block;width:9px;height:9px;border-radius:2px;
+  vertical-align:-1px}
+
+/* ---------- mobile density (≤640) ---------- */
+@media (max-width:640px){
+  /* score inputs already widened by the shared table.tests.resp rule; keep tap targets */
+  .btn{flex:1 1 100%}
+  #view-tests .rbrow{grid-template-columns:minmax(96px,1fr) 1.2fr auto;gap:9px}
+  #view-tests .rb-name{font-size:13px}
+  #view-tests .rb-mark{display:none}            /* keep the row to one bar + value on narrow */
+  #view-tests .rb-val{min-width:38px}
+}
