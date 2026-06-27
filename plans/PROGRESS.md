@@ -83,14 +83,13 @@
   unknown source ref. Verified 375–1280 day+evening (console clean, no h-scroll, card-mode tables);
   3 claims spot-checked → all trace to RESEARCH_FINDINGS.md. **`D.sources[]` + epistemic conventions
   reused by 1c.1F.** Commits `91fa9d6` (data) · `3d7deca` (UI).
-- [ ] **1c.1F · Faculty layer** (`FACULTY_LAYER.md`) — `D.faculty[]` schema + ~10–20 curated seed
-  (career history, gated profile + rolled-up video ratings, `directional`/`verifiedVia`), faculty surface.
-  The IMDB *people* pillar; voting enforced post-backend. Prompt: `plans/PHASE1C1F_PROMPT.md`. *Run after 1c.1.*
-- [ ] **Faculty data pass** (greenlit) — Chrome+research gathering of rosters / movement history / ratings →
-  `_raw/curated/`. Needs user's logged-in browser. Prompt: `plans/FACULTY_DATA_PASS_PROMPT.md`. *Parallel; enriches 1c.1F.*
-- [ ] **1c.2 · Depiction (viz)** — desktop-led data-viz: subject×platform heatmap, consensus view,
-  best-for-subject matrix, **faculty career timeline / per-subject strength**, MCQ/yield treemap,
-  progress sparklines. Prompt issued after 1c.1 + 1c.1F verify.
+- [ ] **1c.2 · Experience Overhaul (ULTRACODE)** — `EXPERIENCE_OVERHAUL_BRIEF.md`. *Ambition: HYBRID.*
+  Cross-surface (web+mobile) overhaul: new design system + chart vocabulary + **entity pages**
+  (Subject/Platform/**Faculty**) + relational viz, one-system-two-layouts. **Folds in the faculty layer**
+  (`D.faculty[]` schema + ~10–20 `directional` seed + `verifiedVia`) and the data-viz pass. Run as a
+  multi-agent Workflow (design-explore→judge→foundation→parallel impl→adversarial review). *User runs with ultracode.*
+- [ ] **Faculty data pass** (greenlit, separate — needs user's logged-in browser) — `FACULTY_DATA_PASS_PROMPT.md`;
+  enriches the seed afterward, zero UI churn. *(`PHASE1C1F_PROMPT.md` is superseded by the overhaul brief.)*
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **Free Rank/College Predictor** (results-season lead magnet) — if fork #1 says predictor-first.
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer).
@@ -107,6 +106,13 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **1c.1 verified+accepted; 1c.1F+1c.2 merged into "1c.2 · Experience Overhaul" (ultracode).**
+  User: mix the faculty build into a serious cross-surface (web+mobile) data-presentation + UI overhaul,
+  run with ultracode. Ambition chosen: **HYBRID** (new design system + chart vocabulary + first-class
+  **entity pages** Subject/Platform/Faculty, keep tracking tabs as home, one-system-two-layouts). Brief:
+  `EXPERIENCE_OVERHAUL_BRIEF.md`. Coordinator eng calls: stage-1 modularize `app.js` render layer for safe
+  parallelism; rubric = the 3 standards; workflow = design-explore→judge→foundation→parallel impl→adversarial
+  review. Kept "High-Yield" tab name (real fix = future PYQ-yield data pass, not a rename).
 - 2026-06-27 **Phase 1c.1 shipped — curation: inventory → judgment, honestly labelled** (commits
   `91fa9d6` data, `3d7deca` UI). Built the sourced curation layer from `_raw/curated/*.json` →
   `D.{sources,subjectStrength,reliability,methodology}`: best-platform-per-subject (community reputation,

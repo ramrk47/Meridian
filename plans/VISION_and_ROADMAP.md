@@ -104,15 +104,17 @@ before building the predictor/tracker on it. Governed by `DATA_VISUAL_STANDARD.m
   per-subject matrix** (H3, `directional`, sourced) + the **neutral reliability scorecard** (`public-3p`,
   dated) into `D` via `build_data.py`; add a `D.sources[]` registry + "How we rate" surface. Neutrality
   firewall enforced; PrepLadder/eGurukul count-drilling is an optional separate Chrome session (don't block).
-- **1c.1F · Faculty layer (the "people" pillar)** — `FACULTY_LAYER.md`. Faculty as first-class entities
-  with **career history** (platforms over time → solo / super-specialty) + two neutral ratings (gated
-  profile votes; rolled-up video rating). The IMDB *people* layer + a unique moat (incumbents can't track
-  a teacher who left). **Now:** schema + ~10–20 curated seed (`directional`, sourced) + a faculty surface;
-  `verifiedVia:"in-app-activity"` designed, **voting enforced post-backend**. Enriched by a greenlit
-  **faculty data-gathering pass** (`FACULTY_DATA_PASS_PROMPT.md`).
-- **1c.2 · Depiction (viz).** Desktop-led data-viz layer: subject×platform **heatmap**, **consensus**
-  view, **best-for-subject matrix**, MCQ/yield **treemap/ranked bars**, progress **sparklines** — using
-  the width (multi-panel). Mobile-aware per the density standard. Warm almanac identity retained.
+- **1c.2 · Experience Overhaul (ULTRACODE)** — `EXPERIENCE_OVERHAUL_BRIEF.md`. *Ambition: HYBRID.* One
+  cross-surface (web+mobile) overhaul that **folds in the faculty layer + the data-viz pass**: a new
+  **design system** (tokens + chart vocabulary, color-as-data-encoding) + **first-class entity pages**
+  (Subject / Platform / **Faculty** with career timeline + ratings) + relational viz (heatmap · consensus ·
+  treemap · sparklines · timeline, all epistemically labelled), while keeping the tracking tabs as home.
+  **One system, two layouts** (desktop width / mobile density). Run as a multi-agent Workflow: design-
+  exploration → judged synthesis → modularize+foundation → parallel surface impl → adversarial review.
+  Faculty data (`D.faculty[]` schema + ~10–20 `directional` seed + `verifiedVia`) is built inside it;
+  voting enforced post-backend. *(Absorbs the former 1c.1F + 1c.2.)*
+- **Faculty data pass** (greenlit, separate — needs the user's logged-in browser) — `FACULTY_DATA_PASS_PROMPT.md`;
+  enriches the seed afterward with zero UI churn.
 
 ### Phase 2 — Free wedge / acquisition (the launch)
 - **2a · Free Rank/College Predictor** — public, no-login, shareable, results-season hook; neutral
