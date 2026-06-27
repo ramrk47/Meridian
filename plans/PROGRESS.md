@@ -16,7 +16,12 @@
   `QBANK_DATA` is a back-compat alias). N-way consensus + cross-platform layer live.
 - **Micro-drifts RESOLVED in Phase 1b** (commit `8292ff9`): footer "1–6"→"1–7"; subhead now derived
   from `D.platforms` (no hardcoded "Marrow · Cerebellum · CoreBTR").
-- **Blocking next:** decide the 5 strategic forks → sequence roadmap; then foundation (mobile + multi-platform data).
+- **PRODUCT RENAMED → Calvetra** (2026-06-27; was "Meridian"). In-app brand only (title/H1/monogram C/
+  manifest/sw cache/copy); repo dir + git remote stay `Meridian`. **calvetra.com + IP-India(Class 41/42)+USPTO
+  trademark clearance still REQUIRED before public launch** (see `plans/NAME_CANDIDATES.md`, memory `product-name-calvetra`).
+- **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED & verified** (modular design system + chart
+  vocabulary + entity pages Subject/Platform/Faculty + faculty seed(14) + motion/View-Transitions layer).
+- **Next:** small polish (migrate 5 surface empty-states to `ds.emptyState()`); then Phase 2 wedge (predictor + tracker).
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
 - **Build/launch for NEET PG · INI-CET · FMGE now**; architect exam-agnostic so all-India verticals extend later (don't build them yet).
@@ -83,7 +88,7 @@
   unknown source ref. Verified 375–1280 day+evening (console clean, no h-scroll, card-mode tables);
   3 claims spot-checked → all trace to RESEARCH_FINDINGS.md. **`D.sources[]` + epistemic conventions
   reused by 1c.1F.** Commits `91fa9d6` (data) · `3d7deca` (UI).
-- [ ] **1c.2 · Experience Overhaul (ULTRACODE)** — `EXPERIENCE_OVERHAUL_BRIEF.md`. *Ambition: HYBRID.*
+- [x] **1c.2 · Experience Overhaul (ULTRACODE) — DONE 2026-06-27** (verified, commits →`79ef4a7`). `EXPERIENCE_OVERHAUL_BRIEF.md`. *Ambition: HYBRID.*
   Cross-surface (web+mobile) overhaul: new design system + chart vocabulary + **entity pages**
   (Subject/Platform/**Faculty**) + relational viz, one-system-two-layouts. **Folds in the faculty layer**
   (`D.faculty[]` schema + ~10–20 `directional` seed + `verifiedVia`) and the data-viz pass. Run as a
@@ -106,6 +111,25 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-27 **Product renamed Meridian → Calvetra** (user pick from the naming workflow). Coined mark
+  ("clear/calibrate"), neutral-scales bucket (doesn't box in the exam-agnostic compendium; rejected medical-
+  flavored "Synapse" for scale + crowded-namespace reasons). In-app brand only (title/H1/monogram→C/manifest/
+  sw-cache→`calvetra-shell-v5`/copy); repo dir + git remote stay `Meridian`; internal `__meridianNavDepth` untouched.
+  **calvetra.com + IP-India(Class 41 edu/42 software)+USPTO trademark clearance REQUIRED before public launch** —
+  web "available" is directional only. Shortlist + Top 5 + avoid-list: `plans/NAME_CANDIDATES.md`.
+- 2026-06-27 **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED** (commits up to `79ef4a7`). Two ultracode
+  Workflows: (1) overhaul — modularized the 1,539-line `app.js` + `styles.css` into `js/`+`css/` modules (core/ds/
+  surfaces/entities/main, file-partitioned for safe parallelism), built a design-system + chart vocabulary
+  (heatmap/consensus/treemap/sparkline/timeline/scorecard), 3 **entity pages** (Subject/Platform/Faculty), folded in
+  the **faculty layer** (`D.faculty[]` + 14 sourced `directional` seed + `verifiedVia`), re-skinned the 7 tabs;
+  (2) craft elevation — shared `js/motion.js` (View Transitions API, IO reveal, count-up, chart-intro), motion/
+  elevation tokens, micro-interactions, richer empty-states, desktop balance, a11y — all reduced-motion-safe +
+  non-regressive. **Coordinator live-verify** fixed 2 bugs: entity routing never painted (`setHash` pre-marked
+  `routeKey`) and HY `[data-reveal]` panels stuck invisible on direct re-render paths (missing `animateView`).
+  Verified in Preview 320–1920, day+evening, console clean, no h-scroll, density bars, multi-panel relational
+  desktop, **56,091 preserved**. Two new pillars CAPTURED (build later): `plans/CURATOR_LAYER.md` (outcome-verified
+  ratings + tagged blog→planner, Phase 3/post-backend) and `plans/STUDY_PLANNER.md` (editable/shareable peer planner
+  + accountability engine, local-first Phase 2/3). *Pending polish:* migrate 5 surface empty-states to `ds.emptyState()`.
 - 2026-06-27 **1c.1 verified+accepted; 1c.1F+1c.2 merged into "1c.2 · Experience Overhaul" (ultracode).**
   User: mix the faculty build into a serious cross-surface (web+mobile) data-presentation + UI overhaul,
   run with ultracode. Ambition chosen: **HYBRID** (new design system + chart vocabulary + first-class

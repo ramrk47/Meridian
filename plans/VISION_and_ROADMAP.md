@@ -129,6 +129,17 @@ before building the predictor/tracker on it. Governed by `DATA_VISUAL_STANDARD.m
 - **3b · Do-next intelligence** — weakest-subject routing from scores + untracked-high-yield gap (H4).
 - **3c · Ratings scaffold (hybrid)** — seed "best faculty by subject" + read-only dated reliability
   scorecard; local-first, schema ready to sync; neutrality firewall labeled (H3).
+- **3d · Curator layer (post-backend)** — outcome-verified "people who made it" (good rank / matched PG)
+  as a credibility tier on ratings + a tagged blog whose references one-tap into the planner. The graduation
+  of Fork #2 to observed-outcome signals; twin of the faculty pillar. Spec: `plans/CURATOR_LAYER.md`. Needs
+  accounts + outcome-verification → behind the backend gate.
+- **3e · Study Planner as the retain surface** — editable/customizable + shareable peer planner +
+  accountability engine (plan-adherence not vanity hours; "done diary" derived from real tracked activity;
+  small peer pods + WhatsApp-shareable weekly snapshot). Solo planner + templates + done-diary are
+  **local-first (buildable Phase 2/3)**; sharing/pods need the backend. Spec: `plans/STUDY_PLANNER.md`.
+
+> **Naming:** the product is now **Calvetra** (renamed from Meridian, 2026-06-27 — `plans/NAME_CANDIDATES.md`).
+> calvetra.com + IP-India/USPTO trademark clearance required before public launch.
 
 ### ⟐ Gate — wedge proves traction → add **accounts + backend** (PHP/DB on the `storage.js` seam)
 Unlocks pace-benchmark, pods, crowd-rating aggregation, and Pro payments. Deploy to a
