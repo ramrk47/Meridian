@@ -31,7 +31,7 @@
 - **Quick-schedule:** assign subject(s) to a date range → auto-distributes that subject's modules/videos across
   the days, weighted by MCQ-density (proxy-labelled), respecting a daily load cap.
 - **Intensity templates:** *Hybrid* (videos + MCQs), *MCQ-heavy*, *Revision/PYQ*, *Custom* (pick platform +
-  activity type).
+  activity type) — defaults to the student's **My-subscriptions** set (see below) when present.
 - **Manual/custom:** hand-pick modules per day (power users).
 
 ## The "done diary" — auto-logging from real tracking (the user's idea, strengthened)
@@ -68,7 +68,30 @@ Mechanisms, ordered by leverage and sequenced local → social:
   own editable state.
 - **Non-competitive by design** — a solidarity board, never a leaderboard.
 
+## My subscriptions — the personal-banks lens (FUTURE; lands with the substantial planner upgrade)
+> Captured 2026-06-28 from the user. **Parked, not built** — to ship as part of the planner overhaul.
+- **The primitive:** a first-class user-state set of the platforms the student actually pays for / owns —
+  a subset of the 5 (`Store.state.subs = ["marrow","prepladder",…]`, default empty = opt-in). Set via a
+  small "My banks" selector (5 platform toggle-chips) in the toolbar + mobile overflow menu, next to Theme.
+- **UI ask (verbatim intent):** above the general per-topic coverage pips (the muted `M C D P E` row from
+  `libCoverageChips`, `core.js`), render a **separate, emphasized upper row in slightly bigger font** that
+  highlights the student's *subscribed* platforms — covered = full-color pip, not-covered = outlined/muted —
+  so they instantly see "do **my** banks cover this high-yield topic?" The general all-platforms row stays
+  below as the neutral reference. When `subs` is empty, only the general row shows (no clutter; opt-in).
+  Surfaces: High-Yield rows + Subject-page topic rows (both already call `libCoverageChips`); the change is
+  centralized there, so it propagates everywhere for free.
+- **Why it belongs to the planner:** the same `subs` set **scopes plan generation** — *Custom* mode and the
+  intensity templates distribute only from owned banks, and the done-diary/adherence judge what the student
+  can actually do. It also sharpens the honest-gap signal: an HY topic none of *my* banks cover is a real
+  personal gap (consider a complement, e.g. a PYQ pass).
+- **Build notes:** purely additive — a `subs[]`/`toggleSub()`/`isSub()` trio in `storage.js`, a `.cov-mine`
+  upper row + CSS (bigger pips, covered vs `.off`) in `libCoverageChips`, and the selector wiring. No spine
+  or mapping change; rides on the now-trustworthy `platformRefs` (post Mapping-Audit, 594/787 · 152/157 HY).
+- **Ties:** [[study-planner-pillar]]; the cross-platform map (coverage source); curator/peer "adopt plan".
+
 ## Schema seam (mostly user-state; build-friendly)
+- **`Store.state.subs[]`** (the My-subscriptions set, above) is the personalization seam — read by both the
+  coverage-pip "my banks" row and plan generation; local-first, syncs later with the rest of user-state.
 - **Local-first now:** `Store.state.schedule` already exists as the seam. Plan shape:
   `plan = { id, name, mode, range:{from,to}, dailyCap?, items:[{ entity:{type,id}, targetDate }], commitments:[…], adoptedFrom? }`
 - **"Done diary" is DERIVED** from existing `progress[*].ts` + `videos[*].ts` (group by day; match item ids) — no
