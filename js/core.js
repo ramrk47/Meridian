@@ -284,6 +284,7 @@ if (LIB) LIB.subjects.forEach(s => {
   s.sections.forEach(sec => sec.topics.forEach(t => LIB_TOPICS.push(Object.assign({ subject: s.subject, section: sec.name }, t))));
 });
 const LIB_SUBJECTS = LIB ? LIB.subjects.map(s => s.subject) : [];
+const LIB_TOPIC_BY_ID = Object.fromEntries(LIB_TOPICS.map(t => [t.id, t]));
 const _byImp = (a, b) => (b.importance - a.importance) || ((b.timesRepeated || 0) - (a.timesRepeated || 0));
 function libTopics(canonSubj) { return LIB_TOPICS.filter(t => t.subject === canonSubj).sort(_byImp); }
 function libTopTopics(n) { return LIB_TOPICS.slice().sort(_byImp).slice(0, n || 24); }

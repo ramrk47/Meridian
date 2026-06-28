@@ -115,6 +115,8 @@ function showEntity(kind) {
   $$("#botnav button").forEach(b => { b.classList.remove("active"); b.setAttribute("aria-current", "false"); });
   const home = $("#btnHome"); if (home) { home.classList.remove("active"); home.setAttribute("aria-current", "false"); }
   $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + kind));
+  const sn = $("#subnav"); if (sn) { sn.innerHTML = ""; sn.hidden = true; } // entity pages aren't a group
+  requestAnimationFrame(placeBotnavInd);
   labelizeResponsiveTables(); setHeaderHeight();
   window.scrollTo({ top: 0, behavior: "instant" });
 }
@@ -359,9 +361,95 @@ function toggleTheme() {
 }
 
 const RENDER = { overview: renderOverview, qbank: renderQbank, tracker: renderTracker, progress: renderProgress, tests: renderTests, hy: renderHY, videos: renderVideos, planner: renderPlanner };
-const TAB_ORDER = ["overview", "qbank", "tracker", "progress", "tests", "hy", "videos", "planner"];
-const TAB_LABEL = { overview: "Overview", qbank: "QBank Tracker", tracker: "Cross-platform Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
+const TAB_LABEL = { overview: "Overview", qbank: "QBank", tracker: "Cross-platform Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
 let currentView = "overview";
+
+/* ============================================================
+   NAV GROUPS — ≤5 bottom-bar buttons; related sections merge into a
+   group and a top "sub-nav" lens switcher picks between them (the same
+   mechanic as the Tracker's Cross-platform/PYQ toggle, lifted up so it
+   serves every grouped tab). A lens = {view, label, lens?}; `lens` (for
+   the tracker) sets trkLens before rendering. show(view) stays the atom —
+   every deep-link / palette / hotkey / Back path calls it and the group
+   chrome (tabs + bottom bar + sub-nav) re-syncs from the resulting view.
+   ============================================================ */
+const NAV_GROUPS = [
+  { id: "home", label: "Home", icon: "⌂", lenses: [{ view: "overview", label: "Overview" }] },
+  { id: "track", label: "Track", icon: "⊞", lenses: [
+      { view: "tracker", label: "Cross-platform", lens: "cross" },
+      { view: "tracker", label: "PYQ", lens: "pyq" },
+      { view: "qbank", label: "QBank" }] },
+  { id: "plan", label: "Plan", icon: "◆", lenses: [
+      { view: "planner", label: "Planner" }, { view: "hy", label: "High-Yield" }] },
+  { id: "stats", label: "Stats", icon: "◔", lenses: [
+      { view: "progress", label: "Progress" }, { view: "tests", label: "Tests & Scores" }] },
+  { id: "videos", label: "Videos", icon: "▷", lenses: [{ view: "videos", label: "Videos" }] },
+];
+const GROUP_BY_ID = Object.fromEntries(NAV_GROUPS.map(g => [g.id, g]));
+const GROUP_OF_VIEW = {}; // view -> owning groupId (first match)
+NAV_GROUPS.forEach(g => g.lenses.forEach(l => { if (!(l.view in GROUP_OF_VIEW)) GROUP_OF_VIEW[l.view] = g.id; }));
+const GROUP_LAST = {};    // groupId -> last-used lens index (so re-tapping a group returns to your lens)
+
+/* build the desktop tab bar + mobile bottom bar from NAV_GROUPS (once, in init) */
+function renderNavChrome() {
+  const tabs = $("#tabs");
+  if (tabs) tabs.innerHTML = NAV_GROUPS.map(g =>
+    `<button class="tab" role="tab" data-group="${g.id}" aria-selected="false" tabindex="-1">${esc(g.label)}</button>`).join("");
+  const bot = $("#botnav");
+  if (bot) bot.innerHTML = NAV_GROUPS.map(g =>
+    `<button data-group="${g.id}" aria-label="${esc(g.label)}"><span class="bn-i" aria-hidden="true">${g.icon}</span><span class="bn-l">${esc(g.label)}</span></button>`).join("")
+    + `<span class="bn-ind" aria-hidden="true"></span>`;
+}
+/* which lens of a group is active for the current view (+ tracker sub-state) */
+function _activeLensIndex(g, view) {
+  for (let i = 0; i < g.lenses.length; i++) { const l = g.lenses[i]; if (l.view === view && (!l.lens || l.lens === trkLens)) return i; }
+  for (let i = 0; i < g.lenses.length; i++) { if (g.lenses[i].view === view) return i; }
+  return 0;
+}
+/* render the top sub-nav lens switcher (only when the group has ≥2 lenses) */
+function renderSubnav(groupId, view) {
+  const sn = $("#subnav"); if (!sn) return;
+  const g = GROUP_BY_ID[groupId];
+  if (!g || g.lenses.length < 2) { sn.innerHTML = ""; sn.hidden = true; return; }
+  const idx = _activeLensIndex(g, view);
+  sn.hidden = false;
+  sn.innerHTML = `<div class="subnav-inner" role="tablist" aria-label="${esc(g.label)} views">`
+    + g.lenses.map((l, i) => `<button class="subnav-btn${i === idx ? " on" : ""}" role="tab" data-lensidx="${i}" aria-selected="${i === idx ? "true" : "false"}" tabindex="${i === idx ? "0" : "-1"}">${esc(l.label)}</button>`).join("")
+    + `</div>`;
+}
+/* slide the bottom-bar active indicator under the active group button */
+function placeBotnavInd() {
+  const bot = $("#botnav"); if (!bot) return;
+  const ind = $(".bn-ind", bot), on = $("button.active[data-group]", bot);
+  if (!ind) return;
+  if (!on || !on.offsetParent) { ind.style.width = "0px"; return; }
+  ind.style.transform = `translateX(${on.offsetLeft}px)`;
+  ind.style.width = on.offsetWidth + "px";
+}
+/* open a group → its remembered (or first) lens */
+function showGroup(groupId) {
+  const g = GROUP_BY_ID[groupId]; if (!g) return;
+  let idx = GROUP_LAST[groupId] != null ? GROUP_LAST[groupId] : 0;
+  if (idx >= g.lenses.length) idx = 0;
+  showLens(groupId, idx);
+}
+/* open a specific lens within a group */
+function showLens(groupId, idx) {
+  const g = GROUP_BY_ID[groupId]; if (!g) return;
+  const l = g.lenses[idx]; if (!l) return;
+  GROUP_LAST[groupId] = idx;
+  if (l.lens && l.view === "tracker") trkLens = l.lens;   // set sub-state BEFORE the view renders
+  show(l.view);
+}
+/* sync tabs + bottom bar + sub-nav off the active view (called by show()) */
+function _syncGroupChrome(view) {
+  const gid = GROUP_OF_VIEW[view];
+  $$("#tabs .tab").forEach(t => { const on = t.dataset.group === gid; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
+  $$("#botnav button[data-group]").forEach(b => { const on = b.dataset.group === gid; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
+  const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
+  renderSubnav(gid, view);
+  requestAnimationFrame(placeBotnavInd);
+}
 function show(view) {
   // entity views aren't tabs and have no RENDER entry — re-paint them from the live hash instead
   // (keeps show(currentView) safe after import/reset while an entity page is open).
@@ -371,9 +459,7 @@ function show(view) {
   // today's exact behavior, so routing/Back/refresh logic is unchanged.
   viewTransition(() => {
     currentView = view;
-    $$(".tab").forEach(t => { const on = t.dataset.view === view; t.classList.toggle("active", on); t.setAttribute("aria-selected", on ? "true" : "false"); });
-    $$("#botnav button").forEach(b => { const on = b.dataset.view === view; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
-    const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
+    _syncGroupChrome(view);              // tabs + bottom bar + sub-nav lens switcher
     const mt = $("#mobTitle"); if (mt) mt.textContent = TAB_LABEL[view] || view;
     $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + view));
     RENDER[view]();
@@ -444,7 +530,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") { closeSheet(); closeDrawer(); return; }
   if (typing) return;
   if (e.key === "/") { e.preventDefault(); openPalette(); return; }
-  if (e.key >= "1" && e.key <= "9" && +e.key <= TAB_ORDER.length) { show(TAB_ORDER[+e.key - 1]); return; }
+  if (e.key >= "1" && e.key <= "9" && +e.key <= NAV_GROUPS.length) { showGroup(NAV_GROUPS[+e.key - 1].id); return; }
   // QBank keyboard tracking
   if (currentView === "qbank") {
     const k = e.key.toLowerCase();
@@ -467,8 +553,10 @@ function init() {
   wireToolbar();
   wireMobileChrome();
   wireDrawerDrag();
-  $("#tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) show(b.dataset.view); });
-  $("#botnav").addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.dataset.view); });
+  renderNavChrome();
+  $("#tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b && b.dataset.group) showGroup(b.dataset.group); });
+  $("#botnav").addEventListener("click", e => { const b = e.target.closest("button[data-group]"); if (b) showGroup(b.dataset.group); });
+  $("#subnav").addEventListener("click", e => { const b = e.target.closest(".subnav-btn"); if (b) showLens(GROUP_OF_VIEW[currentView], +b.dataset.lensidx); });
   $("#btnHome")?.addEventListener("click", () => show("overview"));
   document.body.addEventListener("click", appClick); // body, not #app — drawer/palette live outside #app
   $("#app").addEventListener("input", testsInput);
@@ -493,6 +581,7 @@ function init() {
   $("#sheetClose").addEventListener("click", closeSheet);
   $("#sheetBody").addEventListener("click", e => { const b = e.target.closest(".sheet-opt"); if (b) { const v = b.dataset.v, cb = sheetPick; closeSheet(); if (cb) cb(v); } });
   window.addEventListener("resize", setHeaderHeight);
+  window.addEventListener("resize", placeBotnavInd);
   // hash routing: Back/Forward + refresh restore the exact entity page or tab (spec §4).
   // Browser Back decrements our nav depth so goBack() knows when there's history left.
   window.addEventListener("hashchange", () => {

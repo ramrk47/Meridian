@@ -329,16 +329,39 @@ td.num,th.num{text-align:right}
 .overflow-menu button:hover{background:var(--paper-3)}
 .overflow-menu button.danger{color:var(--bad)}
 
-/* ---- bottom tab nav (fixed, thumb-reach) ---- */
-.botnav{display:none}
-.botnav button{flex:1;min-width:0;background:none;border:0;cursor:pointer;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
-  padding:7px 1px 6px;color:var(--ink-3);font:600 9.5px var(--sans);letter-spacing:.01em;min-height:54px}
-.botnav .bn-i{font-size:18px;line-height:1}
+/* ---- bottom tab nav (fixed, thumb-reach; ≤5 groups + sliding indicator) ---- */
+.botnav{display:none;position:relative}
+.botnav button[data-group]{flex:1;min-width:0;background:none;border:0;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  padding:8px 1px 7px;color:var(--ink-3);font:600 10px var(--sans);letter-spacing:.01em;min-height:58px;
+  transition:color .18s var(--ease-soft,ease)}
+.botnav .bn-i{font-size:20px;line-height:1;transition:transform .2s var(--ease-soft,ease)}
 .botnav .bn-l{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .botnav button.active{color:var(--accent)}
-.botnav button.active .bn-i{transform:translateY(-1px)}
+.botnav button.active .bn-i{transform:translateY(-1px) scale(1.06)}
 .botnav button:active{background:var(--paper-3)}
+/* sliding active indicator — a slim accent rule at the top edge that glides to the active group */
+.botnav .bn-ind{position:absolute;top:0;left:0;height:2.5px;width:0;background:var(--accent);
+  border-radius:0 0 3px 3px;transition:transform .28s var(--ease-soft,ease),width .28s var(--ease-soft,ease);pointer-events:none}
+@media (prefers-reduced-motion:reduce){.botnav .bn-ind,.botnav .bn-i,.botnav button[data-group]{transition:none}}
+
+/* ---- top sub-nav lens switcher (grouped tabs: Cross-platform · PYQ · QBank, etc.) ---- */
+#subnav{display:flex;justify-content:center;position:sticky;top:var(--hh,0);z-index:30;
+  padding:8px 0 6px;margin:-2px 0 6px;background:linear-gradient(var(--paper) 72%,transparent)}
+#subnav[hidden]{display:none}
+.subnav-inner{display:inline-flex;gap:2px;background:var(--paper-3);border:1px solid var(--line);
+  border-radius:11px;padding:3px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-btn{background:none;border:0;cursor:pointer;white-space:nowrap;padding:7px 16px;border-radius:8px;
+  font:600 13px var(--sans);color:var(--ink-2);transition:background .18s var(--ease-soft,ease),color .18s var(--ease-soft,ease)}
+.subnav-btn:hover{color:var(--ink)}
+.subnav-btn.on{background:var(--paper);color:var(--ink);box-shadow:0 1px 2px rgba(35,32,27,.07),0 0 0 1px var(--line)}
+@media (prefers-reduced-motion:reduce){.subnav-btn{transition:none}}
+@media (max-width:640px){
+  #subnav{justify-content:stretch;padding:6px 0}
+  .subnav-inner{width:100%;justify-content:space-between}
+  .subnav-btn{flex:1;text-align:center;padding:8px 8px;font-size:12.5px}
+}
 
 /* desktop default: hide all mobile-only chrome (after .iconbtn so the combo .iconbtn.mob-only stays hidden) */
 .mob-title,.mob-only,.mob-ctrl{display:none}
