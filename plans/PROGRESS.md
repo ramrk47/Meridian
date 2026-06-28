@@ -121,9 +121,15 @@
   density demoted to a clearly-labelled `proxy` lens (kept, not deleted). Verified 320→1440 day+evening,
   console clean, no h-scroll; 375+1440 of HY + a Subject page. Commits `f6d6564`·`737f673`·`d3289a3`·`9f0c1ac`.
   ⚠️ Mapping is the highest-risk artifact — worth an adversarial/ultracode audit before the tracker builds on it.
+### Mapping Audit & Recall-Recovery (NEW — after 1d, before Phase 2) — `MAPPING_AUDIT_BRIEF.md` (ULTRACODE)
+- [ ] Raise platform↔canonical-topic mapping **recall** (1d shipped precision-first: 232/787 topics, 77/157 HY;
+  Marrow only 46/157, Cere 14 — recall failures, not real gaps) **without losing precision**. Per-subject
+  propose→refute fan-out; handle 1:many/many:1 granularity; keep only maps that survive adversarial refutation.
+  *The tracker is built on this map — must be trustworthy first.*
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer) —
-  `PHASE2B_PROMPT.md`, now **rebuilt on the 1d canonical spine** (its Stage-1 platform integration moved into 1d).
+  `PHASE2B_PROMPT.md`, **rebuilt on the 1d canonical spine** (Stage-1 platform integration moved into 1d);
+  build **after** the mapping audit lands.
 - [ ] **Free Rank/College Predictor** (results-season lead magnet) — Phase 2a, its own data-first session next.
 ### Phase 3 — retention & the ratings graph (the moat)
 - [ ] **Spaced revision / error-log → verified re-test queue** (H2/job#4 — top pain).
@@ -138,6 +144,11 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-28 **Phase 1d verified+accepted; next = an ULTRACODE Mapping Audit before Phase 2b** (`MAPPING_AUDIT_BRIEF.md`).
+  Independent recompute matched the builder: D.library 19/170/787, **77/157 HY mapped**, 56,091 preserved,
+  PrepLadder/eGurukul integrated as `kind:lecture`/null-MCQ, High-Yield now importance-first. The mapping is
+  precision-first/**low-recall** (Marrow 46/157, Cere 14/157 = recall failures, not real gaps) — building the
+  flagship tracker on it would understate coverage. Recover recall via per-subject propose→refute, precision preserved.
 - 2026-06-28 **Phase 1d shipped — Canonical Topic Library, Importance Spine, all-5-platform map.** Parsed the
   Reddit masterlist into `D.library` (787 topics, PYQ-frequency importance, `directional`); integrated
   PrepLadder + eGurukul as `kind:"lecture"` (`mcqs:null`, measured MCQ unchanged at **56,091**); mapped all 5
