@@ -48539,7 +48539,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-surgery-lower-gi-hernia-surgery-hernia-690"
+         ],
+         "egurukul": [
+          "e-surgery-inguinal-hernia-54"
+         ]
+        }
        },
        {
         "id": "lib-surgery-oesophageal-varices-2",
@@ -48601,7 +48608,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-surgery-oesophagus-15"
+         ]
+        }
        },
        {
         "id": "lib-surgery-choledocholithiasis-7",
@@ -48613,7 +48624,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-surgery-gall-bladder-choledocholithiasis-bile-duct-injury-6"
+         ]
+        }
        },
        {
         "id": "lib-surgery-acute-pancreatitis-8",
@@ -48625,7 +48640,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-surgery-spleen-pancreatic-surgery-congenital-anomalies-and-acute-pancreatitis-698"
+         ],
+         "egurukul": [
+          "e-surgery-pancreas-management-of-acute-chronic-pancreatitis-14"
+         ]
+        }
        },
        {
         "id": "lib-surgery-peptic-ulcer-9",
@@ -48663,7 +48685,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-surgery-spleen-pancreatic-surgery-chronic-pancreatitis-699"
+         ],
+         "egurukul": [
+          "e-surgery-pancreas-management-of-acute-chronic-pancreatitis-14"
+         ]
+        }
        },
        {
         "id": "lib-surgery-hepatocellular-carcinoma-12",
@@ -48687,7 +48716,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-surgery-liver-27"
+         ],
+         "prepladder": [
+          "p-surgery-transplantation-71"
+         ]
+        }
        },
        {
         "id": "lib-surgery-gallstone-ileus-14",
@@ -48711,7 +48747,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-surgery-lower-gi-hernia-surgery-hernia-690"
+         ]
+        }
        },
        {
         "id": "lib-surgery-rectal-polyp-16",
@@ -48788,7 +48828,18 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-surgery-breast-breast-anatomy-congenital-and-benign-diseases-670",
+          "m-surgery-breast-carcinoma-breast-risk-factors-and-types-671",
+          "m-surgery-breast-investigations-in-breast-diseases-672",
+          "m-surgery-breast-carcinoma-breast-staging-prognosis-molecular-types-673",
+          "m-surgery-breast-carcinoma-breast-treatment-674"
+         ],
+         "egurukul": [
+          "e-surgery-staging-of-carcinoma-breast-36"
+         ]
+        }
        },
        {
         "id": "lib-surgery-oral-cavity-cancer-22",
@@ -48800,7 +48851,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-surgery-oral-cavity-3"
+         ],
+         "egurukul": [
+          "e-surgery-oral-cavity-84"
+         ]
+        }
        },
        {
         "id": "lib-surgery-triage-23",
@@ -48814,7 +48872,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-surgery-trauma-141"
+         ],
+         "egurukul": [
+          "e-surgery-triage-89"
+         ]
+        }
        },
        {
         "id": "lib-surgery-fistula-in-ano-24",
@@ -48890,7 +48955,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-surgery-plastic-surgery-burns-709"
+         ],
+         "prepladder": [
+          "p-surgery-burns-60"
+         ],
+         "egurukul": [
+          "e-surgery-burns-78"
+         ]
+        }
        },
        {
         "id": "lib-surgery-meleney-s-gangrene-30",
@@ -48928,7 +49003,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-surgery-lymphedema-clinical-presentation-53"
+         ]
+        }
        },
        {
         "id": "lib-surgery-vaccum-assisted-closure-33",
@@ -48966,7 +49045,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-surgery-varicose-vein-82"
+         ]
+        }
        },
        {
         "id": "lib-surgery-keloid-36",
@@ -49230,7 +49313,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-surgery-neuroendocrine-endocrine-neoplasm-of-pancreas-carcinoid-tumour-71"
+         ]
+        }
        }
       ]
      },
@@ -49247,7 +49334,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-surgery-ihd-aortic-dissection-part-2-66"
+         ]
+        }
        },
        {
         "id": "lib-surgery-peripheral-arterial-disease-58",
@@ -49339,7 +49430,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-surgery-bladder-31"
+         ],
+         "egurukul": [
+          "e-surgery-gall-bladder-gall-bladder-bile-duct-cancer-7"
+         ]
+        }
        },
        {
         "id": "lib-surgery-penile-carcinoma-65",
@@ -49363,7 +49461,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-surgery-bladder-31"
+         ]
+        }
        },
        {
         "id": "lib-surgery-urethral-strictur-67",
@@ -49399,7 +49501,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-surgery-renal-stones-infections-disorders-of-kidney-hydronephrosis-and-genitouri-44"
+         ]
+        }
        },
        {
         "id": "lib-surgery-urethral-injury-70",
@@ -49508,7 +49614,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-general-gynaecology-fibroid-820"
+         ],
+         "doctutorials": [
+          "d-ob-g-fibroid-3"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-fibroids-and-polyps-13"
+         ],
+         "egurukul": [
+          "e-obg-uterine-fibroids-66"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-mullerian-anomalies-78",
@@ -49520,7 +49639,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-obstetrics-gynecology-mullerian-anomalies-180"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-prolapse-79",
@@ -49532,7 +49655,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-general-gynaecology-prolapse-819"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-pelvic-organ-prolapse-31"
+         ],
+         "egurukul": [
+          "e-obg-genital-prolapse-81"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-menstrual-cycle-80",
@@ -49558,7 +49691,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-gynaecology-obstetrics-aub-postmenopausal-and-postcoital-bleeding-69"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-primary-amenorrhea-82",
@@ -49570,7 +49707,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-obstetrics-gynecology-amenorrhoea-179"
+         ],
+         "doctutorials": [
+          "d-ob-g-amenorrhea-8"
+         ],
+         "egurukul": [
+          "e-obg-primary-amenorrhea-79"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-dilatation-and-curettage-83",
@@ -49630,7 +49777,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-gynaecology-obstetrics-embryology-and-associated-disorders-18"
+         ],
+         "egurukul": [
+          "e-obg-embryology-48"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-puberty-88",
@@ -49642,7 +49796,21 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-fundamentals-of-reproduction-sexual-development-puberty-a-792"
+         ],
+         "doctutorials": [
+          "d-ob-g-sexual-development-puberty-adolescence-disorders-of-puberty-2"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-sexual-differentiation-puberty-17",
+          "p-gynaecology-obstetrics-disorders-of-puberty-amenorrhea-menopause-20"
+         ],
+         "egurukul": [
+          "e-obg-normal-abnormal-puberty-51"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-menorrhagia-89",
@@ -49707,7 +49875,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-gynaecologic-infections-vaginal-infections-824"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-genital-tb-94",
@@ -49719,7 +49891,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-gynaecology-obstetrics-vulval-infections-and-genital-tb-9"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-bartholin-abscess-95",
@@ -49786,7 +49962,23 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-infertility-and-menopause-infertility-828",
+          "m-obstetrics-gynaecology-infertility-and-menopause-perimenopause-menopause-and-pos-829"
+         ],
+         "cerebellum": [
+          "c-obstetrics-gynecology-infertility-181"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-infertility-i-22",
+          "p-gynaecology-obstetrics-infertility-ii-23"
+         ],
+         "egurukul": [
+          "e-obg-female-infertility-74",
+          "e-obg-male-infertility-76"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-iucd-100",
@@ -49810,7 +50002,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-ob-g-contraception-15"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-contraception-34"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-medical-termonation-of-pregnancy-mtp-102",
@@ -49887,7 +50086,15 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-gynaecology-obstetrics-cervical-carcinoma-i-25",
+          "p-gynaecology-obstetrics-cervical-carcinoma-ii-26"
+         ],
+         "egurukul": [
+          "e-obg-cervical-cancer-54"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-condyloma-acuminata-108",
@@ -49911,7 +50118,18 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-gynaecologic-oncology-ovarian-tumors-830"
+         ],
+         "doctutorials": [
+          "d-ob-g-ovarian-tumors-part-1-13",
+          "d-ob-g-ovarian-tumors-part-2-14"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-ovarian-tumors-29"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-endometrial-cancer-110",
@@ -49923,7 +50141,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-gynaecology-obstetrics-endometrial-carcinoma-28"
+         ],
+         "egurukul": [
+          "e-obg-endometrial-carcinoma-55"
+         ]
+        }
        }
       ]
      },
@@ -49940,7 +50165,21 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-fundamentals-of-reproduction-placenta-and-fetal-membranes-791"
+         ],
+         "doctutorials": [
+          "d-ob-g-placenta-accreta-retained-placenta-amniotic-fluid-embolism-uterine-inversio-31"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-abnormalities-of-placenta-and-umbilical-cord-59"
+         ],
+         "egurukul": [
+          "e-obg-the-placenta-fetal-membranes-18",
+          "e-obg-placenta-previa-43"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-hormones-during-pregnancy-112",
@@ -50108,7 +50347,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-obg-eclampsia-0"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-hellp-syndrome-125",
@@ -50120,7 +50363,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-obg-hellp-syndrome-7"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-gestational-diabetes-mellitus-126",
@@ -50134,7 +50381,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-gynaecology-obstetrics-gestational-diabetes-mellitus-58"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-radiation-exposure-during-pregnancy-127",
@@ -50187,7 +50438,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-obstetric-complications-postpartum-haemorrhage-808"
+         ],
+         "doctutorials": [
+          "d-ob-g-postpartum-hemorrhage-29"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-postpartum-hemorrhage-51"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-ectopic-pregnancy-131",
@@ -50199,7 +50460,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-obstetric-complications-ectopic-pregnancy-805"
+         ],
+         "doctutorials": [
+          "d-ob-g-ectopic-pregnancy-gestational-trophoblastic-diseases-33"
+         ],
+         "prepladder": [
+          "p-gynaecology-obstetrics-ectopic-pregnancy-42"
+         ],
+         "egurukul": [
+          "e-obg-ectopic-pregnancy-39"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-amniotic-fluid-embolism-132",
@@ -50214,7 +50488,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-ob-g-placenta-accreta-retained-placenta-amniotic-fluid-embolism-uterine-inversio-31"
+         ],
+         "egurukul": [
+          "e-obg-amniotic-fluid-it-s-disorders-13"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-placenta-previa-133",
@@ -50228,7 +50509,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-ob-g-placenta-accreta-retained-placenta-amniotic-fluid-embolism-uterine-inversio-31"
+         ],
+         "egurukul": [
+          "e-obg-placenta-previa-43"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-superfecundation-134",
@@ -50287,7 +50575,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-obg-breech-presentation-23"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-normal-labour-138",
@@ -50301,7 +50593,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-obstetrics-gynaecology-labor-and-puerperium-normal-labour-797"
+         ],
+         "cerebellum": [
+          "c-obstetrics-gynecology-labor-normal-169"
+         ]
+        }
        },
        {
         "id": "lib-obstetrics-gynaecology-c-section-indications-139",
@@ -50396,7 +50695,22 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-hodgkin-s-lymphoma-263",
+          "m-pathology-hematology-non-hodgkin-lymphomas-general-considerations-264",
+          "m-pathology-hematology-non-hodgkin-lymphomas-low-grade-265",
+          "m-pathology-hematology-non-hodgkin-lymphomas-high-grade-266"
+         ],
+         "prepladder": [
+          "p-pathology-hodgkin-s-and-non-hodgkin-s-lymphoma-85",
+          "p-pathology-non-hodgkin-s-lymphoma-low-high-grade-86"
+         ],
+         "egurukul": [
+          "e-pathology-non-hodgkins-lymphoma-50",
+          "e-pathology-hodgkins-lymphoma-53"
+         ]
+        }
        },
        {
         "id": "lib-pathology-leukaemia-146",
@@ -50408,7 +50722,16 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-acute-lymphocytic-leukemia-all-261",
+          "m-pathology-hematology-acute-myeloid-leukemia-aml-262"
+         ],
+         "egurukul": [
+          "e-pathology-acute-leukemia-clinical-features-classification-44",
+          "e-pathology-chronic-myeloid-leukemia-46"
+         ]
+        }
        },
        {
         "id": "lib-pathology-disorders-of-haemoglobin-147",
@@ -50432,7 +50755,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-coagulation-pathway-disorders-259"
+         ],
+         "egurukul": [
+          "e-pathology-coagulation-pathways-disorders-64"
+         ]
+        }
        },
        {
         "id": "lib-pathology-multiple-myeloma-and-amyloid-149",
@@ -50444,7 +50774,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-multiple-myeloma-and-plasma-cell-disorders-267"
+         ]
+        }
        },
        {
         "id": "lib-pathology-macrocytic-anemia-150",
@@ -50456,7 +50790,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-normocytic-and-macrocytic-anemia-254"
+         ],
+         "prepladder": [
+          "p-pathology-macrocytic-hypochromic-normocytic-anemia-78"
+         ]
+        }
        },
        {
         "id": "lib-pathology-iron-deficiency-anemia-151",
@@ -50480,7 +50821,18 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-g6pd-deficiency-and-autoimmune-hemolytic-anemias-257"
+         ],
+         "prepladder": [
+          "p-pathology-hemolytic-anemia-i-75",
+          "p-pathology-hemolytic-anemia-ii-76"
+         ],
+         "egurukul": [
+          "e-pathology-hemolytic-anemia-classification-examples-6"
+         ]
+        }
        },
        {
         "id": "lib-pathology-transfusion-153",
@@ -50492,7 +50844,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-hematology-blood-products-and-transfusion-reactions-260"
+         ],
+         "doctutorials": [
+          "d-pathology-blood-banking-transfusion-medicine-17"
+         ],
+         "prepladder": [
+          "p-pathology-blood-banking-and-transfusion-pathology-90"
+         ]
+        }
        },
        {
         "id": "lib-pathology-types-of-rbc-in-ps-154",
@@ -50533,7 +50895,30 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-general-pathology-cellular-genetics-adaptations-and-injury-236",
+          "m-pathology-general-pathology-chromosomal-disorders-and-other-genetic-disorders-245",
+          "m-pathology-hematology-myelodysplastic-syndrome-myeloproliferative-syndromes-and-h-268"
+         ],
+         "cerebellum": [
+          "c-pathology-genetics-64"
+         ],
+         "doctutorials": [
+          "d-pathology-genetic-disorders-10"
+         ],
+         "prepladder": [
+          "p-pathology-genetics-introduction-mendelian-disorders-10",
+          "p-pathology-diagnosis-of-genetic-disorders-and-miscellaneous-13",
+          "p-pathology-malabsorption-syndrome-celiac-disease-and-ibd-46"
+         ],
+         "egurukul": [
+          "e-pathology-nephrotic-syndrome-basics-30",
+          "e-pathology-alports-syndrome-32",
+          "e-pathology-myelodysplastic-syndrome-43",
+          "e-pathology-diagnosis-of-genetic-disorders-61"
+         ]
+        }
        },
        {
         "id": "lib-pathology-inflammation-157",
@@ -50545,7 +50930,38 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-general-pathology-acute-inflammation-239",
+          "m-pathology-general-pathology-inflammatory-mediators-and-granulomatous-inflammatio-240"
+         ],
+         "cerebellum": [
+          "c-pathology-inflammation-44",
+          "c-pathology-inflammation-46",
+          "c-pathology-inflammation-48",
+          "c-pathology-inflammation-50",
+          "c-pathology-inflammation-52"
+         ],
+         "doctutorials": [
+          "d-pathology-inflammation-part-1-6",
+          "d-pathology-inflammation-part-2-7",
+          "d-pathology-inflammation-part-3-8"
+         ],
+         "prepladder": [
+          "p-pathology-acute-inflammation-6",
+          "p-pathology-chronic-inflammation-7",
+          "p-pathology-mediators-of-inflammation-8"
+         ],
+         "egurukul": [
+          "e-pathology-vascular-events-of-inflammation-70",
+          "e-pathology-cellular-events-of-inflammation-71",
+          "e-pathology-mediators-of-inflammation-73",
+          "e-pathology-morphological-types-of-acute-inflammation-74",
+          "e-pathology-fate-of-acute-inflammation-76",
+          "e-pathology-chronic-inflammation-77",
+          "e-pathology-defects-of-inflammation-78"
+         ]
+        }
        },
        {
         "id": "lib-pathology-grafts-158",
@@ -50569,7 +50985,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pathology-metaplasia-20"
+         ]
+        }
        },
        {
         "id": "lib-pathology-cell-injury-and-adaptation-160",
@@ -50581,7 +51001,25 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-general-pathology-cellular-genetics-adaptations-and-injury-236"
+         ],
+         "cerebellum": [
+          "c-pathology-cell-injury-43"
+         ],
+         "doctutorials": [
+          "d-pathology-cellular-pathology-and-cell-injury-part-1-0",
+          "d-pathology-cellular-pathology-and-cell-injury-part-2-2"
+         ],
+         "prepladder": [
+          "p-pathology-cell-injury-free-radical-injury-and-er-stress-related-0",
+          "p-pathology-cell-ageing-autophagy-and-cellular-adaptations-2"
+         ],
+         "egurukul": [
+          "e-pathology-introduction-to-cell-injury-18"
+         ]
+        }
        },
        {
         "id": "lib-pathology-thrombosis-161",
@@ -50593,7 +51031,15 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pathology-hemodynamic-disorders-thrombosis-3"
+         ],
+         "egurukul": [
+          "e-pathology-thrombosis-79",
+          "e-pathology-morphology-of-thrombosis-80"
+         ]
+        }
        },
        {
         "id": "lib-pathology-telomere-162",
@@ -50672,7 +51118,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pathology-ischemic-heart-disease-and-myocardial-infarction-29"
+         ]
+        }
        },
        {
         "id": "lib-pathology-rheumatic-heart-disease-and-infective-endocarditis-168",
@@ -50684,7 +51134,15 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pathology-rhd-and-infective-endocarditis-30"
+         ],
+         "egurukul": [
+          "e-pathology-infective-endocarditis-96",
+          "e-pathology-rheumatic-heart-disease-99"
+         ]
+        }
        },
        {
         "id": "lib-pathology-aortic-dissection-169",
@@ -50710,7 +51168,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-cardiovascular-system-vasculitis-272"
+         ],
+         "prepladder": [
+          "p-pathology-vasculitis-32"
+         ],
+         "egurukul": [
+          "e-pathology-vasculitis-87"
+         ]
+        }
        },
        {
         "id": "lib-pathology-lymphocytic-myocarditis-171",
@@ -50734,7 +51202,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pathology-hypertrophic-cardiomyopathy-97"
+         ]
+        }
        }
       ]
      },
@@ -50816,7 +51288,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-endocrine-system-and-breast-thyroid-glands-297"
+         ],
+         "prepladder": [
+          "p-pathology-thyroid-gland-62"
+         ],
+         "egurukul": [
+          "e-pathology-thyroiditis-thyroid-cancers-101"
+         ]
+        }
        },
        {
         "id": "lib-pathology-malignancy-of-breast-179",
@@ -50828,7 +51310,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-pathology-breast-29"
+         ]
+        }
        },
        {
         "id": "lib-pathology-marfans-syndrome-180",
@@ -50869,7 +51355,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-genitourinary-system-glomerular-diseases-278"
+         ]
+        }
        },
        {
         "id": "lib-pathology-rcc-183",
@@ -50910,7 +51400,12 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pathology-intestinal-polyps-and-intestinal-carcinoma-i-44",
+          "p-pathology-intestinal-polyps-and-intestinal-carcinoma-ii-45"
+         ]
+        }
        },
        {
         "id": "lib-pathology-esophageal-disorders-186",
@@ -50934,7 +51429,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-gastrointestinal-system-stomach-289"
+         ],
+         "egurukul": [
+          "e-pathology-esophagus-stomach-65"
+         ]
+        }
        },
        {
         "id": "lib-pathology-alcoholic-hepatitis-188",
@@ -50975,7 +51477,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pathology-nervous-system-degenerative-toxic-metabolic-cns-disorders-304"
+         ]
+        }
        }
       ]
      },
@@ -51039,7 +51545,22 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-general-pharmacology-pharmacokinetics-134",
+          "m-pharmacology-general-pharmacology-pharmacodynamics-135",
+          "m-pharmacology-general-pharmacology-pharmacokinetics-calculations-137"
+         ],
+         "prepladder": [
+          "p-pharmacology-pharmacokinetics-i-0",
+          "p-pharmacology-pharmacokinetics-ii-1",
+          "p-pharmacology-pharmacokinetics-iii-2",
+          "p-pharmacology-pharmacodynamics-3"
+         ],
+         "egurukul": [
+          "e-pharmacology-pharmacodynamics-10"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-enzyme-inducers-and-inhibitors-195",
@@ -51051,7 +51572,21 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-pharmacology-cell-wall-synthesis-folate-and-dns-gyrase-inhibitors-26",
+          "d-pharmacology-protein-synthesis-inhibitors-27"
+         ],
+         "prepladder": [
+          "p-pharmacology-cell-wall-synthesis-inhibitors-34",
+          "p-pharmacology-protein-synthesis-inhibitors-i-36",
+          "p-pharmacology-protein-synthesis-inhibitors-ii-37"
+         ],
+         "egurukul": [
+          "e-pharmacology-hormonal-agents-tyrosine-kinase-inhibitors-66",
+          "e-pharmacology-small-molecule-inhibitors-70"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-drug-prescription-196",
@@ -51104,7 +51639,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-antimicrobials-antimalarial-drugs-164"
+         ],
+         "egurukul": [
+          "e-pharmacology-antimalarial-drugs-65"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-antifungal-200",
@@ -51116,7 +51658,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-antimicrobials-antifungal-agents-173"
+         ],
+         "prepladder": [
+          "p-pharmacology-antifungal-drugs-41"
+         ],
+         "egurukul": [
+          "e-pharmacology-antifungal-drugs-64"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-antimicrobials-201",
@@ -51128,7 +51680,28 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-antimicrobials-general-principles-of-antimicrobial-therapy-163",
+          "m-pharmacology-antimicrobials-antimalarial-drugs-164",
+          "m-pharmacology-antimicrobials-sulfonamides-quinolones-and-urinary-antiseptics-165",
+          "m-pharmacology-antimicrobials-antimicrobials-acting-on-30s-subunit-166",
+          "m-pharmacology-antimicrobials-antimicrobials-acting-on-50s-subunit-167",
+          "m-pharmacology-antimicrobials-antiretroviral-drugs-168",
+          "m-pharmacology-antimicrobials-penicillins-169",
+          "m-pharmacology-antimicrobials-cephalosporins-vancomycin-and-carbapenems-170",
+          "m-pharmacology-antimicrobials-miscellaneous-antimicrobials-171",
+          "m-pharmacology-antimicrobials-anti-protozoal-agents-and-anthelmintic-drugs-172",
+          "m-pharmacology-antimicrobials-antifungal-agents-173",
+          "m-pharmacology-antimicrobials-first-line-drugs-for-tuberculosis-174",
+          "m-pharmacology-antimicrobials-second-line-drugs-for-tuberculosis-175",
+          "m-pharmacology-antimicrobials-anti-leprosy-drugs-176",
+          "m-pharmacology-antimicrobials-anti-virals-non-retroviral-177"
+         ],
+         "cerebellum": [
+          "c-pharmacology-antimicrobial-agents-38"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-antiparasitic-202",
@@ -51169,7 +51742,19 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-cardiovascular-system-antihypertensive-drugs-145"
+         ],
+         "doctutorials": [
+          "d-pharmacology-antihypertensives-and-hypolipidemic-drugs-part-1-4",
+          "d-pharmacology-antihypertensives-and-hypolipidemic-drugs-part-2-5"
+         ],
+         "prepladder": [
+          "p-pharmacology-antihypertensives-i-14",
+          "p-pharmacology-antihypertensives-ii-15"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-antiarrhythmic-205",
@@ -51205,7 +51790,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pharmacology-drugs-for-dyslipidemia-30"
+         ]
+        }
        }
       ]
      },
@@ -51234,7 +51823,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-central-and-peripheral-nervous-system-antidepressant-and-antianxiet-157"
+         ],
+         "prepladder": [
+          "p-pharmacology-antipsychotics-and-antidepressants-i-28",
+          "p-pharmacology-antipsychotics-and-antidepressants-ii-29",
+          "p-pharmacology-antipsychotic-drugs-30"
+         ],
+         "egurukul": [
+          "e-pharmacology-antidepressant-drugs-74",
+          "e-pharmacology-antipsychotic-drugs-82"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-benzodiazepine-210",
@@ -51246,7 +51848,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-pharmacology-benzodiazepines-barbiturates-anti-epileptics-12"
+         ]
+        }
        }
       ]
      },
@@ -51311,7 +51917,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-pharmacology-anaesthesia-34"
+         ],
+         "egurukul": [
+          "e-pharmacology-skeletal-muscle-relaxants-72"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-muscarinic-216",
@@ -51366,7 +51979,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-endocrine-system-osteoporosis-and-calcium-metabolism-181"
+         ],
+         "prepladder": [
+          "p-pharmacology-hpa-axis-and-drugs-acting-on-bone-and-osteoporosis-48"
+         ],
+         "egurukul": [
+          "e-pharmacology-pharmacotherapy-of-osteoporosis-42"
+         ]
+        }
        }
       ]
      },
@@ -51383,7 +52006,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-autacoids-nsaids-187"
+         ],
+         "egurukul": [
+          "e-pharmacology-nsaids-1"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-opioids-and-withdrawal-221",
@@ -51395,7 +52025,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pharmacology-opioids-31"
+         ],
+         "egurukul": [
+          "e-pharmacology-opioids-79"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-prostaglandins-222",
@@ -51407,7 +52044,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pharmacology-prostaglandin-preparations-4"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-antispasmodic-223",
@@ -51448,7 +52089,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-hematology-antiplatelets-fibrinolytics-and-antifibrinolytics-191",
+          "m-pharmacology-hematology-anticoagulants-193"
+         ],
+         "prepladder": [
+          "p-pharmacology-oral-and-parenteral-anticoagulants-i-59",
+          "p-pharmacology-oral-and-parenteral-anticoagulants-ii-60"
+         ],
+         "egurukul": [
+          "e-pharmacology-anticoagulant-drugs-28",
+          "e-pharmacology-fibrinolytics-and-antifibrinolytics-31"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-methotrexate-226",
@@ -51508,7 +52162,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pharmacology-antimetabolites-and-fluroquinolones-38"
+         ]
+        }
        }
       ]
      },
@@ -51525,7 +52183,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pharmacology-antiemetic-drugs-50"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-antidiarrheals-232",
@@ -51583,7 +52245,22 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-pharmacology-cardiovascular-system-diuretics-146",
+          "m-pharmacology-cardiovascular-system-anti-diuretics-150"
+         ],
+         "doctutorials": [
+          "d-pharmacology-diuretics-7"
+         ],
+         "prepladder": [
+          "p-pharmacology-diuretics-and-antidiuretics-i-21",
+          "p-pharmacology-diuretics-and-antidiuretics-ii-22"
+         ],
+         "egurukul": [
+          "e-pharmacology-diuretics-19"
+         ]
+        }
        },
        {
         "id": "lib-pharmacology-gout-236",
@@ -51683,7 +52360,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-microbiology-microbiological-diagnostic-techniques-6"
+         ]
+        }
        }
       ]
      },
@@ -51760,7 +52441,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-microbiology-miscellaneous-fungal-food-poisoning-3"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-enteric-fever-249",
@@ -51808,7 +52493,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-microbiology-anthrax-33"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-pseudomonas-253",
@@ -51820,7 +52509,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-microbiology-bacteriology-pseudomonas-and-burkholderiales-215"
+         ],
+         "doctutorials": [
+          "d-microbiology-pseudomonas-haemophilus-bordetella-brucella-francisella-14"
+         ],
+         "prepladder": [
+          "p-microbiology-hemophillus-bordatella-brucella-and-pseudomonas-17"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-staphylococcus-aureus-254",
@@ -51856,7 +52555,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-microbiology-urethritis-28"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-uti-257",
@@ -52135,7 +52838,18 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-microbiology-parasitology-helminthology-nematodes-234"
+         ],
+         "doctutorials": [
+          "d-microbiology-helminthology-nematodes-29"
+         ],
+         "prepladder": [
+          "p-microbiology-nematodes-41",
+          "p-microbiology-cestodes-trematodes-nematodes-42"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-malaria-279",
@@ -52159,7 +52873,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.518,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-microbiology-flagellates-hemoflagellates-37"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-flagellates-281",
@@ -52171,7 +52889,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-microbiology-parasitology-protozoology-amoebae-ciliates-flagellates-231"
+         ],
+         "doctutorials": [
+          "d-microbiology-protozoology-amoebae-ciliates-flagellates-27"
+         ],
+         "prepladder": [
+          "p-microbiology-flagellates-hemoflagellates-37"
+         ]
+        }
        },
        {
         "id": "lib-microbiology-toxoplasma-282",
@@ -52207,7 +52935,15 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-microbiology-parasitology-helminthology-cestodes-trematodes-233"
+         ],
+         "prepladder": [
+          "p-microbiology-trematodes-40",
+          "p-microbiology-cestodes-trematodes-nematodes-42"
+         ]
+        }
        }
       ]
      },
@@ -52401,7 +53137,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-forensic-medicine-asphyxial-death-17"
+         ]
+        }
        }
       ]
      },
@@ -52430,7 +53170,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-forensic-medicine-lacerations-incised-wounds-65"
+         ]
+        }
        }
       ]
      },
@@ -52447,7 +53191,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-forensic-medicine-postmortem-autopsy-and-torture-9"
+         ],
+         "egurukul": [
+          "e-forensic-medicine-classification-of-postmortem-changes-48"
+         ]
+        }
        },
        {
         "id": "lib-forensic-medicine-autopsy-techniques-302",
@@ -52459,7 +53210,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-forensic-medicine-autopsy-5"
+         ]
+        }
        }
       ]
      },
@@ -52529,7 +53284,12 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-forensic-medicine-bns-sections-i-3",
+          "p-forensic-medicine-bns-sections-ii-4"
+         ]
+        }
        },
        {
         "id": "lib-forensic-medicine-ipc-314-308",
@@ -52562,7 +53322,12 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-forensic-medicine-age-12",
+          "e-forensic-medicine-age-estimation-by-x-ray-examination-67"
+         ]
+        }
        },
        {
         "id": "lib-forensic-medicine-negligence-310",
@@ -52574,7 +53339,13 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-forensic-medicine-defenses-against-negligence-69",
+          "e-forensic-medicine-important-concepts-related-to-medical-negligence-70",
+          "e-forensic-medicine-professional-negligence-72"
+         ]
+        }
        },
        {
         "id": "lib-forensic-medicine-cross-examination-311",
@@ -52610,7 +53381,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-forensic-medicine-consent-euthanasia-68"
+         ]
+        }
        },
        {
         "id": "lib-forensic-medicine-closed-court-proceeding-314",
@@ -52657,7 +53432,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pediatrics-growth-6"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-cleft-lip-surgery-317",
@@ -52681,7 +53460,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pediatrics-growth-6"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-congenital-cystic-adenomatoid-malformation-319",
@@ -52722,7 +53505,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-pediatrics-congenital-infections-and-bacterial-diseases-in-children-30"
+         ],
+         "egurukul": [
+          "e-pediatrics-congenital-infections-covid19-11"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-pertusis-322",
@@ -52905,7 +53695,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pediatrics-cystic-fibrosis-pneumonia-ards-23"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-foreign-body-in-bronchus-336",
@@ -52970,7 +53764,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-paediatrics-endocrine-system-congenital-adrenal-hyperplasia-and-related-disorder-779"
+         ],
+         "prepladder": [
+          "p-pediatrics-adrenal-disorders-congenital-adrenal-hyperplasia-47"
+         ]
+        }
        }
       ]
      },
@@ -52999,7 +53800,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pediatrics-hydrocephalus-17"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-west-syndrome-343",
@@ -53040,7 +53845,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pediatrics-congenital-nephrotic-syndrome-aki-arf-30"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-bladder-extrophy-346",
@@ -53134,7 +53943,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pediatrics-leukemia-33"
+         ]
+        }
        }
       ]
      },
@@ -53151,7 +53964,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-paediatrics-nutrition-protein-energy-malnutrition-756"
+         ],
+         "cerebellum": [
+          "c-pediatrics-severe-acute-malnutrition-157"
+         ],
+         "prepladder": [
+          "p-pediatrics-malnutrition-15"
+         ],
+         "egurukul": [
+          "e-pediatrics-management-of-severe-acute-malnutrition-13"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-dietary-guidelines-for-children-and-adolescents-354",
@@ -53180,7 +54006,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-pediatrics-ibd-diarrhea-dehydration-management-41"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-baby-at-risk-356",
@@ -53204,7 +54034,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-paediatrics-cardiovascular-system-fetal-circulation-772"
+         ],
+         "egurukul": [
+          "e-pediatrics-fetal-circulation-2"
+         ]
+        }
        },
        {
         "id": "lib-paediatrics-caus-of-greenish-brown-stool-358",
@@ -53239,7 +54076,26 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-biochemistry-clinical-biochemistry-nutrition-fat-soluble-vitamins-125",
+          "m-biochemistry-clinical-biochemistry-nutrition-energy-releasing-vitamins-126",
+          "m-biochemistry-clinical-biochemistry-nutrition-hematopoietic-and-other-vitamins-127"
+         ],
+         "doctutorials": [
+          "d-biochemistry-fat-soluble-vitamins-16",
+          "d-biochemistry-water-soluble-vitamins-and-minerals-17"
+         ],
+         "prepladder": [
+          "p-biochemistry-fat-soluble-vitamins-i-38",
+          "p-biochemistry-fat-soluble-vitamins-ii-39",
+          "p-biochemistry-water-soluble-vitamins-i-40",
+          "p-biochemistry-folate-vitamin-b12-vitamin-b6-metabolism-41"
+         ],
+         "egurukul": [
+          "e-biochemistry-vitamins-minerals-29"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-minerals-360",
@@ -53251,7 +54107,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-biochemistry-clinical-biochemistry-nutrition-antioxidants-minerals-128"
+         ],
+         "doctutorials": [
+          "d-biochemistry-water-soluble-vitamins-and-minerals-17"
+         ],
+         "egurukul": [
+          "e-biochemistry-vitamins-minerals-29"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-chronic-alcoholism-361",
@@ -53280,7 +54146,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-biochemistry-carbohydrates-glycogen-metabolism-and-glycogen-storage-disorders-108"
+         ],
+         "doctutorials": [
+          "d-biochemistry-glycogen-metabolism-and-storage-disorders-3"
+         ],
+         "prepladder": [
+          "p-biochemistry-glycogen-metabolism-and-glycogen-storage-disorders-7"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-cycles-insulin-glucagon-ratio-363",
@@ -53316,7 +54192,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-biochemistry-carbohydrates-hmp-shunt-pathway-fructose-galactose-metabolism-109"
+         ],
+         "prepladder": [
+          "p-biochemistry-fructose-and-galactose-metabolism-hmp-pathway-3"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-gags-in-corenal-transparency-366",
@@ -53352,7 +54235,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-biochemistry-fates-of-pyruvate-pdh-complex-electron-transport-chain-5"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-cellulose-369",
@@ -53506,7 +54393,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-biochemistry-amino-acids-and-proteins-protein-structure-and-function-115"
+         ],
+         "doctutorials": [
+          "d-biochemistry-amino-acid-classification-and-properties-protein-structure-and-prot-21"
+         ],
+         "egurukul": [
+          "e-biochemistry-protein-structure-fibrous-proteins-18"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-no-synthesis-381",
@@ -53518,7 +54415,24 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-biochemistry-lipids-cholesterol-synthesis-transport-and-excretion-121",
+          "m-biochemistry-genetics-rna-synthesis-processing-and-modification-131"
+         ],
+         "doctutorials": [
+          "d-biochemistry-fatty-acid-synthesis-and-metabolism-6",
+          "d-biochemistry-nucleotide-synthesis-and-catabolism-and-related-diseases-10",
+          "d-biochemistry-rna-synthesis-transcription-processing-and-modification-13",
+          "d-biochemistry-genetic-code-protein-synthesis-translation-regulation-of-gene-expre-14",
+          "d-biochemistry-heme-synthesis-and-porphyria-20"
+         ],
+         "prepladder": [
+          "p-biochemistry-fatty-acid-synthesis-and-oxidation-i-11",
+          "p-biochemistry-fatty-acid-synthesis-and-oxidation-ii-12",
+          "p-biochemistry-heme-synthesis-and-porphyrias-24"
+         ]
+        }
        }
       ]
      },
@@ -53682,7 +54596,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-biochemistry-enzyme-inhibition-regulation-isoenzymes-and-applications-25"
+         ],
+         "prepladder": [
+          "p-biochemistry-enzyme-kinetics-inhibition-regulation-27"
+         ],
+         "egurukul": [
+          "e-biochemistry-enzyme-kinetics-enzyme-inhibition-4"
+         ]
+        }
        },
        {
         "id": "lib-biochemistry-van-den-berg-reaction-394",
@@ -53731,7 +54655,22 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-cardiovascular-system-supraventricular-arrhythmias-618",
+          "m-medicine-cardiovascular-system-ventricular-arrhythmias-and-heart-blocks-619"
+         ],
+         "doctutorials": [
+          "d-medicine-ecg-arrhythmias-part-1-11"
+         ],
+         "prepladder": [
+          "p-medicine-ecg-and-arrhythmias-3",
+          "p-medicine-chf-bbb-tachycardia-bradycardia-and-heart-block-6"
+         ],
+         "egurukul": [
+          "e-medicine-ecg-vt-v-fib-heart-blocks-66"
+         ]
+        }
        },
        {
         "id": "lib-medicine-valvular-heart-disease-397",
@@ -53743,7 +54682,24 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-cardiovascular-system-valvular-heart-diseases-620"
+         ],
+         "doctutorials": [
+          "d-medicine-valvular-heart-disease-part-1-15",
+          "d-medicine-valvular-heart-disease-part-2-16"
+         ],
+         "prepladder": [
+          "p-medicine-valvular-heart-disease-0"
+         ],
+         "egurukul": [
+          "e-medicine-valvular-heart-disease-aortic-regurgitation-46",
+          "e-medicine-valvular-heart-disease-mitral-regurgitation-47",
+          "e-medicine-valvular-heart-disease-aortic-stenosis-48",
+          "e-medicine-valvular-heart-disease-mitral-stenosis-49"
+         ]
+        }
        },
        {
         "id": "lib-medicine-coronary-artery-disease-398",
@@ -53767,7 +54723,18 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-cardiovascular-system-heart-failure-626"
+         ],
+         "doctutorials": [
+          "d-medicine-heart-failure-part-1-17",
+          "d-medicine-heart-failure-part-2-18"
+         ],
+         "egurukul": [
+          "e-medicine-heart-failure-67"
+         ]
+        }
        },
        {
         "id": "lib-medicine-disorders-of-aorta-400",
@@ -53791,7 +54758,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-medicine-jvp-44"
+         ]
+        }
        },
        {
         "id": "lib-medicine-infective-endocarditis-402",
@@ -53803,7 +54774,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-cardiovascular-system-infective-endocarditis-and-acute-rheumatic-fever-621"
+         ],
+         "prepladder": [
+          "p-medicine-takotsubo-brugada-syndrome-rhd-and-infective-endocarditis-2"
+         ],
+         "egurukul": [
+          "e-medicine-infective-endocarditis-17"
+         ]
+        }
        },
        {
         "id": "lib-medicine-cardiomyopathy-403",
@@ -53815,7 +54796,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-cardiovascular-system-cardiomyopathy-and-myocarditis-625"
+         ]
+        }
        },
        {
         "id": "lib-medicine-cardiac-tamponade-404",
@@ -53851,7 +54836,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-cardiovascular-system-dvt-and-pulmonary-embolism-630"
+         ],
+         "prepladder": [
+          "p-medicine-pulmonary-embolism-dvt-and-fat-embolism-96"
+         ],
+         "egurukul": [
+          "e-medicine-pulmonary-embolism-33"
+         ]
+        }
        },
        {
         "id": "lib-medicine-pulse-and-its-types-407",
@@ -53880,7 +54875,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-blood-disorders-macrocytic-anemia-647"
+         ],
+         "egurukul": [
+          "e-medicine-macrocytic-anemia-162"
+         ]
+        }
        },
        {
         "id": "lib-medicine-sickle-cell-anemia-409",
@@ -53892,7 +54894,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-sickle-cell-disease-g6pd-deficiency-and-other-hemolytic-anemias-57"
+         ],
+         "egurukul": [
+          "e-medicine-hemolytic-anemia-sickle-cell-disease-158"
+         ]
+        }
        },
        {
         "id": "lib-medicine-coagulation-disorders-vwd-410",
@@ -53904,7 +54913,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-blood-disorders-coagulation-disorders-655"
+         ]
+        }
        },
        {
         "id": "lib-medicine-thrombocytopenia-411",
@@ -53933,7 +54946,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-medicine-complications-of-diabetes-dka-hhs-108"
+         ]
+        }
        },
        {
         "id": "lib-medicine-pituitary-disorders-di-and-siadh-413",
@@ -53945,7 +54962,24 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-endocrine-system-disorders-of-anterior-pituitary-563",
+          "m-medicine-endocrine-system-pituitary-tumours-and-sheehan-s-syndrome-564",
+          "m-medicine-endocrine-system-posterior-pituitary-adh-oxytocin-diabetes-insipidus-565"
+         ],
+         "doctutorials": [
+          "d-medicine-hypothalamus-pituitary-24"
+         ],
+         "prepladder": [
+          "p-medicine-diseases-of-anterior-pituitary-23",
+          "p-medicine-diseases-of-posterior-pituitary-di-24"
+         ],
+         "egurukul": [
+          "e-medicine-pituitary-disorders-acromegaly-part-2-115",
+          "e-medicine-pituitary-disorders-prolactinoma-part-1-116"
+         ]
+        }
        },
        {
         "id": "lib-medicine-thyroid-disorders-414",
@@ -53957,7 +54991,24 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-endocrine-system-thyroid-disorders-clinical-features-567",
+          "m-medicine-endocrine-system-thyroid-disorders-management-568"
+         ],
+         "doctutorials": [
+          "d-medicine-thyroid-part-1-25",
+          "d-medicine-thyroid-part-2-26"
+         ],
+         "prepladder": [
+          "p-medicine-diseases-of-thyroid-21"
+         ],
+         "egurukul": [
+          "e-medicine-thyroid-part-1-118",
+          "e-medicine-thyroid-part-2-119",
+          "e-medicine-thyroid-part-3-120"
+         ]
+        }
        },
        {
         "id": "lib-medicine-adrenal-disease-cushing-s-and-addison-415",
@@ -53969,7 +55020,12 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-disorders-of-adrenal-gland-and-cushing-syndrome-i-19",
+          "p-medicine-disorders-of-adrenal-gland-and-cushing-syndrome-ii-20"
+         ]
+        }
        },
        {
         "id": "lib-medicine-pheochromocytoma-416",
@@ -53981,7 +55037,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-endocrine-system-pheochromocytoma-570"
+         ],
+         "prepladder": [
+          "p-medicine-pheochromocytoma-men-syndrome-25"
+         ],
+         "egurukul": [
+          "e-medicine-pheochromocytoma-102"
+         ]
+        }
        },
        {
         "id": "lib-medicine-men-syndrome-417",
@@ -53993,7 +55059,15 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-disorders-of-parathyroid-gland-and-men-syndromes-22",
+          "p-medicine-pheochromocytoma-men-syndrome-25"
+         ],
+         "egurukul": [
+          "e-medicine-endocrine-tumors-of-pancreas-men-syndromes-112"
+         ]
+        }
        },
        {
         "id": "lib-medicine-wilson-disease-418",
@@ -54005,7 +55079,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-wilson-disease-and-hemochromatosis-91"
+         ]
+        }
        }
       ]
      },
@@ -54022,7 +55100,15 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-parkinsonism-and-parkinson-s-disease-71"
+         ],
+         "egurukul": [
+          "e-medicine-atypical-parkinson-s-72",
+          "e-medicine-parkinsons-disease-96"
+         ]
+        }
        },
        {
         "id": "lib-medicine-headache-420",
@@ -54034,7 +55120,21 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-nervous-system-headache-disorders-640"
+         ],
+         "doctutorials": [
+          "d-medicine-headache-and-dementia-5"
+         ],
+         "prepladder": [
+          "p-medicine-cns-hemorrhage-headaches-and-migraine-70"
+         ],
+         "egurukul": [
+          "e-medicine-primary-headache-part-1-81",
+          "e-medicine-primary-headache-part-2-82"
+         ]
+        }
        },
        {
         "id": "lib-medicine-stroke-localisation-421",
@@ -54058,7 +55158,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-nervous-system-multiple-sclerosis-other-demyelinating-disorders-639"
+         ],
+         "prepladder": [
+          "p-medicine-multiple-sclerosis-neuromyelitis-optica-spectrum-disorder-and-als-69"
+         ],
+         "egurukul": [
+          "e-medicine-multiple-sclerosis-79"
+         ]
+        }
        },
        {
         "id": "lib-medicine-dementia-423",
@@ -54070,7 +55180,16 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-medicine-headache-and-dementia-5"
+         ],
+         "egurukul": [
+          "e-medicine-dementia-alzheimer-s-disease-part-1-75",
+          "e-medicine-dementia-lewy-body-dementia-vascular-dementia-part-2-76",
+          "e-medicine-dementia-ftd-huntington-cjd-nph-part-3-77"
+         ]
+        }
        },
        {
         "id": "lib-medicine-myasthenia-gravis-424",
@@ -54082,7 +55201,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-nervous-system-myasthenia-gravis-and-other-neuromuscular-junction-disor-638"
+         ],
+         "prepladder": [
+          "p-medicine-myasthenia-gravis-68"
+         ]
+        }
        }
       ]
      },
@@ -54125,7 +55251,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-meningitis-and-cns-infections-74"
+         ]
+        }
        },
        {
         "id": "lib-medicine-pneumonia-428",
@@ -54137,7 +55267,18 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-respiratory-system-pneumonia-602"
+         ],
+         "prepladder": [
+          "p-medicine-bronchiectasis-pneumonia-97"
+         ],
+         "egurukul": [
+          "e-medicine-pneumonia-part-2-14",
+          "e-medicine-pneumonia-part-1-18"
+         ]
+        }
        }
       ]
      },
@@ -54154,7 +55295,23 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-rheumatology-and-immunology-large-and-medium-vessel-vasculitis-592",
+          "m-medicine-rheumatology-and-immunology-small-vessel-vasculitis-593"
+         ],
+         "doctutorials": [
+          "d-medicine-vasculitis-syndromes-43"
+         ],
+         "prepladder": [
+          "p-medicine-vasculitis-syndromes-i-77",
+          "p-medicine-vasculitis-syndromes-ii-78"
+         ],
+         "egurukul": [
+          "e-medicine-polyarteritis-nodosa-anca-vasculitis-123",
+          "e-medicine-small-vessel-vasculitis-behcets-kawasaki-130"
+         ]
+        }
        },
        {
         "id": "lib-medicine-scleroderma-430",
@@ -54166,7 +55323,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-rheumatology-and-immunology-sjogren-s-syndrome-and-scleroderma-595"
+         ],
+         "prepladder": [
+          "p-medicine-scleroderma-and-sjogren-syndrome-82"
+         ],
+         "egurukul": [
+          "e-medicine-scleroderma-systemic-sclerosis-part-1-128"
+         ]
+        }
        },
        {
         "id": "lib-medicine-sle-431",
@@ -54178,7 +55345,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-medicine-sle-39"
+         ]
+        }
        },
        {
         "id": "lib-medicine-gout-432",
@@ -54202,7 +55373,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-medicine-rheumatoid-arthritis-ankylosing-spondylitis-part-2-125"
+         ]
+        }
        },
        {
         "id": "lib-medicine-sarcoidosis-434",
@@ -54214,7 +55389,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-rheumatology-and-immunology-sarcoidosis-596"
+         ],
+         "egurukul": [
+          "e-medicine-sarcoidosis-31"
+         ]
+        }
        }
       ]
      },
@@ -54296,7 +55478,21 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-medicine-fluid-electrolyte-nutrition-61"
+         ],
+         "prepladder": [
+          "p-medicine-disorders-of-electrolyte-imbalance-29",
+          "p-medicine-electrolyte-imbalance-30"
+         ],
+         "egurukul": [
+          "e-medicine-electrolyte-abnormalities-hypernatremia-part-1-2",
+          "e-medicine-electrolyte-abnormalities-hyponatremia-part-1-3",
+          "e-medicine-electrolyte-abnormalities-pottassium-disorders-10",
+          "e-medicine-ecg-electrolytes-misc-65"
+         ]
+        }
        },
        {
         "id": "lib-medicine-dialysis-disequilibrium-syndrome-441",
@@ -54337,7 +55533,18 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-gastrointestinal-system-malabsorption-syndromes-590"
+         ],
+         "prepladder": [
+          "p-medicine-diarrhea-malabsorption-syndromes-i-44",
+          "p-medicine-diarrhea-malabsorption-syndromes-ii-45"
+         ],
+         "egurukul": [
+          "e-medicine-malabsorption-celiac-disease-whipples-disease-142"
+         ]
+        }
        },
        {
         "id": "lib-medicine-and-its-complications-444",
@@ -54349,7 +55556,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-liver-cirrhosis-and-its-complications-90"
+         ]
+        }
        },
        {
         "id": "lib-medicine-viral-hepatitis-445",
@@ -54361,7 +55572,18 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-gastrointestinal-system-viral-hepatitis-580"
+         ],
+         "doctutorials": [
+          "d-medicine-viral-64"
+         ],
+         "prepladder": [
+          "p-medicine-viral-hepatitis-nafld-ali-i-86",
+          "p-medicine-viral-hepatitis-nafld-ali-ii-87"
+         ]
+        }
        },
        {
         "id": "lib-medicine-approach-to-jaundice-446",
@@ -54373,7 +55595,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-liver-function-tests-jaundice-92"
+         ]
+        }
        }
       ]
      },
@@ -54390,7 +55616,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-medicine-pleural-effusion-and-pneumothorax-102"
+         ]
+        }
        },
        {
         "id": "lib-medicine-asthma-copd-448",
@@ -54402,7 +55632,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-medicine-respiratory-system-asthma-copd-601"
+         ],
+         "prepladder": [
+          "p-medicine-bronchial-asthma-and-copd-98"
+         ]
+        }
        },
        {
         "id": "lib-medicine-ards-449",
@@ -54414,7 +55651,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-medicine-ards-69"
+         ]
+        }
        },
        {
         "id": "lib-medicine-pancoast-tumor-450",
@@ -54663,7 +55904,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-community-medicine-demography-and-family-planning-demography-i-demographic-cycle-332"
+         ],
+         "doctutorials": [
+          "d-psm-dependency-ratio-literacy-rate-and-demographic-cycle-2"
+         ]
+        }
        }
       ]
      },
@@ -54680,7 +55928,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-community-medicine-epidemiology-vaccine-production-and-storage-317"
+         ],
+         "cerebellum": [
+          "c-preventive-social-medicine-vaccines-and-cold-chain-76"
+         ],
+         "prepladder": [
+          "p-psm-vaccines-and-open-vial-policy-11"
+         ],
+         "egurukul": [
+          "e-psm-vaccines-3"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-cholera-vaccine-470",
@@ -54728,7 +55989,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.301,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-psm-vaccines-and-open-vial-policy-11"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-tetanus-vaccine-474",
@@ -54798,7 +56063,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-psm-malnutrition-9"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-global-hunger-index-479",
@@ -54940,7 +56209,20 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 1.0,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-community-medicine-biomedical-waste-management-biomedical-waste-management-351"
+         ],
+         "cerebellum": [
+          "c-preventive-social-medicine-biomedical-waste-management-88"
+         ],
+         "prepladder": [
+          "p-psm-biomedical-waste-management-and-genetics-and-health-78"
+         ],
+         "egurukul": [
+          "e-psm-biomedical-waste-management-0"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-kata-thermometer-490",
@@ -54966,7 +56248,23 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-community-medicine-disaster-management-disaster-management-352"
+         ],
+         "cerebellum": [
+          "c-preventive-social-medicine-disaster-management-89"
+         ],
+         "doctutorials": [
+          "d-psm-disaster-management-43"
+         ],
+         "prepladder": [
+          "p-psm-esi-act-factory-act-nrega-act-and-disaster-management-59"
+         ],
+         "egurukul": [
+          "e-psm-disaster-management-22"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-air-quality-index-492",
@@ -55002,7 +56300,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-psm-air-pollution-18"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-collection-of-water-sample-495",
@@ -55283,7 +56585,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-community-medicine-biostatistics-tests-of-significance-366"
+         ],
+         "prepladder": [
+          "p-psm-test-of-statistical-significance-graphical-representation-of-data-sampling-a-76"
+         ]
+        }
        },
        {
         "id": "lib-community-medicine-psm-stratified-sampling-517",
@@ -55367,7 +56676,26 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-community-medicine-screening-screening-319"
+         ],
+         "cerebellum": [
+          "c-preventive-social-medicine-screening-of-disease-77"
+         ],
+         "doctutorials": [
+          "d-psm-screening-part-1-38",
+          "d-psm-screening-part-2-39",
+          "d-psm-screening-part-3-40"
+         ],
+         "prepladder": [
+          "p-psm-screening-of-diseases-i-13",
+          "p-psm-screening-of-diseases-ii-14"
+         ],
+         "egurukul": [
+          "e-psm-screening-test-9"
+         ]
+        }
        }
       ]
      }
@@ -55443,7 +56771,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-orthopaedics-knee-17"
+         ]
+        }
        },
        {
         "id": "lib-orthopaedics-ankle-529",
@@ -55578,7 +56910,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-orthopaedics-scurvy-osteogenesis-imperfecta-28"
+         ]
+        }
        }
       ]
      },
@@ -55595,7 +56931,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-orthopaedics-osteomyelitis-2"
+         ]
+        }
        },
        {
         "id": "lib-orthopaedics-septic-arthritis-540",
@@ -55607,7 +56947,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-orthopedics-arthritis-200"
+         ],
+         "prepladder": [
+          "p-orthopaedics-arthritis-24"
+         ]
+        }
        }
       ]
      },
@@ -55665,7 +57012,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-orthopaedics-metabolic-bone-diseases-osteoporosis-and-osteomalacia-739"
+         ],
+         "egurukul": [
+          "e-orthopaedics-osteoporosis-25"
+         ]
+        }
        },
        {
         "id": "lib-orthopaedics-scurvy-image-545",
@@ -55718,7 +57072,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-orthopaedics-spine-pelvis-spondylolisthesis-ivdp-731"
+         ]
+        }
        },
        {
         "id": "lib-orthopaedics-ankylosing-spondylitis-549",
@@ -55730,7 +57088,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-orthopaedics-ankylosing-spondylitis-rheumatoid-arthritis-fluorosis-11"
+         ]
+        }
        }
       ]
      },
@@ -55747,7 +57109,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-orthopaedics-arthritis-other-joint-disorders-rheumatoid-arthritis-and-osteoarthr-741"
+         ]
+        }
        },
        {
         "id": "lib-orthopaedics-epiphyseal-plate-551",
@@ -55806,7 +57172,12 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.567,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-psychiatry-depression-1",
+          "e-psychiatry-treatment-of-depression-5"
+         ]
+        }
        },
        {
         "id": "lib-psychiatry-mania-555",
@@ -55847,7 +57218,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-psychiatry-conversion-dissociative-disorders-7"
+         ]
+        }
        },
        {
         "id": "lib-psychiatry-body-dysmorphic-disorder-558",
@@ -55963,7 +57338,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-psychiatry-thought-27"
+         ]
+        }
        },
        {
         "id": "lib-psychiatry-mental-health-care-act-2017-566",
@@ -55992,7 +57371,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-psychiatry-substance-related-disorders-alcohol-related-disorders-518"
+         ],
+         "prepladder": [
+          "p-psychiatry-alcohol-substance-use-disorders-17"
+         ]
+        }
        },
        {
         "id": "lib-psychiatry-cocaine-568",
@@ -56045,7 +57431,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-psychiatry-clozapine-story-mnemonic-31"
+         ]
+        }
        },
        {
         "id": "lib-psychiatry-psychotherapy-572",
@@ -56057,7 +57447,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-psychiatry-psychotherapy-treatment-modalities-3"
+         ]
+        }
        },
        {
         "id": "lib-psychiatry-types-of-learning-573",
@@ -56104,7 +57498,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.567,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-physiology-general-physiology-membrane-potentials-66"
+         ],
+         "egurukul": [
+          "e-physiology-membrane-potentials-7"
+         ]
+        }
        },
        {
         "id": "lib-physiology-action-potential-curve-576",
@@ -56419,7 +57820,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-physiology-gas-exchange-v-q-ratio-27"
+         ]
+        }
        }
       ]
      },
@@ -56491,7 +57896,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-physiology-renal-physiology-glomerular-filtration-rate-renal-blood-flow-and-rena-96"
+         ],
+         "cerebellum": [
+          "c-physiology-renal-15"
+         ]
+        }
        },
        {
         "id": "lib-physiology-glomerular-basement-membrane-606",
@@ -56532,7 +57944,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-physiology-prolactin-62"
+         ]
+        }
        },
        {
         "id": "lib-physiology-thyroid-609",
@@ -56544,7 +57960,20 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-physiology-endocrine-physiology-pituitary-and-thyroid-99"
+         ],
+         "doctutorials": [
+          "d-physiology-thyroid-20"
+         ],
+         "prepladder": [
+          "p-physiology-thyroid-hormones-endocrine-pancreas-53"
+         ],
+         "egurukul": [
+          "e-physiology-thyroid-axis-63"
+         ]
+        }
        }
       ]
      },
@@ -56596,7 +58025,34 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.675,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-ear-embryology-of-ear-and-malformations-420",
+          "m-ent-ear-anatomy-of-external-ear-421",
+          "m-ent-ear-anatomy-of-middle-ear-422",
+          "m-ent-ear-anatomy-of-mastoid-423",
+          "m-ent-ear-anatomy-of-inner-ear-424",
+          "m-ent-ear-disorders-of-external-ear-425",
+          "m-ent-ear-disorders-of-middle-ear-426",
+          "m-ent-ear-cholesteatoma-and-types-of-csom-427",
+          "m-ent-ear-csom-treatment-and-complications-428",
+          "m-ent-ear-otosclerosis-429",
+          "m-ent-ear-meniere-s-disease-430",
+          "m-ent-ear-tumors-of-ear-431",
+          "m-ent-ear-anatomy-of-facial-nerve-432",
+          "m-ent-ear-facial-nerve-disorders-433",
+          "m-ent-ear-eustachian-tube-434",
+          "m-ent-ear-physiology-of-hearing-and-tuning-fork-tests-435",
+          "m-ent-ear-audiometric-tests-and-special-tests-of-hearing-436"
+         ],
+         "cerebellum": [
+          "c-ent-ear-111"
+         ],
+         "doctutorials": [
+          "d-ent-anatomy-of-inner-ear-and-vestibular-system-21",
+          "d-ent-diseases-of-inner-ear-24"
+         ]
+        }
        },
        {
         "id": "lib-ent-ear-nerve-supply-613",
@@ -56608,7 +58064,30 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-ear-embryology-of-ear-and-malformations-420",
+          "m-ent-ear-anatomy-of-external-ear-421",
+          "m-ent-ear-anatomy-of-middle-ear-422",
+          "m-ent-ear-anatomy-of-mastoid-423",
+          "m-ent-ear-anatomy-of-inner-ear-424",
+          "m-ent-ear-disorders-of-external-ear-425",
+          "m-ent-ear-disorders-of-middle-ear-426",
+          "m-ent-ear-cholesteatoma-and-types-of-csom-427",
+          "m-ent-ear-csom-treatment-and-complications-428",
+          "m-ent-ear-otosclerosis-429",
+          "m-ent-ear-meniere-s-disease-430",
+          "m-ent-ear-tumors-of-ear-431",
+          "m-ent-ear-anatomy-of-facial-nerve-432",
+          "m-ent-ear-facial-nerve-disorders-433",
+          "m-ent-ear-eustachian-tube-434",
+          "m-ent-ear-physiology-of-hearing-and-tuning-fork-tests-435",
+          "m-ent-ear-audiometric-tests-and-special-tests-of-hearing-436"
+         ],
+         "cerebellum": [
+          "c-ent-ear-111"
+         ]
+        }
        },
        {
         "id": "lib-ent-rinne-s-test-614",
@@ -56632,7 +58111,12 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ent-surgeries-of-otitis-media-40",
+          "e-ent-serous-otitis-media-som-65"
+         ]
+        }
        },
        {
         "id": "lib-ent-ear-ossicles-616",
@@ -56644,7 +58128,33 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-ear-embryology-of-ear-and-malformations-420",
+          "m-ent-ear-anatomy-of-external-ear-421",
+          "m-ent-ear-anatomy-of-middle-ear-422",
+          "m-ent-ear-anatomy-of-mastoid-423",
+          "m-ent-ear-anatomy-of-inner-ear-424",
+          "m-ent-ear-disorders-of-external-ear-425",
+          "m-ent-ear-disorders-of-middle-ear-426",
+          "m-ent-ear-cholesteatoma-and-types-of-csom-427",
+          "m-ent-ear-csom-treatment-and-complications-428",
+          "m-ent-ear-otosclerosis-429",
+          "m-ent-ear-meniere-s-disease-430",
+          "m-ent-ear-tumors-of-ear-431",
+          "m-ent-ear-anatomy-of-facial-nerve-432",
+          "m-ent-ear-facial-nerve-disorders-433",
+          "m-ent-ear-eustachian-tube-434",
+          "m-ent-ear-physiology-of-hearing-and-tuning-fork-tests-435",
+          "m-ent-ear-audiometric-tests-and-special-tests-of-hearing-436"
+         ],
+         "cerebellum": [
+          "c-ent-ear-111"
+         ],
+         "prepladder": [
+          "p-ent-anatomy-of-the-middle-ear-and-ossicles-1"
+         ]
+        }
        },
        {
         "id": "lib-ent-pure-tone-audiometry-carhart-s-notch-617",
@@ -56656,7 +58166,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ent-audiometry-14"
+         ]
+        }
        },
        {
         "id": "lib-ent-glomus-tymapnicum-618",
@@ -56697,7 +58211,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-pharynx-nasopharyngeal-angiofibroma-451"
+         ],
+         "doctutorials": [
+          "d-ent-nasopharyngeal-cancer-and-angiofibroma-7"
+         ],
+         "egurukul": [
+          "e-ent-juvenile-nasopharyngeal-angiofibroma-32"
+         ]
+        }
        },
        {
         "id": "lib-ent-rhino-orbital-cerebral-mucormycosis-621",
@@ -56750,7 +58274,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-nose-rhinitis-442"
+         ],
+         "egurukul": [
+          "e-ent-allergic-vasomotor-atrophic-rhinitis-72"
+         ]
+        }
        },
        {
         "id": "lib-ent-maxillary-sinus-625",
@@ -56798,7 +58329,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-pharynx-nasopharyngeal-angiofibroma-451"
+         ],
+         "egurukul": [
+          "e-ent-juvenile-nasopharyngeal-angiofibroma-32"
+         ]
+        }
        },
        {
         "id": "lib-ent-nasopharyngeal-airway-629",
@@ -56846,7 +58384,18 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-nose-epistaxis-440"
+         ],
+         "prepladder": [
+          "p-ent-epistaxis-and-facial-trauma-i-21",
+          "p-ent-epistaxis-and-facial-trauma-ii-22"
+         ],
+         "egurukul": [
+          "e-ent-epistaxis-deviated-nasal-septum-77"
+         ]
+        }
        }
       ]
      },
@@ -56887,7 +58436,23 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ent-ear-anatomy-of-facial-nerve-432",
+          "m-ent-ear-facial-nerve-disorders-433"
+         ],
+         "doctutorials": [
+          "d-ent-bells-palsy-and-facial-nerve-disorders-23"
+         ],
+         "prepladder": [
+          "p-ent-facial-nerve-anatomy-11",
+          "p-ent-facial-nerve-and-acoustic-neuroma-12"
+         ],
+         "egurukul": [
+          "e-ent-facial-nerve-vestibulocochlear-nerve-anatomy-5",
+          "e-ent-facial-nerve-paralysis-39"
+         ]
+        }
        }
       ]
      },
@@ -56916,7 +58481,12 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ent-tracheostomy-49",
+          "e-ent-tracheostomy-tubes-50"
+         ]
+        }
        },
        {
         "id": "lib-ent-total-laryngectomy-638",
@@ -56928,7 +58498,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ent-laryngectomy-46"
+         ]
+        }
        },
        {
         "id": "lib-ent-mitomycin-c-639",
@@ -56964,7 +58538,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-ent-vocal-cord-paralysis-and-voice-disorders-0"
+         ],
+         "egurukul": [
+          "e-ent-vocal-cord-paralysis-42"
+         ]
+        }
        },
        {
         "id": "lib-ent-laryngotracheal-stenosis-642",
@@ -57011,7 +58592,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-ophthalmology-uvea-106"
+         ],
+         "prepladder": [
+          "p-ophthalmology-uvea-5"
+         ],
+         "egurukul": [
+          "e-ophthalmology-anterior-uveitis-47"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-episcleritis-645",
@@ -57035,7 +58626,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-conjunctivitis-25"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-herbert-pits-trachoma-647",
@@ -57076,7 +58671,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-fungal-corneal-ulcer-44"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-acanthamoeba-keratitis-650",
@@ -57088,7 +58687,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-acanthamoeba-40"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-exposure-keratopathy-651",
@@ -57129,7 +58732,31 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.892,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ophthalmology-glaucoma-glaucoma-404"
+         ],
+         "cerebellum": [
+          "c-ophthalmology-glaucoma-101"
+         ],
+         "doctutorials": [
+          "d-ophthalmology-glaucoma-poag-and-pacg-part-1-7",
+          "d-ophthalmology-secondary-glaucoma-and-congenital-glaucoma-8",
+          "d-ophthalmology-glaucoma-poag-and-pacg-part-2-9"
+         ],
+         "prepladder": [
+          "p-ophthalmology-glaucoma-pacg-treatment-congenital-glaucoma-9",
+          "p-ophthalmology-glaucoma-poag-tonometry-perimetry-10",
+          "p-ophthalmology-primary-and-secondary-glaucoma-11"
+         ],
+         "egurukul": [
+          "e-ophthalmology-acute-congestive-glaucoma-66",
+          "e-ophthalmology-anti-glaucoma-drugs-67",
+          "e-ophthalmology-congenital-glaucoma-68",
+          "e-ophthalmology-glaucoma-introduction-69",
+          "e-ophthalmology-secondary-developmental-glaucoma-75"
+         ]
+        }
        }
       ]
      },
@@ -57146,7 +58773,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-acanthamoeba-40"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-rheumatoid-arthritis-655",
@@ -57199,7 +58830,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-cataract-33"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-immature-senile-cataract-659",
@@ -57211,7 +58846,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-cataract-33"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-congenital-cataract-660",
@@ -57223,7 +58862,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-cataract-33"
+         ]
+        }
        }
       ]
      },
@@ -57298,7 +58941,17 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ophthalmology-errors-in-optics-astigmatism-and-errors-of-accomodation-395"
+         ],
+         "prepladder": [
+          "p-ophthalmology-astigmatism-accommodation-presbyopia-37"
+         ],
+         "egurukul": [
+          "e-ophthalmology-astigmatism-accommodation-79"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-hyperopia-666",
@@ -57339,7 +58992,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "egurukul": [
+          "e-ophthalmology-diabetic-retinopathy-14"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-retinal-detachment-669",
@@ -57351,7 +59008,20 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-ophthalmology-retina-and-vitreous-retinal-vascular-disorders-and-retinal-detachm-400"
+         ],
+         "doctutorials": [
+          "d-ophthalmology-retinal-detachment-18"
+         ],
+         "prepladder": [
+          "p-ophthalmology-macular-and-fundus-disorders-retinal-detachment-and-retinoblastoma-15"
+         ],
+         "egurukul": [
+          "e-ophthalmology-retinal-detachment-20"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-retinitis-pigmentosa-670",
@@ -57392,7 +59062,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-ophthalmology-squint-20"
+         ]
+        }
        }
       ]
      },
@@ -57409,7 +59083,11 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-ophthalmology-macular-and-fundus-disorders-retinal-detachment-and-retinoblastoma-15"
+         ]
+        }
        },
        {
         "id": "lib-ophthalmology-limbal-dermoid-674",
@@ -57624,7 +59302,20 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-dermatology-leprosy-247"
+         ],
+         "doctutorials": [
+          "d-dermatology-leprosy-7"
+         ],
+         "prepladder": [
+          "p-dermatology-leprosy-22"
+         ],
+         "egurukul": [
+          "e-dermatology-leprosy-18"
+         ]
+        }
        },
        {
         "id": "lib-dermatology-cutaneous-tuberculosis-690",
@@ -57636,7 +59327,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-dermatology-cutaneous-tuberculosis-21"
+         ]
+        }
        }
       ]
      },
@@ -57670,7 +59365,17 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-dermatology-papulosquamous-disorders-psoriasis-493"
+         ],
+         "prepladder": [
+          "p-dermatology-psoriasis-16"
+         ],
+         "egurukul": [
+          "e-dermatology-psoriasis-17"
+         ]
+        }
        }
       ]
      },
@@ -57704,7 +59409,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-dermatology-sexually-transmitted-infections-syphilis-500"
+         ],
+         "prepladder": [
+          "p-dermatology-syphilis-34"
+         ]
+        }
        },
        {
         "id": "lib-dermatology-genital-herpes-695",
@@ -57733,7 +59445,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-dermatology-allergic-disorders-dermatitis-dermatitis-489"
+         ],
+         "prepladder": [
+          "p-dermatology-dermatitis-13"
+         ]
+        }
        }
       ]
      },
@@ -57891,7 +59610,21 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anatomy-neuroanatomy-cerebellum-24"
+         ],
+         "doctutorials": [
+          "d-anatomy-cerebellum-15"
+         ],
+         "prepladder": [
+          "p-anatomy-brainstem-cranial-nerves-and-cerebellum-i-18",
+          "p-anatomy-brainstem-cranial-nerves-and-cerebellum-ii-19"
+         ],
+         "egurukul": [
+          "e-anatomy-cerebellum-67"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-cranial-nerve-708",
@@ -57903,7 +59636,27 @@ window.D = {
         "sourceRec": null,
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anatomy-neuroanatomy-cranial-nerves-16"
+         ],
+         "doctutorials": [
+          "d-anatomy-cranial-nerves-4",
+          "d-anatomy-cranial-nerve-nuclei-lateral-ventricles-third-ventricle-14"
+         ],
+         "prepladder": [
+          "p-anatomy-brainstem-cranial-nerves-and-cerebellum-i-18",
+          "p-anatomy-brainstem-cranial-nerves-and-cerebellum-ii-19",
+          "p-anatomy-cranial-nerves-and-cervical-plexus-27"
+         ],
+         "egurukul": [
+          "e-anatomy-cranial-nerve-nuclei-columns-28",
+          "e-anatomy-cranial-nerves-ix-x-xi-xii-nerves-29",
+          "e-anatomy-parasympathetic-ganglion-cranial-nerve-v-35",
+          "e-anatomy-cranial-nerve-vii-44",
+          "e-anatomy-cranial-nerve-iii-iv-vi-45"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-receptors-and-function-709",
@@ -57963,7 +59716,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-anatomy-brodmann-area-ventral-dorsal-aspect-of-brainstem-11"
+         ]
+        }
        }
       ]
      },
@@ -57980,7 +59737,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-anatomy-temporomandibular-joint-muscles-of-mastication-2"
+         ],
+         "egurukul": [
+          "e-anatomy-temporomandibular-joint-muscles-of-mastication-39"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-great-auricular-nerve-715",
@@ -58090,7 +59854,19 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anatomy-histology-cell-structure-epithelia-glands-connective-tissue-10",
+          "m-anatomy-histology-bone-cartilage-muscular-tissue-11",
+          "m-anatomy-histology-nervous-and-endocrine-systems-12",
+          "m-anatomy-histology-cardiovascular-lymphatic-and-respiratory-systems-13",
+          "m-anatomy-histology-digestive-hepatobiliary-genitourinary-systems-14",
+          "m-anatomy-histology-skin-special-senses-eye-and-ear-15"
+         ],
+         "cerebellum": [
+          "c-anatomy-histology-8"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-portal-hypertension-723",
@@ -58114,7 +59890,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-anatomy-inguinal-and-femoral-anatomy-and-hernia-abdominal-wall-layers-peritoneal-57"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-anus-725",
@@ -58203,7 +59983,14 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-anatomy-anterior-abdominal-wall-inguinal-canal-22"
+         ],
+         "egurukul": [
+          "e-anatomy-abdominal-wall-1-landmarks-inguinal-canal-88"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-inguinal-lymph-nodes-732",
@@ -58227,7 +60014,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "doctutorials": [
+          "d-anatomy-muscles-of-arm-forearm-anatomical-snuff-box-exterior-retinaculum-muscles-29"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-lumbricals-interossei-734",
@@ -58280,7 +60071,19 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anatomy-histology-cell-structure-epithelia-glands-connective-tissue-10",
+          "m-anatomy-histology-bone-cartilage-muscular-tissue-11",
+          "m-anatomy-histology-nervous-and-endocrine-systems-12",
+          "m-anatomy-histology-cardiovascular-lymphatic-and-respiratory-systems-13",
+          "m-anatomy-histology-digestive-hepatobiliary-genitourinary-systems-14",
+          "m-anatomy-histology-skin-special-senses-eye-and-ear-15"
+         ],
+         "cerebellum": [
+          "c-anatomy-histology-8"
+         ]
+        }
        }
       ]
      },
@@ -58300,7 +60103,14 @@ window.D = {
         "sourceRec": "RR video+notes➡️Main",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-anatomy-fertilization-early-embryonic-development-first-2-weeks-1"
+         ],
+         "egurukul": [
+          "e-anatomy-fertilization-implantation-3"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-aortic-arches-739",
@@ -58324,7 +60134,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-anatomy-development-of-the-cardiovascular-system-and-fetal-circulation-48"
+         ]
+        }
        }
       ]
      },
@@ -58370,7 +60184,32 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anatomy-histology-cell-structure-epithelia-glands-connective-tissue-10",
+          "m-anatomy-histology-bone-cartilage-muscular-tissue-11",
+          "m-anatomy-histology-nervous-and-endocrine-systems-12",
+          "m-anatomy-histology-cardiovascular-lymphatic-and-respiratory-systems-13",
+          "m-anatomy-histology-digestive-hepatobiliary-genitourinary-systems-14",
+          "m-anatomy-histology-skin-special-senses-eye-and-ear-15"
+         ],
+         "cerebellum": [
+          "c-anatomy-histology-8"
+         ],
+         "prepladder": [
+          "p-anatomy-tissue-histology-i-5",
+          "p-anatomy-tissue-histology-ii-6",
+          "p-anatomy-tissue-histology-iii-7",
+          "p-anatomy-integumentary-special-sensory-histology-8",
+          "p-anatomy-neuroendocrine-histology-microscopic-anatomy-14",
+          "p-anatomy-histology-of-vascular-lymphoid-respiratory-systems-50",
+          "p-anatomy-histology-of-abdominal-reproductive-organs-56"
+         ],
+         "egurukul": [
+          "e-anatomy-cerebrum-homunculus-histology-diencephalon-69",
+          "e-anatomy-git-liver-histology-91"
+         ]
+        }
        },
        {
         "id": "lib-anatomy-joint-744",
@@ -58767,7 +60606,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "cerebellum": [
+          "c-radiology-usg-227"
+         ]
+        }
        },
        {
         "id": "lib-radiology-mickey-mouse-sign-772",
@@ -58855,7 +60698,12 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.783,
         "tier": 3,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anaesthesia-acls-acls-467",
+          "m-anaesthesia-acls-ventilation-and-o2-delivery-systems-468"
+         ]
+        }
        },
        {
         "id": "lib-anaesthesia-malignant-hyperthermia-778",
@@ -58896,7 +60744,11 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "prepladder": [
+          "p-anaesthesia-oxygen-delivering-systems-i-22"
+         ]
+        }
        },
        {
         "id": "lib-anaesthesia-capnography-781",
@@ -58925,7 +60777,18 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.409,
         "tier": 2,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anaesthesia-muscle-relaxants-depolarising-muscle-relaxants-469",
+          "m-anaesthesia-muscle-relaxants-non-depolarising-muscle-relaxants-470"
+         ],
+         "prepladder": [
+          "p-anaesthesia-muscle-relaxants-6"
+         ],
+         "egurukul": [
+          "e-anesthesia-general-anesthesia-muscle-relaxants-8"
+         ]
+        }
        },
        {
         "id": "lib-anaesthesia-emla-patch-783",
@@ -58995,13 +60858,99 @@ window.D = {
         "sourceRec": "RR Notes ➡️ RR",
         "importance": 0.196,
         "tier": 1,
-        "platformRefs": {}
+        "platformRefs": {
+         "marrow": [
+          "m-anaesthesia-complications-of-anaesthesia-complications-of-anaesthesia-482"
+         ],
+         "egurukul": [
+          "e-anesthesia-general-anesthesia-complications-15"
+         ]
+        }
        }
       ]
      }
     ]
    }
-  ]
+  ],
+  "coverage": {
+   "matcher": "name+alias normalized token match, anchored on canonical topics; threshold 0.78; precision-first (unmapped over forced)",
+   "topicsTotal": 787,
+   "topicsWithAnyPlatform": 232,
+   "hyTotal": 157,
+   "hyWithAnyPlatform": 77,
+   "platforms": [
+    {
+     "platformId": "marrow",
+     "name": "Marrow",
+     "kind": "qbank",
+     "hyCovered": 46,
+     "hyTotal": 157,
+     "hyPct": 29,
+     "topicsCovered": 110,
+     "topicsTotal": 787,
+     "topicsPct": 14,
+     "leavesMapped": 161,
+     "leavesUnmapped": 674,
+     "leavesTotal": 835
+    },
+    {
+     "platformId": "cerebellum",
+     "name": "Cerebellum",
+     "kind": "qbank",
+     "hyCovered": 14,
+     "hyTotal": 157,
+     "hyPct": 9,
+     "topicsCovered": 27,
+     "topicsTotal": 787,
+     "topicsPct": 3,
+     "leavesMapped": 27,
+     "leavesUnmapped": 244,
+     "leavesTotal": 271
+    },
+    {
+     "platformId": "doctutorials",
+     "name": "DocTutorials",
+     "kind": "qbank",
+     "hyCovered": 26,
+     "hyTotal": 157,
+     "hyPct": 17,
+     "topicsCovered": 66,
+     "topicsTotal": 787,
+     "topicsPct": 8,
+     "leavesMapped": 81,
+     "leavesUnmapped": 563,
+     "leavesTotal": 644
+    },
+    {
+     "platformId": "prepladder",
+     "name": "PrepLadder",
+     "kind": "lecture",
+     "hyCovered": 45,
+     "hyTotal": 157,
+     "hyPct": 29,
+     "topicsCovered": 119,
+     "topicsTotal": 787,
+     "topicsPct": 15,
+     "leavesMapped": 162,
+     "leavesUnmapped": 953,
+     "leavesTotal": 1115
+    },
+    {
+     "platformId": "egurukul",
+     "name": "eGurukul (DBMCI)",
+     "kind": "lecture",
+     "hyCovered": 54,
+     "hyTotal": 157,
+     "hyPct": 34,
+     "topicsCovered": 148,
+     "topicsTotal": 787,
+     "topicsPct": 19,
+     "leavesMapped": 190,
+     "leavesUnmapped": 1092,
+     "leavesTotal": 1282
+    }
+   ]
+  }
  }
 };
 // back-compat shim: legacy reads of window.QBANK_DATA resolve to the new model.

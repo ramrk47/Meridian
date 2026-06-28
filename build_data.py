@@ -465,6 +465,196 @@ platforms = [
     egurukul,     # kind="lecture" — no MCQ totals; integrated for the canonical spine
 ]
 
+# ---------- Stage 3: map all 5 platforms → canonical topics (the spine) ----------
+# Anchor on the canonical topic names+aliases; for each canonical topic, find the
+# platform leaves (in the SAME canonical subject) that confidently name the same thing.
+# HIGH PRECISION over recall: only confident matches are recorded; everything else
+# stays unmapped and is reported. No forced matches → no false coverage. The result
+# fills library topic.platformRefs{platformId:[leafIds]} and a coverage scorecard.
+# (The legacy js sim()/toksC() token matcher is kept only as a runtime fallback hint
+# in the qbank drawer — this build-time map is the source of truth for coverage.)
+_MAP_STOP = set((
+    "and the of for with system systems disease diseases disorder disorders its his amp "
+    "general basic concepts tricks magics drug drugs management basics introduction clinical "
+    "miscellaneous related part type types other others overview approach study notes video "
+    "main rr in to a an by on or "
+).split())
+
+# Spelling normalization (British⇄American) + true-synonym canonicalization. These are
+# genuine same-thing rewrites, applied symmetrically to BOTH sides — normalization, not
+# forcing. Kept deliberately conservative (only unambiguous medical synonyms).
+def _spell(s):
+    s = s.replace("oe", "e").replace("ae", "e")
+    s = re.sub(r"our\b", "or", s)          # tumour→tumor, colour→color
+    return s
+
+_SYN = {
+    "cancer": "carcinoma", "cancers": "carcinoma", "carcinomas": "carcinoma",
+    "tumour": "tumor", "tumours": "tumor", "tumors": "tumor",
+}
+def _syn(tok):
+    if tok in _SYN:
+        return _SYN[tok]
+    # light plural stem (only longer tokens; avoids butchering short terms)
+    if len(tok) > 4 and tok.endswith("s") and not tok.endswith("ss"):
+        tok = tok[:-1]
+    return tok
+
+def _norm(s):
+    return _spell(re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", " ", (s or "").lower())).strip())
+
+def _toks(s):
+    return {_syn(w) for w in _norm(s).split() if len(w) > 2 and w not in _MAP_STOP}
+
+# Split a topic name into the distinct entities it lists. A masterlist topic is often
+# a compound ("Rheumatic Heart disease and Infective endocarditis", "Thyroid Nodule, Goitre")
+# — each conjunct is its own matchable entity. We deliberately do NOT use a loose token-
+# overlap path (it mis-merges sibling variants that share a generic noun, e.g. Fungal vs
+# Bacterial Corneal Ulcer, OHSS vs PCOS) — only exact / word-bounded-substring / token-subset.
+# Generic head / region nouns: descriptive, never specific enough to confirm a topic on
+# their own (e.g. "syndrome", "genital", "anatomy"). A lone generic token must NOT establish
+# a match — otherwise "Genetics and syndrome" would claim every "…Syndrome" module.
+_GENERIC = set((
+    "syndrome anatomy physiology infection infections tumor tumour lesion lesions anomaly "
+    "anomalies defect defects fracture fractures surgery region gland glands nerve nerves "
+    "muscle muscles artery arteries vein veins bone bones reflex reflexes pregnancy fluid "
+    "function functions deficiency malignancy benign acute chronic carcinoma cancer genital "
+    "neoplasm neoplasms tract organ organs cavity canal congenital metabolism pathway pathways "
+    # generic process / region / category words (over-claim coverage on their own)
+    "vaginal vagina synthesis complication learning delivery production storage classification "
+    "screening prevention staging grading scoring schedule development"
+).split())
+
+_CONNECTORS = re.compile(r"\s*(?:/|,|&|\band\b|\bwith\b|\bor\b)\s*", re.I)
+
+def _phrases(name):
+    parts = [p.strip() for p in _CONNECTORS.split(name) if p and p.strip()]
+    out = [name]
+    for p in parts:
+        if p != name and _toks(p):   # only conjuncts that carry a significant token
+            out.append(p)
+    return out
+
+def _phrase_match(canon_name, leaf_str):
+    """Confidence 0..1 that leaf_str names the same topic as canon_name (anchor=canon).
+    Precision-first: exact, then word-bounded substring of a substantial phrase, then
+    token-subset either way. No loose overlap path → no sibling-variant false coverage."""
+    nc, nl = _norm(canon_name), _norm(leaf_str)
+    if not nc or not nl:
+        return 0.0
+    if nc == nl:
+        return 1.0
+    tc, tl = _toks(canon_name), _toks(leaf_str)
+    # whole-phrase substring (word-bounded), only for substantial multi-token phrases —
+    # guards a short generic token from over-matching ("ulcer" inside "peptic ulcer disease").
+    if len(nc) >= 6 and (f" {nc} " in f" {nl} " or f" {nl} " in f" {nc} "):
+        if len(tc) >= 2 or len(nc) >= 8:
+            return 0.95
+    if not tc or not tl:
+        return 0.0
+    # every significant canonical token present in the leaf → leaf covers this entity
+    if tc <= tl:
+        if len(tc) >= 2:
+            # reject if EVERY canonical token is a generic head/region noun (no specific anchor)
+            if all(t in _GENERIC for t in tc):
+                return 0.0
+            return 0.9
+        # a single, distinctive token (e.g. "glaucoma", "achalasia", "uveitis") — never a
+        # bare generic noun ("syndrome", "genital"), which would over-claim coverage.
+        (only,) = tuple(tc)
+        if len(only) >= 7 and only not in _GENERIC:
+            return 0.8
+        return 0.0
+    # leaf fully inside canonical (leaf is the narrower phrasing of this entity)
+    if tl <= tc and len(tl) >= 2:
+        return 0.82
+    return 0.0
+
+_MATCH_THRESHOLD = 0.78
+
+def map_platforms_to_library():
+    if not library:
+        return None
+    # index every platform leaf by canonical subject (skip non-library subjects e.g. PYQ papers)
+    lib_subjects = {s["subject"] for s in library["subjects"]}
+    leaves_by_subj = {}
+    leaf_total = {p["id"]: 0 for p in platforms}
+    for p in platforms:
+        for s in p["subjects"]:
+            cs = canon(s["subject"])
+            if cs not in lib_subjects:
+                continue
+            for m in s["modules"]:
+                leaf_total[p["id"]] += 1
+                leaves_by_subj.setdefault(cs, []).append(
+                    {"pid": p["id"], "id": m["id"], "name": m["name"], "cat": m.get("category")})
+    leaf_mapped = {p["id"]: set() for p in platforms}  # leaf ids that hit ≥1 canonical topic
+    # coverage tallies
+    cov = {p["id"]: {"hyCovered": 0, "hyTotal": 0, "topicsCovered": 0, "topicsTotal": 0}
+           for p in platforms}
+    for subj in library["subjects"]:
+        cs = subj["subject"]
+        pool = leaves_by_subj.get(cs, [])
+        for sec in subj["sections"]:
+            for t in sec["topics"]:
+                # candidate phrases: the name, each alias, and each conjunct entity within them
+                names = []
+                for raw in [t["name"]] + (t["aliases"] or []):
+                    for ph in _phrases(raw):
+                        if ph not in names:
+                            names.append(ph)
+                refs = {}
+                for leaf in pool:
+                    score = 0.0
+                    for nm in names:
+                        score = max(score, _phrase_match(nm, leaf["name"]))
+                        if leaf["cat"]:  # a leaf's category can also name the topic
+                            score = max(score, _phrase_match(nm, leaf["cat"]) * 0.9)
+                        if score >= 1.0:
+                            break
+                    if score >= _MATCH_THRESHOLD:
+                        refs.setdefault(leaf["pid"], []).append(leaf["id"])
+                        leaf_mapped[leaf["pid"]].add(leaf["id"])
+                t["platformRefs"] = refs
+                for p in platforms:
+                    cov[p["id"]]["topicsTotal"] += 1
+                    if t["tier"] == 3:
+                        cov[p["id"]]["hyTotal"] += 1
+                    if p["id"] in refs:
+                        cov[p["id"]]["topicsCovered"] += 1
+                        if t["tier"] == 3:
+                            cov[p["id"]]["hyCovered"] += 1
+    # finalize per-platform scorecard
+    platform_cov = []
+    for p in platforms:
+        c = cov[p["id"]]
+        mapped = len(leaf_mapped[p["id"]])
+        total = leaf_total[p["id"]]
+        platform_cov.append({
+            "platformId": p["id"], "name": p["name"], "kind": p["kind"],
+            "hyCovered": c["hyCovered"], "hyTotal": c["hyTotal"],
+            "hyPct": round(100 * c["hyCovered"] / c["hyTotal"]) if c["hyTotal"] else 0,
+            "topicsCovered": c["topicsCovered"], "topicsTotal": c["topicsTotal"],
+            "topicsPct": round(100 * c["topicsCovered"] / c["topicsTotal"]) if c["topicsTotal"] else 0,
+            "leavesMapped": mapped, "leavesUnmapped": total - mapped, "leavesTotal": total,
+        })
+    # topics with NO platform at all (gaps the spine flags honestly)
+    topics_all = [t for s in library["subjects"] for sec in s["sections"] for t in sec["topics"]]
+    topics_any = sum(1 for t in topics_all if t["platformRefs"])
+    hy_all = [t for t in topics_all if t["tier"] == 3]
+    hy_any = sum(1 for t in hy_all if t["platformRefs"])
+    return {
+        "matcher": "name+alias normalized token match, anchored on canonical topics; "
+                   f"threshold {_MATCH_THRESHOLD}; precision-first (unmapped over forced)",
+        "topicsTotal": len(topics_all), "topicsWithAnyPlatform": topics_any,
+        "hyTotal": len(hy_all), "hyWithAnyPlatform": hy_any,
+        "platforms": platform_cov,
+    }
+
+library_coverage = map_platforms_to_library()
+if library:
+    library["coverage"] = library_coverage
+
 # ---------- curated judgment layer (Phase 1c.1 — substance, honestly labelled) ----------
 # Curated, sourced claims live in _raw/curated/*.json (never hardcoded here). Every directional /
 # public-3p figure references a source in the shared registry. epistemic labels: measured | proxy |
@@ -622,4 +812,12 @@ if library:
     _lib_hy = sum(1 for s in library["subjects"] for sec in s["sections"] for t in sec["topics"] if t["tier"] == 3)
     print(f"Library: {len(library['subjects'])} subjects, {_lib_secs} sections, {_lib_tops} topics "
           f"({_lib_hy} high-priority); importance directional (PYQ-frequency masterlist)")
+if library_coverage:
+    lc = library_coverage
+    print(f"Mapping: {lc['topicsWithAnyPlatform']}/{lc['topicsTotal']} canonical topics covered by ≥1 platform; "
+          f"high-yield {lc['hyWithAnyPlatform']}/{lc['hyTotal']}")
+    for pc in lc["platforms"]:
+        print(f"  {pc['name']:16s} HY {pc['hyCovered']:>3d}/{pc['hyTotal']:<3d} ({pc['hyPct']:>3d}%) · "
+              f"topics {pc['topicsCovered']:>3d}/{pc['topicsTotal']} ({pc['topicsPct']:>3d}%) · "
+              f"leaves mapped {pc['leavesMapped']:>4d}/{pc['leavesTotal']:<4d} unmapped {pc['leavesUnmapped']}")
 print(f"Wrote {out}")
