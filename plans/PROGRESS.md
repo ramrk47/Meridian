@@ -21,7 +21,7 @@
   trademark clearance still REQUIRED before public launch** (see `plans/NAME_CANDIDATES.md`, memory `product-name-calvetra`).
 - **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED & verified** (modular design system + chart
   vocabulary + entity pages Subject/Platform/Faculty + faculty seed(14) + motion/View-Transitions layer).
-- **Next:** small polish (migrate 5 surface empty-states to `ds.emptyState()`); then Phase 2 wedge (predictor + tracker).
+- **Next:** **Phase 2a Rank/College Predictor** (its own data-first session). *(Phase 2b tracker shipped 2026-06-29.)*
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
 - **Build/launch for NEET PG · INI-CET · FMGE now**; architect exam-agnostic so all-India verticals extend later (don't build them yet).
@@ -43,10 +43,20 @@
 | `doctutorials_subjects.csv` | 57 | subject×{Main,QRP,PYQ} | ✅ Main in `D.platforms` (QRP/PYQ = seam) |
 | `doctutorials_chapters.csv` | 1311 | chapter | ✅ 644 Main chapters → leaves (13,202 MCQs) |
 | `egurukul_topics.csv` | 1282 | topic | ✅ integrated `kind:"lecture"` (`mcqs:null`); mapped onto spine |
-| `egurukul_other.csv` | 1809 | topic (PYQ/Express) | ⏳ seam |
+| `egurukul_other.csv` | 1809 | topic (PYQ/Express) | ✅ **2b**: PYQ (419) + Express (1390) → `D.pyq` (measured; Express flagged revision) |
 | `prepladder_modules.csv` | 1115 | module | ✅ integrated `kind:"lecture"` (`mcqs:null`); mapped onto spine |
-| `prepladder_pyq.csv` | 361 | topic/year | ⏳ seam |
+| `prepladder_pyq.csv` | 361 | topic/year | ✅ **2b**: 361 PYQ sets / 6,774 Qs → `D.pyq` (measured) |
 | `prepladder_subject_totals.csv` | 19 | subject | ✅ used to validate PrepLadder module counts |
+
+**PYQ seams → `D.pyq` (Phase 2b, Stage 1; measured past-paper question counts, SEPARATE from the 56,091 QBank MCQ figure):**
+| Platform | Source | Past papers | Notes |
+|----------|--------|------------:|-------|
+| Marrow | "Previous Year Question Papers" subject (reuses existing leaf ids → unions w/ QBank tracker) | 323 / 5,738 Q | measured |
+| DocTutorials | `doctutorials_chapters.csv` PYQ + QRP | 371 / 4,488 Q (+ QRP 296 / 5,539 Q) | QRP flagged revision |
+| PrepLadder | `prepladder_pyq.csv` | 361 / 6,774 Q | measured |
+| eGurukul | `egurukul_other.csv` PYQ + Express | 419 / 4,846 Q (+ Express 1,390 / 14,890 Q) | Express flagged revision |
+| Cerebellum | — | 0 | **honest "no PYQ capture"** (never fabricated) |
+| **Total** | | **1,474 sets / 21,846 PYQ Qs · 4/5 platforms** | 3,160 trackable units incl. revision |
 
 **Canonical spine (`_raw/curated/Masterlist_topic_importance.xlsx` → `D.library`, Phase 1d):**
 | Source | Level | epistemic | Status |
@@ -62,7 +72,7 @@
 | `reliability.json` | 5 apps | `public-3p` | ✅ iOS App Store scorecard → `D.reliability` (all 5 apps `platformId` set) |
 | `methodology.json` | 4 labels | — | ✅ epistemic-label defs + firewall → `D.methodology` ("How we rate") |
 - ⚠️ `(1)/(2)` copies are byte-identical dups — `build_data.py` reads the canonical base CSV only.
-- Remaining seams: `egurukul_other.csv`, `prepladder_pyq.csv`, DocTutorials QRP/PYQ — for the Phase-2 PYQ tracker.
+- ✅ All PYQ seams now integrated (Phase 2b) — no remaining content seams.
 
 ## Roadmap (strategy-informed; SEQUENCE depends on the forks — confirm with user)
 ### Phase 0 — settle strategy
@@ -130,9 +140,21 @@
   "inhibitor"/"syndrome"). 5 HY topics remain honest gaps (Cystourethroscope, Hysteroscopy, High-risk
   pregnancy, Poisoning, Post-gastrectomy). Overlay = `_raw/curated/mapping_overrides.json`; spine untouched.
 ### Phase 2 — free wedge / acquisition (GTM)
-- [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer) —
-  `PHASE2B_PROMPT.md`, **rebuilt on the 1d canonical spine** (Stage-1 platform integration moved into 1d);
-  build **after** the mapping audit lands.
+- [x] **Phase 2b · PYQ tracker + unified cross-platform tracker** (the retain surface / spreadsheet-killer),
+  built on the 1d canonical spine. *(2026-06-29)* New **Tracker** surface, two lenses via a shared top sub-nav:
+  **(1) Cross-platform** — organized around `D.library`: per canonical topic, PYQ-frequency importance
+  (directional) + audited coverage pips (`libCoverageChips`) + **union** tracking ("done on Marrow satisfies
+  the topic"); proves completion (HY-union % by subject, importance-ranked untracked-HY gaps, the **5 genuine
+  unmapped HY topics** surfaced honestly); subject→topic→per-platform-leaf drill reuses the `.mrow` chip seam,
+  aggregates refresh live on `state-changed`. **(2) PYQ** — `D.pyq` measured past-paper coverage
+  (1,474 sets / 21,846 Qs across 4 platforms; Cerebellum honest "no capture"; QRP/Express flagged revision),
+  subject×platform heatmap + trackable per-paper rows (Marrow reuses leaf ids → unions w/ QBank). **56,091 /
+  `D.library` / mapping untouched.** Folded in a **nav refactor** (user ask): bottom bar 7→**5 groups**
+  (Home · Track[Cross·PYQ·QBank] · Plan[Planner·HY] · Stats[Progress·Tests] · Videos) with a shared sub-nav
+  lens switcher; `NAV_GROUPS` drives desktop tabs + mobile bar; `show(view)` stays the atom (deep-links /
+  palette / hotkeys 1–5 / entity Back re-sync). Verified 320→1920 day+evening, console clean, no h-scroll;
+  data traces to raw CSVs. Commits `d6a0a72`·`e31e189`·`7a3748c`. **Subscriptions lens stays parked** (the
+  coverage-chip structure is centralized + additive-ready per `STUDY_PLANNER.md`).
 - [ ] **Free Rank/College Predictor** (results-season lead magnet) — Phase 2a, its own data-first session next.
 ### Phase 3 — retention & the ratings graph (the moat)
 - [ ] **Spaced revision / error-log → verified re-test queue** (H2/job#4 — top pain).
@@ -147,6 +169,21 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Phase 2b SHIPPED — PYQ tracker + unified cross-platform tracker (the retain surface) + 5-group nav.**
+  Stage 1: integrated the last PYQ seams into `D.pyq` (measured past-paper question counts; 1,474 sets / 21,846 Qs;
+  Marrow reuses existing leaf ids to union with the QBank tracker; DocT QRP + eGurukul Express captured but flagged
+  as revision, not past papers; Cerebellum shown honestly as "no PYQ capture"). Kept SEPARATE from the 56,091 QBank
+  MCQ figure (preserved). Stage 2: the spreadsheet-killer — a cross-platform lens organized around `D.library`, with
+  per-topic importance (directional) + audited coverage pips + **union** status (done-anywhere satisfies the topic),
+  completion proof (HY-union % by subject + importance-ranked untracked gaps), and the **5 genuinely-unmapped HY
+  topics** surfaced honestly. Reuses the `.mrow`/appClick tracking seam; live aggregate refresh on `state-changed`.
+  **Mid-build the user asked to cut the bottom bar to ≤5 PS-style:** refactored nav into `NAV_GROUPS` (Home · Track
+  · Plan · Stats · Videos), merging related sections behind a shared top sub-nav lens switcher (the Tracker's
+  internal lens toggle lifted into a general mechanic) — desktop tabs + mobile bar both driven by it; `show(view)`
+  remains the routing atom so deep-links / palette / hotkeys (1–5) / entity Back all re-sync. Coverage chips stay
+  centralized in `libCoverageChips` so the parked "My subscriptions" `.cov-mine` row remains purely additive.
+  Verified in Preview 320→1920 day+evening (console clean, no h-scroll; one 1024 grid-blowout fixed via min-width:0),
+  PYQ heatmap cells trace exactly to the raw CSVs. **Next = Phase 2a Rank/College Predictor (its own data-first session).**
 - 2026-06-28 **Study Planner research commissioned** (external Claude chat) — adherence-not-hours focus:
   cross-platform plan orchestration, tracking-without-time-logging, missing-feature gaps, NEET-PG-weighted,
   r/indianmedschool + topper vlogs + shared spreadsheet/Notion artifacts. **When it lands, fold findings
