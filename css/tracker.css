@@ -1,0 +1,101 @@
+/* ============================================================
+   tracker.css — the retain surface (cross-platform + PYQ lenses)
+   Layout + lens chrome only; tiles / panels / lrow / chips / heatmap
+   come from components.css + charts.css. Warm-almanac identity, dense.
+   ============================================================ */
+
+#view-tracker .trk-body { display: flex; flex-direction: column; gap: 12px; }
+
+/* lens switch — prominent, centered segmented control */
+.trk-lensbar { display: flex; justify-content: flex-start; margin-bottom: 2px; }
+.trk-lensbar .seg { font-size: 13px; }
+.trk-lensbar .seg button { padding: 7px 16px; font-weight: 600; }
+
+/* tiles + note + controls reuse shared idioms; spacing only */
+.trk-tiles { margin-bottom: 2px; }
+.trk-note { line-height: 1.45; }
+.trk-controls { gap: 8px; flex-wrap: wrap; align-items: center; }
+.trk-examseg .seg { font-size: 12.5px; }
+.trk-frame { margin: 2px 0; }
+
+/* ---- subject blocks (collapsible, reuse the cat-block .open toggle) ---- */
+.trk-subjblock { padding: 0; overflow: hidden; }
+.trk-subjhead { cursor: pointer; padding: 12px 14px; margin: 0; align-items: center; gap: 10px; }
+.trk-subjhead h3 { margin: 0; font-size: 16px; }
+.trk-subjhead h3 a { color: inherit; }
+.trk-subjhead .trk-sh { display: block; font-size: 11.5px; margin-top: 2px; }
+.trk-subjhead::after { content: "▸"; margin-left: 6px; color: var(--ink-3); font-size: 12px; transition: transform var(--d-2, 160ms) var(--ease-soft, ease); }
+.trk-subjblock.open .trk-subjhead::after { transform: rotate(90deg); }
+.trk-subjmeter { margin-left: auto; }
+.trk-subjblock:not(.open) .trk-subjbody { display: none; }
+.trk-subjbody { padding: 0 12px 12px; display: flex; flex-direction: column; gap: 12px; }
+
+/* per-platform group within a subject */
+.trk-platgroup { }
+.trk-plathead { display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  padding: 4px 2px 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.trk-platname { font: 600 12.5px/1.2 var(--sans); letter-spacing: .01em; }
+.trk-platmeta { font-size: 11.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.trk-papers { background: transparent; }
+
+/* ---- PYQ paper rows ---- */
+.pyq-row .lrow-lead { display: flex; align-items: center; }
+.pyq-row .lrow-sub { font-variant-numeric: tabular-nums; }
+.pyq-extag { display: inline-flex; align-items: center; justify-content: center; min-width: 52px;
+  padding: 2px 7px; border-radius: 5px; font: 600 9.5px/1.3 var(--sans); letter-spacing: .04em;
+  text-transform: uppercase; border: 1px solid currentColor; white-space: nowrap; }
+.pyq-extag.ex-neet  { color: var(--accent-2, #2c6354); }
+.pyq-extag.ex-ini   { color: var(--marrow, #3a5a78); }
+.pyq-extag.ex-fmge  { color: var(--cere, #b0613b); }
+.pyq-extag.ex-aiims { color: var(--gold, #a9832f); }
+.pyq-extag.ex-oth   { color: var(--ink-3); }
+
+/* honest "no PYQ capture" footnote */
+.trk-nopyq { display: flex; align-items: center; gap: 8px; padding: 10px 12px; font-size: 12px;
+  color: var(--ink-2); background: var(--paper-2); border: 1px dashed var(--line); border-radius: 9px; }
+.trk-nopyq-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-4); flex: none; }
+
+/* ---- cross-platform lens: canonical-topic union rows ---- */
+.trk-topic .lrow-lead { display: flex; align-items: center; }
+.trk-topic .lrow-sub { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.trk-sectag { font-size: 10.5px; color: var(--ink-3); }
+.trk-angle { font-size: 10.5px; color: var(--ink-3); font-style: italic; }
+.trk-freq { font-size: 10.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.trk-topic-trail { display: flex; align-items: center; gap: 8px; }
+/* union status dots (a/r/t) */
+.trk-union { display: inline-flex; gap: 3px; align-items: center; }
+.trk-union .ud { width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--line); background: transparent; }
+.trk-union .ud.on.a { background: var(--accent-2, #2c6354); border-color: var(--accent-2, #2c6354); }
+.trk-union .ud.on.r { background: var(--gold, #a9832f); border-color: var(--gold, #a9832f); }
+.trk-union .ud.on.t { background: var(--marrow, #3a5a78); border-color: var(--marrow, #3a5a78); }
+.trk-platsdone { font-size: 10.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+/* topic expansion → per-platform mapped leaves */
+.trk-topic { cursor: pointer; }
+.trk-leaves { display: none; padding: 4px 0 8px 22px; flex-direction: column; gap: 4px; }
+.trk-topwrap.open .trk-leaves { display: flex; }
+.trk-topwrap.open > .trk-topic { background: var(--paper-2); }
+.trk-leaf-platlabel { font: 600 10.5px/1.2 var(--sans); letter-spacing: .02em; margin: 4px 0 1px; }
+.trk-leaf-unmapped { font-size: 11px; color: var(--ink-3); padding: 2px 0; }
+.trk-leafrow .lrow-title { font-size: 12.5px; }
+.trk-leafrow .lrow-sub { font-size: 10.5px; }
+
+/* completion / gaps panels */
+.trk-gap-row .lrow-sub { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.trk-gap-start { font-size: 10.5px; color: var(--ink-3); }
+.trk-genuine { border-left: 3px solid var(--gold, #a9832f); }
+.trk-genuine .lrow-sub { color: var(--ink-2); }
+
+/* desktop: lay completion + gaps two-up */
+@media (min-width: 1024px) {
+  .trk-prove-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+}
+
+/* mobile density */
+@media (max-width: 640px) {
+  .trk-lensbar .seg button { padding: 8px 12px; }
+  .trk-subjhead { padding: 11px 12px; }
+  .trk-subjhead h3 { font-size: 15px; }
+  .pyq-extag { min-width: 46px; font-size: 9px; }
+  .trk-subjbody { padding: 0 10px 10px; }
+}

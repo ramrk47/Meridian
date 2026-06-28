@@ -26,7 +26,7 @@ function buildPaletteIndex() {
   // faculty (gated: only indexed when seeded — never a fabricated roster)
   FACULTY.forEach(f => idx.push({ type: "Faculty", label: f.name, sub: (f.subjects || []).map(canon).join(" · ") + " · directional", run: () => goFaculty(f.id) }));
   // actions
-  [["Overview", "overview"], ["QBank Tracker", "qbank"], ["Progress", "progress"], ["Tests & Scores", "tests"], ["High-Yield", "hy"], ["Study Planner", "planner"]]
+  [["Overview", "overview"], ["QBank Tracker", "qbank"], ["Cross-platform Tracker", "tracker"], ["Progress", "progress"], ["Tests & Scores", "tests"], ["High-Yield", "hy"], ["Study Planner", "planner"]]
     .forEach(([lbl, view]) => idx.push({ type: "Go to", label: lbl, sub: "tab", run: () => show(view) }));
   idx.push({ type: "Action", label: "Export tracking (backup)", sub: "", run: () => $("#btnExport").click() });
   return idx;
@@ -358,9 +358,9 @@ function toggleTheme() {
   $("#btnTheme").textContent = dark ? "☾ Evening" : "☀ Day";
 }
 
-const RENDER = { overview: renderOverview, qbank: renderQbank, progress: renderProgress, tests: renderTests, hy: renderHY, videos: renderVideos, planner: renderPlanner };
-const TAB_ORDER = ["overview", "qbank", "progress", "tests", "hy", "videos", "planner"];
-const TAB_LABEL = { overview: "Overview", qbank: "QBank Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
+const RENDER = { overview: renderOverview, qbank: renderQbank, tracker: renderTracker, progress: renderProgress, tests: renderTests, hy: renderHY, videos: renderVideos, planner: renderPlanner };
+const TAB_ORDER = ["overview", "qbank", "tracker", "progress", "tests", "hy", "videos", "planner"];
+const TAB_LABEL = { overview: "Overview", qbank: "QBank Tracker", tracker: "Cross-platform Tracker", progress: "Progress", tests: "Tests & Scores", hy: "High-Yield", videos: "Videos", planner: "Study Planner" };
 let currentView = "overview";
 function show(view) {
   // entity views aren't tabs and have no RENDER entry — re-paint them from the live hash instead
@@ -444,7 +444,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") { closeSheet(); closeDrawer(); return; }
   if (typing) return;
   if (e.key === "/") { e.preventDefault(); openPalette(); return; }
-  if (e.key >= "1" && e.key <= "7") { show(TAB_ORDER[+e.key - 1]); return; }
+  if (e.key >= "1" && e.key <= "9" && +e.key <= TAB_ORDER.length) { show(TAB_ORDER[+e.key - 1]); return; }
   // QBank keyboard tracking
   if (currentView === "qbank") {
     const k = e.key.toLowerCase();

@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/hy.css">
 <link rel="stylesheet" href="css/videos.css">
 <link rel="stylesheet" href="css/planner.css">
+<link rel="stylesheet" href="css/tracker.css">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon.svg">
@@ -59,6 +60,7 @@
   </div>
   <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
     <button class="tab" role="tab" id="tab-qbank" aria-controls="view-qbank" aria-selected="false" tabindex="-1" data-view="qbank">QBank Tracker</button>
+    <button class="tab" role="tab" id="tab-tracker" aria-controls="view-tracker" aria-selected="false" tabindex="-1" data-view="tracker">Tracker</button>
     <button class="tab" role="tab" id="tab-progress" aria-controls="view-progress" aria-selected="false" tabindex="-1" data-view="progress">Progress</button>
     <button class="tab" role="tab" id="tab-tests" aria-controls="view-tests" aria-selected="false" tabindex="-1" data-view="tests">Tests &amp; Scores</button>
     <button class="tab" role="tab" id="tab-hy" aria-controls="view-hy" aria-selected="false" tabindex="-1" data-view="hy">High-Yield</button>
@@ -70,6 +72,7 @@
 <main id="app" tabindex="-1">
   <section id="view-overview" class="view active"></section>
   <section id="view-qbank" class="view" role="tabpanel" aria-labelledby="tab-qbank" tabindex="0"></section>
+  <section id="view-tracker" class="view" role="tabpanel" aria-labelledby="tab-tracker" tabindex="0"></section>
   <section id="view-progress" class="view" role="tabpanel" aria-labelledby="tab-progress" tabindex="0"></section>
   <section id="view-tests" class="view" role="tabpanel" aria-labelledby="tab-tests" tabindex="0"></section>
   <section id="view-hy" class="view" role="tabpanel" aria-labelledby="tab-hy" tabindex="0"></section>
@@ -82,12 +85,13 @@
 </main>
 
 <footer class="foot">
-  <span>Local-first · your ticks &amp; scores save on this device · <b>⌘K</b> to search · press <b>1–7</b> to switch tabs · export anytime · server-ready (see <code>server/</code>)</span>
+  <span>Local-first · your ticks &amp; scores save on this device · <b>⌘K</b> to search · press <b>1–8</b> to switch tabs · export anytime · server-ready (see <code>server/</code>)</span>
 </footer>
 
 <!-- bottom tab nav (mobile, ≤640px) -->
 <nav class="botnav" id="botnav" aria-label="Sections">
   <button data-view="qbank" aria-label="QBank Tracker"><span class="bn-i">▤</span><span class="bn-l">QBank</span></button>
+  <button data-view="tracker" aria-label="Cross-platform Tracker"><span class="bn-i">⊞</span><span class="bn-l">Track</span></button>
   <button data-view="progress" aria-label="Progress"><span class="bn-i">◔</span><span class="bn-l">Progress</span></button>
   <button data-view="tests" aria-label="Tests &amp; Scores"><span class="bn-i">✓</span><span class="bn-l">Tests</span></button>
   <button data-view="hy" aria-label="High-Yield"><span class="bn-i">★</span><span class="bn-l">Yield</span></button>
@@ -127,6 +131,7 @@
 <script src="js/motion.js"></script>
 <script src="js/surfaces/overview.js"></script>
 <script src="js/surfaces/qbank.js"></script>
+<script src="js/surfaces/tracker.js"></script>
 <script src="js/surfaces/progress.js"></script>
 <script src="js/surfaces/tests.js"></script>
 <script src="js/surfaces/hy.js"></script>

@@ -65684,6 +65684,31719 @@ window.D = {
     }
    ]
   }
+ },
+ "pyq": {
+  "captured": "26 June 2026",
+  "epistemic": "measured",
+  "measuredNote": "Actual past-exam question counts captured per platform (measured). Cerebellum exposes no PYQ bank in our capture. Quick-revision sets (DocTutorials QRP, eGurukul Express) are measured too but flagged separately — they are revision banks, not past papers.",
+  "exams": [
+   "NEET PG",
+   "INI-CET",
+   "FMGE",
+   "AIIMS"
+  ],
+  "platforms": [
+   {
+    "platformId": "marrow",
+    "name": "Marrow",
+    "kind": "qbank",
+    "has": true,
+    "questions": 5738,
+    "paperCount": 323,
+    "sets": [
+     {
+      "kind": "pyq",
+      "label": "Past papers",
+      "isPastPaper": true,
+      "questions": 5738,
+      "paperCount": 323
+     }
+    ]
+   },
+   {
+    "platformId": "cerebellum",
+    "name": "Cerebellum",
+    "kind": "qbank",
+    "has": false,
+    "questions": 0,
+    "paperCount": 0,
+    "sets": []
+   },
+   {
+    "platformId": "doctutorials",
+    "name": "DocTutorials",
+    "kind": "qbank",
+    "has": true,
+    "questions": 10027,
+    "paperCount": 667,
+    "sets": [
+     {
+      "kind": "pyq",
+      "label": "Past papers",
+      "isPastPaper": true,
+      "questions": 4488,
+      "paperCount": 371
+     },
+     {
+      "kind": "qrp",
+      "label": "Quick-revision sets (QRP)",
+      "isPastPaper": false,
+      "questions": 5539,
+      "paperCount": 296
+     }
+    ]
+   },
+   {
+    "platformId": "prepladder",
+    "name": "PrepLadder",
+    "kind": "lecture",
+    "has": true,
+    "questions": 6774,
+    "paperCount": 361,
+    "sets": [
+     {
+      "kind": "pyq",
+      "label": "Past papers",
+      "isPastPaper": true,
+      "questions": 6774,
+      "paperCount": 361
+     }
+    ]
+   },
+   {
+    "platformId": "egurukul",
+    "name": "eGurukul (DBMCI)",
+    "kind": "lecture",
+    "has": true,
+    "questions": 19736,
+    "paperCount": 1809,
+    "sets": [
+     {
+      "kind": "pyq",
+      "label": "Past papers",
+      "isPastPaper": true,
+      "questions": 4846,
+      "paperCount": 419
+     },
+     {
+      "kind": "express",
+      "label": "Express question bank",
+      "isPastPaper": false,
+      "questions": 14890,
+      "paperCount": 1390
+     }
+    ]
+   }
+  ],
+  "papers": [
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-aiims-2017-835",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-aiims-2018-836",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-aiims-2019-may-nov-837",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-aiims-2020-may-and-nov-ini-cet-838",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2018-839",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2019-840",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2020-841",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-ini-cet-2021-842",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2021-843",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-ini-cet-2022-844",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 37
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2022-845",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2023-846",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-ini-cet-2023-847",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-ini-cet-2024-848",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2024-849",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-ini-cet-2025-850",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-anatomy-anatomy-neet-2025-851",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-aiims-2017-852",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-aiims-2018-853",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-aiims-2019-may-nov-854",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-aiims-2020-may-and-nov-ini-c-855",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2018-856",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2019-857",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2020-858",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-ini-cet-2021-859",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2021-860",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-ini-cet-2022-861",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 31
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2022-862",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2023-863",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-ini-cet-2023-864",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-ini-cet-2024-865",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 31
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2024-866",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-ini-cet-2025-867",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-physiology-physiology-neet-2025-868",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-aiims-2017-869",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-aiims-2018-870",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 21
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-aiims-2019-may-nov-871",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-aiims-2020-may-and-nov-i-872",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2018-873",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 16
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2019-874",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2020-875",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-ini-cet-2021-876",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2021-877",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-ini-cet-2022-878",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 27
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2022-879",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2023-880",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-ini-cet-2023-881",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-ini-cet-2024-882",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2024-883",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-ini-cet-2025-884",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-biochemistry-biochemistry-neet-2025-885",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-aiims-2017-886",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 32
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-aiims-2018-887",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 35
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-aiims-2019-may-nov-888",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-aiims-2020-may-and-nov-i-889",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2018-890",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2019-891",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2020-892",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-ini-cet-2021-893",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 35
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2021-894",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-ini-cet-2022-895",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 57
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2022-896",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2023-897",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-ini-cet-2023-898",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 34
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-ini-cet-2024-899",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2024-900",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-ini-cet-2025-901",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-pharmacology-pharmacology-neet-2025-902",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-aiims-2017-903",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 28
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-aiims-2018-904",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-aiims-2019-may-nov-905",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-aiims-2020-may-and-nov-i-906",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 37
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2018-907",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2019-908",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2020-909",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-ini-cet-2021-910",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2021-911",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-ini-cet-2022-912",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 45
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2022-913",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2023-914",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-ini-cet-2023-915",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 34
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-ini-cet-2024-916",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 37
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2024-917",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-ini-cet-2025-918",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-microbiology-microbiology-neet-2025-919",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-aiims-2017-920",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 34
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-aiims-2018-921",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-aiims-2019-may-nov-922",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-aiims-2020-may-and-nov-ini-cet-923",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 34
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2018-924",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2019-925",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2020-926",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-ini-cet-2021-927",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 34
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2021-928",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-ini-cet-2022-929",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 57
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2022-930",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2023-931",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-ini-cet-2023-932",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 41
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-ini-cet-2024-933",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 31
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2024-934",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-ini-cet-2025-935",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 27
+   },
+   {
+    "id": "m-previous-year-question-papers-pathology-pathology-neet-2025-936",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-aiims-2017-937",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-aiims-2018-938",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 32
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-aiims-2019-m-939",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 27
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-aiims-2020-m-940",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 21
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2018-941",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2019-942",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2020-943",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-ini-cet-2021-944",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2021-945",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-ini-cet-2022-946",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 31
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2022-947",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community medicine NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2023-948",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-ini-cet-2023-949",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-ini-cet-2024-950",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2024-951",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-ini-cet-2025-952",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-community-medicine-community-medicine-neet-2025-953",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "Community Medicine NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-aiims-2017-954",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-aiims-2018-955",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-aiims-2019-may-956",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-aiims-2020-may-957",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2018-958",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2019-959",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2020-960",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-ini-cet-2021-961",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2021-962",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-ini-cet-2022-963",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 28
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2022-964",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2023-965",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-ini-cet-2023-966",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-ini-cet-2024-967",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2024-968",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-ini-cet-2025-969",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 21
+   },
+   {
+    "id": "m-previous-year-question-papers-forensic-medicine-forensic-medicine-neet-2025-970",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-aiims-2017-971",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-aiims-2018-972",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-aiims-2019-may-nov-973",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-aiims-2020-may-and-nov-974",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2018-975",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2019-976",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2020-977",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-ini-cet-2021-978",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2021-979",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-inicet-2022-980",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology INICET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 21
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2022-981",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2023-982",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-ini-cet-2023-983",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-ini-cet-2024-984",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2024-985",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-ini-cet-2025-986",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-ophthalmology-ophthalmology-neet-2025-987",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-aiims-2017-ent-aiims-2017-988",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-aiims-2018-ent-aiims-2018-989",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-aiims-2018-ent-aiims-2019-may-nov-990",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-aiims-2018-ent-aiims-2020-may-and-nov-ini-cet-991",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2018-ent-neet-2018-992",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2019-ent-neet-2019-993",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2020-ent-neet-2020-994",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-inicet-2021-ent-inicet-2021-995",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT INICET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2021-ent-neet-2021-996",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-inicet-2022-ent-inicet-2022-997",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT INICET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2022-ent-neet-2022-998",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2023-ent-neet-2023-999",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-inicet-2023-ent-inicet-2023-1000",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT INICET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-ini-cet-2024-ent-ini-cet-2024-1001",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2024-ent-neet-2024-1002",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-ini-cet-2025-ent-ini-cet-2025-1003",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-ent-neet-2025-ent-neet-2025-1004",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-aiims-2017-1005",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-aiims-2018-1006",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-aiims-2019-may-nov-1007",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-aiims-2020-may-and-nov-ini-c-1008",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2018-1009",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2019-1010",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2020-1011",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-ini-cet-2021-1012",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2021-1013",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-ini-cet-2022-1014",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2022-1015",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2023-1016",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-ini-cet-2023-1017",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-ini-cet-2024-1018",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2024-1019",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-ini-cet-2025-1020",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-anesthesia-anesthesia-neet-2025-1021",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-aiims-2017-1022",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-aiims-2018-1023",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-aiims-2019-may-nov-1024",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-aiims-2020-may-and-nov-ini-1025",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2018-1026",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2019-1027",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2020-1028",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-ini-cet-2021-1029",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2021-1030",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-ini-cet-2022-1031",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 16
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2022-1032",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2023-1033",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-ini-cet-2023-1034",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-ini-cet-2024-1035",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2024-1036",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-ini-cet-2025-1037",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-dermatology-dermatology-neet-2025-1038",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-aiims-2017-1039",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-aiims-2018-1040",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-aiims-2019-may-nov-1041",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-aiims-2020-may-and-nov-ini-c-1042",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2018-1043",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2019-1044",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2020-1045",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-ini-cet-2021-1046",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2021-1047",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-ini-cet-2022-1048",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2022-1049",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2023-1050",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-ini-cet-2023-1051",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-ini-cet-2024-1052",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2024-1053",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-ini-cet-2025-1054",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-psychiatry-psychiatry-neet-2025-1055",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-aiims-2017-1056",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-aiims-2018-1057",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-aiims-2019-may-nov-1058",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-aiims-2020-may-and-nov-ini-cet-1059",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2018-1060",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2019-1061",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2020-1062",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-ini-cet-2021-1063",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2021-1064",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-ini-cet-2022-1065",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2022-1066",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2023-1067",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-ini-cet-2023-1068",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-ini-cet-2024-1069",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2024-1070",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-ini-cet-2025-1071",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-radiology-radiology-neet-2025-1072",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-aiims-2017-1073",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 44
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-aiims-2018-1074",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 38
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-aiims-2019-may-nov-1075",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-aiims-2020-may-and-nov-ini-cet-1076",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 31
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2018-1077",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 29
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2019-1078",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2020-1079",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-ini-cet-2021-1080",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 28
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2021-1081",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 21
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-ini-cet-2022-1082",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 62
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2022-1083",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2023-1084",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-ini-cet-2023-1085",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 38
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-ini-cet-2024-1086",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 44
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2024-1087",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 41
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-ini-cet-2025-1088",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 49
+   },
+   {
+    "id": "m-previous-year-question-papers-medicine-medicine-neet-2025-1089",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-aiims-2017-1090",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 30
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-aiims-2018-1091",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-aiims-2019-may-nov-1092",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-aiims-2020-may-and-nov-ini-cet-1093",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 41
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2018-1094",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2019-1095",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 22
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2020-1096",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-ini-cet-2021-1097",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 29
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2021-1098",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-ini-cet-2022-1099",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 48
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2022-1100",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2023-1101",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 27
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-ini-cet-2023-1102",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 30
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-ini-cet-2024-1103",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2024-1104",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 37
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-ini-cet-2025-1105",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 39
+   },
+   {
+    "id": "m-previous-year-question-papers-surgery-surgery-neet-2025-1106",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-aiims-2017-1107",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 20
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-aiims-2018-1108",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-aiims-2019-may-nov-1109",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-aiims-2020-may-and-nov-ini-1110",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 15
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2018-1111",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2019-1112",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2020-1113",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-ini-cet-2021-1114",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2021-1115",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-ini-cet-2022-1116",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2022-1117",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2023-1118",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-ini-cet-2023-1119",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-ini-cet-2024-1120",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2024-1121",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-ini-cet-2025-1122",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-orthopedics-orthopedics-neet-2025-1123",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopedics NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-aiims-2017-1124",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-aiims-2018-1125",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 16
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-aiims-2019-may-nov-1126",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-aiims-2020-may-and-nov-ini-c-1127",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2018-1128",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 13
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2019-1129",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2020-1130",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-ini-cet-2021-1131",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics INI-CET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2021-1132",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-ini-cet-2022-1133",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics INI-CET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2022-1134",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2023-1135",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-ini-cet-2023-1136",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-ini-cet-2024-1137",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2024-1138",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-ini-cet-2025-1139",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 24
+   },
+   {
+    "id": "m-previous-year-question-papers-pediatrics-pediatrics-neet-2025-1140",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1141",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology AIIMS 2017",
+    "exam": "AIIMS",
+    "year": 2017,
+    "count": 35
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1142",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology AIIMS 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 35
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1143",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology AIIMS 2019 (May & Nov)",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1144",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology AIIMS 2020 (May and Nov INI-CET)",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1145",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1146",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 26
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1147",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 28
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1148",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology INICET 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 42
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-gynecology-ne-1149",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics & Gynecology NEET 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 19
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1150",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology INICET 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 52
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1151",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1152",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1153",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology INI-CET 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 28
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1154",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology INI-CET 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 29
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1155",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 45
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1156",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology INI-CET 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 23
+   },
+   {
+    "id": "m-previous-year-question-papers-obstetrics-and-gynecology-obstetrics-and-gynecolog-1157",
+    "platformId": "marrow",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Obstetrics and Gynecology NEET 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-upper-limb-323",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Upper Limb",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-lower-limb-324",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Lower Limb",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-thorax-325",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Thorax",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-abdomen-326",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Abdomen",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-pelvis-327",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Pelvis",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-head-neck-1-328",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Head & Neck - 1",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-head-neck-2-329",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Head & Neck - 2",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-spinal-cord-and-brainstem-330",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Spinal Cord and Brainstem",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-other-parts-of-brain-331",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Other Parts of Brain",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-embryology-1-332",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Embryology - 1",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-embryology-2-333",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Embryology - 2",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-histology-334",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "Histology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anatomy-general-anatomy-genetics-335",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anatomy",
+    "label": "General Anatomy & Genetics",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-neet-pg-2025-336",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-neet-pg-2024-337",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-neet-pg-2023-338",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-neet-pg-2022-339",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-neet-pg-2021-340",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-neet-pg-2020-341",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-nov-2025-342",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-may-2025-343",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-nov-2024-344",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-may-2024-345",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-nov-2023-346",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-may-2023-347",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-nov-2022-348",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-may-2022-349",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-nov-2021-350",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-may-2021-351",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-nov-2020-352",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anatomy-ini-cet-may-2020-353",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-somatic-sensation-354",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Somatic Sensation",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-motor-system-355",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Motor System",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-nerve-muscle-physiology-356",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Nerve & Muscle Physiology",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-hypothalamus-neurotransmitters-and-higher-functions-357",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Hypothalamus, Neurotransmitters and Higher Functions",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-special-sense-358",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Special Sense",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-hemodynamic-of-circulation-359",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Hemodynamic of Circulation",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-ecg-and-cardiac-output-360",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "ECG and Cardiac Output",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-gastrointestinal-system-361",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Gastrointestinal System",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-general-physiology-362",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "General Physiology",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-respiratory-physiology-363",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Respiratory Physiology",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-endocrine-system-1-364",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Endocrine System- 1",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-endocrine-system-2-365",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Endocrine System- 2",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-renal-physiology-366",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Renal Physiology",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-physiology-reproductive-system-367",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Physiology",
+    "label": "Reproductive System",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-neet-pg-2025-368",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-neet-pg-2024-369",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-neet-pg-2023-370",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-neet-pg-2022-371",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-neet-pg-2021-372",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-neet-pg-2020-373",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2026-374",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-nov-2025-375",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2025-376",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-inicet-nov-2024-377",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INICET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2024-378",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-nov-2023-379",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2023-380",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-nov-2022-381",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2022-382",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-nov-2021-383",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2021-384",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-nov-2020-385",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-physiology-ini-cet-may-2020-386",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-cell-as-a-unit-of-health-and-disease-387",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Cell as a Unit of Health and Disease",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-cell-injury-388",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Cell Injury",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-inflammation-and-repair-389",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Inflammation and Repair",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-hemodynamics-390",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Hemodynamics",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-genetics-391",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Genetics",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-immune-system-392",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Immune System",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-neoplasia-393",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Neoplasia",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-infectious-diseases-394",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Infectious Diseases",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-environmental-and-nutritional-diseases-395",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Environmental and Nutritional Diseases",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-diseases-of-infancy-and-childhood-396",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Diseases of Infancy and Childhood",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-the-pancreas-397",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "The Pancreas",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-heart-blood-vessels-398",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Heart & Blood Vessels",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-hematology-399",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Hematology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-lung-400",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Lung",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-gastrointestinal-system-401",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Gastrointestinal System",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-head-neck-402",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Head & Neck",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-hepatobiliary-system-403",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Hepatobiliary System",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-kidney-404",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Kidney",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-the-lower-urinary-tract-405",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "The Lower Urinary Tract",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-male-genital-tract-406",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Male Genital Tract",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-female-genital-tract-407",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Female Genital Tract",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-breast-408",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Breast",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-endocrine-system-409",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Endocrine System",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-skin-410",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Skin",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-bone-and-joints-411",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Bone and Joints",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-soft-tissue-412",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Soft Tissue",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-peripheral-nerves-413",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Peripheral Nerves",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pathology-central-nervous-system-414",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pathology",
+    "label": "Central Nervous System",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2025-415",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2024-416",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 31
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2023-417",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2022-418",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2021-419",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2020-420",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2019-421",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-neet-pg-2018-422",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-nov-2025-423",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-may-2025-424",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-nov-2024-425",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI-CET  Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-may-2024-426",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-nov-2023-427",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-may-2023-428",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-nov-2022-429",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 38
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-may-2022-430",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-nov-2021-431",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-may-2021-432",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-nov-2020-433",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pathology-ini-cet-may-2020-434",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-basic-pharmacology-435",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Basic Pharmacology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-autonomic-nervous-system-436",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Autonomic Nervous System",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-anti-hypertensives-vasodilators-drugs-for-dyslipidemia-ant-437",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Anti-hypertensives, Vasodilators, Drugs for Dyslipidemia & Antianginal Drugs",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-heart-failure-management-antiarryhtmics-drugs-for-mi-pah-d-438",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Heart Failure management, Antiarryhtmics, Drugs for MI & PAH, Diuretics",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-autocoids-439",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Autocoids",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-drugs-act-in-respiratory-system-440",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Drugs Act in Respiratory System",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-drugs-acting-in-gi-system-441",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Drugs Acting in GI System",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-benzodiazepines-barbiturates-antiepileptics-la-smr-442",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Benzodiazepines & Barbiturates & Antiepileptics, LA & SMR",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-parkinsonism-and-movement-disorder-alzheimers-antipsychoti-443",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Parkinsonism and Movement Disorder, Alzheimers, Antipsychotics, Opioids",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-heparin-lmwh-direct-thrombin-inhibitors-thromolytics-warfa-444",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Heparin, LMWH, Direct Thrombin Inhibitors, Thromolytics, Warfarin & Antiplatelets",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-anterior-pitutary-hormones-male-female-hormones-serms-anti-445",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Anterior Pitutary Hormones, Male & Female Hormones, Serms, Antiandrogens, Aromatase Inhibitors, Iodides, Bisphosphonate & PTH",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-insulin-biguanides-oha-glp-1-dpp4-glucocorticoids-mineralo-446",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Insulin, Biguanides, OHA, GLP-1, DPP4, Glucocorticoids, Mineralocorticoids",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-antibacterial-antimycobacterial-antifungal-drugs-447",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Antibacterial, Antimycobacterial & Antifungal Drugs",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pharmacology-antiviral-antimalarial-antineoplastic-agents-448",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Pharmacology",
+    "label": "Antiviral, Antimalarial & Antineoplastic Agents",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2025-449",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2024-450",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2023-451",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2022-452",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2021-453",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2020-454",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2019-455",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-neet-pg-2018-456",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-nov-2025-457",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-may-2025-458",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-nov-2024-459",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-may-2024-460",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-nov-2023-461",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-may-2023-462",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-nov-2022-463",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-may-2022-464",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-nov-2021-465",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-may-2021-466",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-nov-2020-467",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pharmacology-ini-cet-may-2020-468",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-legal-procedure-469",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Legal procedure",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-medical-law-ethics-470",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Medical Law & Ethics",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-identification-471",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Identification",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-autopsy-472",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Autopsy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-thanatology-473",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Thanatology",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-mechanical-injuries-rta-474",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Mechanical Injuries & RTA",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-firearm-blast-injuries-475",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Firearm & Blast Injuries",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-regional-injuries-476",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Regional Injuries",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-thermal-injuries-477",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Thermal Injuries",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-mechanical-asphyxia-478",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Mechanical Asphyxia",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-sexual-jurisprudence-479",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Sexual Jurisprudence",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-forensic-science-480",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Science",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-forensic-psychiatry-481",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Psychiatry",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-toxicology-part-1-482",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Toxicology (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-toxicology-part-2-483",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Toxicology (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-forensic-medicine-miscellaneous-484",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Forensic Medicine",
+    "label": "Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2025-485",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2024-486",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2023-487",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2022-488",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2021-489",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2020-490",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-neet-pg-2019-491",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2025-492",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2025-493",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2024-494",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2024-495",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2023-496",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2023-497",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2022-498",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2022-499",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2021-500",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2021-501",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2020-502",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2020-503",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-nov-2019-504",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET Nov 2019",
+    "exam": "INI-CET",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-forensic-medicine-ini-cet-may-2019-505",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "INI CET May 2019",
+    "exam": "INI-CET",
+    "year": 2019,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-audiology-and-examination-of-ear-anatomy-and-congenital-deformity-v-506",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Audiology and Examination of Ear, Anatomy and Congenital Deformity, Vestibular Disorders",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-serous-otitis-media-and-eustachian-tube-disorder-csom-external-and--507",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Serous Otitis Media and Eustachian Tube Disorder, CSOM, External and Middle Ear Disorders",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-external-ear-disorders-otosclerosis-and-cochlear-disorders-hearing--508",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "External Ear Disorders, Otosclerosis and Cochlear Disorders, Hearing Rehabilitation, Facial Nerve and Ear Trauma, Benign and Malignant Tumors of Ear",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-anatomy-nasal-polyps-granulomatous-conditions-of-nose-congenital-co-509",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Anatomy, Nasal Polyps, Granulomatous Conditions of Nose, Congenital Conditions of Nose",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-complications-of-sinusitis-benign-and-malignant-tumors-of-nose-faci-510",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Complications of Sinusitis, Benign and Malignant Tumors of Nose, Facial Skeleton Trauma",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-pharynx-and-oral-cavity-511",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Pharynx and Oral Cavity",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-pharynx-and-oral-cavity-thyroid-disorders-512",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Pharynx and Oral Cavity, Thyroid Disorders",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-disorders-of-salivary-glands-neck-anatomy-neck-dissection-oropharyn-513",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Disorders of Salivary Glands, Neck Anatomy, Neck Dissection, Oropharyngeal and Oral Cavity Cancers, Reconstructive Surgery",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-anatomy-infection-and-inflammatory-conditions-of-larynx-congenital--514",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Anatomy, Infection and Inflammatory Conditions of Larynx, Congenital Conditions of Larynx, Vocal Cord Paralysis, Speech Disorders",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ent-speech-disorders-benign-and-malignant-tumors-of-larynx-foreign-body-515",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "ENT",
+    "label": "Speech Disorders, Benign and Malignant Tumors of Larynx, Foreign Body and Tracheostomy, Radiotherapy and Chemotherapy, Neck Metastasis With Unknown Primary",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-neet-pg-2025-516",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-neet-pg-2024-517",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-neet-pg-2023-518",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-neet-pg-2022-519",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-neet-pg-2021-520",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-neet-pg-2020-521",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-nov-2025-522",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-may-2025-523",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-nov-2024-524",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-may-2024-525",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-nov-2023-526",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-may-2023-527",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-nov-2022-528",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-may-2022-529",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-nov-2021-530",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-may-2021-531",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-nov-2020-532",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ent-ini-cet-may-2020-533",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-anatomy-and-embryology-534",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Anatomy and Embryology",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-cornea-conjunctiva-and-sclera-535",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Cornea, Conjunctiva and Sclera",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-glaucoma-536",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Glaucoma",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-lens-537",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Lens",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-optics-538",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Optics",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-retina-and-uvea-539",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Retina and Uvea",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-neuro-ophthalmology-540",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Neuro Ophthalmology",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-oculoplasty-and-trauma-541",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Oculoplasty and Trauma",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-squint-and-pediatric-542",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Squint and Pediatric",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ophthalmology-systemic-ophthalmology-and-tumors-543",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Ophthalmology",
+    "label": "Systemic Ophthalmology and Tumors",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2025-544",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2024-545",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2023-546",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2022-547",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2021-548",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2020-549",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-neet-pg-2019-550",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-may-2026-551",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-nov-2025-552",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-may-2025-553",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-nov-2024-554",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-may-2024-555",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-nov-2023-556",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-may-2023-557",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-nov-2022-558",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-may-2022-559",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-dec-2021-560",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET Dec 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-nov-2021-561",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-may-2021-562",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-inicet-nov-2020-563",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INICET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ophthalmology-ini-cet-may-2020-564",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-concept-of-health-disease-565",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Concept of Health & Disease",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-epidemiology-part-1-566",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Epidemiology Part- 1",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-epidemiology-of-communicable-diseases-567",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Epidemiology of Communicable Diseases",
+    "exam": null,
+    "year": null,
+    "count": 50
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-epidemiology-of-non-communicable-diseases-conditions-568",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Epidemiology of Non Communicable Diseases & Conditions",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-health-programs-in-india-569",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Health Programs in India",
+    "exam": null,
+    "year": null,
+    "count": 32
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-screening-570",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Screening",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-demography-and-health-care-of-the-community-571",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Demography and Health Care of the Community",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-preventive-medicine-in-obstetrics-paediatrics-geriatrics-572",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Preventive Medicine in Obstetrics, Paediatrics & Geriatrics",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-nutrition-and-health-573",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Nutrition and Health",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-social-medicine-574",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Social Medicine",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-environment-and-health-575",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Environment and Health",
+    "exam": null,
+    "year": null,
+    "count": 33
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-medical-entomology-576",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Medical Entomology",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-occupational-health-577",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Occupational Health",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-disaster-management-578",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Disaster Management",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-hospital-waste-management-579",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Hospital Waste Management",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-mental-health-and-communication-for-health-education-580",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Mental Health and Communication for Health Education",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-biostatistics-part-1-581",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Biostatistics Part- 1",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-biostatistics-part-2-582",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Biostatistics Part- 2",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-health-planning-and-management-583",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "Health Planning and Management",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psm-international-health-584",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Community Medicine / PSM",
+    "label": "International Health",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-neet-pg-2025-585",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-neet-pg-2024-586",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 36
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-neet-pg-2023-587",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-neet-pg-2022-588",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-neet-pg-2021-589",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-neet-pg-2020-590",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2026-591",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-nov-2025-592",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2025-593",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-nov-2024-594",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2024-595",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-nov-2023-596",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2023-597",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-nov-2022-598",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2022-599",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-nov-2021-600",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2021-601",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-nov-2020-602",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psm-ini-cet-may-2020-603",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-approach-to-neurology-and-headache-604",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Approach to Neurology and Headache",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-seizures-and-autonomic-605",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Seizures and Autonomic",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-stroke-and-dementia-606",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Stroke and Dementia",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-demyelinating-disorders-of-nervous-system-607",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Demyelinating Disorders of Nervous System",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-demyelinating-and-cns-pns-608",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Demyelinating and CNS_PNS",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-movement-disorders-and-muscular-dystrophies-609",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Movement Disorders and Muscular dystrophies",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-general-gastrology-and-malabsorption-610",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "General Gastrology and Malabsorption",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-approach-to-gi-and-esophagus-611",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Approach to GI and Esophagus",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-peptic-ulcer-disease-and-ibd-612",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Peptic Ulcer Disease and IBD",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-liver-disease-part-1-613",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Liver Disease Part 1",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-liver-disease-part-2-614",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Liver Disease Part 2",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-clinical-approach-to-cardiology-615",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Clinical Approach to Cardiology",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-ecg-essentials-616",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "ECG Essentials",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-management-and-approach-to-arrhythmias-617",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Management and Approach to Arrhythmias",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-coronary-and-peripheral-vessel-disease-valvular-heart-disease-618",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Coronary and Peripheral Vessel Disease & Valvular Heart Disease",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-atrial-fibrillation-and-ventricular-tachycardia-619",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Atrial Fibrillation and Ventricular Tachycardia",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-transfusion-medicine-620",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Transfusion Medicine",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-lymphomas-621",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Lymphomas",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-leukemia-622",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Leukemia",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-rbc-platelets-and-other-blood-products-623",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "RBC, Platelets and Other Blood Products",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-pituitary-syndromes-and-approach-to-endocrinology-624",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Pituitary Syndromes and Approach to Endocrinology",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-adrenal-lesions-625",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Adrenal Lesions",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-thyroid-disease-626",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Thyroid Disease",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-diabetes-and-obesity-627",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Diabetes and Obesity",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-bone-mineral-and-metabolic-disorders-628",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Bone, Mineral and Metabolic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-approach-to-infections-and-ibq-629",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Approach to Infections and IBQ",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-pneumonia-and-bacterial-infections-630",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Pneumonia and Bacterial Infections",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-infective-musculoskeletal-and-infective-endocarditis-631",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Infective Musculoskeletal and Infective Endocarditis",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-bacterial-illness-632",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Bacterial Illness",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-viral-infections-dna-virus-and-rna-virus-and-protozoan-disease-633",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Viral Infections (DNA Virus and RNA Virus) and Protozoan Disease",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-acute-kidney-injury-634",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Acute Kidney Injury",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-chronic-kidney-disease-635",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Chronic Kidney Disease",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-glomerulonephritis-636",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Glomerulonephritis",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-asthma-and-hypersensitivity-pneumonitis-637",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Asthma and Hypersensitivity Pneumonitis",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-copd-638",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "COPD",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-occupational-lung-disease-and-interstitial-lung-disease-639",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Occupational Lung Disease and Interstitial Lung Disease",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-disorders-of-pleura-josa-j-ventilation-bronchiectasis-and-cyst-640",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Disorders of Pleura JOSA J Ventilation & Bronchiectasis and Cystic Fibrosis",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-basic-immunology-and-primary-immune-deficiency-disease-641",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Basic Immunology and Primary Immune Deficiency Disease",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-rheumatoid-arthritis-sjogren-scleroderma-inflammatory-myopathy-642",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Rheumatoid Arthritis, Sjogren, Scleroderma & Inflammatory Myopathy",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-sle-and-antiphospholipid-syndrome-643",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "SLE and Antiphospholipid Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-medicine-spondyloarthritis-crystral-arthritis-vasculitis-and-replapsing-644",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Medicine",
+    "label": "Spondyloarthritis, Crystral Arthritis, Vasculitis and Replapsing Polychondritis, Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-neet-pg-2025-645",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-neet-pg-2024-646",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 43
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-neet-pg-2023-647",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-neet-pg-2022-648",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-neet-pg-2021-649",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-neet-pg-2020-650",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2026-651",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-nov-2025-652",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2025-653",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-nov-2024-654",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2024-655",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-nov-2023-656",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2023-657",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-nov-2022-658",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2022-659",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-nov-2021-660",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2021-661",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-nov-2020-662",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-medicine-ini-cet-may-2020-663",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-basic-principles-of-surgery-664",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Basic Principles of Surgery",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-surgical-infection-and-swelling-665",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Surgical Infection and Swelling",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-trauma-666",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Trauma",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-benign-lesions-667",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Benign Lesions",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-malignant-lesions-668",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Malignant Lesions",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-thyroid-parathyroid-669",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Thyroid & Parathyroid",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-adrenal-and-endocrine-pancreas-670",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Adrenal and Endocrine Pancreas",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-esophagus-671",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Esophagus",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-stomach-duodenum-barristrics-672",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Stomach, Duodenum, Barristrics",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-small-bowel-inflammatory-bowel-disease-appendix-673",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Small Bowel, Inflammatory Bowel Disease, Appendix",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-large-intestine-anal-canal-674",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Large Intestine & Anal Canal",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-abdominal-wall-and-hernia-675",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Abdominal Wall and Hernia",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-liver-676",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Liver",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-gall-bladder-bile-duct-677",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Gall Bladder & Bile Duct",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-pancreas-spleen-678",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Pancreas & Spleen",
+    "exam": null,
+    "year": null,
+    "count": 29
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-urinary-bladder-symptoms-investigations-679",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Urinary Bladder Symptoms & Investigations",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-kidney-ureter-680",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Kidney & Ureter",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-prostate-seminal-vesicles-681",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Prostate & Seminal Vesicles",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-urethra-penis-682",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Urethra & Penis",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-testis-scrotum-683",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Testis & Scrotum",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-burns-plastic-684",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Burns & Plastic",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-skin-685",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Skin",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-pediatric-surgery-686",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Pediatric Surgery",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-cardiothoracic-surgery-687",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Cardiothoracic Surgery",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-vascular-surgery-688",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Vascular Surgery",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-transplant-surgery-689",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Transplant Surgery",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-head-and-neck-690",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Head and Neck",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-surgery-neurosurgery-691",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Surgery",
+    "label": "Neurosurgery",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-neet-pg-2025-692",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-neet-pg-2024-693",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 42
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-neet-pg-2023-694",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-neet-pg-2022-695",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-neet-pg-2021-696",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-neet-pg-2020-697",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2026-698",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-nov-2025-699",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2025-700",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-nov-2024-701",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2024-702",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-nov-2023-703",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2023-704",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-nov-2022-705",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 30
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2022-706",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-nov-2021-707",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2021-708",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-nov-2020-709",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-pyq-surgery-ini-cet-may-2020-710",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-general-pediatrics-711",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "General Pediatrics",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-nutrition-part-1-712",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Nutrition Part 1",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-nutrition-part-2-713",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Nutrition Part 2",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-neonatology-part-1-714",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Neonatology Part 1",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-neonatology-part-2-715",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Neonatology Part 2",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-infections-716",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric Infections",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-syndromes-717",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Syndromes",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-pulmonology-718",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric Pulmonology",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-immunization-and-immunodeficiency-719",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Immunization and Immunodeficiency",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-rheumatology-720",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Rheumatology",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-nephrology-721",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric Nephrology",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-neurology-722",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric Neurology",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-endocrinology-723",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric Endocrinology",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-metabolic-disorders-724",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Metabolic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-git-725",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric GIT",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-hemat-oncology-726",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Hemat-oncology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-critical-care-727",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Critical Care",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-pediatrics-pediatric-cardiology-728",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Paediatrics",
+    "label": "Pediatric Cardiology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2025-729",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2024-730",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2023-731",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2022-732",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2021-733",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2020-734",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2019-735",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-neet-pg-2018-736",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-may-2026-737",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-nov-2025-738",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-may-2025-739",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-nov-2024-740",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-inicet-may-2024-741",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INICET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-nov-2023-742",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-may-2023-743",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-nov-2022-744",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-may-2022-745",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-nov-2021-746",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-may-2021-747",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-nov-2020-748",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-pediatrics-ini-cet-may-2020-749",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-basics-of-dermatology-mycobacterial-skin-infection-leprosy-750",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Basics of Dermatology, Mycobacterial Skin Infection, Leprosy",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-fungal-infection-viral-infection-bacterial-infection-parasi-751",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Fungal Infection, Viral Infection, Bacterial Infection, Parasitic Infection",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-appendageal-disorder-752",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Appendageal Disorder",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-sexually-transmitted-diseases-753",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Sexually Transmitted Diseases",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-papulosquamous-disorder-vesiculo-bullous-disorder-754",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Papulosquamous Disorder, Vesiculo Bullous Disorder",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-pigmentation-disorder-eczema-755",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Pigmentation Disorder, Eczema",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-dermatology-cutaneous-drug-eruptions-skin-tumors-skin-and-ctds-genoderm-756",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Dermatology",
+    "label": "Cutaneous Drug Eruptions, Skin Tumors, Skin and CTDs, Genodermatoses, Skin and Systemic Disease, Short Topics",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2025-757",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2024-758",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2023-759",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2022-760",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2021-761",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2020-762",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-neet-pg-2019-763",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-nov-2025-764",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-may-2025-765",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-nov-2024-766",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-may-2024-767",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-nov-2023-768",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-may-2023-769",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-nov-2022-770",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-may-2022-771",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-nov-2021-772",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-may-2021-773",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-nov-2020-774",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-dermatology-ini-cet-may-2020-775",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-general-radiology-776",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "General Radiology",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-neuro-radiology-777",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "Neuro Radiology",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-respiratory-and-cvs-radiology-778",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "Respiratory and CVS Radiology",
+    "exam": null,
+    "year": null,
+    "count": 34
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-msk-radiology-779",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "MSK Radiology",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-gi-and-hpb-radiology-780",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "GI and HPB Radiology",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-uro-radiology-781",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "Uro Radiology",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-womens-imaging-782",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "Womens Imaging",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-radiology-radiotherapy-and-nuclear-medicine-783",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Radiology",
+    "label": "Radiotherapy and Nuclear Medicine",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2025-784",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2024-785",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2023-786",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2022-787",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2021-788",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2020-789",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-neet-pg-2019-790",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2026-791",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 1
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-nov-2025-792",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2025-793",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-nov-2024-794",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2024-795",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-nov-2023-796",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2023-797",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-nov-2022-798",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2022-799",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-nov-2021-800",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2021-801",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-nov-2020-802",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-radiology-ini-cet-may-2020-803",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-basic-biochemistry-804",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Basic Biochemistry",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-carbohydrates-805",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Carbohydrates",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-proteins-806",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Proteins",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-enzymes-807",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Enzymes",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-lipids-808",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Lipids",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-nutrition-809",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Nutrition",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-organ-function-test-810",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Organ Function Test",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-genetics-811",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Genetics",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-biochemistry-clinical-biochemistry-812",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Biochemistry",
+    "label": "Clinical Biochemistry",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2025-813",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2024-814",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2023-815",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2022-816",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2021-817",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2020-818",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-neet-pg-2019-819",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2026-820",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-nov-2025-821",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2025-822",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-nov-2024-823",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2024-824",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-nov-2023-825",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2023-826",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-nov-2022-827",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2022-828",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-nov-2021-829",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2021-830",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-nov-2020-831",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-biochemistry-ini-cet-may-2020-832",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-culture-media-and-methods-833",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Culture Media and Methods",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-genitics-834",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Genitics",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-sterilization-and-disinfectant-835",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Sterilization and Disinfectant",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-immunity-autoimmuty-and-mhc-836",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Immunity, Autoimmuty, and MHC",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-antigen-antibody-and-hypersensitivity-837",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Antigen, Antibody and Hypersensitivity",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-complement-838",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Complement",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-general-virology-839",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "General Virology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-general-hepatitis-and-hepatitis-b-840",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "General Hepatitis and Hepatitis B",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-general-diagnostic-methods-841",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "General Diagnostic Methods",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-superficial-fungal-infection-842",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Superficial Fungal Infection",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-miscellaneous-843",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-gram-negative-pathogens-844",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Gram-Negative Pathogens",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-introduction-to-acid-fast-bacilli-845",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Introduction to Acid-Fast Bacilli",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-clostridium-846",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Clostridium",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-protozoa-847",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Protozoa",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-helminths-848",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Helminths",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-infection-control-measures-849",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Infection Control Measures",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-qrp-microbiology-specific-pathogens-and-infection-control-850",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Microbiology",
+    "label": "Specific Pathogens and Infection Control",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2025-851",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2024-852",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2023-853",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2022-854",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2021-855",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2020-856",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-neet-pg-2019-857",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2026-858",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-nov-2025-859",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2025-860",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-nov-2024-861",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2024-862",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-nov-2023-863",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2023-864",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-nov-2022-865",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2022-866",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-dec-2021-867",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Dec 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-nov-2021-868",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2021-869",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 13
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-nov-2020-870",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-microbiology-ini-cet-may-2020-871",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-anatomy-of-female-genital-tract-physiology-of-pregnancy-872",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Anatomy of Female Genital Tract Physiology of Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-early-pregnancy-complication-873",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Early Pregnancy Complication",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-antepartum-hemorrhage-874",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Antepartum Hemorrhage",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-preterm-labor-prom-and-iol-875",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Preterm Labor, Prom and IOL",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-post-maturity-iud-and-operative-obst-876",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Post Maturity IUD and Operative OBST",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-pph-877",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "PPH",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-amniotic-fluid-placenta-umbilical-cord-and-associated-disorder-and-878",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Amniotic Fluid, Placenta, Umbilical Cord and Associated Disorder and Abnormal Perpeurium",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-multifetal-gestation-obstetric-imaging-and-prenatal-diagnosis-879",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Multifetal Gestation, Obstetric Imaging and Prenatal Diagnosis",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-fetal-monitoring-iugr-normal-and-abnormal-labor-malpositions-and-m-880",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Fetal Monitoring, IUGR, normal and Abnormal Labor, Malpositions and Malpresentation",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-gdm-and-anemia-in-pregnancy-881",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "GDM and Anemia in Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-hypertensive-disorder-in-pregnancy-and-rh-isoimmunisation-882",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Hypertensive Disorder in Pregnancy and Rh Isoimmunisation",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-medical-disorder-in-pregnancy-part-1-883",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Medical Disorder in Pregnancy Part 1",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-medical-disorder-in-pregnancy-part-2-884",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Medical Disorder in Pregnancy Part 2",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-development-and-disorders-of-female-reproductive-organ-physiology--885",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Development and Disorders of Female Reproductive Organ, Physiology of Ovulation and Menopause",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-fibroid-uterus-sti-and-pid-886",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Fibroid Uterus, STI and PID",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-aub-endometriosis-and-adenomyosis-887",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "AUB, Endometriosis and Adenomyosis",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-primary-and-secondary-amennorhea-and-infertility-888",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Primary and Secondary Amennorhea and Infertility",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-gynaecological-malignancy-and-gtd-889",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Gynaecological Malignancy and GTD",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-imaging-modalities-surgeries-endoscopy-radiotherapy-and-chemothera-890",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Imaging Modalities Surgeries, Endoscopy, Radiotherapy and Chemotherapy in Gyane",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-ob-g-pelvic-organ-prolapse-fistula-and-contraception-891",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Pelvic Organ Prolapse, Fistula and Contraception",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2025-892",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 21
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2024-893",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 37
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2023-894",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2022-895",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2021-896",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2020-897",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 32
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-neet-pg-2019-898",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 29
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-nov-2025-899",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-may-2025-900",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-nov-2024-901",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-may-2024-902",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-nov-2023-903",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-may-2023-904",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-nov-2022-905",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 29
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-may-2022-906",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-nov-2021-907",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-may-2021-908",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-nov-2020-909",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-ob-g-ini-cet-may-2020-910",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-history-911",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "History",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-regional-anesthesia-912",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "Regional Anesthesia",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-drugs-913",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "Drugs",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-general-anesthesia-914",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "General Anesthesia",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-oxygen-therapy-devices-915",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "Oxygen Therapy Devices",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-machine-916",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "Machine",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-trauma-917",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "Trauma",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-anaesthesia-monitoring-and-complications-918",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Anaesthesia",
+    "label": "Monitoring and Complications",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-neet-pg-2025-919",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-neet-pg-2024-920",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-neet-pg-2023-921",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-neet-pg-2022-922",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-neet-pg-2021-923",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-neet-pg-2020-924",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2026-925",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-nov-2025-926",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2025-927",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-nov-2024-928",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2024-929",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-nov-2023-930",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2023-931",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-nov-2022-932",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2022-933",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-nov-2021-934",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-june-2021-935",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET June 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2021-936",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-nov-2020-937",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-anaesthesia-ini-cet-may-2020-938",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-general-orthopaedics-basic-science-939",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "General Orthopaedics & Basic Science",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-general-trauma-polytrauma-pelvis-injuries-sports-injuries-940",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "General Trauma, Polytrauma & Pelvis injuries & Sports Injuries",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-upper-limb-injuries-lower-limb-injuries-941",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "Upper Limb Injuries & Lower Limb Injuries",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-spine-injuries-nerve-injuries-neuropathy-942",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "Spine Injuries, Nerve Injuries & Neuropathy",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-paediatric-orthopaedics-943",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "Paediatric Orthopaedics",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-musculoskeletal-infection-metabolic-bone-disease-944",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "Musculoskeletal Infection & Metabolic Bone Disease",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-orthopaedics-bone-tumour-joint-disorder-and-reconstruction-945",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Orthopaedics",
+    "label": "Bone Tumour & Joint Disorder and Reconstruction",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-neet-pg-2025-946",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-neet-pg-2024-947",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-neet-pg-2023-948",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-neet-pg-2022-949",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-neet-pg-2021-950",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-neet-pg-2020-951",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-nov-2025-952",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-may-2025-953",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-nov-2024-954",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-may-2024-955",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-nov-2023-956",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-may-2023-957",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-nov-2022-958",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-may-2022-959",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-nov-2021-960",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-may-2021-961",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-nov-2020-962",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-orthopaedics-ini-cet-may-2020-963",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-scientists-psychology-psychopathology-964",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Scientists, Psychology, Psychopathology",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-mood-psychotic-disorders-965",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Mood & Psychotic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-substance-use-disorders-966",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Substance use Disorders",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-child-organic-emergency-psychiatry-967",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Child, Organic & Emergency Psychiatry",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-forensic-psychiatry-consultation-liason-968",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Forensic Psychiatry, Consultation liason",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-other-psychiatry-disorders-969",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Other Psychiatry Disorders",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-doctutorials-qrp-psychiatry-psychopharmacology-other-modalities-970",
+    "platformId": "doctutorials",
+    "setKind": "qrp",
+    "subject": "Psychiatry",
+    "label": "Psychopharmacology & Other Modalities",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-neet-pg-2025-971",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "NEET PG 2025",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-neet-pg-2024-972",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-neet-pg-2023-973",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-neet-pg-2022-974",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-neet-pg-2021-975",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-neet-pg-2020-976",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2026-977",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET May 2026",
+    "exam": "INI-CET",
+    "year": 2026,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-nov-2025-978",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET Nov 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2025-979",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET MAY 2025",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-nov-2024-980",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET Nov 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2024-981",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET May 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-nov-2023-982",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET Nov 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2023-983",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET May 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-nov-2022-984",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET Nov 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2022-985",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET May 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-nov-2021-986",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET Nov 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2021-987",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET May 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 3
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-nov-2020-988",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET Nov 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-doctutorials-pyq-psychiatry-ini-cet-may-2020-989",
+    "platformId": "doctutorials",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "INI CET May 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2025-neet-pg-990",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2025-ini-cet-991",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2025-fmge-992",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 21
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2024-neet-pg-993",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2024-ini-cet-994",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2024-fmge-995",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2023-neet-pg-996",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2023-ini-cet-997",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2023-fmge-998",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2022-neet-pg-999",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2022-ini-cet-1000",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2022-fmge-1001",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2021-neet-pg-1002",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2021-ini-cet-1003",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2021-fmge-1004",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 31
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2020-neet-pg-1005",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2020-ini-cet-1006",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2020-fmge-1007",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-prepladder-pyq-anatomy-2020-aiims-1008",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2025-neet-pg-1009",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2025-ini-cet-1010",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2025-fmge-1011",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2024-neet-pg-1012",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2024-ini-cet-1013",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2024-fmge-1014",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2023-neet-pg-1015",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2023-ini-cet-1016",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2023-fmge-1017",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2022-neet-pg-1018",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2022-ini-cet-1019",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2022-fmge-1020",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2021-neet-pg-1021",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2021-ini-cet-1022",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2021-fmge-1023",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2020-neet-pg-1024",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2020-ini-cet-1025",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2020-fmge-1026",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-biochemistry-2020-aiims-1027",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2025-neet-pg-1028",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2025-ini-cet-1029",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 31
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2025-fmge-1030",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2024-neet-pg-1031",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2024-ini-cet-1032",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2024-fmge-1033",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2023-neet-pg-1034",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2023-ini-cet-1035",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2023-fmge-1036",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2022-neet-pg-1037",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2022-ini-cet-1038",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2022-fmge-1039",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2021-neet-pg-1040",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2021-ini-cet-1041",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2021-fmge-1042",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 21
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2020-neet-pg-1043",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2020-ini-cet-1044",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2020-fmge-1045",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-physiology-2020-aiims-1046",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2025-neet-pg-1047",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2025-ini-cet-1048",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 21
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2025-fmge-1049",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 36
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2024-neet-pg-1050",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2024-ini-cet-1051",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2024-fmge-1052",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 42
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2023-neet-pg-1053",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2023-ini-cet-1054",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 30
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2023-fmge-1055",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 36
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2022-neet-pg-1056",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2022-ini-cet-1057",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 43
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2022-fmge-1058",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2021-neet-pg-1059",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2021-ini-cet-1060",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 28
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2021-fmge-1061",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 35
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2020-neet-pg-1062",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2020-ini-cet-1063",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2020-fmge-1064",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "pyq-prepladder-pyq-microbiology-2020-aiims-1065",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2025-neet-pg-1066",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2025-ini-cet-1067",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 21
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2025-fmge-1068",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 35
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2024-neet-pg-1069",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2024-ini-cet-1070",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2024-fmge-1071",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 36
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2023-neet-pg-1072",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2023-ini-cet-1073",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 40
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2023-fmge-1074",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 41
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2022-neet-pg-1075",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2022-ini-cet-1076",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 41
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2022-fmge-1077",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2021-neet-pg-1078",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2021-ini-cet-1079",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 34
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2021-fmge-1080",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 38
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2020-neet-pg-1081",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 21
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2020-ini-cet-1082",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2020-fmge-1083",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 34
+   },
+   {
+    "id": "pyq-prepladder-pyq-pathology-2020-aiims-1084",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2025-neet-pg-1085",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2025-ini-cet-1086",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 33
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2025-fmge-1087",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 38
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2024-neet-pg-1088",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2024-ini-cet-1089",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 37
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2024-fmge-1090",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2023-neet-pg-1091",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2023-ini-cet-1092",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2023-fmge-1093",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2022-neet-pg-1094",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2022-ini-cet-1095",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2022-fmge-1096",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2021-neet-pg-1097",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2021-ini-cet-1098",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2021-fmge-1099",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 35
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2020-neet-pg-1100",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2020-ini-cet-1101",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2020-fmge-1102",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 30
+   },
+   {
+    "id": "pyq-prepladder-pyq-pharmacology-2020-aiims-1103",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2025-neet-pg-1104",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2025-ini-cet-1105",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 19
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2025-fmge-1106",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2024-neet-pg-1107",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2024-ini-cet-1108",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2024-fmge-1109",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2023-neet-pg-1110",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2023-ini-cet-1111",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2023-fmge-1112",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 19
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2022-neet-pg-1113",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2022-ini-cet-1114",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2022-fmge-1115",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2021-neet-pg-1116",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2021-ini-cet-1117",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2021-fmge-1118",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2020-neet-pg-1119",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2020-ini-cet-1120",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2020-fmge-1121",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-ophthalmology-2020-aiims-1122",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2025-neet-pg-1123",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2025-ini-cet-1124",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 26
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2025-fmge-1125",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 52
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2024-neet-pg-1126",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2024-ini-cet-1127",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 19
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2024-fmge-1128",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 55
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2023-neet-pg-1129",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2023-ini-cet-1130",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2023-fmge-1131",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 67
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2022-neet-pg-1132",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2022-ini-cet-1133",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2022-fmge-1134",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2021-neet-pg-1135",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2021-ini-cet-1136",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 26
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2021-fmge-1137",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 65
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2020-neet-pg-1138",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2020-ini-cet-1139",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2020-fmge-1140",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 70
+   },
+   {
+    "id": "pyq-prepladder-pyq-ent-2020-aiims-1141",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2025-neet-pg-1142",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2025-ini-cet-1143",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2025-fmge-1144",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 26
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2024-neet-pg-1145",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2024-ini-cet-1146",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2024-fmge-1147",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 30
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2023-neet-pg-1148",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2023-ini-cet-1149",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2023-fmge-1150",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2022-neet-pg-1151",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2022-ini-cet-1152",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2022-fmge-1153",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2021-neet-pg-1154",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2021-ini-cet-1155",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2021-fmge-1156",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2020-neet-pg-1157",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2020-ini-cet-1158",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2020-fmge-1159",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 29
+   },
+   {
+    "id": "pyq-prepladder-pyq-forensic-medicine-2020-aiims-1160",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2025-neet-pg-1161",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2025-ini-cet-1162",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2025-fmge-1163",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2024-neet-pg-1164",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2024-ini-cet-1165",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 31
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2024-fmge-1166",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 32
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2023-neet-pg-1167",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2023-ini-cet-1168",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2023-fmge-1169",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 29
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2022-neet-pg-1170",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2022-ini-cet-1171",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2022-fmge-1172",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2021-neet-pg-1173",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2021-ini-cet-1174",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2021-fmge-1175",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 38
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2020-neet-pg-1176",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2020-ini-cet-1177",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2020-fmge-1178",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 37
+   },
+   {
+    "id": "pyq-prepladder-pyq-psm-2020-aiims-1179",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2025-neet-pg-1180",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2025-ini-cet-1181",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2025-fmge-1182",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 63
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2024-neet-pg-1183",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 37
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2024-ini-cet-1184",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2024-fmge-1185",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 56
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2023-neet-pg-1186",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2023-ini-cet-1187",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 28
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2023-fmge-1188",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 54
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2022-neet-pg-1189",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2022-ini-cet-1190",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 43
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2022-fmge-1191",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 40
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2021-neet-pg-1192",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2021-ini-cet-1193",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 39
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2021-fmge-1194",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 43
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2020-neet-pg-1195",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 30
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2020-ini-cet-1196",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2020-fmge-1197",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 49
+   },
+   {
+    "id": "pyq-prepladder-pyq-gynaecology-obstetrics-2020-aiims-1198",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2025-neet-pg-1199",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2025-ini-cet-1200",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 24
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2025-fmge-1201",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 30
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2024-neet-pg-1202",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2024-ini-cet-1203",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2024-fmge-1204",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2023-neet-pg-1205",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2023-ini-cet-1206",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2023-fmge-1207",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2022-neet-pg-1208",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2022-ini-cet-1209",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2022-fmge-1210",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2021-neet-pg-1211",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2021-ini-cet-1212",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2021-fmge-1213",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2020-neet-pg-1214",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2020-ini-cet-1215",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2020-fmge-1216",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 32
+   },
+   {
+    "id": "pyq-prepladder-pyq-surgery-2020-aiims-1217",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2025-neet-pg-1218",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2025-ini-cet-1219",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 46
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2025-fmge-1220",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 51
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2024-neet-pg-1221",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2024-ini-cet-1222",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 34
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2024-fmge-1223",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 76
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2023-neet-pg-1224",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 25
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2023-ini-cet-1225",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 40
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2023-fmge-1226",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 80
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2022-neet-pg-1227",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 23
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2022-ini-cet-1228",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 42
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2022-fmge-1229",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 46
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2021-neet-pg-1230",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2021-ini-cet-1231",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 28
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2021-fmge-1232",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 68
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2020-neet-pg-1233",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2020-ini-cet-1234",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2020-fmge-1235",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 64
+   },
+   {
+    "id": "pyq-prepladder-pyq-pediatrics-2020-aiims-1236",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2025-neet-pg-1237",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2025-ini-cet-1238",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 36
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2025-fmge-1239",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 60
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2024-neet-pg-1240",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2024-ini-cet-1241",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 36
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2024-fmge-1242",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 40
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2023-neet-pg-1243",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2023-ini-cet-1244",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 45
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2023-fmge-1245",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 51
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2022-neet-pg-1246",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2022-ini-cet-1247",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 31
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2022-fmge-1248",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 34
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2021-neet-pg-1249",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 20
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2021-ini-cet-1250",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 30
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2021-fmge-1251",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 54
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2020-neet-pg-1252",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 27
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2020-ini-cet-1253",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2020-fmge-1254",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 52
+   },
+   {
+    "id": "pyq-prepladder-pyq-medicine-2020-aiims-1255",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2025-neet-pg-1256",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2025-ini-cet-1257",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2025-fmge-1258",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2024-neet-pg-1259",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2024-ini-cet-1260",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2024-fmge-1261",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2023-neet-pg-1262",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2023-ini-cet-1263",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2023-fmge-1264",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2022-neet-pg-1265",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2022-ini-cet-1266",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2022-fmge-1267",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2021-neet-pg-1268",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2021-ini-cet-1269",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2021-fmge-1270",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2020-neet-pg-1271",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2020-ini-cet-1272",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2020-fmge-1273",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 22
+   },
+   {
+    "id": "pyq-prepladder-pyq-orthopaedics-2020-aiims-1274",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2025-neet-pg-1275",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 2
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2025-ini-cet-1276",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2025-fmge-1277",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2024-neet-pg-1278",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2024-ini-cet-1279",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2024-fmge-1280",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2023-neet-pg-1281",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2023-ini-cet-1282",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2023-fmge-1283",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2022-neet-pg-1284",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2022-ini-cet-1285",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2022-fmge-1286",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2021-neet-pg-1287",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2021-ini-cet-1288",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2021-fmge-1289",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2020-neet-pg-1290",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2020-ini-cet-1291",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2020-fmge-1292",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-prepladder-pyq-radiology-2020-aiims-1293",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2025-neet-pg-1294",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2025-ini-cet-1295",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2025-fmge-1296",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2024-neet-pg-1297",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2024-ini-cet-1298",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2024-fmge-1299",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2023-neet-pg-1300",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 2
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2023-ini-cet-1301",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2023-fmge-1302",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2022-neet-pg-1303",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2022-ini-cet-1304",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2022-fmge-1305",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2021-neet-pg-1306",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2021-ini-cet-1307",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2021-fmge-1308",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2020-neet-pg-1309",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2020-ini-cet-1310",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2020-fmge-1311",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-dermatology-2020-aiims-1312",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2025-neet-pg-1313",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2025-ini-cet-1314",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2025-fmge-1315",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2024-neet-pg-1316",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2024-ini-cet-1317",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2024-fmge-1318",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 9
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2023-neet-pg-1319",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2023-ini-cet-1320",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2023-fmge-1321",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2022-neet-pg-1322",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2022-ini-cet-1323",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2022-fmge-1324",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2021-neet-pg-1325",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2021-ini-cet-1326",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2021-fmge-1327",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2020-neet-pg-1328",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2020-ini-cet-1329",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2020-fmge-1330",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-anaesthesia-2020-aiims-1331",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2025-neet-pg-1332",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2025 NEET PG",
+    "exam": "NEET PG",
+    "year": 2025,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2025-ini-cet-1333",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2025 INI CET",
+    "exam": "INI-CET",
+    "year": 2025,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2025-fmge-1334",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2025 FMGE",
+    "exam": "FMGE",
+    "year": 2025,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2024-neet-pg-1335",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2024 NEET PG",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2024-ini-cet-1336",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2024 INI CET",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2024-fmge-1337",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2024 FMGE",
+    "exam": "FMGE",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2023-neet-pg-1338",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2023 NEET PG",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2023-ini-cet-1339",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2023 INI CET",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2023-fmge-1340",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2023 FMGE",
+    "exam": "FMGE",
+    "year": 2023,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2022-neet-pg-1341",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2022 NEET PG",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2022-ini-cet-1342",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2022 INI CET",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2022-fmge-1343",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2022 FMGE",
+    "exam": "FMGE",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2021-neet-pg-1344",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2021 NEET PG",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2021-ini-cet-1345",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2021 INI CET",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2021-fmge-1346",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2021 FMGE",
+    "exam": "FMGE",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2020-neet-pg-1347",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2020 NEET PG",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2020-ini-cet-1348",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2020 INI CET",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2020-fmge-1349",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2020 FMGE",
+    "exam": "FMGE",
+    "year": 2020,
+    "count": 15
+   },
+   {
+    "id": "pyq-prepladder-pyq-psychiatry-2020-aiims-1350",
+    "platformId": "prepladder",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "2020 AIIMS",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2023-1351",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-november-2022-part-a-1352",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-november-2022-part-b-1353",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-aiims-june-2020-1354",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-aiims-may-2018-1355",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-aiims-may-2019-1356",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-aiims-nov-2018-1357",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-aiims-nov-2019-1358",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-july-2021-1359",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-may-2022-1360",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-nov-2020-1361",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-nov-2021-1362",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2019-1363",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2018-1364",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2020-1365",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2021-1366",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2022-1367",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-may-2023-1368",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-ini-cet-nov-2023-1369",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-inicet-may-2024-1370",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-neet-pg-2024-1371",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "Radiology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-radiology-radiology-inicet-nov-2024-1372",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Radiology",
+    "label": "RADIOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-aiims-june-2020-1373",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-aiims-may-2019-1374",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-aiims-may-2018-1375",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-aiims-nov-2018-1376",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-aiims-nov-2019-1377",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-july-2021-1378",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-may-2022-1379",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-nov-2020-1380",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2018-1381",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2019-1382",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2020-1383",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2021-1384",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2022-1385",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-nov-2021-1386",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-nov-2022-part-a-1387",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET NOV 2022 (PART A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-nov-2022-part-b-1388",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET NOV 2022 (PART B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2023-1389",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-may-2023-1390",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-ini-cet-nov-2023-1391",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-inicet-may-2024-1392",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-neet-pg-2024-1393",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "Microbiology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-microbiology-microbiology-inicet-nov-2024-1394",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Microbiology",
+    "label": "MICROBIOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-2020-1395",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-nov-2022-1396",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET NOV 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2023-1397",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-aiims-june-2o20-1398",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - AIIMS JUNE 2O20",
+    "exam": "AIIMS",
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-aiims-may-2o19-1399",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - AIIMS MAY 2O19",
+    "exam": "AIIMS",
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-aiims-nov-2019-1400",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-2020-1401",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-july-2021-1402",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-may-2022-1403",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-may-2023-1404",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-nov-2021-1405",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-nov-2022-1406",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INI CET NOV 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2019-1407",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2020-1408",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2021-1409",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2022-1410",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-ini-cet-nov-2023-1411",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry- INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2018-1412",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-aiims-nov-2018-1413",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-inicet-may-2024-1414",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-neet-pg-2024-1415",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "Biochemistry - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-biochemistry-biochemistry-inicet-nov-2024-1416",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Biochemistry",
+    "label": "BIOCHEMISTRY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-november-2022-part-a-1417",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-november-2022-part-b-1418",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2023-1419",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-aiims-june-2020-1420",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-aiims-may-2018-1421",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-aiims-may-2019-1422",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-aiims-nov-2018-1423",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-aiims-nov-2019-1424",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-july-2021-1425",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-may-2022-1426",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-nov-2020-1427",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-nov-2021-1428",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2018-1429",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2019-1430",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2020-1431",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2021-1432",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2022-1433",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-may-2023-1434",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-ini-cet-nov-2023-1435",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-inicet-may-2024-1436",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-neet-pg-2024-1437",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "Ophthalmology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-ophthalmology-ophthalmology-inicet-nov-2024-1438",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Ophthalmology",
+    "label": "OPHTHALMOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-november-2022-part-a-1439",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-november-2022-part-b-1440",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2023-1441",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-aiims-june-2020-1442",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-aiims-may-2018-1443",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-aiims-may-2019-1444",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-aiims-nov-2018-1445",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-aiims-nov-2019-1446",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-2020-1447",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-july-2021-1448",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-nov-2021-1449",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-may-2022-1450",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2018-1451",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2019-1452",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2020-1453",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2021-1454",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2022-1455",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-may-2023-1456",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-ini-cet-nov-2023-1457",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-inicet-may-2024-1458",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-neet-pg-2024-1459",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "Anatomy - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-anatomy-anatomy-inicet-nov-2024-1460",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anatomy",
+    "label": "ANATOMY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2023-1461",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-november-2022-part-a-1462",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-november-2022-part-b-1463",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-aiims-june-2020-1464",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-aiims-may-2018-1465",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-aiims-may-2019-1466",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-aiims-nov-2018-1467",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-aiims-nov-2019-1468",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-may-2022-1469",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-nov-2020-1470",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-nov-2021-1471",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2018-1472",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2019-1473",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 29
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2020-1474",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2021-1475",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2022-1476",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-may-2023-1477",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-july-2021-1478",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-ini-cet-nov-2023-1479",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-inicet-may-2024-1480",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-neet-pg-2024-1481",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "Pharmacology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-pharmacology-pharmacology-inicet-nov-2024-1482",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pharmacology",
+    "label": "PHARMACOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-ini-cet-november-2022-part-a-1483",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-ini-cet-november-2022-part-b-1484",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-neet-pg-2023-1485",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-aiims-june-2020-1486",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-aiims-may-2018-1487",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-aiims-may-2019-1488",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-aiims-nov-2018-1489",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-aiims-nov-2019-1490",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-ini-cet-july-2021-1491",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-ini-cet-may-2022-1492",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-ini-cet-nov-2020-1493",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-ini-cet-nov-2021-1494",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-neet-pg-2021-1495",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-neet-pg-2022-1496",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-neet-pg-2018-1497",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-neet-pg-2019-1498",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-fm-neet-pg-2020-1499",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FM - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-ini-cet-may-2023-1500",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-ini-cet-nov-2023-1501",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-inicet-may-2024-1502",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-neet-pg-2024-1503",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Medicine - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-forensic-medicine-forensic-medicine-inicet-nov-2024-1504",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Forensic Medicine",
+    "label": "FORENSIC MEDICINE-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-november-2022-part-a-1505",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-november-2022-part-b-1506",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2023-1507",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-aiims-june-2020-1508",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-aiims-may-2018-1509",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-aiims-may-2019-1510",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-aiims-nov-2018-1511",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-aiims-nov-2019-1512",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-july-2021-1513",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-may-2022-1514",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-nov-2020-1515",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-nov-2021-1516",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2019-1517",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2020-1518",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2021-1519",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2018-1520",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2022-1521",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-may-2023-1522",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-ini-cet-nov-2023-1523",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-inicet-may-2024-1524",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-neet-pg-2024-1525",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-pyq-psm-psm-inicet-nov-2024-1526",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Community Medicine / PSM",
+    "label": "PSM-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-aiims-june-2020-1527",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-aiims-may-2018-1528",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-aiims-may-2019-1529",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-aiims-nov-2018-1530",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-aiims-nov-2019-1531",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-july-2021-1532",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-may-2022-1533",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-nov-2020-1534",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-nov-2021-1535",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2018-1536",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2019-1537",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2020-1538",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2022-1539",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-nov-2022-part-a-1540",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET NOV 2022 (Part -A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-nov-2022-part-b-1541",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET NOV 2022 (Part -B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2023-1542",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG -2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-may-2023-1543",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-ini-cet-nov-2023-1544",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2021-1545",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-inicet-may-2024-1546",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-neet-pg-2024-1547",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "Surgery - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 37
+   },
+   {
+    "id": "pyq-egurukul-pyq-surgery-surgery-inicet-nov-2024-1548",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Surgery",
+    "label": "SURGERY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-aiims-june-2020-1549",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-aiims-may-2018-1550",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-aiims-may-2019-1551",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-aiims-nov-2018-1552",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-aiims-nov-2019-1553",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-nov-2022-part-b-1554",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET NOV 2022 (PART B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-nov-2022-part-a-1555",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET NOV 2022 (PART A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-jul-2021-1556",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET JUL 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-may-2022-1557",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-nov-2020-1558",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-nov-2021-1559",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2018-1560",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2019-1561",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2020-1562",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2021-1563",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2022-1564",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2023-1565",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-may-2023-1566",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-ini-cet-nov-2023-1567",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-inicet-may-2024-1568",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-neet-pg-2024-1569",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "Pathology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-pyq-pathology-pathology-inicet-nov-2024-1570",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Pathology",
+    "label": "PATHOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-nov-2022-part-a-1571",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET NOV 2022 (PART A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-nov-2022-part-b-1572",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET NOV 2022 (PART B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2023-1573",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-july-2021-1574",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-aiims-june-2020-1575",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-aiims-may-2018-1576",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-aiims-nov-2018-1577",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-aiims-may-2019-1578",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-aiims-nov-2019-1579",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-may-2022-1580",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-nov-2020-1581",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-nov-2021-1582",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2018-1583",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2019-1584",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2020-1585",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2021-1586",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2022-1587",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-may-2023-1588",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-ini-cet-nov-2023-1589",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-inicet-may-2024-1590",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopaedics-neet-pg-2024-1591",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "Orthopaedics - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-orthopaedics-orthopedics-inicet-nov-2024-1592",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Orthopaedics",
+    "label": "ORTHOPEDICS-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2023-1593",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-november-2022-part-a-1594",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-november-2022-part-b-1595",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-aiims-june-2020-1596",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-aiims-may-2018-1597",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-aiims-may-2019-1598",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-aiims-nov-2018-1599",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-aiims-nov-2019-1600",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-2020-1601",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-july-2021-1602",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-may-2022-1603",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-nov-2021-1604",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2018-1605",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2019-1606",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2020-1607",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2021-1608",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2022-1609",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-ini-cet-nov-2023-1610",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-inicet-may-2024-1611",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-neet-pg-2024-1612",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "Physiology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-physiology-physiology-inicet-nov-2024-1613",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Physiology",
+    "label": "PHYSIOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-november-2022-part-a-1614",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-november-2022-part-b-1615",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2023-1616",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-aiims-june-2020-1617",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-aiims-may-2018-1618",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-aiims-may-2019-1619",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-aiims-nov-2019-1620",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-aiims-nov-2018-1621",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-july-2021-1622",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-may-2022-1623",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-nov-2020-1624",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-nov-2021-1625",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2018-1626",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2019-1627",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2021-1628",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2020-1629",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2022-1630",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-may-2023-1631",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-ini-cet-nov-2023-1632",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-inicet-may-2024-1633",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-neet-pg-2024-1634",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "Pediatrics - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-pediatrics-pediatrics-inicet-nov-2024-1635",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Paediatrics",
+    "label": "PEDIATRICS-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-aiims-june-2020-1636",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-aiims-may-2019-1637",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-aiims-nov-2019-1638",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-july-2021-1639",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-may-2022-1640",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-nov-2020-1641",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-nov-2021-1642",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-nov-2022-part-a-1643",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET NOV 2022 (PART A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-nov-2022-part-b-1644",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET NOV 2022 (PART B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2019-1645",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2020-1646",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2021-1647",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2022-1648",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2023-1649",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-aiims-may-2018-1650",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-may-2023-1651",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2018-1652",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-aiims-nov-2018-1653",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-ini-cet-nov-2023-1654",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-inicet-may-2024-1655",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-neet-pg-2024-1656",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "Dermatology - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-dermatology-dermatology-inicet-nov-2024-1657",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Dermatology",
+    "label": "DERMATOLOGY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-november-2022-part-a-1658",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-november-2022-part-b-1659",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2023-1660",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-aiims-june-2020-1661",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-aiims-may-2019-1662",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-aiims-nov-2018-1663",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-aiims-nov-2019-1664",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-july-2021-1665",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-may-2022-1666",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-nov-2020-1667",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 36
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-nov-2021-1668",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2019-1669",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2018-1670",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 46
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2020-1671",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2021-1672",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2022-1673",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-may-2023-1674",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-aiims-may-2018-1675",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-ini-cet-nov-2023-1676",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-inicet-may-2024-1677",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-neet-pg-2024-1678",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "Medicine - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 41
+   },
+   {
+    "id": "pyq-egurukul-pyq-medicine-medicine-inicet-nov-2024-1679",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Medicine",
+    "label": "MEDICINE-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2023-1680",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2022-1681",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2021-1682",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2020-1683",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2019-1684",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2018-1685",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-nov-2022-part-a-1686",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET NOV 2022 (PART A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-may-2023-1687",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-nov-2022-part-b-1688",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET NOV 2022 (PART B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-may-2022-1689",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-nov-2021-1690",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-july-2021-1691",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-nov-2020-1692",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-aiims-june-2020-1693",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-aiims-nov-2019-1694",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-aiims-may-2019-1695",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-aiims-nov-2018-1696",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-aiims-may-2018-1697",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-ini-cet-nov-2023-1698",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-inicet-may-2024-1699",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anesthesia-neet-pg-2024-1700",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-anesthesia-anaesthesia-inicet-nov-2024-1701",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Anaesthesia",
+    "label": "ANAESTHESIA-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-may-2023-1702",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-june-2020-1703",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-may-2018-1704",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-may-2019-1705",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-nov-2018-1706",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-nov-2019-1707",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-july-2021-1708",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-may-2022-1709",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-nov-2020-1710",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-nov-2021-1711",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2018-1712",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2019-1713",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2020-1714",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2021-1715",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2022-1716",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-nov-2023-1717",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2023-1718",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-nov-2019-1719",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-june-2020-1720",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-ini-cet-nov-2020-1721",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-aiims-nov-2016-1722",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - AIIMS NOV 2016",
+    "exam": "AIIMS",
+    "year": 2016,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-inicet-may-2024-1723",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-neet-pg-2024-1724",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 45
+   },
+   {
+    "id": "pyq-egurukul-pyq-obg-obg-inicet-nov-2024-1725",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "OBG-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-november-2022-part-a-1726",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET NOVEMBER 2022 (PART - A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-november-2022-part-b-1727",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET NOVEMBER 2022 (PART - B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2023-1728",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-2020-1729",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-aiims-june-2020-1730",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-aiims-may-2018-1731",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-aiims-may-2019-1732",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-aiims-nov-2018-1733",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-aiims-nov-2019-1734",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-july-2021-1735",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-may-2022-1736",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-nov-2021-1737",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2018-1738",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2019-1739",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2020-1740",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2021-1741",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2022-1742",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-may-2023-1743",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-ini-cet-nov-2023-1744",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-inicet-may-2024-1745",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-neet-pg-2024-1746",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "Psychiatry - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-psychiatry-psychiatry-inicet-nov-2024-1747",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "Psychiatry",
+    "label": "PSYCHIATRY-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-november-2022-part-a-1748",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET NOVEMBER 2022 (PART A)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-november-2022-part-b-1749",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET NOVEMBER 2022 (PART B)",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2023-1750",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2023",
+    "exam": "NEET PG",
+    "year": 2023,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-aiims-june-2020-1751",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - AIIMS JUNE 2020",
+    "exam": "AIIMS",
+    "year": 2020,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-aiims-may-2018-1752",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - AIIMS MAY 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-aiims-may-2019-1753",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - AIIMS MAY 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-aiims-nov-2018-1754",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - AIIMS NOV 2018",
+    "exam": "AIIMS",
+    "year": 2018,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-aiims-nov-2019-1755",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - AIIMS NOV 2019",
+    "exam": "AIIMS",
+    "year": 2019,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-july-2021-1756",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET JULY 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-may-2022-1757",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET MAY 2022",
+    "exam": "INI-CET",
+    "year": 2022,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-nov-2020-1758",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET NOV 2020",
+    "exam": "INI-CET",
+    "year": 2020,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-nov-2021-1759",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET NOV 2021",
+    "exam": "INI-CET",
+    "year": 2021,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2018-1760",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2018",
+    "exam": "NEET PG",
+    "year": 2018,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2019-1761",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2019",
+    "exam": "NEET PG",
+    "year": 2019,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2020-1762",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2020",
+    "exam": "NEET PG",
+    "year": 2020,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2021-1763",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2021",
+    "exam": "NEET PG",
+    "year": 2021,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2022-1764",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2022",
+    "exam": "NEET PG",
+    "year": 2022,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-may-2023-1765",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT- INI CET MAY 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-ini-cet-nov-2023-1766",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INI CET NOV 2023",
+    "exam": "INI-CET",
+    "year": 2023,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-inicet-may-2024-1767",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - INICET MAY 2024",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-neet-pg-2024-1768",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT - NEET PG 2024",
+    "exam": "NEET PG",
+    "year": 2024,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-pyq-ent-ent-inicet-nov-2024-1769",
+    "platformId": "egurukul",
+    "setKind": "pyq",
+    "subject": "ENT",
+    "label": "ENT-(INICET NOV 2024)",
+    "exam": "INI-CET",
+    "year": 2024,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ent-fractures-of-facial-bone-csf-rhinorrhea-1770",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Fractures Of Facial Bone & CSF Rhinorrhea",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-otosclerosis-1771",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Otosclerosis",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-treatment-of-otosclerosis-stapedectomy-1772",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Treatment Of Otosclerosis & Stapedectomy",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-asom-1773",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "ASOM",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-ent-cholesteatoma-tuberculosis-of-ear-1774",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Cholesteatoma & Tuberculosis Of Ear",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-csom-1775",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "CSOM",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ent-extracranial-complications-mastoiditis-1776",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Extracranial Complications & Mastoiditis",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-intracranial-complications-1777",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Intracranial Complications",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ent-serous-otitis-media-som-1778",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Serous Otitis Media (SOM)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-laryngeal-carcinoma-1779",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Laryngeal Carcinoma",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-nasopharynx-anatomy-diseases-1780",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Nasopharynx - Anatomy & Diseases",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-granulomatous-diseases-of-nose-1781",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Granulomatous Diseases Of Nose",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-vocal-cord-paralysis-1782",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Vocal Cord Paralysis",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-ent-voice-disorders-1783",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Voice Disorders",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-congenital-diseases-of-larynx-laryngomalacia-1784",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Congenital Diseases Of Larynx - Laryngomalacia",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-throat-neck-spaces-1785",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy of Throat & Neck Spaces",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-throat-tonsils-1786",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy of Throat & Tonsils",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-esophagoscopy-foreign-body-1787",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Esophagoscopy & Foreign Body",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ent-glomus-tumour-1788",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Glomus Tumour",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-instruments-for-ear-1789",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Instruments For Ear",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ent-instruments-for-nose-throat-1790",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Instruments For Nose & Throat",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ent-laser-in-ent-photodynamic-therapy-1791",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Laser In Ent & Photodynamic Therapy",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ent-obstructive-sleep-apnea-syndrome-1792",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Obstructive Sleep Apnea Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-recent-advances-in-ent-surgeries-therapies-1793",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Recent Advances in ENT Surgeries & Therapies",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-laryngectomy-1794",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Laryngectomy",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-neck-dissections-1795",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Neck Dissections",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-tracheostomy-tubes-1796",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Tracheostomy Tubes",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-epistaxis-deviated-nasal-septum-1797",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Epistaxis & Deviated Nasal Septum",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-larynx-part-1-1798",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy Of Larynx (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-larynx-part-2-1799",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy Of Larynx (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-audiometry-1800",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Audiometry",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ent-bera-oae-1801",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "BERA & OAE",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-electrocochleography-cochlear-vs-retro-cochlear-1802",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Electrocochleography & Cochlear Vs Retro-Cochlear",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ent-tuning-fork-tests-1803",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Tuning Fork Tests",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-ent-tympanometry-1804",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Tympanometry",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ent-vestibular-function-caloric-test-fistula-tests-1805",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Vestibular Function, Caloric Test & Fistula Tests",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-chronic-laryngitis-1806",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Chronic Laryngitis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-epiglottitis-croup-1807",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Epiglottitis & Croup",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-introduction-examination-of-ent-1808",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Introduction & Examination of ENT",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ent-assistive-devices-for-hearing-1809",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Assistive Devices For Hearing",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-nose-part-1-1810",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy of Nose (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-nose-part-2-1811",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy of Nose (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-sinuses-1812",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy of Sinuses",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-embryology-of-nose-sinuses-1813",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Embryology of Nose & Sinuses",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-physiology-of-nose-sinuses-1814",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Physiology of Nose & Sinuses",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-oral-cavity-oropharynx-1815",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Oral Cavity & Oropharynx",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-surgeries-of-otitis-media-1816",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Surgeries Of Otitis Media",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-juvenile-nasopharyngeal-angiofibroma-1817",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Juvenile Nasopharyngeal Angiofibroma",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-nasopharyngeal-carcinoma-1818",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Nasopharyngeal Carcinoma",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-pharyngeal-tumours-1819",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Pharyngeal Tumours",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ent-salivary-gland-tumours-parotidectomy-1820",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Salivary Gland Tumours & Parotidectomy",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-tumours-of-nose-sinuses-1821",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Tumours Of Nose & Sinuses",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-acoustic-neuroma-vestibular-neuronitis-1822",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Acoustic Neuroma & Vestibular Neuronitis",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-ent-diseases-of-external-nose-1823",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Diseases Of External Nose",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-external-ear-tympanic-membrane-1824",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy Of External Ear & Tympanic Membrane",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-middle-ear-medial-posterior-walls-1825",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy Of Middle Ear - (Medial & Posterior Walls)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-middle-ear-anterior-wall-1826",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy Of Middle Ear (Anterior Wall)",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-embryology-of-ear-1827",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Embryology of Ear",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-facial-nerve-vestibulocochlear-nerve-anatomy-1828",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Facial Nerve & Vestibulocochlear Nerve Anatomy",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-ent-inner-ear-anatomy-physiology-of-hearing-part-1-1829",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Inner Ear Anatomy & Physiology Of Hearing (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-ent-inner-ear-anatomy-physiology-of-hearing-part-2-1830",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Inner Ear Anatomy & Physiology Of Hearing (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-ent-mastoid-anatomy-1831",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Mastoid Anatomy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-acute-chronic-tonsillitis-1832",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Acute & Chronic Tonsillitis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-acute-chronic-pharyngitis-1833",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Acute & Chronic Pharyngitis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-adenotonsillectomy-1834",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Adenotonsillectomy",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ent-deaf-child-tinnitus-hyperbaric-oxygen-therapy-1835",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Deaf Child, Tinnitus & Hyperbaric Oxygen Therapy",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ent-hearing-loss-review-tympanic-membrane-images-1836",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Hearing Loss Review & Tympanic Membrane Images",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ent-neck-mass-thyroid-swellings-1837",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Neck Mass & Thyroid Swellings",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ent-nasal-polyps-1838",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Nasal Polyps",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ent-facial-nerve-paralysis-1839",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Facial Nerve Paralysis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-laryngeal-papilloma-1840",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Laryngeal Papilloma",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ent-vocal-nodules-polyps-laryngocele-1841",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Vocal Nodules, Polyps & Laryngocele",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ent-allergic-vasomotor-atrophic-rhinitis-1842",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Allergic, Vasomotor & Atrophic Rhinitis",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ent-complications-of-sinusitis-1843",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Complications Of Sinusitis",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ent-infective-rhinosinusitis-part-1-fungal-sinusitis-1844",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Infective Rhinosinusitis (Part 1) - Fungal Sinusitis",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ent-surgeries-for-rhinosinusitis-1845",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Surgeries For Rhinosinusitis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ent-disease-of-external-ear-1846",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Disease Of External Ear",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-general-biochemistry-1847",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "General Biochemistry",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-electron-transport-chain-1848",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Electron Transport Chain",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-heme-protein-odc-1849",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Heme Protein & ODC",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-link-reaction-tca-cycle-1850",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Link Reaction & Tca Cycle",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-liver-function-test-1851",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Liver Function Test",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-bile-acid-bile-salts-1852",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Bile Acid & Bile Salts",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-cholesterol-metabolism-1853",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Cholesterol Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-classification-sphingolipids-1854",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Classification & Sphingolipids",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-fatty-acid-classification-lipases-1855",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Fatty Acid Classification & Lipases",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-fatty-acid-oxidation-alpha-beta-omega-1856",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Fatty Acid Oxidation (Alpha, Beta & Omega)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-fatty-acid-synthesis-1857",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Fatty Acid Synthesis",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-lipoproteins-1858",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Lipoproteins",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-sphingolipids-sphingolipidoses-1859",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Sphingolipids & Sphingolipidoses",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-enzyme-classification-1860",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Enzyme Classification",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-enzyme-kinetics-1861",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Enzyme Kinetics",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-enzyme-regulation-1862",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Enzyme Regulation",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-isoenzymes-1863",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Isoenzymes",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-carb-tests-1864",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Carb-Tests",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-di-mono-saccharide-metabolism-1865",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Di & Mono-Saccharide Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-gluconeogenesis-1866",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Gluconeogenesis",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-glucose-transporters-1867",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Glucose Transporters",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-glycogen-metabolism-1868",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Glycogen Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-glycolysis-1869",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Glycolysis",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-hmp-uronic-acid-pathway-1870",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "HMP & Uronic Acid Pathway",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-miscellaneous-1871",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-structure-classification-1872",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Structure & Classification",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-cellular-organelles-1873",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Cellular Organelles",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-peroxisomes-related-disorder-1874",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Peroxisomes & Related Disorder",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-heme-degradation-jaundice-1875",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Heme Degradation & Jaundice",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-heme-synthesis-porphyrias-1876",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Heme Synthesis & Porphyrias",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-aliphatic-amino-acids-properties-1877",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Aliphatic Amino Acids & Properties",
+    "exam": null,
+    "year": null,
+    "count": 29
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-amino-acid-metabolism-urea-cycle-1878",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Amino Acid Metabolism & Urea Cycle",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-aromatic-amino-acid-properties-1879",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Aromatic Amino Acid & Properties",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-extra-cellular-matrix-proteins-collagen-fibrillin-keratin-1880",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Extra Cellular Matrix Proteins - Collagen, Fibrillin & Keratin",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-general-concepts-1881",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "General Concepts",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-other-amino-acids-related-disorders-1882",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Other Amino Acids & Related Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-post-translational-modification-protein-structure-1883",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Post Translational Modification & Protein Structure",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-fat-soluble-vitamins-1884",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Fat Soluble Vitamins",
+    "exam": null,
+    "year": null,
+    "count": 37
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-general-concept-water-soluble-vitamins-1885",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "General Concept & Water Soluble Vitamins",
+    "exam": null,
+    "year": null,
+    "count": 53
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-dna-damage-its-repair-1886",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Dna Damage & Its Repair",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-dna-organisation-nucleic-acid-dna-structure-1887",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "DNA Organisation, Nucleic Acid & DNA Structure",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-gene-regulation-lacoperon-1888",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Gene Regulation & Lacoperon",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-gene-regulation-technique-of-genetic-analysis-1889",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Gene Regulation & Technique Of Genetic Analysis",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-genetic-code-translation-1890",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Genetic Code & Translation",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-purine-pyrimidine-metabolism-1891",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Purine & Pyrimidine Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-replication-1892",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Replication",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-rna-it-s-type-1893",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "RNA & It's Type",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-cataract-1894",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Cataract",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-complications-1895",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Complications",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-cortex-maturation-1896",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Cortex Maturation",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-lens-abnormalities-1897",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Lens Abnormalities",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-other-cataract-1898",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Other Cataract",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-treatment-1899",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Treatment",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-sclera-1900",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Sclera",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-anisocoria-1901",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Anisocoria",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-neuro-ophthalmology-introduction-1902",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Neuro Ophthalmology - Introduction",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-one-half-syndrome-1903",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "One & Half Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-optic-neuritis-1904",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Optic Neuritis",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-pupillary-reflexes-1905",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Pupillary Reflexes",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-visual-pathway-junctional-scotoma-1906",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Visual Pathway & Junctional Scotoma",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-neuro-ophthalmology-miscellaneous-1907",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Neuro Ophthalmology - Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-anatomy-anatomy-physiology-1908",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Anatomy - Anatomy & Physiology",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-visual-acuity-1909",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Visual Acuity",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-astigmatism-accommodation-1910",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Astigmatism & Accommodation",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-calculation-of-refractive-error-1911",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Calculation of Refractive Error",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retinoscopy-1912",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retinoscopy",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-spherical-errors-1913",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Spherical Errors",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-sturm-s-conoid-1914",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Sturm’s Conoid",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-refractive-surgery-1915",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Refractive Surgery",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-angle-kappa-high-myopia-1916",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Angle Kappa & High Myopia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-lacrimal-apparatus-1917",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Lacrimal Apparatus",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-allergic-conjunctivitis-1918",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Allergic Conjunctivitis",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-conjunctival-degenerations-1919",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Conjunctival Degenerations",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-conjunctivitis-1920",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Conjunctivitis",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-conjunctiva-introduction-1921",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Conjunctiva - Introduction",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-ectropion-entropion-1922",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Ectropion & Entropion",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-infections-1923",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Infections",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-ptosis-1924",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Ptosis",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-binocular-single-vision-1925",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Binocular Single Vision",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-evaluation-of-comitant-squint-1926",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Evaluation Of Comitant Squint",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-isolated-nerve-palsy-gaze-palsy-1927",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Isolated Nerve Palsy & Gaze Palsy",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-latent-squint-1928",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Latent Squint",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-nystagmus-1929",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Nystagmus",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-orientation-of-extra-ocular-muscles-1930",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Orientation of Extra Ocular Muscles",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-park-test-1931",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Park Test",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-physiology-of-squints-1932",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Physiology of Squints",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-squint-miscellaneous-1933",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Squint - Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-corneal-dystrophies-1934",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Corneal Dystrophies",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-cornea-introduction-1935",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Cornea - Introduction",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-non-infective-keratitis-1936",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Non Infective Keratitis",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-bacterial-fungal-viral-corneal-ulcer-1937",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Bacterial, Fungal & Viral Corneal Ulcer",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-anterior-uveitis-1938",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Anterior Uveitis",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-uveitis-in-systemic-diseases-1939",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Uveitis in Systemic Diseases",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-uveal-tract-miscellaneous-1940",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Uveal Tract - Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-miscellaneous-1941",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-armd-1942",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "ARMD",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-crao-crvo-1943",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "CRAO & CRVO",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-csr-cme-1944",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "CSR & CME",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-diabetic-retinopathy-1945",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Diabetic Retinopathy",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retina-introduction-1946",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retina - Introduction",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-macular-pathologies-1947",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Macular Pathologies",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retinal-detachment-1948",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retinal Detachment",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retina-miscellaneous-1949",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retina - Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-blowout-fracture-1950",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Blowout Fracture",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-diseases-of-orbit-1951",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Diseases Of Orbit",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-orbital-cellulitis-1952",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Orbital Cellulitis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-proptosis-1953",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Proptosis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-tumours-1954",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Tumours",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-acute-congestive-glaucoma-1955",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Acute Congestive Glaucoma",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-anti-glaucoma-drugs-1956",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Anti Glaucoma Drugs",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-congenital-glaucoma-1957",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Congenital Glaucoma",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-pacg-1958",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "PACG",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-poag-1959",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "POAG",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-secondary-developmental-glaucoma-1960",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Secondary Developmental Glaucoma",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-secondary-glaucoma-1961",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Secondary Glaucoma",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-tonometry-1962",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Tonometry",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-treatment-of-poag-1963",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Treatment of POAG",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-visual-field-defects-1964",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Visual Field Defects",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-glaucoma-miscellaneous-1965",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Glaucoma - Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-community-ophthalmology-1966",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Community Ophthalmology",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-npcb-1967",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "NPCB",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-vision-2020-1968",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Vision 2020",
+    "exam": null,
+    "year": 2020,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-intraocular-tumors-1969",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Intraocular Tumors",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-blunt-trauma-1970",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Blunt Trauma",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-instruments-implants-in-ortho-1971",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Instruments & Implants In Ortho",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-splints-tractions-in-ortho-1972",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Splints & Tractions In Ortho",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-basics-of-bone-tumors-1973",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Basics Of Bone Tumors",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-benign-aggressive-tumors-1974",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Benign Aggressive Tumors",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-benign-lesions-of-bone-1975",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Benign Lesions Of Bone",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-malignant-tumors-1976",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Malignant Tumors",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-skeletal-dysplasia-1977",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Skeletal Dysplasia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-basics-of-metabolic-disorders-1978",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Basics Of Metabolic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-osteoporosis-1979",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Osteoporosis",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-paget-osteopetrosis-1980",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Paget & Osteopetrosis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-rickets-osteomalacia-1981",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Rickets & Osteomalacia",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-scurvy-osteogenesis-imperfecta-1982",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Scurvy & Osteogenesis Imperfecta",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-amputations-1983",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Amputations",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-anatomy-physiology-of-bone-1984",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Anatomy & Physiology Of Bone",
+    "exam": null,
+    "year": null,
+    "count": 35
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-complication-in-orthopaedics-1985",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Complication In Orthopaedics",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-infective-arthritis-other-infections-1986",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Infective Arthritis & Other Infections",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-osteomyelitis-1987",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Osteomyelitis",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-tb-osteomyelitis-1988",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "TB Osteomyelitis",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-joint-disorders-1989",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Joint Disorders",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-basics-of-trauma-general-considerations-1990",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Basics Of Trauma General Considerations",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-eponym-s-of-fractures-1991",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Eponym’s of Fractures",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-lower-limb-dislocation-of-hip-fracture-nof-1992",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Lower Limb (Dislocation Of Hip & Fracture Nof)",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-lower-limb-other-fracture-till-toes-1993",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Lower Limb (Other Fracture Till Toes)",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-lower-limb-trendelenburg-pelvic-fracture-1994",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Lower Limb (Trendelenburg & Pelvic Fracture)",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-spine-regional-conditions-1995",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Spine & Regional Conditions",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-sports-injury-1996",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Sports Injury",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-upper-limb-clavicle-shoulder-dislocation-1997",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Upper Limb (Clavicle & Shoulder Dislocation)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-upper-limb-fracture-sc-humerus-till-fingers-1998",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Upper Limb (Fracture SC Humerus Till Fingers)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-soft-tissue-conditions-1999",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Soft Tissue Conditions",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-basic-terminology-coxa-vara-2000",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Basic Terminology & Coxa Vara",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-cdh-blounts-disease-2001",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "CDH & Blounts Disease",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-ctev-achondroplasia-2002",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "CTEV & Achondroplasia",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-perthe-s-disease-scfe-2003",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Perthe’S Disease & SCFE",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-basic-peripheral-nerve-injuries-2004",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Basic Peripheral Nerve Injuries",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-entrapment-neuropathies-2005",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Entrapment Neuropathies",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-specific-nerve-injuries-2006",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Specific Nerve Injuries",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-neuro-radiology-2007",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Neuro Radiology",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-genitourinary-radiology-2008",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Genitourinary Radiology",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-mammography-2009",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Mammography",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-nuclear-scans-2010",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Nuclear Scans",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-musculoskeletal-radiology-2011",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Musculoskeletal Radiology",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-obstetric-imaging-2012",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Obstetric Imaging",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-radiation-hazards-protection-2013",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Radiation Hazards & Protection",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-thoracic-cardiovascular-radiology-2014",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Thoracic & Cardiovascular Radiology",
+    "exam": null,
+    "year": null,
+    "count": 38
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ct-vs-mri-mri-sequences-2015",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "CT VS MRI & MRI Sequences",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-basics-of-investigations-2016",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Basics Of Investigations",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-abdominal-radiology-2017",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Abdominal Radiology",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-mri-2018",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "MRI",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-iodinated-contrast-agents-2019",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Iodinated Contrast Agents",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-mri-usg-contrast-agents-2020",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "MRI & USG Contrast Agents",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-radio-therapy-2021",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Radio Therapy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-basics-of-radiography-2022",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Basics Of Radiography",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-face-pns-imaging-2023",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Face & PNS Imaging",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-spine-imaging-2024",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Spine Imaging",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ultrasonography-part-1-2025",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Ultrasonography (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ultrasonography-part-2-2026",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Ultrasonography (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-understanding-anatomy-on-radiological-images-2027",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Understanding Anatomy on Radiological Images",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ct-scan-part-1-2028",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "CT Scan (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ct-scan-part-2-2029",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "CT Scan (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-consent-euthanasia-2030",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Consent & Euthanasia",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-defenses-against-negligence-2031",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Defenses Against Negligence",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-important-concepts-related-to-medical-negligence-2032",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Important Concepts Related To Medical Negligence",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-infamous-conduct-2033",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Infamous Conduct",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-forensic-psychiatry-2034",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Forensic Psychiatry",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-definitions-2035",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Definitions",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-live-birth-2036",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Live Birth",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-syndromes-battered-baby-munchausen-sids-2037",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Syndromes - Battered Baby, Munchausen & Sids",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-agriculture-poisons-2038",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Agriculture Poisons",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-alcohol-2039",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Alcohol",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-asphyxiants-2040",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Asphyxiants",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-barbiturates-chloral-hydrate-2041",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Barbiturates & Chloral Hydrate",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-cardiac-poisons-aconite-2042",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Cardiac Poisons & Aconite",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-corrosives-2043",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Corrosives",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-deliriant-poisons-2044",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Deliriant Poisons",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-drug-dependence-abuse-2045",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Drug Dependence & Abuse",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-food-poisoning-2046",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Food Poisoning",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-general-principles-of-toxicology-2047",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "General Principles Of Toxicology",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-heavy-metal-poisons-2048",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Heavy Metal Poisons",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-phosphorous-2049",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Phosphorous",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-snakes-2050",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Snakes",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-spinal-poisons-2051",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Spinal Poisons",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-vegetable-poisons-2052",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Vegetable Poisons",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-abrasions-2053",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Abrasions",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-contusions-2054",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Contusions",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-lacerations-incised-wounds-2055",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Lacerations & Incised Wounds",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-stab-wounds-2056",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Stab Wounds",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-blood-seminal-stains-2057",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Blood & Seminal Stains",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-impotence-sterility-2058",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Impotence & Sterility",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-age-2059",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Age",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-finger-printing-2060",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Finger Printing",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-hair-other-methods-of-identification-2061",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Hair & Other Methods Of Identification",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-medico-legal-importance-of-age-groups-2062",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Medico-Legal Importance Of Age Groups",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-race-2063",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Race",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-sex-2064",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Sex",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-stature-2065",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Stature",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-courts-of-law-2066",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Courts Of Law",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-definitions-inquest-2067",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Definitions & Inquest",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-evidence-2068",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Evidence",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-witness-2069",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Witness",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-classification-of-sexual-offences-rape-2070",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Classification Of Sexual Offences & Rape",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-unnatural-sexual-offences-perversions-2071",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Unnatural Sexual Offences & Perversions",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-explosion-injuries-2072",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Explosion Injuries",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-burns-2073",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Burns",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-electrical-injuries-2074",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Electrical Injuries",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-injuries-due-to-cold-heat-2075",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Injuries Due To Cold & Heat",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-lightning-injuries-scalds-2076",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Lightning Injuries & Scalds",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-adipocere-mummification-embalming-2077",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Adipocere, Mummification & Embalming",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-algor-mortis-2078",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Algor Mortis",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-classification-of-postmortem-changes-2079",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Classification Of Postmortem Changes",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-death-it-s-types-2080",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Death & It's Types",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-decomposition-2081",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Decomposition",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-eye-changes-after-death-2082",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Eye Changes After Death",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-muscular-charges-2083",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Muscular Charges",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-post-mortem-hypostasis-2084",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Post Mortem Hypostasis",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-time-since-death-legal-aspects-2085",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Time Since Death & Legal Aspects",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-age-estimation-by-x-ray-examination-2086",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Age Estimation By X-Ray Examination",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-lie-detectors-2087",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Lie Detectors",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-medico-legal-autopsy-2088",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Medico - Legal Autopsy",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-virginity-pregnancy-2089",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Virginity & Pregnancy",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-introduction-to-ballistics-firearms-2090",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Introduction To Ballistics & Firearms",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-investigations-of-firearms-2091",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Investigations Of Firearms",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-rifled-gun-it-s-injuries-2092",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Rifled Gun & It's Injuries",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-shotgun-it-s-injuries-2093",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Shotgun & It's Injuries",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-counter-coup-lesions-concussion-2094",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Counter Coup Lesions & Concussion",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-intracranical-haemorrhages-2095",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Intracranical Haemorrhages",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-skull-fractures-2096",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Skull Fractures",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-traffic-accident-injuries-2097",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Traffic Accident Injuries",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-vertebral-column-heart-abdomen-2098",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Vertebral column, Heart & Abdomen",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-drowning-2099",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Drowning",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-hanging-2100",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Hanging",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-ligature-strangulation-throttling-2101",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Ligature Strangulation & Throttling",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-other-forms-of-asphyxia-2102",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Other Forms Of Asphyxia",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-medico-legal-aspects-of-injuries-2103",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Medico-Legal Aspects Of Injuries",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-preoperative-assessment-2104",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Preoperative Assessment",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-complications-of-ga-2105",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Complications Of GA",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-central-neuraxial-blocks-contraindications-2106",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Central Neuraxial Blocks - Contraindications",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-local-anesthetics-2107",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Local Anesthetics",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-peripheral-nerve-blocks-2108",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Peripheral Nerve Blocks",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-central-neuraxial-blocks-spinal-anesthesia-epidural-anesthes-2109",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Central Neuraxial Blocks - Spinal Anesthesia & Epidural Anesthesia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-anesthesia-for-co-existing-diseases-2110",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia For Co-Existing Diseases",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-general-principles-individual-agents-2111",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "General Principles & Individual Agents",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-reversal-of-block-2112",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Reversal of Block",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-cns-cvs-monitoring-2113",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "CNS & CVS Monitoring",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-respiratory-temperature-neuromuscular-monitoring-2114",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Respiratory, Temperature & Neuromuscular Monitoring",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-general-principles-2115",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "General Principles",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-individual-agents-2116",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Individual Agents",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-barbiturates-2117",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Barbiturates",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-non-barbiturates-2118",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Non- Barbiturates",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-mcq-s-on-pac-monitoring-fluids-2119",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "MCQ's On Pac, Monitoring & Fluids",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-anesthesia-machine-2120",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia Machine",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-closed-circuit-2121",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Closed Circuit",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-cylinders-2122",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Cylinders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-semi-closed-circuits-2123",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Semi Closed Circuits",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-advance-cardiac-life-support-2124",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Advance Cardiac Life Support",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-basic-life-support-2125",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Basic Life Support",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-infraglottic-devices-2126",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Infraglottic Devices",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-other-devices-2127",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Other Devices",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-supraglottic-devices-2128",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Supraglottic Devices",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-intraoperative-fluids-2129",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Intraoperative Fluids",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-laparoscopy-day-care-pain-management-2130",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Laparoscopy, Day Care & Pain Management",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-neurosurgery-obstetrics-pediatric-anesthesia-2131",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Neurosurgery, Obstetrics & Pediatric Anesthesia",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-ocular-ent-ortho-high-altitude-anesthesia-2132",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Ocular, Ent, Ortho & High - Altitude Anesthesia",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-mechanical-ventilation-2133",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Mechanical Ventilation",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-niv-ards-shock-nutritional-support-2134",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "NIV, ARDS, Shock & Nutritional Support",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-adhd-disruptive-behaviour-disorders-2135",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Adhd & Disruptive Behaviour Disorders",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-autism-spectrum-disorder-2136",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Autism Spectrum Disorder",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-intellectual-disability-other-childhood-disorders-2137",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Intellectual Disability & Other Childhood Disorders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-eating-disorders-2138",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Eating Disorders",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-defense-mechanisms-2139",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Defense Mechanisms",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-psychoanalysis-2140",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Psychoanalysis",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-neuropsychological-tests-theory-of-learning-2141",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Neuropsychological Tests & Theory of learning",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-sexual-disorders-2142",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Sexual Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-higher-mental-functions-2143",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Higher Mental Functions",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-perception-2144",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Perception",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-thought-2145",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Thought",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-history-mse-affect-2146",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "History & MSE - Affect",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-personality-disorders-2147",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Personality Disorders",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-other-psychotic-disorders-2148",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Other Psychotic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-symptoms-of-schizophrenia-2149",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Symptoms Of Schizophrenia",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-clozapine-story-mnemonic-treatment-of-schizophrenia-2150",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Clozapine (Story Mnemonic) & Treatment Of Schizophrenia",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-diagnosis-type-history-prognosis-etiology-2151",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Diagnosis, Type, History Prognosis & Etiology",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-substance-related-disorders-2152",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Substance & Related Disorders",
+    "exam": null,
+    "year": null,
+    "count": 36
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-somatic-therapies-2153",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Somatic Therapies",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-sleep-related-disorders-2154",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Sleep & Related Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-organic-mental-disorders-2155",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Organic Mental Disorders",
+    "exam": null,
+    "year": null,
+    "count": 32
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-depression-treatment-of-depression-2156",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Depression & Treatment of Depression",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-bipolar-affective-disorder-lithium-memory-map-2157",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Bipolar Affective Disorder & Lithium Memory Map",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-neurotic-stress-related-somatoform-disorders-2158",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Neurotic Stress Related & Somatoform Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-hyperpigmentary-disorders-2159",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Hyperpigmentary Disorders",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-hypopigmenatry-disorders-2160",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Hypopigmenatry Disorders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-genodermatoses-2161",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Genodermatoses",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-urticaria-angioedema-2162",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Urticaria & Angioedema",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-sexually-transmitted-diseases-2163",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Sexually Transmitted Diseases",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-parasitic-infestations-2164",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Parasitic Infestations",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-vesiculobullous-disorders-2165",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Vesiculobullous Disorders",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-adverse-cutaneous-drug-reactions-2166",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Adverse Cutaneous Drug Reactions",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-lichen-planus-2167",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Lichen Planus",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-bacterial-infections-2168",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Bacterial Infections",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-bedside-tests-2169",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Bedside Tests",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-skin-lesions-2170",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Skin Lesions",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-skin-structure-2171",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Skin Structure",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-nail-disorders-2172",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Nail Disorders",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-leprosy-2173",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Leprosy",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-skin-tumors-2174",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Skin Tumors",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-pediatric-dermatoses-2175",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Pediatric Dermatoses",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-cutaneous-fungal-infections-2176",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Cutaneous Fungal Infections",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-eczema-2177",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Eczema",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-hair-disorders-2178",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Hair Disorders",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-psoriasis-2179",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Psoriasis",
+    "exam": null,
+    "year": null,
+    "count": 42
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-systemic-diseases-skin-2180",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Systemic Diseases & Skin",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-disorders-of-glands-2181",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Disorders Of Glands",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-connective-tissue-disorders-2182",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Connective Tissue Disorders",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-cutaneous-tuberculosis-2183",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Cutaneous Tuberculosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-recent-program-images-2184",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Recent Program Images",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-psm-flea-mite-tick-louse-mosquitoes-eggs-larvae-2185",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Flea, Mite, Tick, Louse & Mosquitoes (Eggs & Larvae)",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psm-typhus-group-of-fevers-2186",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Typhus Group of Fevers",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-air-pollution-sound-pollution-2187",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Air Pollution & Sound Pollution",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psm-faecal-contamination-of-water-hardness-of-water-water-filters-2188",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Faecal Contamination Of Water, Hardness Of Water & Water Filters",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psm-fluoride-chlorination-of-water-2189",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Fluoride & Chlorination of Water",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-health-communication-maternal-child-health-2190",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Health Communication, Maternal & Child Health",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-psm-disaster-management-2191",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Disaster Management",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psm-health-planning-management-2192",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Health Planning & Management",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-demographic-cycle-2193",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Demographic Cycle",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-demographic-dividend-cycle-2194",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Demographic Dividend & Cycle",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-demographic-indicators-2195",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Demographic Indicators",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-psm-injectable-contraceptives-pop-2196",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Injectable Contraceptives & POP",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psm-iucd-generation-1st-2nd-3rd-sterilization-technique-2197",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "IUCD (Generation 1st ,2nd & 3rd) & Sterilization Technique",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-methods-of-contraception-emergency-contraception-2198",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Methods Of Contraception & Emergency Contraception",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psm-ocps-it-s-contraindications-advantages-2199",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "OCPS & It's Contraindications & Advantages",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-occupational-health-2200",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Occupational Health",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-psm-numerical-on-sensitivity-specificity-ppv-npv-2201",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Numerical On Sensitivity, Specificity PPV & NPV",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psm-r-o-c-curve-sensitivity-specificity-curves-2202",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "R.O.C Curve & Sensitivity & Specificity Curves",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-psm-screening-test-stats-2203",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Screening Test Stats",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-test-in-series-test-in-parallel-2204",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Test in Series & Test in Parallel",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-vaccination-2205",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Vaccination",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psm-anganwadi-2206",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Anganwadi",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-dengue-chikungunya-kala-azar-2207",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Dengue, Chikungunya & Kala-Azar",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-eye-health-program-2208",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Eye Health Program",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-filariasis-je-2209",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Filariasis & JE",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-jssy-rmncha-2210",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "JSSY & RMNCHA",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psm-malaria-control-strategy-2211",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Malaria Control Strategy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-malaria-indicator-treatment-2212",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Malaria Indicator & Treatment",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-naco-2213",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "NACO",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-post-exposure-prophylaxis-for-hiv-pptct-2214",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Post Exposure Prophylaxis for HIV & PPTCT",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-school-health-program-leprosy-program-2215",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "School Health Program & Leprosy Program",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-national-tb-elimination-program-2216",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "National TB Elimination Program",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-biases-in-rct-internal-external-validity-2217",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Biases In RCT, Internal & External Validity",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-biases-part-2-selection-biases-attrition-hawthorn-biases-2218",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Biases (Part 2) (Selection Biases, Attrition & Hawthorn Biases)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psm-case-control-study-2219",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Case Control Study",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-cohort-study-2220",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Cohort Study",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-different-types-of-bias-selection-bias-2221",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Different Types of Bias & Selection Bias",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-ecological-study-confounder-effect-modifier-2222",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Ecological Study, Confounder & Effect Modifier",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-errors-advantages-in-cohort-studies-2223",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Errors & Advantages in Cohort Studies",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-evidence-based-medicine-epidemiological-studies-2224",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Evidence Based Medicine & Epidemiological Studies",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-meta-analysis-systematic-review-2225",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Meta - Analysis & Systematic Review",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-questions-on-rr-ar-par-case-control-study-2226",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Questions on RR,AR & PAR & Case control study",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-psm-retrospective-cohort-mixed-cohort-2227",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Retrospective Cohort & Mixed Cohort",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psm-health-committees-of-india-2228",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Health Committees Of India",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-psm-adulteration-of-food-2229",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Adulteration of Food",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-protein-fat-vitamin-2230",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Protein, Fat & Vitamin",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-psm-recent-changes-in-indian-dietary-guidelines-vital-stats-2231",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Recent Changes In Indian Dietary Guidelines & Vital Stats",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-communicable-diseases-mumps-diphtheria-pertussis-2232",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Communicable Diseases (Mumps, Diphtheria & Pertussis)",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-psm-indicators-of-obesity-malnutrition-2233",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Indicators Of Obesity & Malnutrition",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-measles-rubella-2234",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Measles & Rubella",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-method-to-remember-incubation-period-period-of-communicability-of-a-2235",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Method To Remember Incubation Period & Period Of Communicability Of All Diseases",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-psm-ncd-programs-2236",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "NCD Programs",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-secondary-attack-rate-influenza-chickenpox-2237",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Secondary Attack Rate, Influenza & Chickenpox",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psm-asha-2238",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "ASHA",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-psm-sub-centre-primary-health-centre-2239",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Sub-centre & Primary Health Centre",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-bio-medical-waste-management-2240",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Bio Medical Waste Management",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-psm-confidence-power-of-study-2241",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Confidence & Power Of Study",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-continuous-data-representation-method-2242",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Continuous Data Representation Method",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psm-easy-concepts-of-null-hypothesis-p-value-alpha-beta-error-2243",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Easy Concepts Of Null Hypothesis, P Value, Alpha & Beta Error",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-measures-of-central-tendency-2244",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Measures of Central Tendency",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psm-quantitative-qualitative-variable-parametric-nonparametric-test-2245",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Quantitative & Qualitative Variable & Parametric & Nonparametric Test",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psm-random-non-random-sampling-techniques-2246",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Random & Non Random Sampling Techniques",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psm-skewness-of-curve-2247",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Skewness Of Curve",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psm-standard-normal-curve-coefficient-of-variance-z-score-2248",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Standard Normal Curve, Coefficient Of Variance & Z Score",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-psm-variance-sd-se-2249",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Variance, SD & SE",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-psm-direct-indirect-standardization-2250",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Direct & Indirect Standardization",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-hdi-pqli-2251",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "HDI & PQLI",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-length-time-bias-lead-time-bias-kaplan-meier-plot-2252",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Length Time Bias, Lead Time Bias & Kaplan - Meier Plot",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-morbidity-indicators-2253",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Morbidity Indicators",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psm-mortality-indicators-2254",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Mortality Indicators",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psm-point-source-continuous-propagated-epidemic-2255",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Point Source, Continuous & Propagated Epidemic",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psm-secular-cyclical-seasonal-trial-endemic-epidemic-pandemic-2256",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Secular, Cyclical & Seasonal Trial, Endemic, Epidemic & Pandemic",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-serial-interval-generation-time-median-incubation-period-2257",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Serial Interval, Generation Time & Median Incubation Period",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-tracking-phenomenon-epidemiological-triad-triangle-2258",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Tracking Phenomenon & Epidemiological Triad & Triangle",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psm-types-of-epidemics-their-investigation-2259",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Types of Epidemics & Their Investigation",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-psm-international-health-2260",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "International Health",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-leukemia-2261",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Leukemia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-neuroblastoma-lch-retinoblastoma-2262",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Neuroblastoma, LCH & Retinoblastoma",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-transient-myeloproliferative-disorder-lymphoma-hl-nhl-2263",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Transient Myeloproliferative Disorder & Lymphoma(Hl, NHL)",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-growth-puberty-2264",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Growth & Puberty",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-growth-assessment-2265",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Growth Assessment",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-milestones-breast-milk-behavioral-disorders-2266",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Milestones, Breast Milk & Behavioral Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-short-stature-2267",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Short Stature",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-esophageal-disorders-foreign-body-ingestion-2268",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Esophageal Disorders & Foreign Body Ingestion",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-hypertrophic-pyloric-stenosis-hirschsprung-disease-2269",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Hypertrophic Pyloric Stenosis & Hirschsprung Disease",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-ibd-diarrhea-dehydration-management-2270",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "IBD, Diarrhea & Dehydration Management",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-malabsorption-celiac-disease-liver-disorders-2271",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Malabsorption, Celiac Disease & Liver Disorders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-acyanotic-chd-2272",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Acyanotic CHD",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-classification-of-congenital-heart-diseases-2273",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Classification Of Congenital Heart Diseases",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-cyanotic-chd-2274",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Cyanotic CHD",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-fetal-circulation-2275",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Fetal Circulation",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-rheumatic-fever-rhd-heart-failure-2276",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Rheumatic Fever, RHD & Heart Failure",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-disorders-of-carbohydrate-metabolism-2277",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Disorders Of Carbohydrate Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-disorders-of-protein-metabolism-2278",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Disorders Of Protein Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-lysosomal-storage-disorders-peroxisomal-disorders-leukodystr-2279",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Lysosomal Storage Disorders, Peroxisomal Disorders & Leukodystrophy",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-bacterial-infections-2280",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Bacterial Infections",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-congenital-infections-covid19-2281",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Congenital Infections & Covid19",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-viral-infections-2282",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Viral Infections",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-apgar-primitive-reflexes-2283",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Apgar & Primitive Reflexes",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-general-neonatology-2284",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "General Neonatology",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-hyaline-membrane-disease-ttnb-2285",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Hyaline Membrane Disease & TTNB",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-infants-of-diabetic-mothers-neonatal-sepsis-benign-lesions-2286",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Infants Of Diabetic Mothers, Neonatal Sepsis & Benign Lesions",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-metabolic-disorders-2287",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Metabolic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-neonatal-jaundice-2288",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Neonatal Jaundice",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-neonatal-resuscitation-2289",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Neonatal Resuscitation",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-other-breathing-disorders-in-newborns-2290",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Other Breathing Disorders In Newborns",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-perinatal-asphyxia-nec-2291",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Perinatal Asphyxia & NEC",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-preterm-iugr-2292",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Preterm (IUGR)",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-ataxia-neurodegenerative-disorders-2293",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Ataxia Neurodegenerative Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-cerebral-palsy-brain-tumor-neurocutaneous-disorders-2294",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Cerebral Palsy, Brain Tumor & Neurocutaneous Disorders",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-intellectual-disability-ntd-craniosynostosis-2295",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Intellectual Disability, NTD & Craniosynostosis",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-neuromuscular-disorders-2296",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Neuromuscular Disorders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-seizures-epilepsy-meningitis-2297",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Seizures, Epilepsy & Meningitis",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-antenatal-hydronephrosis-hemolytic-uremic-syndrome-2298",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Antenatal Hydronephrosis & Hemolytic Uremic Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-congenital-nephrotic-syndrome-aki-arf-2299",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Congenital Nephrotic Syndrome & AKI (ARF)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-glomerulonephritis-nephrotic-syndrome-2300",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Glomerulonephritis & Nephrotic Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-uti-vur-puv-uretrocele-2301",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "UTI, VUR, PUV & Uretrocele",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-wilm-s-tumor-congenital-renal-cysts-2302",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Wilm's Tumor & Congenital Renal Cysts",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-croup-choanal-atresia-2303",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Croup & Choanal Atresia",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-cystic-fibrosis-pneumonia-ards-2304",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Cystic Fibrosis, Pneumonia & ARDS",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-laryngomalacia-bronchiolar-disorders-2305",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Laryngomalacia & Bronchiolar Disorders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-immunization-basics-type-immunization-schedules-2306",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Immunization Basics, Type & Immunization Schedules",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-specific-vaccines-vaccines-in-special-situations-cold-storag-2307",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Specific Vaccines, Vaccines In Special Situations & Cold Storage Of Vaccines",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-adrenal-disorders-2308",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Adrenal Disorders",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-disorders-of-sex-development-cah-2309",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Disorders Of Sex Development & CAH",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-pubertal-disorders-gh-deficiency-2310",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Pubertal Disorders & GH Deficiency",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-thyroid-disorders-2311",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Thyroid Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-juvenile-idiopatic-arthritis-2312",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Juvenile Idiopatic Arthritis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-sle-juvenile-dermatomyositis-scleroderma-2313",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "SLE, Juvenile Dermatomyositis & Scleroderma",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-vasculitis-in-childhood-2314",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Vasculitis In Childhood",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-management-of-severe-acute-malnutrition-2315",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Management of Severe Acute Malnutrition",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-vitamin-deficiencies-2316",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Vitamin Deficiencies",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacterial-meningitis-2317",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacterial Meningitis",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-miscellaneous-slow-viral-diseases-2318",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Miscellaneous - Slow Viral Diseases",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-miscellaneous-neurotoxin-related-diseases-2319",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Miscellaneous- Neurotoxin Related Diseases",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-parasitic-encephalitis-2320",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Parasitic Encephalitis",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-viral-encephalitis-meningitis-2321",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Viral Encephalitis & Meningitis",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-antigen-antibody-reactions-2322",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Antigen - Antibody Reactions",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-antigen-antibody-2323",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Antigen & Antibody",
+    "exam": null,
+    "year": null,
+    "count": 35
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-autoimmunity-2324",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Autoimmunity",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-hypersensitivity-2325",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Hypersensitivity",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-immunity-2326",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Immunity",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-immunodeficiency-disorders-2327",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Immunodeficiency Disorders",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-transplant-immunology-2328",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Transplant Immunology",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-hepatic-fascioliasis-2329",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Hepatic Fascioliasis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-hepatic-hydatid-disease-2330",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Hepatic Hydatid Disease",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-hepatitis-2331",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Hepatitis",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-rna-corona-virus-2332",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "RNA Corona Virus",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-blood-tissue-protozoal-infections-2333",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Blood & Tissue Protozoal Infections",
+    "exam": null,
+    "year": null,
+    "count": 53
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-blood-stream-infection-2334",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Blood Stream Infection",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-brucellosis-2335",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Brucellosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-hiv-infection-2336",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "HIV Infection",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-infective-endocarditis-2337",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Infective Endocarditis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-rheumatic-fever-2338",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Rheumatic Fever",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-rickettsia-related-diseases-2339",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Rickettsia & Related Diseases",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-typhoid-fever-2340",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Typhoid Fever",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-viral-hemorrhagic-fever-2341",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Viral Hemorrhagic Fever",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-antimicrobial-susceptibility-testing-genetics-2342",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Antimicrobial Susceptibility Testing & Genetics",
+    "exam": null,
+    "year": null,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-culture-identification-2343",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Culture & Identification",
+    "exam": null,
+    "year": null,
+    "count": 41
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-general-bacteriology-gb-2344",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "General Bacteriology (GB)",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-general-mycology-2345",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "General Mycology",
+    "exam": null,
+    "year": null,
+    "count": 31
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-introduction-2346",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Introduction",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-microscopy-staining-2347",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Microscopy & Staining",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-morphology-growth-of-bacteria-2348",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Morphology & Growth Of Bacteria",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-scientists-2349",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Scientists",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-general-parasitology-2350",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "General Parasitology",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-general-virology-2351",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "General Virology",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacterial-food-poisoning-2352",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacterial Food Poisoning",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-cholera-2353",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Cholera",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-e-coli-diarrhoeal-disease-2354",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "E. Coli Diarrhoeal Disease",
+    "exam": null,
+    "year": null,
+    "count": 31
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-helminthic-gastroenteritis-2355",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Helminthic Gastroenteritis",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-miscellaneous-fungal-food-poisoning-2356",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Miscellaneous – Fungal Food Poisoning",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-peptic-ulcer-disease-2357",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Peptic Ulcer Disease",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-protozoal-gastroenteritis-2358",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Protozoal Gastroenteritis",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-pseudomembranous-colitis-2359",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Pseudomembranous Colitis",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-viral-gastro-enteritis-2360",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Viral Gastro Enteritis",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-sterilization-disinfection-chemical-method-2361",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Sterilization & Disinfection (Chemical Method)",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-sterilization-disinfection-physical-method-2362",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Sterilization & Disinfection (Physical Method)",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacterial-atypical-pneumonia-2363",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacterial Atypical Pneumonia",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacterial-typical-pneumonia-2364",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacterial Typical Pneumonia",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-parasitic-pneumonia-2365",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Parasitic Pneumonia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-whooping-cough-2366",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Whooping Cough",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-fungal-pneumonia-2367",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Fungal Pneumonia",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-plague-tuberculosis-2368",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Plague & Tuberculosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-viral-pneumonia-2369",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Viral Pneumonia",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-anthrax-2370",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Anthrax",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-deep-fungal-skin-infections-2371",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Deep Fungal Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 36
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-dna-viruses-skin-infections-2372",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "DNA Viruses Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-gas-gangrene-2373",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Gas Gangrene",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-leprosy-2374",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Leprosy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-nocardiosis-2375",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Nocardiosis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-parasitic-skin-infections-2376",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Parasitic Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-rna-viruses-skin-infections-2377",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "RNA Viruses Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 37
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-staphylococcal-skin-infections-2378",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Staphylococcal Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-streptococcal-skin-infections-2379",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Streptococcal Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-superficial-fungal-skin-infections-2380",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Superficial Fungal Skin Infections",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacteria-causing-uti-2381",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacteria causing UTI",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-genital-ulcerative-diseases-2382",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Genital Ulcerative Diseases",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-urethritis-2383",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Urethritis",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-vaginitis-2384",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Vaginitis",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-helmintic-drug-2385",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Helmintic Drug",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-hiv-drugs-2386",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti HIV Drugs",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-protozoal-drugs-2387",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Protozoal Drugs",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-tb-drugs-2388",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti TB Drugs",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-viral-drugs-2389",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Viral Drugs",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antifungal-drugs-2390",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antifungal Drugs",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antimalarial-drugs-2391",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antimalarial Drugs",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-nsaids-2392",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "NSAIDs",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-gout-2393",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy Of Gout",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-rheumatoid-arthritis-2394",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy Of Rheumatoid Arthritis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-prostaglandin-preparations-2395",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Prostaglandin Preparations",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-serotonin-pharmacology-migraine-2396",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Serotonin Pharmacology & Migraine",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-parkinson-s-drugs-2397",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Parkinson’s Drugs",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antidepressant-drugs-2398",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antidepressant Drugs",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antiepileptic-drugs-2399",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antiepileptic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antipsychotic-drugs-2400",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antipsychotic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-anxiety-2401",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs For Anxiety",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-ethanol-pharmacology-2402",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Ethanol Pharmacology",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-local-anesthesia-2403",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Local Anesthesia",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-opioids-2404",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Opioids",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-mania-bpd-2405",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy of Mania & BPD",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-sedative-hypnotic-drugs-2406",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Sedative Hypnotic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-skeletal-muscle-relaxants-2407",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Skeletal Muscle Relaxants",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antiemetic-drugs-2408",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antiemetic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-peptic-ulcer-disease-2409",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs For Peptic Ulcer Disease",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-used-for-constipation-2410",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs Used For Constipation",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-used-for-diarrhea-2411",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs Used For Diarrhea",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-anginal-drugs-2412",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Anginal Drugs",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antiarrythmics-drugs-part-1-2413",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antiarrythmics Drugs (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antiarrythmics-drugs-part-2-2414",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antiarrythmics Drugs (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-affecting-raas-pathway-2415",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs Affecting RAAS Pathway",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-chf-2416",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy Of CHF",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-hypertension-2417",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy Of Hypertension",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antidiabetic-drugs-insulin-preparations-2418",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antidiabetic Drugs (Insulin Preparations)",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antidiabetic-drugs-remaining-drugs-summary-2419",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antidiabetic Drugs (Remaining Drugs & Summary)",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-thyroid-drugs-drugs-used-in-hypothyroidism-2420",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti-Thyroid Drugs & Drugs Used In Hypothyroidism",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-corticosteroids-clinical-concepts-2421",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Corticosteroids Clinical Concepts",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-corticosteroids-therapeutic-uses-2422",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Corticosteroids Therapeutic Uses",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-estrogen-progesterone-preparations-2423",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Estrogen & Progesterone Preparations",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-hormonal-contraceptives-2424",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Hormonal Contraceptives",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-hypothalamus-pituitary-hormones-pharmacology-2425",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Hypothalamus & Pituitary Hormones Pharmacology",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-osteoporosis-2426",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy Of Osteoporosis",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-testosterone-pharmacology-2427",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Testosterone Pharmacology",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-cough-2428",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs For Cough",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-pulmonary-hypertension-2429",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs For Pulmonary Hypertension",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-bronchial-asthma-2430",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy of Bronchial Asthma",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-aminoglycosides-oxazolidinones-2431",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Aminoglycosides & Oxazolidinones",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-cephalosporins-carbapenems-monobactams-2432",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Cephalosporins, Carbapenems & Monobactams",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-uti-2433",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs For UTI",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-fluroquinolones-2434",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Fluroquinolones",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-glycopeptides-lipopeptides-polymyxins-2435",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Glycopeptides, Lipopeptides & Polymyxins",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-macrolides-lincosamides-streptogramins-2436",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Macrolides ,Lincosamides & Streptogramins",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-penicillins-2437",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Penicillins",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-sulfonamides-2438",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Sulfonamides",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-tetracycline-chloramphenicol-2439",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Tetracycline & Chloramphenicol",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antidiuretic-drugs-2440",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antidiuretic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-diuretics-2441",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Diuretics",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-adrenergic-drugs-2442",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Adrenergic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-alpha-blockers-2443",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Alpha Blockers",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anticholinergic-drugs-2444",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anticholinergic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-beta-blockers-2445",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Beta Blockers",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-acting-on-ganglia-anti-smoking-drugs-2446",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs Acting on Ganglia & Anti Smoking Drugs",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacotherapy-of-glaucoma-2447",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacotherapy Of Glaucoma",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-cholinergic-drugs-2448",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Cholinergic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-hormonal-agents-tyrosine-kinase-inhibitors-2449",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Hormonal Agents & Tyrosine Kinase Inhibitors",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-introduction-dna-alkylating-agents-2450",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Introduction & DNA Alkylating Agents",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-platinum-compounds-antibiotics-2451",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Platinum Compounds & Antibiotics",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-s-m-phase-specific-drugs-2452",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "S & M Phase Specific Drugs",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-small-molecule-inhibitors-2453",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Small Molecule Inhibitors",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-targeted-therapy-2454",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Targeted Therapy",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anticoagulant-drugs-2455",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anticoagulant Drugs",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antiplatelet-drugs-2456",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antiplatelet Drugs",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-dyslipidemia-2457",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs For Dyslipidemia",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-fibrinolytics-antifibrinolytics-2458",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Fibrinolytics & Antifibrinolytics",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-hemantinics-2459",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Hemantinics",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-adverse-drug-reactions-2460",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Adverse Drug Reactions",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-clinical-pharmacology-2461",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Clinical Pharmacology",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-clinical-trial-2462",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Clinical Trial",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacodynamics-2463",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacodynamics",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacogenetics-2464",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacogenetics",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pk-absorption-2465",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "PK Absorption",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pk-drug-distribution-2466",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pk Drug Distribution",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pk-drug-excretion-2467",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pk Drug Excretion",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pk-drug-metabolism-2468",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pk Drug Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-therapeutic-drug-monitoring-2469",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Therapeutic Drug Monitoring",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-immunomodulator-drugs-2470",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Immunomodulator Drugs",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-lower-limb-2471",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Lower limb",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-joint-disorders-2472",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Joint disorders",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-soft-tissue-disorders-2473",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Soft tissue disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-spine-2474",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Spine",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-trauma-basics-upper-limb-2475",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Trauma Basics & Upper limb",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-peripheral-nerve-injuries-2476",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Peripheral Nerve Injuries",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-implants-in-orthopaedics-2477",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Implants in Orthopaedics",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-metabolic-disorders-2478",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Metabolic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-tumors-2479",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Tumors",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-pediatric-disorders-2480",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Pediatric Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-splint-traction-2481",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Splint traction",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-infections-in-orthopaedics-2482",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Infections in Orthopaedics",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-amyloidosis-2483",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Amyloidosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-antigen-presenting-cells-mhc-2484",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Antigen Presenting Cells & MHC",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-hypersensitivity-reactions-type-1-2485",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Hypersensitivity Reactions Type - 1",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-introduction-to-immune-system-innate-adaptive-immunity-2486",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Introduction To Immune System Innate & Adaptive Immunity",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-breast-normal-histology-2487",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Breast Normal Histology",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-lesions-of-breast-breast-ca-2488",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Lesions Of Breast & Breast CA",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-clinical-aspects-of-neoplasia-neoplasia-basics-2489",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Clinical Aspects Of Neoplasia & Neoplasia Basics",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-hallmarks-of-cancer-cell-cycle-2490",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Hallmarks Of Cancer & Cell Cycle",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-esophagus-stomach-2491",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Esophagus & Stomach",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-inflammatory-bowel-diseases-2492",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Inflammatory Bowel Diseases",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-diagnosis-of-genetic-disorders-2493",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Diagnosis Of Genetic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-genetics-misc-2494",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Genetics - MISC",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-non-mendelian-inheritance-2495",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Non Mendelian Inheritance",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-complications-of-diabetes-2496",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Complications Of Diabetes",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-diabetes-criteria-classifications-pathophysiology-2497",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Diabetes Criteria, Classifications & Pathophysiology",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-thyroiditis-thyroid-cancers-2498",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Thyroiditis & Thyroid Cancers",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-apoptosis-2499",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Apoptosis",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-atrophy-2500",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Atrophy",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-cellular-ageing-2501",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Cellular Ageing",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-ferroptosis-free-radicals-2502",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Ferroptosis & Free Radicals",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-hypertrophy-hyperplasia-2503",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Hypertrophy & Hyperplasia",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-intracellular-accumulation-2504",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Intracellular Accumulation",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-introduction-to-cell-injury-2505",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Introduction To Cell Injury",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-metaplasia-2506",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Metaplasia",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-necroptosis-pyroptosis-2507",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Necroptosis & Pyroptosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-necrosis-2508",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Necrosis",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-reversible-injury-2509",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Reversible Injury",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-diseases-of-uterus-2510",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Diseases Of Uterus",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-lesion-of-cervix-2511",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Lesion Of Cervix",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-ovarian-tumors-2512",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Ovarian Tumors",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-cns-tumors-2513",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "CNS Tumors",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-liver-disease-2514",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Liver Disease",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-inflammation-misc-2515",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Inflammation - MISC",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-mediators-of-inflammation-2516",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Mediators Of Inflammation",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-pancreas-2517",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Pancreas",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-heart-misc-2518",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Heart - MISC",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-hypertrophic-cardiomyopathy-2519",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Hypertrophic Cardiomyopathy",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-ischemic-heart-disease-2520",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Ischemic Heart Disease",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-rbcs-anemia-basics-2521",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "RBCs & Anemia Basics",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-leprosy-2522",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Leprosy",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-tuberculosis-2523",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Tuberculosis",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-renal-system-2524",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Renal System",
+    "exam": null,
+    "year": null,
+    "count": 31
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-bleeding-platelet-disorders-2525",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Bleeding & Platelet Disorders",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-coagulation-pathways-disorders-2526",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Coagulation Pathways & Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-cholangiocarcinoma-2527",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Cholangiocarcinoma",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-gall-bladder-stones-2528",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Gall Bladder Stones",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-acute-inflammatory-dermatosis-2529",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Acute Inflammatory Dermatosis",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-dermatology-basic-anatomy-physiology-melanocytic-disorders-2530",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Dermatology - Basic Anatomy, Physiology & Melanocytic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-papulosquamous-disorders-blistering-disorders-2531",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Papulosquamous Disorders & Blistering Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-bone-disorders-2532",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Bone Disorders",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-peripheral-nerves-muscle-disorders-2533",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Peripheral Nerves & Muscle Disorders",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-neuroblastoma-wilms-tumor-2534",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Neuroblastoma & Wilms Tumor",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-lower-urinary-tract-male-genital-system-2535",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Lower Urinary Tract & Male Genital System",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-testis-lesions-tumors-2536",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Testis Lesions & Tumors",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-hemodynamic-disorders-thromboembolic-disease-shock-2537",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Hemodynamic Disorders Thromboembolic Disease & Shock",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-aneurysm-2538",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Aneurysm",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-atherosclerosis-2539",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Atherosclerosis",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-vascular-tumor-2540",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Vascular Tumor",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-vasculitis-2541",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Vasculitis",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-vessels-misc-2542",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Vessels - MISC",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-wbcs-it-s-disorders-2543",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "WBCs & It's Disorders",
+    "exam": null,
+    "year": null,
+    "count": 37
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-asthma-2544",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Asthma",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-lung-tumors-2545",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Lung Tumors",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-lungs-misc-2546",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Lungs - MISC",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-pnemoconiosis-2547",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Pnemoconiosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-pneumonia-ards-2548",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Pneumonia & ARDS",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-metabolic-surgery-2549",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Metabolic Surgery",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-burns-2550",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Burns",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-plastic-surgery-skin-grafting-part-1-2551",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Plastic Surgery - Skin Grafting (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-plastic-surgery-flaps-reconstruction-part-1-2552",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Plastic Surgery - Flaps & Reconstruction (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-anal-canal-it-s-common-conditions-2553",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Anal Canal & It’s Common Conditions",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-appendix-2554",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Appendix",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-esophagus-gerd-functional-disorders-2555",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Esophagus ( Gerd & Functional Disorders )",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-esophagus-carcinoma-esophagus-2556",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Esophagus (Carcinoma Esophagus)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-esophagus-esophageal-injury-other-common-conditions-2557",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Esophagus (Esophageal Injury & Other Common Conditions)",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-esophagus-surgical-anatomy-investigation-2558",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Esophagus (Surgical Anatomy & Investigation)",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-gall-bladder-choledocholithiasis-bile-duct-injury-2559",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Gall Bladder (Choledocholithiasis & Bile Duct Injury)",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-gall-bladder-gall-stone-disease-2560",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Gall Bladder (Gall Stone Disease)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-gall-bladder-gall-bladder-bile-duct-cancer-2561",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Gall Bladder (Gall Bladder & Bile Duct Cancer)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-large-intestine-colorectal-cancer-2562",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Large Intestine (Colorectal Cancer)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-large-intestine-common-large-intestinal-conditions-2563",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Large Intestine (Common Large Intestinal Conditions)",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-liver-liver-failure-portal-hypertension-2564",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Liver (Liver Failure & Portal Hypertension)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-liver-liver-infection-neoplasm-2565",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Liver (Liver Infection & Neoplasm)",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-pancreas-management-of-acute-chronic-pancreatitis-2566",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Pancreas (Management Of Acute & Chronic Pancreatitis)",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-pancreas-pancreatic-neoplasm-2567",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Pancreas (Pancreatic Neoplasm)",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-pancreas-anomalies-inflammation-2568",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Pancreas (Anomalies & Inflammation)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-small-intestine-intestinal-obstruction-2569",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Small Intestine (Intestinal Obstruction)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-small-intestine-various-common-small-intestinal-conditions-2570",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Small Intestine (Various Common Small Intestinal Conditions)",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-spleen-2571",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Spleen",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-stomach-ulcer-diseases-2572",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Stomach (Ulcer Diseases)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-stomach-surgical-anatomy-stomach-surgeries-2573",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Stomach (Surgical Anatomy & Stomach Surgeries )",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-stomach-carcinoma-stomach-2574",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Stomach (Carcinoma Stomach)",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-stomach-gist-other-common-conditions-2575",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Stomach (Gist & Other Common Conditions)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-stomach-upper-gi-bleed-2576",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Stomach (Upper GI Bleed )",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-surgical-incisions-sutures-needles-part-1-2577",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Surgical Incisions, Sutures & Needles (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-types-of-closure-knots-energy-sources-part-2-2578",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Types Of Closure / Knots & Energy Sources (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-minimal-access-surgery-staplers-part-3-2579",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Minimal Access Surgery & Staplers (Part 3)",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-surgical-anatomy-cardiopulmonary-bypass-part-1-2580",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Surgical Anatomy & Cardiopulmonary Bypass (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-ihd-aortic-dissection-part-2-2581",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Ihd & Aortic Dissection (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-inguinal-hernia-2582",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Inguinal Hernia",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-ventral-other-types-of-hernias-2583",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Ventral & Other Types Of Hernias",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-brain-tumors-2584",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Brain Tumors",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-hydrocephalus-2585",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Hydrocephalus",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-sah-2586",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "SAH",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-adrenal-gland-adrenal-cortex-neoplasm-pheochromocytoma-2587",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Adrenal Gland (Adrenal Cortex Neoplasm & Pheochromocytoma)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-neuroendocrine-endocrine-neoplasm-of-pancreas-carcinoid-tumour-2588",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Neuroendocrine (Endocrine Neoplasm Of Pancreas & Carcinoid Tumour)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-parathyroid-basic-physiology-primary-hyperparathyroidism-part-1-2589",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Parathyroid - Basic Physiology & Primary Hyperparathyroidism (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-parathyroid-secondary-tertiary-hyperparathyroidism-part-2-2590",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Parathyroid - Secondary & Tertiary Hyperparathyroidism (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-thyroid-benign-thyroid-disorders-part-2-2591",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Thyroid - Benign Thyroid Disorders (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-thyroid-thyroid-neoplasm-part-3-2592",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Thyroid - Thyroid Neoplasm (Part 3)",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-skin-subcutaneous-tissue-skin-tumors-common-skin-conditions-2593",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Skin & Subcutaneous Tissue (Skin Tumors & Common Skin Conditions)",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-transplant-2594",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Transplant",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-oral-cavity-2595",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Oral Cavity",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-anatomy-physiology-of-lymphatic-system-2596",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Anatomy & Physiology Of Lymphatic System",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-investigation-management-2597",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Investigation & Management",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-lymphedema-clinical-presentation-2598",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Lymphedema(Clinical Presentation)",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-acute-chronic-limb-ischemia-part-1-2599",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Acute & Chronic Limb Ischemia (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-aneurysm-av-malformation-amputation-part-2-2600",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Aneurysm / AV Malformation / Amputation (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-kidney-urinary-tract-calculi-part-1-2601",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Kidney - (Urinary Tract Calculi) (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-kidney-renal-neoplasm-part-2-2602",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Kidney - Renal Neoplasm (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-kidney-congenital-other-benign-disorders-part-3-2603",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Kidney - Congenital & Other Benign Disorders (Part 3)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-prostate-2604",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Prostate",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-testis-2605",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Testis",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-urethra-penis-2606",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Urethra & Penis",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-urinary-bladder-urinary-diversion-retention-of-urine-incontinen-2607",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Urinary Bladder - Urinary Diversion, Retention Of Urine & Incontinence (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-urinary-bladder-benign-malignant-disorders-part-2-2608",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Urinary Bladder - Benign & Malignant Disorders (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-approach-to-breast-lump-2609",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Approach To Breast Lump",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-benign-disorders-of-breast-2610",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Benign Disorders Of Breast",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-classification-risk-factor-2611",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Classification & Risk Factor",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-staging-of-carcinoma-breast-2612",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Staging Of Carcinoma Breast",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-surgical-anatomy-2613",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Surgical Anatomy",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-abdominal-trauma-2614",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Abdominal Trauma",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-damage-control-resuscitation-2615",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Damage Control Resuscitation",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-damage-control-surgery-2616",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Damage Control Surgery",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-head-neck-trauma-2617",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Head & Neck Trauma",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-primary-survey-2618",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Primary Survey",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-retroperitoneal-trauma-2619",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Retroperitoneal Trauma",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-varicose-vein-2620",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Varicose Vein",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-venous-thrombosis-2621",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Venous Thrombosis",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-pediatric-surgery-2622",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Pediatric Surgery",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-thyroid-surgical-anatomy-investigations-part-1-2623",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Thyroid - Surgical Anatomy & Investigations (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-pleural-diseases-thoracic-outlet-syndrome-2624",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Pleural Diseases & Thoracic Outlet Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-carcinoma-lung-mediastinal-conditions-2625",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Carcinoma Lung & Mediastinal Conditions",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-basic-pathophysiology-of-trauma-stress-2626",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Basic Pathophysiology Of Trauma / Stress",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-nutrition-2627",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Nutrition",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-wound-healing-infection-2628",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Wound Healing & Infection",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-surgical-site-infection-2629",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Surgical Site Infection",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-shock-sepsis-2630",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Shock & Sepsis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-basics-of-embryology-2631",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Basics Of Embryology",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-somites-lateral-plate-mesoderm-neural-crest-cells-2632",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Somites, Lateral Plate Mesoderm & Neural Crest Cells",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cranial-nerve-vii-2633",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cranial nerve – VII",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cranial-nerve-iii-iv-vi-2634",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cranial Nerve- III, IV & VI",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cranial-nerve-nuclei-columns-2635",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cranial Nerve Nuclei & Columns",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cranial-nerves-ix-x-xi-xii-nerves-2636",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cranial nerves - IX, X, XI & XII Nerves",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-deep-cervical-fascia-2637",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Deep Cervical Fascia",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-duramater-sinus-of-head-2638",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Duramater & Sinus of Head",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-glands-parotid-gland-2639",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Glands - Parotid Gland",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-head-neck-face-vascular-supply-2640",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Head, Neck & Face - Vascular Supply",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-larynx-pharynx-thyroid-gland-2641",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Larynx, Pharynx & Thyroid Gland",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-osteology-cranial-cavity-2642",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Osteology - Cranial Cavity",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-parasympathetic-ganglion-cranial-nerve-v-2643",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Parasympathetic Ganglion & Cranial Nerve - V",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-temporomandibular-joint-muscles-of-mastication-2644",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Temporomandibular Joint & Muscles Of Mastication",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-triangles-of-the-neck-2645",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Triangles of The Neck",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-histology-lining-epithelium-of-the-body-parts-2646",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Histology & Lining Epithelium of The Body Parts",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-lower-limb-tibia-fibula-2647",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Lower Limb -Tibia & Fibula",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-skull-cranial-cavity-norma-basalis-2648",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Skull - Cranial Cavity & Norma Basalis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-upper-limb-radius-ulna-2649",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Upper Limb - Radius & Ulna",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-blood-vessels-axillary-artery-anastomosis-around-scapula-2650",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Blood Vessels - Axillary Artery & Anastomosis Around Scapula",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-blood-vessels-brachial-artery-anastomosis-around-elbow-2651",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Blood Vessels - Brachial Artery - Anastomosis Around Elbow",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-brachial-plexus-2652",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Brachial Plexus",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-clavipectoral-fascia-intermuscular-scapular-spaces-2653",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Clavipectoral Fascia & Intermuscular Scapular Spaces",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cubital-fossa-elbow-joint-2654",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cubital Fossa & Elbow Joint",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-flexor-extensor-retinaculum-2655",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Flexor & Extensor Retinaculum",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-important-nerves-of-upper-limb-2656",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Important Nerves of Upper Limb",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-muscles-of-hand-2657",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Muscles Of Hand",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-osteology-2658",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Osteology",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-shoulder-joint-2659",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Shoulder Joint",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-spaces-in-hand-2660",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Spaces In Hand",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-arterial-supply-of-heart-heart-external-features-2661",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Arterial Supply of Heart & Heart - External Features",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cardiac-plexus-thoracic-duct-esophagus-posterior-mediastinum-2662",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cardiac Plexus, Thoracic Duct, Esophagus & Posterior Mediastinum",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-inlet-of-thorax-diaphragm-2663",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Inlet Of Thorax & Diaphragm",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-interior-of-right-atrium-right-ventricle-2664",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Interior Of Right Atrium & Right Ventricle",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-lungs-mediastinal-surface-bronchopulmonary-segments-sinuses-2665",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Lungs - Mediastinal Surface, Bronchopulmonary Segments & Sinuses",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-thoracic-wall-muscles-nerves-vessels-2666",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Thoracic Wall - Muscles, Nerves & Vessels",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-aorta-ct-sma-ima-2667",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Aorta, CT, SMA & IMA",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-ischiorectal-fossa-urogenital-triangle-2668",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Ischiorectal Fossa & Urogenital Triangle",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-kidney-ureter-2669",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Kidney & Ureter",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-liver-it-s-segments-portal-vein-2670",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Liver & It's Segments & Portal Vein",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-peritoneum-2671",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Peritoneum",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-rectus-sheath-inguinal-canal-2672",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Rectus Sheath & Inguinal Canal",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-anterior-compartment-of-thigh-femoral-nerve-2673",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Anterior Compartment Of Thigh & Femoral Nerve",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-arches-of-foot-2674",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Arches Of Foot",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-fascia-lata-popliteal-fossa-2675",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Fascia Lata & Popliteal Fossa",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-flexor-extensor-peroneal-retinaculum-2676",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Flexor, Extensor & Peroneal Retinaculum",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-gluteal-region-hamstring-compartment-2677",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Gluteal Region & Hamstring Compartment",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-leg-compartments-sciatic-nerve-2678",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Leg Compartments & Sciatic Nerve",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-lumbar-plexus-2679",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Lumbar Plexus",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-osteology-part-2-2680",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Osteology (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-sole-of-the-foot-2681",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Sole Of The Foot",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-ascending-descending-tracts-2682",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Ascending & Descending Tracts",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-auditory-pathway-2683",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Auditory Pathway",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-basal-ganglia-2684",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Basal Ganglia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-blood-supply-of-brain-2685",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Blood Supply Of Brain",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-brainstem-brainstem-syndrome-2686",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Brainstem & Brainstem Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cerebellum-2687",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cerebellum",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cerebral-cortex-cerebrum-2688",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Cerebral Cortex & Cerebrum",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-conus-medullaris-cauda-equina-syndrome-2689",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Conus Medullaris & Cauda Equina Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-general-neuroanatomy-2690",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "General Neuroanatomy",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-lateral-third-ventricles-2691",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Lateral & Third Ventricles",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-spinal-cord-external-features-2692",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Spinal Cord - External Features",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-sympathetic-chain-ramus-communicans-2693",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Sympathetic Chain - Ramus Communicans",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-thalamus-connections-2694",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Thalamus & Connections",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-white-matter-of-cerebrum-greymatter-2695",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "White Matter of Cerebrum & Greymatter",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cvs-development-arterial-venous-system-2696",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "CVS Development -  Arterial & Venous System",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-cvs-development-heart-tube-derivates-septum-2697",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "CVS Development - Heart Tube, Derivates & Septum",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-git-development-urogenital-system-2698",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "GIT Development & Urogenital System",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-hnf-development-face-palate-pharyngeal-arches-2699",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "HNF Development - Face, Palate & Pharyngeal Arches",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-hnf-development-tongue-thyroid-eyeball-2700",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "HNF Development - Tongue, Thyroid & Eyeball",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-approach-to-arthritis-rheumatoid-arthritis-part1-2701",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Approach to Arthritis & Rheumatoid Arthritis (Part1)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-gout-pseudogout-dish-2702",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Gout Pseudogout & Dish",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-small-vessel-vasculitis-behcets-kawasaki-2703",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Small Vessel Vasculitis Behcets & Kawasaki",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-systemic-sclerosis-part-2-2704",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Systemic Sclerosis (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-temporal-takayasu-arteritis-2705",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Temporal & Takayasu Arteritis",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-tests-in-rheumatology-autoantibodies-2706",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Tests in Rheumatology & Autoantibodies",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-rheumatoid-arthritis-2707",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Rheumatoid Arthritis",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-systemic-lupus-erythematosis-2708",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Systemic Lupus Erythematosis",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-cardiac-arrythmias-2709",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Ecg & Cardiac Arrythmias",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-basics-lead-placement-part-1-2710",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "ECG - Basics & Lead Placement (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-pqrs-t-wave-abnormalities-part-3-2711",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "ECG - PQRS & T Wave Abnormalities (Part 3)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-cardiac-arrythmias-atrial-fib-flutter-2712",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "ECG & Cardiac Arrythmias - Atrial Fib & Flutter",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-brugada-wellens-fascicular-block-2713",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "ECG Brugada Wellens Fascicular Block",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-electrolytes-misc-2714",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Ecg Electrolytes & Misc",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ecg-vt-v-fib-heart-blocks-2715",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "ECG VT, V fib & Heart Blocks",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-heart-failure-2716",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Heart Failure",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hypertension-2717",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hypertension",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-jvp-2718",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "JVP",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pericardial-diseases-2719",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pericardial Diseases",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-cardiology-misc-2720",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Cardiology - MISC",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-heart-murmurs-2721",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Heart Murmurs",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ischemic-heart-disease-2722",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Ischemic Heart Disease",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-valvular-heart-disease-2723",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Valvular Heart Disease",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-heart-sounds-2724",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Heart Sounds",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-anemia-iron-homoestasis-2725",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Anemia & Iron Homoestasis",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-approach-to-anemia-2726",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Approach to Anemia",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-autoimmune-hemolytic-anemia-2727",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Autoimmune Hemolytic Anemia",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-chronic-lymphocytic-leukemia-2728",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Chronic Lymphocytic Leukemia",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-chronic-myeloid-leukemia-2729",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Chronic Myeloid Leukemia",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hairy-cell-leukemia-2730",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hairy Cell Leukemia",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hemolytic-anemia-2731",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hemolytic Anemia",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-macrocytic-anemia-2732",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Macrocytic Anemia",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-microcytic-anemia-2733",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Microcytic Anemia",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-myeloproliferative-disorders-2734",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Myeloproliferative Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-plasma-cell-disorders-2735",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Plasma Cell Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-thalassemia-2736",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Thalassemia",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-approach-to-muscle-disorders-2737",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Approach to Muscle Disorders",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-atypical-parkinson-s-2738",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Atypical Parkinson’s",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-dementia-alzheimer-s-disease-part-1-2739",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Dementia - Alzheimer's Disease (Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-dementia-lewy-body-dementia-vascular-dementia-part-2-2740",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Dementia - Lewy Body Dementia & Vascular Dementia (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-dementia-ftd-huntington-cjd-nph-part-3-2741",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Dementia - FTD, Huntington, CJD, NPH (Part 3)",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-guillian-barre-syndrome-2742",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Guillian Barre Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-motor-neuron-disease-2743",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Motor Neuron Disease",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-multiple-sclerosis-2744",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Multiple Sclerosis",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-nerve-muscle-junction-disorders-2745",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Nerve Muscle Junction Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-parkinsons-disease-2746",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Parkinsons Disease",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-speech-disorders-2747",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Speech Disorders",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-stroke-hemorrhagic-stroke-part-5-2748",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Stroke - Hemorrhagic Stroke (Part 5)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-upper-motor-vs-lower-motor-neuron-lesions-2749",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Upper Motor vs Lower Motor Neuron Lesions",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-primary-headache-2750",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Primary Headache",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-movement-disorders-2751",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Movement Disorders",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-neuro-ophthalmology-2752",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Neuro Ophthalmology",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-stroke-syndromes-2753",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Stroke Syndromes",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-brainstem-disorders-2754",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Brainstem Disorders",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-vertigo-2755",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Vertigo",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-seizures-epilepsy-2756",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Seizures & Epilepsy",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-acute-ischemic-stroke-2757",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Acute Ischemic Stroke",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-spinal-cord-disorder-2758",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Spinal Cord Disorder",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-asthma-2759",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Asthma",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-bronchiectasis-2760",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Bronchiectasis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-copd-2761",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "COPD",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hypersensitivity-pneumonitis-2762",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hypersensitivity Pneumonitis",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-interstitial-lung-disease-2763",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Interstitial Lung Disease",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-lung-physiology-2764",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Lung Physiology",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pulmonary-embolism-2765",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pulmonary Embolism",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pulmonary-function-tests-2766",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pulmonary Function Tests",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pulmonary-hypertension-2767",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pulmonary Hypertension",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-sarcoidosis-2768",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Sarcoidosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ards-2769",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "ARDS",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-complications-of-diabetes-dka-hhs-2770",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Complications of Diabetes, DKA & HHS",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-cushings-syndrome-2771",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Cushings Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-endocrine-tumors-of-pancreas-men-syndromes-2772",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Endocrine Tumors of Pancreas & MEN Syndromes",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pagets-syndrome-2773",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pagets Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pheochromocytoma-2774",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pheochromocytoma",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-primary-hyperaldosteronism-2775",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Primary Hyperaldosteronism",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-endocrinology-misc-2776",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Endocrinology - MISC",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-diabetes-mellitus-2777",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Diabetes Mellitus",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-calcium-disorders-2778",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Calcium disorders",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pituitary-disorders-acromegaly-prolactinoma-2779",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pituitary Disorders - Acromegaly & Prolactinoma",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-thyroid-2780",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Thyroid",
+    "exam": null,
+    "year": null,
+    "count": 38
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-alcoholic-liver-disease-2781",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Alcoholic Liver Disease",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-approach-to-liver-function-tests-2782",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Approach to Liver Function Tests",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-ascites-2783",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Ascites",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-esophageal-disorders-dysphagia-2784",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Esophageal Disorders & Dysphagia",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hemochromatosis-2785",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hemochromatosis",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hepatitis-a-b-2786",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hepatitis A & B",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hepatitis-b-part-2-2787",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hepatitis B (Part 2)",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hepatitis-c-e-2788",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hepatitis C & E",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hepatorenal-syndrome-2789",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Hepatorenal Syndrome",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-inflammatory-bowel-disease-2790",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Inflammatory Bowel Disease",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-malabsorption-celiac-disease-whipples-disease-2791",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Malabsorption, Celiac Disease & Whipples Disease",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-nafld-nash-2792",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "NAFLD & NASH",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-peptic-ulcer-disease-2793",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Peptic Ulcer Disease",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-primary-billiary-cholangiopathy-psc-2794",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Primary Billiary Cholangiopathy & PSC",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-wilsons-disease-2795",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Wilsons Disease",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-hiv-2796",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "HIV",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-infective-endocarditis-2797",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Infective Endocarditis",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pneumonia-2798",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pneumonia",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-acid-base-disorder-2799",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Acid Base Disorder",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-acute-kidney-injury-2800",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Acute Kidney Injury",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-approach-to-glomerular-disease-2801",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Approach to Glomerular Disease",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-approach-to-nephritic-syndromes-2802",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Approach To Nephritic Syndromes",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-bartters-gittlemans-renal-tubular-acidosis-2803",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Bartters Gittlemans & Renal Tubular Acidosis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-chronic-kidney-disease-2804",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Chronic Kidney Disease",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-cystic-diseases-of-kidney-adpkd-arpkd-2805",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Cystic Diseases of Kidney, ADPKD & ARPKD",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-electrolyte-abnormalities-2806",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Electrolyte Abnormalities",
+    "exam": null,
+    "year": null,
+    "count": 26
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-nephrotic-mcd-membranous-nephropathy-part-1-2807",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Nephrotic - MCD & Membranous Nephropathy ( Part 1)",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-urinalysis-2808",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Urinalysis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-adh-2809",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "ADH",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-calcium-metabolism-2810",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Calcium Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-insulin-2811",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Insulin",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-male-reproductive-hormones-2812",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Male Reproductive Hormones",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-female-reproductive-hormones-2813",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Female Reproductive Hormones",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-thyroid-axis-2814",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Thyroid Axis",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-endocrine-misc-2815",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Endocrine - MISC",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-acid-base-balance-2816",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Acid Base Balance",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-body-fluids-2817",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Body Fluids",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-glomerulus-2818",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Glomerulus",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-nephron-structure-2819",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Nephron Structure",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-tubular-functions-2820",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Tubular Functions",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-basics-2821",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Basics",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-gas-exchange-2822",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Gas Exchange",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-gas-exchange-v-q-ratio-2823",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Gas Exchange - V/Q Ratio",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-hypoxia-2824",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Hypoxia",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pulmonary-vasculature-2825",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pulmonary Vasculature",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pulmonary-ventilation-lung-volume-capacities-2826",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pulmonary Ventilation - Lung Volume & Capacities",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pulmonary-ventilation-minute-ventilation-dead-spaces-2827",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pulmonary Ventilation - Minute Ventilation & Dead Spaces",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pulmonary-ventilation-obstructive-vs-restrictive-lung-diseas-2828",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pulmonary Ventilation - Obstructive Vs Restrictive Lung Disease",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pulmonary-ventilation-respiratory-muscles-pressures-2829",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pulmonary Ventilation - Respiratory Muscles & Pressures",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-regulation-of-respiration-2830",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Regulation Of Respiration",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-transport-of-gases-2831",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Transport Of Gases",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pulmonary-ventilation-compliance-surface-tension-2832",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pulmonary Ventilation - Compliance & Surface Tension",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-basics-of-ecg-understanding-2833",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Basics of ECG Understanding",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cardiac-muscle-2834",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Cardiac Muscle",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-coronary-blood-flow-2835",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Coronary Blood Flow",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-excitation-conduction-cardiac-vectors-2836",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Excitation Conduction Cardiac Vectors",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-localisation-of-myocardial-damage-with-ecg-2837",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Localisation Of Myocardial Damage With ECG",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-normal-ecg-2838",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Normal ECG",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-structure-channels-myelination-condution-2839",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Structure, Channels, Myelination & Condution",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cell-general-physiology-2840",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Cell & General Physiology",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-platelets-homeostasis-2841",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Platelets & Homeostasis",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-rbc-2842",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "RBC",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-physiology-of-audition-2843",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Physiology Of Audition",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-physiology-of-vision-2844",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Physiology Of Vision",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cardiovascular-regulation-reflexes-2845",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Cardiovascular Regulation & Reflexes",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pressure-flow-resistance-2846",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pressure, Flow & Resistance",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-vasculature-2847",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Vasculature",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cardiac-output-integrated-2848",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Cardiac Output (Integrated)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-membrane-potentials-2849",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Membrane Potentials",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-transport-across-membrane-2850",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Transport Across Membrane",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-neuro-muscular-junction-muscle-contraction-2851",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Neuro Muscular Junction & Muscle Contraction",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-pathophysiology-of-muscle-contraction-2852",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Pathophysiology of Muscle Contraction",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-structure-of-skeletal-muscle-cell-2853",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Structure of Skeletal Muscle Cell",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-types-of-muscle-fibers-2854",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Types of Muscle Fibers",
+    "exam": null,
+    "year": null,
+    "count": 2
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-physiology-of-git-2855",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Physiology of GIT",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-swallowing-esophagus-2856",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Swallowing & Esophagus",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-basal-ganglia-cerebellum-2857",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Basal Ganglia & Cerebellum",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-motor-functions-2858",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Motor Functions",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-sensory-functions-2859",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Sensory Functions",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-integrative-neurophysiology-2860",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Integrative Neurophysiology",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-ent-anatomy-of-ear-2861",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Anatomy of ear",
+    "exam": null,
+    "year": null,
+    "count": 32
+   },
+   {
+    "id": "pyq-egurukul-express-ent-diseases-of-throat-2862",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Diseases of throat",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ent-inflammatory-diseases-of-ear-2863",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Inflammatory diseases of ear",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-ent-non-inflammatory-diseases-of-ear-2864",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Non inflammatory diseases of ear",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-ent-investigations-of-ear-diseases-2865",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Investigations of ear diseases",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-ent-nose-sinuses-2866",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Nose & sinuses",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-ent-surgeries-of-ear-2867",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Surgeries of ear",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-ent-throat-anatomy-2868",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Throat Anatomy",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-ent-tumors-of-ear-2869",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Tumors of ear",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-ent-tumors-of-throat-2870",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "ENT",
+    "label": "Tumors of throat",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-adnexal-diseases-2871",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Adnexal Diseases",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-blistering-disorders-2872",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Blistering Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-drug-reaction-2873",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Drug Reaction",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-eczema-2874",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Eczema",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-facial-lesions-alopecia-mast-cell-disorders-woods-lamp-2875",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Facial Lesions, Alopecia ,Mast Cell Disorders,Woods Lamp",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-general-dermatology-2876",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "General Dermatology",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-hair-nail-disorders-2877",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Hair & Nail Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-fungal-infection-2878",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Fungal Infection",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-parasitic-infection-2879",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Parasitic Infection",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-viral-infection-2880",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Viral Infection",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-leprosy-2881",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Leprosy",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-melanin-disease-2882",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Melanin Disease",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-psoriasis-lichen-planus-2883",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Psoriasis & Lichen Planus",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-dermatology-std-2884",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Dermatology",
+    "label": "Std",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-fungal-2885",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Fungal",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-protozoal-2886",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti Protozoal",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-tb-drugs-2887",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "ANTI TB DRUGS",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antibiotics-classification-beta-lactam-antibiotics-2888",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antibiotics :Classification & Beta Lactam Antibiotics",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antibiotics-other-antibiotics-2889",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antibiotics :other Antibiotics",
+    "exam": null,
+    "year": null,
+    "count": 38
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antivirals-2890",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antivirals",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anticancer-drugs-2891",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anticancer Drugs",
+    "exam": null,
+    "year": null,
+    "count": 51
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-autocoids-2892",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Autocoids",
+    "exam": null,
+    "year": null,
+    "count": 38
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-parasympathetic-drugs-2893",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Parasympathetic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-sympathetic-drugs-2894",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Sympathetic Drugs",
+    "exam": null,
+    "year": null,
+    "count": 37
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-antiepileptic-drugs-2895",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Antiepileptic drugs",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-opioids-drug-deaddiction-2896",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Opioids & Drug Deaddiction",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-psychiatry-drugs-2897",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Psychiatry Drugs",
+    "exam": null,
+    "year": null,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-anti-htn-drugs-2898",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Anti HTN Drugs",
+    "exam": null,
+    "year": null,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-drugs-for-angina-chf-arrythmia-2899",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Drugs for Angina,CHF, Arrythmia",
+    "exam": null,
+    "year": null,
+    "count": 38
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-endocrine-2900",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Endocrine",
+    "exam": null,
+    "year": null,
+    "count": 59
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-clinical-pharmacology-2901",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Clinical Pharmacology",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacodynamics-2902",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacodynamics",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-pharmacokinetics-2903",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Pharmacokinetics",
+    "exam": null,
+    "year": null,
+    "count": 34
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-hematology-2904",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Hematology",
+    "exam": null,
+    "year": null,
+    "count": 43
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-immunopharmacology-2905",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Immunopharmacology",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-kidney-diuretics-2906",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Kidney(Diuretics)",
+    "exam": null,
+    "year": null,
+    "count": 30
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-respiratory-system-2907",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "Respiratory System",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-pharmacology-git-2908",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pharmacology",
+    "label": "GIT",
+    "exam": null,
+    "year": null,
+    "count": 36
+   },
+   {
+    "id": "pyq-egurukul-express-obs-amniotic-fluid-its-disorders-2909",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Amniotic Fluid & its Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-obs-anemia-2910",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Anemia",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-obs-aneuploidy-screening-2911",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Aneuploidy Screening",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-obs-antepartum-fetal-surveillance-2912",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Antepartum Fetal Surveillance",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-obs-antepartum-hemorrhage-2913",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Antepartum Hemorrhage",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-obs-basics-of-reproduction-placenta-fetal-membranes-2914",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Basics Of Reproduction, Placenta & Fetal Membranes",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-obs-cardiac-disease-in-pregnancy-2915",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Cardiac Disease in Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-obs-cervical-incompetence-2916",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Cervical Incompetence",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-obs-diabetes-mellitus-in-pregnancy-2917",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Diabetes Mellitus in Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-obs-ectopic-pregnancy-2918",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Ectopic Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-obs-hypertensive-disorders-in-pregnancy-2919",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Hypertensive Disorders in Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-obs-jaundice-in-pregnancy-2920",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Jaundice in Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-obs-malpresentation-and-malposition-2921",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Malpresentation and Malposition",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-obs-miscarriage-2922",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Miscarriage",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-obs-molar-pregnancy-2923",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Molar Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-obs-multiple-gestation-2924",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Multiple Gestation",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-obs-normal-labour-2925",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Normal Labour",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-obs-partogram-2926",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Partogram",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-obs-physiological-changes-in-pregnancy-2927",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Physiological Changes in Pregnancy",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-obs-postpartum-hemorrhage-2928",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Postpartum Hemorrhage",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-obs-pregnancy-antenatal-care-2929",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Pregnancy, Antenatal Care",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-obs-preterm-labour-prom-postdatism-2930",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Preterm Labour , Prom ,Postdatism",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-obs-rh-isoimmunization-2931",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Rh Isoimmunization",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-obs-shoulder-dystocia-2932",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Shoulder Dystocia",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-obs-stages-of-labour-2933",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Stages of Labour",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-delusional-disorders-2934",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Delusional Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-dementia-2935",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Dementia",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-eating-disorders-2936",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Eating Disorders",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-introduction-to-psychiatry-2937",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Introduction To Psychiatry",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-mental-state-examination-in-psychiatry-2938",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Mental State Examination In Psychiatry",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-mood-disorders-2939",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Mood Disorders",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-neurosis-ocd-2940",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Neurosis- Ocd",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-neurosis-panic-attack-phobia-adjustment-disorder-ptsd-gad-2941",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Neurosis- Panic Attack, Phobia, Adjustment Disorder ,Ptsd & Gad",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-personality-disorders-2942",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Personality Disorders",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-psychology-contribution-of-psychologist-2943",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Psychology- Contribution Of Psychologist",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-psychology-defence-mechanism-2944",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Psychology- Defence Mechanism",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-psychopharmacology-anti-psychotics-2945",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Psychopharmacology- Anti Psychotics",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-psychopharmacology-mood-stabilizers-2946",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Psychopharmacology- Mood Stabilizers",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-psychopharmacology-anti-depressants-2947",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Psychopharmacology-= Anti Depressants",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-schizophrenia-2948",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Schizophrenia",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-sex-disorders-2949",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Sex Disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-sleep-disorders-2950",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Sleep Disorders",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-psychiatry-substance-use-disorders-2951",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Psychiatry",
+    "label": "Substance Use Disorders",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-cardiology-2952",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Cardiology",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-growth-development-malnutrition-2953",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Growth, Development ,Malnutrition",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-latest-update-on-childhood-asthama-2954",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Latest Update on Childhood Asthama",
+    "exam": null,
+    "year": null,
+    "count": 32
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-neonatology-2955",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Neonatology",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-other-pediatrics-disorder-childhood-infections-2956",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Other Pediatrics Disorder & Childhood Infections",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-pediatrics-gi-2957",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Pediatrics Gi",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-pediatrics-nephrology-respiratory-total-2958",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Pediatrics Nephrology & Respiratory Total",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-pediatrics-neurology-2959",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Pediatrics Neurology",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-pediatrics-update-milestones-2960",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Paediatrics",
+    "label": "Update -Milestones",
+    "exam": null,
+    "year": null,
+    "count": 1
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-general-microbiology-2961",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "General Microbiology",
+    "exam": null,
+    "year": null,
+    "count": 43
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacteria-gpc-gnc-2962",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacteria- Gpc & Gnc",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacteria-gnb-2963",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacteria - Gnb",
+    "exam": null,
+    "year": null,
+    "count": 31
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-bacteria-gpb-2964",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Bacteria - Gpb",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-general-virology-2965",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "General Virology",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-virology-dna-viruses-2966",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Virology- Dna Viruses",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-virology-rna-viruses-2967",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Virology- Rna Viruses",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-parasitology-helminths-2968",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Parasitology – Helminths",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-parasitology-protozoa-2969",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Parasitology – Protozoa",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-mycology-2970",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Mycology",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-microbiology-immunology-2971",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Microbiology",
+    "label": "Immunology",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-cardiology-part-1-2972",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Cardiology Part-1",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-cardiology-part-2-2973",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Cardiology Part-2",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-cardiology-part-3-2974",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Cardiology Part-3",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-git-part-1-2975",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "GIT Part-1",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-git-part-2-2976",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "GIT Part -2",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-git-part-3-2977",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "GIT Part -3",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-git-part-4-2978",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "GIT Part -4",
+    "exam": null,
+    "year": null,
+    "count": 3
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-endocrinology-part-1-2979",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Endocrinology Part-1",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-endocrinology-part-2-2980",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Endocrinology Part-2",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-endocrinology-part-3-2981",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Endocrinology Part-3",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-endocrinology-part-4-2982",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Endocrinology Part-4",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-nephrology-part-1-2983",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Nephrology Part-1",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-nephrology-part-2-2984",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Nephrology Part-2",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-nephrology-part-3-2985",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Nephrology Part-3",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pulmonology-part-1-2986",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pulmonology Part-1",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pulmonology-part-2-2987",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pulmonology Part-2",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-pulmonology-part-3-2988",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Pulmonology Part-3",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-rheumatology-part-1-2989",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Rheumatology Part-1",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-rheumatology-part-2-2990",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Rheumatology Part-2",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-rheumatology-part-3-2991",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Rheumatology Part-3",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-neurology-part-1-2992",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Neurology Part-1",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-neurology-part-2-2993",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Neurology Part-2",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-neurology-part-3-2994",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Neurology Part-3",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-medicine-neurology-part-4-2995",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Medicine",
+    "label": "Neurology Part-4",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-anatomy-2996",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Anatomy",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-aub-2997",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "AUB",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-cin-ca-cervix-2998",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "CIN & CA cervix",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-contraception-2999",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Contraception",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-embryology-uterine-malformation-3000",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Embryology & uterine malformation",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-endometrial-hyperplasia-endometrial-cancer-3001",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Endometrial hyperplasia & Endometrial cancer",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-endometriosis-3002",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Endometriosis",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-fibroid-3003",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Fibroid",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-gestational-trophoblastic-newly-added-3004",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Gestational Trophoblastic (newly added)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-infertility-3005",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Infertility",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-menopause-hrt-3006",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Menopause & HRT",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-normal-abnormal-puberty-newly-added-3007",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Normal & Abnormal puberty (newly added)",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-ovarian-cancer-3008",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Ovarian cancer",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-pcos-hirsutism-3009",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "PCOS & Hirsutism",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-primary-amenorrhea-3010",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Primary Amenorrhea",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-reproductive-physiology-3011",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Reproductive Physiology",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-urogynaecology-3012",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Urogynaecology",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-vaginitis-vulval-ulcers-3013",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Vaginitis & Vulval ulcers",
+    "exam": "INI-CET",
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-gynaecology-vulval-cancer-newly-added-3014",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Obstetrics & Gynaecology",
+    "label": "Vulval Cancer (newly added)",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-head-neck-face-3015",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Head, Neck & Face",
+    "exam": null,
+    "year": null,
+    "count": 37
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-neuroanatomy-3016",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Neuroanatomy",
+    "exam": null,
+    "year": null,
+    "count": 27
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-embrylogy-3017",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Embrylogy",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-limbs-3018",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Limbs",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-viscera-3019",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Viscera",
+    "exam": null,
+    "year": null,
+    "count": 44
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-neuroanatomy-cadaveric-images-discussion-3020",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Neuroanatomy-Cadaveric Images Discussion",
+    "exam": null,
+    "year": null,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-upper-limb-cadaveric-images-discussion-3021",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Upper Limb-Cadaveric Images Discussion",
+    "exam": null,
+    "year": null,
+    "count": 31
+   },
+   {
+    "id": "pyq-egurukul-express-anatomy-lower-limb-cadaveric-images-discussion-3022",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anatomy",
+    "label": "Lower Limb -Cadaveric Images Discussion",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-breast-3023",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Breast",
+    "exam": null,
+    "year": null,
+    "count": 43
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-surgery-trauma-3024",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Surgery - Trauma",
+    "exam": null,
+    "year": null,
+    "count": 62
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-esophagus-stomach-3025",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Esophagus & Stomach",
+    "exam": null,
+    "year": null,
+    "count": 58
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-gall-bladder-3026",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Gall Bladder",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-pancreas-and-liver-3027",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Pancreas and Liver",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-small-intestine-appendix-3028",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Small Intestine & Appendix",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-colon-anal-canal-3029",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Colon & Anal Canal",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-kidney-urinary-bladder-3030",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Kidney & Urinary bladder",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-prostate-3031",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Prostate",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-urethra-penis-and-testis-3032",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Urethra, Penis and Testis",
+    "exam": null,
+    "year": null,
+    "count": 25
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-arterial-disorders-3033",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Arterial Disorders",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-venous-disorders-3034",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Venous Disorders",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-hernia-3035",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Hernia",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-general-surgery-part-1-3036",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "General Surgery (Part -1)",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-general-surgery-part-2-3037",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "General Surgery (Part -2)",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-general-surgery-part-3-3038",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "General Surgery (Part -3)",
+    "exam": null,
+    "year": null,
+    "count": 29
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-burns-and-plastic-surgery-3039",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Burns and Plastic Surgery",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-endocrine-surgery-3040",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Endocrine Surgery",
+    "exam": null,
+    "year": null,
+    "count": 36
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-oral-cavity-3041",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Oral Cavity",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-transplant-metabolic-surgery-3042",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Transplant & Metabolic Surgery",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-surgery-skin-and-subcutaneous-tissue-3043",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Surgery",
+    "label": "Skin and Subcutaneous Tissue",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-deformities-3044",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Deformities",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-implants-in-orthopaedics-3045",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Implants in Orthopaedics",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-infections-in-orthopaedics-3046",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Infections in Orthopaedics",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-joint-disorders-3047",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Joint disorders",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-lower-limb-3048",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Lower limb",
+    "exam": null,
+    "year": null,
+    "count": 24
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-metabolic-disorders-3049",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Metabolic Disorders",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-pediatric-disorders-3050",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Pediatric Disorders",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-peripheral-nerve-injuries-3051",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Peripheral Nerve Injuries",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-soft-tissue-disorders-3052",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Soft tissue disorders",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-spine-3053",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Spine",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-splint-traction-3054",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Splint traction",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-trauma-basics-upper-limb-3055",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Trauma Basics & Upper limb",
+    "exam": null,
+    "year": null,
+    "count": 21
+   },
+   {
+    "id": "pyq-egurukul-express-orthopaedics-tumors-3056",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Orthopaedics",
+    "label": "Tumors",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-amino-acids-proteins-3057",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Amino Acids & Proteins",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-carbohydrate-chemistry-3058",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Carbohydrate Chemistry",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-carbohydrate-metabolism-3059",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Carbohydrate Metabolism",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-concepts-3060",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Concepts",
+    "exam": null,
+    "year": null,
+    "count": 13
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-energetics-3061",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Energetics",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-enzymes-3062",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Enzymes",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-lipids-3063",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Lipids",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-molecular-biology-3064",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Molecular Biology",
+    "exam": null,
+    "year": null,
+    "count": 0
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-rate-limiting-enzymes-3065",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Rate Limiting Enzymes",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-diseases-3066",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Diseases",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-biochemistry-miscellaneous-3067",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Biochemistry",
+    "label": "Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-cell-injury-3068",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Cell Injury",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-inflammation-3069",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Inflammation",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-repair-regeneration-3070",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Repair & Regeneration",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-hemodynamics-bleeding-3071",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Hemodynamics & Bleeding",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-genetics-3072",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Genetics",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-immune-system-3073",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Immune System",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-neoplasia-3074",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Neoplasia",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-acute-leukemia-3075",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Acute Leukemia",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-cmpn-lymphoma-3076",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Cmpn & Lymphoma",
+    "exam": null,
+    "year": null,
+    "count": 22
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-rbcs-anemia-3077",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Rbcs & Anemia",
+    "exam": null,
+    "year": null,
+    "count": 20
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-vessels-3078",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Vessels",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-heart-3079",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Heart",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-lungs-3080",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Lungs",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-git-3081",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "GIT",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-liver-3082",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Liver",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-renal-system-3083",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Renal System",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-cns-tumors-3084",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Cns Tumors",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-pathology-ibd-3085",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Pathology",
+    "label": "Ibd",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-health-indicators-3086",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Health indicators",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-psm-health-programmes-3087",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Health programmes",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-psm-infections-3088",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Infections",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-psm-infectious-disease-epidemiology-3089",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Infectious disease epidemiology",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-psm-miscellaneous-topics-3090",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Miscellaneous topics",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-psm-screening-stats-3091",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Screening & stats",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-psm-vaccines-prevention-3092",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Community Medicine / PSM",
+    "label": "Vaccines & prevention",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-anatomy-development-visual-acuity-3093",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Anatomy & Development, Visual Acuity",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-lens-part-1-3094",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Lens (Part-1)",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-lens-part-2-3095",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Lens (Part-2)",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-eyelids-3096",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Eyelids",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-glaucoma-part-1-3097",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Glaucoma (Part-1)",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-glaucoma-part-2-3098",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Glaucoma (Part-2)",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-orbit-lacrimal-apparatus-3099",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Orbit & Lacrimal Apparatus",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-uveal-tract-3100",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Uveal Tract",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retina-part-1-3101",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retina (Part-1)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retina-part-2-3102",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retina (Part-2)",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-retina-part-3-3103",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Retina (Part-3)",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-conjunctiva-3104",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Conjunctiva",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-sclera-3105",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Sclera",
+    "exam": null,
+    "year": null,
+    "count": 5
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-trauma-3106",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Trauma",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-astigmatism-3107",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Astigmatism",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-cornea-3108",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Cornea",
+    "exam": null,
+    "year": null,
+    "count": 18
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-neuro-ophthal-3109",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Neuro Ophthal",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-squint-3110",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Squint",
+    "exam": null,
+    "year": null,
+    "count": 17
+   },
+   {
+    "id": "pyq-egurukul-express-ophthalmology-important-tests-3111",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Ophthalmology",
+    "label": "Important Tests",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-identification-trace-evidence-3112",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Identification, Trace Evidence",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-injuries-medicolegal-aspects-3113",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Injuries & Medicolegal Aspects",
+    "exam": null,
+    "year": null,
+    "count": 35
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-legal-system-procedures-negligence-sexual-offences-3114",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Legal System & Procedures, Negligence, Sexual Offences",
+    "exam": null,
+    "year": null,
+    "count": 29
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-thanatology-fetal-death-asphyxial-death-3115",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Thanatology, Fetal Death, Asphyxial Death",
+    "exam": null,
+    "year": null,
+    "count": 33
+   },
+   {
+    "id": "pyq-egurukul-express-forensic-medicine-toxicology-miscellaneous-3116",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Forensic Medicine",
+    "label": "Toxicology, Miscellaneous",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-abdominal-radiology-3117",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Abdominal Radiology",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-basics-of-investigations-3118",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Basics of Investigations",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-basics-of-radiography-3119",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Basics of Radiography",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-contrast-agents-in-radiology-3120",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Contrast Agents in Radiology",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ct-scan-3121",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "CT Scan",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ct-vs-mri-mri-sequences-3122",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "CT VS MRI & MRI SEQUENCES",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-genitourinary-radiology-3123",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Genitourinary Radiology",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-head-neck-radiology-3124",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Head & Neck Radiology",
+    "exam": null,
+    "year": null,
+    "count": 4
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-mammography-3125",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Mammography",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-mri-3126",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "MRI",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-musculoskeletal-radiology-3127",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Musculoskeletal Radiology",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-neuroradiology-3128",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Neuroradiology",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-nuclear-scan-pet-scan-3129",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Nuclear Scan & PET Scan",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-radiation-hazards-protection-3130",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Radiation Hazards & Protection",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-radio-therapy-3131",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Radio Therapy",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-ultrasonography-3132",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Ultrasonography",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-radiology-women-s-imaging-3133",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Radiology",
+    "label": "Women’s Imaging",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-anesthesia-delivery-systems-3134",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Anesthesia Delivery Systems",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-critical-care-cpcr-3135",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Critical Care & Cpcr",
+    "exam": null,
+    "year": null,
+    "count": 23
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-equipments-3136",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Equipments",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-ga-complications-3137",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Ga- Complications",
+    "exam": null,
+    "year": null,
+    "count": 15
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-ga-inhalational-agents-3138",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Ga- Inhalational Agents",
+    "exam": null,
+    "year": null,
+    "count": 47
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-ga-muscle-relaxants-3139",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Ga- Muscle Relaxants",
+    "exam": null,
+    "year": null,
+    "count": 28
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-introduction-to-ga-iv-agents-3140",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Introduction to Ga & IV Agents",
+    "exam": null,
+    "year": null,
+    "count": 44
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-preoperative-assessment-monitoring-3141",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Preoperative Assessment & Monitoring",
+    "exam": null,
+    "year": null,
+    "count": 19
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-regional-anesthesia-peripheral-central-nerve-blocks-3142",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Regional Anesthesia - Peripheral & Central Nerve Blocks",
+    "exam": null,
+    "year": null,
+    "count": 43
+   },
+   {
+    "id": "pyq-egurukul-express-anesthesia-speciality-management-3143",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Anaesthesia",
+    "label": "Speciality Management",
+    "exam": null,
+    "year": null,
+    "count": 38
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-general-physiology-3144",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "General Physiology",
+    "exam": null,
+    "year": null,
+    "count": 6
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cvs-part-2-3145",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "CVS (PART -2)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-respiration-part-1-3146",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Respiration (Part-1)",
+    "exam": null,
+    "year": null,
+    "count": 12
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-endocrine-system-3147",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Endocrine System",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-kidney-part-1-3148",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Kidney (Part-1)",
+    "exam": null,
+    "year": null,
+    "count": 14
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-kidney-part-2-3149",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Kidney (Part-2)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-kidney-part-3-3150",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Kidney (Part-3)",
+    "exam": null,
+    "year": null,
+    "count": 9
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cns-part-1-3151",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "CNS (PART-1)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cns-part-2-3152",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "CNS (PART-2)",
+    "exam": null,
+    "year": null,
+    "count": 7
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cns-part-3-3153",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "CNS (PART-3)",
+    "exam": null,
+    "year": null,
+    "count": 11
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cns-part-4-3154",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "CNS (PART-4)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-respiration-part-2-3155",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Respiration (Part-2)",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-respiration-part-3-3156",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Respiration (Part-3)",
+    "exam": null,
+    "year": null,
+    "count": 8
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-blood-3157",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Blood",
+    "exam": null,
+    "year": null,
+    "count": 10
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-cvs-part-1-3158",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "CVS (PART-1)",
+    "exam": null,
+    "year": null,
+    "count": 16
+   },
+   {
+    "id": "pyq-egurukul-express-physiology-physiology-git-3159",
+    "platformId": "egurukul",
+    "setKind": "express",
+    "subject": "Physiology",
+    "label": "Physiology - GIT",
+    "exam": null,
+    "year": null,
+    "count": 14
+   }
+  ],
+  "totals": {
+   "questions": 42275,
+   "paperCount": 3160,
+   "pyqQuestions": 21846,
+   "pyqPaperCount": 1474,
+   "platformsWithPyq": 4
+  }
  }
 };
 // back-compat shim: legacy reads of window.QBANK_DATA resolve to the new model.

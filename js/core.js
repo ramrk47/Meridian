@@ -311,6 +311,50 @@ function libTopicStarted(topic) {
   return Object.values(refs).some(ids => ids.some(id => Store.prog(id).a));
 }
 
+/* ---- cross-platform UNION tracking status for a canonical topic (Phase 2b) ----
+   The spreadsheet-killer's core idea: "done on Marrow" satisfies the canonical topic —
+   it is NOT re-flagged as missing on every other platform. Status is the UNION over every
+   confidently-mapped leaf (across all platforms). All measured + local (Store progress). */
+function libTopicUnion(topic) {
+  const refs = (topic && topic.platformRefs) || {};
+  let a = 0, r = 0, t = 0, total = 0, plats = 0, platsDone = 0;
+  Object.values(refs).forEach(ids => {
+    if (!ids.length) return;
+    plats++; let pa = 0;
+    ids.forEach(id => { total++; const p = Store.prog(id); if (p.a) { a++; pa++; } if (p.r) r++; if (p.t) t++; });
+    if (pa) platsDone++;
+  });
+  return { a, r, t, total, plats, platsDone, started: a > 0, reviewed: r > 0, mastered: t > 0 };
+}
+/* per-platform mapped leaves for a topic, in canonical platform order — drives the
+   expandable per-platform tracking rows (each leaf reuses the standard .mrow chips). */
+function libTopicPlatformLeaves(topic) {
+  const refs = (topic && topic.platformRefs) || {};
+  const order = ["marrow", "cerebellum", "doctutorials", "prepladder", "egurukul"].filter(id => PLAT_BY_ID[id]);
+  return order.filter(id => refs[id] && refs[id].length).map(id => ({ platformId: id, leafIds: refs[id] }));
+}
+/* module index across ALL platforms (incl. lecture PrepLadder/eGurukul, absent from LEAVES)
+   so the cross-platform tracker can name any mapped leaf. */
+const MODULE_BY_ID = {};
+PLATFORMS.forEach(p => p.subjects.forEach(s => s.modules.forEach(m => {
+  MODULE_BY_ID[m.id] = { id: m.id, platform: p.id, name: m.name, subject: s.subject, mcqs: m.mcqs };
+})));
+
+/* ---- previous-year-question seams (Phase 2b · the strongest honest yield signal we hold) ----
+   D.pyq = measured past-exam question counts per platform (+ flagged QRP/Express revision sets).
+   Separate from the 56,091 QBank figure. Helpers degrade to empty when D.pyq is absent. */
+const PYQ_DATA = D.pyq || null;
+const PYQ_PAPERS = PYQ_DATA ? PYQ_DATA.papers : [];
+const PYQ_PLATS = PYQ_DATA ? PYQ_DATA.platforms : [];
+const PYQ_EXAMS = PYQ_DATA ? PYQ_DATA.exams : [];
+const PYQ_CAP = (PYQ_DATA && PYQ_DATA.captured) || D.captured;
+function pyqSubjects() { return [...new Set(PYQ_PAPERS.map(p => p.subject))].sort(); }
+function pyqRollup(papers) {
+  let a = 0, r = 0, t = 0, q = 0;
+  papers.forEach(p => { const pr = Store.prog(p.id); if (pr.a) a++; if (pr.r) r++; if (pr.t) t++; q += p.count || 0; });
+  return { a, r, t, q, total: papers.length };
+}
+
 /* shared status-dot fragment (used by overview, drawer, consensus) */
 function statusDots(id) {
   const p = Store.prog(id);

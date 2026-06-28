@@ -744,6 +744,147 @@ library_coverage = map_platforms_to_library()
 if library:
     library["coverage"] = library_coverage
 
+# ---------- Previous-Year-Question seams → D.pyq (Phase 2b, Stage 1) ----------
+# The strongest HONEST yield signal we hold: actual past-exam question counts, captured
+# per platform → epistemic = measured. Four platforms expose PYQ banks (Marrow, DocTutorials,
+# PrepLadder, eGurukul); Cerebellum has NO PYQ capture and is shown as such (never fabricated).
+# Adjacent revision sets (DocTutorials QRP, eGurukul Express) are captured too but tagged
+# distinctly (kind="qrp"/"express") so they never masquerade as past papers.
+# IMPORTANT: these counts are a SEPARATE block — they are NOT summed into the 56,091 measured
+# QBank-MCQ figure. Marrow's PYQ papers already live as marrow leaves (subject "Previous Year
+# Question Papers"), so we REUSE their existing leaf ids → ticking a paper here unions with the
+# QBank tracker. The other platforms' PYQ/QRP/Express rows get fresh "pyq-*" ids.
+_PYQ_SUBJ_EXTRA = {
+    "OBS": "Obstetrics & Gynaecology", "Gynaecology": "Obstetrics & Gynaecology",
+}
+def canon_loose(s):
+    c = canon(s)
+    return _PYQ_SUBJ_EXTRA.get(s, c) if c == s else c
+
+_MARROW_PYQ_CAT = {
+    "ANATOMY": "Anatomy", "PHYSIOLOGY": "Physiology", "BIOCHEMISTRY": "Biochemistry",
+    "PHARMACOLOGY": "Pharmacology", "MICROBIOLOGY": "Microbiology", "PATHOLOGY": "Pathology",
+    "COMMUNITY MEDICINE": "Community Medicine / PSM", "FORENSIC MEDICINE": "Forensic Medicine",
+    "OPHTHALMOLOGY": "Ophthalmology", "ENT": "ENT", "ANESTHESIA": "Anaesthesia",
+    "DERMATOLOGY": "Dermatology", "PSYCHIATRY": "Psychiatry", "RADIOLOGY": "Radiology",
+    "MEDICINE": "Medicine", "SURGERY": "Surgery", "ORTHOPEDICS": "Orthopaedics",
+    "PEDIATRICS": "Paediatrics", "OBSTETRICS AND GYNECOLOGY": "Obstetrics & Gynaecology",
+}
+def _marrow_pyq_subject(cat):
+    c = (cat or "").strip().upper()
+    if c in _MARROW_PYQ_CAT:
+        return _MARROW_PYQ_CAT[c]
+    first = c.split()[0] if c.split() else c   # malformed merged rows e.g. "ENT AIIMS 2017"
+    return _MARROW_PYQ_CAT.get(first, canon(cat.title()))
+
+def _parse_exam_year(label):
+    """label → (exam, year). exam ∈ {NEET PG, INI-CET, FMGE, AIIMS} or None; year int or None.
+    Order matters: FMGE → INI-CET (incl. legacy INICET / 'INI CET') → AIIMS → NEET."""
+    s = (label or "").upper()
+    my = re.search(r"(19|20)\d{2}", s)
+    year = int(my.group(0)) if my else None
+    if "FMGE" in s:
+        exam = "FMGE"
+    elif "INI" in s:                      # INI-CET / INICET / INI CET
+        exam = "INI-CET"
+    elif "AIIMS" in s:                    # legacy AIIMS PG (pre-INI-CET)
+        exam = "AIIMS"
+    elif "NEET" in s:
+        exam = "NEET PG"
+    else:
+        exam = None
+    return exam, year
+
+def build_pyq():
+    EXAMS = ["NEET PG", "INI-CET", "FMGE", "AIIMS"]
+    plat_meta = {p["id"]: p for p in platforms}
+    papers = []   # flat trackable units: {id, platformId, setKind, subject, label, exam, year, count}
+
+    def add(pid, set_kind, subject, label, count, pid_for_id=None):
+        c = count if isinstance(count, int) else 0
+        exam, year = _parse_exam_year(label)
+        papers.append({
+            "id": pid_for_id or ("pyq-" + slug(pid, set_kind, subject, label)[:88] + f"-{len(papers)}"),
+            "platformId": pid, "setKind": set_kind, "subject": canon_loose(subject),
+            "label": label.strip(), "exam": exam, "year": year, "count": c,
+        })
+
+    # 1) Marrow — reuse existing leaf ids (unions with the QBank tracker)
+    for m in marrow_modules:
+        if m["subject"] != "Previous Year Question Papers":
+            continue
+        add("marrow", "pyq", _marrow_pyq_subject(m["category"]), m["module"], m["mcqs"], pid_for_id=m["id"])
+
+    # 2) DocTutorials — PYQ (past papers) + QRP (quick-revision sets)
+    if os.path.exists(DT_PATH):
+        for row in rd(DT_PATH)[1:]:
+            if len(row) < 4:
+                continue
+            section, subject, chapter, mcq = row[0], row[1], row[2], row[3]
+            kind = "pyq" if section == "PYQ" else "qrp" if section == "QRP" else None
+            if not kind:
+                continue
+            add("doctutorials", kind, subject, chapter, int(mcq) if mcq.isdigit() else 0)
+
+    # 3) PrepLadder — PYQ by subject × exam/year
+    PL_PYQ = f"{NP}/prepladder_pyq.csv"
+    if os.path.exists(PL_PYQ):
+        for row in rd(PL_PYQ)[1:]:
+            if len(row) < 3 or not row[0]:
+                continue
+            subject, label, qc = row[0], row[1], row[2]
+            add("prepladder", "pyq", subject, label, int(qc) if qc.isdigit() else 0)
+
+    # 4) eGurukul — PYQ (past papers) + Express (revision question bank)
+    EG_OTHER = f"{NP}/egurukul_other.csv"
+    if os.path.exists(EG_OTHER):
+        for row in rd(EG_OTHER)[1:]:
+            if len(row) < 4 or not row[1]:
+                continue
+            section, subject, topic, qc = row[0], row[1], row[2], row[3]
+            kind = "pyq" if section == "PYQ" else "express" if section.startswith("Express") else None
+            if not kind:
+                continue
+            add("egurukul", kind, subject, topic, int(qc) if qc.isdigit() else 0)
+
+    # per-platform rollups (+ honest "no capture" entry for Cerebellum)
+    SET_LABEL = {"pyq": "Past papers", "qrp": "Quick-revision sets (QRP)", "express": "Express question bank"}
+    plats_out = []
+    for p in platforms:
+        pid = p["id"]
+        mine = [x for x in papers if x["platformId"] == pid]
+        sets = []
+        for sk in ("pyq", "qrp", "express"):
+            sub = [x for x in mine if x["setKind"] == sk]
+            if not sub:
+                continue
+            sets.append({"kind": sk, "label": SET_LABEL[sk], "isPastPaper": sk == "pyq",
+                         "questions": sum(x["count"] for x in sub), "paperCount": len(sub)})
+        plats_out.append({
+            "platformId": pid, "name": p["name"], "kind": p["kind"], "has": bool(mine),
+            "questions": sum(x["count"] for x in mine), "paperCount": len(mine), "sets": sets,
+        })
+
+    pyq_papers = [x for x in papers if x["setKind"] == "pyq"]
+    return {
+        "captured": "26 June 2026",
+        "epistemic": "measured",
+        "measuredNote": ("Actual past-exam question counts captured per platform (measured). "
+                         "Cerebellum exposes no PYQ bank in our capture. Quick-revision sets "
+                         "(DocTutorials QRP, eGurukul Express) are measured too but flagged separately — "
+                         "they are revision banks, not past papers."),
+        "exams": EXAMS,
+        "platforms": plats_out,
+        "papers": papers,
+        "totals": {
+            "questions": sum(x["count"] for x in papers), "paperCount": len(papers),
+            "pyqQuestions": sum(x["count"] for x in pyq_papers), "pyqPaperCount": len(pyq_papers),
+            "platformsWithPyq": sum(1 for p in plats_out if any(s["kind"] == "pyq" for s in p["sets"])),
+        },
+    }
+
+pyq_data = build_pyq()
+
 # ---------- curated judgment layer (Phase 1c.1 — substance, honestly labelled) ----------
 # Curated, sourced claims live in _raw/curated/*.json (never hardcoded here). Every directional /
 # public-3p figure references a source in the shared registry. epistemic labels: measured | proxy |
@@ -860,6 +1001,9 @@ data = {
     # canonical Subject→Section→Topic library + PYQ-frequency importance spine (Phase 1d)
     # directional; platformRefs filled by the mapping stage below.
     "library": library,
+    # previous-year-question seams (Phase 2b) — measured past-paper question counts per
+    # platform (+ flagged QRP/Express revision sets). SEPARATE from the 56,091 QBank figure.
+    "pyq": pyq_data,
 }
 
 out = os.path.join(os.path.dirname(__file__), "data.js")
@@ -909,4 +1053,12 @@ if library_coverage:
         print(f"  {pc['name']:16s} HY {pc['hyCovered']:>3d}/{pc['hyTotal']:<3d} ({pc['hyPct']:>3d}%) · "
               f"topics {pc['topicsCovered']:>3d}/{pc['topicsTotal']} ({pc['topicsPct']:>3d}%) · "
               f"leaves mapped {pc['leavesMapped']:>4d}/{pc['leavesTotal']:<4d} unmapped {pc['leavesUnmapped']}")
+if pyq_data:
+    pt = pyq_data["totals"]
+    print(f"PYQ seams: {pt['pyqPaperCount']} past-paper sets ({pt['pyqQuestions']} Qs) across "
+          f"{pt['platformsWithPyq']} platforms + revision sets; {pt['paperCount']} total trackable units "
+          f"(measured; SEPARATE from 56,091)")
+    for pc in pyq_data["platforms"]:
+        setsdesc = ", ".join(f"{s['kind']} {s['paperCount']}×/{s['questions']}Q" for s in pc["sets"]) or "no PYQ capture"
+        print(f"  {pc['name']:16s} {'has' if pc['has'] else 'NONE':4s} · {setsdesc}")
 print(f"Wrote {out}")
