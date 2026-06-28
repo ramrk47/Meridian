@@ -147,6 +147,10 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-28 **Study Planner research commissioned** (external Claude chat) — adherence-not-hours focus:
+  cross-platform plan orchestration, tracking-without-time-logging, missing-feature gaps, NEET-PG-weighted,
+  r/indianmedschool + topper vlogs + shared spreadsheet/Notion artifacts. **When it lands, fold findings
+  into `STUDY_PLANNER.md`** (and reconcile the parked subscriptions lens against what it shows).
 - 2026-06-28 **Mapping audit verified+accepted by coordinator; `PHASE2B_PROMPT.md` refreshed for the spine.**
   Independent recompute matched: **594/787 topics, 152/157 HY** mapped, 56,091 preserved, guard intact. Spine
   is tracker-ready (cleared the "<60% HY ⇒ granularity problem" risk). Rewrote the stale 2b prompt (dropped the
