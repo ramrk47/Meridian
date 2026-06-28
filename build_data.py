@@ -572,6 +572,71 @@ def _phrase_match(canon_name, leaf_str):
 
 _MATCH_THRESHOLD = 0.78
 
+# Curated recall-recovery overlay (Mapping Audit, ultracode): verified platform→topic
+# maps the precision-first matcher missed on granularity/naming. Each entry is gated by
+# propose→refute agents; this build only MERGES survivors that pass strict structural
+# validation (leaf exists, belongs to the named platform, SAME canonical subject as the
+# topic). No spine edits — only platformRefs grow. Absent file → identical to pre-overlay.
+MAP_OVERRIDES_PATH = f"{RAW}/curated/mapping_overrides.json"
+
+def _apply_map_overrides(topic_index, leaf_index):
+    """Merge the curated overlay into topic.platformRefs (additions) and drop verified false-positive
+    links (removals). Returns (added_links, added_leaf_refs, removed_links, rejections[]). added_links =
+    NEW (topic,platform) coverage edges; removed_links = existing edges deleted; rejections are logged."""
+    if not os.path.exists(MAP_OVERRIDES_PATH):
+        return 0, 0, 0, []
+    with open(MAP_OVERRIDES_PATH, encoding="utf-8") as f:
+        doc = json.load(f)
+    pids = {p["id"] for p in platforms}
+    added_links = added_refs = removed_links = 0
+    rejections = []
+    # removals FIRST: drop the matcher's confirmed false-positive links (homonym / generic-noun)
+    # before additions, so a correct overlay leaf for the same (topic,platform) can re-establish the
+    # link via the right leaf rather than being nuked alongside the bad one.
+    for r in doc.get("removals", []):
+        tid, pid = r.get("topicId"), r.get("platformId")
+        ent = topic_index.get(tid)
+        if not ent:
+            rejections.append(("removal-unknown-topic", tid, pid, None)); continue
+        refs = ent[1]["platformRefs"]
+        if pid not in refs:
+            rejections.append(("removal-no-such-link", tid, pid, None)); continue
+        # Condemn the whole spurious LINK (the skeptics flagged the topic↔platform edge as a
+        # homonym/generic-noun false positive). Any genuinely-correct leaf is re-established by a
+        # verified addition below (additions run after removals). leafIds in the removal are advisory.
+        del refs[pid]; removed_links += 1
+    for m in doc.get("mappings", []):
+        tid, pid = m.get("topicId"), m.get("platformId")
+        leaf_ids = [l for l in (m.get("leafIds") or []) if l]
+        ent = topic_index.get(tid)
+        if not ent:
+            rejections.append(("unknown-topic", tid, pid, leaf_ids)); continue
+        t_subj, topic = ent
+        if pid not in pids:
+            rejections.append(("unknown-platform", tid, pid, leaf_ids)); continue
+        valid = []
+        for lid in leaf_ids:
+            li = leaf_index.get(lid)
+            if not li:
+                rejections.append(("unknown-leaf", tid, pid, lid)); continue
+            l_pid, l_subj = li
+            if l_pid != pid:
+                rejections.append(("leaf-platform-mismatch", tid, pid, lid)); continue
+            if l_subj != t_subj:  # granularity recovery stays within the canonical subject
+                rejections.append(("cross-subject", tid, pid, lid)); continue
+            valid.append(lid)
+        if not valid:
+            continue
+        refs = topic["platformRefs"]
+        was_covered = pid in refs
+        cur = refs.setdefault(pid, [])
+        for lid in valid:
+            if lid not in cur:
+                cur.append(lid); added_refs += 1
+        if not was_covered:
+            added_links += 1
+    return added_links, added_refs, removed_links, rejections
+
 def map_platforms_to_library():
     if not library:
         return None
@@ -579,6 +644,7 @@ def map_platforms_to_library():
     lib_subjects = {s["subject"] for s in library["subjects"]}
     leaves_by_subj = {}
     leaf_total = {p["id"]: 0 for p in platforms}
+    leaf_index = {}  # leafId -> (platformId, canonicalSubject) — for overlay validation
     for p in platforms:
         for s in p["subjects"]:
             cs = canon(s["subject"])
@@ -586,17 +652,18 @@ def map_platforms_to_library():
                 continue
             for m in s["modules"]:
                 leaf_total[p["id"]] += 1
+                leaf_index[m["id"]] = (p["id"], cs)
                 leaves_by_subj.setdefault(cs, []).append(
                     {"pid": p["id"], "id": m["id"], "name": m["name"], "cat": m.get("category")})
     leaf_mapped = {p["id"]: set() for p in platforms}  # leaf ids that hit ≥1 canonical topic
-    # coverage tallies
-    cov = {p["id"]: {"hyCovered": 0, "hyTotal": 0, "topicsCovered": 0, "topicsTotal": 0}
-           for p in platforms}
+    topic_index = {}  # topicId -> (canonicalSubject, topic) — for overlay validation
+    # Pass 1: fill every topic's platformRefs from the precision-first matcher.
     for subj in library["subjects"]:
         cs = subj["subject"]
         pool = leaves_by_subj.get(cs, [])
         for sec in subj["sections"]:
             for t in sec["topics"]:
+                topic_index[t["id"]] = (cs, t)
                 # candidate phrases: the name, each alias, and each conjunct entity within them
                 names = []
                 for raw in [t["name"]] + (t["aliases"] or []):
@@ -616,6 +683,26 @@ def map_platforms_to_library():
                         refs.setdefault(leaf["pid"], []).append(leaf["id"])
                         leaf_mapped[leaf["pid"]].add(leaf["id"])
                 t["platformRefs"] = refs
+    # Pass 2: merge the curated recall-recovery overlay (validated; absent file = no-op).
+    cur_links, cur_refs, cur_removed, cur_rej = _apply_map_overrides(topic_index, leaf_index)
+    if cur_links or cur_refs or cur_removed or cur_rej:
+        print(f"Mapping overlay: +{cur_links} topic-platform links, +{cur_refs} leaf refs, "
+              f"-{cur_removed} false-positive links removed, {len(cur_rej)} rejected by validator")
+        for kind, tid, pid, lid in cur_rej[:20]:
+            print(f"  reject [{kind}] topic={tid} platform={pid} leaf={lid}")
+    # Pass 3: rebuild leaf_mapped from the FINAL refs (so additions/removals are reflected), then tally.
+    leaf_mapped = {p["id"]: set() for p in platforms}
+    for subj in library["subjects"]:
+        for sec in subj["sections"]:
+            for t in sec["topics"]:
+                for pid, lids in t["platformRefs"].items():
+                    leaf_mapped.setdefault(pid, set()).update(lids)
+    cov = {p["id"]: {"hyCovered": 0, "hyTotal": 0, "topicsCovered": 0, "topicsTotal": 0}
+           for p in platforms}
+    for subj in library["subjects"]:
+        for sec in subj["sections"]:
+            for t in sec["topics"]:
+                refs = t["platformRefs"]
                 for p in platforms:
                     cov[p["id"]]["topicsTotal"] += 1
                     if t["tier"] == 3:
@@ -645,7 +732,9 @@ def map_platforms_to_library():
     hy_any = sum(1 for t in hy_all if t["platformRefs"])
     return {
         "matcher": "name+alias normalized token match, anchored on canonical topics; "
-                   f"threshold {_MATCH_THRESHOLD}; precision-first (unmapped over forced)",
+                   f"threshold {_MATCH_THRESHOLD}; precision-first (unmapped over forced); "
+                   "+ curated recall-recovery overlay (propose→refute verified, granularity-aware)",
+        "curatedLinks": cur_links, "curatedLeafRefs": cur_refs,
         "topicsTotal": len(topics_all), "topicsWithAnyPlatform": topics_any,
         "hyTotal": len(hy_all), "hyWithAnyPlatform": hy_any,
         "platforms": platform_cov,

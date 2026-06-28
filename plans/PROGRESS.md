@@ -52,7 +52,7 @@
 | Source | Level | epistemic | Status |
 |--------|-------|-----------|--------|
 | Masterlist (Reddit-sourced) | subject→section→topic | `directional` | ✅ 19 subjects · 170 sections · **787 topics** (157 High) → `D.library`; PYQ-freq importance + angle + aliases |
-| Cross-platform map | topic↔platform leaf | build-time | ✅ `library.topics[].platformRefs` + `library.coverage`: 232/787 topics, 77/157 HY confidently mapped (precision-first) |
+| Cross-platform map | topic↔platform leaf | build-time | ✅ `library.topics[].platformRefs` + `library.coverage`: **594/787 topics, 152/157 HY** mapped (precision-first matcher + propose→refute→confirm recall-recovery overlay `_raw/curated/mapping_overrides.json`; was 232/787, 77/157). 1,401 verified links added, 9 false positives removed |
 
 **Curated layer (`_raw/curated/`)** — sourced judgment, generated into `D` by `build_data.py` (1c.1 / 1d):
 | File | Rows | epistemic | Status |
@@ -121,11 +121,14 @@
   density demoted to a clearly-labelled `proxy` lens (kept, not deleted). Verified 320→1440 day+evening,
   console clean, no h-scroll; 375+1440 of HY + a Subject page. Commits `f6d6564`·`737f673`·`d3289a3`·`9f0c1ac`.
   ⚠️ Mapping is the highest-risk artifact — worth an adversarial/ultracode audit before the tracker builds on it.
-### Mapping Audit & Recall-Recovery (NEW — after 1d, before Phase 2) — `MAPPING_AUDIT_BRIEF.md` (ULTRACODE)
-- [ ] Raise platform↔canonical-topic mapping **recall** (1d shipped precision-first: 232/787 topics, 77/157 HY;
-  Marrow only 46/157, Cere 14 — recall failures, not real gaps) **without losing precision**. Per-subject
-  propose→refute fan-out; handle 1:many/many:1 granularity; keep only maps that survive adversarial refutation.
-  *The tracker is built on this map — must be trustworthy first.*
+### Mapping Audit & Recall-Recovery (after 1d, before Phase 2) — `MAPPING_AUDIT_BRIEF.md` (ULTRACODE) ✅
+- [x] Raised platform↔canonical-topic mapping **recall** without losing precision. Per-subject
+  propose→**refute**→**confirm** fan-out (19 subjects × 3 stages, Opus 4.8 high, two independent skeptics,
+  default-reject); handled 1:many/many:1 granularity. **232/787→594/787 topics, 77/157→152/157 HY.**
+  1,401 verified links added (every one survived two adversarial passes + a structural re-validation in
+  `build_data.py`), 9 matcher false positives removed (bladder/gall-bladder homonym, generic "synthesis"/
+  "inhibitor"/"syndrome"). 5 HY topics remain honest gaps (Cystourethroscope, Hysteroscopy, High-risk
+  pregnancy, Poisoning, Post-gastrectomy). Overlay = `_raw/curated/mapping_overrides.json`; spine untouched.
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer) —
   `PHASE2B_PROMPT.md`, **rebuilt on the 1d canonical spine** (Stage-1 platform integration moved into 1d);
@@ -144,6 +147,21 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-28 **Mapping Audit & Recall-Recovery SHIPPED (ULTRACODE) — map is now tracker-ready.** Ran a
+  per-subject `propose→refute→confirm` Workflow (19 subjects pipelined, 3 stages, Opus 4.8 · high; two
+  independent skeptics, default-reject; 1:many/many:1 granularity-aware) to recover matches the 1d
+  precision-first matcher missed on naming/granularity. **Coverage 232/787→594/787 topics (29%→75%),
+  77/157→152/157 HY (49%→97%).** Per-platform HY: Marrow 46→136, Cerebellum 14→61, DocTutorials 26→112,
+  PrepLadder 45→134, eGurukul 54→133. Mechanism: a validated **overlay** (`_raw/curated/mapping_overrides.json`,
+  1,401 added links + 9 removals) merged in `build_data.py` after the algorithmic pass — spine (`D.library`)
+  untouched; validator re-checks every leaf (exists / right platform / same canonical subject) and dropped
+  2 fabricated ids (1 recovered as a slug-truncation typo). Removals fixed real matcher false positives
+  (bladder/gall-bladder homonym; generic "synthesis"/"inhibitor"/"syndrome"). 5 HY topics left as **honest
+  gaps** (Cystourethroscope, Hysteroscopy, High-risk pregnancy, Poisoning, Post-gastrectomy). Guards pass
+  (56,091 / 42,889 unchanged); spot-checked 18 recoveries (incl. all riskiest cerebellum broad-unit maps) —
+  all correct. Preview verified (HY + Subject pips, console clean, no h-scroll 320→1440, day+evening).
+  Note: first run hit transient API "connection closed" on 4 subjects' Propose; a retry-hardened refire
+  (`mapaudit_refire.js`) recovered them. **Next = Phase 2b tracker on this map.**
 - 2026-06-28 **Phase 1d verified+accepted; next = an ULTRACODE Mapping Audit before Phase 2b** (`MAPPING_AUDIT_BRIEF.md`).
   Independent recompute matched the builder: D.library 19/170/787, **77/157 HY mapped**, 56,091 preserved,
   PrepLadder/eGurukul integrated as `kind:lecture`/null-MCQ, High-Yield now importance-first. The mapping is

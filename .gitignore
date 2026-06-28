@@ -12,3 +12,7 @@ node_modules/
 _raw/NewPlatforms/*.html
 _raw/NewPlatforms/*_files/
 _raw/NewPlatforms/*.zip
+
+# ultracode mapping-audit work inputs (not committed)
+.mapwork/
+__pycache__/
