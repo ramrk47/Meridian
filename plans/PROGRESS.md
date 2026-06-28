@@ -147,6 +147,12 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-28 **Mapping audit verified+accepted by coordinator; `PHASE2B_PROMPT.md` refreshed for the spine.**
+  Independent recompute matched: **594/787 topics, 152/157 HY** mapped, 56,091 preserved, guard intact. Spine
+  is tracker-ready (cleared the "<60% HY ⇒ granularity problem" risk). Rewrote the stale 2b prompt (dropped the
+  now-done platform integration) to build the **PYQ tracker + unified cross-platform tracker organized around
+  `D.library` + `platformRefs`** — union progress, HY-coverage + gaps, 5 genuine HY gaps surfaced honestly.
+  **Greenlit as the next build** (Opus high). Subscriptions lens stays parked (additive, per `STUDY_PLANNER.md`).
 - 2026-06-28 **Mapping Audit & Recall-Recovery SHIPPED (ULTRACODE) — map is now tracker-ready.** Ran a
   per-subject `propose→refute→confirm` Workflow (19 subjects pipelined, 3 stages, Opus 4.8 · high; two
   independent skeptics, default-reject; 1:many/many:1 granularity-aware) to recover matches the 1d
