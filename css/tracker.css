@@ -87,6 +87,7 @@
 .trk-genuine .lrow-sub { color: var(--ink-2); }
 
 /* desktop: lay completion + gaps two-up */
+.trk-prove-grid > * { min-width: 0; }   /* let both panels shrink (no min-content blow-out) */
 @media (min-width: 1024px) {
   .trk-prove-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
 }
