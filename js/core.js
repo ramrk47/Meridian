@@ -265,6 +265,52 @@ function videoFaculty() {
 const SUBJ_BY_CANON = {};
 QBANKS.forEach(p => p.subjects.forEach(s => { const c = canon(s.subject); (SUBJ_BY_CANON[c] = SUBJ_BY_CANON[c] || {})[p.id] = s.subject; }));
 
+/* ---- canonical topic library + importance spine (Phase 1d) ----
+   D.library = community-curated PYQ-frequency importance (epi=directional, sourced).
+   Each topic: name, aliases[], timesRepeated (PYQ freq), priority, tier (3/2/1),
+   pyqAngle (how it's asked), importance (derived 0..1), platformRefs{platformId:[leafIds]}
+   (the build-time CONFIDENT cross-platform map — the primary high-yield signal now;
+   MCQ-density stays available as a clearly-labelled proxy). Helpers degrade to empty
+   so surfaces can call them safely even if D.library is absent. */
+const LIB = D.library || null;
+const LIB_SRC = (LIB && LIB.source) || null;
+const LIB_SRC_IDS = LIB_SRC ? [LIB_SRC.id] : [];
+const LIB_CAP = (LIB_SRC && LIB_SRC.captured) || D.captured;
+const LIB_COV = (LIB && LIB.coverage) || null;
+const LIB_BY_SUBJECT = {};
+const LIB_TOPICS = [];
+if (LIB) LIB.subjects.forEach(s => {
+  LIB_BY_SUBJECT[s.subject] = s;
+  s.sections.forEach(sec => sec.topics.forEach(t => LIB_TOPICS.push(Object.assign({ subject: s.subject, section: sec.name }, t))));
+});
+const LIB_SUBJECTS = LIB ? LIB.subjects.map(s => s.subject) : [];
+const _byImp = (a, b) => (b.importance - a.importance) || ((b.timesRepeated || 0) - (a.timesRepeated || 0));
+function libTopics(canonSubj) { return LIB_TOPICS.filter(t => t.subject === canonSubj).sort(_byImp); }
+function libTopTopics(n) { return LIB_TOPICS.slice().sort(_byImp).slice(0, n || 24); }
+function libCovFor(platformId) { return LIB_COV ? (LIB_COV.platforms || []).find(p => p.platformId === platformId) : null; }
+/* importance tier → gold stars, framed as directional PYQ-frequency (NOT measured yield) */
+function impStars(tier) {
+  const s = tier === 3 ? "★★★" : tier === 2 ? "★★" : "★";
+  const lbl = tier === 3 ? "High" : tier === 2 ? "Moderate" : "Low";
+  return `<span class="imp imp-${tier}" title="${lbl} PYQ-frequency importance (directional, community-curated)">${s}</span>`;
+}
+/* a library topic's confident platform coverage as colour pips (from platformRefs).
+   Covered = a colour pip per platform; absence renders as a muted dash. Honest framing:
+   "not confidently mapped" ≠ "absent" (platform naming may simply differ). */
+function libCoverageChips(topic) {
+  const refs = (topic && topic.platformRefs) || {};
+  const order = ["marrow", "cerebellum", "doctutorials", "prepladder", "egurukul"].filter(id => PLAT_BY_ID[id]);
+  const covered = order.filter(id => refs[id] && refs[id].length);
+  if (!covered.length) return `<span class="cov-none" title="Not confidently mapped to any platform yet — naming may differ, not necessarily absent">— not mapped</span>`;
+  const pips = covered.map(id => `<span class="cov-pip ${platCls(id)}" style="background:${platColor(id)}" title="${esc(platName(id))} confidently maps this topic">${esc(platInitial(id))}</span>`).join("");
+  return `<span class="cov-pips" title="Confidently mapped on ${esc(covered.map(platName).join(", "))}">${pips}<span class="cov-n">${covered.length}/${order.length}</span></span>`;
+}
+/* has the user attempted ANY platform leaf confidently mapped to this topic? (measured) */
+function libTopicStarted(topic) {
+  const refs = (topic && topic.platformRefs) || {};
+  return Object.values(refs).some(ids => ids.some(id => Store.prog(id).a));
+}
+
 /* shared status-dot fragment (used by overview, drawer, consensus) */
 function statusDots(id) {
   const p = Store.prog(id);

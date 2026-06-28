@@ -8,6 +8,26 @@
 /* tiles strip — shared .tiles handles the 2/3-col grid; just spacing here */
 .hy-tiles { margin-bottom: var(--sp-3, 12px); }
 
+/* ---- PRIMARY: importance (PYQ-frequency) section ---- */
+.hy-importance { margin: var(--sp-4, 16px) 0; border-color: var(--gold-line, var(--line-2)); }
+.hy-importance .ph h3 { color: var(--ink); }
+/* the PYQ "angle" the topic is asked from — clamp to 2 lines, never blow up the row */
+.imp-angle { color: var(--ink-2); font-size: 12px; display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden; }
+.hy-implist .lrow { align-items: flex-start; }
+.hy-implist .lrow-lead { padding-top: 1px; }
+.hy-implist .lrow-trail { align-self: center; }
+
+/* ---- divider into the secondary proxy-density lens ---- */
+.hy-lens-divider { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  margin: var(--sp-5, 22px) 0 var(--sp-3, 12px); padding-top: 14px; border-top: 1px solid var(--line-2); }
+.hy-lens-l { font-weight: 700; font-size: 13px; color: var(--ink); letter-spacing: .01em; }
+
+@media (max-width: 640px) {
+  .imp-subj { display: block; margin-left: 0; margin-top: 1px; }
+  .imp-angle { -webkit-line-clamp: 3; }
+}
+
 /* the relational hero frame holder (chartFrame already styles the plate) */
 .hy-frame { margin: var(--sp-4, 16px) 0; }
 

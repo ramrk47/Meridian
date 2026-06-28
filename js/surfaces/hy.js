@@ -83,31 +83,99 @@ function renderHY() {
   const hhRev = hh.filter(l => Store.prog(l.id).r).length;
   const topSubj = subjects[0];
 
-  /* ── 6 stat-tiles (mobile 2/3-col, 84–104px). One hero serif numeral. ── */
+  /* ── PRIMARY signal: PYQ-frequency importance from the canonical spine (directional). ──
+     MCQ density (above) is demoted to a clearly-labelled proxy lens lower down. */
+  const libHigh = LIB_TOPICS.filter(t => t.tier === 3);
+  const libHighStarted = libHigh.filter(libTopicStarted).length;
+  const covHy = LIB_COV ? LIB_COV.hyWithAnyPlatform : 0;
+  const covHyTot = LIB_COV ? LIB_COV.hyTotal : libHigh.length;
+
+  /* ── 6 stat-tiles (mobile 2/3-col, 84–104px). Hero leads with REAL PYQ frequency. ── */
   const tiles = el("div", "tiles hy-tiles");
   tiles.innerHTML =
-    statTile({ accent: "g", hero: true, value: fmt(hyAll.length), label: "Top-density topics", note: `★★★ across ${QBANKS.length} banks`, epi: "proxy" }) +
-    statTile({ accent: "c", value: fmt(consensus.length), label: "Consensus topics", note: "≥2 banks agree ★★★", epi: "proxy" }) +
-    statTile({ accent: "m", value: pct(hyDone, hyAll.length) + "%", label: "You've started", note: `${hyDone} of ${fmt(hyAll.length)}`, epi: "measured" }) +
-    statTile({ accent: "g", value: fmt(hyAll.length - hyDone), label: "Density gaps", note: "untouched ★★★", epi: "measured" }) +
+    statTile({ accent: "g", hero: true, value: fmt(libHigh.length), label: "High-yield topics", note: `by PYQ frequency · ${LIB_SUBJECTS.length} subjects`, epi: "directional" }) +
+    statTile({ accent: "k", value: `${covHy}/${covHyTot}`, label: "Mapped to a platform", note: "confident cross-platform", epi: "directional" }) +
+    statTile({ accent: "m", value: pct(libHighStarted, libHigh.length) + "%", label: "You've started", note: `${libHighStarted} of ${fmt(libHigh.length)} HY`, epi: "measured" }) +
+    statTile({ accent: "c", value: fmt(consensus.length), label: "Density consensus", note: "≥2 banks agree ★★★", epi: "proxy" }) +
     statTile({ accent: "k", value: fmt(subjTotal(topSubj)), label: "Heaviest subject", note: esc(topSubj), epi: "measured", go: "subject:" + topSubj }) +
-    statTile({ accent: "m", value: pct(hhRev, hh.length) + "%", label: "★★+ reviewed", note: "depth of revision", epi: "measured" });
+    statTile({ accent: "g", value: fmt(hyAll.length), label: "Top-density topics", note: "★★★ proxy lens (below)", epi: "proxy" });
   v.appendChild(tiles);
-  // count-up the ONE hero serif numeral (top-density topics). statTile already
-  // printed the final en-IN string; we just stamp data-count="<raw int>" so the
-  // shared countUp() (run by animateView after render) tweens to it ONCE.
-  // Reduced-motion / no-IO → countUp is a no-op and the final text stays put.
+  // count-up the ONE hero serif numeral (high-yield topics). statTile printed the final
+  // en-IN string; we stamp data-count="<raw int>" so the shared countUp() tweens once.
   const heroV = tiles.querySelector(".tile.is-hero .tile-v");
-  if (heroV) heroV.dataset.count = String(hyAll.length);
+  if (heroV) heroV.dataset.count = String(libHigh.length);
 
-  /* ── honest proxy framing (the badge-in-view requirement) ── */
+  /* ── honest framing: importance primary (directional), density secondary (proxy) ── */
   const proxyNote = el("div", "callout proxy-note",
-    `<b>This tab ranks MCQ density ${epiBadge("proxy")} — a proxy, not measured exam yield.</b>
-     ★★★ marks the topics carrying the most question mass <em>within their subject</em> (Marrow: star-rating × MCQ share · Cerebellum: volume × density · DocTutorials: MCQ share).
-     We hold no PYQ-weighted exam-frequency data, so we never claim real "high-yield" — it's an honest prioritisation signal. The strongest signal we can build is <b>consensus</b>: a topic that two or more independent banks both flag.
-     <span class="muted">Click any subject or topic to open it. Full method → <button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button></span>`);
+    `<b>This tab now ranks real PYQ frequency ${epiBadge("directional")} as the primary signal.</b>
+     Topics are ordered by how often they've been asked (community-curated masterlist), each shown with the <em>angle</em> it's asked from and which platforms confidently cover it.
+     It's <b>directional</b> — community-curated PYQ counts, not Calvetra's measurement. Below, the older <b>MCQ-density</b> view stays as a clearly-labelled ${epiBadge("proxy")} lens (a stand-in for exam weight, not real yield).
+     <span class="muted">Source: ${LIB_SRC ? srcLinks(LIB_SRC_IDS) : "masterlist"} · captured ${esc(LIB_CAP)}. Click a topic to open its subject. Method → <button type="button" class="linkbtn" data-hy-howrate>How we rate ↗</button></span>`);
   proxyNote.setAttribute("data-reveal", "");
   v.appendChild(proxyNote);
+
+  /* ── ONE sticky toolbar (subject + status) — drives BOTH the importance section
+        and the proxy-density section below. Shared idiom with QBank. ── */
+  const HY_SUBJ_OPTS = [["all", "All subjects (top picks each)"]].concat(subjects.map(s => [s, s]));
+  const ctr = el("div", "controls hy-controls qb-controls");
+  ctr.innerHTML =
+    `<select class="sel desk-ctrl" id="hysub" aria-label="Subject">
+       ${HY_SUBJ_OPTS.map(([vv, l]) => `<option value="${esc(vv)}">${esc(l)}</option>`).join("")}
+     </select>
+     <select class="sel desk-ctrl" id="hystatus" aria-label="Filter by your status">
+       ${HY_STATUS_OPTS.map(([vv, l]) => `<option value="${esc(vv)}">${esc(l)}</option>`).join("")}
+     </select>
+     <button class="iconbtn mob-ctrl" id="hySubBtn" aria-label="Choose subject" title="Subject">☰</button>
+     <button class="iconbtn mob-ctrl" id="hyStatusBtn" aria-label="Filter topics" title="Filter">⛁</button>
+     <div class="spacer"></div><span class="count-pill">click a topic → subject</span>`;
+  v.appendChild(ctr);
+  $("#hysub").value = hySubject; $("#hystatus").value = hyStatus;
+  $("#hysub").addEventListener("change", e => { hySubject = e.target.value; renderHY(); });
+  $("#hystatus").addEventListener("change", e => { hyStatus = e.target.value; renderHY(); });
+  $("#hySubBtn")?.addEventListener("click", () => openSheet("Choose subject", HY_SUBJ_OPTS, hySubject, val => { hySubject = val; renderHY(); }));
+  $("#hyStatusBtn")?.addEventListener("click", () => openSheet("Filter by status", HY_STATUS_OPTS, hyStatus, val => { hyStatus = val; renderHY(); }));
+  $("#hyStatusBtn")?.classList.toggle("has-dot", hyStatus !== "all");
+
+  /* ──────────────────────────────────────────────────────────
+     PRIMARY — Highest-yield topics by PYQ frequency (directional, sourced).
+     Each row: importance stars · topic name (→ subject) · the PYQ ANGLE it's
+     asked from · "asked N×" · confident platform-coverage pips. This is the
+     real high-yield signal; density (below) is the proxy fallback.
+     ────────────────────────────────────────────────────────── */
+  if (LIB_TOPICS.length) {
+    const startFilter = t => hyStatus === "untracked" ? !libTopicStarted(t)
+      : hyStatus === "attempted" ? libTopicStarted(t) : true;
+    const impTopics = (hySubject === "all" ? libTopTopics(40) : libTopics(hySubject)).filter(startFilter);
+    const impRows = impTopics.map(t => {
+      const ang = t.pyqAngle ? `<span class="imp-angle" title="${esc(t.pyqAngle)}">${esc(t.pyqAngle)}</span>` : `<span class="imp-angle muted">angle not recorded</span>`;
+      const freq = t.timesRepeated != null ? `<span class="imp-freq" title="Times this topic recurred in the masterlist's PYQ scan (directional)">asked ${t.timesRepeated}×</span>` : "";
+      return listRow({
+        lead: impStars(t.tier),
+        title: `<a class="hy-jump is-link" data-go-subject="${esc(t.subject)}">${esc(t.name)}</a>`
+          + (hySubject === "all" ? ` <span class="imp-subj">${esc(t.subject)}</span>` : ` <span class="imp-subj">${esc(t.section)}</span>`),
+        sub: `${freq} ${ang}`,
+        trail: libCoverageChips(t),
+      });
+    });
+    const impHead = `<div class="ph"><div class="ph-l">`
+      + `<h3>Highest-yield topics — by PYQ frequency</h3>`
+      + `<span class="muted hy-sh">${hySubject === "all" ? "top picks across all subjects" : esc(hySubject)} · ranked by how often asked ${epiBadge("directional")}</span>`
+      + `</div><span class="count-pill">${impTopics.length} topics</span></div>`;
+    const impSec = el("section", "panel hy-panel hy-importance");
+    impSec.setAttribute("data-reveal", "");
+    impSec.innerHTML = impHead
+      + srcLine(LIB_SRC_IDS, LIB_CAP)
+      + `<div class="panel-body">${impRows.length ? groupList(impRows, "hy-implist")
+          : emptyState({ icon: "quill", title: "No topics under this filter", body: `No high-yield topics match this filter for ${esc(hySubject === "all" ? "any subject" : hySubject)}.` })}</div>`;
+    v.appendChild(impSec);
+  }
+
+  /* ── divider: everything below is the SECONDARY proxy-density lens ── */
+  const lens = el("div", "hy-lens-divider");
+  lens.setAttribute("data-reveal", "");
+  lens.innerHTML = `<span class="hy-lens-l">Secondary lens · MCQ density ${epiBadge("proxy")}</span>`
+    + `<span class="muted small">a stand-in for exam weight, not measured yield — kept for cross-checking</span>`;
+  v.appendChild(lens);
 
   /* ──────────────────────────────────────────────────────────
      Pl.1 — RELATIONAL HERO: density mass by subject, consensus-ranked.
@@ -214,33 +282,6 @@ function renderHY() {
     grid.innerHTML = consensusPanel + densePanel;
     v.appendChild(grid);
   }
-
-  /* ── ONE sticky toolbar — shared idiom with QBank: native <select> on desktop
-        (desk-ctrl) + icon-button → bottom-sheet (mob-ctrl) on mobile. Subject is a
-        large dynamic set; status reuses HY_STATUS_OPTS. ── */
-  const HY_SUBJ_OPTS = [["all", "All subjects (top picks each)"]].concat(subjects.map(s => [s, s]));
-  // reuse the .qb-controls container class so the established responsive toggle
-  // (desk-ctrl native selects on desktop · mob-ctrl icon-buttons → sheet on mobile)
-  // applies here too — one shared toolbar idiom, no per-surface CSS.
-  const ctr = el("div", "controls hy-controls qb-controls");
-  ctr.innerHTML =
-    `<select class="sel desk-ctrl" id="hysub" aria-label="Subject">
-       ${HY_SUBJ_OPTS.map(([vv, l]) => `<option value="${esc(vv)}">${esc(l)}</option>`).join("")}
-     </select>
-     <select class="sel desk-ctrl" id="hystatus" aria-label="Filter by your status">
-       ${HY_STATUS_OPTS.map(([vv, l]) => `<option value="${esc(vv)}">${esc(l)}</option>`).join("")}
-     </select>
-     <button class="iconbtn mob-ctrl" id="hySubBtn" aria-label="Choose subject" title="Subject">☰</button>
-     <button class="iconbtn mob-ctrl" id="hyStatusBtn" aria-label="Filter topics" title="Filter">⛁</button>
-     <div class="spacer"></div><span class="count-pill">click a topic → detail card</span>`;
-  v.appendChild(ctr);
-  $("#hysub").value = hySubject; $("#hystatus").value = hyStatus;
-  $("#hysub").addEventListener("change", e => { hySubject = e.target.value; renderHY(); });
-  $("#hystatus").addEventListener("change", e => { hyStatus = e.target.value; renderHY(); });
-  // mobile: subject/status open a bottom-sheet (same openSheet helper QBank uses)
-  $("#hySubBtn")?.addEventListener("click", () => openSheet("Choose subject", HY_SUBJ_OPTS, hySubject, val => { hySubject = val; renderHY(); }));
-  $("#hyStatusBtn")?.addEventListener("click", () => openSheet("Filter by status", HY_STATUS_OPTS, hyStatus, val => { hyStatus = val; renderHY(); }));
-  $("#hyStatusBtn")?.classList.toggle("has-dot", hyStatus !== "all");
 
   /* ──────────────────────────────────────────────────────────
      Per-subject density — top topics by hyScore, as inset groupLists.

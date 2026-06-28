@@ -13,7 +13,7 @@
 
 /* per-page UI state: which mobile panel the segmented control shows.
    Desktop ignores this (all panels render in the grid). */
-let _subjTab = "coverage";
+let _subjTab = "highyield";
 
 /* Single source of truth for "are we in single-panel (mobile) mode?".
    Keyed on the SAME 640px breakpoint the CSS uses (css/subject.css).
@@ -170,6 +170,33 @@ function _subjCoveragePanel(canonSubj, stats, cap) {
     CUR.strength ? CUR.strength.sourceIds : [], cap, hm + links, { legend, note });
 }
 
+/* PRIMARY high-yield panel — canonical topics ranked by PYQ-frequency importance
+   (directional, sourced). Each row: importance stars · topic · the angle it's asked
+   from · "asked N×" · confident platform coverage. This is the real high-yield signal;
+   the consensus/density panel below is the proxy fallback. */
+function _subjImportancePanel(canonSubj, cap) {
+  const topics = LIB ? libTopics(canonSubj) : [];
+  if (!topics.length) {
+    return panel({ title: "High-yield topics — by PYQ frequency", epi: "directional", curated: true,
+      sourceIds: LIB_SRC_IDS, captured: LIB_CAP,
+      body: _subjEmpty({ mark: "ledger", title: "No spine topics for this subject",
+        body: `The community PYQ-frequency masterlist carries no topics for ${esc(canonSubj)} yet ${epiBadge("directional")}.` }) });
+  }
+  const rows = topics.slice(0, 24).map(t => {
+    const ang = t.pyqAngle ? `<span class="imp-angle" title="${esc(t.pyqAngle)}">${esc(t.pyqAngle)}</span>` : `<span class="imp-angle muted">angle not recorded</span>`;
+    const freq = t.timesRepeated != null ? `<span class="imp-freq">asked ${t.timesRepeated}×</span>` : "";
+    return listRow({
+      lead: impStars(t.tier),
+      title: `${esc(t.name)} <span class="imp-subj">${esc(t.section)}</span>`,
+      sub: `${freq}${ang}`,
+      trail: libCoverageChips(t),
+    });
+  });
+  return chartFrame("High-yield topics — by PYQ frequency", "directional", LIB_SRC_IDS, LIB_CAP,
+    groupList(rows, "subj-implist"),
+    { note: `Ranked by how often each topic recurred in the community-curated PYQ masterlist (directional — not Calvetra's measurement). The angle shows how it tends to be asked; coloured pips show which platforms confidently map it (— not mapped = naming differs, not necessarily absent). ${topics.length} topics on the spine for ${esc(canonSubj)}.` });
+}
+
 function _subjConsensusPanel(canonSubj, cap) {
   const topics = _consensusTopics(canonSubj, 8);
   if (!topics.length) {
@@ -289,10 +316,14 @@ function renderSubjectPage(canonSubj) {
   const vids = _subjVideos(canonSubj);
   const ro = rollupLeaves(_subjLeaves(canonSubj));
 
-  // 6 density stat-tiles (mobile fold). ONE hero serif numeral (combined MCQs, measured).
+  // high-yield topics on the spine for this subject (directional, PYQ-frequency)
+  const subjHy = LIB ? libTopics(canonSubj).filter(t => t.tier === 3).length : 0;
+  const subjTopics = LIB ? libTopics(canonSubj).length : 0;
+
+  // 6 stat-tiles (mobile fold). ONE hero serif numeral (combined MCQs, measured).
   const tiles = [
     statTile({ accent: "g", value: fmt(totalMCQ), label: "MCQs · " + esc(canonSubj), note: stats.filter(s => s.has).map(s => platName(s.id)).join(" + "), epi: "measured" }),
-    statTile({ accent: platCls(leader.id), value: leader.has ? leader.name : "—", label: "Most topics", note: leader.has ? fmt(leader.mcqs) + " MCQs (density)" : "—", epi: "proxy", go: leader.has ? "platform:" + leader.id : undefined }),
+    statTile({ accent: "g", value: subjHy || "—", label: "High-yield topics", note: subjTopics ? `of ${subjTopics} on the spine` : "spine n/a", epi: "directional" }),
     statTile({ accent: "m", value: esc(strongName), label: "Most reputed", note: "community reputation", epi: "directional" }),
     statTile({ accent: "k", value: pct(ro.a, ro.total) + "%", label: "You attempted", note: ro.a + "/" + ro.total + " topics", epi: "measured" }),
     statTile({ accent: "c", value: facs.length, label: "Faculty", note: facs.length ? "tap a panel below" : "seeding", epi: "directional" }),
@@ -300,12 +331,14 @@ function renderSubjectPage(canonSubj) {
   ].join("");
 
   // segmented mobile toolbar — swaps which panel is visible (single-panel density).
+  // High-Yield (PYQ-frequency importance) leads; density "Consensus" is the proxy lens.
   const segs = [
-    { v: "coverage", label: "Coverage" }, { v: "consensus", label: "Consensus" },
+    { v: "highyield", label: "High-Yield" }, { v: "coverage", label: "Coverage" }, { v: "consensus", label: "Density" },
     { v: "teachers", label: "Teachers" }, { v: "videos", label: "Videos" }, { v: "you", label: "You" },
   ];
 
   // build each panel once; desktop shows all in the grid, mobile shows the active one.
+  const pImportance = _subjImportancePanel(canonSubj, cap);
   const pCoverage = _subjCoveragePanel(canonSubj, stats, cap);
   const pConsensus = _subjConsensusPanel(canonSubj, cap);
   const pTeachers = _subjTeachersPanel(canonSubj, cap);
@@ -335,6 +368,9 @@ function renderSubjectPage(canonSubj) {
     <div class="subj-toolbar">${segmented(segs, _subjTab, "subjtab")}</div>
 
     <div class="subj-desk">
+      <div class="subj-band">
+        ${wrap("highyield", pImportance)}
+      </div>
       <div class="panel-grid">
         ${wrap("coverage", pCoverage)}
         ${wrap("consensus", pConsensus)}
