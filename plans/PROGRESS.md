@@ -37,27 +37,32 @@
 4. **Account/backend → Local-first now**, accounts + PHP/DB only after the wedge proves traction.
 5. **Neutrality → locked + public from day one** (firewall is a first-class, visible feature).
 
-## Data inventory (`_raw/NewPlatforms/`) — DocTutorials INTEGRATED; rest captured, not yet integrated
+## Data inventory (`_raw/NewPlatforms/`) — ALL 5 platforms INTEGRATED (1d); 3 carry measured MCQs, 2 are lecture
 | File | Rows | Level | Status |
 |------|-----:|-------|--------|
 | `doctutorials_subjects.csv` | 57 | subject×{Main,QRP,PYQ} | ✅ Main in `D.platforms` (QRP/PYQ = seam) |
 | `doctutorials_chapters.csv` | 1311 | chapter | ✅ 644 Main chapters → leaves (13,202 MCQs) |
-| `egurukul_topics.csv` | 1282 | topic | ⏳ seam (no counts on overview) |
+| `egurukul_topics.csv` | 1282 | topic | ✅ integrated `kind:"lecture"` (`mcqs:null`); mapped onto spine |
 | `egurukul_other.csv` | 1809 | topic (PYQ/Express) | ⏳ seam |
-| `prepladder_modules.csv` | 1115 | module | ⏳ seam (no MCQ totals yet) |
+| `prepladder_modules.csv` | 1115 | module | ✅ integrated `kind:"lecture"` (`mcqs:null`); mapped onto spine |
 | `prepladder_pyq.csv` | 361 | topic/year | ⏳ seam |
-| `prepladder_subject_totals.csv` | 19 | subject | ⏳ seam |
+| `prepladder_subject_totals.csv` | 19 | subject | ✅ used to validate PrepLadder module counts |
 
-**Curated layer (`_raw/curated/`)** — sourced judgment, generated into `D` by `build_data.py` (1c.1):
+**Canonical spine (`_raw/curated/Masterlist_topic_importance.xlsx` → `D.library`, Phase 1d):**
+| Source | Level | epistemic | Status |
+|--------|-------|-----------|--------|
+| Masterlist (Reddit-sourced) | subject→section→topic | `directional` | ✅ 19 subjects · 170 sections · **787 topics** (157 High) → `D.library`; PYQ-freq importance + angle + aliases |
+| Cross-platform map | topic↔platform leaf | build-time | ✅ `library.topics[].platformRefs` + `library.coverage`: 232/787 topics, 77/157 HY confidently mapped (precision-first) |
+
+**Curated layer (`_raw/curated/`)** — sourced judgment, generated into `D` by `build_data.py` (1c.1 / 1d):
 | File | Rows | epistemic | Status |
 |------|-----:|-----------|--------|
-| `sources.json` | 8 | — | ✅ shared evidence registry → `D.sources[]` (faculty pass APPENDS here) |
-| `subject_strength.json` | 10 | `directional` | ✅ best-platform/subject (community reputation) → `D.subjectStrength` |
-| `reliability.json` | 5 apps | `public-3p` | ✅ iOS App Store scorecard → `D.reliability` + `platforms[].reliability` |
+| `sources.json` | 9 | — | ✅ shared registry → `D.sources[]` (+ `src-masterlist-pyq-reddit`; faculty pass APPENDS) |
+| `subject_strength.json` | 10 | `directional` | ✅ best-platform/subject → `D.subjectStrength` (PrepLadder rows now integrated) |
+| `reliability.json` | 5 apps | `public-3p` | ✅ iOS App Store scorecard → `D.reliability` (all 5 apps `platformId` set) |
 | `methodology.json` | 4 labels | — | ✅ epistemic-label defs + firewall → `D.methodology` ("How we rate") |
-- ⚠️ Dedup the `(1)/(2)` copies; verify DocTutorials Main-vs-PYQ overlap; HTML page saves are gitignored fallback.
-- Ingest seam for PrepLadder/eGurukul: add a `_platform()` builder in `build_data.py` + an entry in
-  `platforms[]` — app.js is already N-platform, so they light up with zero UI changes once counts land.
+- ⚠️ `(1)/(2)` copies are byte-identical dups — `build_data.py` reads the canonical base CSV only.
+- Remaining seams: `egurukul_other.csv`, `prepladder_pyq.csv`, DocTutorials QRP/PYQ — for the Phase-2 PYQ tracker.
 
 ## Roadmap (strategy-informed; SEQUENCE depends on the forks — confirm with user)
 ### Phase 0 — settle strategy
@@ -96,10 +101,26 @@
 - [ ] **Faculty data pass** (greenlit, separate — needs user's logged-in browser) — `FACULTY_DATA_PASS_PROMPT.md`;
   enriches the seed afterward, zero UI churn. *(`PHASE1C1F_PROMPT.md` is superseded by the overhaul brief.)*
 ### Phase 1d — Canonical Topic Library & Importance Spine (NEW, before Phase 2) — `PHASE1D_CANONICAL_LIBRARY_PROMPT.md`
-- [ ] In-house **Subject→Section→Topic** library + **PYQ-frequency importance** from the user-provided
+- [x] In-house **Subject→Section→Topic** library + **PYQ-frequency importance** from the user-provided
   `_raw/curated/Masterlist_topic_importance.xlsx` (reliable Reddit-sourced; `directional`). Folds in
   **PrepLadder+eGurukul integration** + **maps all 5 platforms onto the spine** (replaces fuzzy `sim()`) +
-  **upgrades High-Yield: MCQ-density proxy → real importance**. *The backbone the tracker needs. Opus xhigh.*
+  **upgrades High-Yield: MCQ-density proxy → real importance**. *The backbone the tracker needs. Opus xhigh.* *(2026-06-28)*
+  **Stage 1** — stdlib `.xlsx` reader in `build_data.py` (no openpyxl dep) parses 19 sheets → `D.library`:
+  19 subjects, 170 sections, **787 topics** (157 High). Each topic: name + aliases[], `timesRepeated` (PYQ
+  freq), priority, `pyqAngle`, `sourceRec`, derived `importance` (0.65·PYQ-freq + 0.35·priority), tier,
+  `platformRefs{}`. Sourced to `src-masterlist-pyq-reddit` (epi `directional`), passes the integrity guard;
+  author's personal revision columns ignored. **Stage 2** — PrepLadder (1,115 modules) + eGurukul (1,282
+  topics) integrated as `kind:"lecture"`, `mcqs:null` → **measured MCQ stays 56,091** (Marrow+Cere+DocT).
+  Excluded from all QBANKS surfaces by kind; get a compact lecture Platform page (reliability + module-count
+  coverage + faculty moat). reliability/subject_strength flipped non-integrated→integrated. **Stage 3** —
+  precision-first build-time matcher fills `platformRefs` + `library.coverage`: anchored on canonical
+  names+aliases, exact/substring/subset only (no loose overlap), compound-topic conjunct splitting, spelling
+  +synonym normalization, generic-noun guard. **232/787** topics and **77/157 high-yield** carry ≥1 confident
+  platform map; rest honestly `unmapped`. **Stage 4** — High-Yield surface + Subject pages now lead with
+  PYQ-frequency importance (directional, sourced, with the asked-angle + per-platform coverage pips); MCQ
+  density demoted to a clearly-labelled `proxy` lens (kept, not deleted). Verified 320→1440 day+evening,
+  console clean, no h-scroll; 375+1440 of HY + a Subject page. Commits `f6d6564`·`737f673`·`d3289a3`·`9f0c1ac`.
+  ⚠️ Mapping is the highest-risk artifact — worth an adversarial/ultracode audit before the tracker builds on it.
 ### Phase 2 — free wedge / acquisition (GTM)
 - [ ] **PYQ tracker** + unified **cross-platform tracker** as the retain surface (the spreadsheet-killer) —
   `PHASE2B_PROMPT.md`, now **rebuilt on the 1d canonical spine** (its Stage-1 platform integration moved into 1d).
@@ -117,6 +138,17 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-28 **Phase 1d shipped — Canonical Topic Library, Importance Spine, all-5-platform map.** Parsed the
+  Reddit masterlist into `D.library` (787 topics, PYQ-frequency importance, `directional`); integrated
+  PrepLadder + eGurukul as `kind:"lecture"` (`mcqs:null`, measured MCQ unchanged at **56,091**); mapped all 5
+  platforms onto the spine with a **precision-first** build-time matcher (232/787 topics, 77/157 high-yield
+  confidently mapped; rest honest-`unmapped`, no forced matches); High-Yield + Subject pages now lead with
+  real PYQ-frequency importance (angle + per-platform coverage pips) and demote MCQ-density to a labelled
+  `proxy` lens. Decision: lecture platforms stay out of all MCQ-density/QBANKS surfaces (so the measured
+  figure and existing surfaces are untouched) and the legacy `sim()` matcher is kept only as a runtime drawer
+  hint — the build-time spine is coverage truth. **Open risk flagged to coordinator:** the platform↔topic map
+  is the highest-risk artifact (a wrong map = false coverage) — recommend an adversarial/ultracode audit
+  before the Phase-2 tracker is built on it. Commits `f6d6564`·`737f673`·`d3289a3`·`9f0c1ac`.
 - 2026-06-27 **Canonical Topic Library added (Phase 1d), reordered before Phase 2.** User provided an
   authoritative source — `_raw/curated/Masterlist_topic_importance.xlsx` (Reddit-sourced, reliable): 19
   subject sheets, Subject→Section→Topic with **PYQ-frequency `Times Repeated` + Priority**. It's both the
