@@ -176,6 +176,7 @@ td.num,th.num{text-align:right}
 .tag.ended{background:var(--paper-3);color:var(--ink-3)} .tag.live{background:#e8efe9;color:var(--accent)}
 .platlabel{font-weight:600;font-size:12px;letter-spacing:.02em}
 .platlabel.m{color:var(--marrow)} .platlabel.c{color:var(--cere)} .platlabel.k{color:var(--core)}
+.platlabel.p{color:var(--p-prepl)} .platlabel.e{color:var(--p-eguru)}
 
 /* ---------- timeline ---------- */
 /* ---------- timeline ---------- */

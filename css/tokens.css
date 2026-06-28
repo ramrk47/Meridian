@@ -43,8 +43,8 @@
   --p-marrow:var(--marrow);   /* #3a5a78 slate-blue  · Marrow (.m) */
   --p-cere:var(--cere);       /* #b0613b terracotta  · Cerebellum (.c) */
   --p-doc:var(--core);        /* #5d7a52 sage        · DocTutorials (.k) */
-  --p-prepl:#7a6a3c;          /* muted ochre-bronze  · PrepLadder — reputation-only, never a content column */
-  --p-eguru:#6a5a86;          /* muted aubergine     · eGurukul   — reputation-only, never a content column */
+  --p-prepl:#7a6a3c;          /* muted ochre-bronze  · PrepLadder (.p) — lecture platform; no MCQ-density column */
+  --p-eguru:#6a5a86;          /* muted aubergine     · eGurukul   (.e) — lecture platform; no MCQ-density column */
 
   /* ── SEQUENTIAL yield/density ramp (encodes HOW MUCH — warm pine, light→deep; never platform) ── */
   --y0:#f0ece2;  /* = --paper-3, none/low */

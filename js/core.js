@@ -72,9 +72,12 @@ const platMCQ = id => PLAT_BY_ID[id].subjects.reduce((a, s) => a + s._mcqs, 0);
 const platMods = id => PLAT_BY_ID[id].subjects.reduce((a, s) => a + s.modules.length, 0);
 const QBANK_MCQ = QBANKS.reduce((a, p) => a + platMCQ(p.id), 0);   // all integrated banks combined
 
-/* ---- flat leaf index (every platform's modules/units/chapters) ---- */
+/* ---- flat leaf index (every QBANK's modules/units/chapters) ----
+   QBANKS only: lecture platforms (PrepLadder / eGurukul) carry no measured MCQs and
+   are mapped onto the canonical spine (D.library platformRefs) rather than via the
+   legacy token matcher — keeping this index, cross-matching and MCQ rollups unchanged. */
 const LEAVES = [];
-PLATFORMS.forEach(p => p.subjects.forEach(s => s.modules.forEach(m => LEAVES.push({
+QBANKS.forEach(p => p.subjects.forEach(s => s.modules.forEach(m => LEAVES.push({
   id: m.id, platform: p.id, name: m.name, subject: s.subject, canon: canon(s.subject),
   cat: m.category || null, rating: m.rating ?? null, mcqs: m.mcqs, modulesCount: m.modulesCount ?? null,
   priority: m.priority, hyScore: m.hyScore,

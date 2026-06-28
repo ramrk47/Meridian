@@ -258,6 +258,59 @@ for subject in dt_order:
         })
     dt_subjects.append({"subject": subject, "modules": mods})
 
+# ---------- PrepLadder + eGurukul (Phase 1d Stage 2: the last 2 platforms) ----------
+# Lecture/video platforms (kind="lecture") integrated so the canonical spine can map
+# ALL FIVE platforms. They carry NO measured MCQ totals (mcqs=null) — the measured MCQ
+# figure stays 56,091 (Marrow + Cerebellum + DocTutorials only). Module/topic COUNTS are
+# tracked separately. We read the canonical base CSVs only (the (1)/(2) copies are
+# byte-identical dups). qcount = the raw per-module/topic question count from capture,
+# kept for transparency but deliberately NOT summed into any MCQ rollup.
+NP = f"{RAW}/NewPlatforms"
+
+def _prepladder_platform():
+    by_subj, order = {}, []
+    for row in rd(f"{NP}/prepladder_modules.csv")[1:]:
+        if len(row) < 3 or not row[1]:
+            continue
+        prof, subject, module = row[0], row[1], row[2]
+        qc = row[3] if len(row) > 3 else ""
+        if subject not in by_subj:
+            by_subj[subject] = []; order.append(subject)
+        by_subj[subject].append({"prof": prof, "name": module,
+                                 "qcount": int(qc) if qc.isdigit() else None})
+    subs = []
+    for subject in order:
+        mods = [{"id": "p-" + slug(subject, m["name"])[:80] + f"-{i}", "category": None,
+                 "name": m["name"], "mcqs": None, "qcount": m["qcount"], "prof": m["prof"],
+                 "rating": None, "priority": 1, "hyScore": 0.0}
+                for i, m in enumerate(by_subj[subject])]
+        subs.append({"subject": subject, "modules": mods})
+    return {"id": "prepladder", "name": "PrepLadder", "kind": "lecture",
+            "color": "#7a6a3c", "cls": "p", "subjects": subs}
+
+def _egurukul_platform():
+    by_subj, order = {}, []
+    for row in rd(f"{NP}/egurukul_topics.csv")[1:]:
+        if len(row) < 2 or not row[0]:
+            continue
+        subject, topic = row[0], row[1]
+        qc = row[2] if len(row) > 2 else ""
+        if subject not in by_subj:
+            by_subj[subject] = []; order.append(subject)
+        by_subj[subject].append({"name": topic, "qcount": int(qc) if qc.isdigit() else None})
+    subs = []
+    for subject in order:
+        mods = [{"id": "e-" + slug(subject, t["name"])[:80] + f"-{i}", "category": None,
+                 "name": t["name"], "mcqs": None, "qcount": t["qcount"],
+                 "rating": None, "priority": 1, "hyScore": 0.0}
+                for i, t in enumerate(by_subj[subject])]
+        subs.append({"subject": subject, "modules": mods})
+    return {"id": "egurukul", "name": "eGurukul (DBMCI)", "kind": "lecture",
+            "color": "#6a5a86", "cls": "e", "subjects": subs}
+
+prepladder = _prepladder_platform()
+egurukul = _egurukul_platform()
+
 # ---------- canonical subject map (Python mirror of js/core.js CANON outputs) ----------
 # Native platform / sheet subject name -> the single canonical subject string the app
 # groups on. MUST stay in sync with the canonical OUTPUTS of CANON in js/core.js.
@@ -408,6 +461,8 @@ platforms = [
     _marrow_platform(),
     _cere_platform(),
     {"id": "doctutorials", "name": "DocTutorials", "kind": "qbank", "color": "#5d7a52", "cls": "k", "subjects": dt_subjects},
+    prepladder,   # kind="lecture" — no MCQ totals; integrated for the canonical spine
+    egurukul,     # kind="lecture" — no MCQ totals; integrated for the canonical spine
 ]
 
 # ---------- curated judgment layer (Phase 1c.1 — substance, honestly labelled) ----------
@@ -548,6 +603,11 @@ print(f"Marrow+Cerebellum combined MCQs: {mt+ct}  (must equal 42889)")
 print(f"DocTutorials (Main): {len(dt_subjects)} subjects, "
       f"{sum(len(s['modules']) for s in dt_subjects)} chapters, {dt_leaf} MCQs "
       f"(subject-overview states {dt_subj}; +{dt_leaf-dt_subj} capture variance)")
+_pl_mods = sum(len(s["modules"]) for s in prepladder["subjects"])
+_eg_tops = sum(len(s["modules"]) for s in egurukul["subjects"])
+print(f"PrepLadder: {len(prepladder['subjects'])} subjects, {_pl_mods} modules (lecture; mcqs=null)")
+print(f"eGurukul:   {len(egurukul['subjects'])} subjects, {_eg_tops} topics (lecture; mcqs=null)")
+print(f"Measured MCQs (Marrow+Cere+DocT only): {mt+ct+dt_leaf}  (must equal 56091)")
 print(f"CoreBTR tests: {len(corebtr_tests)}   Cerebellum GT-2026 listed: {len(cere_gt_2026)}")
 print(f"CoreBTR topic videos: {len(btr_videos)}  total minutes: {sum(v['durMin'] or 0 for v in btr_videos)}")
 print(f"Curated: {len(sources)} sources, "

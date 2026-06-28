@@ -11,8 +11,11 @@
    never moves the score; reliability complaint THEMES render as a 6px
    warn DOT, never a shaming bar; faculty roster is aggregate-only.
 
-   GUARD RAIL: PrepLadder / eGurukul have NO platforms[] content, so they
-   get NO Platform page — they remain reputation-only chips elsewhere.
+   KIND SPLIT (Phase 1d): qbank platforms (Marrow / Cerebellum / DocTutorials)
+   render the full measured-MCQ page below. Lecture platforms (PrepLadder /
+   eGurukul) carry no measured MCQ totals — they render a compact lecture page
+   (reliability + module/topic count coverage + the faculty moat), never
+   fabricated MCQ mass. Truly unknown / reputation-only ids still get the stub.
    ============================================================ */
 
 /* the App-Store reliability row for this platform (public-3p), if any */
@@ -39,6 +42,133 @@ function _platEmpty(o) {
   return emptyState({ icon: o.mark, title: o.title, body: o.body });
 }
 
+/* ---- lecture-platform page (PrepLadder / eGurukul) -----------------------
+   No measured MCQ totals (mcqs=null). Honest surface of what we DO hold:
+   public-3p reliability, module/topic COUNT coverage (measured), community-
+   reputed-strongest subjects (directional), and the faculty roster (the moat).
+   Never renders MCQ mass or a fabricated density. */
+function renderLecturePlatformPage(p, id, v) {
+  const subjects = p.subjects;
+  const reli = _platReliability(id);
+  const totalUnits = platMods(id);
+  const unitNoun = id === "prepladder" ? "modules" : "topics";
+  const roster = facultyForPlatform(id);
+  const reliCap = (D.reliability && D.reliability.captured) || D.captured;
+
+  const strongSubs = new Set(((D.subjectStrength && D.subjectStrength.subjects) || [])
+    .filter(s => (s.strong || []).some(x => x.platformId === id))
+    .map(s => canon(s.subject)));
+
+  const heroNum = reli && reli.rating != null ? reli.rating : "—";
+  const head = `<div class="entity-head">
+      <div class="eyebrow"><button class="linkbtn back" data-go-overview>‹ Home</button> · PLATFORMS</div>
+      <div class="eh-top">
+        <div class="eh-id"><h2 class="sh-name" style="color:${platColor(id)}">${esc(p.name)}</h2>
+          <div class="eh-tags">
+            <span class="echip off">${fmt(totalUnits)} ${esc(unitNoun)} · ${esc(D.exam || "NEET PG")}</span>
+            <span class="echip off">${subjects.length} subjects · lecture platform</span>
+          </div>
+        </div>
+        <div class="eh-hero">
+          <span class="hero-num num">${heroNum === "—" ? "—" : '<span class="hn-star" aria-hidden="true">★</span> ' + esc(String(heroNum))}</span>
+          <span class="hero-lbl">${reli ? "App-Store rating " + epiBadge("public-3p") : "no public rating"}</span>
+          <span class="hero-note muted small">${reli ? esc(reli.ratingsLabel || "") + " ratings · captured " + esc(reliCap) : ""}</span>
+        </div>
+      </div>
+    </div>`;
+
+  const topSub = subjects.slice().sort((a, b) => b.modules.length - a.modules.length)[0];
+  const tiles = `<div class="tiles">`
+    + statTile({ accent: platCls(id), value: reli && reli.rating != null ? reli.rating : "—", label: "RATING ★", note: reli ? (reli.ratingsLabel || "App Store") : "no public rating", epi: reli ? "public-3p" : null })
+    + statTile({ accent: platCls(id), value: fmt(totalUnits), label: unitNoun.toUpperCase(), note: "no MCQ totals captured", epi: null })
+    + statTile({ accent: platCls(id), value: subjects.length, label: "SUBJECTS", note: topSub ? "most: " + esc(canon(topSub.subject)) : "" })
+    + statTile({ value: roster.length || "—", label: "FACULTY", note: roster.length ? "with affiliations here" : "none seeded yet", epi: roster.length ? "directional" : null })
+    + `</div>`;
+
+  /* reliability scorecard (public-3p) */
+  let reliPlate;
+  if (reli) {
+    reliPlate = chartFrame(
+      "Reliability — iOS App Store",
+      "public-3p", [reli.sourceId].filter(Boolean), reliCap,
+      ratingScorecard([reli], "reliability"),
+      {
+        legend: `<span class="cf-key"><span class="wdot"></span>recurring complaint theme</span>`,
+        note: (D.reliability && D.reliability.note ? esc(D.reliability.note) + " " : "")
+          + "Public third-party signal — money never moves the score."
+      }
+    );
+  } else {
+    reliPlate = panel({
+      title: "Reliability — iOS App Store", epi: "public-3p",
+      body: _platEmpty({ mark: "compass", title: "No public rating yet",
+        body: `No iOS App-Store rating is captured for ${esc(p.name)} so far ${epiBadge("public-3p")}.` })
+    });
+  }
+
+  /* coverage by subject — module/topic COUNT (measured count, NOT MCQ mass) */
+  const covItems = subjects.map(s => {
+    const c = canon(s.subject);
+    return {
+      label: c, value: s.modules.length, go: "subject:" + c,
+      mark: strongSubs.has(c) ? `<span class="rb-strong" title="Community-reputed strongest here (directional)">◆</span>` : null
+    };
+  }).sort((a, b) => b.value - a.value);
+  const coverage = chartFrame(
+    `Coverage by subject — ${unitNoun} count`,
+    "measured", [], D.captured,
+    rankedBars(covItems, { colorFn: () => platColor(id) }),
+    {
+      legend: `<span class="cf-key"><span class="lg-swatch" style="background:${platColor(id)}"></span>${esc(p.name)} ${esc(unitNoun)} (measured count)</span>`
+        + (strongSubs.size ? `<span class="cf-key"><span class="rb-strong">◆</span>community-reputed strongest ${epiBadge("directional")}</span>` : ""),
+      note: `Bar length = number of ${esc(unitNoun)} this platform carries in each subject (measured count, ${esc(D.captured)}). MCQ-level density is not captured for lecture platforms, so none is shown. ◆ marks subjects the community reputes ${esc(p.name)} strongest at (directional). Tap a subject for its cross-platform page.`
+    }
+  );
+
+  /* faculty roster (the moat) */
+  let facultyPanel;
+  if (!roster.length) {
+    facultyPanel = panel({
+      title: "Faculty roster", epi: "directional",
+      body: _platEmpty({ mark: "quill", title: "No affiliations listed here yet",
+        body: `No seeded faculty currently list ${esc(p.name)} among their affiliations. The roster grows as more profiles are sourced ${epiBadge("directional")}.` })
+    });
+  } else {
+    const rows = roster.map(f => {
+      const aff = (f.affiliations || []).find(a => a.platformId === id) || {};
+      const subs = [...new Set((f.subjects || []).map(canon))];
+      return listRow({
+        lead: dotLead(platColor(id)),
+        title: esc(f.name),
+        sub: `${subs.join(" · ")}${aff.status ? ' · <span class="rost-st">' + esc(aff.status) + "</span>" : ""}`,
+        trail: aff.status === "past"
+          ? `<span class="echip off">past</span>`
+          : `<span class="echip off">${esc(aff.role ? aff.role.split(/[,(]/)[0].trim() : "faculty")}</span>`,
+        go: "faculty:" + f.id
+      });
+    });
+    const rosterSrc = [...new Set(roster.flatMap(f => (f.affiliations || []).flatMap(a => a.sourceIds || []).concat(f.sourceIds || [])))];
+    facultyPanel = panel({
+      title: `Faculty roster · ${roster.length}`, epi: "directional",
+      sourceIds: rosterSrc, captured: "2026-06-27",
+      body: groupList(rows)
+        + `<p class="muted small" style="margin-top:8px">Career history from public sources (directional seed). Aggregate · community-sentiment · not endorsement. Tap a name for the full career timeline.</p>`
+    });
+  }
+
+  /* honest note panel: why no MCQ mass here */
+  const note = panel({
+    title: "Why no MCQ scorecard here",
+    body: `<p class="muted">${esc(p.name)} is a <b>lecture / video platform</b>. Calvetra has integrated its ${esc(unitNoun)} so they can be mapped onto the canonical topic spine and shown in cross-platform coverage — but it holds <b>no measured MCQ-bank totals</b> for it, so this page never shows MCQ mass or a density score. Counts above are measured ${esc(unitNoun)} counts ${epiBadge("measured")}; the importance of each topic comes from the community PYQ-frequency spine ${epiBadge("directional")}.</p>`
+  });
+
+  v.innerHTML = head + tiles
+    + `<div class="panel-grid">${reliPlate}${coverage}</div>`
+    + `<div class="inst-grid">${facultyPanel}${note}</div>`;
+
+  _platEnhance(v, p);
+}
+
 function renderPlatformPage(id) {
   const v = $("#view-platform"); if (!v) return;
   resetPlates();
@@ -60,6 +190,9 @@ function renderPlatformPage(id) {
       })}`;
     return;
   }
+
+  /* lecture platforms (no measured MCQs) → compact, honest page */
+  if (p.kind !== "qbank") { renderLecturePlatformPage(p, id, v); return; }
 
   /* ---- derived ---- */
   const subjects = freshSubjects(p);
