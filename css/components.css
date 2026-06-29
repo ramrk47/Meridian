@@ -25,6 +25,9 @@
   cursor:pointer;font:500 12.5px var(--sans);transition:.15s}
 .tbtn:hover{border-color:var(--ink);color:var(--ink);background:var(--paper-2)}
 .tbtn.danger:hover{border-color:var(--bad);color:var(--bad)}
+/* account / sync pill — signed-in gets a quiet accent tint (status text carries detail) */
+.tbtn.acct.on{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.tbtn.acct.on:hover{border-color:var(--accent-2);color:var(--accent-2)}
 
 .tabs{display:flex;gap:28px;flex-wrap:wrap}
 .tab{background:none;border:0;padding:8px 0 14px;color:var(--ink-2);font:500 14px var(--sans);cursor:pointer;position:relative;transition:.15s}

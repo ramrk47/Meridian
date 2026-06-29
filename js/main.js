@@ -303,6 +303,41 @@ function wireToolbar() {
   $("#btnBanks")?.addEventListener("click", () => { if (typeof openBanksSheet === "function") openBanksSheet(); });
   if (typeof _syncBanksDot === "function") _syncBanksDot();
 }
+/* account + sync indicator (Google OAuth; local-first preserved). The single
+   #btnAccount button doubles as the sync status pill. Overflow proxies to it. */
+function wireAccount() {
+  const btn = $("#btnAccount"), ov = $("#ovAccount");
+  if (!btn || !window.Account) return;
+  const first = () => { const u = Account.user; return u ? (u.name || u.email || "Account").split(" ")[0] : "Account"; };
+  const LABEL = {
+    off:     () => "↪ Sign in",
+    syncing: () => "⟳ Syncing…",
+    synced:  () => "✓ " + first(),
+    pending: () => "● " + first() + " · will sync",
+    offline: () => "● " + first() + " · offline",
+  };
+  function render() {
+    const s = Account.status;
+    btn.textContent = (LABEL[s] || LABEL.off)();
+    btn.classList.toggle("on", !!Account.user);
+    btn.title = Account.user
+      ? `Signed in as ${Account.user.email || first()} — click to sign out`
+      : "Sign in to sync across devices";
+    if (ov) ov.textContent = Account.user ? ("⎋ Sign out (" + first() + ")") : "↪ Sign in";
+  }
+  document.addEventListener("account-changed", render);
+  btn.addEventListener("click", () => {
+    if (Account.user) {
+      if (confirm("Sign out? Your local tracking stays on this device.")) Account.signOut().then(() => toast("Signed out"));
+    } else if (Account.config.devAuth && !Account.config.googleClientId) {
+      Account.signInDev().then(() => { if (Account.user) toast("Signed in (dev)"); });
+    } else {
+      Account.signInGoogle();
+    }
+  });
+  render();
+  Account.init();   // fire-and-forget; never blocks the UI
+}
 /* mobile-only chrome: compact search button + overflow "⋯" menu (proxies the toolbar) */
 function wireMobileChrome() {
   $("#btnSearchM")?.addEventListener("click", openPalette);
@@ -557,6 +592,7 @@ function init() {
   try { if (localStorage.getItem("meridian_theme") === "evening") { document.body.classList.add("evening"); } } catch {}
   if ($("#btnTheme")) $("#btnTheme").textContent = document.body.classList.contains("evening") ? "☾ Evening" : "☀ Day";
   wireToolbar();
+  wireAccount();
   wireMobileChrome();
   wireDrawerDrag();
   renderNavChrome();
