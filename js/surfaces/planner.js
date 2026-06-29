@@ -23,6 +23,13 @@
 let plBuilder = null;   // null = chooser/active; else {mode, subjects[], from, to, cap, exam, template, customPlat}
 let plEdit = false;     // edit mode on the active plan (show remove / move / add)
 
+/* ── cycle stat-bar view state (module-local; locked cycles live in Store) ── */
+let plCycleSpan = "week";       // "week" | "month" — the live cycle granularity
+let plCycleRef = null;          // iso anchor date for the viewed window (null = today); moved by ◀▶
+let plCycleFraming = "extent";  // "extent" (Done/Reviewed/Revised) | "rev" (R1/R2/R3 tally)
+const plCycExpanded = new Set();  // subject keys expanded in the live matrix
+const plLockExpanded = new Set(); // locked-cycle ids expanded in the cycles list
+
 /* ============================================================
    DATE MATH — local, no backend. iso = "yyyy-mm-dd" (lexicographic
    compare == chronological; all comparisons use that).
@@ -452,6 +459,9 @@ function _plBuilder(v) {
    ACTIVE PLAN
    ============================================================ */
 function _plActive(v, plan) {
+  /* 0 — snapshot any completed weeks BEFORE reschedule rewrites their dates (history-safe) */
+  _autoSnapshotCycles(plan);
+  if (Store.getCycles().length) plan = Store.getPlan() || plan;   // re-read if a lock saved
   /* 1 — auto-reschedule any missed days BEFORE we read stats (the recovery core) */
   const resched = _autoReschedule(plan);
   if (resched.moved) plan = Store.getPlan();
@@ -492,6 +502,9 @@ function _plActive(v, plan) {
   tiles.innerHTML = tiles.innerHTML.replace('<span class="tile-v num">' + st.adherence + '%</span>', '<span class="tile-v num" data-count="' + st.adherence + '">' + st.adherence + '%</span>');
   v.appendChild(tiles);
 
+  /* cycle stat bar — weekly/monthly planned-vs-done across dates, by subject + extent */
+  v.appendChild(_plCycleBar(plan));
+
   /* on-track callout (calm) */
   const otc = el("div", "callout pl-ontrack " + ot.cls); otc.dataset.reveal = "";
   if (ot.cls === "ok") {
@@ -522,6 +535,10 @@ function _plActive(v, plan) {
 
   /* the schedule — today + upcoming days, trackable inline */
   v.appendChild(_plSchedule(plan, st));
+
+  /* locked cycles — retrospective follow-up on what wasn't done/reviewed/revised */
+  const cyclesList = _plCyclesList();
+  if (cyclesList) v.appendChild(cyclesList);
 
   /* done-diary (derived) */
   v.appendChild(_plDoneDiary(plan));
@@ -704,6 +721,260 @@ function _plReadBuilder() {
 }
 
 /* ============================================================
+   CYCLE STAT BAR — weekly / monthly planned-vs-done across dates, by
+   subject + extent (Done / Reviewed / Revised), with retrospective
+   lockable cycles. All figures derive from real tracked actions (the
+   same a/r/t + w/v flags), so nothing is self-reported. `measured`.
+   ============================================================ */
+
+/* window math — week = Monday-anchored ISO week; month = calendar month */
+function _mondayOf(iso) { const d = parseDay(iso); const wd = (d.getDay() + 6) % 7; return isoDay(addDays(d, -wd)); }
+function _cycleWindow(span, refIso) {
+  const ref = refIso || _today();
+  if (span === "month") {
+    const d = parseDay(ref);
+    const from = isoDay(new Date(d.getFullYear(), d.getMonth(), 1));
+    const to = isoDay(new Date(d.getFullYear(), d.getMonth() + 1, 0));
+    return { span: "month", from, to, ref, label: parseDay(from).toLocaleDateString("en-IN", { month: "long", year: "numeric" }) };
+  }
+  const from = _mondayOf(ref), to = isoDay(addDays(parseDay(from), 6));
+  return { span: "week", from, to, ref, label: `Week of ${fmtDay(from)}` };
+}
+function _winLabel(c) { return _cycleWindow(c.span, c.from).label; }
+
+/* intent (target extent) for an item — from its revision pass; non-backward → "do" */
+function _intentOf(it) { const p = it && it.pass; if (p === "M2") return "review"; if (p === "M3" || p === "Revision") return "revise"; return "do"; }
+/* achieved extent flags for an entity, from the SAME real tracking the trackers write */
+function _extentFlags(e) {
+  if (!e) return { done: false, reviewed: false, revised: false };
+  if (e.type === "topic") { const t = LIB_TOPIC_BY_ID[e.id]; const u = t ? libTopicUnion(t) : {}; return { done: !!u.started, reviewed: !!u.reviewed, revised: !!u.mastered }; }
+  if (e.type === "leaf") { const p = Store.prog(e.id); return { done: !!p.a, reviewed: !!p.r, revised: !!p.t }; }
+  if (e.type === "video") { const x = Store.video(e.id); return { done: !!x.w, reviewed: !!x.v, revised: !!x.v }; }
+  return { done: false, reviewed: false, revised: false };
+}
+function _meetsIntent(e, intent) { const f = _extentFlags(e); return intent === "do" ? f.done : intent === "review" ? f.reviewed : f.revised; }
+/* revision tally 0..3 (R1 done / R2 reviewed / R3 revised); video caps at 2 honestly */
+function _revCount(e) {
+  if (e && e.type === "video") { const x = Store.video(e.id); return x.v ? 2 : (x.w ? 1 : 0); }
+  const f = _extentFlags(e); return (f.done ? 1 : 0) + (f.reviewed ? 1 : 0) + (f.revised ? 1 : 0);
+}
+
+/* the active plan's items that fall inside a window */
+function _cyclePlanned(plan, win) { return (plan.items || []).filter(it => it.targetDate >= win.from && it.targetDate <= win.to); }
+
+/* full derived stats for a live window */
+function _cycleStats(plan, win) {
+  const items = _cyclePlanned(plan, win);
+  const bySub = {}, byDay = {};
+  items.forEach(it => {
+    const s = _entitySubject(it.entity) || "—"; (bySub[s] = bySub[s] || []).push(it);
+    const o = byDay[it.targetDate] = byDay[it.targetDate] || { planned: 0, done: 0 };
+    o.planned++; if (_extentFlags(it.entity).done) o.done++;
+  });
+  const met = items.filter(it => _meetsIntent(it.entity, _intentOf(it))).length;
+  const notDone = [], notReviewed = [], notRevised = [];
+  items.forEach(it => {
+    const intent = _intentOf(it), f = _extentFlags(it.entity);
+    if (!f.done) notDone.push(it);
+    else if ((intent === "review" || intent === "revise") && !f.reviewed) notReviewed.push(it);
+    else if (intent === "revise" && !f.revised) notRevised.push(it);
+  });
+  const subjStats = Object.keys(bySub).map(s => {
+    const its = bySub[s];
+    const done = its.filter(it => _extentFlags(it.entity).done).length;
+    const reviewed = its.filter(it => _extentFlags(it.entity).reviewed).length;
+    const revised = its.filter(it => _extentFlags(it.entity).revised).length;
+    const m = its.filter(it => _meetsIntent(it.entity, _intentOf(it))).length;
+    return { subject: s, items: its, total: its.length, met: m, adher: pct(m, its.length), done, reviewed, revised };
+  }).sort((a, b) => b.total - a.total || a.subject.localeCompare(b.subject));
+  return {
+    items, total: items.length, met, adherence: items.length ? pct(met, items.length) : 0,
+    byDay, subjStats, notDone, notReviewed, notRevised,
+    behind: subjStats.filter(s => s.adher < 100).length, onTrack: subjStats.filter(s => s.adher >= 100).length,
+  };
+}
+
+/* forgetting-curve nudge (1-3-7-15): topics DONE ≥7d ago, not yet reviewed. Derived count only. */
+function _dueToRevise() {
+  const today = parseDay(_today()); let n = 0;
+  Object.entries(Store.state.progress || {}).forEach(([id, p]) => {
+    if (p && p.a && !p.r && p.ts) { const days = Math.round((today - parseDay(isoDay(new Date(p.ts)))) / 86400000); if (days >= 7) n++; }
+  });
+  return n;
+}
+
+/* build a LEAN locked-cycle record — entity ids + intent + id-array snapshot only
+   (subject/name/label are re-derived at render; keeps cycles[] under the blob cap). */
+function _buildLockedCycle(plan, win, auto) {
+  const items = _cyclePlanned(plan, win);
+  const planned = items.map(it => ({ entity: { type: it.entity.type, id: it.entity.id }, intent: _intentOf(it) }));
+  const doneIds = [], reviewedIds = [], revisedIds = [];
+  items.forEach(it => { const f = _extentFlags(it.entity), id = it.entity.id; if (f.done) doneIds.push(id); if (f.reviewed) reviewedIds.push(id); if (f.revised) revisedIds.push(id); });
+  const met = items.filter(it => _meetsIntent(it.entity, _intentOf(it))).length;
+  return {
+    id: "cyc-" + win.span + "-" + win.from, span: win.span, from: win.from, to: win.to,
+    lockedAt: Date.now(), auto: !!auto,
+    planned, snapshot: { doneIds, reviewedIds, revisedIds },
+    lockAdherence: items.length ? pct(met, items.length) : 0,
+  };
+}
+
+/* auto-snapshot COMPLETED WEEKS only, idempotent (keyed by window), bounded to the
+   plan's lifetime. MUST run before _autoReschedule (which rewrites targetDate and would
+   erase the planned history). Month is never auto-locked → no overlapping records. */
+function _autoSnapshotCycles(plan) {
+  if (!plan || !(plan.items || []).length) return;
+  const have = new Set(Store.getCycles().map(c => c.id));
+  const dates = (plan.items || []).map(i => i.targetDate).sort();
+  const startRef = plan.createdAt || dates[0] || _today();
+  const curMonday = _mondayOf(_today());
+  let wk = _mondayOf(startRef), guard = 0;
+  while (wk < curMonday && guard++ < 130) {           // cap ~2.5y of weeks
+    const win = _cycleWindow("week", wk);
+    if (!have.has("cyc-week-" + win.from) && _cyclePlanned(plan, win).length) {
+      Store.lockCycle(_buildLockedCycle(plan, win, true));
+    }
+    wk = isoDay(addDays(parseDay(wk), 7));
+  }
+}
+
+/* live backlog for a LOCKED cycle — re-evaluated against CURRENT tracking, so
+   catching up later shrinks it (the frozen lockAdherence is the honest record). */
+function _lockedBacklog(cyc) {
+  const planned = cyc.planned || [];
+  const notDone = [], notReviewed = [], notRevised = [];
+  planned.forEach(p => {
+    const f = _extentFlags(p.entity), intent = p.intent;
+    if (!f.done) notDone.push(p);
+    else if ((intent === "review" || intent === "revise") && !f.reviewed) notReviewed.push(p);
+    else if (intent === "revise" && !f.revised) notRevised.push(p);
+  });
+  const met = planned.filter(p => _meetsIntent(p.entity, p.intent)).length;
+  return { notDone, notReviewed, notRevised, met, total: planned.length, liveAdherence: planned.length ? pct(met, planned.length) : 0 };
+}
+
+/* ── render: the live cycle stat bar ── */
+function _plCycleBar(plan) {
+  const win = _cycleWindow(plCycleSpan, plCycleRef);
+  const cs = _cycleStats(plan, win);
+  const wrap = el("section", "panel pl-cycle"); wrap.dataset.reveal = "";
+
+  const seg = `<div class="seg pl-cyc-span">`
+    + `<button type="button" data-pl-cyc-span="week" class="${plCycleSpan === "week" ? "on" : ""}" aria-pressed="${plCycleSpan === "week"}">Week</button>`
+    + `<button type="button" data-pl-cyc-span="month" class="${plCycleSpan === "month" ? "on" : ""}" aria-pressed="${plCycleSpan === "month"}">Month</button></div>`;
+  const nav = `<div class="pl-cyc-nav"><button type="button" class="pl-cyc-arrow" data-pl-cyc-move="-1" aria-label="Previous ${plCycleSpan}">‹</button>`
+    + `<span class="pl-cyc-label num">${esc(win.label)}</span>`
+    + `<button type="button" class="pl-cyc-arrow" data-pl-cyc-move="1" aria-label="Next ${plCycleSpan}">›</button></div>`;
+
+  // per-date load strip
+  const days = _dayRange(win.from, win.to);
+  const maxLoad = Math.max(1, ...days.map(d => (cs.byDay[d] || {}).planned || 0));
+  const strip = days.map(d => {
+    const o = cs.byDay[d] || { planned: 0, done: 0 };
+    const h = o.planned ? Math.max(8, Math.round((o.planned / maxLoad) * 100)) : 0;
+    const fill = o.planned ? Math.round((o.done / o.planned) * 100) : 0;
+    // week: weekday initial on every bar; month: only the 1st + each Monday (keeps ~30 bars legible at 320px)
+    let lbl;
+    if (plCycleSpan === "week") lbl = parseDay(d).toLocaleDateString("en-IN", { weekday: "narrow" });
+    else { const dd = parseDay(d); lbl = (dd.getDate() === 1 || dd.getDay() === 1) ? String(dd.getDate()) : ""; }
+    return `<span class="pl-cyc-bar${d === _today() ? " is-today" : ""}${o.done && o.done >= o.planned ? " full" : ""}" title="${esc(fmtDay(d))} · ${o.done}/${o.planned} done">`
+      + `<span class="pl-cyc-track"><i style="height:${h}%"><b style="height:${fill}%"></b></i></span>`
+      + `<span class="pl-cyc-bd">${esc(lbl)}</span></span>`;
+  }).join("");
+
+  // hero tiles (reuse statTile) — all measured
+  const backlogN = cs.notDone.length + cs.notReviewed.length + cs.notRevised.length;
+  const tiles = `<div class="tiles pl-cyc-tiles">`
+    + statTile({ accent: "g", hero: true, value: cs.adherence + "%", label: "Cycle adherence", note: `${cs.met}/${cs.total} planned met`, epi: "measured" })
+    + statTile({ accent: backlogN ? "g" : "c", value: fmt(backlogN), label: "Backlog", note: `${cs.notDone.length} do · ${cs.notReviewed.length} review · ${cs.notRevised.length} revise`, epi: "measured" })
+    + statTile({ accent: "c", value: `${cs.onTrack}/${cs.subjStats.length || 0}`, label: "Subjects on track", note: cs.behind ? `${cs.behind} behind` : "all caught up", epi: "measured" })
+    + `</div>`;
+
+  // subject × extent matrix (the relational viz)
+  const legend = plCycleFraming === "extent"
+    ? `<span class="pl-cyc-leg"><i class="d"></i>Done <i class="r"></i>Reviewed <i class="v"></i>Revised</span>`
+    : `<span class="pl-cyc-leg"><i class="d"></i>R1 <i class="r"></i>R2 <i class="v"></i>R3</span>`;
+  const rows = cs.subjStats.map(s => {
+    const exp = plCycExpanded.has(s.subject);
+    const trail = plCycleFraming === "extent"
+      ? `<span class="pl-cyc-rt num">${s.done}/${s.total}</span>`
+      : `<span class="pl-cyc-rt num">R3·${s.revised} R2·${s.reviewed} R1·${s.done}</span>`;
+    const seg3 = `<span class="pl-cyc-seg3" role="img" aria-label="${s.done} done, ${s.reviewed} reviewed, ${s.revised} revised of ${s.total}">`
+      + `<i class="d" style="width:${pct(s.done, s.total)}%"></i><i class="r" style="width:${pct(s.reviewed, s.total)}%"></i><i class="v" style="width:${pct(s.revised, s.total)}%"></i></span>`;
+    let head = `<button type="button" class="pl-cyc-row${s.adher < 100 ? " behind" : " ok"}" data-pl-cyc-subj="${esc(s.subject)}" aria-expanded="${exp}">`
+      + `<span class="pl-cyc-rs">${esc(s.subject)}</span>${seg3}${trail}<span class="pl-cyc-rx">${exp ? "▾" : "▸"}</span></button>`;
+    let kids = "";
+    if (exp) kids = `<div class="pl-cyc-kids">` + s.items.map(it => {
+      const f = _extentFlags(it.entity), intent = _intentOf(it), ok = _meetsIntent(it.entity, intent);
+      const dots = `<span class="pl-cyc-dots" title="intent: ${intent}"><i class="${f.done ? "on" : ""}"></i><i class="${f.reviewed ? "on" : ""}"></i><i class="${f.revised ? "on" : ""}"></i></span>`;
+      return `<div class="pl-cyc-kid${ok ? " met" : ""}"><a class="is-link" data-go-subject="${esc(s.subject)}">${esc(_entityName(it.entity))}</a>`
+        + `<span class="pl-cyc-kmeta">${it.pass ? `<span class="pl-pass pl-${String(it.pass).toLowerCase()}">${esc(it.pass)}</span>` : ""}${dots}</span></div>`;
+    }).join("") + `</div>`;
+    return head + kids;
+  }).join("");
+
+  // calm callout + lock + due-to-revise
+  const due = _dueToRevise();
+  const dueChip = due ? `<span class="pl-cyc-due" title="Topics done ≥7 days ago you haven't reviewed (1-3-7-15)">${due} due to revise</span>` : "";
+  const lockBtn = `<button type="button" class="pl-btn pl-cyc-lock" data-pl-cyc-lock title="Freeze this ${plCycleSpan} as a retrospective record you can chip away at">⛁ Lock this ${plCycleSpan}</button>`;
+  const note = cs.total
+    ? (backlogN
+      ? `<span class="muted small">Behind is normal — carry the gap forward (aim ~60% new / 40% backlog next ${plCycleSpan}). Lock it to keep chipping at what's left.</span>`
+      : `<span class="muted small">All planned work met at its intended depth. Lock it to bank the record.</span>`)
+    : `<span class="muted small">Nothing scheduled in this ${plCycleSpan}. Use ◀ ▶ to browse other windows.</span>`;
+
+  wrap.innerHTML =
+    `<div class="ph"><div class="ph-l"><h3>This ${plCycleSpan} — planned vs done ${epiBadge("measured")}</h3>`
+    + `<span class="muted small">what you set out to do, by subject and depth — and what's still open</span></div></div>`
+    + `<div class="pl-cyc-ctl">${seg}${nav}</div>`
+    + (cs.total ? `<div class="pl-cyc-strip" data-cyc-span="${plCycleSpan}">${strip}</div>` : "")
+    + tiles
+    + (cs.subjStats.length
+      ? `<div class="pl-cyc-mh"><span class="pl-cyc-mt">By subject &amp; extent</span><div class="seg pl-cyc-frame">`
+        + `<button type="button" data-pl-cyc-frame="extent" class="${plCycleFraming === "extent" ? "on" : ""}">Extent</button>`
+        + `<button type="button" data-pl-cyc-frame="rev" class="${plCycleFraming === "rev" ? "on" : ""}">Revisions</button></div>${legend}</div>`
+        + `<div class="pl-cyc-matrix">${rows}</div>`
+      : "")
+    + `<div class="pl-cyc-foot">${dueChip}${lockBtn}</div>${note}`;
+  return wrap;
+}
+
+/* ── render: the locked cycles list (retrospective follow-up) ── */
+function _plCyclesList() {
+  const cycles = Store.getCycles().slice().sort((a, b) => b.from.localeCompare(a.from) || a.span.localeCompare(b.span));
+  if (!cycles.length) return null;
+  const wrap = el("section", "panel pl-cycles"); wrap.dataset.reveal = "";
+  const rows = cycles.map(c => {
+    const bl = _lockedBacklog(c);
+    const exp = plLockExpanded.has(c.id);
+    const open = bl.notDone.length + bl.notReviewed.length + bl.notRevised.length;
+    const backTxt = open
+      ? `<span class="pl-lk-back">${bl.notDone.length} not done · ${bl.notReviewed.length} not reviewed · ${bl.notRevised.length} not revised</span>`
+      : `<span class="pl-lk-clear">backlog cleared ✓</span>`;
+    const grp = (label, arr) => arr.length
+      ? `<div class="pl-lk-grp"><span class="pl-lk-gl">${label} (${arr.length})</span>`
+        + arr.map(p => `<div class="pl-cyc-kid"><a class="is-link" data-go-subject="${esc(_entitySubject(p.entity))}">${esc(_entityName(p.entity))}</a><span class="pl-cyc-kmeta muted small">${esc(_entitySubject(p.entity) || "")}</span></div>`).join("")
+        + `</div>`
+      : "";
+    const kids = exp
+      ? `<div class="pl-lk-kids">` + (open
+        ? grp("To do", bl.notDone) + grp("To review", bl.notReviewed) + grp("To revise", bl.notRevised)
+        : `<div class="muted small">Everything planned this ${c.span} is now done at its intended depth. Nicely cleared.</div>`)
+        + `<div class="pl-lk-actions"><button type="button" class="linkbtn danger" data-pl-cyc-del="${esc(c.id)}">Remove this cycle</button></div></div>`
+      : "";
+    return `<div class="pl-lk${exp ? " open" : ""}">`
+      + `<button type="button" class="pl-lk-h" data-pl-cyc-open="${esc(c.id)}" aria-expanded="${exp}">`
+      + `<span class="pl-lk-when"><span class="pl-lk-wl">${esc(_winLabel(c))}</span><span class="pl-lk-span">${c.span}${c.auto ? " · auto" : ""}</span></span>`
+      + `<span class="pl-lk-mid"><span class="pl-lk-frozen num" title="Adherence when locked (the honest record)">ended ${c.lockAdherence}%</span>${backTxt}</span>`
+      + `<span class="pl-lk-live">${meterHTML(bl.met, bl.total)}</span><span class="pl-cyc-rx">${exp ? "▾" : "▸"}</span></button>${kids}</div>`;
+  }).join("");
+  wrap.innerHTML = `<div class="ph"><div class="ph-l"><h3>Locked cycles — retrospective ${epiBadge("measured")}</h3>`
+    + `<span class="muted small">frozen at lock; the backlog re-checks live, so clearing topics later shrinks it</span></div>`
+    + `<span class="count-pill">${cycles.length}</span></div><div class="pl-lk-list">${rows}</div>`;
+  return wrap;
+}
+
+/* ============================================================
    EVENT WIRING (bound once)
    ============================================================ */
 let _plBound = false;
@@ -743,6 +1014,34 @@ function _plBindOnce() {
       if (confirm("Start a new plan? Your current plan will be replaced. (Your tracking and done-diary are kept.)")) { Store.clearPlan(); plBuilder = null; plEdit = false; renderPlanner(); }
       return;
     }
+    // ── cycle stat bar controls ──
+    const cspan = e.target.closest("[data-pl-cyc-span]");
+    if (cspan && within(cspan)) { plCycleSpan = cspan.dataset.plCycSpan; plCycleRef = null; renderPlanner(); return; }
+    const cmove = e.target.closest("[data-pl-cyc-move]");
+    if (cmove && within(cmove)) {
+      const dir = parseInt(cmove.dataset.plCycMove, 10) || 0;
+      const win = _cycleWindow(plCycleSpan, plCycleRef);
+      if (plCycleSpan === "month") { const d = parseDay(win.from); plCycleRef = isoDay(new Date(d.getFullYear(), d.getMonth() + dir, 1)); }
+      else { plCycleRef = isoDay(addDays(parseDay(win.from), dir * 7)); }
+      renderPlanner(); return;
+    }
+    const cframe = e.target.closest("[data-pl-cyc-frame]");
+    if (cframe && within(cframe)) { plCycleFraming = cframe.dataset.plCycFrame; renderPlanner(); return; }
+    const csubj = e.target.closest("[data-pl-cyc-subj]");
+    if (csubj && within(csubj)) { const k = csubj.dataset.plCycSubj; plCycExpanded.has(k) ? plCycExpanded.delete(k) : plCycExpanded.add(k); renderPlanner(); return; }
+    if (e.target.closest("[data-pl-cyc-lock]")) {
+      const plan = Store.getPlan(); if (!plan) return;
+      const win = _cycleWindow(plCycleSpan, plCycleRef);
+      if (!_cyclePlanned(plan, win).length) { toast("Nothing planned in this " + plCycleSpan + " to lock", true); return; }
+      Store.lockCycle(_buildLockedCycle(plan, win, false));
+      plLockExpanded.add("cyc-" + win.span + "-" + win.from);
+      renderPlanner(); toast(`${win.label} locked — clear its backlog below as you go`); return;
+    }
+    const cdel = e.target.closest("[data-pl-cyc-del]");
+    if (cdel && within(cdel)) { if (confirm("Remove this locked cycle? Your tracking and plan are untouched.")) { Store.removeCycle(cdel.dataset.plCycDel); renderPlanner(); toast("Cycle removed"); } return; }
+    const copen = e.target.closest("[data-pl-cyc-open]");
+    if (copen && within(copen)) { const id = copen.dataset.plCycOpen; plLockExpanded.has(id) ? plLockExpanded.delete(id) : plLockExpanded.add(id); renderPlanner(); return; }
+
     // template intensity change → re-render builder to reveal/hide custom fields (preserve other inputs)
     const seg = e.target.closest(".seg[data-seg='plTemplate'] button[data-seg-v]");
     if (seg && within(seg)) { _plCaptureBuilder(); if (plBuilder) plBuilder.template = seg.dataset.segV; renderPlanner(); return; }

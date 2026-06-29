@@ -137,6 +137,29 @@ Mechanisms, ordered by leverage and sequenced local → social:
 - **Templates** are generators over `D.platforms` (distribute a subject's modules by proxy weight across dates).
 - **Shared/peer/snapshot features need accounts + backend** (the `storage.js` → server seam) — post-gate.
 
+## Cycle stat bar + lockable retrospective cycles (SHIPPED 2026-06-29)
+The planner's "across this week/month, what did I plan — by subject & depth — and what's still open?" surface.
+Grounded in the real revision-cycle research (toppers' 3-revision cadence R1→R2→R3, weekly execution + monthly
+macro, 60:40 new-vs-backlog, 1-3-7-15 spacing); all figures `measured` from real tracked flags — nothing self-reported.
+- **Cycle = a window over the active plan** (`span: week | month`). Week = Monday-anchored; month = calendar.
+  A `Week | Month` toggle + ◀ ▶ window nav. The plan's `items[].targetDate` decide membership.
+- **Extent (the hybrid)** — each item's *intended* depth comes from its pass (M1→do · M2→review · M3/Revision→revise;
+  non-backward → `do`). *Achieved* depth comes from the SAME tracking: topic `libTopicUnion` started/reviewed/mastered,
+  leaf `a/r/t`, video `w/v`. Shown two ways via a toggle: **Done/Reviewed/Revised** levels, or the **R1/R2/R3 revision
+  tally** (= count of those flags, 0–3). One derivation, two framings — no new tracker.
+- **The viz:** a per-date load strip (planned vs done, across the window) + a **subject × extent matrix** (3-segment
+  meter per subject — the required relational viz, not numerals) + hero tiles (cycle adherence, backlog, subjects on
+  track). A calm 60:40 callout when behind; a derived **"due to revise"** nudge (done ≥7d ago, not yet reviewed).
+- **Lock = frozen record + LIVE backlog** (`Store.state.cycles[]`). Locking freezes the window's planned set + intent +
+  an honest lock-time adherence ("ended 62%"); the not-done / not-reviewed / not-revised backlog re-evaluates **live**
+  against current tracking, so clearing topics later shrinks it (tap a backlog topic → open & clear). Records are **lean**
+  (entity ids + intent + id-array snapshot; subject/name/label re-derived) to stay under the 256 KB synced-blob cap.
+- **Auto-snapshot** completed **weeks** (idempotent by window, bounded to the plan's life) **before** `_autoReschedule`
+  rewrites their dates — so history isn't lost. Month is live-view + manual-lock only (no overlapping records).
+- Code: `storage.js` (`cycles[]` + `lockCycle/getCycles/removeCycle` + `mergeState` unions by id) · `planner.js`
+  (`_cycleWindow/_cycleStats/_extentFlags/_buildLockedCycle/_autoSnapshotCycles/_lockedBacklog` + `_plCycleBar`/`_plCyclesList`)
+  · `css/planner.css`. Rides offline + the account sync (cycles merge by id, lockedAt wins).
+
 ## Sequencing
 - **Phase 2/3 — local-first (the retain surface; high value, no backend):** editable single-user planner +
   quick-schedule + intensity templates + the derived done-diary + realistic-plan guardrail + personal "am I

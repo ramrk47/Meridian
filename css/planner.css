@@ -280,10 +280,106 @@
 .pl-bankopt .sheet-tick{color:var(--accent);font-weight:700}
 
 /* ============================================================
+   CYCLE STAT BAR — weekly/monthly planned-vs-done, by subject + extent
+   ============================================================ */
+#view-planner .pl-cycle{
+  --cyc-d:color-mix(in srgb,var(--accent) 22%,var(--paper-2));  /* Done / R1 (light) */
+  --cyc-r:var(--gold);                                          /* Reviewed / R2 */
+  --cyc-v:var(--core,var(--accent));                            /* Revised / R3 (deep) */
+}
+#view-planner .pl-cyc-ctl{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:2px 0 6px}
+#view-planner .pl-cyc-span button,#view-planner .pl-cyc-frame button{padding:5px 13px;font-size:12px}
+#view-planner .pl-cyc-nav{display:flex;align-items:center;gap:8px}
+#view-planner .pl-cyc-arrow{background:var(--paper-2);border:1px solid var(--line-2);border-radius:7px;width:30px;height:30px;
+  cursor:pointer;color:var(--ink-2);font-size:16px;line-height:1;display:flex;align-items:center;justify-content:center}
+#view-planner .pl-cyc-arrow:hover{border-color:var(--ink-3);color:var(--ink)}
+#view-planner .pl-cyc-label{font-size:13px;font-weight:600;color:var(--ink);min-width:118px;text-align:center;
+  font-variant-numeric:lining-nums tabular-nums}
+
+/* per-date load strip */
+#view-planner .pl-cyc-strip{display:flex;align-items:flex-end;gap:3px;height:64px;margin:10px 0 4px}
+#view-planner .pl-cyc-bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1 1 0;min-width:0;gap:3px}
+#view-planner .pl-cyc-track{position:relative;width:100%;max-width:16px;height:46px;display:flex;align-items:flex-end;justify-content:center}
+#view-planner .pl-cyc-track i{position:relative;width:100%;background:color-mix(in srgb,var(--ink-3) 20%,var(--paper-2));
+  border-radius:3px 3px 0 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+#view-planner .pl-cyc-track i b{width:100%;background:var(--core,var(--accent));border-radius:3px 3px 0 0}
+#view-planner .pl-cyc-bar.is-today .pl-cyc-track i{outline:1.5px solid var(--accent);outline-offset:-1px}
+#view-planner .pl-cyc-bd{font-size:9px;color:var(--ink-3);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap;line-height:1}
+#view-planner .pl-cyc-bar.is-today .pl-cyc-bd{color:var(--accent);font-weight:700}
+
+#view-planner .pl-cyc-tiles{margin:8px 0 2px}
+
+/* subject × extent matrix */
+#view-planner .pl-cyc-mh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;margin-bottom:2px}
+#view-planner .pl-cyc-mt{font-size:12px;font-weight:600;color:var(--ink-2)}
+#view-planner .pl-cyc-frame{margin-left:auto}
+#view-planner .pl-cyc-leg{display:inline-flex;align-items:center;gap:2px;font-size:10.5px;color:var(--ink-3)}
+#view-planner .pl-cyc-leg i{width:9px;height:9px;border-radius:2px;display:inline-block;margin:0 3px 0 7px}
+#view-planner .pl-cyc-leg i.d,#view-planner .pl-cyc-seg3 i.d{background:var(--cyc-d)}
+#view-planner .pl-cyc-leg i.r,#view-planner .pl-cyc-seg3 i.r{background:var(--cyc-r)}
+#view-planner .pl-cyc-leg i.v,#view-planner .pl-cyc-seg3 i.v{background:var(--cyc-v)}
+#view-planner .pl-cyc-matrix{display:flex;flex-direction:column;gap:1px;margin-top:4px}
+#view-planner .pl-cyc-row{display:flex;align-items:center;gap:9px;width:100%;background:none;border:0;border-radius:7px;
+  padding:7px 8px;cursor:pointer;text-align:left;font:inherit;transition:background-color var(--d-2,.15s)}
+#view-planner .pl-cyc-row:hover{background:var(--paper-2)}
+#view-planner .pl-cyc-rs{flex:0 0 30%;font-size:12.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#view-planner .pl-cyc-row.behind .pl-cyc-rs::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--gold);margin-right:6px;vertical-align:middle}
+#view-planner .pl-cyc-seg3{position:relative;flex:1 1 auto;height:9px;min-width:40px;background:var(--line);border-radius:5px;overflow:hidden}
+#view-planner .pl-cyc-seg3 i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+#view-planner .pl-cyc-rt{flex:0 0 auto;font-size:11px;color:var(--ink-3);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+#view-planner .pl-cyc-rx{flex:0 0 auto;color:var(--ink-4);font-size:11px;width:12px;text-align:center}
+#view-planner .pl-cyc-kids{padding:1px 8px 8px;display:flex;flex-direction:column;gap:1px}
+#view-planner .pl-cyc-kid{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 6px;border-radius:6px;font-size:12px}
+#view-planner .pl-cyc-kid.met{opacity:.6}
+#view-planner .pl-cyc-kid .is-link{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#view-planner .pl-cyc-kmeta{display:flex;align-items:center;gap:6px;flex:0 0 auto}
+#view-planner .pl-cyc-dots{display:inline-flex;gap:2px}
+#view-planner .pl-cyc-dots i{width:7px;height:7px;border-radius:50%;background:var(--ink-4);display:inline-block}
+#view-planner .pl-cyc-dots i:nth-child(1).on{background:var(--cyc-d)}
+#view-planner .pl-cyc-dots i:nth-child(2).on{background:var(--cyc-r)}
+#view-planner .pl-cyc-dots i:nth-child(3).on{background:var(--cyc-v)}
+#view-planner .pl-cyc-foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+#view-planner .pl-cyc-due{font-size:11px;color:var(--gold);background:color-mix(in srgb,var(--gold) 13%,transparent);
+  border-radius:20px;padding:3px 10px;font-weight:600}
+#view-planner .pl-cyc-lock{margin-left:auto}
+
+/* ── locked cycles (retrospective) ── */
+#view-planner .pl-lk-list{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+#view-planner .pl-lk{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper)}
+#view-planner .pl-lk.open{border-color:var(--line-2)}
+#view-planner .pl-lk-h{display:flex;align-items:center;gap:10px;width:100%;background:none;border:0;cursor:pointer;
+  padding:11px 12px;text-align:left;font:inherit;transition:background-color var(--d-2,.15s)}
+#view-planner .pl-lk-h:hover{background:var(--paper-2)}
+#view-planner .pl-lk-when{display:flex;flex-direction:column;gap:1px;flex:0 0 auto;min-width:92px}
+#view-planner .pl-lk-wl{font-size:13px;font-weight:600;color:var(--ink)}
+#view-planner .pl-lk-span{font-size:10px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em}
+#view-planner .pl-lk-mid{display:flex;flex-direction:column;gap:2px;flex:1 1 auto;min-width:0}
+#view-planner .pl-lk-frozen{font-size:11.5px;color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums}
+#view-planner .pl-lk-back{font-size:11px;color:var(--gold)}
+#view-planner .pl-lk-clear{font-size:11px;color:var(--core,var(--accent));font-weight:600}
+#view-planner .pl-lk-live{flex:0 0 auto}
+#view-planner .pl-lk-live .meter{font-size:10px}
+#view-planner .pl-lk-kids{padding:6px 12px 12px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:11px}
+#view-planner .pl-lk-grp{display:flex;flex-direction:column;gap:1px}
+#view-planner .pl-lk-gl{font-size:11px;font-weight:700;color:var(--ink-2);text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+#view-planner .pl-lk-actions{margin-top:2px}
+
+/* ============================================================
    MOBILE DENSITY (≤640) — Phase 3 surfaces
    ============================================================ */
 @media (max-width:640px){
   #view-planner .pl-tiles{grid-template-columns:repeat(2,1fr)}
+  #view-planner .pl-cyc-tiles{grid-template-columns:repeat(2,1fr)}
+  #view-planner .pl-cyc-ctl{gap:8px}
+  #view-planner .pl-cyc-nav{flex:1;justify-content:space-between}
+  #view-planner .pl-cyc-label{min-width:0;flex:1}
+  #view-planner .pl-cyc-strip{gap:2px;height:60px}
+  #view-planner .pl-cyc-track{max-width:none}            /* let ~30 month bars share the width — no h-scroll */
+  #view-planner .pl-cyc-bd{font-size:8.5px}
+  #view-planner .pl-cyc-rs{flex-basis:38%}
+  #view-planner .pl-cyc-foot .pl-cyc-lock{margin-left:0;flex:1}
+  #view-planner .pl-lk-when{min-width:78px}
   #view-planner .pl-head{gap:10px}
   #view-planner .pl-name{font-size:19px}
   #view-planner .pl-modecard.hero{padding:15px}

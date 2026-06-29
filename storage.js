@@ -24,6 +24,7 @@ function blankState() {
     schedule: [],     // user-added schedule / content entries (legacy seam; kept)
     subs: [],         // My-subscriptions: platform ids the student owns (default empty = opt-in)
     plan: null,       // the active Study Planner plan (local-first; see Store.setPlan)
+    cycles: [],       // locked retrospective cycles (week/month snapshots; see Store.lockCycle)
     updatedAt: null,
   };
 }
@@ -129,6 +130,19 @@ const Store = {
     return this.state.plan;
   },
   clearPlan() { this.state.plan = null; this.save(); },
+
+  // ---- locked retrospective cycles (week/month snapshots; lean: ids only) ----
+  getCycles() { return this.state.cycles || (this.state.cycles = []); },
+  // upsert by id (idempotent — re-locking the same window replaces, never duplicates)
+  lockCycle(cycle) {
+    if (!cycle || !cycle.id) return null;
+    const list = this.getCycles();
+    const i = list.findIndex(c => c.id === cycle.id);
+    if (i >= 0) list[i] = cycle; else list.push(cycle);
+    this.save();
+    return cycle;
+  },
+  removeCycle(id) { this.state.cycles = this.getCycles().filter(c => c.id !== id); this.save(); },
 
   // ---- backup / portability (bridge to "publish to server") ----
   export() { return JSON.stringify(this.state, null, 2); },
@@ -337,6 +351,16 @@ function mergeState(a, b) {
 
   // plan: keep base's; fall back to other's if base has none
   if (!out.plan && other.plan) out.plan = other.plan;
+
+  // cycles: union by id (locked retrospective snapshots; a lock on either device is kept).
+  // On id-collision keep the later lockedAt so a re-lock wins.
+  const cyc = {};
+  [...(base.cycles || []), ...(other.cycles || [])].forEach(c => {
+    if (!c || !c.id) return;
+    const prev = cyc[c.id];
+    if (!prev || (c.lockedAt || 0) > (prev.lockedAt || 0)) cyc[c.id] = c;
+  });
+  out.cycles = Object.values(cyc);
 
   // the merged union must WIN going forward: stamp it strictly newer than both
   // inputs (guards against device clock skew making a reconcile loop forever).

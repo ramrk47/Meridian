@@ -84,6 +84,7 @@
 | `progress` / `videos` / `scores` / `stars` / `customTests` | tracking maps (carry `ts`) | (pre-existing) | every tracker; the planner's **derived done-diary** + topic-union completion |
 | `subs[]` | owned platform ids (default `[]`) | **Planner (2026-06-29)** | scopes plan generation + the honest-gap signal; `.cov-mine` row (parked) |
 | `plan` | `{id,name,mode,examDate?,range?,dailyCap,items[],…}` | **Planner (2026-06-29)** | the active Study Planner (single plan; rides export/import/reset) |
+| `cycles[]` | lean locked snapshots `{id,span,from,to,lockedAt,planned:[{entity,intent}],snapshot:{done/reviewed/revisedIds},lockAdherence}` | **Cycle bar (2026-06-29)** | the weekly/monthly cycle stat bar + retrospective backlog; `mergeState` unions by id (lockedAt wins) |
 - The whole `blankState` blob is the unit of sync: signed-in, it round-trips to `user_state.blob` (server),
   reconciled by `mergeState()` (newest-`ts` wins; unions; first-login local→account merge). Offline → localStorage only.
 
@@ -211,6 +212,16 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Planner cycle stat bar + lockable retrospective cycles — VERIFIED & LANDED.** The queued feature is
+  now preview-verified end-to-end on the hardened backend and committed (storage.js/planner.js/planner.css +419, +docs).
+  Confirmed: weekly/monthly window toggle + ◀▶ nav; per-date load strip; **subject × extent matrix** (relational viz,
+  `measured`); adherence math exact (5/42 → 12% hand-checked); **Extent⇄Revisions** hybrid framing; **lock → frozen
+  "ended 40%" record while live backlog shrank 25→15 / live adherence 40%→64%** as topics were cleared; **auto-snapshot
+  of completed weeks runs before `_autoReschedule`** (captured 3 past-week items it would have erased), idempotent
+  (re-renders kept 1), weeks-only; **month strip = 30 bars, no h-scroll at 320px** (refinement #4); **cycles[] round-trips
+  to the server + `mergeState` unions by id** (no dup/loss); console clean; existing planner (tiles/passes/schedule/
+  done-diary) + 56,091/library/mapping untouched; 3 standards pass. Grounded in real revision-cycle research (R1→R2→R3,
+  weekly+monthly, 60:40 backlog, 1-3-7-15). All 4 coordinator refinements honored (lean id-only records under the 256KB cap).
 - 2026-06-29 **Backend hardening verified+accepted by coordinator** (256KB body cap + depth-32, `Require all
   denied` in lib/+jwks_cache, `min($t,now_ms())` LWW clamp, sessions sha256-hashed at rest — all confirmed in
   committed code; auth core untouched). **Security gate fully cleared.** Separately: the **Planner cycle-stat-bar +
