@@ -195,6 +195,15 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **MAJOR PIVOT — manifest the full vision incl. the backend (user directive).** "Put everything into
+  the foundation including backend. No complex logins — just Google OAuth." Pulls Phase 5 forward: local-first **+**
+  a synced PHP+MySQL backend with **Google OAuth only**, unlocking the parked half (peer pods, shared accountability,
+  verified faculty + crowd ratings, curator layer, pace-benchmarks, subscriptions row, predictor). Local-first must
+  still work offline (the backend is sync+social, never a hard dependency). Program + architecture + security in
+  `BACKEND_AND_FULL_BUILD.md`; sequence = **Backend Foundation (gate) → social → ratings graph → additive bits →
+  predictor**; B2B architected-not-built. **First build: `BACKEND_FOUNDATION_PROMPT.md` (Opus xhigh, security-critical).**
+  User must supply Google OAuth creds + host/MySQL; public *branded* launch waits on Calvetra IP clearance (dev
+  subdomain fine now). Coordinator will security-review (token verify, parameterized queries, secret handling) before social builds.
 - 2026-06-29 **Planner verified+accepted by coordinator → local-first product is now feature-rich.** Checked:
   `_genBackward` M1/M2/M3 logic sound (today→exam-1, foundation/revision/rapid split, last-10 reserved, HY gets
   all passes), adherence/coverage honestly derived from real tracked actions, hours = video-minutes only, integrity
