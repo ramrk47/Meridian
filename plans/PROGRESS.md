@@ -195,6 +195,15 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Planner verified+accepted by coordinator → local-first product is now feature-rich.** Checked:
+  `_genBackward` M1/M2/M3 logic sound (today→exam-1, foundation/revision/rapid split, last-10 reserved, HY gets
+  all passes), adherence/coverage honestly derived from real tracked actions, hours = video-minutes only, integrity
+  intact (56,091 / library / mapping). **INFLECTION:** the free local-first wedge — cross-platform tracker + PYQ +
+  canonical spine + importance + faculty entities + accountability planner — is substantially built. **Highest-value
+  next move is VALIDATION, not more features:** get it in front of real aspirants to test the orchestration bet (the
+  research's riskiest *unproven* assumption). Options — (a) try it end-to-end; (b) a lightweight public deploy of the
+  offline app; (c) the predictor as the acquisition hook. Backend/social (pods, curator-adopt, B2B) stays gated on
+  real users (Fork #3). Predictor remains near-launch.
 - 2026-06-29 **Phase 2/3 SHIPPED — local-first Study Planner (the retain surface).** Built the editable planner +
   accountability engine on the 1d spine and the tracker's timestamp seam. Led with the research heroes:
   **backward-plan from a locked exam date** (auto M1/M2/M3 passes counting down + on-track read + **auto-reschedule**
