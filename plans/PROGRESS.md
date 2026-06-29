@@ -21,7 +21,10 @@
   trademark clearance still REQUIRED before public launch** (see `plans/NAME_CANDIDATES.md`, memory `product-name-calvetra`).
 - **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED & verified** (modular design system + chart
   vocabulary + entity pages Subject/Platform/Faculty + faculty seed(14) + motion/View-Transitions layer).
-- **Next:** **Phase 2a Rank/College Predictor** (its own data-first session, deferred to near-launch). *(Phase 2b tracker + Phase 2/3 local-first Study Planner both shipped 2026-06-29.)*
+- **Next:** **coordinator security review of the Backend Foundation** (token-verify, parameterized queries, secret
+  handling, mock-auth prod-off, legacy isolation) → then social layer (peer pods / shared accountability). *(Backend
+  Foundation built + verified 2026-06-29; Phase 2b tracker + local-first Study Planner shipped 2026-06-29. Predictor
+  remains a parallel data-first session, deferred to near-launch.)*
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
 - **Build/launch for NEET PG · INI-CET · FMGE now**; architect exam-agnostic so all-India verticals extend later (don't build them yet).
@@ -74,12 +77,24 @@
 - ⚠️ `(1)/(2)` copies are byte-identical dups — `build_data.py` reads the canonical base CSV only.
 - ✅ All PYQ seams now integrated (Phase 2b) — no remaining content seams.
 
-**User-state seams (`storage.js` `blankState`; local-first now, server-sync later — NOT source data):**
+**User-state seams (`storage.js` `blankState`; local-first AND now server-synced per-account — NOT source data):**
 | Key | Shape | Added | Consumed by |
 |-----|-------|-------|-------------|
 | `progress` / `videos` / `scores` / `stars` / `customTests` | tracking maps (carry `ts`) | (pre-existing) | every tracker; the planner's **derived done-diary** + topic-union completion |
 | `subs[]` | owned platform ids (default `[]`) | **Planner (2026-06-29)** | scopes plan generation + the honest-gap signal; `.cov-mine` row (parked) |
 | `plan` | `{id,name,mode,examDate?,range?,dailyCap,items[],…}` | **Planner (2026-06-29)** | the active Study Planner (single plan; rides export/import/reset) |
+- The whole `blankState` blob is the unit of sync: signed-in, it round-trips to `user_state.blob` (server),
+  reconciled by `mergeState()` (newest-`ts` wins; unions; first-login local→account merge). Offline → localStorage only.
+
+**Server-side seams (Backend Foundation, 2026-06-29) — MySQL prod / SQLite dev, via `server/lib/`:**
+| Table | Shape | Purpose |
+|-------|-------|---------|
+| `users` | `id, google_sub UNIQUE, email, name, created_at` | one row per Google account (minimal PII: sub+email+name) |
+| `user_state` | `user_id PK, blob JSON, updated_at, version` | the synced per-account state blob (last-write-wins on `updated_at`) |
+| `sessions` | `id(256-bit), user_id, csrf_token, created_at, expires_at, last_seen` | server session → `cal_session` httpOnly+Secure+SameSite cookie; CSRF per session |
+| `rate_limits` | `bucket, window_start, count` | fixed-window throttle on `google`/`devlogin`/`state` POST |
+- API: `server/api.php?action=` → `google` (verify Google ID token) · `devlogin` (dev-only) · `me` · `logout` · `state`.
+  Legacy `?profile=` file store kept but **isolated** under `data/legacy/`, never touches account data.
 
 ## Roadmap (strategy-informed; SEQUENCE depends on the forks — confirm with user)
 ### Phase 0 — settle strategy
@@ -195,6 +210,20 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Backend Foundation BUILT + locally verified (the gate is in).** PHP 8 + PDO (MySQL prod / SQLite
+  dev), single `?action=` front controller (`server/api.php`) + `server/lib/` (db/auth/state/csrf/ratelimit/http)
+  + vendored **firebase/php-jwt**. Endpoints: `google` (server-verified ID token — RS256 vs Google JWKS, `aud`/`iss`/
+  `exp`/`email_verified`), `devlogin` (dev-only, 3 positive prod-off gates), `me`, `logout`, `state` (GET/POST,
+  CSRF-required, last-write-wins). Tables `users`/`user_state`/`sessions`/`rate_limits`. Client: `storage.js` gains an
+  Account+sync layer (debounced push, offline queue + reconnect flush, **client-side first-login merge** so local
+  ticks are never clobbered) + a "Sign in"/sync pill in toolbar **and** mobile overflow. **Local-first preserved**
+  (works fully offline; 56,091 / library / mapping / 10 surfaces untouched). Verified end-to-end on SQLite + dev
+  mock-auth: signin→tick→sync→reload-from-server→offline-queue→reconnect-drain→logout, plus merge keeps the union;
+  console clean, no UI block, **no secrets committed** (config.php/sqlite/jwks_cache/legacy gitignored). Legacy
+  `?profile=` file API kept but **isolated** from account data. `DEPLOY.md` §5 documents the user-only setup (Google
+  OAuth client + MySQL + HTTPS). **USER still supplies:** Google Client ID, MySQL/host. **→ awaiting coordinator
+  security review** (token-verify path, query parameterization, secret handling, mock-auth prod-off, legacy isolation)
+  before any social feature builds on it.
 - 2026-06-29 **MAJOR PIVOT — manifest the full vision incl. the backend (user directive).** "Put everything into
   the foundation including backend. No complex logins — just Google OAuth." Pulls Phase 5 forward: local-first **+**
   a synced PHP+MySQL backend with **Google OAuth only**, unlocking the parked half (peer pods, shared accountability,
