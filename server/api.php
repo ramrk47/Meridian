@@ -21,6 +21,7 @@ require_once __DIR__ . '/lib/csrf.php';
 require_once __DIR__ . '/lib/ratelimit.php';
 require_once __DIR__ . '/lib/auth.php';
 require_once __DIR__ . '/lib/state.php';
+require_once __DIR__ . '/lib/social.php';
 
 send_cors_headers();
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS') { http_response_code(204); exit; }
@@ -96,6 +97,55 @@ try {
       }
       break;
 
+    /* ── Social accountability (Step 2) ──────────────────────────────────────
+       Every action requires an authenticated session. Writes additionally
+       require CSRF + are rate-limited. The acting user is ALWAYS the session
+       user_id — social.php never trusts a client-supplied actor id. */
+    case 'pod_create':
+      [$uid, $body] = social_write_guard($method, 'social', 30, 300);
+      json_out(['pod' => pod_create($uid, (string) ($body['name'] ?? ''))]);
+      break;
+
+    case 'pod_join':
+      [$uid, $body] = social_write_guard($method, 'social', 60, 300);
+      json_out(['pod' => pod_join($uid, (string) ($body['invite_code'] ?? ''))]);
+      break;
+
+    case 'pod_leave':
+      [$uid, $body] = social_write_guard($method, 'social', 60, 300);
+      json_out(pod_leave($uid, (int) ($body['pod_id'] ?? 0)));
+      break;
+
+    case 'pod_list':
+      $uid = require_session_uid();
+      json_out(pod_list($uid));
+      break;
+
+    case 'pod_board':
+      $uid = require_session_uid();
+      json_out(pod_board($uid, (int) ($_GET['pod_id'] ?? 0)));
+      break;
+
+    case 'publish_summary':
+      [$uid, $body] = social_write_guard($method, 'publish', 120, 300);
+      json_out(publish_summary($uid, $body['summary'] ?? null));
+      break;
+
+    case 'partner_invite':
+      [$uid, $body] = social_write_guard($method, 'social', 30, 300);
+      json_out(partner_invite($uid));
+      break;
+
+    case 'partner_accept':
+      [$uid, $body] = social_write_guard($method, 'social', 60, 300);
+      json_out(partner_accept($uid, (string) ($body['invite_code'] ?? '')));
+      break;
+
+    case 'partner_snapshot':
+      $uid = require_session_uid();
+      json_out(partner_snapshot($uid));
+      break;
+
     default:
       json_err('not found', 404);
   }
@@ -108,6 +158,29 @@ try {
 
 function require_post(string $method): void {
   if ($method !== 'POST') json_err('method not allowed', 405);
+}
+
+/** Authenticated read: returns the session user_id or 401s. */
+function require_session_uid(): int {
+  $sess = current_session();
+  if (!$sess) json_err('unauthorized', 401);
+  return (int) $sess['user_id'];
+}
+
+/** Authenticated, CSRF-checked, rate-limited WRITE. Returns [userId, jsonBody].
+ *  Centralizes the security bar so every social write enforces it identically:
+ *  POST-only · live session · CSRF header · per-IP rate limit · body under cap. */
+function social_write_guard(string $method, string $rlKey, int $limit, int $windowSec): array {
+  require_post($method);
+  $sess = current_session();
+  if (!$sess) json_err('unauthorized', 401);
+  if (!csrf_check($sess)) json_err('bad csrf', 403);
+  if (!rate_ok($rlKey, $limit, $windowSec)) json_err('rate limited', 429);
+  [$body, $okJson] = read_json_body();
+  if (!$okJson) json_err('invalid json', 400);
+  if ($body === null) $body = [];
+  if (!is_array($body)) json_err('invalid json', 400);
+  return [(int) $sess['user_id'], $body];
 }
 
 function public_user(array $u): array {
