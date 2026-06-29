@@ -123,15 +123,20 @@ function upsert_user(string $sub, ?string $email, ?string $name): array {
 
 /* ── Sessions ─────────────────────────────────────────────────────────────── */
 
+/** sessions.id stores the SHA-256 of the token; the raw token lives only in the
+ *  cookie. A DB read leak then can't be replayed as a live session. (sha256 hex
+ *  is 64 chars, so it fits the existing VARCHAR(64) column.) */
+function session_id_hash(string $rawId): string { return hash('sha256', $rawId); }
+
 function session_create(int $userId): array {
   $pdo = db();
-  $id   = bin2hex(random_bytes(32));                   // 64 hex
+  $id   = bin2hex(random_bytes(32));                   // 64 hex — raw token (cookie only)
   $csrf = csrf_new_token();
   $now  = now_ms();
   $exp  = $now + SESSION_TTL_SEC * 1000;
   $pdo->prepare('INSERT INTO sessions (id, user_id, csrf_token, created_at, expires_at, last_seen)
-                 VALUES (?,?,?,?,?,?)')->execute([$id, $userId, $csrf, $now, $exp, $now]);
-  set_session_cookie($id);
+                 VALUES (?,?,?,?,?,?)')->execute([session_id_hash($id), $userId, $csrf, $now, $exp, $now]);
+  set_session_cookie($id);                             // raw token to the client
   return ['id' => $id, 'user_id' => $userId, 'csrf_token' => $csrf, 'expires_at' => $exp];
 }
 
@@ -149,23 +154,24 @@ function set_session_cookie(string $id): void {
 function current_session(): ?array {
   $id = $_COOKIE[SESSION_COOKIE] ?? '';
   if ($id === '' || !preg_match('/^[a-f0-9]{64}$/', $id)) return null;
+  $h = session_id_hash($id);                            // look up by hash, not raw token
   $pdo = db();
   $sel = $pdo->prepare('SELECT id, user_id, csrf_token, expires_at FROM sessions WHERE id = ?');
-  $sel->execute([$id]);
+  $sel->execute([$h]);
   $row = $sel->fetch();
   if (!$row) return null;
   if ((int) $row['expires_at'] < now_ms()) {
-    $pdo->prepare('DELETE FROM sessions WHERE id = ?')->execute([$id]);
+    $pdo->prepare('DELETE FROM sessions WHERE id = ?')->execute([$h]);
     return null;
   }
-  $pdo->prepare('UPDATE sessions SET last_seen = ? WHERE id = ?')->execute([now_ms(), $id]);
+  $pdo->prepare('UPDATE sessions SET last_seen = ? WHERE id = ?')->execute([now_ms(), $h]);
   return $row;
 }
 
 function end_session(): void {
   $id = $_COOKIE[SESSION_COOKIE] ?? '';
   if ($id !== '' && preg_match('/^[a-f0-9]{64}$/', $id)) {
-    db()->prepare('DELETE FROM sessions WHERE id = ?')->execute([$id]);
+    db()->prepare('DELETE FROM sessions WHERE id = ?')->execute([session_id_hash($id)]);
   }
   setcookie(SESSION_COOKIE, '', [
     'expires' => time() - 3600, 'path' => '/', 'httponly' => true,

@@ -1,0 +1,4 @@
+# Server-side PHP libs + vendored JWT — never web-served directly (Apache 2.4).
+# Dir-local guard so this holds even under a URL subpath deploy where the
+# root-anchored RedirectMatch in ../.htaccess would not match. Covers jwt/ too.
+Require all denied

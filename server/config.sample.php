@@ -24,6 +24,12 @@ return [
   'google_client_id'     => '',                      // e.g. '1234-abc.apps.googleusercontent.com'
   'google_client_secret' => '',                      // not required for ID-token verification
 
+  // ── Request limits ────────────────────────────────────────────────────────
+  // Hard cap (bytes) on a JSON request body. Over this -> 413, before decoding.
+  // The synced state blob is small; 256 KB is generous headroom. Raise only if
+  // a real account legitimately exceeds it.
+  'max_body_bytes' => 256 * 1024,
+
   // ── Sessions / CSRF ───────────────────────────────────────────────────────
   // Long random string; used to derive/sign nothing secret directly but kept for
   // future signed-cookie needs. Set to a unique 64+ char random value in prod.

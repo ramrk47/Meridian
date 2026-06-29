@@ -11,5 +11,8 @@
   Require all denied
 </FilesMatch>
 
-# Server-side directories that must never be web-served
-RedirectMatch 404 ^/server/(lib|data|jwks_cache)/
+# Server-side directories that must never be web-served.
+# De-anchored (^|/) so it also matches subpath deploys (e.g. /tracker/server/lib/…),
+# not just a root-anchored /server/…. Backed by dir-local `Require all denied`
+# .htaccess in each of these dirs in case mod_alias/RedirectMatch is unavailable.
+RedirectMatch 404 (^|/)server/(lib|data|jwks_cache)/

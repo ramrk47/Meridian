@@ -53,7 +53,7 @@ function run_migrations(PDO $pdo, string $driver): void {
   ) $eng");
 
   $pdo->exec("CREATE TABLE IF NOT EXISTS sessions (
-    id         VARCHAR(64) PRIMARY KEY,
+    id         VARCHAR(64) PRIMARY KEY,            -- sha256(token) hex; raw token only in the cookie
     user_id    " . ($mysql ? 'BIGINT UNSIGNED' : 'INTEGER') . " NOT NULL,
     csrf_token VARCHAR(64) NOT NULL,
     created_at $ts NOT NULL,

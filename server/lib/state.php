@@ -17,11 +17,14 @@ function state_get(int $userId): array {
   return ['state' => $decoded, 'version' => (int) $row['version'], 'updatedAt' => (int) $row['updated_at']];
 }
 
-/** Parse the client state's ISO `updatedAt` to unix-ms; fallback to now. */
+/** Parse the client state's ISO `updatedAt` to unix-ms; fallback to now.
+ *  CLAMPED to server time: a client must not be able to future-date its blob to
+ *  permanently win last-write-wins and wedge other devices. So incomingTs is
+ *  never allowed to exceed now_ms(). */
 function state_incoming_ts($state): int {
   if (is_array($state) && !empty($state['updatedAt'])) {
     $t = strtotime((string) $state['updatedAt']);
-    if ($t !== false) return $t * 1000;
+    if ($t !== false) return min($t * 1000, now_ms());
   }
   return now_ms();
 }
@@ -33,6 +36,9 @@ function state_incoming_ts($state): int {
  *  - otherwise upsert and bump version.
  */
 function state_post(int $userId, $state): array {
+  // Only ever store a JSON object/array blob — never a scalar/null (defense in depth;
+  // the front controller also guards, this keeps the store self-protecting).
+  if (!is_array($state)) json_err('invalid state', 400);
   $pdo = db();
   $incomingTs = state_incoming_ts($state);
 

@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS user_state (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS sessions (
-  id          VARCHAR(64) PRIMARY KEY,    -- 256-bit random hex token (also the cookie value)
+  id          VARCHAR(64) PRIMARY KEY,    -- sha256 hex of the 256-bit token; raw token lives only in the cookie
   user_id     BIGINT UNSIGNED NOT NULL,
   csrf_token  VARCHAR(64) NOT NULL,
   created_at  BIGINT NOT NULL,
