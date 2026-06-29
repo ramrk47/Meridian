@@ -211,6 +211,15 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Backend hardening verified+accepted by coordinator** (256KB body cap + depth-32, `Require all
+  denied` in lib/+jwks_cache, `min($t,now_ms())` LWW clamp, sessions sha256-hashed at rest — all confirmed in
+  committed code; auth core untouched). **Security gate fully cleared.** Separately: the **Planner cycle-stat-bar +
+  lockable-cycles feature is implemented but UNCOMMITTED** in the tree (storage.js/planner.js/planner.css, +419).
+  Coordinator reviewed the diff — coherent, applied 3 of 4 refinements (lean id-only records, idempotent/bounded
+  weeks-only auto-snapshot, intent-default `do`); auto-snapshot-before-reschedule ordering preserved; mergeState
+  unions cycles by id. **Backed up** (tag `wip-cycles-backup`). Not blind-committed — needs preview verification
+  (lock/live-backlog, auto-snapshot timing, refinement #4 = 320px month strip, sync round-trip on the hardened
+  backend) + docs. Verify-and-land prompt: `CYCLE_FEATURE_VERIFY_PROMPT.md` (Opus high).
 - 2026-06-29 **Backend hardening SHIPPED → social layer GREEN-LIT.** Applied all 6 security-review items
   (`BACKEND_HARDENING_PROMPT.md`), auth core untouched. **3 must-fix:** (HIGH) state blob now capped —
   `read_json_body()` rejects >256 KB (configurable `max_body_bytes`) with **413** before decode + a depth-32
