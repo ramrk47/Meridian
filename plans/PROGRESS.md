@@ -21,11 +21,13 @@
   trademark clearance still REQUIRED before public launch** (see `plans/NAME_CANDIDATES.md`, memory `product-name-calvetra`).
 - **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED & verified** (modular design system + chart
   vocabulary + entity pages Subject/Platform/Faculty + faculty seed(14) + motion/View-Transitions layer).
-- **Next:** **Step 2 — social accountability** (peer pods / shared adherence board / accountability partner /
-  WhatsApp snapshot / curator-adopt) now green-lit: the Backend Foundation passed security review **and** the 3 must-fix
-  blockers + 3 nice-to-haves are **hardened + verified (2026-06-29)**. *(Backend Foundation built + verified 2026-06-29;
-  Phase 2b tracker + local-first Study Planner shipped 2026-06-29. Predictor remains a parallel data-first session,
-  deferred to near-launch.)*
+- **Step 2 — social accountability SHIPPED (2026-06-29; commits `b529663` backend, `4fede6f` client) — pending
+  coordinator security-review of the authz surface.** Peer pods + a SOLIDARITY adherence board (no rank) +
+  accountability partner + WhatsApp snapshot card, account-gated, on the hardened backend. Local-first untouched.
+  **Curator/peer plan *adopt* is deferred to Step 3** (lands with the curator layer), per the prompt's out-of-scope.
+- **Next:** **Step 3 — the ratings graph** (verified faculty voting · crowd ratings · curator layer + plan-adopt).
+  *(Backend Foundation + hardening built/verified 2026-06-29; Phase 2b tracker + local-first Study Planner +
+  cycle feature shipped 2026-06-29. Predictor remains a parallel data-first session, deferred to near-launch.)*
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
 - **Build/launch for NEET PG · INI-CET · FMGE now**; architect exam-agnostic so all-India verticals extend later (don't build them yet).
@@ -94,8 +96,13 @@
 | `users` | `id, google_sub UNIQUE, email, name, created_at` | one row per Google account (minimal PII: sub+email+name) |
 | `user_state` | `user_id PK, blob JSON, updated_at, version` | the synced per-account state blob (last-write-wins on `updated_at`) |
 | `sessions` | `id=sha256(token), user_id, csrf_token, created_at, expires_at, last_seen` | server session → `cal_session` httpOnly+Secure+SameSite cookie (raw token only in cookie; **hashed at rest**); CSRF per session |
-| `rate_limits` | `bucket, window_start, count` | fixed-window throttle on `google`/`devlogin`/`state` POST |
+| `rate_limits` | `bucket, window_start, count` | fixed-window throttle on `google`/`devlogin`/`state`/`social`/`publish` POST |
+| `pods` | `id, name, owner_user_id, invite_code UNIQUE(128-bit), created_at` | **Step 2**: a peer pod; invite-only, code unguessable + not reversible to identity |
+| `pod_members` | `pod_id, user_id, joined_at, opted_in` (PK pod+user) | membership + per-pod board opt-in; leaving deletes the row + the summary |
+| `member_summaries` | `pod_id, user_id, summary JSON, updated_at` (PK pod+user) | the published **aggregate** summary (adherence %, on-track/behind subjects, cycle label) — never raw state. `pod_id=0` = SELF scope (partner snapshot/fallback); other rows mirror it per pod so a board reads only its scope |
+| `partners` | `id, requester_id, addressee_id, invite_code UNIQUE, status` | **Step 2**: 1:1 accountability link; B accepts A's code (no email enumeration); snapshot only between an accepted pair |
 - API: `server/api.php?action=` → `google` (verify Google ID token) · `devlogin` (dev-only) · `me` · `logout` · `state`.
+  **Step 2 social (auth+CSRF, member-gated, actor = session user_id):** `pod_create/join/leave/list/board` · `publish_summary` · `partner_invite/accept/snapshot`.
   Legacy `?profile=` file store kept but **isolated** under `data/legacy/`, never touches account data.
 
 ## Roadmap (strategy-informed; SEQUENCE depends on the forks — confirm with user)
@@ -212,6 +219,24 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Step 2 Social Accountability BUILT + verified (commits `b529663`, `4fede6f`) — awaiting coordinator
+  authz security-review.** STAGE 1 (`server/lib/social.php` + `?action=` routes + `db.php`/`schema.sql` migrations):
+  tables `pods`/`pod_members`/`member_summaries`/`partners`; endpoints `pod_create/join/leave/list/board` ·
+  `publish_summary` · `partner_invite/accept/snapshot`. **Authz model** (the crux): every read **member-gated**; the
+  actor is **always the session `user_id`** (no client-supplied actor — a forged `user_id` in the body is ignored);
+  invite codes are **128-bit, unguessable, not reversible to identity**; a bad code is a **generic 404** (no
+  enumeration oracle); published summaries are **whitelisted + clamped** (adherence/coverage 0–100, ≤30 subjects,
+  ≤48-char strings — never raw `user_state`); **leaving purges** membership + summary; partner snapshot only between
+  an **accepted** pair (`pod_id=0` SELF scope). Reused the hardened session/CSRF/PDO/rate-limit/256KB-body patterns
+  **unchanged**. Verified with an **adversarial 3-user matrix** (member-only board 403, unauth 401, no-CSRF/wrong-CSRF
+  403, forged-actor ignored, 405 wrong-method, sanitation clamp, leave-purge, partner self-accept 400 / reuse 409).
+  STAGE 2 (`storage.js` `Social` module + `js/surfaces/social.js` + `css/social.css`): an **account-gated SECTION in
+  the Planner** — the client computes its OWN tiny summary from `_planStats`/`_cycleStats` and publishes (debounced,
+  opt-in); the **solidarity board** (each vs their own plan, **no rank**); accountability partner; a **WhatsApp
+  snapshot card** (canvas → Web Share API w/ files, fallback download + copied caption). **Local-first untouched**
+  (signed out = a calm sign-in prompt). Verified end-to-end on the local PHP backend (two-member board, snapshot card
+  with `+N` overflow, evening theme, 390px + desktop, console clean). **Out-of-scope held:** no curator/peer plan
+  *adopt* (Step 3), no crowd/faculty ratings (Step 3), no chat, no public/discoverable pods. **Next = Step 3.**
 - 2026-06-29 **Cycle feature accepted by coordinator (verified) → next = Step 2 Social Accountability.** Reconciled:
   tree clean, `cycles` seam committed, integrity untouched (56,091 / 152-of-157 HY), backup tag retired. With the
   security gate cleared + the tree clean, wrote the social-layer prompt **against the hardened sync contract**:
