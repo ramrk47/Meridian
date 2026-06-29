@@ -212,6 +212,13 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Cycle feature accepted by coordinator (verified) → next = Step 2 Social Accountability.** Reconciled:
+  tree clean, `cycles` seam committed, integrity untouched (56,091 / 152-of-157 HY), backup tag retired. With the
+  security gate cleared + the tree clean, wrote the social-layer prompt **against the hardened sync contract**:
+  `SOCIAL_ACCOUNTABILITY_PROMPT.md` (pods · solidarity adherence board · accountability partner · WhatsApp snapshot
+  card; Opus xhigh). Privacy model is central — **opt-in, aggregate summaries not raw state, solidarity not a
+  leaderboard**; multi-user **authz** is the crux. **Coordinator will security-review the authz surface (member-only
+  reads, invite-code unguessability, own-summary-only writes, no enumeration) before it goes live** — same gate as the backend foundation.
 - 2026-06-29 **Planner cycle stat bar + lockable retrospective cycles — VERIFIED & LANDED.** The queued feature is
   now preview-verified end-to-end on the hardened backend and committed (storage.js/planner.js/planner.css +419, +docs).
   Confirmed: weekly/monthly window toggle + ◀▶ nav; per-date load strip; **subject × extent matrix** (relational viz,
