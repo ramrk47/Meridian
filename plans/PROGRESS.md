@@ -2,7 +2,7 @@
 
 > The **coordinator session** owns this file. Update it every working session: tick milestones,
 > append to the decisions log, keep the data inventory current. Read it (and `git log`) FIRST.
-> Last updated: 2026-06-27.
+> Last updated: 2026-06-29.
 
 ## Status snapshot
 - **Shipped (v2):** Marrow + Cerebellum QBanks (42,889 MCQs), CoreBTR tests + 178 topic videos.
@@ -21,7 +21,7 @@
   trademark clearance still REQUIRED before public launch** (see `plans/NAME_CANDIDATES.md`, memory `product-name-calvetra`).
 - **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED & verified** (modular design system + chart
   vocabulary + entity pages Subject/Platform/Faculty + faculty seed(14) + motion/View-Transitions layer).
-- **Next:** **Phase 2a Rank/College Predictor** (its own data-first session). *(Phase 2b tracker shipped 2026-06-29.)*
+- **Next:** **Phase 2a Rank/College Predictor** (its own data-first session, deferred to near-launch). *(Phase 2b tracker + Phase 2/3 local-first Study Planner both shipped 2026-06-29.)*
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
 - **Build/launch for NEET PG · INI-CET · FMGE now**; architect exam-agnostic so all-India verticals extend later (don't build them yet).
@@ -73,6 +73,13 @@
 | `methodology.json` | 4 labels | — | ✅ epistemic-label defs + firewall → `D.methodology` ("How we rate") |
 - ⚠️ `(1)/(2)` copies are byte-identical dups — `build_data.py` reads the canonical base CSV only.
 - ✅ All PYQ seams now integrated (Phase 2b) — no remaining content seams.
+
+**User-state seams (`storage.js` `blankState`; local-first now, server-sync later — NOT source data):**
+| Key | Shape | Added | Consumed by |
+|-----|-------|-------|-------------|
+| `progress` / `videos` / `scores` / `stars` / `customTests` | tracking maps (carry `ts`) | (pre-existing) | every tracker; the planner's **derived done-diary** + topic-union completion |
+| `subs[]` | owned platform ids (default `[]`) | **Planner (2026-06-29)** | scopes plan generation + the honest-gap signal; `.cov-mine` row (parked) |
+| `plan` | `{id,name,mode,examDate?,range?,dailyCap,items[],…}` | **Planner (2026-06-29)** | the active Study Planner (single plan; rides export/import/reset) |
 
 ## Roadmap (strategy-informed; SEQUENCE depends on the forks — confirm with user)
 ### Phase 0 — settle strategy
@@ -153,13 +160,32 @@
   (Home · Track[Cross·PYQ·QBank] · Plan[Planner·HY] · Stats[Progress·Tests] · Videos) with a shared sub-nav
   lens switcher; `NAV_GROUPS` drives desktop tabs + mobile bar; `show(view)` stays the atom (deep-links /
   palette / hotkeys 1–5 / entity Back re-sync). Verified 320→1920 day+evening, console clean, no h-scroll;
-  data traces to raw CSVs. Commits `d6a0a72`·`e31e189`·`7a3748c`. **Subscriptions lens stays parked** (the
-  coverage-chip structure is centralized + additive-ready per `STUDY_PLANNER.md`).
-- [ ] **Free Rank/College Predictor** (results-season lead magnet) — Phase 2a, its own data-first session next.
+  data traces to raw CSVs. Commits `d6a0a72`·`e31e189`·`7a3748c`. *(Subscriptions lens now BUILT as the
+  My-banks primitive — see the Study Planner entry below.)*
+- [x] **Phase 2/3 · Local-first Study Planner** (the retain surface — editable plan + accountability engine),
+  built on the 1d spine + the tracker's timestamp seam. *(2026-06-29)* Full rewrite of the static Planner into an
+  **editable, forkable** planner with four modes (Quick-schedule · Intensity templates [Hybrid/MCQ-heavy/Revision/
+  Custom] · **Backward-plan** · Manual), all producing one `plan.items[]`. **Backward-plan (signature):** lock an
+  exam date → auto **M1/M2/M3** revision passes counting down (foundation→revision+mocks→rapid revision, last-10-days
+  reserved), HY topics get multiple passes; a live **on-track / X-days-behind** read; **auto-reschedule** moves
+  missed-day items forward (the anti-abandonment recovery, with a calm banner). **Adherence + coverage are the hero
+  metrics; the done-diary is DERIVED** from `progress[*].ts`+`videos[*].ts` (grouped by local day, never self-
+  reported); ticking a topic marks its primary owned-bank leaf attempted (a REAL action) and union-reflects it.
+  **Hours reframed** (optional, off by default, video-minutes only — MCQ/reading time never fabricated).
+  **Realistic-plan guardrail** warns when a plan outpaces observed history (≥3 active days before any pace claim) and
+  offers a one-tap re-cap. **My-subscriptions** primitive shipped (`Store.subs[]`+`toggleSub`/`isSub`/`setSubs`; a
+  global "My banks" toolbar button + overflow + a multi-select sheet) — scopes plan generation to owned banks.
+  Local-first via `Store.plan` + `Store.subs` (ride import/export/reset for free). **Post-backend social half NOT
+  built** (peer pods, shared adherence board, WhatsApp snapshot, accountability partner, curator-adopt). Verified in
+  Preview: all 4 modes, exam-lock→passes+on-track, tick→diary+adherence, miss→auto-reschedule, over-stuff→guardrail;
+  375+1440, day+evening, console clean, no h-scroll. Files: `js/surfaces/planner.js` (rewrite), `css/planner.css`,
+  `storage.js`, `index.html`, `js/main.js`.
+- [ ] **Free Rank/College Predictor** (results-season lead magnet) — Phase 2a, deferred to near-launch.
 ### Phase 3 — retention & the ratings graph (the moat)
 - [ ] **Spaced revision / error-log → verified re-test queue** (H2/job#4 — top pain).
 - [ ] **"Best platform/faculty per subject" ratings graph** (H3) — structured, voted, neutral.
-- [ ] **Pace benchmarking / "Am I behind?"** (job#5) — needs accounts (fork #4).
+- [~] **Pace benchmarking / "Am I behind?"** (job#5) — local "on-track / X-days-behind" read + realistic-plan
+  guardrail SHIPPED in the Study Planner (2026-06-29); the *peer* pace comparison still needs accounts (fork #4).
 ### Phase 4 — premium (power users pay)
 - [ ] Pro: cross-platform weak-topic heatmap, **rank prediction w/ cross-platform normalization** (job#3), **Last-10-Days deadline engine** (job#2), SR across sources. Free-trial→paid.
 ### Phase 5 — backend & B2B
@@ -169,6 +195,24 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Phase 2/3 SHIPPED — local-first Study Planner (the retain surface).** Built the editable planner +
+  accountability engine on the 1d spine and the tracker's timestamp seam. Led with the research heroes:
+  **backward-plan from a locked exam date** (auto M1/M2/M3 passes counting down + on-track read + **auto-reschedule**
+  on a missed day) and **adherence/coverage as the heroes with a DERIVED done-diary** (from `*.ts`, never self-
+  reported). Four modes (Quick/Template/Backward/Manual) all emit one `plan.items[]`. **Design calls:** (1) the
+  schedulable unit is the **canonical library topic**, not a raw leaf — it's importance-ranked, union-trackable
+  ("done on Marrow satisfies it" via `libTopicUnion`), and subs-scopable; ticking marks the primary owned-bank leaf
+  attempted (keeps completion a REAL action — anti-dopamine). (2) **Hours reframed not removed** — optional, off by
+  default, **video-minutes only** (the one honestly-derivable duration; MCQ/reading time isn't captured so it's never
+  invented). (3) **Guardrail needs ≥3 active days** before making a pace claim (avoids absurd suggestions off noise);
+  pace-unknown plans only warn on an objectively heavy load. (4) **My-subscriptions** built as a global primitive
+  (`Store.subs[]`) with a toolbar "My banks" multi-select — scopes plan generation; the emphasized `.cov-mine`
+  coverage row stays parked (additive-ready). State persists via `Store.plan`+`Store.subs` (ride export/import/reset).
+  **Deferred to post-backend (NOT built):** peer pods, shared adherence board, WhatsApp snapshot, accountability
+  partner, curator-adopt — they need accounts/server. **Omitted for lack of a source:** real study *hours* beyond
+  video durations (kept honest). Verified in Preview (all modes; exam-lock→M1/M2/M3+on-track; tick→diary+adherence;
+  miss→auto-reschedule; over-stuff→guardrail; 375+1440; day+evening; console clean; no h-scroll). 56,091 / `D.library`
+  / mapping untouched.
 - 2026-06-29 **Next build = local-first Study Planner** (`PHASE3_PLANNER_LOCAL_PROMPT.md`, Opus xhigh), ahead of
   the Phase 2a predictor. Rationale: acquisition (predictor) isn't live until public deploy + backend (Phase 5),
   and the predictor is best built near a real results-season launch with audited cutoff data — whereas the planner
