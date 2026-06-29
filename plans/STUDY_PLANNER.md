@@ -20,6 +20,38 @@
   to a **date range** (e.g. 25–28 Jun = OBG), or pick an **intensity template** (Hybrid videos+MCQs / MCQ-heavy /
   Revision-PYQ / Custom). Ease of use is a hard requirement.
 
+## Research validation (2026-06-28) — `STUDY_PLANNER_RESEARCH.md` (external research)
+A NEET-PG-weighted market-research pass tested this pillar (directional: r/indianmedschool was largely
+unfetchable, so much accountability evidence comes from an analogous study-buddy forum; treat as signal, not counts).
+
+**Confirmed (strongest → weakest):**
+- **Accountability + adherence is the most directly *observed* behavior** — relentless "study-buddy / set daily
+  targets / compare daily progress" demand. → **Lead with accountability, not orchestration** (below).
+- **Editable + shareable + copy-a-topper plans: strongly validated (observed)** — aspirants treat canned plans as
+  forkable drafts they re-edit. → **forkable onboarding is a hard requirement: never start from a blank page.**
+- **Scope-to-subscribed-platforms** supported (coaching: "stick to one QBank") → the My-subscriptions lens is right.
+- Cadence: **daily** for targets/check-ins, **weekly** for planning/review.
+
+**NEW — the signature feature the research surfaced (was not in the original spec):**
+- **Backward planning from a *locked exam date*.** Every topper/coaching framework plans *backward* into multi-
+  revision passes (M1/M2/M3 + last-10-days) counting down to the exam; every consumer tool (YPT, Notion) plans
+  *forward* — which is exactly *why* plans collapse at revision time and in final-phase panic. → add an **exam-date
+  anchor** + **auto-generated revision passes (M1/M2/M3)** + a live **"on track / X days behind"** read.
+- **Auto-reschedule on a missed day (the recovery mechanism).** Root cause of week-2 abandonment = no catch-up when
+  a day slips. → on a miss, the plan **re-plans itself**. This is the anti-abandonment core, paired with guardrail (b).
+- **The mental model to encode: a `[subject × resource/faculty × revision-pass]` matrix counting down to the exam
+  date** — sharpens the plan schema below (add a revision-pass dimension + exam-date anchor), and ties to the
+  faculty layer (best-faculty-per-subject rotation across platforms).
+
+**CHANGED — hours: reframe, don't remove.** Hours are double-edged (a real segment is YPT-gamification-motivated;
+others burn out). → adherence + coverage stay the hero metrics, but offer **hours as an optional, auto-derived,
+non-ranked** stat — do not hard-remove it (softens the original "no total-hours metric" stance).
+
+**Open risks to validate before heavy orchestration build (research-flagged):** (a) the *explicit* "one tool to
+orchestrate my apps" demand is INFERRED, not observed; (b) subscription-expiry-before-exam behavior is UNCONFIRMED.
+A few discovery interviews on these before deep build. **Instrument:** >40% of weekly-actives join/form a pod in
+2 weeks → double down on social; a clear majority manually adding a 2nd platform's tasks → expand orchestration.
+
 ## Design principles
 1. **Ease before granularity** — quick modes are the default; manual day-by-day is optional.
 2. **Accountability from real activity, not self-report** — completion is derived from tracked actions you can't
@@ -33,6 +65,10 @@
 - **Intensity templates:** *Hybrid* (videos + MCQs), *MCQ-heavy*, *Revision/PYQ*, *Custom* (pick platform +
   activity type) — defaults to the student's **My-subscriptions** set (see below) when present.
 - **Manual/custom:** hand-pick modules per day (power users).
+- **Backward-plan (exam-date anchor) — the signature mode (research-validated).** Lock the exam date → auto-
+  generate **M1/M2/M3 revision passes** backward from it (foundation → revision+mocks → rapid revision), with a
+  live **"on track / X days behind"** read and **auto-reschedule when a day is missed**. Directly attacks week-2
+  abandonment + last-phase panic. Pairs with the realistic-plan guardrail (b) below.
 
 ## The "done diary" — auto-logging from real tracking (the user's idea, strengthened)
 - **Key seam: the app already timestamps every tracked action.** `Store.state.progress[id].ts` and
@@ -43,8 +79,10 @@
 
 ## The accountability engine (the meaty part — accountability is the #1 soft failure in exam prep)
 Mechanisms, ordered by leverage and sequenced local → social:
-- **(a) Plan-adherence, not vanity hours.** Measure "did you do what you committed to," derived from real tracked
-  actions. No total-hours metric or hour-grinding leaderboard (that is the YPT dopamine trap).
+- **(a) Plan-adherence + coverage are the hero metrics.** Measure "did you do what you committed to," derived from
+  real tracked actions. No hour-grinding *leaderboard* (the YPT dopamine trap) — but per the research, **hours are
+  reframed, not removed**: offer them as an optional, auto-derived, **non-ranked** stat to retain the
+  gamification-motivated segment without importing the comparison anxiety that drives abandonment.
 - **(b) Realistic-plan guardrail.** If a plan is over-stuffed vs your observed pace (e.g. 1,500 MCQs in 2 days),
   warn and suggest a feasible split — kills the plan → fail → demoralize → abandon cycle.
 - **(c) "Am I behind?" pacing** (ties roadmap job #5). Compare progress to the plan's own schedule *and* to the

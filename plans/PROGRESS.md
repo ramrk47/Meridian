@@ -184,10 +184,13 @@
   centralized in `libCoverageChips` so the parked "My subscriptions" `.cov-mine` row remains purely additive.
   Verified in Preview 320→1920 day+evening (console clean, no h-scroll; one 1024 grid-blowout fixed via min-width:0),
   PYQ heatmap cells trace exactly to the raw CSVs. **Next = Phase 2a Rank/College Predictor (its own data-first session).**
-- 2026-06-28 **Study Planner research commissioned** (external Claude chat) — adherence-not-hours focus:
-  cross-platform plan orchestration, tracking-without-time-logging, missing-feature gaps, NEET-PG-weighted,
-  r/indianmedschool + topper vlogs + shared spreadsheet/Notion artifacts. **When it lands, fold findings
-  into `STUDY_PLANNER.md`** (and reconcile the parked subscriptions lens against what it shows).
+- 2026-06-28 **Study Planner research received + folded into `STUDY_PLANNER.md`** (`STUDY_PLANNER_RESEARCH.md`).
+  Verdicts: accountability/adherence is the most *observed* behavior → **lead with it, not orchestration** (the
+  orchestration desire is INFERRED — validate fast); editable/shareable/copy-a-topper **strongly validated** →
+  forkable onboarding required. **New signature feature it surfaced: backward planning from a locked exam date
+  (M1/M2/M3 revision passes + auto-reschedule on a missed day)** — the anti-abandonment core. **Hours: reframe,
+  not remove** (optional, auto-derived, non-ranked). Open risks to interview: explicit orchestration demand +
+  subscription-expiry behavior. Subscriptions lens confirmed (stays parked, additive).
 - 2026-06-28 **Mapping audit verified+accepted by coordinator; `PHASE2B_PROMPT.md` refreshed for the spine.**
   Independent recompute matched: **594/787 topics, 152/157 HY** mapped, 56,091 preserved, guard intact. Spine
   is tracker-ready (cleared the "<60% HY ⇒ granularity problem" risk). Rewrote the stale 2b prompt (dropped the
