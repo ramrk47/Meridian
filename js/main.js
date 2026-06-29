@@ -448,6 +448,9 @@ function _syncGroupChrome(view) {
   $$("#botnav button[data-group]").forEach(b => { const on = b.dataset.group === gid; b.classList.toggle("active", on); b.setAttribute("aria-current", on ? "page" : "false"); });
   const home = $("#btnHome"); if (home) { const on = view === "overview"; home.classList.toggle("active", on); home.setAttribute("aria-current", on ? "page" : "false"); }
   renderSubnav(gid, view);
+  // mobile header reflects the ACTIVE LENS (e.g. "PYQ"), not just the view — accurate for grouped tabs
+  const g = GROUP_BY_ID[gid], mt = $("#mobTitle");
+  if (mt && g) { const l = g.lenses[_activeLensIndex(g, view)]; mt.textContent = (g.lenses.length > 1 ? (l && l.label) : (TAB_LABEL[view] || view)); }
   requestAnimationFrame(placeBotnavInd);
 }
 function show(view) {
@@ -459,8 +462,7 @@ function show(view) {
   // today's exact behavior, so routing/Back/refresh logic is unchanged.
   viewTransition(() => {
     currentView = view;
-    _syncGroupChrome(view);              // tabs + bottom bar + sub-nav lens switcher
-    const mt = $("#mobTitle"); if (mt) mt.textContent = TAB_LABEL[view] || view;
+    _syncGroupChrome(view);              // tabs + bottom bar + sub-nav lens switcher + mob title
     $$(".view").forEach(s => s.classList.toggle("active", s.id === "view-" + view));
     RENDER[view]();
     labelizeResponsiveTables();
