@@ -1,248 +1,834 @@
 /* ============================================================
-   surfaces/planner.js — STUDY PLANNER  ·  DO-NEXT INTELLIGENCE
-   Reframed from "how much content exists" → "what to do next, and why".
-   Judgment, not inventory:
-     · density-weighted MASS REMAINING per subject (the do-next signal)
-     · weakest subjects (your tracking vs. the bank's weight)
-     · untracked high-yield topics (★★★ density you haven't started)
-   Relational viz (mandatory here):
-     · Pl.1  rankedBars — MCQ mass REMAINING by subject, weak-first,
-              fill = untracked share (proxy), mark = consensusMark, → Subject pages.
-   Tiers become inset groupLists (NOT floating cards). Weekly rhythm kept.
-   Every curated figure carries epi (proxy/measured/directional) + source via
-   chartFrame/panel. Tracking behavior + Store seam untouched.
+   surfaces/planner.js — STUDY PLANNER  ·  LOCAL-FIRST, EDITABLE
+   The retain surface. Lead with the research-validated heroes:
+     1. BACKWARD-PLAN from a locked exam date → auto M1/M2/M3 revision
+        passes counting down, a live "on track / X days behind" read, and
+        AUTO-RESCHEDULE when a day is missed (the anti-abandonment core).
+     2. ADHERENCE + COVERAGE are the hero metrics; the DONE-DIARY is
+        DERIVED from real tracked actions (progress[*].ts + videos[*].ts) —
+        never self-reported. Hours are reframed (optional, non-ranked,
+        video-minutes only, off by default).
+     3. EDITABLE + forkable onboarding — never a blank page.
+   Modes ladder (all produce the same plan.items): Quick-schedule ·
+   Intensity templates · Backward-plan · Manual. My-subscriptions
+   (Store.subs) scopes plan generation to owned banks.
+   Anti-dopamine: completion counts ONLY from real tracked actions; calm
+   almanac tone, nudges not punishment; no leaderboard, no infinite feed.
+   Local-first: everything persists via storage.js; server-sync later.
+   The post-backend social half (peer pods, shared board, WhatsApp snapshot,
+   accountability partner, curator-adopt) is intentionally NOT built here.
    ============================================================ */
 
-/* canonical subject -> best directional platform from D.subjectStrength */
-function _planStrongest() {
-  const out = {};
-  ((CUR.strength && CUR.strength.subjects) || []).forEach(r => {
-    const top = (r.strong || [])[0];
-    if (top && top.platformId && PLAT_BY_ID[top.platformId]) out[canon(r.subject)] = top.platformId;
+/* ── builder / view state (module-local; the plan itself lives in Store) ── */
+let plBuilder = null;   // null = chooser/active; else {mode, subjects[], from, to, cap, exam, template, customPlat}
+let plEdit = false;     // edit mode on the active plan (show remove / move / add)
+
+/* ============================================================
+   DATE MATH — local, no backend. iso = "yyyy-mm-dd" (lexicographic
+   compare == chronological; all comparisons use that).
+   ============================================================ */
+function _today() { return isoDay(new Date()); }
+function isoDay(dt) {
+  const d = (dt instanceof Date) ? dt : new Date(dt);
+  const y = d.getFullYear(), m = String(d.getMonth() + 1).padStart(2, "0"), da = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${da}`;
+}
+function parseDay(iso) { const [y, m, d] = String(iso).split("-").map(Number); return new Date(y, m - 1, d); }
+function addDays(dOrIso, n) { const x = (dOrIso instanceof Date) ? new Date(dOrIso) : parseDay(dOrIso); x.setDate(x.getDate() + n); return x; }
+function daysBetween(aIso, bIso) { return Math.round((parseDay(bIso) - parseDay(aIso)) / 86400000); }
+function _dayRange(fromIso, toIso) { const out = []; let d = parseDay(fromIso); const end = parseDay(toIso); while (d <= end) { out.push(isoDay(d)); d = addDays(d, 1); } return out; }
+function fmtDay(iso) { return parseDay(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short" }); }
+function fmtDayFull(iso) {
+  const d = parseDay(iso), t = _today();
+  if (iso === t) return "Today";
+  if (iso === isoDay(addDays(parseDay(t), 1))) return "Tomorrow";
+  return d.toLocaleDateString("en-IN", { weekday: "short", day: "numeric", month: "short" });
+}
+
+/* ============================================================
+   SCOPE — My-subscriptions narrows the schedulable pool to owned banks.
+   ============================================================ */
+const PL_PLAT_ORDER = ["marrow", "cerebellum", "doctutorials", "prepladder", "egurukul"].filter(id => PLAT_BY_ID[id]);
+function _ownedTopic(t) { const subs = Store.subs(); if (!subs.length) return true; return Object.keys(t.platformRefs || {}).some(pid => subs.includes(pid) && (t.platformRefs[pid] || []).length); }
+/* subjects that have at least one schedulable topic under the current scope */
+function _scopeSubjects() {
+  const subs = Store.subs();
+  if (!subs.length) return LIB_SUBJECTS.slice();
+  return LIB_SUBJECTS.filter(s => libTopics(s).some(_ownedTopic));
+}
+/* the ordered topic pool for a set of canonical subjects, scoped to owned banks */
+function _scopeTopics(subjects) {
+  const list = (subjects && subjects.length) ? subjects : _scopeSubjects();
+  let ts = list.flatMap(s => libTopics(s)).filter(_ownedTopic);
+  // de-dupe (a topic id appears once per subject already, but guard) + importance order
+  const seen = new Set(); ts = ts.filter(t => (seen.has(t.id) ? false : (seen.add(t.id), true)));
+  return ts.sort(_byImp);
+}
+function _topicMcq(t) { let s = 0; Object.values(t.platformRefs || {}).forEach(ids => ids.forEach(id => { const m = LEAF_BY_ID[id]; if (m) s += m.mcqs || 0; })); return s; }
+/* the leaf we toggle when the student marks a topic "done" — prefer an owned bank,
+   so the completion is a REAL tracked action (anti-dopamine), then union-reflects it. */
+function _topicPrimaryLeaf(t) {
+  const refs = t.platformRefs || {}, subs = Store.subs();
+  const owned = PL_PLAT_ORDER.filter(p => subs.includes(p));
+  for (const p of owned) if ((refs[p] || []).length) return refs[p][0];
+  for (const p of PL_PLAT_ORDER) if ((refs[p] || []).length) return refs[p][0];
+  return null;
+}
+
+/* ============================================================
+   ENTITY RESOLVERS — a plan item's entity is {type,id}: topic | leaf | video.
+   ============================================================ */
+function _entityTopic(e) { return e && e.type === "topic" ? LIB_TOPIC_BY_ID[e.id] : null; }
+function _entityDone(e) {
+  if (!e) return false;
+  if (e.type === "topic") { const t = LIB_TOPIC_BY_ID[e.id]; return t ? libTopicUnion(t).started : false; }
+  if (e.type === "leaf") return !!Store.prog(e.id).a;
+  if (e.type === "video") return !!Store.video(e.id).w;
+  return false;
+}
+function _entityName(e) {
+  if (!e) return "—";
+  if (e.type === "topic") { const t = LIB_TOPIC_BY_ID[e.id]; return t ? t.name : e.id; }
+  if (e.type === "leaf") { const m = MODULE_BY_ID[e.id]; return m ? m.name : e.id; }
+  if (e.type === "video") { const v = VID_BY_ID[e.id]; return v ? v.topic : e.id; }
+  return e.id;
+}
+function _entitySubject(e) {
+  if (!e) return "";
+  if (e.type === "topic") { const t = LIB_TOPIC_BY_ID[e.id]; return t ? t.subject : ""; }
+  if (e.type === "leaf") { const m = MODULE_BY_ID[e.id]; return m ? canon(m.subject) : ""; }
+  if (e.type === "video") { const v = VID_BY_ID[e.id]; return v ? (BTR_CANON[v.subject] || v.subject) : ""; }
+  return "";
+}
+/* unique library topics referenced by a plan (for coverage math) */
+function _planTopics(plan) {
+  const seen = new Set(), out = [];
+  (plan.items || []).forEach(it => { const t = _entityTopic(it.entity); if (t && !seen.has(t.id)) { seen.add(t.id); out.push(t); } });
+  return out;
+}
+/* every leaf id a plan touches (plan leaves + all leaves mapped to plan topics) —
+   used to tag done-diary days that advanced the plan. */
+function _planLeafIds(plan) {
+  const ids = new Set();
+  (plan.items || []).forEach(it => {
+    const e = it.entity;
+    if (e.type === "leaf") ids.add(e.id);
+    else if (e.type === "topic") { const t = LIB_TOPIC_BY_ID[e.id]; if (t) Object.values(t.platformRefs || {}).forEach(a => a.forEach(x => ids.add(x))); }
+  });
+  return ids;
+}
+
+/* ============================================================
+   GENERATORS — every mode produces plan.items:[{entity,targetDate,pass?}].
+   ============================================================ */
+let _planSeq = 0;
+function _newPlanId() { return "plan-" + Date.now() + "-" + (++_planSeq); }
+function _packPass(topics, days, perDayCap, pass) {
+  if (!topics.length || !days.length) return [];
+  const target = Math.min(perDayCap || 999, Math.max(1, Math.ceil(topics.length / days.length)));
+  const out = []; let d = 0, c = 0;
+  topics.forEach(t => {
+    if (c >= target && d < days.length - 1) { d++; c = 0; }
+    out.push({ entity: { type: "topic", id: t.id }, targetDate: days[d], pass });
+    c++;
   });
   return out;
 }
 
-function renderPlanner() {
-  resetPlates();
-  const v = $("#view-planner"); v.innerHTML = "";
-
-  const CAP = D.captured;
-  const SS_CAP = (CUR.strength && CUR.strength.captured) || D.captured;
-  const SS_SRC = (CUR.strength && CUR.strength.sourceIds) || [];
-  const strongBy = _planStrongest();
-
-  /* ── per-subject combined MCQ weight (measured counts; bucketing = proxy) ── */
-  const subjMaps = QBANKS.map(p => Object.fromEntries(freshSubjects(p).map(s => [canon(s.subject), s._mcqs])));
-  const subjTotal = cs => subjMaps.reduce((a, m) => a + (m[cs] || 0), 0);
-  const subjects = [...new Set(subjMaps.flatMap(m => Object.keys(m)))];
-
-  /* ── do-next math: per-subject untracked MASS (the planner's core judgment) ──
-     For each canonical subject, sum MCQ mass of leaves you have NOT attempted.
-     This is the "mass remaining" — where your effort still has to go. */
-  const stat = {};   // cs -> { total, attempted, remaining, leaves }
-  subjects.forEach(cs => stat[cs] = { total: 0, attempted: 0, remaining: 0, leaves: 0, done: 0 });
-  LEAVES.forEach(l => {
-    const s = stat[l.canon]; if (!s) return;
-    s.total += l.mcqs; s.leaves++;
-    if (Store.prog(l.id).a) { s.attempted += l.mcqs; s.done++; }
-    else s.remaining += l.mcqs;
-  });
-
-  /* ── untracked high-yield topics: ★★★ density leaves you haven't started ── */
-  const hyAll = LEAVES.filter(l => l.priority === 3);
-  const hyUntracked = hyAll.filter(l => { const p = Store.prog(l.id); return !p.a && !p.r && !p.t; });
-  hyUntracked.sort((a, b) => b.mcqs - a.mcqs);
-
-  /* ── weak subjects: most untracked MASS first (largest do-next debt) ── */
-  const weak = subjects.slice()
-    .filter(cs => stat[cs].remaining > 0)
-    .sort((a, b) => stat[b].remaining - stat[a].remaining);
-
-  const totalRemaining = subjects.reduce((a, cs) => a + stat[cs].remaining, 0);
-  const totalAttempted = QBANK_MCQ - totalRemaining;
-  const topGap = weak[0];
-
-  /* ── INTRO callout — what this surface is, honestly framed ── */
-  const intro = el("div", "callout plan-intro",
-    `<b>Do-next, not a content dump.</b> Subjects are ranked by the MCQ <b>mass you still have to attempt</b> ${epiBadge("proxy")} —
-     a density proxy for where your effort goes next, not measured exam yield. Reputation names the strongest bank per subject ${epiBadge("directional")};
-     your progress is tracked on this device ${epiBadge("measured")}.
-     <span class="muted">Click any subject to open it. Full method → How we rate, on Overview.</span>`);
-  intro.dataset.reveal = "";
-  v.appendChild(intro);
-
-  /* ── 6 stat-tiles (mobile 2/3-col, 84–104px). One hero serif numeral. ── */
-  const tiles = el("div", "tiles plan-tiles");
-  tiles.innerHTML =
-    statTile({ accent: "g", hero: true, value: fmt(totalRemaining), label: "MCQs remaining", note: `of ${fmt(QBANK_MCQ)} combined`, epi: "proxy" }) +
-    statTile({ accent: "m", value: pct(totalAttempted, QBANK_MCQ) + "%", label: "Mass attempted", note: `${fmt(totalAttempted)} MCQs done`, epi: "measured" }) +
-    statTile({ accent: "c", value: fmt(hyUntracked.length), label: "Untracked high-yield", note: "★★★ density, not started", epi: "proxy" }) +
-    statTile({ accent: "k", value: fmt(weak.length), label: "Subjects with debt", note: "still have mass left", epi: "measured" }) +
-    statTile({ accent: "g", value: topGap ? fmt(stat[topGap].remaining) : "—", label: "Biggest gap", note: topGap ? esc(topGap) : "all caught up", epi: "proxy", go: topGap ? "subject:" + topGap : undefined }) +
-    statTile({ accent: "m", value: Math.max(1, Math.round(totalRemaining / 100)), label: "Days @ 100/day", note: "to clear remaining", epi: "proxy" });
-  // hero count-up: tag the ONE serif numeral with its raw int so the shared
-  // countUp() (animateView, after render) tweens it once on entrance. The text
-  // already carries the final en-IN string, so reduced-motion/no-support = no-op.
-  tiles.innerHTML = tiles.innerHTML.replace(
-    '<span class="tile-v num">' + fmt(totalRemaining) + '</span>',
-    '<span class="tile-v num" data-count="' + totalRemaining + '">' + fmt(totalRemaining) + '</span>');
-  v.appendChild(tiles);
-
-  /* ──────────────────────────────────────────────────────────
-     Pl.1 — RELATIONAL HERO: MCQ mass REMAINING by subject (weak-first).
-     value = untracked MCQ mass (measured count of not-attempted leaves);
-     bar fill = untracked SHARE of the subject (proxy magnitude 0..1) — a
-     fuller bar = more of that subject still ahead of you. mark = how many
-     banks flag ★★★ in it (consensusMark) + reputed-strongest chip.
-     Names → Subject pages. This is the "where to spend" judgment.
-     ────────────────────────────────────────────────────────── */
-  const items = weak.map(cs => {
-    const s = stat[cs];
-    const shareLeft = s.total ? s.remaining / s.total : 0;
-    // banks that flag this subject ★★★ (any leaf priority 3) — consensus pips
-    const plats = QBANKS.map(p => ({
-      id: p.id,
-      on: LEAVES.some(l => l.platform === p.id && l.canon === cs && l.priority === 3),
-    }));
-    const agree = plats.filter(x => x.on).length;
-    const strongPid = strongBy[cs];
-    const mark = consensusMark(agree, plats)
-      + (strongPid ? ` <span class="pl-best" style="color:${platColor(strongPid)}" title="Community-reputed strongest (directional)">${esc(platName(strongPid))}</span>` : "");
-    return {
-      label: cs, value: s.remaining, t: shareLeft, go: "subject:" + cs, mark,
-      sub: `${pct(s.remaining, s.total)}% left`,
-    };
-  });
-
-  const legend =
-    `<span class="lg-ramp"><i class="r0"></i><i class="r1"></i><i class="r2"></i><i class="r3"></i><i class="r4"></i><i class="r5"></i><span>share left</span></span>`
-    + `<span class="lg-con"><span class="cpip on" style="border-color:var(--gold);background:var(--con-all)"></span>banks flag ★★★ (proxy)</span>`
-    + `<span class="lg-best"><span class="pl-best">●</span>reputed strongest (directional)</span>`;
-
-  // No sourceIds: this figure is your-tracking remaining mass (measured local) +
-  // density proxy + an internal consensus computation — the reputation comparison
-  // sources (SS_SRC) do not substantiate it, so attaching them would lend false
-  // third-party authority. Method is disclosed by the proxy badge + note below;
-  // SS_SRC stays where it belongs (the reputed-strongest chip / tiers).
-  v.appendChild(_planFrame(chartFrame(
-    "MCQ mass remaining by subject — weak-first", "proxy",
-    undefined, SS_CAP,
-    rankedBars(items, { nosort: true }),
-    {
-      legend, plateNo: 1,
-      note: `Bar length = MCQ mass you have not attempted (measured count) · fill = share of that subject still ahead (proxy) · pips = how many of ${QBANKS.length} banks flag ★★★ in it (proxy) · gold name = community-reputed strongest bank (directional). Clear the longest, deepest bars first.`,
-    })));
-
-  /* ──────────────────────────────────────────────────────────
-     Do-next inset group — untracked high-yield topics (★★★ density,
-     not started). The single sharpest "next move": biggest mass first.
-     Row → topic drawer (data-open-leaf; tracking preserved).
-     ────────────────────────────────────────────────────────── */
-  if (hyUntracked.length) {
-    const rows = hyUntracked.slice(0, 14).map(l => {
-      const others = bestCrossByPlat(l);
-      const plats = QBANKS.map(p => ({ id: p.id, on: p.id === l.platform ? l.priority === 3 : !!(others[p.id] && others[p.id].priority === 3) }));
-      const agree = plats.filter(x => x.on).length;
-      const trail = `${consensusMark(agree, plats, { glyph: true })}<span class="pl-q num">${fmt(l.mcqs)}</span>`;
-      return listRow({
-        lead: `<span class="hy">★★★</span>`,
-        title: esc(l.name),
-        sub: `<a class="echip" data-go-subject="${esc(l.canon)}">${esc(l.canon)}</a> · <span style="color:${platColor(l.platform)}">${esc(platName(l.platform))}</span>`,
-        trail,
-      }).replace('class="lrow"', `class="lrow is-link" data-open-leaf="${esc(l.id)}" role="button" tabindex="0"`);
-    });
-    v.appendChild(_planFrame(panel({
-      title: "Start here — untracked high-yield",
-      epi: "proxy",
-      sourceIds: undefined,
-      captured: CAP,
-      curated: true,
-      actions: `<span class="count-pill">${hyUntracked.length} topics</span>`,
-      body: groupList(rows, "plan-donext")
-        + `<div class="cf-note">★★★ topics (top MCQ-density tier within their subject — a proxy, not measured exam yield) that you have not attempted on any bank. Glyph shows how many banks agree. Click to track it or jump to the bank.</div>`,
-    })));
-  }
-
-  /* ──────────────────────────────────────────────────────────
-     TIERS — inset groupLists (NOT floating cards). Subjects tiered by
-     combined MCQ weight (proxy for exam weight). Each row: subject →
-     Subject page; sub = reputed-strongest bank (directional) + your %;
-     trail = combined mass (measured) + remaining.
-     ────────────────────────────────────────────────────────── */
-  const byWeight = subjects.slice().sort((a, b) => subjTotal(b) - subjTotal(a));
-  const n = byWeight.length;
-  const cut1 = Math.ceil(n / 3), cut2 = Math.ceil(2 * n / 3);
-  const tierDefs = [
-    { cls: "hi", title: "Tier 1 · Heavy", sub: "Full first pass in the bigger bank + every subject test", arr: byWeight.slice(0, cut1) },
-    { cls: "mid", title: "Tier 2 · Medium", sub: "First pass + targeted high-yield topics", arr: byWeight.slice(cut1, cut2) },
-    { cls: "lo", title: "Tier 3 · Light", sub: "Revision-only / second-pass filter + PYQs", arr: byWeight.slice(cut2) },
-  ];
-
-  const tierGrid = el("div", "plan-tier-grid");
-  tierDefs.forEach(td => {
-    const rows = td.arr.map(cs => {
-      const s = stat[cs];
-      const strongPid = strongBy[cs];
-      const subBits = [];
-      if (strongPid) subBits.push(`<span style="color:${platColor(strongPid)}">${esc(platName(strongPid))}</span>`);
-      subBits.push(`${pct(s.attempted, s.total)}% done`);
-      const trail = `<span class="pl-tier-v num">${fmt(s.total)}</span>`
-        + `<span class="pl-tier-rem num" title="MCQ mass remaining (proxy)">${fmt(s.remaining)} left</span>`;
-      return listRow({
-        lead: dotLead(strongPid ? platColor(strongPid) : "var(--ink-4)"),
-        title: esc(cs),
-        sub: subBits.join(" · "),
-        trail,
-        go: "subject:" + cs,
-      });
-    });
-    const sec = el("section", "panel plan-tier " + td.cls);
-    sec.dataset.reveal = "";
-    sec.innerHTML = `<div class="ph"><div class="ph-l"><h3>${esc(td.title)} ${epiBadge("proxy")}</h3>`
-      + `<span class="muted pl-tsub">${esc(td.sub)}</span></div>`
-      + `<span class="count-pill">${td.arr.length} subjects</span></div>`
-      + (SS_SRC.length ? srcLine(SS_SRC, SS_CAP) : "")
-      + `<div class="panel-body">${groupList(rows, "plan-tierlist")}</div>`;
-    tierGrid.appendChild(sec);
-  });
-  v.appendChild(tierGrid);
-
-  /* ──────────────────────────────────────────────────────────
-     Weekly rhythm — kept (function preserved), re-skinned via panel().
-     Plan cadence, not a curated figure → measured/local counts only.
-     ────────────────────────────────────────────────────────── */
-  const pyqMarrow = (() => {
-    const p = PLAT_BY_ID.marrow;
-    const pyq = p && p.subjects.find(s => s.subject === PYQ);
-    return pyq ? pyq.modules.reduce((a, m) => a + m.mcqs, 0) : null;
-  })();
-  const rhythmBody =
-    `<table class="resp plan-rhythm"><thead><tr><th>Day</th><th>Focus</th><th>Test layer</th></tr></thead><tbody>
-      <tr><td>Mon–Tue</td><td>Tier-1 subject — new modules in primary bank</td><td>Subject test (50 Q)</td></tr>
-      <tr><td>Wed</td><td>Cross-check same subject in the other bank (gaps only)</td><td>Mini Test</td></tr>
-      <tr><td>Thu–Fri</td><td>Tier-2 subject pass</td><td>Subject test + error log</td></tr>
-      <tr><td>Sat</td><td>Tier-3 revision + PYQ papers${pyqMarrow ? ` (Marrow ${fmt(pyqMarrow)} PYQ MCQs)` : ""}</td><td>—</td></tr>
-      <tr><td>Sun</td><td>Full review of the week's error log</td><td><b>Grand Test (200 Q)</b> — rotate platforms</td></tr>
-    </tbody></table>
-    <div class="plan-kpis">
-      <div class="pl-kpi"><b class="num">${fmt(QBANK_MCQ)}</b><span>MCQs total ${epiBadge("measured")}</span></div>
-      <div class="pl-kpi"><b class="num">${fmt(totalRemaining)}</b><span>remaining ${epiBadge("proxy")}</span></div>
-      <div class="pl-kpi"><b class="num">${Math.max(1, Math.round(totalRemaining / 100))}</b><span>days @ 100/day to clear ${epiBadge("proxy")}</span></div>
-      <div class="pl-kpi"><b class="num">${Math.max(1, Math.round(totalRemaining / 150))}</b><span>days @ 150/day ${epiBadge("proxy")}</span></div>
-    </div>`;
-  const rhythmWrap = el("div", "plan-rhythm-wrap", panel({
-    title: "Suggested weekly rhythm",
-    body: rhythmBody,
-  }));
-  rhythmWrap.dataset.reveal = "";
-  v.appendChild(rhythmWrap);
-
-  labelizeResponsiveTables();
+function _genQuick(subjects, from, to, cap) {
+  const days = _dayRange(from, to);
+  const pool = _scopeTopics(subjects);
+  return {
+    id: _newPlanId(), name: _autoName("quick", subjects), mode: "quick",
+    range: { from, to }, dailyCap: cap, createdAt: _today(),
+    items: _packPass(pool, days, cap), commitments: [],
+  };
+}
+function _genTemplate(kind, subjects, from, to, cap, customPlat) {
+  const days = _dayRange(from, to);
+  let pool = _scopeTopics(subjects);
+  let weightLabel = "directional";
+  if (kind === "mcq") { pool = pool.slice().sort((a, b) => _topicMcq(b) - _topicMcq(a)); weightLabel = "proxy"; }
+  else if (kind === "revision") pool = pool.filter(t => t.tier >= 2);
+  else if (kind === "custom" && customPlat) pool = pool.filter(t => (t.platformRefs[customPlat] || []).length);
+  const pass = kind === "revision" ? "Revision" : null;
+  return {
+    id: _newPlanId(), name: _autoName("template", subjects, kind), mode: "template",
+    template: kind, customPlat: kind === "custom" ? customPlat : undefined, weightLabel,
+    range: { from, to }, dailyCap: cap, createdAt: _today(),
+    items: _packPass(pool, days, cap, pass), commitments: [],
+  };
+}
+/* BACKWARD-PLAN — the signature feature. Phases count down from the exam:
+   M1 foundation (first pass, all topics) · M2 revision+mocks (tier ≥2) ·
+   M3 rapid revision / last-10-days (tier 3). High-yield therefore gets
+   multiple passes; low-yield gets one. */
+function _genBackward(examIso, subjects, cap) {
+  const start = _today();
+  const lastStudy = isoDay(addDays(parseDay(examIso), -1)); // exam day itself isn't a study day
+  const days = _dayRange(start, lastStudy);
+  const n = days.length;
+  const pool = _scopeTopics(subjects);
+  let m1End = Math.max(1, Math.floor(n * 0.5));
+  let m3Start = Math.max(m1End + 1, Math.floor(n * 0.82));
+  const last10 = n - 10; // reserve the last 10 days for rapid revision when the runway allows
+  if (last10 > m1End) m3Start = Math.min(m3Start, last10);
+  m3Start = Math.min(m3Start, n);
+  const m1Days = days.slice(0, m1End);
+  const m2Days = days.slice(m1End, m3Start);
+  const m3Days = days.slice(m3Start);
+  const items = []
+    .concat(_packPass(pool, m1Days, cap, "M1"))
+    .concat(m2Days.length ? _packPass(pool.filter(t => t.tier >= 2), m2Days, cap, "M2") : [])
+    .concat(m3Days.length ? _packPass(pool.filter(t => t.tier === 3), m3Days, cap, "M3") : []);
+  return {
+    id: _newPlanId(), name: _autoName("backward", subjects, null, examIso), mode: "backward",
+    examDate: examIso, dailyCap: cap, createdAt: _today(), items, commitments: [],
+  };
+}
+/* MANUAL — forkable draft, never blank: seed from the top untracked high-yield
+   topics in scope, spread across the range. Fully editable thereafter. */
+function _genManual(from, to, cap) {
+  const days = _dayRange(from, to);
+  const pool = _scopeTopics(_scopeSubjects()).filter(t => t.tier >= 2 && !libTopicUnion(t).started).slice(0, Math.max(days.length * cap, 12));
+  return {
+    id: _newPlanId(), name: "My plan", mode: "manual",
+    range: { from, to }, dailyCap: cap, createdAt: _today(),
+    items: _packPass(pool, days, cap), commitments: [],
+  };
+}
+function _autoName(mode, subjects, kind, examIso) {
+  const subs = (subjects || []).slice();
+  const subLbl = !subs.length ? "all subjects" : subs.length <= 2 ? subs.map(s => s.replace(/ \/.*/, "")).join(", ") : `${subs.length} subjects`;
+  if (mode === "backward") return `Exam plan → ${examIso ? fmtDay(examIso) : ""}`.trim();
+  if (mode === "template") return `${({ hybrid: "Hybrid", mcq: "MCQ-heavy", revision: "Revision/PYQ", custom: "Custom" }[kind] || "Template")} · ${subLbl}`;
+  if (mode === "quick") return `Quick · ${subLbl}`;
+  return "My plan";
 }
 
-/* wrap a chartFrame/panel string into an element so we can appendChild.
-   Carries [data-reveal] so the shared reveal() (animateView, post-render) gives
-   it a gentle once-only rise+fade on entrance; the inner .cframe.plate still
-   gets its own chartIntro. Reduced-motion firewall collapses both to final. */
-function _planFrame(html) { const d = el("div", "pl-frame"); d.dataset.reveal = ""; d.innerHTML = html; return d; }
+/* ============================================================
+   PACING / ADHERENCE / COVERAGE / GUARDRAIL
+   ============================================================ */
+function _planStats(plan) {
+  const today = _today();
+  const items = plan.items || [];
+  const done = items.filter(it => _entityDone(it.entity));
+  const due = items.filter(it => it.targetDate <= today);
+  const dueDone = due.filter(it => _entityDone(it.entity));
+  const overdue = due.filter(it => it.targetDate < today && !_entityDone(it.entity));
+  const todays = items.filter(it => it.targetDate === today);
+  const todaysDone = todays.filter(it => _entityDone(it.entity));
+  const topics = _planTopics(plan);
+  const hy = topics.filter(t => t.tier === 3);
+  const hyDone = hy.filter(t => libTopicUnion(t).started).length;
+  return {
+    total: items.length, done: done.length,
+    due: due.length, dueDone: dueDone.length, overdue: overdue.length,
+    today: todays.length, todayDone: todaysDone.length,
+    adherence: due.length ? pct(dueDone.length, due.length) : 100,
+    coverage: hy.length ? pct(hyDone, hy.length) : 0, hyTotal: hy.length, hyDone,
+    overdueItems: overdue,
+  };
+}
+function _onTrack(plan, st) {
+  if (st.total && st.done >= st.total) return { cls: "ok", txt: "Plan complete" };
+  if (st.overdue === 0) return { cls: "ok", txt: "On track" };
+  const cap = plan.dailyCap || 6;
+  const d = Math.max(1, Math.ceil(st.overdue / cap));
+  return { cls: "behind", txt: `${d} day${d > 1 ? "s" : ""} behind` };
+}
+/* observed pace = avg modules attempted per ACTIVE day over a trailing window.
+   Returns null until there are ≥3 active days — fewer than that is noise, and a
+   pace claim off noise would mis-warn (and suggest absurd caps). */
+function _observedPace(windowDays) {
+  const win = windowDays || 21;
+  const cut = isoDay(addDays(parseDay(_today()), -win));
+  const byDay = {};
+  Object.values(Store.state.progress || {}).forEach(p => { if (p && p.ts && (p.a || p.r || p.t)) { const d = isoDay(new Date(p.ts)); if (d >= cut) byDay[d] = (byDay[d] || 0) + 1; } });
+  const days = Object.keys(byDay); if (days.length < 3) return null;
+  const total = days.reduce((a, d) => a + byDay[d], 0);
+  return Math.max(1, Math.round(total / days.length));
+}
+/* realistic-plan guardrail. Two honest paths:
+   · pace KNOWN (≥3 active days): warn when the peak day or the required pace runs
+     well past what you've actually sustained; suggest a cap near your pace.
+   · pace UNKNOWN: only warn on an objectively heavy load (needs >18/day) — no
+     pace claim we can't back up. Exam-bound plans can't extend past the date, so
+     the copy shifts to "trim / raise intensity" when even the cap won't fit. */
+function _guardrail(plan) {
+  const today = _today();
+  const byDay = {}; (plan.items || []).forEach(it => { if (!_entityDone(it.entity)) byDay[it.targetDate] = (byDay[it.targetDate] || 0) + 1; });
+  const peak = Math.max(0, ...Object.values(byDay));
+  const pace = _observedPace();
+  const remaining = (plan.items || []).filter(it => !_entityDone(it.entity)).length;
+  const examBound = !!plan.examDate;
+  const lastIso = (examBound ? isoDay(addDays(parseDay(plan.examDate), -1)) : (plan.range && plan.range.to)) || today;
+  const runway = Math.max(1, daysBetween(today, lastIso) + 1);
+  const needPerDay = Math.ceil(remaining / runway);
+  let suggestCap;
+  if (pace != null) {
+    if (!(peak > Math.max(pace * 1.8, pace + 4) || needPerDay > Math.ceil(pace * 1.5))) return null;
+    suggestCap = Math.max(4, Math.round(pace * 1.3));
+  } else {
+    if (needPerDay <= 18) return null;
+    suggestCap = 12;
+  }
+  const fits = suggestCap * runway >= remaining;       // can the gentler cap finish in the runway?
+  const suggestDays = Math.ceil(remaining / suggestCap);
+  return { peak, pace, needPerDay, runway, remaining, suggestCap, suggestDays, examBound, fits };
+}
+
+/* ============================================================
+   AUTO-RESCHEDULE — the recovery mechanism. Overdue, still-incomplete items
+   are packed forward from tomorrow under the daily cap, preserving pass order.
+   Mutates + persists ONLY when something actually moves (so render converges).
+   ============================================================ */
+function _autoReschedule(plan) {
+  const today = _today();
+  const items = (plan.items || []).map(x => Object.assign({}, x));
+  const overdue = items.filter(it => it.targetDate < today && !_entityDone(it.entity));
+  if (!overdue.length) return { moved: 0 };
+  const cap = plan.dailyCap || 6;
+  const load = {};
+  items.forEach(it => { if (it.targetDate >= today && !_entityDone(it.entity)) load[it.targetDate] = (load[it.targetDate] || 0) + 1; });
+  const passRank = { M1: 0, M2: 1, M3: 2, Revision: 1 };
+  overdue.sort((a, b) => (passRank[a.pass] || 0) - (passRank[b.pass] || 0) || a.targetDate.localeCompare(b.targetDate));
+  let cursor = addDays(parseDay(today), 1);
+  overdue.forEach(it => {
+    let d = isoDay(cursor);
+    while ((load[d] || 0) >= cap) { cursor = addDays(cursor, 1); d = isoDay(cursor); }
+    it.targetDate = d; load[d] = (load[d] || 0) + 1;
+  });
+  Store.updatePlan({ items });
+  return { moved: overdue.length };
+}
+
+/* ============================================================
+   DONE-DIARY — DERIVED from real tracking (progress[*].ts + videos[*].ts),
+   grouped by local day. No new write path, nothing self-reported.
+   ============================================================ */
+function _doneDiary(limitDays) {
+  const days = {};
+  const bump = d => (days[d] = days[d] || { mods: new Set(), vids: new Set(), mins: 0 });
+  Object.entries(Store.state.progress || {}).forEach(([id, p]) => { if (p && p.ts && (p.a || p.r || p.t)) bump(isoDay(new Date(p.ts))).mods.add(id); });
+  Object.entries(Store.state.videos || {}).forEach(([id, x]) => { if (x && x.ts && (x.w || x.v)) { const o = bump(isoDay(new Date(x.ts))); o.vids.add(id); const v = VID_BY_ID[id]; if (x.w && v && v.durMin) o.mins += v.durMin; } });
+  return Object.keys(days).sort().reverse().slice(0, limitDays || 12).map(d => ({ day: d, mods: days[d].mods, vids: days[d].vids, mins: days[d].mins }));
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+let _plRendering = false;   // re-entrancy guard (auto-reschedule saves during render)
+let _plRefresh = false;     // true when this render is a live refresh (suppress entrance anim)
+function renderPlanner() {
+  _plRendering = true;
+  const refresh = _plRefresh; _plRefresh = false;
+  try {
+    resetPlates();
+    const v = $("#view-planner"); v.innerHTML = "";
+    if (!LIB || !LIB_TOPICS.length) {
+      v.appendChild(el("div", "", emptyState({ icon: "compass", title: "No canonical library", body: "The topic spine (D.library) is unavailable, so plans can't be generated." })));
+      _plBindOnce(); return;
+    }
+    const plan = Store.getPlan();
+    if (plBuilder) _plBuilder(v);
+    else if (plan) _plActive(v, plan);
+    else _plOnboarding(v);
+    _plBindOnce();
+    labelizeResponsiveTables();
+    // On a live refresh (a tracking tick re-derives adherence/diary), pre-stamp the
+    // entrance flags so the surface updates instantly without re-playing rise/count-up.
+    if (refresh) {
+      $$("#view-planner [data-reveal]").forEach(e => { e.classList.add("in"); e.dataset.revealDone = "1"; });
+      const h = $("#view-planner .tile.is-hero .tile-v[data-count]"); if (h) h.dataset.countDone = "1";
+    }
+    if (typeof animateView === "function") animateView($("#view-planner"));
+  } finally { _plRendering = false; }
+}
+
+/* ── My-banks chip row (reads/writes the global Store.subs primitive) ── */
+function _plBanksRow() {
+  const subs = Store.subs();
+  const chips = PL_PLAT_ORDER.map(id => `<button type="button" class="pl-bank${subs.includes(id) ? " on" : ""}" data-pl-bank="${esc(id)}" aria-pressed="${subs.includes(id)}" style="--c:${platColor(id)}">${esc(platDisplayName(id))}</button>`).join("");
+  return `<div class="pl-banks"><span class="pl-banks-l">My banks</span>${chips}`
+    + `<span class="pl-banks-note">${subs.length ? "plans scope to these" : "optional — scopes plans to what you own"}</span></div>`;
+}
+
+/* ============================================================
+   ONBOARDING — never a blank page.
+   ============================================================ */
+function _plOnboarding(v) {
+  const intro = el("div", "callout plan-intro");
+  intro.dataset.reveal = "";
+  intro.innerHTML = `<b>Build a plan you'll actually keep.</b> Adherence and coverage are the metrics ${epiBadge("measured")} —
+    progress auto-logs from what you really track, never self-reported. Lock an exam date and the plan counts <em>backward</em> into
+    revision passes and re-plans itself when a day slips. <span class="muted">Local-first: everything saves on this device.</span>`;
+  v.appendChild(intro);
+
+  const banks = el("div", "pl-banks-wrap"); banks.dataset.reveal = ""; banks.innerHTML = _plBanksRow(); v.appendChild(banks);
+
+  const modes = [
+    { m: "backward", icon: "◆", title: "Backward-plan from an exam date", hero: true, sub: "Lock the date → auto M1/M2/M3 revision passes, a live on-track read, and auto-reschedule when you miss a day. The signature mode." },
+    { m: "quick", icon: "⚡", title: "Quick-schedule", sub: "Pick subjects + a date range → topics auto-distribute by importance under a daily cap." },
+    { m: "template", icon: "▤", title: "Intensity template", sub: "Hybrid · MCQ-heavy · Revision/PYQ · Custom — distribute from your owned banks." },
+    { m: "manual", icon: "✎", title: "Manual / custom", sub: "Start from a seeded draft of your top high-yield gaps, then hand-edit day by day." },
+  ];
+  const grid = el("div", "pl-modegrid"); grid.dataset.reveal = "";
+  grid.innerHTML = modes.map(o => `<button type="button" class="pl-modecard${o.hero ? " hero" : ""}" data-pl-mode="${o.m}">`
+    + `<span class="pl-mode-i" aria-hidden="true">${o.icon}</span>`
+    + `<span class="pl-mode-t">${esc(o.title)}${o.hero ? ` <span class="pl-sig">signature</span>` : ""}</span>`
+    + `<span class="pl-mode-s">${esc(o.sub)}</span></button>`).join("");
+  v.appendChild(grid);
+
+  /* seed: top untracked high-yield in scope — the forkable "plan this first" preview */
+  const seed = _scopeTopics(_scopeSubjects()).filter(t => t.tier === 3 && !libTopicUnion(t).started).slice(0, 12);
+  if (seed.length) {
+    const rows = seed.map(t => listRow({
+      lead: impStars(t.tier),
+      title: `<a class="is-link" data-go-subject="${esc(t.subject)}">${esc(t.name)}</a>`,
+      sub: `<span class="pl-sectag">${esc(t.subject)}</span>${t.timesRepeated != null ? ` <span class="pl-freq">asked ${t.timesRepeated}×</span>` : ""}`,
+      trail: libCoverageChips(t),
+    }));
+    v.appendChild(_plFrame(panel({
+      title: "Plan these first — your untracked high-yield", epi: "directional", sourceIds: LIB_SRC_IDS, captured: LIB_CAP, curated: true,
+      actions: `<button type="button" class="linkbtn" data-pl-seed>Quick-start a 2-week plan →</button>`,
+      body: groupList(rows, "pl-seedlist") + `<div class="cf-note">High-yield by community-curated PYQ frequency ${epiBadge("directional")} that you haven't started on any bank. A starting draft — you edit everything.</div>`,
+    })));
+  }
+}
+
+/* ============================================================
+   BUILDER FORMS
+   ============================================================ */
+function _plBuilder(v) {
+  const b = plBuilder;
+  const head = el("div", "pl-builder-head"); head.dataset.reveal = "";
+  const titles = { quick: "Quick-schedule", template: "Intensity template", backward: "Backward-plan from an exam date", manual: "Manual / custom" };
+  head.innerHTML = `<button type="button" class="linkbtn pl-back" data-pl-cancel>← back</button><h2>${esc(titles[b.mode] || "New plan")}</h2>`;
+  v.appendChild(head);
+
+  const form = el("div", "panel pl-form"); form.dataset.reveal = "";
+  let html = "";
+
+  if (Store.subs().length || b.mode !== "backward") html += `<div class="pl-field pl-banks-field">${_plBanksRow()}</div>`;
+
+  if (b.mode === "template") {
+    const tOpts = [{ v: "hybrid", label: "Hybrid" }, { v: "mcq", label: "MCQ-heavy" }, { v: "revision", label: "Revision/PYQ" }, { v: "custom", label: "Custom" }];
+    html += `<div class="pl-field"><label class="pl-lbl">Intensity</label>${segmented(tOpts, b.template || "hybrid", "plTemplate")}</div>`;
+    if ((b.template || "hybrid") === "custom") {
+      const opts = PL_PLAT_ORDER.map(id => `<option value="${esc(id)}"${b.customPlat === id ? " selected" : ""}>${esc(platDisplayName(id))}</option>`).join("");
+      html += `<div class="pl-field"><label class="pl-lbl" for="plCustomPlat">Bank</label><select class="sel" id="plCustomPlat">${opts}</select></div>`;
+    }
+  }
+
+  if (b.mode === "backward") {
+    const def = b.exam || isoDay(addDays(parseDay(_today()), 60));
+    html += `<div class="pl-field"><label class="pl-lbl" for="plExam">Exam date</label><input class="pl-date" type="date" id="plExam" min="${isoDay(addDays(parseDay(_today()), 2))}" value="${esc(def)}"></div>`;
+  } else {
+    const from = b.from || _today();
+    const to = b.to || isoDay(addDays(parseDay(_today()), 14));
+    html += `<div class="pl-field pl-dates"><div><label class="pl-lbl" for="plFrom">From</label><input class="pl-date" type="date" id="plFrom" value="${esc(from)}"></div>`
+      + `<div><label class="pl-lbl" for="plTo">To</label><input class="pl-date" type="date" id="plTo" value="${esc(to)}"></div></div>`;
+  }
+
+  html += `<div class="pl-field"><label class="pl-lbl" for="plCap">Daily cap <span class="muted small">topics/day</span></label><input class="pl-num" type="number" min="1" max="40" id="plCap" value="${b.cap || (b.mode === "backward" ? 8 : 6)}"></div>`;
+
+  if (b.mode !== "manual") {
+    const scope = _scopeSubjects();
+    const sel = new Set(b.subjects && b.subjects.length ? b.subjects : scope);
+    b.subjects = [...sel];
+    html += `<div class="pl-field"><label class="pl-lbl">Subjects <span class="muted small">${Store.subs().length ? "in your banks" : ""}</span> <button type="button" class="linkbtn pl-selall" data-pl-selall>all</button> / <button type="button" class="linkbtn" data-pl-selnone>none</button></label>`
+      + `<div class="pl-subjchips">` + scope.map(s => `<button type="button" class="pl-chip${sel.has(s) ? " on" : ""}" data-pl-subj="${esc(s)}" aria-pressed="${sel.has(s)}">${esc(s.replace(/ \/.*/, ""))}</button>`).join("") + `</div></div>`;
+  }
+
+  html += `<div class="pl-actions"><button type="button" class="pl-create" data-pl-create>Create plan</button>`
+    + `<button type="button" class="linkbtn" data-pl-cancel>Cancel</button></div>`;
+  html += `<div class="cf-note">Topics come from the canonical spine, ordered by community-curated PYQ importance ${epiBadge("directional")}${b.mode === "template" && b.template === "mcq" ? ` (MCQ-heavy reorders by density ${epiBadge("proxy")})` : ""}. Nothing here is graded yet — it's a draft you can edit after creating.</div>`;
+  form.innerHTML = html;
+  v.appendChild(form);
+}
+
+/* ============================================================
+   ACTIVE PLAN
+   ============================================================ */
+function _plActive(v, plan) {
+  /* 1 — auto-reschedule any missed days BEFORE we read stats (the recovery core) */
+  const resched = _autoReschedule(plan);
+  if (resched.moved) plan = Store.getPlan();
+  const st = _planStats(plan);
+  const ot = _onTrack(plan, st);
+  const today = _today();
+
+  /* header */
+  const head = el("div", "pl-head"); head.dataset.reveal = "";
+  const modeLabel = { quick: "Quick", template: "Template", backward: "Backward-plan", manual: "Manual" }[plan.mode] || plan.mode;
+  let metaBits = `<span class="pl-modechip">${esc(modeLabel)}</span>`;
+  if (plan.mode === "backward" && plan.examDate) {
+    const dte = daysBetween(today, plan.examDate);
+    metaBits += `<span class="pl-dte">${dte > 0 ? dte + " day" + (dte === 1 ? "" : "s") + " to exam" : dte === 0 ? "Exam today" : "Exam passed"} · ${fmtDay(plan.examDate)}</span>`;
+  } else if (plan.range) {
+    metaBits += `<span class="pl-dte">${fmtDay(plan.range.from)} → ${fmtDay(plan.range.to)}</span>`;
+  }
+  head.innerHTML = `<div class="pl-head-l"><h2 class="pl-name">${esc(plan.name)} <button type="button" class="pl-rename" data-pl-rename title="Rename">✎</button></h2><div class="pl-meta">${metaBits}</div></div>`
+    + `<div class="pl-head-r"><button type="button" class="pl-btn${plEdit ? " on" : ""}" data-pl-edit>${plEdit ? "Done editing" : "Edit"}</button><button type="button" class="pl-btn" data-pl-new>New plan</button></div>`;
+  v.appendChild(head);
+
+  /* recovery banner (auto-reschedule fired) */
+  if (resched.moved) {
+    const rb = el("div", "callout pl-recovery"); rb.dataset.reveal = "";
+    rb.innerHTML = `<b>Caught you up.</b> ${resched.moved} missed item${resched.moved === 1 ? "" : "s"} moved forward into your upcoming days — no need to start over. <span class="muted">Auto-reschedule is the recovery, not a penalty.</span>`;
+    v.appendChild(rb);
+  }
+
+  /* hero tiles */
+  const tiles = el("div", "tiles pl-tiles");
+  tiles.innerHTML =
+    statTile({ accent: "g", hero: true, value: st.adherence + "%", label: "Adherence", note: `${st.dueDone}/${st.due} due items done`, epi: "measured" }) +
+    statTile({ accent: "m", value: st.coverage + "%", label: "High-yield covered", note: `${st.hyDone}/${st.hyTotal} HY topics · union`, epi: "measured" }) +
+    statTile({ accent: ot.cls === "ok" ? "c" : "g", value: ot.txt, label: "Status", note: plan.mode === "backward" && plan.examDate ? `${Math.max(0, daysBetween(today, plan.examDate))} days left` : "vs your schedule", epi: "measured" }) +
+    statTile({ accent: "k", value: pct(st.done, st.total) + "%", label: "Plan progress", note: `${st.done}/${st.total} items`, epi: "measured" }) +
+    statTile({ accent: "c", value: fmt(st.today), label: "Today's load", note: `${st.todayDone} done`, epi: "measured" }) +
+    statTile({ accent: ot.cls === "behind" ? "g" : "k", value: fmt(st.overdue), label: "Overdue", note: st.overdue ? "rescheduled forward" : "all caught up", epi: "measured" });
+  tiles.innerHTML = tiles.innerHTML.replace('<span class="tile-v num">' + st.adherence + '%</span>', '<span class="tile-v num" data-count="' + st.adherence + '">' + st.adherence + '%</span>');
+  v.appendChild(tiles);
+
+  /* on-track callout (calm) */
+  const otc = el("div", "callout pl-ontrack " + ot.cls); otc.dataset.reveal = "";
+  if (ot.cls === "ok") {
+    otc.innerHTML = `<b>${esc(ot.txt)}.</b> You've kept ${st.dueDone} of ${st.due} commitments due so far. <span class="muted">Coverage is the goal — keep clearing high-yield, not piling on hours.</span>`;
+  } else {
+    otc.innerHTML = `<b>${esc(ot.txt)} — and that's recoverable.</b> Missed items were moved into upcoming days automatically. <span class="muted">Do today's list; the plan absorbs the slip.</span>`;
+  }
+  v.appendChild(otc);
+
+  /* guardrail (realistic-plan) */
+  const g = _guardrail(plan);
+  if (g) {
+    const gc = el("div", "callout pl-guard firewall"); gc.dataset.reveal = "";
+    const lead = g.pace != null
+      ? `<b>This plan is denser than your pace.</b> Your recent pace is ~${g.pace} topics/day ${epiBadge("measured")}, but ${g.peak > g.needPerDay ? `a day peaks at ${g.peak}` : `you'd need ~${g.needPerDay}/day`} to finish on time.`
+      : `<b>This is a heavy daily load.</b> Finishing on time needs ~${g.needPerDay} topics/day — a lot to sustain.`;
+    const fix = g.fits
+      ? `A feasible split: cap at <b>${g.suggestCap}/day</b>${g.examBound ? " — that fits before your exam" : ` over ~${g.suggestDays} days`}. <button type="button" class="linkbtn" data-pl-relax="${g.suggestCap}">Re-cap &amp; spread →</button>`
+      : g.examBound
+        ? `Even ${g.suggestCap}/day won't fit ${g.runway} days — trim lower-yield topics (or lean on the revision passes) rather than cram. <button type="button" class="linkbtn" data-pl-relax="${g.suggestCap}">Re-cap to ${g.suggestCap}/day →</button>`
+        : `A feasible split: cap at <b>${g.suggestCap}/day</b> over ~${g.suggestDays} days. <button type="button" class="linkbtn" data-pl-relax="${g.suggestCap}">Re-cap &amp; spread →</button>`;
+    gc.innerHTML = `${lead} ${fix} <span class="muted">Better a plan you keep than one you abandon.</span>`;
+    v.appendChild(gc);
+  }
+
+  /* backward-plan pass timeline (M1/M2/M3) */
+  if (plan.mode === "backward") v.appendChild(_plPassTimeline(plan));
+
+  /* the schedule — today + upcoming days, trackable inline */
+  v.appendChild(_plSchedule(plan, st));
+
+  /* done-diary (derived) */
+  v.appendChild(_plDoneDiary(plan));
+
+  /* footer: scope reminder + delete */
+  const foot = el("div", "pl-foot"); foot.dataset.reveal = "";
+  foot.innerHTML = `${_plBanksRow()}<div class="cf-note">Completion counts only from real tracked actions — ticking a topic here marks the underlying module attempted on your bank, and the done-diary is built from those timestamps. No vanity hours, no leaderboard. Social sharing (pods, weekly snapshot) arrives with accounts.</div>`;
+  v.appendChild(foot);
+}
+
+/* M1/M2/M3 pass cards with date spans + per-pass progress */
+function _plPassTimeline(plan) {
+  const defs = [
+    { k: "M1", t: "M1 · Foundation", s: "First pass — every topic in scope" },
+    { k: "M2", t: "M2 · Revision + mocks", s: "Second pass — high & moderate yield" },
+    { k: "M3", t: "M3 · Rapid revision", s: "Final pass — top high-yield, last days" },
+  ];
+  const cards = defs.map(d => {
+    const its = (plan.items || []).filter(it => it.pass === d.k);
+    if (!its.length) return "";
+    const done = its.filter(it => _entityDone(it.entity)).length;
+    const dates = its.map(it => it.targetDate).sort();
+    const span = dates.length ? `${fmtDay(dates[0])} → ${fmtDay(dates[dates.length - 1])}` : "—";
+    return `<div class="pl-passcard pl-${d.k.toLowerCase()}"><div class="pl-pass-h"><span class="pl-pass-t">${esc(d.t)}</span><span class="pl-pass-span num">${esc(span)}</span></div>`
+      + `<div class="pl-pass-s">${esc(d.s)}</div>`
+      + `<div class="pl-pass-m">${meterHTML(done, its.length)}</div></div>`;
+  }).filter(Boolean).join("");
+  const wrap = el("div", "pl-passgrid"); wrap.dataset.reveal = "";
+  wrap.innerHTML = `<div class="pl-section-h"><h3>Revision passes — counting down to the exam ${epiBadge("directional")}</h3><span class="muted small">High-yield gets multiple passes; everything gets at least one. Date math is local.</span></div><div class="pl-passcards">${cards}</div>`;
+  return wrap;
+}
+
+/* topic/leaf/video item row inside a day */
+function _plItemRow(it) {
+  const e = it.entity, t = _entityTopic(e);
+  const done = _entityDone(e);
+  const lead = t ? impStars(t.tier) : (e.type === "video" ? `<span class="pl-vico">▷</span>` : `<span class="lr-dot" style="--c:var(--ink-4)"></span>`);
+  const subj = _entitySubject(e);
+  const passTag = it.pass ? `<span class="pl-pass pl-${String(it.pass).toLowerCase()}">${esc(it.pass)}</span>` : "";
+  const pips = t ? libCoverageChips(t) : "";
+  const titleHtml = t || subj
+    ? `<a class="is-link" data-go-subject="${esc(subj)}">${esc(_entityName(e))}</a>`
+    : esc(_entityName(e));
+  const trackable = t ? !!_topicPrimaryLeaf(t) : (e.type === "leaf" || e.type === "video");
+  const doneBtn = trackable
+    ? `<button type="button" class="pl-donebtn${done ? " on" : ""}" data-pl-done="${esc(e.type)}" data-pl-eid="${esc(e.id)}" aria-pressed="${done}" title="${done ? "Done — marked on your bank" : "Mark done (marks the module attempted)"}">${done ? "✓ Done" : "Mark done"}</button>`
+    : `<span class="pl-untrack" title="No platform maps this topic — track via your notes">no bank</span>`;
+  const editBits = plEdit
+    ? `<input class="pl-itemdate" type="date" data-pl-date data-pl-eid="${esc(e.id)}" data-pl-etype="${esc(e.type)}" value="${esc(it.targetDate)}" title="Move to a day">`
+    + `<button type="button" class="pl-rm" data-pl-rm data-pl-eid="${esc(e.id)}" data-pl-etype="${esc(e.type)}" title="Remove from plan" aria-label="Remove">✕</button>`
+    : "";
+  return `<div class="lrow pl-item${done ? " done" : ""}">`
+    + `<span class="lrow-lead">${lead}</span>`
+    + `<span class="lrow-main"><span class="lrow-title">${titleHtml}</span>`
+    + `<span class="lrow-sub"><span class="pl-sectag">${esc(subj || "")}</span>${passTag}${pips}</span></span>`
+    + `<span class="lrow-trail">${editBits}${doneBtn}</span></div>`;
+}
+
+function _plSchedule(plan, st) {
+  const today = _today();
+  const byDay = {}; (plan.items || []).forEach(it => (byDay[it.targetDate] = byDay[it.targetDate] || []).push(it));
+  const wrap = el("section", "panel pl-schedule"); wrap.dataset.reveal = "";
+
+  // any residual overdue (defensive — auto-reschedule should have cleared these)
+  const overdueDays = Object.keys(byDay).filter(d => d < today).sort();
+  const residual = overdueDays.flatMap(d => byDay[d]).filter(it => !_entityDone(it.entity));
+
+  const futureDays = Object.keys(byDay).filter(d => d >= today).sort();
+  const WINDOW = 14;
+  const shown = futureDays.slice(0, WINDOW);
+  const hiddenDays = futureDays.slice(WINDOW);
+  const hiddenItems = hiddenDays.reduce((a, d) => a + byDay[d].length, 0);
+
+  let body = "";
+  if (residual.length) {
+    body += `<div class="pl-day pl-overdue"><div class="pl-day-h"><span class="pl-day-d">Overdue</span><span class="pl-day-m">${residual.length} item${residual.length === 1 ? "" : "s"}</span></div>`
+      + `<div class="lgroup">${residual.map(_plItemRow).join("")}</div></div>`;
+  }
+  shown.forEach(d => {
+    const its = byDay[d];
+    const done = its.filter(it => _entityDone(it.entity)).length;
+    const isToday = d === today;
+    body += `<div class="pl-day${isToday ? " is-today" : ""}"><div class="pl-day-h"><span class="pl-day-d">${esc(fmtDayFull(d))}<span class="pl-day-date num"> ${esc(fmtDay(d))}</span></span><span class="pl-day-m">${meterHTML(done, its.length)}</span></div>`
+      + `<div class="lgroup">${its.map(_plItemRow).join("")}</div></div>`;
+  });
+  if (!shown.length && !residual.length) {
+    body += emptyState({ icon: "ledger", title: "Nothing scheduled ahead", body: plEdit ? "Add topics below, or create a new plan." : "Switch on Edit to add topics, or start a new plan." });
+  }
+
+  const addRow = plEdit ? `<div class="pl-addrow"><button type="button" class="linkbtn" data-pl-add>+ add a topic</button></div>` : "";
+  const moreNote = hiddenItems ? `<div class="cf-note">+ ${hiddenItems} more item${hiddenItems === 1 ? "" : "s"} across ${hiddenDays.length} later day${hiddenDays.length === 1 ? "" : "s"} (showing the next ${WINDOW} days).</div>` : "";
+
+  wrap.innerHTML = `<div class="ph"><div class="ph-l"><h3>Your schedule</h3><span class="muted small">tick what you finish — it logs to the done-diary and lifts adherence</span></div>`
+    + `<span class="count-pill">${st.done}/${st.total} done</span></div>`
+    + `<div class="pl-days">${body}</div>${addRow}${moreNote}`;
+  return wrap;
+}
+
+function _plDoneDiary(plan) {
+  const diary = _doneDiary(12);
+  const planLeaves = _planLeafIds(plan);
+  const showHours = !!plan.showHours;
+  const wrap = el("section", "panel pl-diary"); wrap.dataset.reveal = "";
+  let body;
+  if (!diary.length) {
+    body = emptyState({ icon: "quill", title: "Your done-diary builds itself", body: "As you tick modules and watch videos anywhere in Calvetra, your real activity appears here, grouped by day — nothing to log by hand." });
+  } else {
+    const rows = diary.map(dd => {
+      const onPlan = [...dd.mods].some(id => planLeaves.has(id));
+      const bits = [];
+      if (dd.mods.size) bits.push(`${dd.mods.size} module${dd.mods.size === 1 ? "" : "s"}`);
+      if (dd.vids.size) bits.push(`${dd.vids.size} video${dd.vids.size === 1 ? "" : "s"}`);
+      if (showHours && dd.mins) bits.push(`<span class="pl-mins">${Math.round(dd.mins)}m video</span>`);
+      return listRow({
+        lead: onPlan ? `<span class="pl-onplan" title="Advanced your plan">●</span>` : `<span class="lr-dot" style="--c:var(--ink-4)"></span>`,
+        title: `<span class="pl-diary-d">${esc(fmtDayFull(dd.day))}</span> <span class="muted small num">${esc(fmtDay(dd.day))}</span>`,
+        sub: bits.join(" · ") || "—",
+        trail: onPlan ? `<span class="pl-onplan-tag">on plan</span>` : "",
+      });
+    });
+    body = groupList(rows, "pl-diarylist");
+  }
+  wrap.innerHTML = `<div class="ph"><div class="ph-l"><h3>Done-diary ${epiBadge("measured")}</h3><span class="muted small">derived from your real tracking timestamps — not self-reported</span></div>`
+    + `<button type="button" class="linkbtn pl-hours${showHours ? " on" : ""}" data-pl-hours>${showHours ? "Hide hours" : "Show hours"}</button></div>`
+    + `<div class="panel-body">${body}</div>`
+    + (showHours ? `<div class="cf-note">Hours are video minutes only ${epiBadge("measured")} (from captured durations) — MCQ/reading time isn't tracked, so it's never invented. Optional and never ranked, by design.</div>` : "");
+  return wrap;
+}
+
+/* ============================================================
+   ADD-ITEM picker (manual / edit) — two-step sheet: subject → topic.
+   ============================================================ */
+function _plAddItem() {
+  const subs = _scopeSubjects().slice().sort();
+  openSheet("Add a topic — pick a subject", subs.map(s => [s, s]), null, subj => {
+    const plan = Store.getPlan(); if (!plan) return;
+    const have = new Set(plan.items.filter(it => it.entity.type === "topic").map(it => it.entity.id));
+    const topics = libTopics(subj).filter(_ownedTopic).filter(t => !have.has(t.id)).slice(0, 60);
+    if (!topics.length) { toast("All this subject's topics are already in the plan", true); return; }
+    setTimeout(() => openSheet(`Add from ${subj.replace(/ \/.*/, "")}`, topics.map(t => [t.id, `${"★".repeat(t.tier)} ${t.name}`]), null, tid => {
+      const p = Store.getPlan(); if (!p) return;
+      const items = p.items.slice();
+      items.push({ entity: { type: "topic", id: tid }, targetDate: _today() });
+      Store.updatePlan({ items });
+      toast("Added to today — drag the date to move it");
+      renderPlanner();
+    }), 60);
+  });
+}
+
+/* ============================================================
+   BUILDER SUBMIT — read the DOM at submit time (no per-keystroke re-render).
+   ============================================================ */
+function _plReadBuilder() {
+  const b = plBuilder; if (!b) return null;
+  const cap = Math.max(1, Math.min(40, parseInt(($("#plCap") || {}).value, 10) || (b.mode === "backward" ? 8 : 6)));
+  const subjects = $$("#view-planner .pl-chip.on").map(c => c.dataset.plSubj);
+  if (b.mode === "backward") {
+    const exam = ($("#plExam") || {}).value;
+    if (!exam || daysBetween(_today(), exam) < 2) { toast("Pick an exam date at least 2 days out", true); return null; }
+    return _genBackward(exam, subjects, cap);
+  }
+  if (b.mode === "manual") {
+    const from = ($("#plFrom") || {}).value || _today();
+    const to = ($("#plTo") || {}).value || isoDay(addDays(parseDay(from), 14));
+    if (to < from) { toast("End date is before start date", true); return null; }
+    return _genManual(from, to, cap);
+  }
+  // quick / template
+  const from = ($("#plFrom") || {}).value || _today();
+  const to = ($("#plTo") || {}).value || isoDay(addDays(parseDay(from), 14));
+  if (to < from) { toast("End date is before start date", true); return null; }
+  if (!subjects.length) { toast("Pick at least one subject", true); return null; }
+  if (b.mode === "template") {
+    const kind = ($$("#view-planner .seg[data-seg='plTemplate'] button.on")[0] || {}).dataset?.segV || b.template || "hybrid";
+    const customPlat = ($("#plCustomPlat") || {}).value;
+    return _genTemplate(kind, subjects, from, to, cap, customPlat);
+  }
+  return _genQuick(subjects, from, to, cap);
+}
+
+/* ============================================================
+   EVENT WIRING (bound once)
+   ============================================================ */
+let _plBound = false;
+function _plBindOnce() {
+  if (_plBound) return; _plBound = true;
+
+  // keep adherence / diary / meters live when tracking changes anywhere. Skip while
+  // a render is in flight (auto-reschedule saves mid-render) to avoid re-entrancy;
+  // flag it a refresh so the entrance animation never re-plays on a tick.
+  document.addEventListener("state-changed", () => { if (currentView === "planner" && !_plRendering) { _plRefresh = true; renderPlanner(); } });
+
+  document.addEventListener("click", e => {
+    if (currentView !== "planner") return;
+    const within = t => t && $("#view-planner").contains(t);
+
+    // entity links / coverage pips fall through to appClick + routing
+    const md = e.target.closest("[data-pl-mode]"); if (md && within(md)) { plBuilder = { mode: md.dataset.plMode }; renderPlanner(); return; }
+    if (e.target.closest("[data-pl-cancel]")) { plBuilder = null; renderPlanner(); return; }
+
+    const bank = e.target.closest("[data-pl-bank]"); if (bank && within(bank)) { Store.toggleSub(bank.dataset.plBank); _syncBanksDot(); renderPlanner(); return; }
+
+    const subj = e.target.closest("[data-pl-subj]"); if (subj && within(subj)) { const on = subj.classList.toggle("on"); subj.setAttribute("aria-pressed", on ? "true" : "false"); return; }
+    if (e.target.closest("[data-pl-selall]")) { $$("#view-planner .pl-chip").forEach(c => { c.classList.add("on"); c.setAttribute("aria-pressed", "true"); }); return; }
+    if (e.target.closest("[data-pl-selnone]")) { $$("#view-planner .pl-chip").forEach(c => { c.classList.remove("on"); c.setAttribute("aria-pressed", "false"); }); return; }
+
+    if (e.target.closest("[data-pl-create]")) { _plCaptureBuilder(); const plan = _plReadBuilder(); if (plan) { Store.setPlan(plan); plBuilder = null; plEdit = false; renderPlanner(); toast("Plan created — edit anything, tick as you go"); } return; }
+    if (e.target.closest("[data-pl-seed]")) { const subjs = _scopeSubjects(); Store.setPlan(_genQuick(subjs, _today(), isoDay(addDays(parseDay(_today()), 14)), 6)); plBuilder = null; renderPlanner(); toast("2-week quick plan created from your high-yield gaps"); return; }
+
+    const done = e.target.closest("[data-pl-done]"); if (done && within(done)) { _plToggleDone(done.dataset.plDone, done.dataset.plEid); return; }
+    const rm = e.target.closest("[data-pl-rm]"); if (rm && within(rm)) { _plRemoveItem(rm.dataset.plEtype, rm.dataset.plEid); return; }
+    if (e.target.closest("[data-pl-edit]")) { plEdit = !plEdit; renderPlanner(); return; }
+    if (e.target.closest("[data-pl-add]")) { _plAddItem(); return; }
+    const relax = e.target.closest("[data-pl-relax]"); if (relax) { _plRelax(parseInt(relax.dataset.plRelax, 10)); return; }
+    if (e.target.closest("[data-pl-hours]")) { const p = Store.getPlan(); if (p) Store.updatePlan({ showHours: !p.showHours }); renderPlanner(); return; }
+    if (e.target.closest("[data-pl-rename]")) { _plRename(); return; }
+    if (e.target.closest("[data-pl-new]")) {
+      if (confirm("Start a new plan? Your current plan will be replaced. (Your tracking and done-diary are kept.)")) { Store.clearPlan(); plBuilder = null; plEdit = false; renderPlanner(); }
+      return;
+    }
+    // template intensity change → re-render builder to reveal/hide custom fields (preserve other inputs)
+    const seg = e.target.closest(".seg[data-seg='plTemplate'] button[data-seg-v]");
+    if (seg && within(seg)) { _plCaptureBuilder(); if (plBuilder) plBuilder.template = seg.dataset.segV; renderPlanner(); return; }
+  });
+
+  // move an item to another day (edit mode)
+  document.addEventListener("change", e => {
+    if (currentView !== "planner") return;
+    const di = e.target.closest("[data-pl-date]"); if (!di) return;
+    const plan = Store.getPlan(); if (!plan) return;
+    const items = plan.items.map(it => (it.entity.type === di.dataset.plEtype && it.entity.id === di.dataset.plEid) ? Object.assign({}, it, { targetDate: di.value }) : it);
+    Store.updatePlan({ items }); renderPlanner();
+  });
+}
+/* snapshot the in-progress builder form into plBuilder before a re-render */
+function _plCaptureBuilder() {
+  if (!plBuilder) return;
+  const get = id => ($("#" + id) || {}).value;
+  if (get("plFrom") != null) plBuilder.from = get("plFrom");
+  if (get("plTo") != null) plBuilder.to = get("plTo");
+  if (get("plExam") != null) plBuilder.exam = get("plExam");
+  if (get("plCap") != null) plBuilder.cap = parseInt(get("plCap"), 10) || plBuilder.cap;
+  if (get("plCustomPlat") != null) plBuilder.customPlat = get("plCustomPlat");
+  const chips = $$("#view-planner .pl-chip.on").map(c => c.dataset.plSubj);
+  if ($$("#view-planner .pl-chip").length) plBuilder.subjects = chips;
+}
+function _plToggleDone(type, id) {
+  if (type === "topic") { const t = LIB_TOPIC_BY_ID[id]; const leaf = t && _topicPrimaryLeaf(t); if (leaf) Store.toggle(leaf, "a"); /* state-changed → re-render */ return; }
+  if (type === "leaf") { Store.toggle(id, "a"); return; }
+  if (type === "video") { Store.toggleVideo(id, "w"); return; }
+}
+function _plRemoveItem(type, id) {
+  const plan = Store.getPlan(); if (!plan) return;
+  const items = plan.items.filter(it => !(it.entity.type === type && it.entity.id === id));
+  Store.updatePlan({ items }); renderPlanner();
+}
+function _plRelax(cap) {
+  const plan = Store.getPlan(); if (!plan || !cap) return;
+  const today = _today();
+  // keep done items where they are; repack remaining incomplete from today forward at the new cap
+  const doneItems = plan.items.filter(it => _entityDone(it.entity));
+  const rest = plan.items.filter(it => !_entityDone(it.entity))
+    .sort((a, b) => ({ M1: 0, M2: 1, M3: 2, Revision: 1 }[a.pass] || 0) - ({ M1: 0, M2: 1, M3: 2, Revision: 1 }[b.pass] || 0) || a.targetDate.localeCompare(b.targetDate));
+  const need = Math.ceil(rest.length / cap);
+  const end = plan.examDate ? isoDay(addDays(parseDay(plan.examDate), -1)) : isoDay(addDays(parseDay(today), need - 1));
+  const days = _dayRange(today, end > today ? end : isoDay(addDays(parseDay(today), need - 1)));
+  let d = 0, c = 0; const repacked = rest.map(it => {
+    if (c >= cap && d < days.length - 1) { d++; c = 0; } c++;
+    return Object.assign({}, it, { targetDate: days[Math.min(d, days.length - 1)] });
+  });
+  const patch = { items: doneItems.concat(repacked), dailyCap: cap };
+  if (!plan.examDate && plan.range) patch.range = { from: plan.range.from, to: days[days.length - 1] };
+  Store.updatePlan(patch); renderPlanner(); toast(`Re-capped to ${cap}/day`);
+}
+function _plRename() {
+  const plan = Store.getPlan(); if (!plan) return;
+  const name = window.prompt("Rename this plan:", plan.name);
+  if (name && name.trim()) { Store.updatePlan({ name: name.trim() }); renderPlanner(); }
+}
+function _syncBanksDot() { const b = $("#btnBanks"); if (b) b.classList.toggle("has-dot", Store.subs().length > 0); }
+
+/* My-banks bottom-sheet (opened from the global toolbar button). Multi-select —
+   uses its own .pl-bankopt class so it never triggers the single-select sheetPick. */
+function openBanksSheet() {
+  const sh = $("#sheet"); if (!sh) return;
+  $("#sheetTitle").textContent = "My banks — what you own";
+  const render = () => {
+    const subs = Store.subs();
+    $("#sheetBody").innerHTML = PL_PLAT_ORDER.map(id =>
+      `<button class="pl-bankopt${subs.includes(id) ? " on" : ""}" data-bankid="${esc(id)}"><span style="color:${platColor(id)}">${esc(platDisplayName(id))}</span>${subs.includes(id) ? '<span class="sheet-tick">✓</span>' : ""}</button>`).join("")
+      + `<div class="cf-note" style="padding:10px 4px 2px">Scopes plan generation and the honest-gap signal to the banks you actually pay for. Optional — leave empty to plan across all.</div>`;
+  };
+  render();
+  $("#sheetScrim").classList.add("open"); sh.classList.add("open"); sh.setAttribute("aria-hidden", "false");
+  if (!sh.__bankBound) {
+    sh.__bankBound = true;
+    $("#sheetBody").addEventListener("click", e => {
+      const b = e.target.closest(".pl-bankopt"); if (!b) return;
+      e.stopPropagation();
+      Store.toggleSub(b.dataset.bankid); _syncBanksDot();
+      render();
+      if (currentView === "planner") renderPlanner();
+    });
+  }
+  setTimeout(() => $("#sheetClose").focus(), 30);
+}
+
+/* wrap an HTML string into a [data-reveal] element so animateView reveals it */
+function _plFrame(html) { const d = el("div", "pl-frame"); d.dataset.reveal = ""; d.innerHTML = html; return d; }
