@@ -17,13 +17,17 @@ Gives you persistence on the server and is the seam for the future multi-user/so
 1. Create the subdomain (e.g. `tracker.notalonestudios.com`) pointing at a folder, say `public_html/tracker`.
 2. Upload everything in this project into that folder (so `index.html` and `server/` sit inside it).
 3. In `server/`, copy `config.sample.php` → `config.php` and set:
-   - `edit_token` → a long random secret (this is your "password" to save).
-   - `allow_origin` → `https://tracker.notalonestudios.com` (your exact URL).
-4. Make sure `server/data/` is writable by PHP (usually `755`/`775`).
+   - `legacy_edit_token` → a long random secret (this is your "password" to save).
+   - `allow_origin` → `https://tracker.notalonestudios.com` (your exact URL — an exact
+     origin is required; credentialed CORS cannot use `*`).
+4. Make sure `server/data/` is writable by PHP (usually `755`/`775`). **Where your host
+   allows it, place `server/data/` and `server/config.php` OUTSIDE the web root** (e.g. one
+   directory above `public_html`) so they can never be web-served even if `.htaccess` is
+   ignored; point `sqlite_path` / the `require` at the relocated paths.
 5. Turn on the server backend in the page. Open the browser console on the live site once and run:
    ```js
    APP_CONFIG.backend = "server";              // or edit storage.js to default this
-   localStorage.setItem("qbank_edit_token", "PASTE-YOUR-edit_token-HERE");
+   localStorage.setItem("qbank_edit_token", "PASTE-YOUR-legacy_edit_token-HERE");
    location.reload();
    ```
    (To make it permanent, set `backend: "server"` in `storage.js`'s `APP_CONFIG`.)
@@ -33,9 +37,12 @@ token can still read; only you (with the token) can save. If the server is ever 
 **keeps working from localStorage** and retries — you never lose a tick.
 
 ### Security notes
-- `config.php` and `server/data/*.json` are blocked from direct web access by `.htaccess`.
+- `config.php`, `server/data/*`, `server/lib/`, and `server/jwks_cache/` are blocked from
+  direct web access by `.htaccess` (root rule + dir-local `Require all denied`, so it holds
+  under subpath deploys too). Better still, keep `data/` + `config.php` outside the web root.
 - Never commit `config.php` (it's in `.gitignore`).
-- `*` origin is fine for testing; lock it to your real URL for production.
+- `allow_origin` must be your **exact** app origin — credentialed CORS cannot use `*`. The API
+  additionally auto-allows `http://localhost:*` / `http://127.0.0.1:*` for local dev only.
 
 ## 4. The social / multi-user future (groundwork already laid)
 - Every save is keyed by `APP_CONFIG.profile` — today it's `"me"`. Swap that for a real user id
@@ -82,6 +89,16 @@ This is the real multi-user layer. **Auth is Google only** (no passwords). The a
 - State syncs as one per-user JSON blob (`GET`/`POST ?action=state`, CSRF-protected, last-write-wins
   on `updated_at`). Offline edits queue in `localStorage` and reconcile on reconnect. First login
   **merges** local ticks into the account (never clobbered).
+
+### B′. Hardening already in place
+- **Request size cap:** JSON bodies over `max_body_bytes` (config, default **256 KB**) are rejected with `413`
+  before decode; over-deep JSON (depth > 32) → `400`. Raise the cap only if a real account legitimately exceeds it.
+- **Last-write-wins is server-clamped:** the client's `updatedAt` is clamped to `min(client, server-now)`, so a
+  future-dated blob can't permanently win and wedge other devices.
+- **Sessions hashed at rest:** `sessions.id` stores `sha256(token)`; the raw token lives only in the httpOnly cookie.
+- **CORS:** exact `allow_origin` only (credentialed CORS forbids `*`); `localhost`/`127.0.0.1` auto-allowed for dev.
+- **Files:** `server/lib/`, `server/jwks_cache/`, `server/data/`, and `config.php` are blocked from the web
+  (root `.htaccess` + dir-local `Require all denied`, subpath-safe). Prefer keeping `data/`+`config.php` out of the web root.
 
 ### C. Local testing without Google (developers)
 Set `'driver' => 'sqlite'`, `'env' => 'development'`, `'dev_mock_auth' => true`, run

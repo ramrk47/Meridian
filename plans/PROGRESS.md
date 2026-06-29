@@ -21,10 +21,11 @@
   trademark clearance still REQUIRED before public launch** (see `plans/NAME_CANDIDATES.md`, memory `product-name-calvetra`).
 - **Phase 1c.2 Experience Overhaul + craft elevation SHIPPED & verified** (modular design system + chart
   vocabulary + entity pages Subject/Platform/Faculty + faculty seed(14) + motion/View-Transitions layer).
-- **Next:** **coordinator security review of the Backend Foundation** (token-verify, parameterized queries, secret
-  handling, mock-auth prod-off, legacy isolation) → then social layer (peer pods / shared accountability). *(Backend
-  Foundation built + verified 2026-06-29; Phase 2b tracker + local-first Study Planner shipped 2026-06-29. Predictor
-  remains a parallel data-first session, deferred to near-launch.)*
+- **Next:** **Step 2 — social accountability** (peer pods / shared adherence board / accountability partner /
+  WhatsApp snapshot / curator-adopt) now green-lit: the Backend Foundation passed security review **and** the 3 must-fix
+  blockers + 3 nice-to-haves are **hardened + verified (2026-06-29)**. *(Backend Foundation built + verified 2026-06-29;
+  Phase 2b tracker + local-first Study Planner shipped 2026-06-29. Predictor remains a parallel data-first session,
+  deferred to near-launch.)*
 
 ## Strategy frame (LOCKED) — from MARKET_INTEL.md
 - **Build/launch for NEET PG · INI-CET · FMGE now**; architect exam-agnostic so all-India verticals extend later (don't build them yet).
@@ -91,7 +92,7 @@
 |-------|-------|---------|
 | `users` | `id, google_sub UNIQUE, email, name, created_at` | one row per Google account (minimal PII: sub+email+name) |
 | `user_state` | `user_id PK, blob JSON, updated_at, version` | the synced per-account state blob (last-write-wins on `updated_at`) |
-| `sessions` | `id(256-bit), user_id, csrf_token, created_at, expires_at, last_seen` | server session → `cal_session` httpOnly+Secure+SameSite cookie; CSRF per session |
+| `sessions` | `id=sha256(token), user_id, csrf_token, created_at, expires_at, last_seen` | server session → `cal_session` httpOnly+Secure+SameSite cookie (raw token only in cookie; **hashed at rest**); CSRF per session |
 | `rate_limits` | `bucket, window_start, count` | fixed-window throttle on `google`/`devlogin`/`state` POST |
 - API: `server/api.php?action=` → `google` (verify Google ID token) · `devlogin` (dev-only) · `me` · `logout` · `state`.
   Legacy `?profile=` file store kept but **isolated** under `data/legacy/`, never touches account data.
@@ -210,6 +211,20 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Backend hardening SHIPPED → social layer GREEN-LIT.** Applied all 6 security-review items
+  (`BACKEND_HARDENING_PROMPT.md`), auth core untouched. **3 must-fix:** (HIGH) state blob now capped —
+  `read_json_body()` rejects >256 KB (configurable `max_body_bytes`) with **413** before decode + a depth-32
+  `json_decode` limit → **400**, and `state_post()` stores only an object/array; (MED) `lib/`+`jwks_cache/` now carry
+  dir-local `Require all denied` .htaccess **and** the root rule is de-anchored to `(^|/)server/(lib|data|jwks_cache)/`
+  so it holds under subpath deploys; (MED) LWW `updatedAt` **clamped to `min(client, now_ms())`** — a future-dated
+  blob can no longer permanently win/wedge devices. **3 nice-to-have:** session ids **hashed (sha256) at rest** (raw
+  token only in the cookie); dead `*`-CORS branch removed (exact-origin only); DEPLOY.md fixed (`edit_token`→
+  `legacy_edit_token`, exact-origin required, recommend `data/`+`config.php` outside web root). **Verified** on
+  SQLite+dev mock-auth: 413 on oversize / 400 on over-depth, 2099-dated blob clamped to server-now (later write still
+  wins → no wedge), DB row id = sha256(cookie) (not the raw token), de-anchored regex denies every subpath lib/data/
+  jwks path while api.php+index.html stay reachable, CORS reflects exact origin + credentials (no wildcard); full
+  client loop (dev sign-in → tick → sync → server pull → reconcile/merge → logout) green in Preview, console clean,
+  `php -l` clean, no auth-core regression. **GATE CLEARED → Step 2 (social accountability).**
 - 2026-06-29 **Backend Foundation security-reviewed → CONDITIONAL GREEN-LIGHT.** Adversarial audit (line-by-line +
   live crypto tests) confirmed the auth core is **production-grade, not self-reported**: Google JWKS/RS256 verify
   (rejects `alg:none`/HS256-confusion, checks aud/iss/exp/email_verified), full PDO parameterization, 256-bit
