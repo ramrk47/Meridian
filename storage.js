@@ -21,7 +21,9 @@ function blankState() {
     scores: {},       // testId   -> {right,wrong,skipped,total,diff,notes,date}
     customTests: [],  // user-added GTs / tests
     videos: {},       // videoId  -> {w:0|1, v:0|1, ts}  (watched / revised)
-    schedule: [],     // user-added schedule / content entries
+    schedule: [],     // user-added schedule / content entries (legacy seam; kept)
+    subs: [],         // My-subscriptions: platform ids the student owns (default empty = opt-in)
+    plan: null,       // the active Study Planner plan (local-first; see Store.setPlan)
     updatedAt: null,
   };
 }
@@ -103,6 +105,28 @@ const Store = {
   // ---- custom content ----
   addCustomTest(t) { t.id = "ut-" + Date.now(); t.custom = true; this.state.customTests.push(t); this.save(); return t; },
   removeCustomTest(id) { this.state.customTests = this.state.customTests.filter(t => t.id !== id); delete this.state.scores[id]; this.save(); },
+
+  // ---- My-subscriptions (the personal-banks lens; scopes plan generation) ----
+  subs() { return this.state.subs || (this.state.subs = []); },
+  isSub(id) { return this.subs().includes(id); },
+  toggleSub(id) {
+    const s = this.subs();
+    const i = s.indexOf(id);
+    if (i >= 0) s.splice(i, 1); else s.push(id);
+    this.save();
+  },
+  setSubs(ids) { this.state.subs = (ids || []).slice(); this.save(); },
+
+  // ---- study plan (single active plan; local-first, syncs later with user-state) ----
+  getPlan() { return this.state.plan || null; },
+  setPlan(plan) { this.state.plan = plan || null; this.save(); return this.state.plan; },
+  updatePlan(patch) {
+    if (!this.state.plan) return null;
+    this.state.plan = Object.assign({}, this.state.plan, patch);
+    this.save();
+    return this.state.plan;
+  },
+  clearPlan() { this.state.plan = null; this.save(); },
 
   // ---- backup / portability (bridge to "publish to server") ----
   export() { return JSON.stringify(this.state, null, 2); },
