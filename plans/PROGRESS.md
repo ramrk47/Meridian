@@ -210,6 +210,15 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Backend Foundation security-reviewed → CONDITIONAL GREEN-LIGHT.** Adversarial audit (line-by-line +
+  live crypto tests) confirmed the auth core is **production-grade, not self-reported**: Google JWKS/RS256 verify
+  (rejects `alg:none`/HS256-confusion, checks aud/iss/exp/email_verified), full PDO parameterization, 256-bit
+  sessions (no fixation, server-side logout), CSRF, legacy `?profile=` isolation, 3-gate mock-auth prod-off — all
+  PASS; secrets gate independently verified (config.php/sqlite/legacy untracked). **3 must-fix blockers before
+  social/deploy:** (HIGH) no state-blob size/depth cap → DoS; (MED) `lib/`+`jwks_cache/` exposed under subpath
+  deploys (root-anchored RedirectMatch); (MED) client-controlled LWW `updatedAt` can wedge sync. +3 nice-to-haves
+  (hash session ids at rest, drop `*`-CORS branch, DEPLOY.md doc fixes). **GATE: harden → then social.** Fix prompt:
+  `BACKEND_HARDENING_PROMPT.md` (Opus high).
 - 2026-06-29 **Backend Foundation BUILT + locally verified (the gate is in).** PHP 8 + PDO (MySQL prod / SQLite
   dev), single `?action=` front controller (`server/api.php`) + `server/lib/` (db/auth/state/csrf/ratelimit/http)
   + vendored **firebase/php-jwt**. Endpoints: `google` (server-verified ID token — RS256 vs Google JWKS, `aud`/`iss`/
