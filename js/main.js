@@ -298,6 +298,10 @@ function wireToolbar() {
   });
   $("#btnSearch")?.addEventListener("click", openPalette);
   $("#btnTheme")?.addEventListener("click", toggleTheme);
+  // My banks — the personal-subscriptions selector (scopes plan generation). The
+  // sheet + dot live in surfaces/planner.js (openBanksSheet / _syncBanksDot).
+  $("#btnBanks")?.addEventListener("click", () => { if (typeof openBanksSheet === "function") openBanksSheet(); });
+  if (typeof _syncBanksDot === "function") _syncBanksDot();
 }
 /* mobile-only chrome: compact search button + overflow "⋯" menu (proxies the toolbar) */
 function wireMobileChrome() {
