@@ -169,6 +169,12 @@
 - [ ] Multi-exam verticals (UPSC/NEET-UG/JEE/KCET) behind an exam switcher; mobile app shell.
 
 ## Decisions log (newest first)
+- 2026-06-29 **Next build = local-first Study Planner** (`PHASE3_PLANNER_LOCAL_PROMPT.md`, Opus xhigh), ahead of
+  the Phase 2a predictor. Rationale: acquisition (predictor) isn't live until public deploy + backend (Phase 5),
+  and the predictor is best built near a real results-season launch with audited cutoff data — whereas the planner
+  is the **research-validated deepest moat** (accountability/adherence) and its core is fully buildable now
+  (local-first on the spine + tracker). Lead with backward-planning-from-exam-date + auto-reschedule + adherence;
+  social half (pods/sharing) stays post-backend. Predictor deferred to near-launch.
 - 2026-06-29 **Phase 2b SHIPPED — PYQ tracker + unified cross-platform tracker (the retain surface) + 5-group nav.**
   Stage 1: integrated the last PYQ seams into `D.pyq` (measured past-paper question counts; 1,474 sets / 21,846 Qs;
   Marrow reuses existing leaf ids to union with the QBank tracker; DocT QRP + eGurukul Express captured but flagged
