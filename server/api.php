@@ -1,66 +1,146 @@
 <?php
 /* ===========================================================
-   QBank Tracker — minimal file-based API (PHP, no database)
-   Drop this on PHP shared hosting (Hostinger/cPanel) to give
-   the dashboard server-side, cross-device persistence.
+   Calvetra API — front controller (PHP 8 + PDO)
+   Dispatches on ?action= :
+     POST ?action=google     -> verify Google ID token, create session
+     POST ?action=devlogin   -> DEV-ONLY mock session (3 positive gates)
+     GET  ?action=me          -> current user + fresh CSRF + client config
+     POST ?action=logout      -> destroy session (CSRF required)
+     GET  ?action=state       -> authed user's state blob
+     POST ?action=state       -> save blob (session + CSRF; last-write-wins)
 
-   GET  api.php?profile=me           -> returns that profile's JSON state
-   POST api.php?profile=me           -> saves JSON body (requires edit token)
-        header: X-Edit-Token: <token from config.php>
-
-   Single-user/token now; the `profile` param is the seam for
-   real per-account auth later (the "social" layer).
+   Legacy (backward-compat, ISOLATED from account data):
+     GET/POST ?profile=<id>   -> file store under data/legacy/, never touches user_state
    =========================================================== */
 
-$config = file_exists(__DIR__ . '/config.php')
-  ? require __DIR__ . '/config.php'
-  : ['edit_token' => '', 'allow_origin' => '*'];
+declare(strict_types=1);
 
-header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: ' . ($config['allow_origin'] ?: '*'));
-header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, X-Edit-Token');
+require_once __DIR__ . '/lib/http.php';
+require_once __DIR__ . '/lib/db.php';
+require_once __DIR__ . '/lib/csrf.php';
+require_once __DIR__ . '/lib/ratelimit.php';
+require_once __DIR__ . '/lib/auth.php';
+require_once __DIR__ . '/lib/state.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); exit; }
+send_cors_headers();
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS') { http_response_code(204); exit; }
 
-function profile_id() {
-  $p = isset($_GET['profile']) ? $_GET['profile'] : 'me';
-  $p = preg_replace('/[^a-zA-Z0-9_-]/', '', $p);
-  return $p === '' ? 'me' : $p;
-}
-function data_path($p) { return __DIR__ . '/data/' . $p . '.json'; }
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+$action = isset($_GET['action']) ? (string) $_GET['action'] : '';
 
-$method = $_SERVER['REQUEST_METHOD'];
-$profile = profile_id();
-$path = data_path($profile);
+// ── Legacy file path (only when ?profile= and no ?action=) ───────────────────
+if ($action === '' && isset($_GET['profile'])) { legacy_handle($method); exit; }
 
-if ($method === 'GET') {
-  if (file_exists($path)) { readfile($path); }
-  else { echo json_encode(new stdClass()); }
-  exit;
-}
+try {
+  switch ($action) {
 
-if ($method === 'POST') {
-  // auth: require matching token if one is configured
-  $token = isset($_SERVER['HTTP_X_EDIT_TOKEN']) ? $_SERVER['HTTP_X_EDIT_TOKEN'] : '';
-  if (!empty($config['edit_token']) && !hash_equals($config['edit_token'], $token)) {
-    http_response_code(401);
-    echo json_encode(['error' => 'unauthorized']); exit;
+    case 'google':
+      require_post($method);
+      if (!rate_ok('google', 20, 300)) json_err('rate limited', 429);
+      [$body, $okJson] = read_json_body();
+      if (!$okJson || !is_array($body) || empty($body['id_token'])) json_err('missing id_token', 400);
+      try {
+        $g = google_verify((string) $body['id_token']);
+      } catch (Throwable $e) {
+        json_err('google verification failed', 401);
+      }
+      $user = upsert_user($g['sub'], $g['email'], $g['name']);
+      $sess = session_create((int) $user['id']);
+      json_out(['user' => public_user($user), 'csrf' => $sess['csrf_token']]);
+      break;
+
+    case 'devlogin':
+      require_post($method);
+      if (!mock_auth_enabled()) json_err('not found', 404);   // provably off in prod
+      if (!rate_ok('devlogin', 50, 300)) json_err('rate limited', 429);
+      $user = upsert_user('dev|local-tester', 'dev@localhost', 'Dev Tester');
+      $sess = session_create((int) $user['id']);
+      json_out(['user' => public_user($user), 'csrf' => $sess['csrf_token'], 'dev' => true]);
+      break;
+
+    case 'me':
+      $sess = current_session();
+      $user = $sess ? user_by_id((int) $sess['user_id']) : null;
+      json_out([
+        'user'   => $user ? public_user($user) : null,
+        'csrf'   => $sess['csrf_token'] ?? null,
+        'config' => [
+          'googleClientId' => cfg()['google_client_id'] ?? '',
+          'devAuth'        => mock_auth_enabled(),
+        ],
+      ]);
+      break;
+
+    case 'logout':
+      require_post($method);
+      $sess = current_session();
+      if ($sess && !csrf_check($sess)) json_err('bad csrf', 403);
+      end_session();
+      json_out(['ok' => true]);
+      break;
+
+    case 'state':
+      $sess = current_session();
+      if (!$sess) json_err('unauthorized', 401);
+      $userId = (int) $sess['user_id'];
+      if ($method === 'GET') {
+        json_out(state_get($userId));
+      } elseif ($method === 'POST') {
+        if (!csrf_check($sess)) json_err('bad csrf', 403);
+        if (!rate_ok('state', 120, 60)) json_err('rate limited', 429);
+        [$body, $okJson] = read_json_body();
+        if (!$okJson || !is_array($body)) json_err('invalid json', 400);
+        json_out(state_post($userId, $body));
+      } else {
+        json_err('method not allowed', 405);
+      }
+      break;
+
+    default:
+      json_err('not found', 404);
   }
-  $raw = file_get_contents('php://input');
-  $decoded = json_decode($raw, true);
-  if ($decoded === null && trim($raw) !== 'null') {
-    http_response_code(400);
-    echo json_encode(['error' => 'invalid json']); exit;
-  }
-  if (!is_dir(__DIR__ . '/data')) { mkdir(__DIR__ . '/data', 0775, true); }
-  // atomic write
-  $tmp = $path . '.tmp';
-  file_put_contents($tmp, json_encode($decoded, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-  rename($tmp, $path);
-  echo json_encode(['ok' => true, 'profile' => $profile, 'savedAt' => date('c')]);
-  exit;
+} catch (Throwable $e) {
+  // never leak internals
+  json_err('server error', 500);
 }
 
-http_response_code(405);
-echo json_encode(['error' => 'method not allowed']);
+/* ── helpers ─────────────────────────────────────────────────────────────── */
+
+function require_post(string $method): void {
+  if ($method !== 'POST') json_err('method not allowed', 405);
+}
+
+function public_user(array $u): array {
+  return ['id' => (int) $u['id'], 'email' => $u['email'] ?? null, 'name' => $u['name'] ?? null];
+}
+
+/* Legacy single-user file store — kept ONLY for the pre-accounts deploy.
+   Writes data/legacy/<profile>.json. CANNOT read or write account user_state. */
+function legacy_handle(string $method): void {
+  $token = cfg()['legacy_edit_token'] ?? '';
+  if ($token === '' && isset(cfg()['edit_token'])) $token = (string) cfg()['edit_token']; // old key fallback
+
+  $p = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) $_GET['profile']);
+  if ($p === '') $p = 'me';
+  $dir = __DIR__ . '/data/legacy';
+  $path = $dir . '/' . $p . '.json';
+
+  if ($method === 'GET') {
+    if (is_file($path)) { header('Content-Type: application/json; charset=utf-8'); readfile($path); }
+    else json_out(new stdClass());
+    exit;
+  }
+  if ($method === 'POST') {
+    if ($token === '') json_err('legacy save disabled', 403);   // fail-closed if no token configured
+    $sent = $_SERVER['HTTP_X_EDIT_TOKEN'] ?? '';
+    if (!hash_equals($token, $sent)) json_err('unauthorized', 401);
+    [$body, $okJson] = read_json_body();
+    if (!$okJson) json_err('invalid json', 400);
+    if (!is_dir($dir)) mkdir($dir, 0775, true);
+    $tmp = $path . '.tmp';
+    file_put_contents($tmp, json_encode($body, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+    rename($tmp, $path);
+    json_out(['ok' => true, 'profile' => $p, 'savedAt' => date('c')]);
+  }
+  json_err('method not allowed', 405);
+}

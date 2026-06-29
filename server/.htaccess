@@ -1,4 +1,15 @@
-# Block direct web access to sensitive files
+# Block direct web access to sensitive files (Apache 2.4)
+# Only api.php (and the app's static assets one level up) should be reachable.
+
+# Secrets / config
 <FilesMatch "^(config\.php|config\.sample\.php)$">
   Require all denied
 </FilesMatch>
+
+# SQL dumps
+<FilesMatch "\.(sql|sqlite|db)$">
+  Require all denied
+</FilesMatch>
+
+# Server-side directories that must never be web-served
+RedirectMatch 404 ^/server/(lib|data|jwks_cache)/

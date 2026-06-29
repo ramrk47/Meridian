@@ -1,6 +1,12 @@
 # secrets & per-user server state
 server/config.php
 server/data/*.json
+server/data/legacy/*.json
+# dev SQLite database (never commit user data)
+server/data/*.sqlite
+server/data/*.sqlite-*
+# cached Google JWKS (regenerated at runtime)
+server/jwks_cache/*.json
 
 # dev / editor / OS
 .claude/
