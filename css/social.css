@@ -1,0 +1,83 @@
+/* ============================================================
+   social.css — Step 2 social accountability (a SECTION in #view-planner).
+   Pods · solidarity board · accountability partner · weekly snapshot card.
+   Theme-aware via tokens; calm + dense, never gamified. Solidarity, not rank.
+   ============================================================ */
+
+#view-planner .pl-social .pl-soc-block{
+  padding:14px 0;border-top:1px solid var(--line);
+}
+#view-planner .pl-social .pl-soc-block:first-of-type{border-top:none}
+#view-planner .pl-soc-bh{
+  font:600 var(--t-label)/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:10px;
+}
+
+/* sign-in prompt (calm) */
+#view-planner .pl-social-signin{margin-top:4px}
+#view-planner .pl-soc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+/* ── pods ── */
+#view-planner .pl-soc-pods{display:flex;flex-direction:column;gap:8px}
+#view-planner .pl-soc-pod{
+  border:1px solid var(--line);border-radius:var(--r-2);background:var(--paper-2);overflow:hidden;
+}
+#view-planner .pl-soc-pod.open{border-color:var(--line-2)}
+#view-planner .pl-soc-podh{
+  display:flex;align-items:center;gap:10px;width:100%;padding:11px 13px;
+  background:none;border:none;cursor:pointer;text-align:left;color:var(--ink);
+}
+#view-planner .pl-soc-podn{font:600 var(--t-body)/1.2 var(--sans);flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#view-planner .pl-soc-podm{font:500 var(--t-meta) var(--sans);color:var(--ink-3);white-space:nowrap}
+#view-planner .pl-soc-podh .pl-cyc-rx{color:var(--ink-4);font-size:12px}
+#view-planner .pl-soc-podtools{
+  display:flex;gap:14px;padding:0 13px 11px;align-items:center;
+}
+#view-planner .pl-soc-pod .pl-soc-board{padding:4px 13px 13px;border-top:1px solid var(--line)}
+
+/* ── solidarity board ── */
+#view-planner .pl-soc-blist{margin-top:4px}
+#view-planner .pl-soc-av{
+  display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border-radius:50%;background:var(--paper-3);color:var(--ink-2);
+  font:600 13px var(--sans);border:1px solid var(--line);
+}
+#view-planner .pl-soc-av.me{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+#view-planner .pl-soc-adh{font:600 var(--t-body) var(--sans);color:var(--accent);margin-left:6px}
+#view-planner .pl-soc-cov{font:600 13px var(--sans);color:var(--gold);white-space:nowrap;display:inline-flex;align-items:baseline;gap:3px}
+#view-planner .pl-soc-covl{font:500 9px var(--sans);color:var(--ink-4);letter-spacing:.04em}
+#view-planner .pl-soc-chips{display:inline-flex;flex-wrap:wrap;gap:5px;margin-top:3px}
+#view-planner .pl-soc-chip{
+  font:500 11px var(--sans);padding:1.5px 8px;border-radius:var(--r-pill);
+  border:1px solid var(--line-2);color:var(--ink-2);background:var(--paper);white-space:nowrap;
+}
+#view-planner .pl-soc-chip.ok{color:var(--core);border-color:color-mix(in srgb,var(--core) 45%,var(--line))}
+#view-planner .pl-soc-chip.behind{color:var(--cere);border-color:color-mix(in srgb,var(--cere) 45%,var(--line))}
+
+/* ── forms (create / join / partner) ── */
+#view-planner .pl-soc-forms{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+#view-planner .pl-soc-form{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#view-planner .pl-soc-in{
+  flex:1;min-width:160px;font:500 var(--t-row) var(--sans);color:var(--ink);
+  background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-1);padding:8px 11px;
+}
+#view-planner .pl-soc-in:focus{outline:none;border-color:var(--accent)}
+#view-planner .pl-soc-code{
+  font:600 13px var(--mono,ui-monospace,monospace);color:var(--ink);background:var(--paper-3);
+  border:1px solid var(--line-2);border-radius:var(--r-1);padding:6px 10px;letter-spacing:.03em;
+  word-break:break-all;
+}
+
+/* ── partner ── */
+#view-planner .pl-soc-partner{
+  display:flex;align-items:center;gap:10px;padding:9px 0;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);
+}
+#view-planner .pl-soc-partner:last-of-type{border-bottom:none}
+#view-planner .pl-soc-pn{font:600 var(--t-body) var(--sans);color:var(--ink)}
+
+@media (max-width:640px){
+  #view-planner .pl-soc-form .pl-btn,#view-planner .pl-soc-form .pl-create{flex:0 0 auto}
+  #view-planner .pl-soc-in{min-width:0}
+}

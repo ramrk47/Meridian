@@ -402,6 +402,9 @@ function _plOnboarding(v) {
       body: groupList(rows, "pl-seedlist") + `<div class="cf-note">High-yield by community-curated PYQ frequency ${epiBadge("directional")} that you haven't started on any bank. A starting draft — you edit everything.</div>`,
     })));
   }
+
+  /* social accountability — visible even before a plan exists (you can still join a pod) */
+  if (typeof _plSocialSection === "function") v.appendChild(_plSocialSection());
 }
 
 /* ============================================================
@@ -543,9 +546,12 @@ function _plActive(v, plan) {
   /* done-diary (derived) */
   v.appendChild(_plDoneDiary(plan));
 
+  /* social accountability — pods · board · partner · snapshot (account-gated) */
+  if (typeof _plSocialSection === "function") v.appendChild(_plSocialSection());
+
   /* footer: scope reminder + delete */
   const foot = el("div", "pl-foot"); foot.dataset.reveal = "";
-  foot.innerHTML = `${_plBanksRow()}<div class="cf-note">Completion counts only from real tracked actions — ticking a topic here marks the underlying module attempted on your bank, and the done-diary is built from those timestamps. No vanity hours, no leaderboard. Social sharing (pods, weekly snapshot) arrives with accounts.</div>`;
+  foot.innerHTML = `${_plBanksRow()}<div class="cf-note">Completion counts only from real tracked actions — ticking a topic here marks the underlying module attempted on your bank, and the done-diary is built from those timestamps. No vanity hours, no leaderboard. Sign in to share your aggregate with a pod or partner — opt-in, solidarity, never a ranking.</div>`;
   v.appendChild(foot);
 }
 

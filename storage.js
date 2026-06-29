@@ -64,6 +64,7 @@ const Store = {
     }
     // account sync (no-op unless signed in); local-first — never blocks this call
     if (window.Account) Account.onLocalSave();
+    if (window.Social) Social.onLocalSave();   // opt-in summary publish (no-op unless in a pod/partner)
     document.dispatchEvent(new CustomEvent("state-changed"));
   },
 
@@ -215,6 +216,7 @@ const Account = {
     } catch (e) {
       this.markPending();
     }
+    if (window.Social) Social.refresh();         // pull the user's pods + partners (account-gated)
   },
 
   onLocalSave() {
@@ -309,6 +311,7 @@ const Account = {
     } catch (e) { /* ignore; clear locally regardless */ }
     this.user = null; this.csrf = null; this.clearPending();
     this.setStatus(SYNC.OFF);
+    if (window.Social) { Social.pods = []; Social.partners = null; Social._lastPublished = null; Social._emit(); }
     // local data stays intact — sign-out is not a reset.
   },
 };
@@ -370,3 +373,84 @@ function mergeState(a, b) {
 
 window.Account = Account;
 window.mergeState = mergeState;
+
+/* ===== Social accountability (Step 2 — pods · board · partner · snapshot) =====
+   Account-gated: every method is a no-op (returns null) when signed out, so the
+   local-first solo app is completely unaffected. Reuses the server-verified session
+   cookie + Account.csrf on writes (the same hardened auth core). Publishes only a
+   TINY aggregate summary (adherence %, on-track/behind subjects, cycle label) — never
+   raw state — and only when the user has actually opted into a pod or partner. */
+const Social = {
+  pods: [],                 // pods the user belongs to (from pod_list)
+  partners: null,           // {partners:[…], pendingInvite} (from partner_snapshot)
+  _pubTimer: null,
+  _lastPublished: null,     // de-dupe identical publishes
+
+  api(action) { return `${APP_CONFIG.apiBase}?action=${action}`; },
+  get on() { return !!(window.Account && Account.user); },
+  // any audience to publish to? (avoids pointless writes for a solo signed-in user)
+  get hasAudience() { return (this.pods && this.pods.length > 0) || !!(this.partners && this.partners.partners && this.partners.partners.length); },
+
+  async _get(action, qs) {
+    if (!this.on) return null;
+    try {
+      const r = await fetch(this.api(action) + (qs ? "&" + qs : ""), { credentials: "include" });
+      if (!r.ok) return { _error: r.status };
+      return await r.json();
+    } catch (e) { return { _error: 0 }; }
+  },
+  async _post(action, body) {
+    if (!this.on || !Account.csrf) return null;
+    try {
+      const r = await fetch(this.api(action), {
+        method: "POST", credentials: "include",
+        headers: { "Content-Type": "application/json", "X-CSRF-Token": Account.csrf },
+        body: JSON.stringify(body || {}),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) return { _error: r.status, error: j.error };
+      return j;
+    } catch (e) { return { _error: 0 }; }
+  },
+
+  // ---- pulls (refresh local view of the user's pods + partners) ----
+  async refresh() {
+    if (!this.on) { this.pods = []; this.partners = null; this._emit(); return; }
+    const [pl, ps] = await Promise.all([this._get("pod_list"), this._get("partner_snapshot")]);
+    if (pl && !pl._error) this.pods = pl.pods || [];
+    if (ps && !ps._error) this.partners = ps;
+    this._emit();
+    // freshen our own published summary now that we know the audience
+    if (this.hasAudience) this.publishNow();
+  },
+  async board(podId) { return this._get("pod_board", "pod_id=" + encodeURIComponent(podId)); },
+
+  // ---- writes ----
+  async createPod(name) { const r = await this._post("pod_create", { name }); if (r && !r._error) await this.refresh(); return r; },
+  async joinPod(code)  { const r = await this._post("pod_join", { invite_code: code }); if (r && !r._error) await this.refresh(); return r; },
+  async leavePod(podId){ const r = await this._post("pod_leave", { pod_id: podId }); if (r && !r._error) await this.refresh(); return r; },
+  async partnerInvite(){ const r = await this._post("partner_invite", {}); if (r && !r._error) await this.refresh(); return r; },
+  async partnerAccept(code){ const r = await this._post("partner_accept", { invite_code: code }); if (r && !r._error) await this.refresh(); return r; },
+
+  // ---- publish my own summary (opt-in, debounced) ----
+  // computeSummary is provided by the planner surface (it owns the adherence engine).
+  computeSummary: null,
+  publishNow() {
+    if (!this.on || !this.hasAudience || typeof this.computeSummary !== "function") return;
+    const summary = this.computeSummary();
+    if (!summary) return;
+    const sig = JSON.stringify(summary);
+    if (sig === this._lastPublished) return;     // nothing changed
+    this._lastPublished = sig;
+    this._post("publish_summary", { summary });
+  },
+  onLocalSave() {                                // called from Store.save (debounced)
+    if (!this.on || !this.hasAudience) return;
+    clearTimeout(this._pubTimer);
+    this._pubTimer = setTimeout(() => this.publishNow(), 1500);
+  },
+
+  _emit() { document.dispatchEvent(new CustomEvent("social-changed", { detail: { pods: this.pods, partners: this.partners } })); },
+};
+
+window.Social = Social;
